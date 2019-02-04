@@ -43,9 +43,9 @@ def extract(selector, xpath_list):
     for xpath in xpath_list:
         if not xpath:
             continue
-        res = selector.xpath(xpath).extract_first()
+        res = selector.xpath(xpath).extract()
         if res:
-            return res
+            return ' '.join(res).strip()
     return None
 
 def parse_file(filepath, rule):
