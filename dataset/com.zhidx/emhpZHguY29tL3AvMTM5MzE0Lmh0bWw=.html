@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>出行圈资本大退潮！楼起楼塌一年间 - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="活下来——2018出行公司求生记。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://0.gravatar.com/avatar/6449afc226cce888c35b7535f0309947?s=96&#038;d=retro&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/xiongyuxiang" title="由origin发布" rel="author">origin</a></div>
+                <div class="author-posts">共发表549篇文章</div>
+                <div class="author-desc"></div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag2">通用</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag2">小米</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag1">苹果</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/ar" class="tag2">AR</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag1">特斯拉</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                出行圈资本大退潮！楼起楼塌一年间            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/chedongxi" rel="category tag">车东西</a></span><span class="time">2018/12/30 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="478" src="http://oss.zhidx.com/uploads/2018/12/哈东-拷贝.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2018/12/哈东-拷贝.jpg 850w, http://oss.zhidx.com/uploads/2018/12/哈东-拷贝.jpg?x-oss-process=image/resize,m_fill,w_533,h_300 533w, http://oss.zhidx.com/uploads/2018/12/哈东-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_432 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p>车东西（公众号：chedongxi）</p>
+<p>文 | Origin</p>
+<p>导语：2018年即将结束，中国多地迎来寒潮、大降温，与此同时，繁荣了十年的出行产业，却遭遇了十年一遇的寒冬。</p>
+<p>一改2017年的普遍乐观，钱荒、裁员、焦虑，成为2018年的关键词。</p>
+<p>当资本的大潮褪去，当经济环境倾下霜雪。谁在大潮中裸泳？谁又是隆冬中的青松？</p>
+<h2>一、断供的资金</h2>
+<p>临近年关，建屹，一家自动驾驶公司的CMO，正在抓耳挠腮。他所在的A公司，自去年拿到融资以来，在一年多的时间里，在资本市场上失声了。</p>
+<p>并非公司实力不行——这家公司的首轮投资方，是在全球进行布局的大基金。拿到钱后，A公司今年上半年并不缺钱，创始团队便一心打磨技术、做产品去了。等到下半年回过神发现需要钱，资本环境已经恶化了——到那个时候，主抓技术的创始团队，才引入了建屹作为CMO，顺便把CFO的活也干了。</p>
+<p>建屹上任之后，即刻安排创始人频繁走动，参加各类有露出机会的行业论坛与创业活动，参与线上课程，乃至一个月接受一次深度采访，来阐明商业模式。A公司高管团队，也开始更加频繁地接触投资人。</p>
+<p>然而，没有钱进来，投资人变得更“胆小”了。</p>
+<p>辰韬资本的合伙人舒亮，看着房市与车市的表现，知道资本寒冬已经降临了。作为中国最大的两个支柱性产业，房地产与汽车行业的同时下行，意味着经济下行压力增大的信号，已经全面释放。</p>
+<p>风投基金资金的来源——LP们没钱了，上市公司作为LP的主力，为风投基金贡献了大量的资金。然而，今年上市公司的股权质押爆仓，引得人人自危。资管新规再将投资的收入砍去一截，经济下行加重避险情绪，重重因素叠加，资本们变得谨慎了。往日慷慨的LP们，捂紧了口袋。</p>
+<p><strong>Wind数据，截至12月27日，2018年以来有33只基金募集失败，较2017年增加65%，同时有130多只产品发布延长募集公告。共有84家公募业务机构发生过247次自购行为，累计资金高达32.45亿元，比2017年增加39.51%。</strong></p>
+<p>但在舒亮看来，建屹与建屹的同行们，现在经历的只是深秋——因为资金募资的周期性，创业公司拿到的钱，往往是基金1-3年前募集的。当人们在今年呼喊着资本寒冬时，意味着真正的资本寒冬，是在明年乃至后年。</p>
+<p>经济学家许小年在最近的演讲中，给当前的经济大环境定了性——耗尽的工业化红利、高负债率、中美贸易摩擦这三头黑犀牛，让中国的经济正在遭受前所未有的挑战。“<strong>我们以为19年政策层面上再出一些利好，以为经济下行了一段时间，19年就会很快好转了，我觉得这都是一厢情愿</strong>。”</p>
+<p><img class="alignnone size-full wp-image-139318" src="http://oss.zhidx.com/uploads/2018/12/年.jpg" alt="出行圈资本大退潮！楼起楼塌一年间" width="1080" height="718" srcset="http://oss.zhidx.com/uploads/2018/12/年.jpg 1080w, http://oss.zhidx.com/uploads/2018/12/年.jpg?x-oss-process=image/resize,m_fill,w_451,h_300 451w, http://oss.zhidx.com/uploads/2018/12/年.jpg?x-oss-process=image/resize,m_fill,w_768,h_511 768w, http://oss.zhidx.com/uploads/2018/12/年.jpg?x-oss-process=image/resize,m_fill,w_1024,h_681 1024w, http://oss.zhidx.com/uploads/2018/12/年.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+<p>许小年</p>
+<p>全面繁荣的时代结束了，像舒亮这样的基金管理者们，变得谨慎再谨慎，一个投资案恨不得尽调两次，投资决策时间恨不得再拉长一倍。</p>
+<p>道理很简单，浪潮涌动时，搭上船就能随着浪潮前进；而在涨潮停止乃至开始潮退之时，谁能马上知道一个项目能否称到最后？</p>
+<p>对投资人来说，一条赛道上前五乃至前十公司都“可以试一试”的时代结束了，尤其是对于出行这样单个项目资金需求超高的行业，资本涌入为数不多的头部项目中“避险”。</p>
+<p>但在二级市场上，知名如小米、美团乃至蔚来，悉数遭遇上市破发。出行产业的创业项目中，一级市场估值与二级市场倒挂也是普遍现象。</p>
+<p>舒亮一直在奉劝他所投的项目降低估值，先把钱拿到，避免被估值倒挂卡死——尽管创业者常常认为这是他在占便宜。</p>
+<p>因为，还肯留守在出行产业的基金并没有想象中那么多了，乃至于有些投资方在寒冬中，会选择绕开万亿产值的出行产业“避雷”。</p>
+<p>中民创智资本的苏秉刚错过了一次投资动力电池第一股宁德时代的机会，但他没怎么后悔——尽管宁德时代成功上市后目前市值高达1600亿元。</p>
+<p>别人眼中光鲜亮丽的项目，在他看来实际收益率很难预料——股权有三年锁定期。到时候，新能源汽车补贴退出，电动车的价格将迎来飙升，燃油车很可能卷土重来。</p>
+<p>苏秉刚反问车东西 ：“电动车到底在总效率上能不能拼过燃油车？拼不过就是个伪命题。”</p>
+<p>在出行产业其他领域， 情况也不乐观，没有投资机构能看到一个快速回报的项目，而在IPO这个最终的退出渠道上，二级市场一片哀嚎。“出行的投资回报周期太长，投了一看，估值倒挂了，这还怎么搞？”</p>
+<p>基金管理人们，肩上也压着Deadline和 KPI——那是LP们的投资回报期和回报率要求。</p>
+<p>现在的苏秉刚，已经不怎么看出行行业的投资项目了。</p>
+<p>苏秉刚显然也是更多有类似想法的资管人其中的一员——据统计，2017年国内交通领域融资超过了168亿美元，而今年截止目前，这一数额还未超过100亿美元。</p>
+<p>正如上文所言，其中的大部分，都由头部基金投向了头部创业项目。</p>
+<h2>二、创业公司，生存还是离场</h2>
+<p>对于出行行业的创业项目来说，这是尤为困难的一年。描述起前两年的资本环境，一位自动驾驶创业公司的高管，乃至于爆了粗，“日子是太TMD好过了。”</p>
+<p>入冬后，资本进入枯水期，只能选择灌溉筛了又筛的几亩良田。</p>
+<p>然而，并不是所有的头部项目，都能够成功拿到融资。不然，北京ofo总部和途歌的总部，不会出现讨债的供应商和要求退押金的用户。投资人在2017年到2018年上半年亲手筑起共享出行金碧辉煌的宫殿，如今已经摇摇欲坠。</p>
+<p>1、共享出行濒临崩塌</p>
+<p>12月18日，曾经创造单日订单量纪录的ofo再次创造了一项纪录——线上退押金排队人数超过1000万。ofo退款线上排队，线下也排队，ofo位于中关村金融中心的总部，被退押金的人群围了个水泄不通。去年此时还与吴亦凡、迪丽热巴等流量明星入选同一榜单的戴威，现在已经成了“老赖”。</p>
+<p><img class="alignnone size-full wp-image-139317" src="http://oss.zhidx.com/uploads/2018/12/互金.jpg" alt="出行圈资本大退潮！楼起楼塌一年间" width="1080" height="810" srcset="http://oss.zhidx.com/uploads/2018/12/互金.jpg 1080w, http://oss.zhidx.com/uploads/2018/12/互金.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2018/12/互金.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2018/12/互金.jpg?x-oss-process=image/resize,m_fill,w_1024,h_768 1024w, http://oss.zhidx.com/uploads/2018/12/互金.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+<p>ofo总部外排队的人群</p>
+<p>ofo，这个融资总额14.5亿美元的出行创业超级项目，从巅峰跌至谷底，只用了不到一年时间。此时，ofo已经6个月没有融资。</p>
+<p>马化腾一针见血地指出ofo“死于”一票否决权，用户们却清一色地在指责小黄车们的损坏率有多高，使用体验有多差。在被一票否决权堵死前途之前，ofo粗放的运营模式、极低的资本运用效率，早已让共享单车原有的盈利模式崩塌。单纯借助移动互联网收割人口红利就能起飞的轻模式，一旦进入需要重运营的出行行业，立马就不灵光。</p>
+<p>共享汽车遇到了和共享单车同样的麻烦。近两日，最近一周，汽车分时租赁公司途歌退押金难的消息与ofo的押金困局前后呼应。在西安，途歌的办公点人去楼空，在北京，上门要账的供应商进驻了办公室，在网上，用户正在痛骂途歌“骗子”。</p>
+<p>然而在10月乃至9月的时候，途歌就出现了退押金难的问题。当时途歌以一则千万级美元融资的消息，将正在升温的舆论压灭。然而这只是杯水车薪。</p>
+<p>即便途歌总融资额已经超过5亿，是共享汽车赛道中的前排选手，但这条赛道，已经成了资本弃儿。麻瓜出行、巴歌出行等小玩家已经基本出局的，即使是有北汽集团背景加成的绿狗出行，也因持续亏损，被北汽转让了超过30%股权。</p>
+<p>2、自动驾驶的商业化“挣扎”</p>
+<p>相较之下，自动驾驶行业的融资情况更加乐观，资本还在加注，今年以来，国内自动驾驶领域的融资仍然达到了20亿美元。但能拿钱与否，不仅要看团队、看技术，也要看对融资时机的把握。</p>
+
+<p>提起自家公司的融资经历，自动驾驶A公司的CMO建屹深感无奈，“那些年初就启动融资计划的，起码在Q3有个说法；而年中才启动的，现在就算急得直跺脚抽自己耳光也没用。”下半年，一番努力之下，A公司终于拿到了投资意向书。然而，TS签了好一阵，钱一直没进来。一问，资方没钱了，而A公司正等着这笔钱救命。</p>
+<p>临近年末了，被逼无奈，A公司转向第一轮投资的股东求助，得到其背书，才解了新一轮融资的燃眉之急。</p>
+<p>建屹描述这段经历的时候情绪激动。因为资方的拖延，A公司浪费了宝贵的时间，差点错过最后的机会——一般到11月，资方的投资活动便告一段落，要等来年。 如果处理不慎，公司甚至过不了年。</p>
+<p>A公司这样的故事，在这个冬天并不鲜见。更令人寻味的是，如果无法证明自身的商业化潜力，创业公司连与投资机构斗智斗勇的机会都没有。</p>
+<p>如果关注一下2018年的自动驾驶，行业的关键词，是商业化——尽管技术本身的成熟度一直处于争议中，谷歌还是在亚利桑那凤凰城开启了无人出租车的商业化运营。</p>
+<p>国内自动驾驶公司的方向转变也清晰可见。</p>
+<p>2017年7月，计算机视觉的顶级学术会议CVPR上，Pony.ai CEO 彭军、AutoX CEO肖健雄、禾多科技CEO倪凯（当时身份为乐视自动驾驶副总裁）、 驭势科技CEO吴甘沙、图森科技CTO侯晓迪齐聚，组成了一个自动驾驶男子天团，探讨自动驾驶的技术问题。</p>
+<p><img class="alignnone size-full wp-image-139320" src="http://oss.zhidx.com/uploads/2018/12/cvpr.jpg" alt="出行圈资本大退潮！楼起楼塌一年间" width="640" height="480" srcset="http://oss.zhidx.com/uploads/2018/12/cvpr.jpg 640w, http://oss.zhidx.com/uploads/2018/12/cvpr.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2018/12/cvpr.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<p>当时他们讨论的话题包括：“高精地图在自动驾驶中的使用和重要性；端到端学习的可用性和安全性；系统冗余的设计。”</p>
+<p>来到2018年后，你很难再在学术会议上，看到上述自动驾驶的创业精英。更多地，他们的身影频繁出现在投资机构与媒体主办的行业会议上，演讲中三句话不离自动驾驶的商业落地。</p>
+<p>这一年，Pony.ai在广州组建了一支运营产品化的无人出租车车队；</p>
+<p>AutoX则为了中国市场特别开发了无人配送小车，进驻美团的无人配送开放平台；</p>
+<p>禾多科技前两天刚刚发布了代客泊车方案，很快就可以落地。</p>
+<p>驭势比禾多科技更早切入了自动泊车的业务中，使用宝骏的小车作开发平台 ，此外还开发了额外的平台车型，给飞机运货；</p>
+<p>而图森作为一家中国的自动驾驶公司，更多地将其自动驾驶卡车放在美国。其中一个重要的原因是，美国的法规相对宽松，图森的自动驾驶卡车，已经在美国开始试运营运货挣钱。</p>
+<p>2017年自动驾驶创业的星辰大海，在2018年变成了场景卡位战——头上顶着的是十万亿美元产值的出行产业，而实际上手开拓的可能是一个十亿美元的细分市场，最后落入袋中的则是一年千万人民币的营收（事实上，绝大多数自动驾驶创业公司达不到这个营收水平）。</p>
+<p>但实际上，就算是百万的营收，他们也会全力去争取。</p>
+<p>创业者们要让资本看见，他们的投资并不是沉入了技术研发的无底洞——资本只是助推，不是慈善，资本此刻的给予，都是为了在未来某一个时间取回。</p>
+<p>而对于一些大项目，资本已经深感推不起。</p>
+<p>3、新造车融资停滞</p>
+<p>作为耗资量可能最高的出行创业项目，国内的新造车公司，已经很久没有听到好消息。今年下半年，新造车领域的融资仅有一例——小鹏汽车在8月拿到了40亿元融资。</p>
+<p>造一辆车的周期在4-5年，而团队规模动辄上千人的新造车公司每个月都在以肉眼可见的速度烧钱，在产品推向市场之前，从外部融资几乎是唯一的生存方式。</p>
+<p>这个月，累计融资70亿元的新造车公司奇点，被传出已经欠薪三个月，而奇点汽车的上一轮融资是在今年4月获得30亿元人民币。但融资之后，奇点的量产车没有什么动静。</p>
+<p>奇点没有正面回应“欠薪”事件，回应以一些好消息——旗下车型已经进入新能源车目录，融资顺利，并且附带了一张图表，展示奇点2018年取得的成绩。</p>
+<p>资本不听好消息，看进展。</p>
+<p>与自动驾驶创业的逻辑一样，那些拿出了产品、创造了营收的新造车公司，在2018年的融资都走得更加顺利——12月13日晚上，小鹏汽车G3上市发布后一天，董事长何小鹏在朋友圈晒出了G3 24小时内获得的订单：1573辆。</p>
+<p>与传统车企一辆车的销量比起来，这个数字简直是个笑话。</p>
+<p>但何小鹏明白，精确到个位数的订单，反而是对资方乃至创业四年的团队最好的交代——这意味着他们走出了实现商业价值的第一步。</p>
+<p><strong>下行周期中，那些造血能力强的团队，会被资本第一时间锁定。因为支持造车的资方，此时或许也在寻求自保。</strong></p>
+<p>去年，做产业地产出身的华夏幸福全面切入出行行业。自动驾驶、分时租赁、新能源车等热门领域，华夏幸福的投资布局一个没漏。在整个出行业务规划中，新造车企业合众新能源是核心。合众新能源的量产车哪吒，还在今年1月完成了上市。</p>
+<p>合众新能源的法人代表，由华夏幸福董事长王文学亲任。</p>
+<p>然而，今年下半年，合众新能源的法人代表从华夏幸福董事长王文学，变为了合众新能源的创始人方运舟，王文学在合众新能源的股权占比也</p>
+<p>有业内人士调侃，从“挣白粉钱的房地产行业，跳进挣白菜钱的造车，落差太大”。</p>
+<p>今年7月借红星汽车走上台前的动力电池供应商多氟多，近期则面临主业下滑的困境，两头不顾。</p>
+<p>实际上，在上半年统计的50家新造车公司中，在半年以内有公开活动的，已经不到10家了。</p>
+<h2>三、巨头们的慌张</h2>
+<p>当新造车公司们在为钱憋屈时，他们的主要竞争对手——传统车企，则在迎接着十年来的周期低谷。自2008年以来，全球车市今年将迎来总销量下降的行情；而在中国车市，这是28年来首次出现今年卖不过去年的情况。<span class="Apple-converted-space"> </span></p>
+<p>利润降低，是出现在几乎每家车企财报中的字眼。</p>
+<p>作为反映经济大背景的晴雨表，汽车行业走过了动荡的一年，但也走进了更长的动荡期中。</p>
+<p>十一月，美国车企通用与福特均宣布裁员计划，总计涉及约4万人。</p>
+<p>有人在嘲笑特朗普在汽车上的贸易保护政策搬起石头砸自己的脚，但事实上，在中国的长安福特，并没有在裁员规划中置身事外。</p>
+<p>车东西获悉，长安福特正在筹备新一轮的人事缩减规划，生产线上的工人会裁撤至少15%，劳务工会被优先“劝退”。</p>
+<p>高度分工而庞大的汽车产业链条，决定了核心的一环出现问题，上下游将会同时遭殃。一名重庆某汽车零部件供应商管理人员表示，工厂生产量相比去年同期已经下降了60%。</p>
+<p>重庆的另一家车企，力帆，也刚刚以6.5亿元向新造车企业车和家出售了力帆股份，用于还债。</p>
+<p>重庆的汽车城，隐隐开始呈现出萧瑟之感。长期霸占中国省市GDP增速表前三的重庆，今年上半年GDP增速腰斩，汽车产业不甚景气成为其中重要原因。</p>
+<p>乃至于一个有些匪夷所思的疑问开始出现在网上——重庆会成为底特律吗？</p>
+<p>统治互联网的巨头们没有提供这个问题的答案，虽然他们也在忙着向汽车产业大力开进。</p>
+<p>百度IDG智能驾驶事业群组公关部的明峰，刚刚在长沙忙完了2018年最后一场活动。12月28日，百度在长沙完成了全场景的车路协同测试，在2018年的尾巴，百度完成了对自身自动驾驶、车路协同技术的最后一波展示。一个元旦假期过后，明峰会飞赴美国拉斯维加斯，准备CES上百度的Apollo发布会。</p>
+<p><img class="alignnone size-full wp-image-139313" src="http://oss.zhidx.com/uploads/2018/12/车队800-2.jpg" alt="出行圈资本大退潮！楼起楼塌一年间" width="800" height="476" srcset="http://oss.zhidx.com/uploads/2018/12/车队800-2.jpg 800w, http://oss.zhidx.com/uploads/2018/12/车队800-2.jpg?x-oss-process=image/resize,m_fill,w_504,h_300 504w, http://oss.zhidx.com/uploads/2018/12/车队800-2.jpg?x-oss-process=image/resize,m_fill,w_768,h_457 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>长沙，百度Apollo自动驾驶车路协同测试</p>
+<p>这一年，百度在竭尽全力扩大全球最大的自动驾驶开放平台Apollo；</p>
+<p>阿里以斑马网络为先锋，签下两家合资车企的车载系统服务；</p>
+<p>腾讯以腾讯车联为旗帜，也全力向车载系统进军。</p>
+<p>在移动互联网的2C业务中享尽优势的BAT，摇身一变为产业互联网中的赋能者，要在汽车行业中建立起自己的平台。</p>
+<p>然而，汽车行业的特点是产值高、利润低，周期长，模式重，这个行当并不是BAT熟悉的战场。</p>
+<p>但在整个气候的严寒中，腾讯、阿里、百度的股价，都经历了大幅度的下跌。C端业务人口红利已尽，若不加速转型开拓2B业务，巨头还能否守住巨头的位置？</p>
+<p>所以才有了马化腾10月在知乎上的一问——“产业互联网和消费互联网融合创新，会带来哪些改变？”</p>
+<p>所以在2018年出现了百度与阿里纷纷涉足车路协同这类涉及到基础设施的业务。</p>
+<p>如果说在移动互联网时代，BAT更多地等待了基础设施——包括人们手中的智能手机的成熟；那么如今的情况则是，BAT与新晋的巨头更加频繁地亲自下场，营造生态，要去催熟一项全新的技术与产业，以取得技术红利。</p>
+<p>互联网的巨头们带来了更多资源、资本，尽管一些不慎在出行产业赛道上和它们相撞的公司会被碾碎，但在冬天降临时，资源充沛的巨头，反倒像一堆堆熊熊烈火，让围绕在其左右的出行生态不至于降至冰点。</p>
+<p>如果腾讯推动美团接盘，摩拜今日的状况相较ofo会好多少？北京室外零下十度的气温知道答案。</p>
+<h2>四、下行周期 如何生存？</h2>
+<p>当一阵寒潮席卷了整个中国，如何过冬终于成为全民话题。普通人的讨论是对暖气的呼唤，而待遇陡然翻覆的出行公司，思考的全是如何开源节流。</p>
+<p>在采访投资人时，车东西让他们使用一个关键词，来描述被投项目应该具备的最关键特质。答案有且只有一个——“活下来”。</p>
+<p>1、保住现金流</p>
+<p>保住现金流已经成了出行产业公司的第一要务，不管公司规模是大是小，业务是赚是亏。</p>
+<p>今年下半年，北汽集团的子公司北汽银翔，因为车市下行销量遇挫，现金流出现困难。此时恰逢去杠杆，北汽银翔被银行抽贷，现金流瞬间断流，一度引发员工讨薪。在北汽集团的10亿现金驰援之下，北汽银翔才恢复过来，前两天刚刚复工。</p>
+<p>北汽银翔作为一家大公司，调整太慢可以理解。而体量较小的摩拜则更加机灵，这家曾经的前两天被爆正在经历一轮“裁员”——比例接近30%，甚至创始人胡玮炜都已去职。随后摩拜官方给出了一个官方回应：“业务正常调整，裁员规模不属实”。</p>
+<p>然而，车东西却在朋友圈看到，好几位老MoBiker，晒起了散伙饭。</p>
+<p>广汽的一位工程师则在抱怨，尽管广汽成为今年自主品牌中为数不多的增长者，销量创造了新的纪录，然而却没有奖金和庆祝活动。</p>
+<p>处于寒潮当中时，资金的断裂会引发比平时更严重的连锁反应，因此，各种压缩成本的手法都会被用上，削减福利只是初级手段，人事裁撤则是临近年关的终极招数。</p>
+<p>2、造血，造血，造血</p>
+<p>资本寒冬的降临，也在考验一家公司的内生型动力。</p>
+<p>辰韬资本的舒亮预判的寒冬期至少有2、3年，如此情形下，完全依靠资本的创业公司，将很难存活，除非是背靠大集团的“拼爹型公司”。</p>
+<p>因此，舒亮现在更多眼下就能取得营收的公司。他将其称为“送水型公司”——比如自动驾驶领域中的传感器创业公司，他们中的多数，现下就可以形成收入，持续输入的血液，让他们更“抗冻”。</p>
+<p>“现在只依靠外部资本的公司，活不下来的。”</p>
+<p>此前被挤到细分市场，作出了一定营收的创业公司，反倒因祸得福。比如舒亮投资的一家自动驾驶创业公司踏歌智行，主力业务是为试车场车辆与压路机提供自动驾驶方案。半年前，这块市场在大部分创业者看来“纯属搞笑”，但现在却成为了提供稳定收入的救命稻草。</p>
+<p>3、“技术创新刚刚开始”</p>
+<p>但在Roadstar.ai战略副总裁那小川看来，有些坑是跳不过去的。</p>
+<p>Roadstar.ai是一家主力业务在L4级无人出租车上的自动驾驶创业公司，L4级的无人驾驶，商业化刚刚由谷歌Waymo开始探索。</p>
+<p>“我觉得技术创新刚开始，真正转化为生产力还需要看2-5年后的“产品创新”，那小川如此看待自动驾驶的前景。与此同时，Roadstar.ai今年在全力推动无人驾驶技术研发的同时，也开始与日本企业合作，将其技术落地在自动驾驶巴士上，来取得营收。<img class="alignnone size-full wp-image-136113" src="http://oss.zhidx.com/uploads/2018/11/4-4.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2018/11/4-4.jpg 800w, http://oss.zhidx.com/uploads/2018/11/4-4.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2018/11/4-4.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2018/11/4-4.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" alt="出行圈资本大退潮！楼起楼塌一年间" width="800" height="600" /></p>
+<p>但即便创业公司的自动驾驶技术成果可以进行部分转化，仍然离不了资本的支持。有深创投（国资背景基金）支持的Roadstar.ai，或许对其他资本在严寒下颤颤发抖的心理不太理解。</p>
+<p>事实上，如今投资出行产业的主力基金，其实都是从移动互联网的黄金十年中走过来的，他们太熟悉快速变现的滋味。</p>
+<p>但时代不同了。即便是强调创业公司要自己造血的舒亮，也支持资本对出行产业的“留守”。</p>
+<p>舒亮认为，互联网的成功培养了资本赚快钱的习惯以及对模式创新的依赖，但如今出行产业的创新，靠的是硬科技。而硬科技的成熟，需要的时间远远长于。加之，汽车产业的投资回报周期，本身也非常长，</p>
+<p>在他看来，在涉足出行产业的时候，投资方也要摆正心态，“不要想着一两年就能退出了”。</p>
+<p>4、在寒冬中逆势而行</p>
+<p>看到途歌的困境后，一位曾经与车东西交流过的分时租赁企业CEO发来两个字“难熬”。然而，冬天的降临，在某些人看来却是机会。</p>
+<p>左帅，一位连续创业者，先后在通信与P2P租车领域创过业。不过，滴滴的网约车以及去年大火的分时租赁赛道他并未赶上。</p>
+<p>现在，左帅却认为形势在朝他有利的方向转变。“B2C的分时租赁汽车模式太重，但它们教育了市场，培养租车的用户习惯。”他总结途歌们的困境在于B2C的模式太重，运营成本太高，他设计了一套全新的模式——C2C的形式来降低成本，再通过数据收集出售给相关公司，来获得B端的价值，完成对用户价值的最大利用。</p>
+<p>在寒冬中看到机会的左帅正在蛰伏，等分时租赁汽车一倒下，便是他C2C汽车分享创业再度崛起的时机。</p>
+<p>还有企业选择直接在隆冬中主动出击。</p>
+<p>12月28日，哈罗单车旗下的哈罗出行宣布9月完成了40亿元融资。将三个月前的融资消息释放，是为了给哈罗出行的业务扩张造势——哈罗出行正在切入顺风车领域，全面招募顺风车主。</p>
+<p><img class="alignnone size-full wp-image-139316" src="http://oss.zhidx.com/uploads/2018/12/哈啰.jpg" alt="出行圈资本大退潮！楼起楼塌一年间" width="540" height="359" srcset="http://oss.zhidx.com/uploads/2018/12/哈啰.jpg 540w, http://oss.zhidx.com/uploads/2018/12/哈啰.jpg?x-oss-process=image/resize,m_fill,w_451,h_300 451w, http://oss.zhidx.com/uploads/2018/12/哈啰.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 540px) 100vw, 540px" /></p>
+<p>此时，滴滴的顺风车业务仍在持续下线中，顺风车市场上缺乏竞争对手。</p>
+<p>今日资本的徐新，在接受媒体采访时道出了逆势扩张的逻辑——寒冬的时候，每一分钱都更加值钱。当对手拿不出资金做产品与市场时，砸下的每一分钱都不会被行业里膨胀的资本量稀释。</p>
+<p>“你可以抢最好的广告资源，最好的人才，可以做各种事情。”</p>
+<h2>结语：退潮之后，谁在裸泳？</h2>
+<p>凛冬将至？凛冬已至。</p>
+<p>过去十年，中国的出行产业一直在高歌猛进的上涨周期中，并且靠着极大的规模、稳定的需求，在制造独角兽和大集团的效果上跑赢了绝大多数其他产业。</p>
+<p>如今，潮水的方向开始改变，资本先行撤退，创业公司面临休克，规模庞大的传统企业，也难以逆流而行。</p>
+<p>祝福出行产业的各位，在潮水褪去之后，还能站在沙滩上，穿着泳裤。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139314'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139314">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>11</span>
+                </div>
+                <div class="social-share" data-title="出行圈资本大退潮！楼起楼塌一年间" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139314">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139314">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

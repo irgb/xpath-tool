@@ -1,0 +1,1191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../../../images/basic.css" rel="stylesheet" />
+<link href="../../../images/third.css" rel="stylesheet" />
+<title>政策出了这么多，气价为何没咋降？ - 中国能源网</title>
+<script src="../../../images/jquery-1.11.0.min.js" /></script>
+<script src="../../../images/index.js" /></script>
+<script src='/video/ZeroClipboard.js'></script>
+<meta name="keywords" content="" />
+<meta name="description" content="“十三五”以来，国家大力推进天然气上游勘探开发和下游销售与终端利用市场化改革，加强中游管道、储气库等储运基础设施价格监管，持续推进“管住两头、放开中间”的天然气价格改革，实现居民非居民用气价格并轨，有利地激发了市场活力，提高了资源配置效率。本文总结梳理“十三五”以来国家出台的一系列改革政策，围绕天然气产业持续健康发展，就当前存在的天然气供需关系偏紧、配气环节价格过高、门站价格没有动态调整等问题提出政策建议。至此，天然气价格改革迈出了居民用气与非居民用气价格并轨的关键性步伐。" />
+</head>
+<script src='/wcmclick/click.js'></script>
+<script>
+var wcmclickurl = "http://www.cnenergy.org/wcmclick";
+
+  var strUrl=window.location.href;
+  var strPage = strUrl.slice(strUrl.lastIndexOf("/")+1,strUrl.lastIndexOf("l")+1);
+
+
+if(getCookie("redu"+strPage)==null){
+    setCookie('redu'+strPage,strPage,30);
+	wcmwrite(wcmclickurl,"redu","751933");
+}
+
+
+$(function(){
+    htmlobj=$.ajax({url:wcmclickurl+"/read.do?col=tongyi&docid=751933&t="+new Date().getTime(), error: function(){},async:false});
+    var tongyi =$.trim(htmlobj.responseText);
+    $('.tongyi').html(tongyi);
+    htmlobj=$.ajax({url:wcmclickurl+"/read.do?col=butongyi&docid=751933&t="+new Date().getTime(), error: function(){},async:false});
+    var butongyi =$.trim(htmlobj.responseText);
+    $('.butongyi').html(butongyi);
+    var butongyi_ =(Number(butongyi)/(Number(butongyi)+Number(tongyi))*100).toFixed(2)+"%";
+    var tongyi_ =(Number(tongyi)/(Number(butongyi)+Number(tongyi))*100).toFixed(2)+"%";
+
+    if(tongyi_=="NaN%"){
+        tongyi_ = "50%";
+        butongyi_ = "50%";
+    }
+
+    $('.xlbfbt').eq(0).html(tongyi_ );
+    $('.xlbfba').css('width',tongyi_ );
+    $('.xlbfbt').eq(1).html(butongyi_ );
+    $('.xlbfbb').css('width',butongyi_ );
+    htmlobj=$.ajax({url:wcmclickurl+"/read.do?col=zan&docid=751933&t="+new Date().getTime(), error: function(){},async:false});
+    var zan=$.trim(htmlobj.responseText);
+    $('.zan').html(zan);
+    htmlobj=$.ajax({url:wcmclickurl+"/read.do?col=redu&docid=751933&t="+new Date().getTime(), error: function(){},async:false});
+    var redu=$.trim(htmlobj.responseText);
+    $('.redu').html(redu);
+
+  $('.xlxza').click(function(){
+     if(getCookie("tongyirobutongyi"+strPage)==null){
+     wcmwrite(wcmclickurl,"tongyi","751933");
+    setCookie('tongyirobutongyi'+strPage,strPage,30) 
+    $('.tongyi').html(Number(tongyi)+1);
+    var butongyi_ =(Number(butongyi)/(Number(butongyi)+1+Number(tongyi))*100).toFixed(2)+"%";
+    var tongyi_ =((Number(tongyi)+1)/(Number(butongyi)+(Number(tongyi)+1))*100).toFixed(2)+"%";
+    $('.xlbfbt').eq(0).html(tongyi_ );
+    $('.xlbfba').css('width',tongyi_ );
+    $('.xlbfbt').eq(1).html(butongyi_ );
+    $('.xlbfbb').css('width',butongyi_ );
+    }else{
+       alert('您已投票！保持愉快心情');
+       return false;
+    } 
+  })
+  $('.xlxzd').click(function(){
+    if(getCookie("tongyirobutongyi"+strPage)==null){
+    wcmwrite(wcmclickurl,"butongyi","751933");
+    setCookie('tongyirobutongyi'+strPage,strPage,30) 
+    $('.butongyi').html(Number(butongyi)+1);
+    var butongyi_ =((Number(butongyi)+1)/(Number(butongyi)+1+Number(tongyi))*100).toFixed(2)+"%";
+    var tongyi_ =(Number(tongyi)/(Number(butongyi)+1+Number(tongyi))*100).toFixed(2)+"%";
+    $('.xlbfbt').eq(0).html(tongyi_ );
+    $('.xlbfba').css('width',tongyi_ );
+    $('.xlbfbt').eq(1).html(butongyi_ );
+    $('.xlbfbb').css('width',butongyi_ );
+    }else{
+       alert('您已投票！保持愉快心情');
+       return false;
+    } 
+  })
+  $('.dianzan').click(function(){
+    if(getCookie("zan"+strPage)==null){
+    wcmwrite(wcmclickurl,"zan","751933");
+    setCookie('zan'+strPage,strPage,30) 
+    $('.zan').html(Number(zan)+1);
+    return false;
+    }else{
+       alert('您已点赞！保持愉快心情');
+       return false;
+    } 
+  })
+  //写cookies
+})
+
+function setCookie(c_name, value, expiredays){
+ 　　　　var exdate=new Date();
+　　　　exdate.setDate(exdate.getDate() + expiredays);
+　　　　document.cookie=c_name+ "=" + escape(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString()+";path=/");
+ 　　}
+ 
+//读取cookies
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return (arr[2]);
+    else
+        return null;
+}
+
+
+</script>
+
+
+<script>
+$(function(){
+    if($('.xlzrbjt span').html()==""){
+       $('.xlzrbjt').hide(); 
+    }
+    if($('.xlzrbjt2 span').html()=="" || $('.xlzrbjt2 span').html()=="系统管理员"){
+       $('.xlzrbjt2').hide(); 
+    }
+    if($('.laiyuan span').html()==""){
+       $('.laiyuan').hide(); 
+    }
+    if($('.xlgctitle').html()==""){
+       $('.xlgjcon').hide();
+       $('.xwlc').hide();
+    }
+    if($(".xlsubtitle").text()==$(".xltitle").text()){
+          $(".xlsubtitle").text("");
+    }
+});
+$(function(){
+//SHOWAD
+var hidead = "";
+hidead = $.trim(hidead);
+if(hidead == "1") return;
+
+var ad_7_div = '<div style="padding-right:20px;margin:0px;overflow:hidden;float:left;"><div class="ad_7" style="display:none;margin:0px;overflow:hidden;padding:10px;border:1px solid #e5e5e5"><a target="_blank" href=""><img height="250" width="300" src="" /></a></div></div>';
+if($(".TRS_Editor p").eq("-5").length>0){
+$(".TRS_Editor p").eq("-5").after(ad_7_div);
+}else{
+$(".TRS_Editor").eq(0).css("overflow","hidden").append(ad_7_div);
+}
+
+
+	var adurl = '../../../ad/';
+	var ncid = '105';
+	var setad = function(pos,url,pic){
+		/*
+		1	顶部
+		2	列表1
+		3	列表2
+		4	对联
+		5	底部悬浮
+		6	右边栏
+		7	细览
+		*/
+
+		$(".ad_"+pos).find("a").attr("href",url);
+		$(".ad_"+pos).find("img").attr("src",pic);
+		$(".ad_"+pos).show();
+	};
+	
+	var parse = function(data){
+		data = $.trim(data).replace("\n","");
+		var adarr = data.split(",,,,,");
+		for(var i = 1;i<adarr.length;i++){
+			var aadarr = adarr[i].split(",,,");
+			var bt = aadarr[2];
+			var et = aadarr[3];
+			var url = aadarr[1];
+			var pic = aadarr[0];
+			var pos = aadarr[4];
+			var cid = aadarr[5];
+			var btt = new Date(bt.replace(/-/g,'/')).getTime();
+			var ett = new Date(et.replace(/-/g,'/')).getTime();
+			var now = new Date().getTime();
+			if(now > ett || now < btt){
+				continue;
+			}
+			url = $.trim(url);
+			pic = $.trim(pic);
+			if(url == "" || pic == ""){
+				continue;
+			}
+			if(cid == "-1"){
+				setad(pos,url,pic);
+			}
+		}
+	}
+	var parse2 = function(data){
+		data = $.trim(data).replace("\n","");
+		var adarr = data.split(",,,,,");
+		for(var i = 1;i<adarr.length;i++){
+			var aadarr = adarr[i].split(",,,");
+			var bt = aadarr[2];
+			var et = aadarr[3];
+			var url = aadarr[1];
+			var pic = aadarr[0];
+			var pos = aadarr[4];
+			var cid = aadarr[5];
+			var btt = new Date(bt.replace(/-/g,'/')).getTime();
+			var ett = new Date(et.replace(/-/g,'/')).getTime();
+			var now = new Date().getTime();
+			if(now > ett || now < btt){
+				continue;
+			}
+			url = $.trim(url);
+			pic = $.trim(pic);
+			if(url == "" || pic == ""){
+				continue;
+			}
+			if(cid == ncid){
+				setad(pos,url,pic);
+			}
+		}
+	}
+
+	var o = {
+		"url":adurl,
+		"type":"get",
+		"success":function(data){
+			parse(data);
+			parse2(data);
+		}
+	};
+	$.ajax(o);
+
+});
+</script>
+
+<body>
+<div class="topnav">
+<div class="topnav2">
+<div class="topnav3">
+
+
+<a href="../../../dinglan/201507/t20150724_62508.html" target="_blank" title="关于我们">关于我们</a>
+
+
+</div>
+</div>
+</div>
+<div class="head">
+	<div class="top">
+    	<div class="logo_r">
+        	<div class="logo_r_t"><a href="#"><!--关于我们--></a></div>
+
+            <div class="search"><form action="/search/" id="searchform1">
+                <input type="submit" class="sub" value="" />
+            	<input type="text" class="text" name="word" />
+                </form>
+            </div>
+        </div>
+    	<div class="logo"><a href="/"><img src="http://www.cnenergy.org/webpic/W0201812/W020181220/W020181220416633502311.png" style="width:235px;height:76px;" /></a></div>
+        <div class="logo_l">
+        	<a href="#">人民日报社主管</a>|<a href="#">中国能源报社主办</a>
+        </div>
+    </div>
+    <div class="nav">
+    	<ul>
+        	<li><a href="/" target="_blank">首页</a></li>
+            <li><a href="../../../yw/">国内</a>
+            	<div class="nav_2">
+                	<a href="../../../yw/zc/" target="_blank">政  策</a>
+                        <a href="../../../yw/cj/" target="_blank">财  经</a>
+                        <a href="../../../yw/ft/" target="_blank">访  谈</a>
+                        <a href="../../../yw/nyhlw/" target="_blank">能源互联网</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../gj/">国际</a>
+                <div class="nav_2">
+                	<a href="../../../gj/qy/" target="_blank">国际前沿</a>
+                        <a href="../../../gj/gjcj/" target="_blank">国际产经</a>
+                        <a href="../../../gj/gjft/" target="_blank">国际访谈</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../">油气</a>
+                <div class="nav_2">
+                	<a href="../../sy/" target="_blank">石 油</a>
+                        <a href="../" target="_blank">天然气</a>
+                        <a href="../../lh/" target="_blank">炼化</a>
+                        <a href="../../fcg/" target="_blank">非常规</a>
+                    <div class="nav_2f"></div>
+                </div>  
+            </li>
+            <li><a href="../../../mt/">煤炭</a>
+                <div class="nav_2">
+                	<a href="../../../mt/sc/" target="_blank">煤炭生产</a>
+                        <a href="../../../mt/mtsc/" target="_blank">煤炭市场</a>
+                        <a href="../../../mt/mhg/" target="_blank">煤化工</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../dl/">电力</a>
+                <div class="nav_2">
+                	<a href="../../../dl/dw/" target="_blank">电 网</a>
+                        <a href="../../../dl/hd/" target="_blank">火 电</a>
+                        <a href="../../../dl/sd/" target="_blank">水 电</a>
+                        <a href="../../../dl/hd_1/" target="_blank">核 电</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../xny_183/">新能源</a>
+                <div class="nav_2">
+                	<a href="../../../xny_183/tyn/" target="_blank">太阳能</a>
+                        <a href="../../../xny_183/fd/" target="_blank">风 电</a>
+                        <a href="../../../xny_183/swz/" target="_blank">生物质</a>
+                        <a href="../../../xny_183/cn/" target="_blank">储 能</a>
+                        <a href="../../../jp_482/fbsny/" target="_blank">分布式</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../hb/" class="nav1">节能环保</a>
+                <div class="nav_2">
+                	<a href="../../../hb/tpf/" target="_blank">碳排放</a>
+                        <a href="../../../hb/jzyth/" target="_blank">建筑一体化</a>
+                        <a href="../../../hb/zm/" target="_blank">治 霾</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../js/">建设</a>
+                <div class="nav_2">
+                	<a href="../../../js/gcdt/" target="_blank">工程动态</a>
+                        <a href="../../../js/kjcx/" target="_blank">科技创新</a>
+                        <a href="../../../js/zcq/" target="_blank">走出去</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a class="nav1" href="../../../zb/">科技装备</a>
+                <div class="nav_2">
+                	<a href="../../../zb/scsb/" target="_blank">自主创新</a>
+                        <a href="../../../zb/yssb/" target="_blank">研发生产</a>
+                        <a href="../../../zb/aqfh/" target="_blank">工程项目</a>
+                        <a href="../../../zb/fzsb/" target="_blank">营销服务</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../wh/">文化</a>
+                <div class="nav_2">
+                	<a href="../../../wh/ppwh/" target="_blank">品牌文化</a>
+                        <a href="../../../wh/qydj/" target="_blank">企业党建</a>
+                        <a href="../../../wh/wxzp/" target="_blank">文学作品</a>
+                        <a href="../../../wh/shsy/" target="_blank">书画摄影</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main"  style="overflow:hidden;">
+	
+	<div class="main1 ad_1"><a href="../../../lslm/gg/201506/t20150619_62125.html" target="_blank"><img src="../../../lslm/gg/201506/W020150619577708582449.jpg" alt="W020150602615130971796.jpg"/></a></div>
+        
+<div class="main4" style="overflow:hidden;">
+    <div class="main4_left"> 
+    	<div class="xladd">当前位置：<a href="../../../" target="_blank" title="首页" class="CurrChnlCls">首页</a>><a href="../../" target="_blank" title="油气" class="CurrChnlCls">油气</a>><a href="../" target="_blank" title="天然气" class="CurrChnlCls">天然气</a></div>
+        <div class="xlsubtitle"></div>
+        <div class="xltitle">政策出了这么多，气价为何没咋降？</div>
+        <div class="xlsetitle"></div>  
+        <div class="xltimer">
+            <span class="xltimerl">
+
+2019-01-04 16:13
+<span class="laiyuan">&nbsp;·&nbsp;来源：<span>中国能源网</span></span>
+<span class="xlzrbjt">&nbsp;·&nbsp;作者：<span>张安</span></span>
+
+<span class="xlzrbjt2">&nbsp;·&nbsp;责编：<span>王长尧</span></span>
+
+</span>
+            <span class="xltimerr" style="display:none;">天然气;天然气价格;勘探;储气;勘探开发;国家发改委;居民;矿业权;市场化;天然气产业</span>
+<script>
+var ks = $(".xltimerr").text();
+var ksa = ks.split(";");
+var kss = "";
+for(var i = 0;i<ksa.length;i++){
+if(i>=3){break;}
+kss += ksa[i];
+if(i!=2){
+kss+=";"
+}
+$(".xltimerr").text(kss);
+$(".xltimerr").show();
+}
+
+</script>
+
+        </div>
+        <div class="xlcontent">
+            <style type="text/css">.TRS_Editor P{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor DIV{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor TD{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor TH{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor SPAN{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor FONT{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor UL{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor LI{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor A{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}</style><div class=TRS_Editor><style type="text/css">
+
+.TRS_Editor P{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor DIV{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor TD{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor TH{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor SPAN{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor FONT{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor UL{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor LI{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}.TRS_Editor A{margin-top:1em;margin-bottom:1em;line-height:2;font-family:微软雅黑;font-size:12pt;}</style>
+<p align="center"><img complete="complete" alt="" src="http://5b0988e595225.cdn.sohucs.com/images/20190104/53e73d9a4c9448a9bde467106733d253.jpeg" /></p>
+<p>　　“十三五”以来，国家大力推进天然气上游勘探开发和下游销售与终端利用市场化改革，加强中游管道、储气库等储运基础设施价格监管，持续推进“管住两头、放开中间”的天然气价格改革，实现居民非居民用气价格并轨，有利地激发了市场活力，提高了资源配置效率。本文总结梳理“十三五”以来国家出台的一系列改革政策，围绕天然气产业持续健康发展，就当前存在的天然气供需关系偏紧、配气环节价格过高、门站价格没有动态调整等问题提出政策建议。</p>
+<p>　<strong>　上游勘探开发市场化步伐加快</strong></p>
+<p>　　2012年之前，我国油气上游勘探开发市场实行的是资质管理基础上的备案制。“十二五”后半期，国家向全社会公开招标出让页岩气开发权，并在新疆试点首次公开招标常规油气区块勘查，天然气勘探开发矿权开始向市场开放。</p>
+<p>　　“十三五”以来，天然气勘探开发领域市场化步伐明显加快。2016年11月，国家发布实施《全国矿产资源规划（2016—2020）》，明确逐步放开上游勘探开发市场，引入社会资本，加快勘探开发进程。2017年2月，中办、国办印发《矿业权出让制度改革方案》，明确以招标拍卖挂牌方式为主，全面推进矿业权竞争出让；提出用3年左右时间，建成“竞争出让更加全面，有偿使用更加完善，事权划分更加合理，监管服务更加到位”矿业权出让制度。随着新的矿业权市场化出让制度的推进实施，将有效解决天然气勘探开发市场存在的竞争不充分、探矿权采矿权有偿使用不到位等问题，并督促持有天然气探矿权采矿权的企业加大勘探开发投入力度，促进天然气增储上产。</p>
+<p align="center"><img width="666" height="206" style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" complete="complete" alt="" src="http://5b0988e595225.cdn.sohucs.com/images/20190104/1522ed2acf2e4170953b4520d6f3a50f.jpeg" /></p>
+<p>　　2017年4月，国务院印发《矿产资源权益金制度改革方案》，明确加快建立新型矿产资源权益金制度建设，在矿业权出让环节，将探矿权采矿权价款调整为矿业权出让收益，其中矿业权出让收益的中央与地方分享比例由改革前的2∶8调整为4∶6；在矿业权占有环节，将探矿权采矿权使用费整合为矿业权占用费，鼓励更多矿业权人参与合理勘探开发和提高持证成本；在矿产开采环节，组织实施资源税改革；在矿山环境治理恢复环节，将矿山环境治理恢复保证金调整为矿山环境治理恢复基金。通过调整矿业权征收方式和征收标准等一系列政策举措，将加快推进矿业权竞争性转让，为天然气资源科学合理开采提供制度性保障。</p>
+<p>　　2018年9月，国务院印发《关于促进天然气协调稳定发展的若干意见》，其中，进一步明确提出要加大国内勘探开发力度，深化油气勘查开采管理体制改革，要求自然资源部等部委尽快出台相关细则，严格执行油气勘查区块退出机制，建立已探明未动用储量加快动用机制，强化国有油气企业能源安全保障考核，引导企业加大勘探开发投入，确保增储上产见实效；要求各油气企业全面增加国内勘探开发资金和工作量投入，确保完成国家规划部署的各项目标任务，力争到2020年底前国内天然气产量达到2000亿立方米以上。</p>
+<p>　　从政策成效来看，勘探开发市场化改革已经取得新突破。一方面，自然资源部在2011年推进非常规油气区块探矿权公开招标后，2015年10月公开招标出让新疆油气勘查5个区块，国有石油企业勘探开发专营局面被打破。另一方面，持有天然气探矿权采矿权的企业内部加大勘探开发力度，加快内部天然气区块流转。</p>
+<p>　　以中国石油为例，2017年12月实施东西部油田矿权内部流转，中西部鄂尔多斯、四川、柴达木三大盆地及部分外围盆地的16个探矿权、采矿权区块，从西部长庆油田、青海油田、西南油气田流转到东部大庆油田、辽河油田、华北油田以及玉门油田。</p>
+<p>　<strong>　中游储运设施开放建设双双提速</strong></p>
+<p>　　继“十二五”国家先后出台《天然气基础设施建设与运营管理办法》《油气管网设施公平开放监管办法（试行）》和《国务院关于创新重点领域投融资机制鼓励社会投资的指导意见》等政策后，“十三五”期间，国家发改委等部委先后出台相关细则，鼓励和支持各类资本参与天然气基础设施投资建设，推进已有天然气管网设施逐步向第三方市场主体平等开放。</p>
+<p>　　2016年9月，国家能源局印发《关于做好油气管网设施开放相关信息公开工作的通知》，要求中国石油、中国石化和中国海油及各省市油气管网设施企业，公开油气管网设施基本情况、准入条件等相关信息；随后，三大石油公司及地方企业陆续公开全部油气管网资产信息，奠定了向第三方公平开放的信息基础。</p>
+<p align="center"><img width="666" height="220" style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" complete="complete" alt="" src="http://5b0988e595225.cdn.sohucs.com/images/20190104/2600234c37e24c14baa307d047d89803.jpeg" /></p>
+<p>　　2017年5月，国家发改委、国家能源局印发《中长期油气管网规划》，提出以扩大设施规模、完善管网布局、加强衔接互联、兼顾公平开放为重点，大力发展天然气管网，提升储备调峰设施能力，提高系统运行智能化水平。从规划实施成效看，重大基础设施投资建设由“十二五”后半期的稳步推进转向加快实施，西气东输三线东段和中卫——靖边联络线、陕京四线重大骨干管道建成投产，东北进口通道——中俄天然气东线北段顺利开工建设，2018年度30多项互联互通工程如期投用，山西、重庆、河北等省（市、区）天然气管道建设顺利。特别是2017年12月，国家首条智能化管道——中俄天然气东线北段全面开工建设，将在提高天然气管网系统智能化运行水平中发挥标杆示范作用。</p>
+<p>　　长期以来，受我国储气调峰能力严重不足等影响，每年冬季采暖期，国家相关部委和油气企业都将天然气稳定供应作为一项重大任务，特别是在2017年冬季我国北方部分地区一度出现天然气供应紧张局面。为补足储气调峰短板，2018年4月，国家发改委、国家能源局继2014年印发《关于加快推进储气设施建设的指导意见》后，再次出台《关于加快储气设施建设和完善储气调峰辅助服务市场机制的意见》，进一步明确供气企业、管道企业、城镇燃气企业承担季节（月）调峰责任、应急责任和储气指标，明确：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到2020年，供气企业拥有不低于年合同销售量10%的储气能力，满足所供应市场季节（月）调峰以及应急状况用气需求；城镇燃气企业不低于年用气量5%的储气能力；地方政府至少形成不低于保障本行政区域日均3天需求量的储气能力，且各方储气指标不重复计算，并对相关企业开展年度指标动态考核。在2018年9月国务院《关于促进天然气协调稳定发展的若干意见》中，对以上储气指标又进行强调，并进一步明确相关部委、地方政府及供气企业责任。</p>
+<p>　　按照政策要求，各供气企业迅速行动，综合施策，加大储气库等基础设施建设力度。以中国石油为例，2016年成立天然气销售储备气公司，并于2018年5月进一步调整为储气库分公司，一方面，狠抓已投产运行的10座储气库挖潜增效；另一方面，狠抓辽河双6等储气库建设，储气库（群）的工作气量和整体采气能力不断增强。</p>
+<p>　<strong>　下游天然气销售市场更高效</strong></p>
+<p>　　天然气作为优质高效、绿色清洁的低碳能源。我国既要加快推进天然气利用，提高天然气在一次能源消费中的比重，又要努力实现高效科学利用，把天然气能源用好。2007年和2012年，国家发改委先后两次出台《天然气利用政策》，明确天然气利用顺序，加强需求侧管理，着力提高天然气利用的社会效益、环境效益和经济效益。</p>
+<p>　　但由于近些年来天然气发展定位不明确、鼓励政策不配套、基础设施存在短板、价格机制没有理顺等问题，2013—2015年天然气消费量年均增速由2000—2012年的16%下滑至7%，天然气产业发展进入平台期。</p>
+<p>　　为此，2017年6月，国家发改委等13部委联合出台《加快推进天然气利用的意见》，提出“逐步将天然气培育成为我国现代清洁能源体系的主体能源之一”“到2020年，天然气在一次能源消费结构中的占比力争达到10%左右”等总体目标，并确定以燃料清洁替代和新兴市场开拓为主要抓手，加快推进天然气在城镇燃气、工业燃料、燃气发电、交通运输等领域的大规模高效科学利用，着力做好北方地区冬季清洁取暖、快速提高城镇居民燃气供应水平、打通天然气利用“最后一公里”、大力发展天然气分布式能源、鼓励发展天然气调峰电站和有序发展天然气热电联产，以及实施工业燃料、交通燃料升级工程等重点任务。</p>
+<p>　　从近两年全国天然气消费情况来看，国家天然气终端利用政策已见到实实在在效果，2017年天然气消费量达2352亿立方米、同比增长17%，2018年天然气消费预计达2700亿立方米左右，连续两年实现两位数增长，重回2000年以来高速发展轨道。</p>
+<p>　<strong>　气价改革迈出实质性步伐</strong></p>
+<p>　　近些年来，天然气价格机制改革始终是我国推进资源能源价格改革的重点。“十一五”之前，我国天然气定价处于传统价格管理阶段，即政府对陆上天然气实行以成本加成为基础的价格管制，采用国家确定天然气出厂价格和各管道的管输价格、天然气生产和管输企业负责收取费用的计价方式。但随着我国经济社会快速发展，国内天然气生产已无法满足经济发展需求的快速增长，石油企业通过跨国管道和贸易方式积极引进境外天然气和液化天然气（LNG）资源，全力满足国内市场需要。但由于仍按照国产气定价机制确定进口气价格，导致天然气进口成本与销售价格倒挂，造成天然气资源进口企业“进口越多、亏损越多”的局面，严重制约了天然气产业的持续健康发展。</p>
+<p>　　“十二五”期间，我国首先在广东、广西两省（区）开展天然气价格改革试点，随后在全国范围内推广，明确放开气源和销售价格最终目标，将计价方式从出厂价管理改为门站价管理，并建立天然气与进口燃料油等可替代能源之间的比价关系，区分存量气和增量气进行价格调整。2015年10月，中共中央、国务院印发《关于推进价格机制改革的若干意见》，提出按照“管住中间、放开两头”总体思路，推进天然气等能源价格改革，尽快全面理顺天然气价格，加快放开天然气气源和销售价格；按照“准许成本加合理收益”原则，合理制定天然气管网输配价格。</p>
+<p align="center"><img complete="complete" alt="" src="http://5b0988e595225.cdn.sohucs.com/images/20190104/74e8ef5ecfaf46d2b2e332e4731cdba4.jpeg" /></p>
+<p>　　“十三五”以来，国家发改委持续推进天然气价格改革，密集推出一系列天然气价格政策。2016年8月，针对一些地方仍然存在天然气供气环节过多、加价水平过高等问题，国家发改委印发《关于加强地方天然气输配价格降低企业用气成本的通知》，要求各省（市、区）发展改革和物价部门全面梳理天然气各环节价格，加强天然气输配价格监管，降低过高的省内管道运输价格和配气价格，取消不合理收费，减轻用气企业负担。2016年10月，配套出台了《天然气管道运输价格管理办法（试行）》和《天然气管道运输定价成本监审办法（试行）》，改革管道运输定价机制，推进价格监管办法和成本监审办法全覆盖。两个办法的出台，标志着天然气输送自然垄断环节价格监管向精细化、制度化迈出实质性步伐，并为实施管道第三方公开准入、推进天然气价格市场化改革奠定了基础。另外，随着天然气消费量迅速增长，为解决日益突出的储气设施建设速度偏慢、调峰能力不足的矛盾问题，2016年10月，国家发改委明确储气设施市场化价格政策，即储气设施经营企业可根据市场供求情况自主确定对外销售价格，以及与委托企业双方协商确定储气服务价格，对鼓励投资建设储气设施非常具有价格导向作用。</p>
+<p>　　全面理顺居民非居民用气价格是“十三五”天然气价格改革的最大亮点。继“十二五”期间存量气与增量气价格并轨后，2016年11月，国家发改委在化肥行业产能过剩等形势下，全面放开化肥用气价格，明确化肥用气价格由供需双方协商确定或通过市场交易平台形成价格，至此非居民用气价格彻底放开。</p>
+<p>　　2018年5月，国家发改委针对居民用气门站价格低于进口气引进和国产气供应成本的“价格倒挂”、价格不能反映供需变化，以及上游供气企业与下游燃气公司争论居民用气用于非居民用气等问题，特别是在2017—2018年冬季采暖期国内天然气供应紧张情况下，印发《关于理顺居民用气门站价格的通知》，明确将居民用气由最高门站价格管理改为基准门站价格管理，价格水平按非居民用气基准门站价格水平安排，供需双方可以基准门站价格为基础，在上浮20%、下浮不限的范围内协商确定具体门站价格，实现与非居民用气价格机制衔接。</p>
+<p>　　同时，鼓励供需双方企业通过上海、重庆石油天然气交易中心等平台进行公开透明交易，并要求各地综合考虑居民承受能力、燃气企业经营状况和当地财政状况等因素，合理安排居民用气终端销售价格。至此，天然气价格改革迈出了居民用气与非居民用气价格并轨的关键性步伐。</p>
+<p><strong>　　政策落地效果仍待检验</strong></p>
+<p>　　可以预见的是，随着国家一系列改革政策逐项落地，天然气产业发展的深层次矛盾及不平衡不充分问题将逐步得以解决，天然气发展成为我国现代能源体系中的主体能源之一也指日可待。但从天然气产业持续健康发展来看，有关政策落地效果还有待检验，特别是一些问题还需要从政策层面进行解决：</p>
+<p>　　天然气价格动态调整机制不到位。</p>
+<p>　　当前，随着能源价格波动周期加快、波幅加大，天然气与石油、煤炭、电力等能源的比价关系变化也越来越大，天然气与其他能源经常处于“替代”“逆替代”状态。早在2011年12月，国家发改委《关于在广东省、广西自治区开展天然气价格形成机制改革试点的通知》明确提出，天然气门站价格实行动态调整机制，根据可替代能源价格变化情况每年调整一次，并逐步过渡到每半年或者按季度调整。而民用天然气门站价格仅在2018年6月进行了8年以来的首次调整。</p>
+<p>　　进口气成本与基准门站价依然“倒挂”。</p>
+<p>　　比如，中缅进口管道气和部分进口LNG购销价差仍在1元/立方米以上，天然气资源进口企业承受巨额亏损，虽然进口气退税可以弥补一些损失，但从政策层面没有得到根本性解决。</p>
+<p>　　配气环节管理亟需加强。</p>
+<p>　　部分省市终端用户价格因配气环节成本过高依然高居不下，短距离配气环节成本远远高于长距离管道、海上LNG运输及气化等成本，已经成为天然气大规模利用的“肠梗阻”。</p>
+<p>　　天然气分布式能源、天然气交通等终端利用方式的政策支持力度有待加强。据调查，目前国内天然气分布式能源项目普遍年利用小时数偏低，一年仅开机2—3个月，这样造成天然气分布式能源发展缓慢。同时，在一些城市交通领域，天然气公交车、出租车逐步被以煤电为动力的新能源汽车及普通汽柴油汽车替代。</p>
+<p>　　为促进天然气资源科学高效利用，逐步把天然气培育成为现代能源体系的主体能源之一，建议加快天然气上游勘探开发领域的改革政策落地，促进天然气增储上产，保障国家能源安全和资源稳定供应；</p>
+<p>　　加强输配气环节成本的定期监审，特别是配气环节的成本监审，一方面激发相关企业加大输配气管网建设力度，另一方面要避免输配气环节成本过高，确保天然气终端销售价格科学合理，让终端用户“用得上、用得起”；</p>
+<p>　　推进天然气基础门站价格与替代能源价格动态联动，建议按季度进行调整，保持天然气与替代能源合理的比价关系，促进天然气大规模利用，实现天然气产业高质量发展；</p>
+<p>　　加大供气企业、管道企业、城镇燃气企业和地方政府的储气调峰应急能力建设政策引导和推进力度，尽快解决储气设施短板，确保高峰高日期间终端用户“用得稳”；</p>
+<p>　　进一步加大天然气分布式能源、天然气交通等政策支持力度，努力提高天然气终端利用比重，促进天然气清洁资源的科学高效利用。</p></div>
+<div style='color:#fff;padding-bottom:10px;'>中国能源网 http://www.cnenergy.org </div>
+        </div>
+        <div class="xlread">
+            <div class="xllink"><span>阅读（<span class="redu" style="float:none">0</span>）&nbsp;&nbsp;</span><a href="#" class="dianzan"><img src="../../../images/zan.png" /></a><span><span class="zan">0</span>&nbsp;&nbsp;分享到：</span><div class="bdsharebuttonbox" style="float: left;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a> </div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
+            <div class="xlzrbj"><button type="button" id="copycardid">复制分享</button><!-- 责任编辑：<span>张安</span> --></div>
+        </div>
+        <div class="xwlc">新闻立场</div>
+        <div class="xlgjcon">
+            <div class="xlgctitle"></div>
+            <div class="xlxz"><a class="xlxza"><br><span class="tongyi"></span><br></a><a class="xlxzd"><br><span class="butongyi"></span><br></a></div>
+            <div class="xlbfb"><span class="xlbfbt">94%</span><div class="left"><span class="xlbfba"></span><span class="xlbfbb"></span></div><span class="xlbfbt">6%</span></div>
+            
+        </div>
+        <div class="xlxgyd"><img src="../../../images/xgxwimg.jpg" /><span>相关阅读</span></div>
+        <script>
+        var str="天然气;天然气价格;勘探;储气;勘探开发;国家发改委;居民;矿业权;市场化;天然气产业";
+        if(str==""){
+            
+        }else{
+        var html="";
+        strs=str.split(";");
+        for (i=0;i<strs.length ;i++ ) 
+        { 
+           html+="<a href='/pub/xny/search/?word="+encodeURIComponent(strs[i])+"'>"+strs[i]+"</a>"; //分割后的字符输出 
+        }
+        $(".xlxgyd").append(html);
+        }
+        </script>
+        <div class="xlxglist">
+            <ul>
+                
+                <li><a href="./t20190104_751931.html">陕西延长石油日交售天然气破1400万方 今年累计产34亿方</a><span>2019 / 01 / 04</span></li>
+                
+                <li><a href="./t20190104_751930.html">西北油田雅克拉采气厂提前完成年度9.3亿方天然气任务</a><span>2019 / 01 / 04</span></li>
+                
+                <li><a href="./t20190104_751929.html">到2019年天然气净进口量将直逼欧盟水平</a><span>2019 / 01 / 04</span></li>
+                
+                <li><a href="./t20190102_751859.html">11月中国天然气对外依存度高达47.4% 为年内新高</a><span>2019 / 01 / 02</span></li>
+                
+                <li><a href="../../../tt/201812/t20181227_751793.html">天然气热电联产仍是大势所趋</a><span>2018 / 12 / 27</span></li>
+                
+            </ul>
+        </div>
+        <div class="xlgjsm">【稿件声明】凡来源为中国能源报（能源网—中国能源报）的稿件，版权均归中国能源报所有，未经
+        中国能源报社书面授权，禁止进行转载、摘编、复制及建立镜像等任何使用，违者将被追究法律责任。</div>
+    </div>
+        <script>
+$(function(){
+$.ajax({
+"url":"/bpex",
+"type":"get",
+"dataType":"json",
+"success":function(data){
+$("#wit1").text(data["wit1"]);
+$("#wit2").text(data["wit2"]);
+$("#brent1").text(data["brent1"]);
+$("#brent2").text(data["brent2"]);
+}
+});
+});
+
+</script>
+
+<div class="main4_right">
+        	<div class="main4_r_t">
+            	<a href="../../../shipin/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../shipin/"  target="_blank"><img src="../../../images/shipin.png" /></a><span>video</span></div>
+            </div>
+            <div class="main4_m1">
+            	<ul>
+                    
+                    
+                    <li style="display:block;"><a href="../../../shipin/201901/t20190104_751918.html" class="ceng" target="_blank">内蒙古电视台：民营企业在行动！亿利化...</a><a href="../../../shipin/201901/t20190104_751918.html" class="ceng1"></a></li>
+                    
+                    
+                    <li><a href="../../../dl/dw/201811/t20181123_741089.html" target="_blank"><img src="../../../dl/dw/201811/W020181123420034838229.jpg"/></a><a href="../../../dl/dw/201811/t20181123_741089.html" class="ceng" target="_blank">重磅！创造多项世界之最，藏中电力联网...</a><a href="../../../dl/dw/201811/t20181123_741089.html" class="ceng1"></a></li>
+                    
+                    <li><a href="../../../xny_183/tyn/201810/t20181028_730672.html" target="_blank"><img src="../../../xny_183/tyn/201810/W020181028660713946006.jpg" alt="d55cb4a2decbf91034ae229e417b94fa_15-45-09-28-4.jpg"/></a><a href="../../../xny_183/tyn/201810/t20181028_730672.html" class="ceng" target="_blank">财约你丨走出停牌阴霾，汉能变革这三年</a><a href="../../../xny_183/tyn/201810/t20181028_730672.html" class="ceng1"></a></li>
+                    
+                    <li><a href="../../../shipin/201810/t20181019_712660.html" target="_blank"><img src="../../../shipin/201810/W020181019609343119381.jpg"/></a><a href="../../../shipin/201810/t20181019_712660.html" class="ceng" target="_blank">2018智慧能源发展高峰论坛</a><a href="../../../shipin/201810/t20181019_712660.html" class="ceng1"></a></li>
+                    
+                    <li><a href="../../../shipin/201810/t20181019_711951.html" target="_blank"><img src="../../../shipin/201810/W020181019534660745521.jpg" alt="8682482f1f984e238b0dce280cbe6535[1].jpg"/></a><a href="../../../shipin/201810/t20181019_711951.html" class="ceng" target="_blank">汉能推新品“发电墙”，薄膜企业共同做...</a><a href="../../../shipin/201810/t20181019_711951.html" class="ceng1"></a></li>
+                    
+                    
+                </ul>
+                <div class="main4_m1_left"></div>
+                <div class="main4_m1_right"></div>
+            </div>
+
+
+            <div class="main4_m2" style="overflow:hidden;">
+                
+                	<div style="clear:both;padding-bottom:20px;"><a href="http://www.cnenergy.org/xwzt/sp/" target="_blank"><img src="../../../ybl/201807/W020180708756326698634.jpg" alt="503604249086294579.jpg" width="280" height="81"/></a></div>
+                
+                	<div style="clear:both;padding-bottom:20px;"><a href="http://www.cnenergy.org/xwzt/ystny/" target="_blank"><img src="../../../ybl/201807/W020180708756837540547.jpg" alt="248393539728826338.jpg" width="280" height="81"/></a></div>
+                
+                	<div style="clear:both;padding-bottom:20px;"><a href="http://www.cnenergy.org/xwzt/dhgjvip/" target="_blank"><img src="../../../ybl/201807/W020180708757382440533.jpg" alt="590825454915592194.jpg" width="280" height="81"/></a></div>
+                
+                	<div style="clear:both;padding-bottom:20px;"><a href="http://www.cnenergy.org/xwzl/xlxny/" target="_blank"><img src="../../../ybl/201808/W020180802539240772700.jpg" alt="729927665644342725.jpg" width="280" height="81"/></a></div>
+                 
+            </div>
+
+
+<!--
+            <div class="main4_r_t">
+            	<a href="../../../xwzt/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../xwzt/" target="_blank"><img src="../../../images/zhuanti.png" /></a><span>special</span></div>
+            </div>
+            <div class="main4_m2">
+                
+                    <a href="../../../xwzt/sp/" target="_blank"><img src="" height='81' width='280' style="margin-bottom: 30px;" /></a>
+                
+                    <a href="../../../xwzt/ystny/" target="_blank"><img src="" height='81' width='280' style="margin-bottom: 30px;" /></a>
+                
+                
+                    <a href="../../../xwzt/dhgjvip/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/zjygadwqlsfzxsd_1/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/xnysdrw2017/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/0/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/ydyl/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/gfqrxhj/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/2017lhzt/" target="_blank"><img src="" height='81' width='280' /></a>
+                
+                    <a href="../../../xwzt/ztk1/" target="_blank"><img src="../../../xwzt/ztk1/images/P020150619501630615901.jpg" height='81' width='280' /></a>
+                
+            </div>
+
+-->
+            <div class="main4_r_t">
+            	<a href="../../../yw/ft/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../yw/ft/" target="_blank"><img src="../../../images/fangtan.png" /></a><span>interview</span></div>
+            </div>
+            <div class="main4_m3">
+                
+            	<div class="main4_m3_1">
+                	<div class="main4_m3_1_l"><a href="../../../sylb/dj/201812/t20181206_748872.html" target="_blank"><img src="../../../sylb/dj/201812/W020181206390348232291.jpg" alt="6d43971b13dd0408c623e88e3e97b88d_Z.jpg"/></a></div>
+                    <div class="main4_m3_1_r">
+                    	<a href="../../../sylb/dj/201812/t20181206_748872.html" target="_blank" class="ti">中小型石化民企面临重新洗牌</a>
+                        <p><a href="../../../sylb/dj/201812/t20181206_748872.html" target="_blank" >当前，促进民营企业发展的利好政策不断出台，民营经济环境不...</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            	<div class="main4_m3_1">
+                	<div class="main4_m3_1_l"><a href="../../../yw/ft/201811/t20181130_744633.html" target="_blank"><img src="../../../yw/ft/201811/W020181130361699524937.jpg" alt="2009%2002%2003%20Mariesa%20Crow%20in%20studio%20edit%20file%20008-182x241.jpg"/></a></div>
+                    <div class="main4_m3_1_r">
+                    	<a href="../../../yw/ft/201811/t20181130_744633.html" target="_blank" class="ti">中国将成电气化交通领域领军者</a>
+                        <p><a href="../../../yw/ft/201811/t20181130_744633.html" target="_blank" >近日，针对未来能源转型过程中电网的发展趋势，记者对IEEE电...</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            	<div class="main4_m3_1">
+                	<div class="main4_m3_1_l"><a href="../../../yw/ft/201811/t20181130_744630.html" target="_blank"><img src="../../../yw/ft/201811/W020181130359016981246.jpg" alt="微信图片_20181130093927.jpg"/></a></div>
+                    <div class="main4_m3_1_r">
+                    	<a href="../../../yw/ft/201811/t20181130_744630.html" target="_blank" class="ti">锌黄锡矿光伏材料前景可期</a>
+                        <p><a href="../../../yw/ft/201811/t20181130_744630.html" target="_blank" >11月19日，在首届中澳科技创新高峰研讨会上，悉尼新南威尔士...</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            	<div class="main4_m3_1">
+                	<div class="main4_m3_1_l"><a href="../../../gj/gjft/201811/t20181129_744394.html" target="_blank"><img src="../../../gj/gjft/201811/W020181129530157716468.jpg" alt="1543339401921_1[1].jpg"/></a></div>
+                    <div class="main4_m3_1_r">
+                    	<a href="../../../gj/gjft/201811/t20181129_744394.html" target="_blank" class="ti">人工智能将彻底改变能源行业</a>
+                        <p><a href="../../../gj/gjft/201811/t20181129_744394.html" target="_blank" >11月20日，第九届道达尔中国科学论坛在京举行，本次论坛选取...</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            	<div class="main4_m3_1">
+                	<div class="main4_m3_1_l"><a href="../../../sylb/dj/201811/t20181122_740658.html" target="_blank"><img src="../../../sylb/dj/201811/W020181122661369603710.jpg" alt="1542739299247_1[1].jpg"/></a></div>
+                    <div class="main4_m3_1_r">
+                    	<a href="../../../sylb/dj/201811/t20181122_740658.html" target="_blank" class="ti">中塔两国电力合作前景广阔</a>
+                        <p><a href="../../../sylb/dj/201811/t20181122_740658.html" target="_blank" >近日，塔吉克斯坦罗贡水电站第一台机组投产。该水电站是塔吉...</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                 
+                
+            </div>
+            <div class="main4_m4 ad_6"><a href="#"><img src="../../../images/m8.jpg" /></a></div>
+            <!--<div class="main4_r_t">
+            	<a href="../../../lslm/nysj/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../lslm/nysj/" target="_blank"><img src="../../../images/shuju.png" /></a><span>data</span></div>
+            </div>-->
+
+<div>
+<!--<table width="280" border="0" bordercolor="#eeeeee" class="tc" style="margin:10px auto;border-collapse: collapse; font-size: 12px; text-align: center; color: rgb(67, 67, 67); font-family: Tahoma, Geneva, sans-serif; line-height: normal;">
+    <tbody>
+        <tr>
+            <th class="fb cWrite" width="20%" height="30" bgcolor="#8ea7be" scope="col" style="margin-right: 0px; margin-left: 0px; padding: 0px; color: rgb(255, 255, 255);">&nbsp;</th>
+            <th class="fb cWrite" width="40%" height="30" bgcolor="#8ea7be" scope="col" style="margin-right: 0px; margin-left: 0px; padding: 0px; color: rgb(255, 255, 255);">0号柴油</th>
+            <th class="fb cWrite" width="40%" bgcolor="#8ea7be" scope="col" style="margin-right: 0px; margin-left: 0px; padding: 0px; color: rgb(255, 255, 255);">93号汽油</th>
+        </tr>
+        <tr>
+            <td id="wit3" class="cGrey bWrite" height="30" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);">当日</td>
+            <td id="wit1" class="cGrey bWrite" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);"></td>
+            <td id="brent1" class="cGrey bWrite" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);"></td>
+        </tr>
+        <tr>
+            <td id="wit1" class="cGrey bWrite" height="30" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);">涨跌</td>
+            <td id="wit2" class="cGrey bWrite" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);"><span class="cGreen" style="color: rgb(2, 112, 20);"></span></td>
+            <td id="brent2" class="cGrey bWrite" bgcolor="#eeeeee" style="margin-right: 0px; margin-left: 0px; padding: 0px; border-style: solid; border-color: rgb(255, 255, 255);"><span class="cGreen" style="color: rgb(2, 112, 20);"></span></td>
+        </tr>
+    </tbody>
+</table>-->
+</div>
+            <div class="main4_m5" style="display:none;">
+            	<div class="main4_m5_t">
+                	<ul>
+                    	<li class="in">综合</li>
+                        <li>汽油</li>
+                        <li>电力</li>
+                        <li>煤炭</li>
+                        <li>新兴能源</li>
+                    </ul>
+                </div>
+                <div class="main4_m5_m" style="display:block">
+                	<img src="../../../images/m9.jpg" width="255" />
+                </div>
+                <div class="main4_m5_m">
+                	
+                </div>
+                <div class="main4_m5_m">
+                	
+                </div>
+                <div class="main4_m5_m">
+                	
+                </div>
+                <div class="main4_m5_m">
+                	
+                </div>
+            </div>
+            <div class="main4_r_t">
+            	<a href="../../../hzwz/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../hzwz/" target="_blank"><img src="../../../images/huizhan.png" /></a><span>exhibition</span></div>
+            </div>
+            <div class="main4_m6">
+<!--<a href='https://ad.doubleclick.net/ddm/clk/406353365;206539549;n' target='_blank'><img style='width: 296px; height: 247px;' src='../../../images/20189396gk.gif' /></a>-->
+<!--
+<div id='inspired-payload' style='margin: 5px 0; text-align: center; position: relative; overflow: hidden;'><script src='https://cdn.inspired-mobile.cn/libraries/inspiredlib.js' type='text/javascript'></script><script type='text/javascript'>var imagineCreative = new imagine(); imagineCreative.initialize({PID: '10917',ZID: '11245', FID: '7', ChID: '1', CmpID: '6915', FlightID: '18513', CrtID: '5836', PlacementID: '2', informofclick: ['%%CLICK_URL_ESC_ESC%%'], method: '3', customClose: false, closePosition: 'TR', closeType: 'black', lightboxBackground: 'rgba(171,171,171,0.8)', redirectURL: '', mraid: false, redirectToObj: true, mode: 1});</script><img src='https://ad.doubleclick.net/ddm/ad/N1443.1845103IMAGINEMOBILE/B20376483.206539621;sz=1x1;ord=%%CACHEBUSTER%%;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?' style='display:none; visibility:hidden; width:1px; height:1px;' /></div>
+-->
+
+               
+                      <a href="http://www.cn-bea.com/news/information/2018/1011/116.html" target="_blank"><img src="../../../lthz/201807/W020181011597605384990.jpg" alt="微信图片_20181011112134.jpg"/></a>
+                
+                      <a href="http://www.lng2019.cn/registration.aspx?utm_source=CNENERGY&utm_medium=Web%20banner&utm_campaign=CNENERGY%20Web%20banner" target="_blank"><img src="../../../lthz/201808/W020181106389553332530.gif" alt="LNG2019-Banners-300-x-84-Mandarin-v1.gif"/></a>
+                
+                      <a href="http://www.china-nengyuan.com/999/zt/CBPC/" target="_blank"><img src="../../../lthz/201811/W020181127624271913250.jpg" alt="生物质LOGO 300-84.jpg"/></a>
+                
+                      <a href="http://www.solarqt.com/" target="_blank"><img src="../../../lthz/201808/W020180816627102335783.jpg" alt="1534410545.jpg"/></a>
+                
+                      <a href="http://www.saj-electric.cn/" target="_blank"><img src="../../../lthz/201808/W020180919559530163362.jpg" alt="三晶电气.jpg"/></a>
+                
+                      <a href="http://www.anqiaotj.com/" target="_blank"><img src="../../../lthz/201808/W020180816547300237454.jpg" alt="安峤.jpg"/></a>
+                
+                      <a href="http://www.bhoec.com/batterychina/default.asp" target="_blank"><img src="../../../lthz/201808/W020180821428049777066.gif" alt="300.84.gif"/></a>
+                
+                      <a href="https://m.weibo.cn/u/2137950223?from=1079295010&wm=9848_0009&sourceType=weixin&uid=2121238955" target="_blank"><img src="../../../lthz/201709/W020170919357852386099.jpg" alt="banner5.jpg"/></a>
+                
+                      <a href="../../../lthz/201805/t20180503_521010.html" target="_blank"><img src="../../../lthz/201805/W020180503525906376073.jpg" alt="中国能源网300x84-cn-20180428.jpg"/></a>
+                 
+                <ul>
+                    
+                          <li><a href="../../../hzwz/201812/t20181228_751824.html">第四届内蒙古国际太阳能及光...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181228_751819.html">亚洲新能源物流车及卫星导航...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181227_751797.html">2018中国新能源国际发展大会...</a></li>
+                    
+                          <li><a href="../../../xny_183/cn/201812/t20181227_751792.html">中盐金坛“盐穴压缩空气储能...</a></li>
+                    
+                          <li><a href="../../../xny_183/swz/201812/t20181226_751774.html">15家农林生物质热电企业共同...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181226_751772.html">核工业机器人与智能装备协同...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181225_751770.html">2018（第五届）电力行业企业...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181225_751680.html">第五届可持续的固体废物管理...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181224_751679.html">北京煤气热力工程设计院雄安...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181224_751678.html">华为举办首届智能计算大会并...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181218_751350.html">关于召开2019炼油和石化行业...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181214_751143.html">美通社2018新传播年度论坛于...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181212_750987.html">第七届国际清洁能源论坛在澳...</a></li>
+                    
+                          <li><a href="../../../yw/nyhlw/201812/t20181212_750964.html">“互联网+节能”产业联盟在京...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181212_750963.html">第七届“美通社新传播年度论...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181210_750026.html">打造“能源领域技术对接路由...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181205_748679.html">《生物天然气发展中长期规划...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181204_746183.html">卡特彼勒全产品线亮相2018上...</a></li>
+                    
+                          <li><a href="../../../hzwz/201812/t20181202_745603.html">朱共山代表新能源行业出席中...</a></li>
+                    
+                          <li><a href="../../../hzwz/201811/t20181128_744062.html">中国智能产业高峰论坛 | AI打...</a></li>
+                     
+                </ul>
+            </div>
+            <!--<div class="main4_r_t">
+            	<a href="../../../weiping/" target="_blank" class="more"></a>
+            	<div class="main4_r_ti"><a href="../../../weiping/" target="_blank"><img src="../../../images/weiping.png" /></a><span>comment</span></div>
+            </div>
+            
+            <p class="yuanwen">游侠电动车靠谱吗？</p>
+            <div class="main4_m7">
+                
+            	<a href="#" class="name">王先僧</a>
+                <div class="main4_m7_m">
+                    <div class="main4_m7t"></div>
+                    <div class="main4_m7m">
+                       &nbsp;&nbsp;&nbsp;&nbsp;继续干就好。当年不是还有人说火车没马车快呢。
+                    </div>
+                    <div class="main4_m7f"></div>
+                </div>
+                
+            	<a href="#" class="name">maomaobear</a>
+                <div class="main4_m7_m">
+                    <div class="main4_m7t"></div>
+                    <div class="main4_m7m">
+                       &nbsp;&nbsp;&nbsp;&nbsp;昨天是简短回应，这个算正式的吧<br/>　　这个事情还是从头说起吧，黄同学搞这个电...
+                    </div>
+                    <div class="main4_m7f"></div>
+                </div>
+                
+            	<a href="#" class="name">王亞暉</a>
+                <div class="main4_m7_m">
+                    <div class="main4_m7t"></div>
+                    <div class="main4_m7m">
+                       我昨天一群人聊到后半夜，里面包括做电池的、做汽车相关创业的、游侠汽车的前实习...
+                    </div>
+                    <div class="main4_m7f"></div>
+                </div>
+                
+            	<a href="#" class="name">Scorpio</a>
+                <div class="main4_m7_m">
+                    <div class="main4_m7t"></div>
+                    <div class="main4_m7m">
+                       个人认为，电动车是中国缩短与国外汽车企业技术差距的最好机会。希望游侠能成功。<br/>...
+                    </div>
+                    <div class="main4_m7f"></div>
+                </div>
+                
+            </div>
+            -->
+        </div>
+</div>
+<div class="fad_4" style="display:none">
+<a href="#" target="_blank"><img src="" /></a>
+</div>
+<div class="adright ad_4" style="display:none">
+<a href="" target="_blank"><img src="" /></a>
+</div>
+<div class="adfloat ad_5" style="display:none;">
+
+<a href="#" target="_blank"><img src="" border="0" /></a>
+
+</div>
+<!--
+<div id="divvodeo" style=" display: none;"></div>
+-->
+
+<!--
+<div class="adfloat">
+
+
+<div class="adinfo" style="width:260px;height:186px;background:#fff;">
+
+
+
+<div class="adinfot" style="padding:30px 0 20px 0px;width:100%;text-align:center;font-size:16px;">
+<a href="../../../xny_183/tyn/201601/t20160108_256075.html" target="_blank" title="为什么在美上市的11家中国光伏企业市值加起来还不如一个Firstsolar？">为什么在美上市的1...</a></div>
+
+<div class="adinfod" style="padding:0px 10px 0px 10px;font-size:12px;line-height:1.5">
+<a href="../../../xny_183/tyn/201601/t20160108_256075.html" target="_blank" >两年半没见到龙焱能源科技公司的董事长吴选之了，一见面他就向老红提出了一个问题：过去五年，美国光伏企业Firstsolar的组件出货量不是最大的，可为什么出货量排在世界...</a></div>
+
+
+
+            
+</div>
+
+</div>
+
+-->
+
+<script>
+
+/*设置视频广告start*/
+
+/*$(".adfloat").append($("#divvodeo").html());*/
+
+/*设置视频广告end*/
+
+var adtop = 100;
+var adheight = 265;
+var adwidth = 100;
+var admtop = 156;
+var adfwidth = 260;
+var adfheight = 186;
+var winWidth;
+if (window.innerWidth){
+	winWidth = window.innerWidth;
+}else if ((document.body) && (document.body.clientWidth)){
+	winWidth = document.body.clientWidth;
+}
+
+var winHeight = document.documentElement.clientHeight; 
+var cssobj = {"position":"fixed","top":adtop+"px","border":"1px solid #ccc","overflow":"hidden","width":adwidth+"px","height":(adheight+26)+"px"};
+var floatcss = {"position":"fixed","right":"10px","top":(winHeight - adfheight-10)+"px","border":"1px solid #ccc","overflow":"hidden","padding":"2px"};
+var floatimg = {"width":adfwidth+"px","height":adfheight+"px","border":"0px"};
+
+
+$(".adfloat img").css(floatimg);
+$(".adfloat").css(floatcss);
+
+
+$(".adfloat").append('<span href="javascript:;" style="cursor:pointer;left:'+(adfwidth-40+4)+'px;margin-top:-'+(adfheight+5)+'px;position:absolute;width:40px;height:20px;background:#E0E0E0;text-decoration:none;color:#0058AD;display:block;font-size:13px;text-align:center;line-height:20px;">关闭</span>');
+
+
+/*视频广告关闭按钮样式*/
+/*
+$(".adfloat").append('<span href="javascript:;" style="cursor:pointer;right:5px;margin-top:-201px;position:absolute;width:40px;height:20px;background:#E0E0E0;text-decoration:none;color:#0058AD;display:block;font-size:13px;text-align:center;line-height:20px;">关闭</span>');
+*/
+$(".adfloat span").click(function(){
+	$(this).parent().hide();
+});
+
+
+$(".adleft a img,.adright a img").css({"width":adwidth+"px","height":adheight+"px","border":"0px"});
+
+var cssleft = {"left":"10px"};
+var cssright = {"right":"10px"};
+$(".adleft").css(cssobj);
+$(".adleft").css(cssleft);
+$(".adright").css(cssobj);
+$(".adright").css(cssright);
+
+$(".adright").css(cssright);
+
+
+
+
+$(".adleft,.adright").append("<span href='javascript:;' style='cursor:pointer;margin-top:1px;width:100px;height:25px;background:#E0E0E0;text-decoration:none;color:#0058AD;display:block;font-size:13px;text-align:center;line-height:25px;'>关闭</span>");
+
+$(".adleft span,.adright span").click(function(){
+	$(".adleft").hide();
+	$(".adright").hide();
+	//$(this).parent().hide();
+	//$(this).parent().hide();
+});
+
+var res = function () {  
+    $(".adfloat").css({"top":(document.documentElement.clientHeight - adfheight-10)+"px"});
+};
+
+
+$(window).resize(res);
+
+
+</script>
+<a class="gototop" href="javascript:;"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAyADIDAREAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAEEBwYF/8QALRAAAQMCAwYFBQEAAAAAAAAAAQACAwQFBhETBxIhMUFRIjJCYXEUFRZSgbP/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIEBQMG/8QAIxEBAAIBBAEFAQEAAAAAAAAAAAECBAMREzESBTJRodEhYv/aAAwDAQACEQMRAD8A8kv3j8mICAgICC+HsjW4jIgICAgFBFUVRRB0DZVs5diSt+5XJpZYaN2cpPATPbx0wf1HrP8AF5vqObxR4198/Ttw8XznefbD0+0/AdrvVr/LsJac8bGkVsNN5Hsj8JkYBlk5mWTh24/PHgZdqW4tX7dOXjxaPOjjC955IUEVRVFfcwTh1uI8U0FmfKYI6pztSQcwyNjpHZe5DMgufK1uPTm3w+2hp+d4q6FtUx1RW2gGB8MZQUdM3Rr5YvbnA0/6HqeHdeZ6fiTaebU7nr9/Hdl5EVjjp08vsw2iT4UuejUl0llq3D6qLnpu5CVg7jqOo/i68/CjWr/qOnNiZPHP99rbtjwnaLRcqK7Wd7Tb742SaOKPyNczcJMZHDcfqggdPhY9MyLXrNbd1bzdGKzEx1Zzwr03CiqKorZabtX2mubX0EmjVxtkZHKObdWN0ZI7HJ5yKxqacXjaemqXms7x2yEkkk8zzK2yiDbUXe4VNto7bPKX0lA6V1Iw+jX3d8A9s2A5fKxGnEWm0dy1N5mNvhiK2yiqKoogICAgIIqKFmvSioICAgIkqAMl85l9dn//2Q==" /></a>
+<script>
+winHeight = document.documentElement.clientHeight; 
+
+$(".gototop").css({"position":"fixed","top":(winHeight-80)+"px","left":"10px"});
+$(".gototop img").css({"border":"0px"});
+
+$(".gototop").click(function(){
+	document.documentElement.scrollTop = document.body.scrollTop=0;
+});
+
+$(".gototop img").mouseout(function(){
+	this.src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAyADIDAREAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAEEBwYF/8QALRAAAQMCAwYFBQEAAAAAAAAAAQACAwQFBhETBxIhMUFRIjJCYXEUFRZSgbP/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIEBQMG/8QAIxEBAAIBBAEFAQEAAAAAAAAAAAECBAMREzESBTJRodEhYv/aAAwDAQACEQMRAD8A8kv3j8mICAgICC+HsjW4jIgICAgFBFUVRRB0DZVs5diSt+5XJpZYaN2cpPATPbx0wf1HrP8AF5vqObxR4198/Ttw8XznefbD0+0/AdrvVr/LsJac8bGkVsNN5Hsj8JkYBlk5mWTh24/PHgZdqW4tX7dOXjxaPOjjC955IUEVRVFfcwTh1uI8U0FmfKYI6pztSQcwyNjpHZe5DMgufK1uPTm3w+2hp+d4q6FtUx1RW2gGB8MZQUdM3Rr5YvbnA0/6HqeHdeZ6fiTaebU7nr9/Hdl5EVjjp08vsw2iT4UuejUl0llq3D6qLnpu5CVg7jqOo/i68/CjWr/qOnNiZPHP99rbtjwnaLRcqK7Wd7Tb742SaOKPyNczcJMZHDcfqggdPhY9MyLXrNbd1bzdGKzEx1Zzwr03CiqKorZabtX2mubX0EmjVxtkZHKObdWN0ZI7HJ5yKxqacXjaemqXms7x2yEkkk8zzK2yiDbUXe4VNto7bPKX0lA6V1Iw+jX3d8A9s2A5fKxGnEWm0dy1N5mNvhiK2yiqKoogICAgIIqKFmvSioICAgIkqAMl85l9dn//2Q==";
+});
+
+$(".gototop img").mouseover(function(){
+	this.src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAyADIDAREAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAUGAwQHAv/EACsQAAICAQMDAwQBBQAAAAAAAAIDAQQABRETBhIhFCIxBxUyQSMkM0JRYf/EABoBAQADAQEBAAAAAAAAAAAAAAACAwQBBQb/xAAxEQABAgQEAwYFBQAAAAAAAAAAARECAyExBBJBUTKhwRNhgYKx8EJikbLRFFJxcvH/2gAMAwEAAhEDEQA/AKnn3h8mMAYAwBgDAGAMAk9H0MtSVcfNxFKtQWLbD7HLI7GyFjtCVuKZ7ij9ZVMm5WoqqvvVULIJeZ6sxtB0zVcLYq67QsuUlz+ABvCRDXUTTgZZWAN+wJ+SjILPVLwqlfl/JLskW0Sc/wAHjQumD1is9y79esSCASQ0LRMnkIQX2QhDoKTM9oGJ7vEzttG+Js/IrMvLqqHJcrNr69ED+lby9Ps6kD0PoIAWhZCTiHCTeDdYmAH7WeJ74HCYhHSGr+1OrIVnoxC5oKRgDALn9O4nh1g4kI4RpOLkapI9qr6Tn+RxLXE7D43KPOYMbeHx+1djZhbL4epab2pMv0LSpcbCXGp24mzrFDUShRaa9cCoUnDB8z+ECUR875jgl5VTypSBU+JDRFE6Kn9viRdFIb6bMeGl3BfpZv06OayF50VApjYWrZW7rdZwgzunYSlvbG/4z+78ciZkaJl2q/KLoVYR2s6X0bmnU3Oob7r/AErrFkqR1VwALl/cp1djmX+YuKwiBS2di3LtiPO+VyYMsyFHf6ovC1UWpOZE8taN/uhzDPYPNGAMAl+nNJ0zVLDkXLbqhLQ6wuVIF8ENdJvZE9zkbT2r9vzvPztlM+ZFAlEeu+9NlLJUCRXpT3qWIvpzpcJEvurfUkBNmjx6d6kVwqHQcq+5d+xBO8RHu8TvHxvkTGxPwo3ma7fsNH6VN6+V/uIvpfosddrMd90RWOD4VV5XYczmLyHJxLKFrKIL+TedtvjLp+K7NeFV+nLde4rlYfOlzPrXRNHS9DnUJ1X1DeNRqhaP6ZsuYYdqnEyDKYFRH/a+P9b5GVi1ijZmvrX06kpmHSGF3Knm0yjAGATvSIDF23YY1KlLoXlzLnKVMk+k5SxGGEMnMmUR7d9v3mfErRE+ZOSopdIv4L6Fybr2myUV/V141URl5V+UZpyUafFGE+t/Dl2iWfjx/wCPfvmDsYtly8+LM+X2vcbO1Tuflwtc0+h9dRS6dUturqpsnUJXKLFzUkxFeQCZla6BjA++S9xxt/3J4uUsUfC9NEhv5iGHmNBfXeK3gZOt+o9HZVdT9e7U5dVgEV4IXoW4LRSNkrBNI+aFbj+G8xPktpzmFkxO7Za/xRrM1iWJnQ2d6ddznExMTMTG0x4mM9RFex56owzpwYAwBgDAGAMAYAwBgDAGAMAYAwD/2Q==";
+});
+
+
+</script>
+<div class="foot">
+	<div class="footer">
+
+
+
+<a href="http://www.nea.gov.cn/" target="_blank" title="国家能源局">国家能源局</a>
+
+<a href="http://www.cnautonews.com" target="_blank" title="中国汽车报">中国汽车报</a>
+
+<a href="http://www.marketdaily.com.cn/" target="_blank" title="市场报网络版">市场报网络版</a>
+
+<a href="http://energy.people.com.cn/" target="_blank" title="人民网-能源">人民网-能源</a>
+
+<a href="http://www.xinhuanet.com/energy/" target="_blank" title="新华网-能源">新华网-能源</a>
+
+<a href="http://www.ceec.net.cn/" target="_blank" title="中国能建">中国能建</a>
+
+<a href="http://www.powerchina.cn" target="_blank" title="中国电建">中国电建</a>
+
+<a href="http://www.zgny.org.cn/" target="_blank" title="中国能源学会">中国能源学会</a>
+
+<a href="http://www.chng.com.cn/" target="_blank" title="中国华能集团公司">中国华能集团公司</a>
+
+<a href="http://www.ce.cn/cysc/ny/index.shtml" target="_blank" title="中经网能源">中经网能源</a>
+
+<a href="http://www.cnr.cn/ny/" target="_blank" title="中广网能源">中广网能源</a>
+
+<a href="http://www.gmw.cn/ny/" target="_blank" title="光明网能源">光明网能源</a>
+
+<a href="http://www.zhb.gov.cn/" target="_blank" title="生态环境部">生态环境部</a>
+
+<a href="http://www.cec.org.cn/" target="_blank" title="中电联">中电联</a>
+
+<a href="http://www.coalchina.org.cn/" target="_blank" title="中煤协">中煤协</a>
+
+<a href="http://www.sasac.gov.cn/n1180/index.html" target="_blank" title="国资委">国资委</a>
+
+<a href="http://www.mlr.gov.cn/" target="_blank" title="国土资源部">国土资源部</a>
+
+<a href="http://www.miit.gov.cn/n11293472/index.html" target="_blank" title="国家工信部">国家工信部</a>
+
+<a href="http://www.chinacoal-safety.gov.cn/mkaj/" target="_blank" title="国家煤监局">国家煤监局</a>
+
+<a href="http://www.sdpc.gov.cn/" target="_blank" title="国家发改委">国家发改委</a>
+
+<a href="http://www.zgny.org.cn/" target="_blank" title="中国能源学会">中国能源学会</a>
+
+<a href="http://www.inengyuan.com/" target="_blank" title="I能源-《能源》杂志">I能源-《能源》杂志</a>
+
+
+
+
+
+<div class="clear"></div>
+    </div>
+<div class="clear"></div>
+<div style="width:980px;margin:0 auto;"><a href="javascript:;" id="morelink" style="font-size:12px;float:right;color:#ccc;">更多</a></div>
+<script>
+$("#morelink").click(function(){
+var txt = $.trim($(this).text());
+if(txt == "更多"){
+$(this).text("收起");
+$(".footer").css("height","auto");
+}else{
+$(this).text("更多");
+$(".footer").css("height","140px");
+}
+});
+
+</script>
+
+<noscript><img src="http://ta.trs.cn/c/1.gif?mpId=371&jsoff=1" style="border:0" alt="" /></noscript>
+<script>
+var _taq = _taq || [];
+_taq.home = 'http://ta.trs.cn/c';
+_taq.push(['_mpId', '371']);
+_taq.push(['_cli', '1']);
+(function(d, o, t) {
+	if (window.inTRSDesignMode) return;
+	var ma = d.createElement(o); ma.async = true; ma.commonresource="1"; ma.src = t;
+	var s = d.getElementsByTagName(o)[0]; s.parentNode.insertBefore(ma, s);
+})(document, 'script', 'http://ta.trs.cn/c/js/ta.js');
+</script>
+
+
+<div class="clear"></div>
+    <div class="footer1">
+    	<p>地址：北京市金台西路2号人民日报社新媒体大厦 联系电话：010-65369450（9491）官网 QQ群253151626 </p>
+        <p>邮箱： nengyuanwang@126.com |  京ICP备14049483号-3 | <img src="/ba.png" style="display:inline;vertical-align:middle;" /> 京公网安备 11010502033025号 | 中国能源报社版权所有2009</p>
+    </div>
+</div>
+<script>
+$(function(){
+$("#searchform1").submit(function(e){
+var word = $(this).find(".text").val();
+word = $.trim(word);
+if(word == ""){
+	alert("请输入检索词");
+	if(e && e.preventDefault){
+		e.preventDefault();
+	}else{
+		return false;
+	}
+}
+});
+
+$("#searchform2").submit(function(e){
+var word = $(this).find(".text").val();
+word = $.trim(word);
+if(word == ""){
+	$(".searchdiv2").hide();
+	if(e && e.preventDefault){
+		e.preventDefault();
+	}else{
+		return false;
+	}
+}
+});
+});
+</script>
+<div class="px_nav">
+     <div class="nav">
+    	<ul>
+            <div class="px_search"></div>
+            <div class="search searchdiv2">
+            <form action="/search/" id="searchform2">
+                <input type="submit" class="sub" value="" />
+            	<input type="text" class="text" name="word" />
+                
+            </form>
+            </div>
+        	<li><a href="/" target="_blank">首页</a></li>
+            <li><a href="../../../yw/">国内</a>
+            	<div class="nav_2">
+                	<a href="../../../yw/zc/" target="_blank">政  策</a>
+                        <a href="../../../yw/cj/" target="_blank">财  经</a>
+                        <a href="../../../yw/ft/" target="_blank">访  谈</a>
+                        <a href="../../../yw/nyhlw/" target="_blank">能源互联网</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../gj/">国际</a>
+                <div class="nav_2">
+                	<a href="../../../gj/qy/" target="_blank">国际前沿</a>
+                        <a href="../../../gj/gjcj/" target="_blank">国际产经</a>
+                        <a href="../../../gj/gjft/" target="_blank">国际访谈</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../">油气</a>
+                <div class="nav_2">
+                	<a href="../../sy/" target="_blank">石 油</a>
+                        <a href="../" target="_blank">天然气</a>
+                        <a href="../../lh/" target="_blank">炼化</a>
+                        <a href="../../fcg/" target="_blank">非常规</a>
+                    <div class="nav_2f"></div>
+                </div>  
+            </li>
+            <li><a href="../../../mt/">煤炭</a>
+                <div class="nav_2">
+                	<a href="../../../mt/sc/" target="_blank">煤炭生产</a>
+                        <a href="../../../mt/mtsc/" target="_blank">煤炭市场</a>
+                        <a href="../../../mt/mhg/" target="_blank">煤化工</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../dl/">电力</a>
+                <div class="nav_2">
+                	<a href="../../../dl/dw/" target="_blank">电 网</a>
+                        <a href="../../../dl/hd/" target="_blank">火 电</a>
+                        <a href="../../../dl/sd/" target="_blank">水 电</a>
+                        <a href="../../../dl/hd_1/" target="_blank">核 电</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../xny_183/">新能源</a>
+                <div class="nav_2">
+                	<a href="../../../xny_183/tyn/" target="_blank">太阳能</a>
+                        <a href="../../../xny_183/fd/" target="_blank">风 电</a>
+                        <a href="../../../xny_183/swz/" target="_blank">生物质</a>
+                        <a href="../../../xny_183/cn/" target="_blank">储 能</a>
+                        <a href="../../../jp_482/fbsny/" target="_blank">分布式</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../hb/" class="nav1">节能环保</a>
+                <div class="nav_2">
+                	<a href="../../../hb/tpf/" target="_blank">碳排放</a>
+                        <a href="../../../hb/jzyth/" target="_blank">建筑一体化</a>
+                        <a href="../../../hb/zm/" target="_blank">治 霾</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../js/">建设</a>
+                <div class="nav_2">
+                	<a href="../../../js/gcdt/" target="_blank">工程动态</a>
+                        <a href="../../../js/kjcx/" target="_blank">科技创新</a>
+                        <a href="../../../js/zcq/" target="_blank">走出去</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../zb/"  class="nav1">科技装备</a>
+                <div class="nav_2">
+                	<a href="../../../zb/scsb/" target="_blank">自主创新</a>
+                        <a href="../../../zb/yssb/" target="_blank">研发生产</a>
+                        <a href="../../../zb/aqfh/" target="_blank">工程项目</a>
+                        <a href="../../../zb/fzsb/" target="_blank">营销服务</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+            <li><a href="../../../wh/">文化</a>
+                <div class="nav_2">
+                	<a href="../../../wh/ppwh/" target="_blank">品牌文化</a>
+                        <a href="../../../wh/qydj/" target="_blank">企业党建</a>
+                        <a href="../../../wh/wxzp/" target="_blank">文学作品</a>
+                        <a href="../../../wh/shsy/" target="_blank">书画摄影</a>
+                    <div class="nav_2f"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script language="javascript">
+
+  //用户ID
+  //var userid = ""; //1.给用户ID赋值
+  //栏目ID
+  var columnid = "105";//2.给栏目ID赋值
+  //文章ID
+  var articleid = "751933";//3.给文章ID赋值
+  
+  var _paq = _paq || [];
+  window['_paq'] = _paq;                 
+  _paq.push(['appkey','UAR-000170_954']);
+  //_paq.push(['uid', userid, 'userid']);
+  _paq.push(['cata', columnid]);
+  _paq.push(['attr', 'itemid='+articleid]);
+  _paq.push(['trackPV']);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'rev.uar.hubpd.com/agent/pa.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+</html>

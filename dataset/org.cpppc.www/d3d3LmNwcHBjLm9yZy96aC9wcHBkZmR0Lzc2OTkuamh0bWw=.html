@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7699","0","attach");
+Cms.viewCount("","7699");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml" target="_blank">新闻动态</a> > <a href="http://www.cpppc.org/zh/pppdfdt/index.jhtml" target="_blank">地方动态</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>云南加大力度防范化解财政金融风险</h2>
+			<span class="msg"><b>2019-01-21</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">记者近日从省财政厅获悉，去年以来，我省加大力度防范化解财政金融风险，加强担保公司清理核查，并建立全省融资担保行业风险监测制度，增强风险抵御能力。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">建立财金运行动态分析机制，强化财政、“一行两局”、发改、国资、统计等部门信息共享，重点分析企业杠杆率、融资成本以及政府债务等情况，按季上报分析报告供省政府决策参考，前瞻性防范化解系统性金融风险。清理规范基金管理，按照防范化解债务风险的要求，全面暂停审批政府出资的各类基金，省财政也不再为新设立政府性各类基金出资，同时，按照省政府要求，对部分省财政已投基金进行清理处置，规范基金运作管理。强化PPP项目监测督查，出台PPP项目财政支出统计监测及综合考评制度，研发项目财政支出监测系统，按季上报项目财政承受能力监测报告。开展全省PPP项目集中清查，将323个PPP项目清退出库，投资额为5737.47亿元。加强担保公司清理核查，全面暂停审批成立新的担保公司、再担保公司，同时对现有担保公司、再担保公司加强监管，控制放大倍数，将全省融资担保机构数量从426户下降到目前302户。建立全省融资担保行业风险监测制度，清理出全省涉民融登机构39户，疑似失信机构60户，做到及时监测，提前预防。此外，加强呆账核销检查力度，抽查全省金融机构核销呆账6132笔，金额34.72亿元，占核销金额的50.21%，督促金融企业认真整改。（记者 杨抒燕）</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 云南日报</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7699");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","518");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

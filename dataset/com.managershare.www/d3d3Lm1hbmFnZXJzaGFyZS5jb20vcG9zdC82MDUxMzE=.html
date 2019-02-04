@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>《地球最后的夜晚》上演“地球最困的夜晚” : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">《地球最后的夜晚》上演“地球最困的夜晚”</h1>
+			<input type="hidden" value="605131" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/greatly/" class="post-author">康斯坦丁梅洛</a>&nbsp;
+				<span class="post-date">01月02日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15463975891004.jpg?imageView2/2/w/760" alt="《地球最后的夜晚》上演“地球最困的夜晚”">
+				</div>
+								<p>刺猬公社 | 石灿</p><p>2018年最后一天，两个女生在北京一家电影院看《地球最后的夜晚》，看到一半，她们站了起来，拔腿走出电影院，消失在一片黑暗中。同排的一个女生见她们离去，把腿放到她们的空座上，盖上衣服，睡了。</p><p>《地球最后的夜晚》最后还是栽在了自己的手里，在2018年12月31日上映后，铺天盖地的质疑声出现在豆瓣、微博、微信、知乎等社交媒体上，豆瓣网友@水王是sb 评价说，“老百姓真的苦，自己掏钱买票看电影，看睡着了还要被文艺青年骑在头上骂说：这种梦不是你们抖音用户看的”。截至2019年1月1日，豆瓣评分6.8分。</p><p>是呀，很多观众看不懂它，预期与实际效果相差甚远。但《地球最后的夜晚》踩坑被骂，可不仅仅因为电影本身，还有前期的宣传太过泛滥。从2018年中开始，毕赣频繁出现在各大商业媒体、综艺节目、访谈节目中，宣发方不断放大毕赣个人符号，不少业内人担心，毕赣被消费过度了。</p><p>在影片定档之前，宣发方把观众的关注焦点还引到了电影的技术层面，长达一小时的3D长镜头不断被赋予“创世纪”般的艺术意义，不管观众看不看得懂，反正就是以2D转3D的方式上映了。那段3D梦幻时间是在影片第70分钟开始的，黄觉饰演的男主角罗紘武走进一家影院，带上3D眼镜，把观众领进那个被寄以厚望的长镜头世界。</p><p>在那个伪现实的时空里，罗紘武和观众一同进入现实与梦境、真实与虚假、现在与过去的矛盾中，除了眩晕以外，观众甚至难以将电影情节衔接，要么在电影院里质问自己“我到底在看什么鬼？”要么早已经睡过去，沉寂在自己的梦中。</p><p>《地球最后的夜晚》宣发方在前期的工作是能够用数据来衡量的。猫眼专业版数据显示，《地球最后的夜晚》上映前5天，票房破一亿，首日破两亿。这速度把比它早一天上映的《来电狂响》远远甩在身后，后者破一亿用了一天多时间，破两亿花了两天多时间。</p><p>遗憾的是，《地球最后的夜晚》的票房在上映当天到达顶峰后急转直下，人们的期待经过了昏暗、眩晕、沉闷、睡觉、中途离场之后，开始转化成不满。他们把《地球最后的夜晚》的第一宗罪归结为“导演不为观众着想”，他们很大部分人根本看不懂这部电影是如何叙事的，也不知道毕赣要表达什么。</p><p>毕赣确实没有想要在电影里迎合市场。早在接受《解放日报》采访时他就说，“真正喜欢我电影的人是看我怎样去创作最纯粹的东西，而不是看我去妥协去改变。我觉得对观众最大的尊重就是不去在乎他们。”</p><p>但实际上，电影所讲述的故事不算复杂，只是，叙事结构过于复繁了。官方介绍，故事主线是罗紘武因父亲离世再次回到贵州。12年前，好友白猫被杀，罗紘武在追查凶手左宏元的过程中，被左宏元的情人万绮雯所利用。从此以后，这个神秘的女人构成了他所有的记忆、欲望、信念和梦魇，一段追寻之旅让他发现了被隐藏多年的秘密，秘密包括了他母亲当初弃他而去的个中原因。</p><p>问题就在于，大多数人接受不了毕赣讲述故事的方式。毕赣时常用观众内心毫无波澜的场景作为开头，通过镜头转换、色调搭配、人物语言来升华那些朴实无华的客观事物，这种情况一般会持续到一个普通电影观众的兴奋度开始下降，睡意袭来时，旁白声起，电影开始将观众的思绪带入到语言故事中，之后，一段又一段的冷淡镜头迎面袭来。</p><p>如果单独把《地球最后的夜晚》拎出来不与《路边野餐》作比较，它是一部独立的、可拿很多电影节奖状的作品，遗憾的是，《地球最后的夜晚》是《路边野餐》的升级版，《地球最后的夜晚》就像是这种类型片子的“复制品”，在题材类型层面被局限住了，毕赣用同一个瓶子，装了不同的酒，也就是说，这两部电影的基准逻辑和叙事规则是一样的，很多镜头技术本质上没有改变，只是升级。</p><p>而看毕赣的电影，别用眼睛去理解，眼睛是你获取信息的工具，毕赣不是为了用电影制造共鸣的人，在看这部电影时，你可以适当地保持敬畏之心，一定要在心里做笔记，观察和记住每一句过往的台词、每一个镜头、每一个人的名字，训练一种叫做“前后呼应”的思维，先了解，再评论，只有这样，你才有可能看懂不同镜头语言的基本含义。</p><p>为什么要说“前后呼应”呢？因为毕赣喜欢在电影里安排前后呼应的情节。比如，罗紘武受白猫委托拉一货车苹果给左宏元，但罗紘武和前妻“call机”闹离婚，没来得及送货，当他再次想起时，苹果已经烂了，在腐烂的苹果堆里，他发现了一把手枪，这把枪最后对准了与他母亲偷情的男人，杀了与他偷情的女人的男人。</p><p>苹果是贯穿整部电影的一个扣子，这颗扣子被赋予了悲情色彩，“人在最伤心的时候，会连着苹果的核，吃完一整个苹果”，这才有了白猫边流泪边吃完一个一个苹果、罗紘武把一个苹果送给了那个红发女人、罗紘武才会自己吃完了那个没送出去的苹果。</p><p>再比如，《地球最后的夜晚》很湿，毕赣用了大量的水呈现亚热带地区和罗紘武内心湿漉漉的悲伤。罗紘武参加完父亲的葬礼后，去到一个漏水的房子里，拿起一块钟，试图修好，他在钟里面发现一张照片和一个电话号码。这是推进电影故事向前的重要元素，有了这个号码，电影开始将观众的视角推向其他的陌生场景，从湿漉漉的阴沉转向干燥的对话中。</p><p>钟表在毕赣两部电影里，都被赋予了各自的独特意义，在《路边野餐》里，那个被划在墙上的时钟，是整个梦境发生迁移的笔记本，记下了主角陈升的记忆裂变；在《地球最后的夜晚》里，第一个钟表代表了罗紘武对亲情的执念，最后一个钟表代表了罗紘武对爱情的执念。</p><p>有意思的是，在《路边野餐》里，陈升将一份别人寄托给他的物件，送给了他喜欢的女人；在《地球最后的夜晚》里，罗紘武将那个红头发女人给他的物件，送给了他喜欢的女人。这两个情节的共同点就在于，主人公得到的东西，都是从别人那里得来，并送给自己喜欢的女人。毕赣在这两部电影里使用这种表达方式来制造梦境的手段还有很多，如果你能看得懂《路边野餐》，不难理解《地球最后的夜晚》里毕赣的套路了。</p><p>看《地球最后的夜晚》还要注意一些不可忽视的细节。</p><p>红头发。罗紘武喜欢吃蜂蜜，他母亲经常去偷蜂蜜给他吃，他去找发廊女时，发廊女问他，如果他母亲染头发会是什么颜色，他说，应该是红色，最后，他发现一个头顶红发的“疯女人”跟一个养蜂人跑了。那女人就是他母亲。</p><p>野柚子。罗紘武和万绮雯第一次聊天，万绮雯说她想吃野柚子，有一个歌厅的名字叫野柚子歌厅，老虎机最难停留的那个灯也叫野柚子，罗紘武和万绮雯偷情的地方有野柚子树的影子。</p><p>乒乓球。偷情之后，万绮雯怀了罗紘武的孩子，罗紘武承诺，孩子长大后，他教孩子打乒乓球，但万绮雯说她把孩子打掉了，而罗紘武在矿洞里发现了一个喜欢打乒乓球的孩子，那孩子没有名字，罗紘武给孩子取名叫白猫。</p><p>还有很多不可忽略的细节，就等着你自己去看了。不过，如果你为了抱着看商业爱情片的心态去电影院，那就别去了；最好别叫朋友一起去，你们可能都看不懂，也有可能某一个人因为不懂某一个人而破坏友谊。</p><p>即便如此，截至2019年1月1日，影片拿还是到了2.75亿的成绩，《来电狂响》花了五天只拿到了3.66亿，但有一个数据特别尴尬，《地球最后的夜晚》首日票房斩获2.61亿，有0.14亿是在第二天拿到的。猫眼专业版给出的最终预测票房是2.91亿。</p><p>这不是文艺青年的胜利，也不是文艺片的沉寂，而是一个扭曲的电影市场表现出来的畸形成绩。通常来说，文艺片的票仓是一二线城市，也是在正常的宣推情况下，《路边野餐》的观影人群集中在一二线城市，占比分别是49.2%、21.3％，在三四线城市占比分别是15.3%、14.2%。票仓人群结构可用“二一四三”模式来描述，《冈仁波齐》也是这个模式。</p><p>在《地球最后的夜晚》里，这个模式结构发生了很大变化，二线城市和四线城市的用户渴望观看程度挤掉了三线城市和一线城市，数据分别是：42.5%、22%和18.6％、16.9％ ，票仓人群结构可用“二四三一”模式来描述。</p><p>最想看《地球最后的夜晚》的人集中在20~29岁之间。他们是新社会人群，有这么几个特点，63%的人本科以下学历，个人处在自我价值观、世界观和人生观急速建立阶段，消费能意愿强，不在乎小额代价，什么都愿意尝试。</p><p>但按照以往数据经验来看，“二四三一”结构模式人群更适合《前任3：再见前任》（二线城市：39.6%，四线城市：27.7%，三线城市：20.4%，一线城市：12.3%）、《七月与安生》（二线城市：43%，四线城市：25.1%，三线城市：18.8%，一线城市：13.2%）、《超时空同居》（二线城市：41.6%，四线城市：26.6%，三线城市：20.2%，一线城市：11.7%）和《我不是药神》（二线城市：40.7%，四线城市：25.2%，三线城市：19.5%，一线城市：14.6%）等商业片，这类电影故事不算复杂，结构在可理解范围内，叙事方式适中，情节能够让人情绪跌宕起伏，个别电影还能把电影艺术柔和其中，给了观众想看的，也给了观众应该看的，一石二鸟。</p><p>但是到了毕赣这里，观众与《地球最后的夜晚》基本上处于准偏差位置，毕赣用超现实主义视角呈现了一个烧脑的梦，将不确定的信息以漂浮的方式传递给观众，之前没有尝试过这类文艺片的人这次想尝尝鲜，完了，意愿和需求不匹配，话不投机困意多。</p><p>自然，《地球最后的夜晚》的虚无主义大于了事实教育。事后，部分观众开始对电影反击，他们找到了一份“声明”，把《地球最后的夜晚》推上了断头台，他们在社交媒体上抵制这部电影。</p><p>2018年12月初，宣发团队发布了《地球最后的夜晚》发行票价及跨年活动声明。“地球最后的夜晚”本身就具有话题性，作为2018年最后一部电影，宣发团队建议将看此片当做一场跨年活动，观众可以与最重要的人一起度过一个具有仪式感的夜晚，看完正好零点，一吻跨年。</p><p>“一吻跨年”的营销创意为观众创造了浪漫氛围，而前期的预热海报则通过曝光剧照和台词来发酵情绪，关于梦、悬疑、记忆与爱情。</p><p>“人和人之间，不都是由误会组成的。”</p><p>“关于她的那些零零散散的记忆，到底是不是真的？”</p><p>“你还想跟我走好远？”</p><p>“你要相信我，就像相信那段咒语一样。”</p><p>“现在想起来好像所有的事情，都是从一个朋友的死亡开始的。”</p><p>“泥石流不可怕，活在记忆里面才可怕。”</p><p>“记忆分不出真假，它随时浮现在眼前。”</p><p>“不管你跑到哪里，我都会找到你。”</p><p>“最后问你一句，跟不跟我走？”</p><p>“这辈子，无论如何也逃不掉了。”</p><p>“我现在特别希望，你就是她。”</p><p>这些话都电影里面的原话，宣发没说《地球最后的夜晚》是一部商业爱情片，但是这些话放在常识语境中，就是一句特别有吸引力的商业爱情语言，不会沾有任何凯里气息。</p><p>用商业爱情语言去吸引“二四三一”人群看“二一四三”人群的电影，不迎合大多数观众，又想让大多数观众给钱，被骂，不奇怪。</p><p>可喜欢它的人还是喜欢它，“也许这种方式在当下并不是每个人都能接受或理解的，但影片的实验性和超前性让它成为一部拍给未来的电影。”</p><p>你同意这个说法吗？</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：石灿<br>
+								来源：<a href="https://mp.weixin.qq.com/s/3jE0bTneaNOwtbD4436o8g" target="_blank">刺猬公社（ciweigongshe）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/偏差" title="偏差">偏差</a>
+								<a href="/wiki/商业" title="商业">商业</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+								<a href="/post/608070?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+				</a>
+								<a href="/post/608069?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+				</a>
+								<a href="/post/608034?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+				</a>
+								<a href="/post/608033?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米股价腰斩，市值蒸发近3000亿！</span>
+				</a>
+								<a href="/post/608001?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+				</a>
+								<a href="/post/607963?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+				</a>
+								<a href="/post/607962?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+										<a href="/post/607815?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/b2f0f_4wly0J0wYJ8uvQQg.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>新款iPhone两个月内二次减产，苹果股价跌到谷底？</span>
+					</a>
+										<a href="/post/607814?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c3c03_6p28n3cJ5VYFr5Lj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>支付宝改名换法人了！网友：花呗不用还了？</span>
+					</a>
+										<a href="/post/607810?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4764f_nKHMu2Kt5Mw3sdGd.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>资本寒冬？这家企业却逆势给员工加薪，人均每月1000元！</span>
+					</a>
+										<a href="/post/607809?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/2b35d_Y8CnjCei97EZVKmL.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>是有信心还是卖不出去？雷军承诺未来一年不出售小米股票</span>
+					</a>
+										<a href="/post/607808?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1469d_z86dBvRhvYEfW5mX.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>面包三明治过期了还在卖？全家坚决否认！</span>
+					</a>
+										<a href="/post/607807?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/0ce54_mizyxh1ns1MrJ5gI.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>22亿票据月底到期，华谊兄弟“债务压顶”如何解决？</span>
+					</a>
+										<a href="/post/607436?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/d238f_SB0Z92JKIIkgtoGg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>新年即收5张判决书！ofo与凤凰自行车达成和解</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/greatly/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/23/small_55.jpg">
+													</a>
+						<a class="user-name" href="/author/greatly/">康斯坦丁梅洛</a>
+						<a class="follow-btn " href="javascript:;" data-uid="162355">+&nbsp;关注</a>
+					</div>
+					<p>学会放弃，才能走远。</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

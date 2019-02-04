@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <link rel="stylesheet" type="text/css" href="../../../images/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../images/all.css" />
+    <script type="text/javascript" src="../../../images/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../images/scroll.js"></script>
+    <script type="text/javascript" src="../../../images/select.js"></script>
+    <script type="text/javascript" src="../../../images/all.js"></script>
+    <style type="text/css">
+      a:hover{color: #006bd9;}
+           .n_list .li_noLine a:hover{text-decoration: none;}
+
+    </style> 
+    <script type="text/javascript">
+        $(function(){
+            if($("#ulRel").find("li").length>0)
+            {
+
+            }
+            var source='';
+            if(source!="")
+               $("#source").html("来源："+source);
+
+        })
+
+    </script>
+<style>
+ a:hover{color:blue;}
+</style>
+    <title>2019年全国民航工作会议召开</title>
+</head>
+<body>
+<div class="wrap">
+    <!--top-->
+    <style type="text/css">   
+.t_search input{font-family:Microsoft Yahei, Arial, Helvetica, sans-serif}
+.action_move{margin-top:4px}  
+.action_move i{margin-top:-2px}
+.nav li a {
+    width: 106.6px;}
+
+</style> 
+<div style="display:none"><img src="../../../images/weixinLogo.jpg" /></div>
+<div style="background-color:#edebe9;opacity: 0.8;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); -moz-opacity:0.8; ">
+<div class="user_action top" style="padding:0px;height:30px;float:none;">        
+         <div style="float:left;margin-top: 3px;"> 
+        	<li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese" href="http://www.caac.gov.cn/INDEX/">简体中文</a></fjtignoreurl></li> 
+          <li class="chinese" style="line-height:25px;"><a class="chinese" href="http://www.caac.gov.cn/big5/www.caac.gov.cn">繁体中文</a></li>
+          <li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese" href="http://www.caac.gov.cn/en/SY/" target="_blank">ENGLISH</a></fjtignoreurl></li>
+          <li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese" href="http://www.caac.gov.cn/INDEX/YDKHDXZ/" target="_blank">移动客户端</a></fjtignoreurl></li>
+          <li class="chinese" style="line-height:25px;"><fjtignoreurl><a class="chinese special" href="http://www.caac.gov.cn/website/old" target="_blank">怀旧版</a></fjtignoreurl></li>
+        </div >
+        <div style="float:right;margin-right:23px;">
+          <li class="action_move"><a href="https://mail.caac.gov.cn" target="_blank"><i class="t_mail d_inline"></i>政府邮箱</a></li>
+          <li class="action_move"><a href="../../../INDEX/GZPT/"  target="_blank"><i class="t_work d_inline"></i>工作平台入口</a></li>          
+        </div>
+       </div>
+      </div>
+<div class="top" style="margin-top: 13px;height: 95px; "> 
+    <form class="headForm" action="" name="searchBar" method="get" accept-charset="utf-8" target="_blank">
+      <input type="text" name="channelid" class="channelid" value="224375" style="display:none;" />
+      <div class="logo" style="margin-top: 12px;"></div>
+      
+      <div class="t_search" style="margin-top:52px;height:30px;margin-right:5px">
+             <input type="text" style="width:310px;" id="textfield" class="t_input_txt" name="searchword" value="" />
+            <button id="caacSerch" class="t_search_btn" style="height:24px;line-height:24px;">搜索</button>
+      </div>
+    </form>
+  </div>
+  <!--end top-->
+  <div class="nav" style="margin-top: 14px;">
+    <ul>
+      <li><a id="INDEX" href="../../../INDEX/">首&nbsp;页</a></li>
+      <li><a id="XWZX" href="../../">新闻中心</a></li>
+      <li><a id="XXGK" href="../../../XXGK/XXGK/">信息公开</a></li>
+      <li><a id="FWDT" href="../../../FWDT/">办事大厅</a></li>
+      <li><a id="AQJG" href="../../../AQJG/">安全监管</a></li>
+	  <li><a id="HDJL" href="../../../HDJL/">互动交流</a></li>
+	  <li><a id="ZTZL" href="../../../ZTZL/">专题专栏</a></li>
+	  <li><a id="GYMH" href="../../../GYMH/">关于民航</a></li>
+	  <li><a id="WHMH" href="../../../WHMH/" class="caac">我和民航</a></li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="../../../images/search.js"></script>
+  <script src="../../../images/yahoo-dom-event.js" type="text/javascript"></script>
+  <script src="../../../images/suggest-yui2.js" type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+    //gethotkeyword();
+    $(".headForm").attr("action", config.searchPageURL);
+    init();
+
+
+    function init() {
+      var url = window.location.href;
+      var colName = url.split("/")[3];
+      if(colName=="big5")
+      {
+         colName = url.split("/")[5];
+      }
+      if(colName.length==0||colName=="index.html")
+      {
+        $("#INDEX").addClass("on");
+      }
+      else
+      {
+        $("#" + colName).addClass("on");
+       }
+      
+
+      $(".t_search_btn").click(function() {
+        var channelid = $(".channelid").val();
+        var keyword = $(".t_input_txt").val();
+        createlog(keyword, channelid);
+      });
+    }
+
+    var dataUrl = config.searchPageURL_Suggest+'/caacSuggest.jsp?result=false';
+    new TRSWAS.Suggest('textfield', dataUrl, {
+      useShim: false,
+      resultFormat: '约%result%条结果'
+    });
+  </script>
+    <!--main-->
+    <div class="wrap_w p_t30">
+        <div class="path_bar"><a href="../../../" title="首页" class="CurrChnlCls">首页</a>-><a href="../../" title="新闻中心" class="CurrChnlCls">新闻中心</a>-><a href="../" title="民航要闻" class="CurrChnlCls">民航要闻</a>-&gt;<span class="c_yellow">正文</span></div>
+        <div class="clearfix">
+            <div class="a_right">
+                
+                <div class="n_list" >
+                    <ul id="ulRel">
+                        
+                    </ul>
+                </div>
+                <div class="n_tit m_t30"><span class="d_inline">热点信息<i></i></span></div>
+	   <div class="n_list">
+	     <ul id="hotDoc">     
+                 
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190107_193929.html" target="_blank" title="民航科教协同创新攻关联盟组建座谈会在京召开">民航科教协同创新攻关联盟组建座谈会...
+                       </a><span class="f_r n_date">2019-01-04</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190104_193859.html" target="_blank" title="民用航空法修改决定公布">民用航空法修改决定公布
+                       </a><span class="f_r n_date">2019-01-04</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190104_193858.html" target="_blank" title="《市场准入负面清单（2018年版）》印发">《市场准入负面清单（2018年版）》印发
+                       </a><span class="f_r n_date">2019-01-04</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190103_193819.html" target="_blank" title="民航局发布《北京大兴国际机场转场投运及“一市两场”航班时刻资源配置方案》《北京“一市两场”转场投运期资源协调方案》">民航局发布《北京大兴国际机场转场投...
+                       </a><span class="f_r n_date">2019-01-03</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190104_193845.html" target="_blank" title="《告台湾同胞书》发表40周年 民航在两岸大交流大交往大合作中发挥积极作用">《告台湾同胞书》发表40周年 民航在两...
+                       </a><span class="f_r n_date">2019-01-02</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201901/t20190101_193774.html" target="_blank" title="冯正霖迎接2018年最后一天航班平安归来">冯正霖迎接2018年最后一天航班平安归来
+                       </a><span class="f_r n_date">2019-01-01</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201812/t20181229_193747.html" target="_blank" title="北京首都国际机场年旅客吞吐量突破1亿人次">北京首都国际机场年旅客吞吐量突破1亿...
+                       </a><span class="f_r n_date">2018-12-29</span></li>
+                  <li class="li_noLine" style="overflow:hidden;">
+                        <a style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:233px; float:left;" href="http://www.caac.gov.cn/XWZX/MHYW/201812/t20181228_193717.html" target="_blank" title="改革开放40周年民航客舱文化主题展演活动在京举办">改革开放40周年民航客舱文化主题展演...
+                       </a><span class="f_r n_date">2018-12-28</span></li> 
+		 </ul>
+	   </div>
+         <script type="text/javascript">
+          getHotDoc();        
+</script>
+         <style type="text/css"> 
+
+         li {
+          font-size:14px;
+            }
+         .n_date{
+             padding-left:13px;margin-right:0px
+            }         
+         </style>
+                <!--hot-->
+                <style type="text/css">
+     .h_panel li a{width:80px;text-align:center;font-size:15px;}
+     .h_panel{padding-left:2px;padding-right:0px;}
+     .h_panel li{margin-bottom:12px;margin: 1px;}
+</style>
+<div class="h_panel m_t30">
+	     <h2 style="padding-left:15px;">热点栏目</h2>
+		 <ul>
+		   <li><a href="../" target="_blank">民航要闻</a></li>
+		   <li><a href="../../../XXGK/XXGK/index_172.html?fl=9" target="_blank">通知公告</a></li>
+		   <li><a href="../../../XXGK/XXGK/index_172.html?fl=13" target="_blank">民航规章</a></li>
+		   <li><a href="../../../XXGK/XXGK/index_172.html?fl=11" target="_blank">统计数据</a></li>
+                   <li><a href="../../../FWDT/" target="_blank">服务指南</a></li>
+		   <li><a href="../../HYDT/" target="_blank">行业动态</a></li>
+                     <li><a href="../../../XXGK/XXGK/index_172.html?fl=117" target="_blank">政策解读</a></li>
+		   <li><a href="../../../INDEX/HLFW/HLZN/KP/" target="_blank">航旅指南</a></li>
+                   <li><a href="../../../ZTZL/RDZT/" target="_blank">热点专题</a></li>
+		 </ul>
+	   </div>
+         <script type="text/javascript">
+        	//getHotColumn();
+         </script>
+            </div>
+            <div class="a_left">
+                <div class="content_t">2019年全国民航工作会议召开</div>
+                <div class="content_info"  style="line-height: 28px">
+                    <span class="p_r10" id="source">来源：中国民航局</span>
+                    <span class="p_r10" style="padding-right: 125px;">2019-01-07 14:43</span>
+                    <span class="p_r10">字体：<a class="c_gray" data-role="fontSize" id="font_big">大</a> ｜ <a class="c_yellow" data-role="fontSize" id="font_middle">中</a> ｜ <a class="c_gray" data-role="fontSize" id="font_small">小</a> </span>
+                    <a href="#" onclick="window.print()" class="p_r20 c_gray">打印本页</a>
+                    <div style="width: 85px;height: 28px;display: inline-block;float: right;">
+						<div>
+							<span style="float: left;line-height: 28px; padding: 0 5px;">分享到：</span>
+<a id="shareView" href="javascript:void(0)" tangram_guid="TANGRAM_29" data-cmd="more" style="background-position: 0 0!important;width: 3px;float: left;font-size: 12px;padding-left: 17px;line-height: 16px;height: 16px;	background-image: url(../../../images/jiahaotubiao.png);background-repeat: no-repeat;cursor: pointer;	margin: 6px 6px 6px 0;"></a>
+						</div>	   
+					</div>                </div>
+
+                <div class="content"  data-role="n_content" >
+                    <font id="zoom">
+
+                        <div class=TRS_Editor><p align="center">　　<img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" alt="" complete="complete" oldsrc="W020190107564631492910.jpg" src="./W020190107564631492910.jpg" /></p>
+<p align="center">　　</p>
+<p align="center">　　<img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" alt="" complete="complete" oldsrc="W020190107564631505077.jpg" src="./W020190107564631505077.jpg" /></p>
+<p align="left">　　1月7日，2019年全国民航工作会议在北京召开。会议传达学习中共中央政治局委员、国务院副总理刘鹤对交通运输工作以及对民航工作的重要批示精神，回顾总结民航2018年主要工作，全面分析当前民航发展的新形势，科学谋划引领新时代民航高质量发展的思路和重点，明确提出2019年民航工作的总体要求和主要任务。全国政协副主席、交通运输部党组书记杨传堂将出席闭幕会议并讲话。民航局局长冯正霖作题为《以新发展理念为引领 推动民航高质量发展》的工作报告。民航局副局长李健、董志毅、王志清、吕尔学出席会议。驻交通运输部纪检监察组、国家有关部委、航空器制造企业的相关领导和民航各单位、各部门主要负责人参加了会议。会议为期一天半。</p>
+<p>　　会上，李健传达了刘鹤副总理对交通运输工作以及对民航工作的重要批示精神。刘鹤指出，2018年全国交通运输系统在扩大有效投资、调整运输结构、完善行业治理、培育发展新动能等方面取得显著成效，成绩来之不易。交通运输系统要以习近平新时代中国特色社会主义思想为指导，强化“四个意识”，坚定“四个自信”，自觉做到“两个维护”，围绕建设人民满意交通，坚持推动高质量发展，坚持以供给侧结构性改革为主线，深化市场化改革、扩大高水平开放，在提高综合交通运输网络效率、降低物流成本、保障交通安全上狠下功夫，扎实推进交通强国建设。刘鹤在关于民航工作的批示中指出，2018年民航工作卓有成效，政治站位高，服务质量好，安全性强，英雄人物受到习近平总书记亲切接见，极大地鼓舞了全行业的士气。民航广大干部职工要继续努力，坚持政治第一、安全第一、质量优先，创造新的更好的成绩。</p>
+<p>　　冯正霖在工作报告中指出，2018年，民航工作大事多、要事多、 亮点多，是中国民航发展史上意义非凡的一年。这一年，习近平总书记亲切接见“中国民航英雄机组”，并先后3次对民航工作作出重要批示指示，在民航发展史上具有里程碑意义；这一年，时逢改革开放40周年，民航隆重举行了系列庆祝活动，发布了《新时代民航强国建设行动纲要》，对民航发展具有承上启下、继往开来的重要意义；这一年，是“十三五”规划实施关键一年，是民航补短板、强弱项的关键一年，民航各个领域都有新作为，各项工作都上新台阶，行业发展呈现新气象。全行业紧扣发展的主要矛盾和制约瓶颈，步步为营，攻坚克难，在许多方面都取得了突破性成绩。主要表现在：运输航空创造安全飞行新纪录、供给侧结构性改革成效明显、航班正常率跨越80%大关、真情服务旅客获得感明显增强、民航国际交流合作不断拓展、深化改革内生动力日益强劲、科教创新成果实现多点突破、行业政治生态进一步净化。2018年，运输航空实现持续安全飞行100个月、6836万小时的安全新纪录，实现16年零8个月的空防安全零责任事故记录；全行业完成运输总周转量1206.4亿吨公里，旅客运输量6.1亿人次、货邮运输量738.5万吨，同比分别增长11.4%、10.9%、4.6%；首都机场旅客吞吐量突破1亿人次，全国千万级机场达37个；空管保障航班起降突破1000万架次；民航旅客周转量在综合交通运输体系中的比重达31%，同比提升1.9个百分点；全行业完成营业收入约8750亿元，同比增长17%，快于运输周转量增速5.6个百分点；完成固定资产投资810亿元，新建、迁建运输机场9个，运输机场总数达235个；在航班总量同比增长5.65%情况下，全国航班正常率达80.13%，同比提高8.46个百分点；全国229家机场全面开通“航信通”，32家千万级机场实现国内航班旅客乘机全流程电子化；126座通用机场获得颁证，新增通航企业58家，完成飞行94.1万小时，同比增长12.4%，无人机经营性飞行活动达37万小时。</p>
+<p>　　会议指出，当前我国经济已由高速增长阶段转向高质量发展阶段。推动和实现民航高质量发展，是摆在我们面前的迫切要求和艰巨任务。当前和今后一个时期，民航业必须要把推进民航高质量发展作为确定工作思路、制定发展政策、实施宏观调控的根本要求，必须进一步明确民航高质量发展的目标任务、基本要素、路径方向和效益品质，推动高质量发展在民航落地生根。</p>
+<p>　　会议强调，民航高质量发展应体现在五个方面：一是发展理念新，创新是民航高质量发展的第一动力，协调是民航高质量发展的内生特点，绿色是民航高质量发展的普遍形态，开放是民航高质量发展的必由之路，共享是民航高质量发展的根本目的。二是发展目标明，统筹战略目标和阶段性目标，统筹行业总体目标和各专业、各单位具体目标，建立民航高质量发展的指标体系。三是发展动力足，改造提升传统动能，培育壮大新动能，激发强大精神动力。四是发展路径清，着力提升行业核心竞争力，着力优化行业功能布局，着力增强行业创新能力，着力提高行业国际话语权。五是发展效益好，表现为安全底线牢、运行效率高、服务品质好、经济效益佳、发展后劲足。</p>
+<p>　　会议提出了2019年民航工作的总体思路、安全工作主要目标、民航发展主要预期指标及主要任务。</p>
+<p>　　2019年民航工作总体思路是：以习近平新时代中国特色社会主义思想为指导，深入学习贯彻党的十九大精神和中央经济工作会议精神，坚持稳中求进工作总基调，坚持新发展理念，坚持以供给侧结构性改革为主线，贯彻“巩固、增强、提升、畅通”八字方针，按照“一加快、两实现”的新时代民航强国战略进程，全面落实“一二三三四”民航总体工作思路，始终坚守飞行安全、廉政安全、真情服务底线，聚焦人民群众的需求和关切，紧扣行业发展迫切需要解决的关键问题，大力破除制约民航高质量发展的体制机制障碍，扎实推动民航高质量发展。</p>
+<p>　　2019年民航安全工作主要目标是：杜绝重特大运输航空责任事故，杜绝劫机、炸机等机上恐怖事件，防止空防安全严重责任事故，防止重大航空地面事故和特大航空维修事故。</p>
+<p>　　2019年民航发展主要预期指标是：运输总周转量、旅客运输量、货邮运输量预计分别增长11.8%、11%和5.7%，达1360亿吨公里、6.8亿人次、793万吨；全年国内客运航空公司航班正常率力争保持80%，全国主要机场放行正常率和始发航班正常率力争达到85%。</p>
+<p>　　为实现2019年民航发展目标，全行业要做好九个方面的工作：</p>
+<p>　　一是持续确保安全运行平稳可控。认真贯彻落实确保民航安全运行平稳可控9个方面26条措施，牢牢坚守住安全底线，强化安全工作政治担当，正确处理好“四个关系”，持续夯实“三基”建设，着力提升安全监管效能。</p>
+<p>　　二是持续提升资源保障能力。按照适度超前原则，多举并措，力争在“补短板、强弱项”上实现结构性突破。增强基础设施供给，固定资产投资力争达到850亿元，全力推进北京大兴国际机场建设及运营筹备，构建“四型机场”标杆体系，进一步放宽民航建设市场准入；提升空管保障能力，积极推进国家空域管理体制改革，深化军民航空管融合；加快新技术推广应用，深入推进PBN等航行新技术应用，推进北斗导航系统在民航应用；提升科教支撑能力，积极构建民航科教创新联盟和民航产业技术创新战略联盟，加强适航审定科研条件建设。</p>
+<p>　　三是持续完善航班正常工作。加强源头治理，制定航班时刻差异化调控机制，鼓励航空公司在客座率高的繁忙航线上更换大机型，完善预先飞行计划管理；提升运行效率，合理缩小管制间隔，健全管制工作效率激励机制和约束机制，完成千万级以上机场机坪管制移交；强化协同配合，加快民航运行数据中心建设，在千万级以上机场全面推广A-CDM；完善考核机制，建立民航运行效率指标体系，完善航班正常重点工作督查机制。</p>
+<p>　　四是持续提升民航服务质量。促进民航“无纸化”服务提质升级，鼓励人脸识别、自助值机、自助托运、智能问讯等系统建设，探索人工智能、生物特征识别等新技术与民航安保工作的融合，推进行李全流程跟踪系统建设，提升中转旅客服务体验，提高旅客对机场餐饮服务的满意度，推进空中接入互联网工作取得更大成效，提升航空物流服务水平，推出12326民航服务质量监督电话。</p>
+<p>　　五是持续提升航空运输网络效率。着力强化运输网络规划与国家战略契合度，深入推进京津冀民航协同发展，开展长三角、粤港澳大湾区世界级机场群战略规划编制，加快推进乌鲁木齐等国际航空枢纽以及郑州国际货运枢纽建设，推进干支结合；着力提升功能定位与资源配置的匹配度，鼓励枢纽机场与主基地航空公司建立战略协作和沟通机制、落实北京“一市两场”相关资源配置政策；着力深化民航与综合交通体系的融合度，推动以枢纽机场为核心的综合交通体系建设、推进《空铁联运战略合作协议》落地。</p>
+<p>　　六是持续激发通用航空市场活力。坚持“放管结合、以放为主、分类管理”，继续为通航发展松绑减负，使通用航空更好地“飞起来”。加快通航法规体系重构，推进通航业务框架立法转化、优化通航适航管理政策；加快通航运行环境改善，大力支持低空空域管理综合改革试点、建立空管低空开放服务保障体系；加快通航监管模式改进，落实通用航空分类管理。</p>
+<p>　　七是持续推进民航高水平对外开放。进一步提升开放水平，形成更加开放、透明、规范的行业准入政策体系；进一步扩充航权储备，努力构建结构优化、多元平衡、枢纽导向型的航权开放格局，积极推进与“一带一路”合作国家航权开放；进一步提升合作质量，用好中美、中欧合作平台，夯实对非洲、中亚、东盟合作平台，拓展国际适航合作；进一步加大国际事务参与力度。</p>
+<p>　　八是持续推进行业深化改革。加快政府职能转变，积极推进法治政府建设；大力推进降费减负，研究降低民航发展基金征收标准；推进重点领域改革，推动条件成熟的局属企业加快改革步伐；提升行业治理效能，开展民航高质量发展课题研究，发布民航高质量发展指标体系。</p>
+<p>　　九是持续推动从严治党向纵深发展。始终把政治建设摆在首位，持续强化理论武装，着力打造高素质专业化干部队伍，切实加强基层党组织和党员队伍建设，深入推进党风廉政建设和反腐败工作，加强思想政治和文化建设。</p>
+<p>　　会议期间，与会代表围绕深入贯彻落实习近平总书记对民航工作系列重要指示批示精神，围绕全国民航工作报告提出的任务和要求，以及制定“中国民航高质量发展指标体系”、以新发展理念引领新时代民航高质量发展等进行了广泛深入的讨论。</p></div>
+
+                    </font>
+<div id="id_tblAppendix">
+                  <br />
+                     <p style="font-size:16px"><strong> 附件：</strong><br />
+                      </p>
+                  </div>
+                  
+							  <script>
+									  var appendixfile="";
+									  var appendixlink="";
+									 
+									  if(appendixfile!="" || appendixlink!="" )
+									     id_tblAppendix.style.display = "inline";
+									  else  
+									     id_tblAppendix.style.display = "none";
+</script> 
+
+                </div>
+ 
+                <div class="n_list" >
+                    <ul id="ulRel">
+                        
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--end main-->
+    <div class="bottom_panel"></div>
+</div>
+<!--footer-->
+<div class="bottom">
+  <div class="wrap_w">
+    <div class="link clearfix">
+	  <ul>
+	    <li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="内设机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.caac.gov.cn/dev/bgt/" target="_blank" title="链接到“综合司”"><p data-role="option_item">综合司</p></a>
+			  <a href="http://www.caac.gov.cn/dev/hab/" target="_blank" title="链接到“航空安全办公室”"><p data-role="option_item">航空安全办公室</p></a>
+              <a href="http://www.caac.gov.cn/dev/zcfgs/" target="_blank" title="链接到“政策法规司”"><p data-role="option_item">政策法规司</p></a>
+              <a href="http://www.caac.gov.cn/dev/ghfzs/" target="_blank" title="链接到“发展计划司”"><p data-role="option_item">发展计划司</p></a>
+              <a href="http://www.caac.gov.cn/dev/cws/" target="_blank" title="链接到“财务司”"><p data-role="option_item">财务司</p></a>
+              <a href="http://www.caac.gov.cn/dev/rskjs/" target="_blank" title="链接到“人事科教司”"><p data-role="option_item">人事科教司</p></a>
+              <a href="http://www.caac.gov.cn/dev/gjhzs/" target="_blank" title="链接到“国际司”"><p data-role="option_item">国际司（港澳台办公室）</p></a>
+              <a href="http://www.caac.gov.cn/dev/yshs/" target="_blank" title="链接到“运输司”"><p data-role="option_item">运输司</p></a>
+              <a href="http://www.caac.gov.cn/dev/fbs/" target="_blank" title="链接到“飞行标准司”"><p data-role="option_item">飞行标准司</p></a>
+              <a href="http://www.caac.gov.cn/dev/shs/" target="_blank" title="链接到“航空器适航审定司”"><p data-role="option_item">航空器适航审定司</p></a>
+              <a href="http://www.caac.gov.cn/dev/jcs/" target="_blank" title="链接到“机场司”"><p data-role="option_item">机场司</p></a>
+              <a href="http://www.caac.gov.cn/dev/kgbgs/" target="_blank" title="链接到“空管行业管理办公室”"><p data-role="option_item">空管行业管理办公室</p></a>
+              <a href="http://www.caac.gov.cn/dev/gaj/" target="_blank" title="链接到“公安局”"><p data-role="option_item">公安局</p></a>
+              <a href="http://www.caac.gov.cn/dev/dwbgs/" target="_blank" title="链接到“直属机关党委（思想政治工作办公室）”"><p data-role="option_item">直属机关党委（思想政治工作办公室）</p></a>
+              
+              <a href="http://www.caac.gov.cn/dev/qgmhgh/" target="_blank" title="链接到“全国民航工会”"><p data-role="option_item">全国民航工会</p></a>
+              <a href="http://www.caac.gov.cn/dev/ltxgbj/" target="_blank" title="链接到“离退休干部局”"><p data-role="option_item">离退休干部局</p></a>
+			</div> 
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="地区管理局" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://hb.caac.gov.cn"  title="链接到“华北地区管理局”" target="_blank"><p data-role="option_item">华北地区管理局</p></a>
+			  <a href="http://db.caac.gov.cn" title="链接到“东北地区管理局”" target="_blank"><p data-role="option_item">东北地区管理局</p></a>
+              <a href="http://hd.caac.gov.cn" title="链接到“华东地区管理局”" target="_blank"><p data-role="option_item">华东地区管理局</p></a>
+              <a href="http://zn.caac.gov.cn" title="链接到“中南地区管理局”" target="_blank"><p data-role="option_item">中南地区管理局</p></a>
+              <a href="http://xn.caac.gov.cn" title="链接到“西南地区管理局”" target="_blank"><p data-role="option_item">西南地区管理局</p></a>
+              <a href="http://xb.caac.gov.cn" title="链接到“西北地区管理局”" target="_blank"><p data-role="option_item">西北地区管理局</p></a>
+              <a href="http://xj.caac.gov.cn" title="链接到“新疆管理局”" target="_blank"><p data-role="option_item">新疆管理局</p></a>
+			</div>
+		  </div>
+		</li>
+		<li>
+		   <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="直属机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.atmb.net.cn" title="链接到“空中交通管理局”" target="_blank"><p data-role="option_item">空中交通管理局</p></a>
+			  <a href="http://www.caac.gov.cn/website/G1/jsjg_new/201602/t20160223_85583.html" title="链接到“机关服务中心”" target="_blank"><p data-role="option_item">机关服务局</p></a>
+              <a href="http://www.cauc.edu.cn" title="链接到“中国民航大学”" target="_blank"><p data-role="option_item">中国民航大学</p></a>
+              <a href="http://www.cafuc.edu.cn" title="链接到“中国民航飞行学院”" target="_blank"><p data-role="option_item">中国民航飞行学院</p></a>
+              <a href="http://www.camic.cn" title="链接到“中国民航管理干部学院”" target="_blank"><p data-role="option_item">中国民航管理干部学院</p></a>
+              <a href="http://www.castc.org.cn" title="链接到“中国民航科学技术研究院”" target="_blank"><p data-role="option_item">中国民航科学技术研究院</p></a>
+              <a href="http://www.caacsri.com" title="链接到“民航第二研究所”" target="_blank"><p data-role="option_item">民航第二研究所</p></a>
+              <a href="http://www.caacnews.com.cn" title="链接到“中国民航报社出版社”" target="_blank"><p data-role="option_item">中国民航报社出版社</p></a>
+              <a href="http://www.mhzyy.cn" title="链接到“民航医学中心(总医院)”" target="_blank"><p data-role="option_item">民航医学中心（总医院）</p></a>
+              <a href="http://www.caacsc.cn" title="链接到“清算中心”" target="_blank"><p data-role="option_item">清算中心</p></a>
+              <a href="http://www.chinacfi.net" title="链接到“中国民航飞行校验中心”" target="_blank"><p data-role="option_item">中国民航飞行校验中心</p></a>
+              <a href="http://www.caac.gov.cn/website/dev/xxzx/" title="链接到“信息中心”" target="_blank"><p data-role="option_item">信息中心</p></a>
+              <a href="http://www.caac.gov.cn/website/G1/jsjg_new/201602/t20160223_85584.html" title="链接到“民航专业工程质量监督总站”" target="_blank"><p data-role="option_item">民航专业工程质量监督总站</p></a>
+              <a href="http://www.cah.com.cn" title="链接到“首都机场集团”" target="_blank"><p data-role="option_item">首都机场集团</p></a>
+              <a href="http://www.caac.gov.cn/website/dev/sjzx" title="链接到“审计中心”" target="_blank"><p data-role="option_item">审计中心</p></a>
+              <a href="http://www.icscc.org.cn/index.jsp" title="链接到“国际合作中心”" target="_blank"><p data-role="option_item">国际合作中心</p></a>
+              <a href="http://www.cacc.com.cn" class="A3" title="链接到“中国民航机场建设集团公司”" target="_blank"><p data-role="option_item">中国民航机场建设集团公司</p></a>
+              <a title="链接到“中国民航工程咨询公司”" target="_blank"><p data-role="option_item">中国民航工程咨询公司</p></a>
+              <a href="http://www.caac.gov.cn/website/dev/ECC" title="链接到“中国民用航空发动机适航审定中心”" target="_blank"><p data-role="option_item">中国民用航空发动机适航审定中心</p></a>
+              <a href="http://www.caacmuseum.cn/" title="链接到“民航博物馆”" target="_blank"><p data-role="option_item">民航博物馆</p></a>
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="驻外机构" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.caac.gov.cn/website/dev/ICAO" target="_blank" title="链接“中华人民共和国常驻国际民航组织理事会代表处”"><p data-role="option_item">中华人民共和国常驻国际民航组织理事会代表处</p></a>
+			</div>
+		  </div>
+		</li>
+		<li>
+		  <div data-role="select_box" class="select_box d_inline">
+			<span><input type="text" readonly="readonly" value="相关链接" data-role="select_txt" class="select_txt" style="font-family:Microsoft Yahei, Arial, Helvetica, sans-serif" /></span>
+			<div data-role="option_con" class="select_con">
+			  <a href="http://www.gov.cn/" target="_blank" title="链接到“中央政府门户网站”"><p data-role="option_item">中央政府门户网站</p></a>
+			  <a href="http://www.mot.gov.cn" target="_blank" title="链接“交通运输部”"><p data-role="option_item">交通运输部</p></a>
+			  <a href="http://www.nra.gov.cn/" target="_blank" title="链接“国家铁路局”"><p data-role="option_item">国家铁路局</p></a>
+              <a href="http://www.spb.gov.cn/" target="_blank" title="链接到“国家邮政局”"><p data-role="option_item">国家邮政局</p></a>
+              <a href="http://www.caac.gov.cn/GYMH/MHGK/STZZ/" target="_blank"><p data-role="option_item">民航社团组织</p></a>
+              <a href="http://www.caac.gov.cn/GYMH/MHGK/HKGS/" target="_blank"><p data-role="option_item">航空运输企业</p></a>
+              <a href="http://www.caac.gov.cn/GYMH/MHGK/MYJC/" target="_blank"><p data-role="option_item">民用机场</p></a>
+              <a href="http://www.caac.gov.cn/GYMH/MHGK/BZQY/" target="_blank"><p data-role="option_item">民航运输保障企业</p></a>
+              
+			</div>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+	<div class="foot_info">
+		<div style="width:670px;margin-left:250px;" >
+                 <div style="float:left; width:125px;margin-top:20px;margin-left:-210px;">
+          	   <img src="../../../images/feiji.jpg" />
+                 </div>
+		  <div style="width:620px; float:left;margin-left:-50px">			 
+			  <div class="foot_nav" style="margin-left:-5px; padding-bottom:12px;text-align: left;">
+				<ul style="float:left;width: 290px;">
+				  <li class="d_inline" style="padding:0 5px;"><a href="../../../GYMH/" target="_blank">关于我们</a></li><li class="d_inline" style="padding:0 5px;"><a href="../../../WZDT/" target="_blank">站点地图</a></li><li class="d_inline" style="padding:0 5px;"><a href="../../../INDEX/GZLY/" target="_blank">联系我们</a></li><li class="d_inline" style="padding:0 5px;"><a href="../../../INDEX/GZLY/" target="_blank">网站纠错</a></li>
+				</ul>
+				<ul>
+				  <li class="d_inline" style="padding:0 5px;border-left: none;color: white;">地址：北京市东城区东四西大街155号（100710）</li>
+				</ul>
+			  </div>
+			  <div class="copyright" >
+				<p style="text-align:left; padding-bottom:12px;"><label style="width:290px;display: inline-block;">版权所有：中国民用航空局</label>网站管理：中国民用航空局综合司</p>
+				<p style="text-align:left; padding-bottom:12px;"><label style="width:290px;display: inline-block;">ICP备案编号：京ICP备05034131号</label>政府网站识别码：bm70000001</p>
+				
+			  </div>		     
+		  </div>
+		  <div style="float:right;width:100px; margin-top:13px;">
+			    <span id="_ideConac"></span>		  
+		  </div>		
+	    </div>
+    </div>
+  </div>
+</div>
+<div align="left">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4014848c4e18723269ffe0193734e573";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+(function(){
+var scriptConac=document.createElement('script');
+scriptConac.type='text/javascript';
+scriptConac.async=true;
+scriptConac.src="http://dcs.conac.cn/js/33/000/0000/40672372/CA330000000406723720001.js";
+var spanConac=document.getElementById("_ideConac");
+spanConac.parentNode.insertBefore(scriptConac,spanConac);
+})(); 
+</script>
+</div>
+<!-- PHPStat Start -->
+<script language="javascript">var __$nodeid='59';var __$contentid='193898';var __$title='2019年全国民航工作会议召开';var __$AuthorPh='';var __$Editor='';var __$Liability='gaofei';var __$pubtime='2019-01-07 14:43:00';var __$source='';
+</script>
+<script language="JavaScript" charset="utf-8" src="http://www.caac.gov.cn/phpstat/count/10000021/10000021.js"></script>
+<!-- /PHPStat End -->
+<!--side-->
+<style type="text/css">
+      .fix_tips .bdsharebuttonbox .bds_more {
+         display: block !important;
+         margin: 0 0 3px 14px !important;
+         width: 50px !important;
+         height: 50px !important;    
+         background: url(/images/50_icon.png) no-repeat !important;
+         background-position: 0 -150px !important; 
+         padding-left:0px !important;   
+    }
+    .bdshare_dialog_bottom{display:none !important;}
+	.fix05{background:url(/images/xcdyzf.png) no-repeat !important;    margin-bottom: 3px;
+    top: -3px;
+    position: relative;}
+    .bdshare_popup_box{display:none !important}
+	
+	
+	
+	.ico_size{
+		width:32px;
+		height:32px;
+	}
+	.social-share .icon-wechat .wechat-qrcode {
+		display:none;
+		border:1px solid #eee;
+		position:absolute;
+		z-index:9;
+		top:-170px;
+		left:105px;
+		width:200px;
+		height:192px;
+		color:#666;
+		font-size:12px;
+		text-align:center;
+		background-color:#fff;
+		box-shadow:0 2px 10px #aaa;
+		transition:all 200ms;
+		-webkit-tansition:all 350ms;
+		-moz-transition:all 350ms
+	}
+	.social-share .icon-wechat .wechat-qrcode.bottom {
+		top:40px;
+		left:-84px
+	}
+	.social-share .icon-wechat .wechat-qrcode.bottom:after {
+		display:none
+	}
+	.social-share .icon-wechat .wechat-qrcode h4 {
+		font-weight:normal;
+		height:26px;
+		line-height:26px;
+		font-size:12px;
+		background-color:#f3f3f3;
+		margin:0;
+		padding:0;
+		color:#777
+	}
+	.social-share .icon-wechat .wechat-qrcode .qrcode {
+		width:105px;
+		margin:10px auto
+	}
+	.social-share .icon-wechat .wechat-qrcode .qrcode table {
+		margin:0 !important
+	}
+	.social-share .icon-wechat .wechat-qrcode .help p {
+		font-weight:normal;
+		line-height:16px;
+		padding:0;
+		margin:0
+	}
+	.social-share .icon-wechat .wechat-qrcode:after {
+		content:'';
+		position:absolute;
+		left:50%;
+		margin-left:-6px;
+		bottom:-13px;
+		width:0;
+		height:0;
+		border-width:8px 6px 6px 6px;
+		border-style:solid;
+		border-color:#fff transparent transparent transparent
+	}
+	.social-share .icon-wechat:hover .wechat-qrcode {
+		display:block
+	}
+	
+	a.bshareDiv, #bsPanel, #bsMorePanel, #bshareF {
+		border: none;
+		background: none;
+		padding: 0;
+		margin: 0;
+		font: 12px Helvetica,Calibri,Tahoma,Arial,宋体,sans-serif;
+		line-height: 14px;
+	}
+	#bsPanel {
+		position: fixed;
+		left: 0px;
+        right: 0px;
+		top: 0px;
+		bottom: 0px;
+		height: 180px;
+        margin:auto;
+		z-index: 100000000;
+		font-size: 12px;
+		width: 258px;
+		padding: 6px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	div.bsTitle {
+		padding: 0 8px;
+		border-bottom: 1px solid #e8e8e8;
+		color: #666;
+		background: #f2f2f2;
+		text-align: left;
+	}
+	a.bsSiteLink {
+		text-decoration: none;
+		color: #666;
+	}
+	div.bsClear {
+		clear: both;
+		height: 0;
+		line-height: 0;
+		font-size: 0;
+		overflow: hidden;
+	}
+	div.bsLogoSel, div.bsRlogoSel {
+		border: 1px solid #ddd;
+		background: #f1f1f1;
+	}
+	div.bsRlogo, div.bsRlogoSel {
+		width: 68px;
+		float: left;
+		margin: 0;
+		padding: 2px 0;
+	}
+	div.bsRlogo, div.bsRlogoSel {
+		width: 68px;
+		float: left;
+		margin: 0;
+		padding: 2px 0;
+	}
+	div.bsLogoSel a, div.bsRlogoSel a {
+		color: #000;
+		border: none;
+	}
+	div.bsLogo, div.bsRlogo {
+		border: 1px solid #fff;
+		background: #fff;
+	}
+	div.bsLogo a, div.bsRlogo a {
+		color: #666;
+		border: none;
+	}
+	div.bsRlogo a, div.bsRlogoSel a {
+		float: left;
+	}
+    </style> 
+<div class="fix_tips">
+    <i class="f_close" id="f_close"></i>
+    <ul>
+        <li ><a href="http://www.caac.gov.cn/INDEX/YDKHDXZ/" target="_blank"><i class="fix05" style="margin-top: 10px;width:60px;height:60px;background:url(../../../images/2wm.png) no-repeat !important;background-size: cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/2wm.png',sizingMethod='scale');background-size:60px 60px !important;top: 3px;"></i><span style="margin-top: 5px;">移动客户端</span></a></li>
+        <li ><a href="http://www.caac.gov.cn/INDEX/HLFW/DZKPYZ/" target="_blank"><i class="fix05"></i><span>电子客票验真</span></a></li>       
+        <li><a href="http://www.caac.gov.cn/INDEX/GZLY/" target="_blank"><i class="fix02"></i><span>公众留言</span></a></li>
+        <li><a href="http://www.caac.gov.cn/XXGK/XXGK/ZFXXGKSQ/"  target="_blank"><i class="fix03"></i><span>公开申请</span></a></li>
+        <li style="background:#f6f6f6"> 
+			<div class="bdsharebuttonbox">                            
+                <A class="bds_more" id="rightFolat" href="javascript:void(0)"></A>
+            </div>
+			<span style="margin-left:27px">
+				分享
+			</span>
+		</li>
+    </ul>
+</div>
+
+<div id="bsPanel" style="display:none;background: url(/images/background-opaque-dark.png);">
+	<div class="bsTitle">
+		<a style="float:left;height:20px;line-height:20px;font-weight:bold;" class="bsSiteLink" target="_blank" href="http://www.bshare.cn/intro">分享到</a>
+		<a class="bsSiteLink" style="cursor:pointer;float:right;height:20px;line-height:20px;font-weight:bold;" onclick="document.getElementById('bsPanel').style.display='none';">X</a>
+		<div class="bsClear"></div>
+	</div>
+	<div style="background:#fff;">
+		<div id="icons" class="social-share" data-initialized="true" style="padding-left: 24px;padding-top: 20px;padding-bottom: 15px;">
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'">
+				<a href="javascript:;" class="icon-peoplemb" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/peoplemb.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						人民微博
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'">
+				<a href="javascript:;" class="icon-weibo" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/sinaminiblog.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						新浪微博
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'">
+				<a href="javascript:;" class="icon-wechat" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/weixin.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						微信
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;">
+				<a href="javascript:;" class="icon-qzone" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/qzone.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						QQ空间
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;">
+				<a href="javascript:;" class="icon-renren" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/renren.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						人人网
+					</div>
+				</a>
+			</div>
+			<div class="bsRlogo" onmouseover="javascript:this.className='bsRlogoSel'" onmouseout="javascript:this.className='bsRlogo'" style="margin-top:5px;">
+				<a href="javascript:;" class="icon-douban" style="text-decoration:none;line-height:120%;width: 100%;">
+					<div style="cursor:pointer;height:32px;text-align:center;">
+						<img class="ico_size" src="../../../images/douban.gif" />
+					</div>
+					<div style="cursor:pointer;text-align:center;height:16px !important;overflow:hidden;color:inherit;white-space:nowrap;line-height:120% !important;margin-top: 5px;">
+						豆瓣网
+					</div>
+				</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</div>
+
+<script src="../../../images/social-share.js"></script>
+<script src="../../../images/qrcode.js"></script>
+<script type="text/javascript">
+    function setShareItem(){
+        var docchannelid = '59'==''?'59':'59';
+        var docchannelName = '民航要闻'==''?'民航要闻':'民航要闻';
+        var docid = '193898'==''?'59':'193898';
+        var docName ='2019年全国民航工作会议召开'==''?'中国民用航空局--民航要闻':'2019年全国民航工作会议召开';
+        var docUrl = window.location.href;
+        var siteid='4';
+
+        var url = config.backstageURL + "/jsonp/sharelog/savelog";
+        var data = new Object();
+        data.channelId=docchannelid;
+        data.docId=docid;
+        data.docTitle=docName;
+        data.docUrl=docUrl;
+        data.channelName = docchannelName;
+        data.siteId=siteid;
+
+        jQuery.support.cors = true;
+        jQuery.ajax({
+            type:"GET",
+            url:url,
+            data:data,
+            dataType: "jsonp",
+            jsonp: "callbackparam", //服务端用于接收callback调用的function名的参数
+            jsonpCallback: "logback", //callback的function名称,服务端会把名称和data一起传递回来
+            success: function(json) {
+                //alert('');
+            },
+            error: function(){}
+        });
+    }
+
+    $(function(){
+        // 6个分享
+		$("#icons a").off("click");
+		$("#icons a").on("click",function(){
+			setShareItem();
+		});
+		
+		shareConfig();
+		shareView();
+    })
+	
+	function shareConfig(){
+		var title =  $("title").html();
+		$("#icons").attr("data-title",title);
+		$("#icons").attr("data-description",title);
+	}
+	
+	function shareView(){
+		$("#shareView,#rightFolat").off("click");
+		$("#shareView,#rightFolat").on("click",function(){
+			$("#bsPanel").show();
+		});
+	}
+</script>
+</body>
+
+
+</html>

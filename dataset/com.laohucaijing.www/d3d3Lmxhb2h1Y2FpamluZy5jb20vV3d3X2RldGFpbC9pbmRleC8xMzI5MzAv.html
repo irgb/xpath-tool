@@ -1,0 +1,687 @@
+<!-- 作者排名标签 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="Cache-Control" content="no-transform"> -->
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="老虎财经,资产管理公司,价值投资,股票分析师,阳光私募基金,互联网证券,理财知识,财经自媒体,财经新媒体,互联网金融媒体,金融知识问答,资产配置,投资,基本面分析,投资知识,股事,白小生,财经短视频,股事小课堂" >
+	<meta name="description" content="环球老虎财经，是一个原创金融投资分析平台，关注A股的价值投资趋势、金融机构交易行为以及金融市场的波动要素等。网站汇聚众多金融行业精英，共同构建最有价值的投资分析体系，旨在助力用户战胜市场。" >
+	<title>环球老虎财经 | 首页</title>
+	<link rel="shortcut icon" type="http://images.laohucaijing.com/new_www/image/x-icon" href="http://images.laohucaijing.com/images/favicon-1.ico" media="screen" />
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/swiper.min.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/base.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/index.css?v=2018086">
+	<script src="http://images.laohucaijing.com/new_www/js/jquery-2.2.3.min.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72690f86452e67e2d55534f3bc1cd4a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+
+	</head>
+<body>
+<header>
+	<div class="down">
+		<img src="http://images.laohucaijing.com/new_www/images/down.png" id="wexin" alt="下拉">
+		<a class="wexin_code"><img src="http://images.laohucaijing.com/new_www/images/ewm.jpg"  alt="二维码"><br>环球老虎财经</a>
+	</div>
+	<div class="wrap">
+		<nav>
+			<a href="http://www.laohucaijing.com/" class="logo"></a>
+			<ul>
+				<li>
+					<a class="index" href="http://www.laohucaijing.com/">首页</a>
+				</li>
+				<li>
+					<a href="/live">快讯</a>
+				</li>
+				<li>
+					<a href="/original_index">文章</a>
+				</li>
+				<li>
+					<a href="/author_index">热门作者</a>
+				</li>
+
+				<!--<li>
+					<a href="/video_index">股事视频</a>
+				</li>-->
+				<!--<li>
+					<a href="/Www_partner">联系我们</a>
+				</li>-->
+			</ul>
+		</nav>
+		<div class="navRight">
+			<ul>
+				<li>
+					<div class="searBox">
+						<label><i></i><input type="text" class="searInput" placeholder="关键字/证券代码" id="searchKeywords" onfocus="this.placeholder=''" onblur="this.placeholder='关键字/证券代码 '"></label>
+						<span id="searId" onclick="search()"></span>
+					</div>
+				</li>
+				<li>
+					<a href="/Www_about">关于我们</a>
+				</li>
+				<li>
+					<a class="work">合作</a>
+				</li>
+				<li>
+					<a class="report">寻求报道</a>
+				</li>
+				<li>
+					<a class="comp">举报或投诉</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="shadow"></div>
+<div class="partner animated" style="height: 310px;margin-top: -180px">
+	<div>
+		<p>
+			<span>商务合作   请您联系</span>
+			<span>胡坤云（15538185779）</span>
+			<span>WX：hukunyun335</span>
+			<span>huky@laohucaijing.com</span>
+		</p>
+		<!-- <p>
+			<span>媒体合作 请您联系</span>
+			<span>Wilbur (15988172629)</span>
+			<span>WX:281177407</span>
+			<span>yangwb@laohucaijing.com</span>
+		</p> -->
+		<button class="know">我知道了</button>
+	</div>
+</div>
+<div class="reWarp animated" style="height: 365px">
+	<div class="reportDiv">
+		<!-- <p>扫描二维码，添加环球老虎「寻求报道小编」为好友</p>
+		<img src="http://images.laohucaijing.com/new_www/images/bd.jpg" alt="" /> -->
+		<p class="rep">满足以下条件，获得更高通过率：</p>
+		<span>1、贵公司为A股、港股、美股上市公司</span>
+		<span>2、贵公司正在进行并购重组或战略调整</span>
+		<span>3、贵公司正在发生重大融资</span>
+		<span>4、贵公司的产品具有行业性的重大意义</span>
+		<span>联系电话：13681646214（同微信）</span>
+		<button>我知道了</button>
+	</div>
+</div>
+<div class="Complaint animated">
+	<div>
+		<span>信息举报或投诉可联系:</span> <br/>
+		<span>tousu@laohucaijing.com </span>
+		<button>我知道了</button>
+	</div>
+</div>
+<script>
+
+var urlstr = location.href;
+var urlstatus = false;
+console.log(urlstr)
+$("header ul li a").each(function() {
+	if(urlstr=="http://www.laohucaijing.com/"){
+		$(".index").addClass('active');
+	}else{
+		$(".index").removeClass('active');
+	}
+    if((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+		$(this).addClass('active');
+		urlstatus = true;
+	} else {
+		$(this).removeClass('active');
+	}
+});
+$("input").focus(function(){
+
+})
+$('#searchKeywords').bind('keypress', function(event) {
+	if(event.keyCode == "13") {
+		search();
+		return false;
+	}
+})
+$('.work').click(function(){
+	$('.partner').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.know').click(function(){
+	$('.partner,.shadow').hide();
+})
+$('.report').click(function(){
+	$('.reWarp').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.reWarp button').click(function(){
+	$('.reWarp,.shadow').hide();
+})
+$('.comp').click(function(){
+	$('.Complaint').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.Complaint button').click(function(){
+	$('.Complaint,.shadow').hide();
+})
+function search() {
+	var key = $('.searInput').val();
+	location.href = "/www_search/index/?keyword=" + key;
+}
+</script>
+<style type="text/css">
+	iframe{
+		width: 100%;
+    	height: 490px;
+	}
+	.articalRight p{
+		color: #555;
+	}
+	blockquote{
+		padding:16px 20px;
+		font-size: 12px;
+		background: #eee;
+		line-height: 1.8;
+		border-left: 9px solid #05a6f2;
+		margin-bottom: 20px; 
+	}
+	blockquote strong{
+		font-style: italic;
+	}
+	.articalRight blockquote p{
+		font-size: 14px;
+		line-height: 1.8; 
+		font-style: italic;
+		color: #333;
+	}
+	.jiathis_style_32x32 .jtico_qzone{
+		background-position: 0;
+	}	
+	.jiathis_style_32x32 .jtico {
+	    padding-left: 0!important;
+	    background: none!important;
+	    cursor: pointer;
+	    padding-bottom: 6px;
+	}
+	
+	.jiathis_style_32x32 a {
+		height: 38px!important;
+	    display: inline-block;
+	    text-indent: 34px;
+	    width: 100%;
+	    color: #4a4a4a;
+	    font-size: 14px;
+	    float: left;
+	    margin: 0;
+	    margin-top: 20px;
+	    background: none;
+	    padding-left: 0;
+	}
+	.jiathis_button_tsina .jtico_tsina {
+	    background: url(http://images.laohucaijing.com/new_www/images/wb.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	.jiathis_button_qzone .jtico_qzone {
+	    background: url(http://images.laohucaijing.com/new_www/images/qq.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	#test table td span[style],#test p span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span[style],#test span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span span[style],#test span span[style]{ font-style: normal;font-size:16px!important;font-family: 'Microsoft YaHei' !important; }
+    #test span font[size],#test font[size]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+</style>
+<div class="wrap clearfix" style="position: relative;padding-bottom: 50px;">
+	<div class="main fl mt20 clearfix bgwhite boxSizing">
+		<div class="fl articalLeft">
+            <div class="bdsharebuttonbox">
+            	<div class="fiex">
+            		<div class="jiathis_style_32x32">
+	            		<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_qzone"></a>
+					</div>
+					<span class="sp3 mt20"><a class="wechat" data-cmd="weixin"></a></span>
+				</div>
+            </div>
+		</div>
+		<div class="fr articalRight">
+			<h1>拯救中国人口危机刻不容缓——中国生育报告2019</h1>
+			<div class="clearfix mt20 title">
+				<div class="fl artInfo1">
+					<a href="/www_author_detail/index/4489">恒大集团首席经济学家  任泽平</a><span><i style="margin-right:10px"><img src="http://images.laohucaijing.com/new_www/images/d_hot.png" alt="">138429</i>01/03 21:57</span>
+				</div>	
+			</div>
+			<div class="artDeta">
+				<img class="tip1" src="http://images.laohucaijing.com/new_www/images/yh_01.jpg" alt=""/>
+			 	<!--<img src="http://oss.laohucaijing.com//upload/images/201901/20190103103225380.jpg" width="680"  class="mt20" alt="比特币为什么会“现象级”暴涨？">-->
+			 	<p>发达国家如何鼓励生育，效果如何？中国应该怎么做？           </p>
+				<img class="tip2" src="http://images.laohucaijing.com/new_www/images/yh_02.jpg" alt=""/>
+			</div>
+			<p class="Label"><a>标签：</a>
+				<span>
+							<em><i class="act"></i><i class="test" title="人口老龄化"><a href="/www_search/index/?keyword=人口老龄化">人口老龄化</a></i></em>
+							<em><i class="act"></i><i class="test" title="中国经济"><a href="/www_search/index/?keyword=中国经济">中国经济</a></i></em>
+							<em><i class="act"></i><i class="test" title="政策"><a href="/www_search/index/?keyword=政策">政策</a></i></em>
+						</span>	
+			</p>
+			<!-- 文章引用 -->
+			<!-- 文章正文 -->
+			<div class="text mt20" id="test">
+				<p style="text-align: justify;">来源：泽平宏观（ID：：zepinghongguan&nbsp;）</p></br>
+
+<p style="text-align: justify;">发达国家如何鼓励生育，效果如何？中国应该怎么做？</p></br>
+
+<p style="text-align: justify;">国际经验：鼓励生育效果如何？1）OECD经验：鼓励生育哪招最管用？OECD国家鼓励生育政策体系主要涵盖保障休假、经济补贴、托幼服务、女性就业支持等四个方面。其中，休假长度和生育水平相关性弱，其中原因在于延长女性休假时间与保障其就业权益存在一定矛盾。家庭福利开支比例与生育水平有一定相关，2013年OECD国家家庭福利开支与GDP的比例平均约2.4%，其中经济补贴占比平均约为1.5%。入托率与生育水平有一定相关，0-2岁入托率越高，生育水平越高，OECD国家0-2岁平均入托率为34.2%。女性就业权益保护与生育水平有一定相关，男女就业差距越小，生育水平越高。2）法国：积极推进家庭和工作的平衡，总和生育率接近2。法国早在二战前就开始鼓励生育，通过包括完善细致的津贴体系、多样化的托幼服务和打造家庭友好型企业氛围等来实现工作和家庭的平衡，2016年总和生育率达1.96。2013年法国家庭福利开支占GDP比重达3.7%，在OECD国家中排名第三；2014年0-2岁入托率达51.9%，排名第八。法国大企业携手打造家庭友好型企业氛围，法国男女劳动参与率差距仅不到10%；此外，占比约9%的移民对法国生育率回升也起到一定作用。2）日本：传统性别分工激化工作与家庭矛盾，总和生育率停留在1.4左右。日本在1970年代之前一度控制人口，1990年代开始鼓励生育，但2016年总和生育率仍停留在1.4，低生育率导致日本人口于2008年见顶、2100年将比峰值将减少53%，并且老龄化高龄化程度为全球之最。原因在于：一方面是日本错过了调整生育政策的最佳时机。二是日本鼓励生育力度较弱，家庭福利开支占比仅1.5%，在OECD国家中排名倒数。三是日本&ldquo;男主外、女主内&rdquo;性别分工较为普遍，职场性别歧视严重，在家庭和工作冲突下越来越多日本女性放弃结婚生育，1990-2015年50岁以上女性终身未婚率从4.3%激增至14.6%。</p></br>
+
+<p style="text-align: justify;">政策建议：应立即全面放开并鼓励生育。1）摒弃人口是负担观念，更加以人为本，加快促进人口长期均衡发展。人口是一个国家国力的重要支撑和标志。人是发展的基本要素和动力，一切经济社会的发展都是为了人。2）立即全面放开生育，让生育权重新回到家庭。&ldquo;立即&rdquo;是因为人口形势紧迫，当前正处于第三波婴儿潮中后期出生人口的生育窗口期。全面放开，原本不想生的人还是不会生，但一些想生三孩的人能生，不用担心部分人群、部分地区会大幅多生导致出生人口激增。3）加快构建生育支持体系，大力鼓励生育，使中期总和生育率回升到1.8左右。一是实行差异化的个税抵扣及经济补贴政策，覆盖从怀孕保健到18岁或学历教育结束。二是加大托育服务供给，大力提升0-3岁入托率从目前的4%提升至40%，并对隔代照料实行经济鼓励。三是进一步完善女性就业权益保障，并对企业实行生育税收优惠，加快构建生育成本在国家、企业、家庭之间合理有效的分担机制。四是加强保障非婚生育的平等权利。五是加大教育医疗投入，保持房价长期稳定，降低抚养直接成本。&nbsp;&nbsp;</p></br>
+
+<p style="text-align: justify;">目录</p></br>
+
+<p style="text-align: justify;">1 &nbsp;中国70年生育政策及情况演变：人口危机临近</p></br>
+
+<p style="text-align: justify;">1.1 生育政策演变：从家庭自主到政府计划，从鼓励到严控再到放松</p></br>
+
+<p style="text-align: justify;">1.2 生育情况演变：生育率走向低迷，全面二孩效应消退，出生人口即将大幅下滑</p></br>
+
+<p style="text-align: justify;">1.3&nbsp;影响：人口即将见顶，老龄化加速，失独家庭悲剧，剩男问题严峻，人口红利消失</p></br>
+
+<p style="text-align: justify;">2&nbsp; 为什么不生？&mdash;&mdash;生育基础削弱、生育成本约束</p></br>
+
+<p style="text-align: justify;">2.1 生育理论：从死亡率下降驱动到功利性生育意愿消退，再到成本约束<br />
+2.2 晚婚晚育、单身丁克、不孕不育等削弱生育基础<br />
+2.3 住房教育医疗等直接成本大、养老负担重、机会成本高抑制生育行为<br />
+3&nbsp; 国际经验：鼓励生育效果如何？<br />
+3.1 OECD经验：鼓励生育哪招最管用？<br />
+3.2 法国：积极推进家庭和工作的平衡，总和生育率接近2<br />
+3.3 日本：传统性别分工激化工作与家庭矛盾，总和生育率停留在1.4左右，人口形势严峻&nbsp;<br />
+4&nbsp;&nbsp;政策建议：立即全面放开并鼓励生育<br />
+4.1 摒弃人口是负担观念，更加以人为本，加快促进人口长期均衡发展<br />
+4.2 应立即全面放开生育，让生育权重新回到家庭<br />
+4.3 加快构建生育支持体系，大力鼓励生育，使中期总和生育率回升到1.8左右</p></br>
+
+<p style="text-align: justify;">3&nbsp;&nbsp;&nbsp;国际经验：鼓励生育效果如何？</p></br>
+
+<p style="text-align: justify;">3.1 OECD经验：鼓励生育哪招最管用？</p></br>
+
+<p style="text-align: justify;">OECD成员多数为发达经济体，最早经历生育率大幅下降的生育革命，因此不少国家或早或晚地实行了鼓励生育政策，当然也有美国等国认为生育是家庭行为、基本不干预，这与美国生育率一直较高有关。早在19世纪中叶，英国、瑞士等国家便开始采取措施保障女性生育权利。1919年国际劳工组织发出的&ldquo;12周休假、工作保护、收入补偿&rdquo;三大倡议，奠定了OECD国家的生育政策基本准则。OECD内部各国的生育支持政策框架大体相近，但措施侧重点不同、支持力度不同、采取措施时间不同、社会经济发展状况和民情背景不同，从而导致效果分化。在鼓励生育的OECD国家中，按生育率走势可大致分为两类：一是以法国、瑞典为代表的，总和生育率回升到1.8以上的国家；二是以德国、日本为代表的，总和生育率停滞在1.4左右的国家。当然，即使是生育率停滞，也不能说鼓励生育政策完全没有效果，因为如果没有鼓励生育政策，当前生育率可能会更低。</p></br>
+
+<p style="text-align: justify;">OECD国家鼓励生育政策体系往往以设立专门机构为基础，政策主要包括保障休假、提高经济补贴、提供托幼服务、加强女性就业支持等四个方面。不少国家已设立专门的家庭事务部门，如德国1995年设立德国家庭事务、老年人、妇女和青少年部；英国于1997年在内政部中设立专门的家庭政策单位；法国政府2008年成立家庭事务最高委员会，负责为家庭政策提出建议意见，对现行家庭人口政策提供评估等。中国自1981年开始设立控制人口的国家计划生育委员会，2013年改为国家卫生和计划生育委员会，2018年改为国家卫生健康委员会。鼓励生育的主要政策如下：</p></br>
+
+<p style="text-align: justify;">第一，立法保障休假，OECD不少国家设置了3-5个月产假、6-35个月育儿假，产假平均为4.5个月，育儿假平均为9.2个月，陪产假平均为1周。早在1877年，瑞士就通过立法为妇女提供8周产假，19世纪末20世纪初，产假政策已经扩展至众多欧洲国家。2016年75%的OECD国家拥有3-5个月产假，产假平均为18周，即4.5个月；56%的OECD国家拥有6-35个月的育儿假，也有12个国家没有设置育儿假，OECD国家育儿假平均为37周，即9.2个月。育儿假一般在产假之后使用，时间更长。其中，爱沙尼亚妇女可享受20周带薪产假和146周带薪育儿假，时间最长；美国无国家法定带薪生育假，联邦政府只设置了12周的无薪产假，但加州等地有规定带薪产假。各国妇女在休假期间可享受的薪资水平存在差异，比如德国和日本的产假均为14周，育儿假均为44周，但产假补偿率分别为100%、67%，育儿假补偿率分别为65%、60%。为对各国的产假和育儿假时长进行对比，OECD把休假期间薪资统一换算成平时薪资的100%，计算出女性总假期长度。换算后，OECD各国女性总假期平均为30周，约7.5个月。其中，爱沙尼亚、匈牙利总假期长度达85周、72周，排名居前；澳大利亚、新西兰分别为7.6、7.7周，排名倒数。中国规定产假为14周、无育儿假，各地在实践中一般将产假设为18-23周，并有7-30天的男方陪产假。</p></br>
+
+<p style="text-align: justify;">但女性休假长度和生育率高低相关性很弱，其中原因在于延长女性休假时间与保障其就业权益存在一定矛盾。产假过长可能会让女性在职场中面临更大的歧视和排斥，提高她们的就业门槛、降低职业升迁机会。如德国的女性生育总假期长度为42.6周，但2016年生育率仅为1.50；而英国的总假期长度为12周，但总和生育率为1.81。因此，保障女性休假必须与规范劳动力市场、加强女性劳动权益保障、完善父亲陪产制度的举措同步推进。法国有11天男性陪产假，瑞典、法国和德国父母双方可共享育儿假。完善父亲生育休假制度既鼓励夫妻共同承担家庭事务和育婴责任，也一定程度上缩小男女性在生育问题上受到的影响程度。</p></br>
+
+<p style="text-align: justify;">第二，发放经济补贴，2013年OECD国家家庭福利开支与GDP的比例平均约2.4%，其中经济补贴占比平均约为1.5%，家庭福利开支比例与生育水平存在一定相关性。根据OECD的解释，家庭福利开支包括现金补助、托幼服务、税收返还。2013年除土耳其外OECD32国家庭福利开支占GDP比例均在1%-4%范围，OECD33国家庭福利开支占比平均为2.4%，其中英国为4.0%，比重最高；土耳其为0.4%，比重最低。现金补助和税收返还都属于经济补贴范畴，OECD33国的经济补贴占GDP比重在0.2%-2.7%范围，平均占比为1.5%。家庭福利开支占比越高的国家，生育水平越高。如冰岛家庭福利开支占比为3.63%，2014年总和生育率为1.93；而韩国家庭福利开支占比为1.32%，总和生育率为1.21。中国在2018年新个税改革时将3岁及以上子女的教育费用纳入税前抵扣范围，金额为固定1000元/孩/月。</p></br>
+
+<p style="text-align: justify;">第三，大量兴建托幼机构，2014年OECD国家0-2岁入托率平均为34.2%，入托率越高，生育水平越高。大部分OECD国家通过政府新建托幼机构和鼓励私营托幼机构发展来支持生育，2014年OECD32国中有85%的国家0-2岁入托率在10%-60%之间，平均入托率为34.2%。其中丹麦入托率为65.2%，占比最高；捷克为5.6%，占比最低。此外，韩国、日本、新加坡、澳大利亚等国还出台政策鼓励（外）祖父母隔代照料孩子，以减轻父母压力。根据腾讯教育《0-3岁儿童托育服务行业白皮书》，中国0-3岁婴幼儿在各类托育机构的入托率仅为4.1%，隔代照料非常普遍。</p></br>
+
+<p style="text-align: justify;">第四，加强女性就业权利保护，男女就业差距越小，生育率越高。OECD国家重视女性就业权利保护，如瑞典政府主导的公共服务事业为女性提供了大量的就业岗位，德国、韩国、日本、新加坡都为产后女性的再就业提供培训，澳大利亚通过立法保障女性的产后工作权利。根据世界银行，1990-2017年OECD成员女性劳动参与率（15岁及以上）从47.8%上升至51.3%，男女劳动参与率差距从26.1个百分点降至17.2个百分点。根据OECD数据，2014年OECD的男女就业率差距为11.8个百分点。一般而言，男女就业差距越小的国家，意味着女性的就业权利得到了更好地保障，女性生育的机会成本较低，生育率越高。如2014年瑞典男女就业率差距仅为3.4个百分点，总和生育率为1.88；而意大利男女就业率差距为18.2个百分点，总和生育率为1.37。2006-2016年OECD国家的男女收入中位数差距从15.6%下降至13.5%。中国对于女性就业权利的保障主要体现在不允许单位在女职工孕期、产期、哺乳期解除劳动合同，其他支持措施较少。1990-2017年中国女性劳动参与率从73.2%降至61.5%，劳动参与率差距从11.6个百分点扩大到14.6个百分点、呈扩大趋势。</p></br>
+
+<p style="text-align: justify;">3.2&nbsp;法国：积极推进家庭和工作的平衡，总和生育率接近2</p></br>
+
+<p style="text-align: justify;">法国早在二战前就开始鼓励生育，通过完善细致的津贴体系、多样化的托幼服务和打造家庭友好型企业氛围等来实现工作和家庭的平衡，2016年总和生育率达1.96。18世纪初，法国是欧洲人口规模最大的国家。但随着出生率持续下降，法国人口规模排名逐渐下降。1901-1911年，法国人口规模从3848万微增至3923万，1911年法国人口规模落至欧洲第五。因此早在1920年，法国就出台《反堕胎法》抑制人口出生率下降。1939年法国颁布《家庭法典》，这是法国家庭政策的源头，规定新婚夫妇在婚后两年内生育可多得2个月工资，生二胎以上者能获得补贴等。二战期间暨1939-1945年，法国年均出生率为15.0&permil;，与前五年的17.3&permil;略有下滑，但与一战前后从19.5%到12.6%的大幅下滑相比，已属不易。之后，法国不断出台和完善鼓励生育政策且取得了成效。根据世界银行，1960年法国的总和生育率为2.85，1975年下降到2.09、低于更替水平，1994年又进一步下降至1.73、创历史最低，但2016年回升至1.96。</p></br>
+
+<p style="text-align: justify;">法国主要采取了以下措施：1）保障假期，设置16周产假、11天男性陪产假和1年的夫妻共享育儿假。法国从1910年开始设立产假。根据法国政府官网，目前法国设置了16周产假，包括产前假6周和产后假10周。如果子女数多或生育多胎，产假最高还可延至46周。产假期间雇主不提供工资，但法国社会保险机构（CPAM）会提供9-86欧元/日的津贴。具体金额取决于休假者的工资，将休假前3个月的工资总和除以91.25,确定日工资；比较休假者的月工资和社会保险最高限额3311欧元/月，择低者的日工资的79%发放，最高为86欧元/天。法国有11天的男性陪产假，双胎及以上者则有18天陪产假，期间可获得和产假一样的每日津贴。法国还设置了1年的育儿假，夫妇可共享，单双胎生育最多可续假至三年。续假只需提前一个月向雇主申请，雇主不能反对。如果生育3胎及以上，最高还可续至孩子6岁。育儿假期间雇主不支付工资，法国家庭补助局（CAF）会提供396欧元/月的津贴。</p></br>
+
+<p style="text-align: justify;">2）发放经济补贴，涵盖出生、养育、托幼、父母收入损失等多方面，2013年法国家庭福利开支占GDP比重达3.7%，在OECD国家中排名第三，其中经济补贴开支占比达2.3%。自1939年《家庭法典》开始，法国不断完善津贴制度，如1947年建立家庭补贴政策，1958年设立住房津贴，1970年设立孤儿补贴，1974年设立上学补贴，1977年设立单亲补贴。其中，1972年开始改变单一工资补贴的发放方法，依据父母的收入水平发放不同金额的津贴。目前法国已建立比较完善、多样化的津贴制度，涵盖幼儿出生、养育、托幼、对父母收入损失的补贴等多个环节，且向低收入夫妇、单亲家庭、多子女家庭倾斜。根据OECD数据，2013年法国家庭福利开支占GDP比重为3.7%，在OECD国家中排名第三，仅次于英国和丹麦，高于OCED平均水平的2.4%。其中由现金补助和税收返还组成的经济补贴占比达2.3%，在OECD国家中排名第六。</p></br>
+
+<p style="text-align: justify;">在不同收入水平、收入来源、孩子数的条件下，法国家庭可以获得的津贴金额存在差异。如果一对法国夫妇生了1个孩子，夫妇双方年收入为40000欧元，那么他们可以获得941欧元的一次性补助和85欧元的每月补助（3岁前）。如果其他条件不变，孩子数变为两个，那么他们可以获得1842欧元的一次性补助和216欧元的每月补贴（各种补助存在不同年龄限制）。如果他们的年收入仅为20000欧元，那么每月补贴还会增至302欧元。如果一对家庭夫妇两人年收入为40000欧元，生了3个孩子，那么他们可以获得2993欧元的一次性补助和470欧元的每月补助。如果其他条件不变，年收入变为20000欧元，那么一次性补助会增至3079欧元。如果这20000欧元仅是夫妇一方的收入，另一方因生育中断工作，那么他们可获得的每月补贴还将进一步增加至866欧元。</p></br>
+
+<p style="text-align: justify;">3）完善的儿童托幼服务体系，法国2014年0-2岁入托率达51.9%，远高于OECD水平。根据法国政府官网，法国的儿童托幼服务体系齐全:1)集体托儿所、微型托儿所、企业托儿所、日托中心、多中心设施、幼儿园等集体接待机构;2)雇用幼儿园助理在助理家中照料1-4名儿童的家庭接待机构，3)雇佣保姆住到雇主家中照顾孩子的家庭看护，4)上学前后和放假时组织娱乐和教育活动的&ldquo;娱乐接待员&rdquo;。无论采取哪种方式，法国家庭津贴基金（CAF）都会提供资助。如一个月收入为3000欧元、有1个孩子且每月需要监护30小时的家庭，把孩子送去集体托儿所或者幼儿园每月仅需要付54欧元；如果请保姆到家中照顾孩子，那么雇主最少可以仅出15%的费用。根据OECD数据，2014年法国0-2岁入托率为51.9%，在所有OECD国家中排名第八，高于OECD平均水平的34.4%。</p></br>
+
+<p style="text-align: justify;">4）大企业携手打造家庭友好型企业氛围，法国男女劳动参与率差距仅不到10%。2012年，法国有约400家大企业签署了《公司父母雇员章程》，覆盖约300万员工，占劳动力比例约10%。参与的企业为雇员制定灵活的工作时间和最低工作时间；反对工作狂性质的企业文化，拒绝超长时间的工作和加班；推广在家工作；推动女性雇员的升迁；推动父亲使用全薪的陪产假，参与婴幼儿的照顾和家务的料理；为就业父母提供托幼服务；为生育女性保留工作岗位等，创造家庭友好型工作氛围。根据世界银行，2017年法国女性劳动参与率为50.6%，男女劳动参与率差距仅为9.6个百分点，小于OECD平均水平的17.22个百分点。根据OECD数据，2014年法国男女就业率差距仅为6.7个百分点，小于OECD平均水平的11.8个百分点；2016年法国男女收入中位数差距仅为9.9%，小于OECD平均水平的13.5%。</p></br>
+
+<p style="text-align: justify;">5）移民占比约9%，其中45%来自非洲，对法国生育率提升也起到一定作用。根据法国统计局，2015年法国有620万移民，占总人口的比重从1946年、1975年的5%、7.4%上升至2015年的9.3%。其中44.6%的移民来自非洲，35.4%来自欧洲。最常见的移民出生国是阿尔及利亚和摩洛哥，分别占比12.8%、12.0%。北非移民生育率较高，为法国生育率回升起到不可忽视的作用。并且，法国的移民从男性为主发展到以女性为主，1968-2015年，女性移民占比从44%上升至51%。为了满足战后重建的劳动力需求，1970年代中期法国移民以男性为主。之后，工作移民逐渐受限、家庭移民比例增加，女性占比明显增加。</p></br>
+
+<p style="text-align: justify;">3.3&nbsp;日本：传统性别分工激化工作与家庭矛盾，总和生育率停留在1.4左右，人口形势严峻</p></br>
+
+<p style="text-align: justify;">日本在1970年代之前一度控制人口，从1990年代开始鼓励生育，但2016年总和生育率仍停留在1.4，低生育率导致日本人口于2008年见顶、2100年将比峰值减少53%，并且老龄化高龄化程度为全球之最。日本总和生育率1950年为3左右，1974年持续下降至2.05，2005年为1.26、为历史最低，2016年仅回升至1.44，尚未回到理想水平。在长期的低生育率背景下，2008年日本人口见顶，为1.28亿。根据日本统计年鉴中的预测，到2050年日本人口将降至1.02亿、比峰值减少约20%，到2100年日本人口降至不到6000万、比峰值减少53%。并且，日本是全球老龄化高龄化程度最严重的国家，1950-2017年65岁及以上人口占比从4.9%快速增至27.7%，其中80岁及以上人口占比从0.4%增至7.0%；预计2050、2100年日本65岁及以上人口占比分别达37.7%、38.3%，高龄化问题将更为突出。</p></br>
+
+<p style="text-align: justify;">1）二战后日本的家庭政策经历了三个阶段变化：一是1948-1970年，控制人口增长阶段。1947-1949年，日本经历了第一次婴儿潮，三年共出生802万人，出生率由1945年的26.4&permil;急速上升到1949年的32.9&permil;。由于粮食紧张、人口压力很大，日本开始研究如何抑制人口增长，1948年日本政府出台《优生保护法》，实行少生优育，放宽人工流产限制；到该年底，日本政府承认了约80种避孕药，此后人工流产变为合法。1949年日本众议院通过&ldquo;关于人口问题的决定&rdquo;，决定健全和普及&ldquo;家庭计划&rdquo;，免费派发避孕工具以及各种避孕药品推广节育，特别是给低收入家庭。需要注意的是，日本避孕工具是当时流行的杀精药剂。1949年4月，日本成立家庭计划普及会，主要负责派发避孕套。1953年日本设立厚生省人口问题审议会，主要负责在全国普及和推广节制生育。</p></br>
+
+<p style="text-align: justify;">二是1971-1989年，稳定人口规模阶段。1971-1973年，日本第二次婴儿潮出现。1974年日本总和生育率首次降至更替水平以下，出生率从1973年19.3%大幅下滑至1989年的10.3%，自然增长率从1972年的14.1%下滑至1989年的3.7%。日本逐渐从控制人口转向稳定人口规模，1974年日本厚生劳动省发布《日本人口动向&mdash;&mdash;静止人口》，把静止人口作为人口发展的新战略目标。</p></br>
+
+<p style="text-align: justify;">三是1990年以来，鼓励生育阶段。生育率&ldquo;1.57&rdquo;冲击使日本社会认识到低生育率现状，开始鼓励生育，涵盖休假、经济补贴、入托等方面。1990年日本总和生育率降至1.57，引发社会广泛关注。</p></br>
+
+<p style="text-align: justify;">在休假方面，日本设立14周产假、10月育儿假，及8周男性育儿假。1991年日本实施《育儿休假法》，且不断对法案进行修正，以保障所有父母可以享受1年的育儿假。1995年日本设立育儿休假津贴。2015年日本制定新版《少子化社会对策大纲》，设置2020年80%以上的男性能休陪产假、13%以上的男性能获育儿假等目标。目前，日本建立起比较完善的鼓励生育政策。根据日本厚生劳动省，日本女性可以享受产前6周、产后8周的产假。产假期间每可获得等同于休假前的生产津贴。产假后到孩子1岁前，日本女性可休10个月育儿假。育儿假的前6个月育儿休假津贴为休假前工资的67%，之后为50%。由于育儿休假津贴不交税、社会保险，实际到手的津贴最多能达到休假前到手工资的80%。另外，日本男性也有8周育儿假。如果男性在女性产假期间休育儿假，那么可在孩子1岁2个月前再申请一次8周育儿假。</p></br>
+
+<p style="text-align: justify;">在经济补贴方面，日本生育女性可获得42万日元的一次性生育临时金、以及每月约1万日元的儿童补贴（12岁以下）。日本的经济补贴涉及女性生产和养育环节，女性生产可以获得42万日元的一次性生育临时金。在儿童补贴方面，根据日本厚生劳动省2016年的儿童补贴政策，年龄阶段不同的儿童可以获得的补贴金额不同。在收入在限制内、且抚养一个三岁以下的孩子的家庭，每个月可以获得15000日元的儿童补贴。抚养3岁到小学毕业的孩子的家庭，有2个孩子以内的每月可获得10000日元，3个孩子及以上的每月可获得15000日元。抚养15岁以下中学生孩子的家庭，每月可获得10000日元。收入限制外的家庭，每月可获得5000日元。单亲家庭的儿童补贴更高，如抚养一个孩子的单亲家庭，可按照收入的不同获得每月9990日元-42320日元的津贴。</p></br>
+
+<p style="text-align: justify;">在托幼方面，日本通过三次&ldquo;天使计划&rdquo;扩大托幼服务，并且制定了&ldquo;待机儿童零作战&rdquo;计划。日本把需要进入保育所，但由于设施和人手不足等原因只能在家排队等待保育所空位的幼儿（0&mdash;6岁），称为待机儿童。日本在1994年实施&ldquo;天使计划&rdquo;，在1999年实行了&ldquo;新天使计划&rdquo;，2004年实行&ldquo;天使计划&rdquo;第三期，三次&ldquo;天使计划&rdquo;侧重于扩大托幼服务，扩大日间护理中心和家庭支持中心，要求大企业设置员工托儿所等。2001年日本政府制定&ldquo;待机儿童零作战&rdquo;计划，2008年制定&ldquo;新待机儿童零作战&rdquo;计划，意图将待机儿童数降为零。由于投入不足、供给有限，2017年日本决定推后&ldquo;零待机儿童&rdquo;计划，从原定的2018年延迟到2020年底。</p></br>
+
+<p style="text-align: justify;">在改善雇佣环境方面，日本为育儿家庭营造较好的企业环境。1999年日本制定了《少子化对策基本方针》，2003年制定了《少子化社会对策基本法》，2004年制定了《少子化社会对策大纲》，通过采取综合措施，改善雇佣环境和社会医疗保健、教育环境、生活环境来促进生育。目前，如果员工有3岁以下的孩子，可以向公司申请缩短每天工作时间至6小时。如果员工有学前儿童，政策对其有加班限制，一个月不能加班超过24小时，一年不得加班超过150小时，同时限制其深夜工作。</p></br>
+
+<p style="text-align: justify;">2）日本鼓励生育政策未取得明显成效，一是因为错过调整生育政策的最佳时机，未能更早及时调整。2005年日本生育率达1.26，为历史最低，2016年回升到1.44，仍然很低。这源于日本错过了调整生育政策的最佳时期。日本总和生育率在1974年就跌至更替水平以下，但直到1990年后才开始鼓励生育，而法国总和生育率于1975年跌至更替水平以下，但早在1939年就开始鼓励生育。</p></br>
+
+<p style="text-align: justify;">二是日本鼓励生育力度较弱，家庭福利开支占比仅1.5%，在OECD国家中排名倒数。根据日本国立社会保障和人口问题研究所，1980-2014年日本各项社会支出占GDP比重从10.4%上升至23.9%，但用于家庭的支出占GDP比重仅从0.47%上升至1.34%。根据OECD数据，2013年日本家庭福利开支仅占GDP的1.49%，低于OECD平均水平的2.43%，在OECD国家中排名倒数。其中，现金补助和税收返还组成的经济补贴占GDP比重仅为1.03%，在OECD国家中位于中低水平。比如，在托幼方面，根据OECD数据，2013年日本0-2岁入托率仅为30.6%，低于OECD28国平均水平34.4%，且远低于法国的51.9%和瑞典的46.9%。</p></br>
+
+<p style="text-align: justify;">三是日本&ldquo;男主外、女主内&rdquo;性别分工较为普遍，职场性别歧视严重，在家庭和工作冲突下越来越多日本女性放弃结婚生育，1990-2015年50岁以上女性终身未婚率从4.3%激增至14.6%。日本社会和家庭中&ldquo;男主外、女主内&rdquo;思想较为普遍。与芬兰、瑞典等国将部分育儿养老工作社会化并由国家承担不同，日本的育儿养老责任多由家庭女性承担，日本社会将女性的角色定位为全职家庭主妇的思想仍然存在。根据世界银行，2017年日本的女性劳动参与率达50.5%，低于OECD平均的51.3%；2017年日本男女劳动参与率差距达20.1个百分点，高于OECD平均的17.2个百分点。根据OECD，2014年日本的男女就业率差距为17.9个百分点，高于OECD平均水平的11.8个百分点；2016年日本的全职员工中男性和女性的收入中位数差距为24.6%，高于OECD国家13.5%的平均水平。</p></br>
+
+<p style="text-align: justify;">随着1990年代后日本经济持续低迷、家庭收入减少、老龄化程度加深、劳动力不足以及女性更加追求平等，越来越多的日本女性选择（暂时）放弃家庭，进入职场。根据日本国立社会保障和人口问题研究所，日本50岁以上男女终身未婚率在本世纪迅速上升，1990、2010、2015年男性终身未婚率分别为5.6%、20.4%、23.37%，女性分别为4.3%、10.6%、14.6%。日本社会已形成了一种不愿结婚和生育的观念，积重难返。</p></br>
+
+<p style="text-align: justify;">4&nbsp;&nbsp;&nbsp;&nbsp;政策建议：立即全面放开并鼓励生育</p></br>
+
+<p style="text-align: justify;">4.1&nbsp;摒弃人口是负担观念，更加以人为本，加快促进人口长期均衡发展</p></br>
+
+<p style="text-align: justify;">不管是1798年马尔萨斯的《人口论》，还是1970年代罗马俱乐部的《增长的极限》，都低估了技术进步、生产关系变革对生产力发展的作用，并高估了人口增长趋势，从而得出必须抑制人口增长才能求得发展。从长期看，技术进步、生产关系变革将带来巨大的生产力提升，足以实现人口与发展的协调。对中国而言，如果没有实行严格的计划生育政策，生育率也会逐渐下滑，人口增长也会放缓，但人口红利将延迟结束，并且不会面临当前这样复杂严峻的人口结构性问题。</p></br>
+
+<p style="text-align: justify;">人口是一个国家国力的重要支撑和标志。从中国历史看，人口增长往往是盛世的一个重要标志，开元盛世、康乾盛世等莫不是人口高峰。从国际上看，印度被不少人认为发展潜力巨大，无非是其巨大的人口规模和非常年轻的人口结构。2015年印度人口年龄中位数仅26.7岁，而中国、美国分别为37.0、37.6岁。到2050年，中国人口年龄中位数将达50岁，而美国、印度分别为42.3、37.5岁，中国能够依靠这样的人口结构实现民族复兴么？当然，人口的质量也非常重要，随着受教育程度提高等，人口质量红利将部分抵消人口数量红利消失的影响。</p></br>
+
+<p style="text-align: justify;">人是发展的基本要素和动力，一切经济社会的发展都是为了人。当前人工智能快速发展，引发了一些人关于中国是否还需要放开生育的讨论。有三个方面需要注意：一是老龄化、&ldquo;剩男&rdquo;、失独家庭等人口发展问题是人工智能解决不了的或很难解决的。二是经济社会存在不少需要情感沟通的工作，这恐怕是人工智能无法替代的。三是即便人工智能能够完全替代人进行劳动，那么人还可以做其他更有助于实现全面发展、更有幸福感的事情。根据普华永道2018年报告《人工智能和相关技术对中国就业的净影响》，人工智能及相关技术在未来20年将取代中国现有约26%的工作岗位，但也能通过提升生产率和实际收入水平创造出大量新工作机会，对中国就业的净影响为创造约12%的净增岗位。从人类发展历史看，每一次科技进步都会节约传统产业中的劳动力使用，但又催生了新经济新产业对劳动力的需求。</p></br>
+
+<p style="text-align: justify;">4.2&nbsp;应立即全面放开生育，让生育权重新回到家庭</p></br>
+
+<p style="text-align: justify;">全面放开生育，将是否生育、生育几个孩子、什么时候生育的权利还给家庭，由每个家庭自主决定生育的孩子数量。&ldquo;立即&rdquo;是因为人口形势紧迫，当前正处于第三波婴儿潮中后期出生人口的生育窗口期。第三轮婴儿潮的峰值在1987年，中后期出生人口尚处于35岁之前的主力生育年龄，特别1990后的出生人口尚处于25-29岁最佳生育年龄。一旦错过第三轮婴儿潮，未来再想提升出生人口，则将事倍功半。并且，全面放开，宜早不宜晚，必须尽快。</p></br>
+
+<p style="text-align: justify;">全面放开生育，原本不想生的人还是不会生，但一些想生三孩的人能生，不用担心部分人群、部分地区会大幅多生导致出生人口激增。这种担心正如当初某些人预测&ldquo;全面二孩&rdquo;政策实行后，出生人口将迎来暴增，但实际并非如此。根据国家统计局统计，2010、2015年中国乡村总和生育率分别为1.44、1.27，其中2015年一孩、二孩、三孩及以上总和生育率分别为0.61、0.53、0.13。这意味着乡村居民的生育意愿也不强，愿意生二孩的也没有60%，更别说三孩。当然，不排除少数落后地区生育率仍然较高，但对人口总量的影响会很小，而且随着全面小康社会建设、贫困人口全面脱贫，生育行为也将逐渐改变。</p></br>
+
+<p style="text-align: justify;">4.3&nbsp;加快构建生育支持体系，大力鼓励生育，使中期总和生育率回升到1.8左右</p></br>
+
+<p style="text-align: justify;">生育从微观看是家庭事务，从宏观看也是国家事务。由于&ldquo;全面二孩&rdquo;政策效果不好，因此预期全面放开对生育形势也不会有显著性改变，必须加快构建生育支持体系，大力营造生育友好型社会环境，解除家庭（再）生育的后顾之忧，让更多的人想生、敢生且把孩子养好。中期达到1.8左右的总和生育率目标是一个基于现实的判断，是在鼓励生育成本和促进人口长期均衡发展之间的平衡。从国际经验看，尚无一个国家可以把总和生育率提升到2.1左右的世代更替水平。这意味着如果直接将目标定为2.1左右，鼓励生育的成本将非常大。当然，在实现中期目标后，未来可进一步考虑将总和生育率目标提升至2.1左右的世代更替水平。</p></br>
+
+<p style="text-align: justify;">一是实行差异化的个税抵扣及经济补贴政策，覆盖从怀孕保健到18岁或学历教育结束。探索建立从怀孕保健到孕期分娩再到18岁或学历教育结束的全面鼓励生育体系，包括孕期保健补助、住院分娩补助、托育津贴、教育津贴、家庭个税抵扣、以及对不符合交个税标准的低收入人群实行直接经济补贴等。并且，各地根据实际情况可在全国政策基础上进一步差异化。</p></br>
+
+<p style="text-align: justify;">二是加大托育服务供给，大力提升0-3岁入托率从目前的4%提升至40%，并对隔代照料发放补贴。大力鼓励和支持用人单位和社会力量，兴办婴幼儿托育服务机构，形成全日托、半日托、计时托和临时托等多种形式的服务网络。同时，对不需要进托育机构、而由（外）祖父母隔代照料的，为（外）祖父母提供津贴，以提高祖辈隔代照料的积极性，减轻父母的照料压力。</p></br>
+
+<p style="text-align: justify;">三是进一步完善女性就业权益保障，并对企业实行生育税收优惠，加快构建生育成本在国家、企业、家庭之间合理有效的分担机制。一方面，进一步推动落实产假哺乳假等制度，妥善解决延长生育假、男性陪产假等的待遇保障，对损害女性就业权益的单位进行经济或行政处罚。另一方面，根据单位女员工规模及年度生育情况，实行一定程度的税收优惠以降低企业承担的生育成本。生育保险和职工医疗保险于2017年开始合并试点，有望全国推行，有利于扩大生育保险覆盖面、提高便利度。</p></br>
+
+<p style="text-align: justify;">四是加强保障非婚生育的平等权利。尽管不鼓励非婚生育，但对非婚生育的女性及其子女仍需给予一切平等权利，特别是落户、入学等方面，不得歧视。</p></br>
+
+<p style="text-align: justify;">五是加大教育医疗投入，保持房价长期稳定，降低抚养直接成本。加大学前教育投入，大力增加公立幼儿园供给，将九年义务教育延伸至十二年，同时推进教育改革，切实根除&ldquo;家庭作业变成家长作业&rdquo;现象。加大医疗投入，并推进医药卫生体制改革，切实降低医疗费用。坚持&ldquo;房住不炒&rdquo;定位，构建房地产市场健康发展长效机制，完善住房市场体系和住房保障体系，让全体人民住有所居。</p></br>
+			</div>
+			
+			
+										
+			<div class="related-articles">
+				<h4>您可能感兴趣的文章</h4>
+				<ul>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132944" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190104102119950.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132944">德隆系、明天系旧部联手也保不住“西北茅台”？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132940" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190103113128405.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132940">重温周金涛周期论：2019年，或许真的是暴富的历史机会！</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132939" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190103112544839.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132939">“时”与“势”之变：当银行业走过2018</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132937" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190103111614357.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132937">供需下行持续兑现，CPI、PPI同回“1时代”</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132941" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190103181043977.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132941">中石化附体？百隆东方豪赌期货巨亏，主管风控的董事长竟不懂...</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132930" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190103103225380.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132930">拯救中国人口危机刻不容缓——中国生育报告2019</a>
+						</p>
+					</li>
+									</ul>
+			</div>
+		</div>
+		<div class="sTop" style="position: fixed;width: 59px;left: auto; bottom:200px;margin-left: -10px; display: none;">
+			<img src="http://test.image.laohucaijing.com/new_www/images/top.png" alt="">
+		</div>
+	</div>
+	<div class="aside fr">
+		<div class="hot_recom">
+			<p class="type"><span>热门推荐</span></p>
+			<a href="/www_detail/index/132944"><img src="http://oss.laohucaijing.com/upload/images/201901/20190104102119950.jpg" alt=""></a>
+			<h2><a href="/www_detail/index/132944">德隆系、明天系旧部联手也保不住“西北茅台”？</a></h2>
+			<p class="name"><a href="/www_author_detail/index/13768">环球老虎财经 曹婧晨</a><span>01/05 22:36</span></p>
+		</div>
+		<!---->
+		<div class="edit_recom">
+			<p class="type"><span>编辑推荐</span></p>
+			<ul>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132940">重温周金涛周期论：2019年，或许真的是暴富的历史机会！</a>
+					<p>01/03 21:58</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132939">“时”与“势”之变：当银行业走过2018</a>
+					<p>01/03 21:58</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132937">供需下行持续兑现，CPI、PPI同回“1时代”</a>
+					<p>01/03 21:58</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132941">中石化附体？百隆东方豪赌期货巨亏，主管风控的董事长竟不懂金融?</a>
+					<p>01/03 21:58</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132930">拯救中国人口危机刻不容缓——中国生育报告2019</a>
+					<p>01/03 21:57</p>
+					</li>
+							</ul>
+		</div>
+	</div>
+</div>
+<!-- JiaThis Button BEGIN -->
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8">
+</script>
+<!-- JiaThis Button END -->
+<script type="text/javascript" >
+function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                 window.location.href =  "http://m.laohucaijing.com"+'/home/detail/'+"132930"  ;
+            }
+        }
+
+        browserRedirect();
+
+
+var jiathis_config={
+	pic:"http://oss.laohucaijing.com//upload/images/201901/20190103103225380.jpg"
+}
+</script>
+<!-- JiaThis Button END -->
+
+<script>
+	$(function(){
+
+		$("#test p font").removeAttr("face");
+		$("#test p span").removeAttr("style");
+		$("#test p font").css({"font-size:":'16px',"font-family":'Microsoft YaHei'});
+		$('blockquote').find('br:last').remove();
+        var Test1 = $('.artDeta p').text();
+        var test = $('.Label .test').text();
+        	test = $.trim(test)
+       var Img = $('.artImg img').attr('src');
+        if (Test1=='') {
+            $('.artDeta').hide();
+        }
+        if (test=='') {
+            $('.Label').hide();
+        }
+		$(".text img").css({
+            "height":"auto",
+            "float":"none",
+        })
+        $(".text img").each(function(){ 
+        var Width = $(this).attr("style").indexOf("width"); 
+        if(Width != (-1)){
+             $(this).wrapAll("<div style='text-align:center'></div>");
+        }else{$(this).css({"width":"100%"});} 
+        }); 
+	})
+
+	$(".sTop").click(function () {
+	    var speed=300;
+	    $('body,html').animate({ scrollTop: 0 }, speed);
+	    return false;
+	});
+	var aHeight=$(".bdsharebuttonbox").offset().top;
+	var bHeight=$(".edit_recom").offset().top;
+	var cHeight=$(".related-articles").offset().top;
+	$(window).scroll(function(){
+	  	
+		var scroH = $(this).scrollTop();
+	
+	    if(scroH>=aHeight){
+	   		$(".bdsharebuttonbox .fiex").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<aHeight){
+    		$(".bdsharebuttonbox .fiex").css({'position':'relative'});
+    	}
+    	if(scroH>=bHeight+10){
+	   		$(".edit_recom").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<bHeight){
+    		$(".edit_recom").css({'position':'relative'});
+    	}
+    	if (cHeight >= $(window).scrollTop() && cHeight < ($(window).scrollTop()+$(window).height())) {
+			$(".related-articles .img-box a").addClass('fadeIn')
+    	}
+    	
+	})
+	
+	var video_url = $("iframe").attr('src');
+	if(video_url!= undefined){
+		var urlId=(video_url.split('page/')[1]).split('.html')[0];
+		var Url="https://v.qq.com/iframe/player.html?vid="+urlId+"&tiny=0&auto=0"
+		$('iframe').attr('src',Url);
+	}
+	
+
+	$(window).scroll(function(){
+		var wHeight=$(window).height();
+		var top = $(document).scrollTop();
+		if(top>wHeight){
+			$(".sTop").show();
+		}
+		else{
+			$(".sTop").hide();
+		}
+
+	})
+
+
+</script>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : "拯救中国人口危机刻不容缓——中国生育报告2019",	
+			bdDesc : "发达国家如何鼓励生育，效果如何？中国应该怎么做？           ",	
+			bdUrl : "http://m.laohucaijing.com"+'/home/detail/'+"132930"	
+		},
+		share : [{
+			"bdSize" : 16
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<footer style="background-size:cover">
+    <div class="wrap">
+        <img alt="老虎财经" src="http://images.laohucaijing.com/new_www/images/ewm.jpg" class="fl code" width="92" height="92" style="float: right;margin-left:0;margin-right:51px">
+        <div class="fl footRight" style="width:1040px">
+            <div class="fl aboutLink" style="margin-top: 70px">
+                <span class="fl">友情链接：</span>
+                <ul class="clearfix" style="float: left;">
+                
+                                    
+                    <li><a rel="" href="http://www.pedaily.cn" target="_blank">投资界</a></li>
+                                    
+                    <li><a rel="" href="http://finance.ifeng.com" target="_blank">凤凰网财经</a></li>
+                                    
+                    <li><a rel="" href="http://news.cnfol.com/" target="_blank">中金在线</a></li>
+                                    
+                    <li><a rel="" href="http://money.stockstar.com/" target="_blank">证券之星</a></li>
+                                    
+                    <li><a rel="" href="http://www.gupiao8.com/" target="_blank">股票吧</a></li>
+                                    
+                    <li><a rel="" href="http://www.cir.cn/" target="_blank">中国产业调研网</a></li>
+                                    
+                    <li><a rel="" href="http://www.jpm.cn" target="_blank">金评媒</a></li>
+                                    
+                    <li><a rel="" href="http://www.wangdaidongfang.com" target="_blank">网贷东方</a></li>
+                                    
+                    <li><a rel="" href="http://www.pedata.cn/" target="_blank">私募通</a></li>
+                    
+                </ul>
+                <span style="float: left;">信息举报或投诉可联系: 021-80316509</span>
+            </div>
+            <div class="copyright">
+              Copyright © 2012 - 2015 Laohucaijing.com <i>环球老虎财经</i>版权所有 沪ICP备12011498号
+              <span style="margin-left: 15px;"><img style="margin-right:5px;" src="http://images.laohucaijing.com/newimages/hao.png">沪公网安备 31011002001247号 </span>
+              <a style="color: #fff;margin-left: 22px" href="/Www_protocol">免责声明</a>
+              <a href="http://www.shjbzx.cn/ " target="_blank"><img style="width: 140px;margin-top: -37px;margin-left: 111px;" src="http://images.laohucaijing.com/new_www/images/jb.png" alt=""></a>
+             </div>
+        </div>
+    </div>
+</footer>
+<script>
+    //头部微信
+    var timerc;
+    //鼠标移入微信，微信二维码显示
+    $("#wexin").mouseenter(function(){
+        clearTimeout(timerc);
+        $(".wexin_code").animate({"width":'150px',"opacity":'1'},500);
+    })
+    //鼠标移出微信，
+    $("#wexin").mouseleave(function(){
+        timerc=setTimeout(function(){
+            //半秒钟延迟看鼠标是否在悬浮框中
+            if(!$(".wexin_code").hasClass("hover")){//不在悬浮框
+                $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+            }
+            else{
+                $(".wexin_code").fadeIn();
+            }
+        },500);
+    })
+    // 鼠标移入微信二维码
+    $(".wexin_code").mouseenter(function(){
+        $(".wexin_code").addClass("hover");
+    })
+    // 鼠标移出微信二维码
+    $(".wexin_code").mouseleave(function(){
+        $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+        $(".wexin_code").removeClass("hover");
+    })
+</script>
+</body>

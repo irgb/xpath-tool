@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4艘撤单船赔偿1.1亿美元！中海重工败诉_国际海事信息网</title>
+<meta name="keywords" content="" />
+<meta name="description" content="4艘撤单船赔偿1.1亿美元！中海重工败诉" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=200">典型案例</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">4艘撤单船赔偿1.1亿美元！中海重工败诉</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-04 &nbsp;&nbsp;
+					浏览量：1765&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p>根据伦敦海事仲裁员协会最终裁决，中海重工败诉，将为旗下江州造船4艘撤单船向船东支付总金额约1.12亿美元。同时，4艘撤单船将以公开拍卖方式出售，扬子鑫福同意出价800万美元参与拍卖并完成建造。</p>
+<p>中海重工败诉支付1.12亿美元</p>
+<p>2019年1月3日，中海重工发布公告，鉴于磋商进展缓慢且无法与两名客户之一就四艘船舶达成共识，故集团根据相关造船合约诉诸仲裁以解决问题。根据由伦敦海事仲裁员协会公布日期为2018年12月27日的仲裁裁决，仲裁员协会根据有关四艘船舶相关造船合约已判该客户胜诉，裁决其中包括：</p>
+<p>该客户有权撤销或取消造船合约，且撤销或取消造船合约为合理并根据其项下条款行使；该客户就偿还造船合约项下已付合约价各项索偿获全面胜诉；集团须立即向该客户偿还及退还造船合约项下已付合约价总金额9818.8万美元，连同总金额约1392.8万美元利息;集团须按弥偿基准承担该客户讼费，并承担仲裁裁决费用，总金额约为57.8万英镑。</p>
+<p>于公布日期，中海重工集团根据仲裁裁决应付予该客户总金额约为1.12亿美元及57.8万英镑，合共相当于约8.83亿港元。集团将以银行融资偿付仲裁裁决项下付款。</p>
+<p>鉴于仲裁裁决，截至2018年12月31日止年度相关会计账项将会被拨回，具体而言，已确认有关四艘船舶累计收益约6.33亿港元将会被拨回，四艘船舶将根据其可变现净值确认为公司存货，而销售成本也将按相同金额拨回。</p>
+<p><img alt="中国海事服务网" style="font-size: 14px; max-width: 550px; border-top: 0px; height: 286px; font-family: 宋体, Arial, Helvetica; border-right: 0px; width: 511px; vertical-align: middle; white-space: normal; word-spacing: 0px; border-bottom: 0px; text-transform: none; font-weight: 400; color: rgb(43,43,43); padding-bottom: 8px; font-style: normal; text-align: center; padding-top: 8px; padding-left: 0px; margin: 0px; border-left: 0px; orphans: 2; widows: 2; letter-spacing: normal; padding-right: 0px; background-color: rgb(255,255,255); text-indent: 28px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial" src="http://www.cnss.com.cn/uploadfile/2019/0104/20190104015249888.jpg" /></p>
+<p>图：该型12500吨多用途船总长144.7米，型宽22.8米，型深11.3米，设计吃水7.5米，航速15.1节，入德国劳氏船级社。</p>
+<p>据消息人士向国际船舶网透露，2014年，德国船东Auerbach Schiffahrt和Briese Schiffahrt在江州联合造船分别订购了总计6艘12500吨多用途船建造合同。当时船价仅1850万美元，远低于当时正常价格3000万美元。按计划这批船从2015年第四季度开始按季度交付。据了解，江州联合造船目前已经交付Briese Schiffahrts两艘12500吨多用途重吊船。</p>
+<p>扬子鑫福出价800万美元收购并完成建造</p>
+<p>公告称，2019年1月3日，公司、江西造船（注：即江州造船）及江苏扬子鑫福造船有限公司订立框架协议，以收购、建造及转让该客户已撤销的四艘船舶之一。根据框架协议，其中包括：</p>
+<p>集团须按现状以公开拍卖方式出售已撤销船舶，起价为800万美元。扬子鑫福同意参与拍卖，并同意出价800万美元。倘竞标价格超过800万美元，扬子鑫福造船并无责任作出任何额外出价。如果扬子鑫福造船中标，于完成建造已撤销船舶时，集团将享有以1600万美元(连同年利率12%)自扬子鑫福造船回购已撤销船舶优先购买权。</p>
+<p>四艘船舶余下3艘预期将以类似已撤销船舶方式处理。于公布日期，集团正与其他潜在独立第3方买方进行磋商，概无就四艘船舶余下3艘订立最终协议。</p>
+<p>公告称，扬子鑫福造船为扬子江船业(控股)有限公司的子公司。框架协议项下的安排符合于公司日期为2018年11月23日披露的集团与扬子江船业的合作框架，其将使江州船厂能够重组其造船业务并处理已被客户取消或撤销的造船合约项下的船舶，以将对集团的财务影响减至最少。因此，董事认为，框架协议及其项下拟进行的交易乃按正常商业条款经公平磋商后协定，因此符合公司及其股东的整体利益。</p>
+<p><img alt="中国海事服务网" style="font-size: 14px; max-width: 550px; border-top: 0px; height: 336px; font-family: 宋体, Arial, Helvetica; border-right: 0px; width: 444px; vertical-align: middle; white-space: normal; word-spacing: 0px; border-bottom: 0px; text-transform: none; font-weight: 400; color: rgb(43,43,43); padding-bottom: 8px; font-style: normal; text-align: center; padding-top: 8px; padding-left: 0px; margin: 0px; border-left: 0px; orphans: 2; widows: 2; letter-spacing: normal; padding-right: 0px; background-color: rgb(255,255,255); text-indent: 28px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial" src="http://www.cnss.com.cn/uploadfile/2019/0104/20190104015249598.jpg" /></p>
+<p>图：扬子江船业和江西省瑞昌市政府及中海重工签订战略合作协议，将&ldquo;托管&rdquo;江西省最大的船厂江西江州联合造船有限责任公司</p>
+<p>据国际船舶网了解，2018年3月22日，中海重工、扬子江船业与兴达矿业订立备忘录，将于瑞昌市成立一家合资造船公司，由扬子江船业管理。合资造船企业将向江州造船(租用相关生产场地及设施以发展其造船业务，年产量为4至6艘2万吨船舶。</p>
+<p>根据协议，扬子江船业将协助江州造船就七艘船舶中可能被三名客户取消订购的三艘船舶寻找新买方。其后江州造船将以合理价格向合资造船企业出售三艘被取消订购的船舶，以使合资造船企业将继续进行建造工程，以随后向新买方销售制成的被取消订购的船舶。</p>
+					<p align="center"></p>
+					<p align="right">来源：国际船舶网</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219086">[下一篇] Hoegh LNG获AGL Energy一艘FSRU十年租约</a>
+					   
+					 
+						<a href="news_show.php?id=219084">[上一篇] Novatek和Saibu公司合作欲进入日本市场</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+									<li><a href="news_show.php?id=1" title="JCB打破记录成为第三大工程机械制造商">JCB打破记录成为第三大工程机械制造商</a></li>
+									<li><a href="news_show.php?id=2" title="用具制造商、物流商测试被动式RFID集装箱封条">用具制造商、物流商测试被动式RFID集装箱封条</a></li>
+									<li><a href="news_show.php?id=3" title="我国测控装备的发展现状及对策">我国测控装备的发展现状及对策</a></li>
+									<li><a href="news_show.php?id=4" title="射频识别技术原理、安全及应用研究">射频识别技术原理、安全及应用研究</a></li>
+									<li><a href="news_show.php?id=5" title="国内RFID应用及产业研究(中)">国内RFID应用及产业研究(中)</a></li>
+									<li><a href="news_show.php?id=6" title="制造业，向供应链要利润">制造业，向供应链要利润</a></li>
+									<li><a href="news_show.php?id=7" title="输送带行业必须坚持走可持续发展之路">输送带行业必须坚持走可持续发展之路</a></li>
+									<li><a href="news_show.php?id=8" title="整车企业如何才能实现实时物流管理">整车企业如何才能实现实时物流管理</a></li>
+									<li><a href="news_show.php?id=9" title="全自动运载-RFID系统优化物料流程和流通">全自动运载-RFID系统优化物料流程和流通</a></li>
+									<li><a href="news_show.php?id=10" title="仪征引资12亿建现代物流港">仪征引资12亿建现代物流港</a></li>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219766" title="浙江继河海、空水联运后，另一种新的联运方式开启!">浙江继河海、空水联运后，另一种新的联运方式开启!</a></li>
+							<li><a href="news_show.php?id=219771" title="造船业：拥抱数字化未来">造船业：拥抱数字化未来</a></li>
+							<li><a href="news_show.php?id=219770" title="顺丰科技推出新版AI语音助手 实现高效智能化">顺丰科技推出新版AI语音助手 实现高效智能化</a></li>
+							<li><a href="news_show.php?id=219768" title="贵州毕节卷烟物流配送中心“小小二维码”点检智能化显神通">贵州毕节卷烟物流配送中心“小小二维码”点检智能化显神通</a></li>
+							<li><a href="news_show.php?id=219773" title="西安咸阳国际机场2018年货邮吞吐量突破30万吨">西安咸阳国际机场2018年货邮吞吐量突破30万吨</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">
+				<img src="../../imgs/nimg/smallimg/1548079262_thumb.jpg" />
+				<p>德鲁里：船公司推迟交付以缓和UL...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547802697_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">德鲁里：船公司推迟交付以缓和ULCV影响</a></li>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7679","0","attach");
+Cms.viewCount("","7679");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml" target="_blank">新闻动态</a> > <a href="http://www.cpppc.org/zh/pppdfdt/index.jhtml" target="_blank">地方动态</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>云南红河州河口县财政局四铁拳强化PPP项目监管</h2>
+			<span class="msg"><b>2019-01-21</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">一是严格筛选项目、科学合理论证。通过物有所值定性和定量评价，科学评判项目是否适宜采用PPP模式。通过对项目全生命周期支出责任合理预测，科学评估项目实施对当前以及今后年度财政支出的影响，严格控制PPP项目财政支出规模，有效防范和控制财政风险，确保政府履约能力。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; line-height: 1.75em;">　　二是加强项目管理，确保合法合规。将PPP项目支出责任与中期财政规划结合，纳入预算管理，保障项目支出。主动参与指导PPP项目的采购，对采购结果进行审核，确保PPP项目的合法合规性。按时开展项目绩效评价，并根据评价结果支付相对应的补助，切实履行财政资金绩效管理的要求。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; line-height: 1.75em;">　　三是建立督查机制，强化风险防控。构建常态化风险监控体系，建立专人负责、持续跟踪、动态调整的常态化管理机制，以支出责任为监控内容，严格开展PPP项目财政支出统计监测分析，防范支出责任风险，避免形成政府债务。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; line-height: 1.75em;">　　四是及时网络公开，接受公众监督。依托财政部PPP综合信息平台系统及政府门户公开网站，及时公开PPP项目实施方案、物有所值评价、财政承受能力论证、采购文件、项目合同等相关文件数据，把权利关进制度的笼子，晒在阳光下，有效预防权利失控、决策失误和行为失误，营造公开透明的投资环境，构建亲清的政商关系。</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 财政部网站</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7679");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","518");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

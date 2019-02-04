@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>小程序731天 : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">小程序731天</h1>
+			<input type="hidden" value="607905" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/sandyyy/" class="post-author">Sandy珊宁</a>&nbsp;
+				<span class="post-date">01月14日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15474370659065.jpg?imageView2/2/w/760" alt="小程序731天">
+				</div>
+								<p>本文来自微信公众号：锌财经（ID：xincaijing）作者：潘越飞</p><p>微信8年，微信公开课PRO版5年。从2014年开始，几乎每年都有一场微信和张小龙的“约会”。</p><p>昨天微信公开课白天一整天没露面的张小龙出现在了微信之夜上，这一次张小龙进行了近4个小时的单口专场——从晚上19:45到23:30，期间他主动提出两次中场休息，多次提出“要喝点水”。</p><p>张小龙亲口承认，<strong>这次是他目前公开课演讲最长的时间，</strong>为此他还特意要求工作人员把他的演讲放到晚上。</p><p>整个演讲过程，张小龙语速比较慢，会习惯性托下巴，并且出现长达近十秒钟的停顿——并没有冷场，更像是在对自己要说出的思考做最后的确认。</p><p>张小龙聊到了他对好产品的思考和认知，聊到了微信的初心和最新改版，他还聊到了——<strong>小程序，</strong>这一仅占了他演讲十分之一篇幅的产品，今年已成为各大互联网公司都在抢占的高地。</p><p>如果说微信是互联网史上的一个异类，那么小程序也算是微信生态里的一个不容忽视的存在。</p><p>产品没有成型的时候先放哨，<strong>这是微信团队史上的第一次“出格”；</strong>发布完了之后，又小心翼翼地撕开一个个口子，“特别小心”地去培育，这是很多平台都做不到的耐心。</p><p>“小程序看起来挺慢的。”在演讲进行到一个多小时的时候，张小龙说到小程序，两年前，他跟同事讨论的是小程序会如何死掉。而今天，他思考更多的是<strong>如何让创造价值的人获取回报。</strong></p><p>也许微信小程序硬生生把互联网新周期的到来加快了十年，这款腾讯一手打造的产品打破了长久以来“受限”的开发环境，终止了暴利而无趣的风口年代。</p><p>731天，它克制到狂热地撕开一扇新门。</p><h3><strong>佛系微信的首次高调</strong></h3><p>在喧嚣的互联网江湖，小程序的故事看起来少的可怜。</p><p>这支由微信创始人张小龙带领的小程序队伍，在两年的时间里交出了成绩单：根据昨天微信官方公布的数据，短短两年的时间，小程序已覆盖超过200个细分行业。过去的一年，小程序服务超过1000亿人次用户，年交易增长超过600%，创造了超过5000亿的商业价值。</p><p>赫赫战绩之外，外界对这支小程序团队的印象却只有两个字：<strong>低调。</strong></p><p>早在2015年，业内就开始流传张小龙要做一个叫“应用号”的东西。这个来自湖南邵阳的程序员已靠微信成功封神，一举一动都被无限放大。微信以前，张小龙也从未高调宣扬过自己的任何新计划，每次都是炸闷雷。</p><p><strong>事出反常必有妖，</strong>这话没说错。业内不禁好奇，“应用号”到底是什么？</p><p>答案在2016年的微信公开课PRO上被张小龙自己揭晓。</p><p>他在公开课上吐露一个自己长久的思考：如何更高效率帮助用户完成任务，而不是让用户在微信里永远都有处理不完的事。</p><p>他几次提到了“价值观”：腾讯的价值观，用户价值是第一位的。微信的价值观，好产品是用完即走的。以及他身为程序员的追求：2016年，想为开发群体做一些事——他想尝试<strong>“做到让更多的APP有一种更轻量的形态”</strong>，他把这种新形态叫做——应用号。</p><p>就这样，小程序外部名字是应用号，内部代号是Web+，技术人员间的昵称是MINA——女性化的名字，颇有致敬乔布斯的Lisa苹果电脑的味道，后者的划时代意义是首次使用了图形化用户界面。</p><p>至此，张小龙身为程序员的动机已经明确——<strong>为用户提供一款全新的用完即走的产品。</strong>APP要下载，网页体验也用户体验不友好，“小程序才是未来”，在QQ邮箱和微信之后，张小龙的亢奋点又回来了。</p><p>现在，他需要一支队伍。2016年3月，程序员胡浩从美国飞到广州微信面试。当时他的邮箱里还躺着另外两份offer，一家是公司名称全字母的国际互联网巨头，另一家是国内知名IOT厂商。</p><p>三选一。选择微信的原因是，他在面试时听到了关于小程序的未来。</p><p>“给我介绍了一下小程序未来会怎么样。小程序平台面向的不是C端用户，不是B端的企业，而是D端（developer，开发者）。”</p><p>作为技术人员，胡浩觉得能做一个服务其他技术人员的东西出来：“实在太酷了。”</p><p>产品经理陈浩也加入了“应用号”项目组。“当时，他（张小龙）在公开课（2016年1月）上说做‘应用号’，我们一头雾水，不知道‘应用号’是什么。外部问，什么是应用号，哪个团队做应用号？我们也都不知道。”陈浩自己还在好奇的时候，突然被调到了应用号开发组，成了较早的产品经理。</p><p>其他成员，基本都是在这个状态下加入开发组，因为工位不够搬到了小阁楼，除了偶尔玩把1块钱的实况足球，就是敲代码。</p><p>队伍凑齐了，但是没人说得清到底该具体怎么做，<strong>这个新世界由什么构成，应该怎么运行。&nbsp;</strong></p><p>“他们在会议室开会，突然叫我过去一下”，胡浩在会议室被同事们告知，如果基于外面已有的体系，很多东西没办法原生实现。胡浩对锌财经回忆自己的反应是：<strong>“如果要重新推翻的话，那就所有东西全部要自己来做。”</strong></p><p>还没有诞生的第一版小程序，就这样被推翻。此时，距离张小龙的公开演讲，已经过去了半年，而距离小程序成为一个拥有150万开发者的开放平台，以及互联网巨头竞相布局的商业生态，还不到两年。</p><p>突破发生在2016年8月6日，那天晚上，小程序框架终于有了雏形。</p><p>第二天，程序员们经过一轮研讨，最终敲定。“这个框架未来的5-10年内不会有大的改动，除非有什么新的技术突破。” 他们对锌财经说。</p><p>小程序的新框架就在那晚诞生并沿用至今，这算是小程序真正意义上的开工。</p><h3><strong>小程序的必然</strong></h3><p>关于小程序的缘起，有多个版本。</p><p>有的版本是，张小龙看到身边人每天长时间用微信，“不是好事”。他甚至和同事吃饭、开会时规定不能看微信，他认为“用完即走最理想”；</p><p>有的版本是，看到深圳机场路上的广告牌上，每个企业都放着微信公众号二维码，他很高兴公众号成为标配，随即不高兴了，如果只是看看公司信息，何必非得关注公众号；</p><p>还有的版本是，有技术人员给他看了新demo，可以在开发上提供基础接口，他就想通过更复杂的接口应用来实现程序所需要的基本元素，完全跳开公众号，去做全新的应用形态。</p><p>在昨晚的演讲中，张小龙说为什么非要做这个事情？因为他认为这就是一个未来必然的趋势——APP还要下载安装，网页的体验又太糟糕。而小程序的路径是清晰的，<strong>让开发者用得过瘾，让用户用得简便。</strong></p><p>经过2016年8月的第二次推翻——小程序原本后台基于服务号，被推翻后，做了一版独立的——小程序终于可以内测了。</p><p>情况，并不理想。</p><p><strong>“牛粪上浇花。”</strong>有程序员这样评价自选股等第一批参与内测的团队，他们认为自己做了坨很挫的东西，其他人要在那上面做得有模有样。</p><p>自选股团队内测时非常痛苦，因为技术团队一边写代码修改，内测团队要一边测试反馈。不干完，所有人都不会睡觉。</p><p>团队中很多人的生活从996变成了997。原本计划健身减肥的胡浩，在那一年胖了十五斤。</p><p>日子就这样一天天过去。2016年，他们埋头捣鼓着什么。在小程序的程序员们看来，他们只是在工作——就像办公室从7楼搬到9楼那么自然。没什么值得特别记录和回忆的。但改变已经发生。</p><p>2016年10月，小程序开放内测。在广州TIT创意园微信总部不到200米的地方，有程序员偷偷“潜入”以内测小程序为主题的黑客马拉松活动——<strong>他太想第一时间知道同行们对小程序会有什么样的反应。</strong></p><p>他等到的结果是：<strong>“真难用。”</strong></p><p>这是最大的压力。按照Shangyou——世界上第一个写WXML语言的人，也就是WeiXin Markup Language微信小程序语言——的说法，他们把外部开发者看成了“甲方”。但甲方的反馈让开发组的键盘都有点沉。</p><p>他们给自己定的目标太高。“像做菜一样，你要煲个汤，有些家庭主妇觉得自己要去买鱼买各种东西一起煲很麻烦，结果超市做出了一套东西，买回家扔锅里就可以做了。”微信开放平台副总经理胡仁杰说小程序要做的，就是给程序员提供超市那套东西。</p><p>这件事，全球第一次。一个无法证实的小道消息是，张小龙清楚地知道做个改变行业的事情必然很难，所以连被称为“低调到无以复加”的他都<strong>一反常态地</strong><strong>高调宣布小程序。</strong></p><p>“小程序还没有做就发布了，这不是微信的风格，因为我们从来不会发布一个还没有做的东西，之所以这样做，就是为了给内部一个压力，没有退路。”在昨天的演讲中张小龙第一次证实了这个说法。</p><p>是的，没有退路了。提前一年公布的面世时间，要来了。</p><p>这埋下了小程序初期高开低走的必然，也埋下了为什么后期张小龙称<strong>小程序的美德是“沉得住气”。</strong></p><h3><strong>盛衰一线</strong></h3><p>两瓶香槟，这是微信有史以来最“奢华”的庆祝了。</p><p>2017年1月9日，iPhone发布十周年的日子，所有小程序项目相关的人员，审核、行业、法务、财务等都在现场，在一个群里互相发红包庆祝，并且倒计时要打开小程序哪些开关，还极为难得地开了两瓶香槟，拍了合影：小程序，正式上线了。</p><p>“我印象中，那是微信很少有的（有仪式感的发布）”。陈浩回忆：“然后后面的48小时，劈头盖脸，各种事情都发生了，外面都在说小程序多牛逼。”</p><p>《你好，我是小程序》的文章刷爆朋友圈；网友狂欢“错过了公众号，别再错过了小程序”；“干掉APP”的话题成了行业常用谈资……微信的第一次奢侈庆功，也是中国互联网史上第一次有这么大规模的用户为一个功能狂欢。</p><h3><strong>盛衰有时只在一线间。</strong></h3><p>喧闹过后120小时，一大盆冷水来了。《小程序上线7天，罗胖带着1000万用户跑了》。作为第一批参与者，自媒体人罗振宇高调宣布关闭小程序，还神秘兮兮地发布了一句话：“我们决定不做了。我们知道小程序是什么了。哈哈，但是不能说。”</p><p>虽然最新内部消息是，仅仅因为当时支付机制不利于内容付费产品而已。但当时的官方口径很文艺：“有人分手，你还不恋爱了不成。”</p><p>还真不幸言中了。大众和小程序的蜜月期迅速消失。</p><p>2017年2月，小程序的百度指数下降至高峰日的1/50，有报告称，35.5%的开发者感到失望。<strong>雪崩式下滑。</strong></p><p>过完年回来上班的小程序员工，还被小领导们特地打气，虽然外面唱衰，但千万别丧失信心。</p><p>“小程序没有入口，小程序不能推送消息，小程序没有应用商店，小程序没有粉丝，小程序不能分享朋友圈，当龙哥在公开课说出这些小程序特性后，我们就预料到了肯定有负面消息。但没想到这么多。”腾讯公关告诉锌财经。</p><p>整个小程序技术团队一如既往地淡定。据张小龙昨天的演讲中透露，团队对此早有心理准备，小程序发布前的那天晚上，团队成员甚至“讨论了小程序会有哪几种死法”。</p><p>作为小程序底层技术框架设计者，<strong>他们清楚小程序很可能一时半会儿起不来。</strong>而在陈浩看来，最初开放的基础技术架构，想的是让用户有更好的服务体验，也不该引发套利者的兴趣。</p><p>内部流传的一句话是：有用的产品谁都会做，有态度的产品不是谁都能做。</p><p>面对质疑他们看起来无动于衷——<strong>低头做自己的事，写代码，改bug。</strong></p><p>一年不到的时间，现在耳熟能详的功能被一个一个开放出来：个人注册、第三方平台、葵花码、附近功能、聊天窗口列表等。平均1周半1次，共计32种不同能力。</p><p>由于每次半夜发布完，开发者们都会连夜阅读文档改代码，他们取了个又爱又恨的称呼，“没有性生活的小程序员”。“我们后来定了个规则，超过凌晨2点就不要发布了，否则容易引起开发者愤懑，‘你一发布我得连夜改’。”陈浩说。</p><p>这是幸福的烦恼，经历大起大落后，被纠正预期的小程序开始走上正轨。</p><p><strong>这一年，互联网最大的变量是共享单车。</strong>而小程序开始出现在大众视野，和共享单车不无关系。</p><p>摩拜单车车身二维码最早导流到APP，那是个很重的体验——用户为了骑车还得耗费流量下载庞大的应用程序。这让摩拜选择尝试小程序，成了最早的线下用小程序的商家。</p><p>一开始，摩拜高管害怕小程序抢夺APP用户，结果试点了以后，转化率提高，APP用户量也随之增长，<strong>“每周使用量达到100%的增长。”</strong>摩拜单车产品负责人杨毓杰告诉锌财经。小程序开发之后，新用户几乎都来自小程序。也正是微信和摩拜在小程序上的合作，让“用完即走”的理念有了实际的诠释。</p><p>线下跑通，还有线上。</p><p>新锐电商平台蘑菇街，前后派了100多人到微信总部，他们租了一层办公空间，只留一张沙发给自己老板，带着一个<strong>“Do It Right Now”</strong>的早期创业时横幅，和慰藉自己肚子的电饭煲，进入了密集加班状态。</p><p>蘑菇街胡轶苗解释他们的动机：“我们整个公司，从CEO一直到每个人，对于微信小程序的市场非常看好，觉得这是一个全新的能够为我们带来新市场增量的机会”。6月蘑菇街女装初步上线，7月社交立减金内测、直播上线、拼团玩法、矩阵形成，蘑菇街没赌错，他们在小程序端转化率甚至达到了APP端的2倍。</p><p>就连大泼冷水的罗振宇，也在6个月后，低调重启“得到”小程序。</p><p>一切就绪，只差爆发。</p><h3><strong>从惊艳到惊喜</strong></h3><p>小程序的程序员内部说，这是一款“特别简单的游戏。”不过是小人发力跳跃，乍看无聊至极，简单到爆。</p><p>它叫做跳一跳，<strong>一款真正意义上让小程序红起来的游戏。</strong></p><p>2017年12月28日，微信开放了小游戏，同时重点推荐了小游戏“跳一跳”。公开数据显示，截至2018年1月，跳一跳已经积累了3.1亿玩家，有史以来单款游戏用户规模达到的最大水平。</p><p>没人说得清跳一跳为什么就火了。人人都在玩它。</p><p>它更像一个发力点：当小程序覆盖面越来越广，微信下拉入口也有了，用户也开始养成习惯。这一切让跳一跳成为引爆点。</p><p>这款游戏里还有着程序员<strong>“闷骚”</strong>文化的体现：比如加分的方块，其实都有小游戏团队的名字；比如“徐记士多”，就是因为那位设计师姓徐。</p><p>张小龙的最高纪录，据说超过两万分。</p><p>“它简单到让你可以有一个面对自己，一个最个人的时刻。大家在微信上，你可能会有很多的消息要处理，朋友圈里有很多信息要你去点赞、评论，可能还有很多工作的信息也夹杂在里面。这个时候玩这样一个小游戏，反而是一个非常正经的事情。”</p><p>不过，张小龙认为，如果开发者只是把小游戏作为流量变现的一种手段，而不在意品质，流量很快会被耗尽的。<strong>但是，跳一跳让更多人认识了小程序。</strong></p><p>对很多普通用户来说，也许不需要了解什么是小程序，也不关心什么是小程序。立即触达，使用它，然后离开，就够了。</p><p>如果故事到此结束，小程序只是惊艳，不够惊喜。惊喜的是，很多产业都开始探索小程序，并将小程序视为自己的必选项。中国中部地区一个知名连锁企业的改革派高管，在内部放言，<strong>要么让做小程序，要么自己滚蛋。</strong></p><p>接触一线企业的微信小程序零售行业负责人于洪潇最早是和沃尔玛沟通的。一开始，作为外资企业的沃尔玛，根本不知道小程序是什么。双语沟通了3小时，对方还在考虑要不要把订阅号转成服务号。&nbsp;</p><p>首先打开智慧零售场景的是永辉超市。当时永辉超市在做业态的改造和升级，不仅有“超级物种”和社区店，还成立了科技公司叫永辉云创，同时推自己的APP。每当中午高峰来临，大楼周围的白领会去超级物种买便当、饮料。虽然用自助收银机，或是扫码结帐，似乎还差了一些东西。</p><p>“其实用户在门店排队是很焦虑的，赶着吃饭，根本没有人去下载APP，超市却还花很多钱去推广，效果很差。”于洪潇说。</p><p><strong>第一是用户排队的问题，第二是用户数字化的问题。</strong>对于线下零售行业来说，这是两道不大不小的门槛：首先必须将线下的用户数字化，然后通过数据和移动互联网追踪用户的行为习惯。用企业自己的APP，不但要面对开发所需投入的资金和困难，还要长期与推广和后台数据记录作斗争。</p><p>永辉超市的小程序开发、上线，会员增速是以前的2倍，留存率是60%，<strong>数据比任何表达更有力量。</strong>来说，小程序代表的东西更多。</p><p>“小程序帮助他们加快了内部组织架构的优化，甚至包括利益分配，都通过这些项目加速了调整。”某跨国超市中国区的英国籍CEO，在一次沟通中和于洪潇分享了这个观点，比如电商曾经独立核算，哪怕用户在线上下单，到门店去取货也算电商的，那么门店就缺少了服务的动力，现在全由电商负责，但内部的利益分配做了调整，门店也会享受到。</p><p>在线上和线下产业不断融合的今天，小程序扮演了越来越重的角色。</p><p><strong>“零售企业像割韭菜一样一茬一茬的被收割。”</strong>有赞创始人白鸦告诉锌财经，近十年来，这些店主曾以为，线上流量可以变出点什么，但最后他们才发现，自己曾经的所有客户，都变成了别人的客户。</p><p>以外卖为例，3年前，餐馆老板们，接受从20%到15%、10%，再到5%，到最后没有的外卖补贴，把超过80%的到店吃饭的人变成了外卖用户，培养出了全国巨大的餐饮外卖市场。而如今，他们却为了继续留在这个市场中，不得不付出10%、15%甚至20%的外卖提成，甚至顾客店内消费时，还要拿出手机来，打八折的同时再给团购网站分成10%。</p><p>小程序的出现恰恰弥补了这一“缺憾”，<strong>把线下企业的流量和生意还给线下企业。</strong></p><p>沃尔玛最终接受了小程序中的“扫码购”，每天30%的支付通过小程序；宜家的合作伙伴给总部连续写了1000封邮件后，终于在小程序临上线前一周得到关注，小程序会让传统的拍照与签字形式，优化成扫一扫；</p><p>家乐福给法国总部汇报6月新增1000万用户时，曾被惊讶的询问<strong>“是不是多写了1个0”，</strong>而它最新访问量达到了2亿，这是APP时代不可能发生的事情。</p><p>甚至连不少互联网巨头，也纷纷开始布局小程序。2018年9月，支付宝宣布正式成立小程序事业部。在BAT的另一端，百度也在2018年9月底宣布，在两个多月的邀请制公测期间，百度智能小程序月活过亿。而在不久前，今日头条和抖音相继上线了小程序功能。</p><p>这个时代，小程序比APP更好做。</p><h3><strong>也许，人人都是小程序员</strong></h3><p>上线半年后，陈浩的妈妈终于知道了小程序是什么。</p><p>“是我发现我妈竟然往我家的微信群里转了很多小程序，<strong>她也不知道是什么，反正用得舒服就重复使用。</strong>过了半年后，她知道这个东西是我做的，我会很有成就感，我记得我妈第一个丢的是“小年糕”的视频，我妈还给我看了一个小程序的视频。”陈浩想起了自己第一次看到妈妈使用小程序时的场景。他感到默默的喜悦。</p><p>同样感触的还有胡仁杰。他表示，有一天他爸爸突然给他发了个小程序，说芦荟可以清热解毒，切出来可以煮了吃。他家里种了很多芦荟，以前耳朵不太好的他爸爸，要通过电话来费力得说清这件事。</p><p>“他读完之后发给我这个小程序，我看了很直观，知道他要说什么，那一刻我觉得这是最幸福的事情。”胡仁杰说，那一刻他可以告诉家人自己整体在忙什么了。</p><p><strong>小程序潜移默化的改变着普通人的生活方式，甚至改变着它本身的内在</strong>。“以前公众号时代，外面说我们高冷。”郑文晓说，那是因为公众号产品门槛低，不需要过多干预，<strong>到了生态多元的小程序时代，高冷的微信也主动了。</strong></p><p>郑文晓他们开始主动每隔个把月跑城市，看到服务商做出了药店门口体重秤放小程序、美发店的小程序互动屏幕、专心给商家做补货用的小程序等，会主动关心需要提供什么的功能支持。也开始主动制作行业服务商教学视频，计划做服务商成长体系，去尝试提升服务商水准。</p><p>他们同时计划主动公布服务商的案例、权限、用户评价等信息，避免“微信之母”等借着小程序合作方会销、欺诈甚至直接骗钱等啼笑皆非的事件发生，透支小程序的信任度。</p><p>微信开放平台基础部助理总经理向我们形容小程序的整个诞生历程，是技术从下往上的创新推进，承载了从上往下产品思维，<strong>“产生了化学作用。”</strong></p><p>小程序应用数量已经超过100万，覆盖200多个细分行业，日活用户达到2亿。未来更剧烈的化学作用，是每个用户、每个开发者、每个商家、每个服务商，共同激荡，打造出不受限的生态。</p><p>“小程序的数量很重要，这是丰富场景的基石，但小程序的好坏也同样重要。”在昨天的2019微信公开课PRO现场，小程序团队正式宣布将在2019年上线<strong>小程序用户评价体系及探索“优质小程序计划”</strong>，帮助用户更好的发现、使用优质的小程序。</p><p>小程序的开发者门槛一直在降低，开发者这个群体也得到了两年来的最大关注。昨天，腾讯云推出总价值超过10亿元的“小程序·云开发”资源扶持计划，对超过100万小程序开发者提供免费云开发资源扶持。</p><p>2018年11月7日，在小程序获选“世界互联网领先科技成果”的日子，马化腾在乌镇发言：“在教育部的指导下，小程序还被选入部分高校的计算机教学课程，这让我们备受鼓舞。大家都在热情地学习和使用小程序，现在也诞生了很多专门的‘小程序员’。”已经有150万开发者加入其中。</p><p>小程序正在秘密筹备一件更酷的事情，<strong>他们希望未来连小学生都可以制作属于自己小程序。</strong></p><p>在漫长的采访过程中，有位90后从业者对锌财经创始人潘越飞说过一句难以验证真伪、但是热血沸腾的话：</p><p>只有再过10年，人们才会意识到，小程序和VC、智能手机一起，彻底改变了21世纪的产业。</p><p>低调分很多种。不爱言辞只是其中最广为人知的一种。对小程序团队来说，低调的他们也许比所有人都更澎湃：</p><p>他们不曾压抑过自己的狂热欲望——用“小”来改变这个世界。</p><h3><strong>小程序没有故事，只有日子。</strong></h3><p>我们不用记得小程序面世已经2周年了，我们只要记得，在这场微信自上而下的战略和执行中，所有人都获得了收益：用户节省了时间；开发者得到了便利；合作伙伴获得了更多新价值。用马化腾的话说，这套腾讯自创的编程语言打破了受限的开发环境，为“跨系统开发”这个世界难题给出了中国的解决方案。</p><p><strong>更愿意给予，而不是攫取。</strong>未来属于这样的人。</p><p><strong>张小龙在2019年微信公开课PRO上关于小程序的部分演讲内容：</strong></p><p>现在有很多其他公司都在做小程序了。我觉得这是好事情。可能有一些代码的接口跟我们一样，但是我并不担心这里面会跟我们构成很大的威胁。虽然是做同一种东西，除了平台和团队不同，其实更重要的一个差别在于，你的原动力是什么？</p><p>如果只是希望借由小程序这种载体，来做一个流量的生意，我一点都不看好。只让自己好不让别人好的事情，通常都不会太长久。</p><p>小程序的使命是，刚才提到的，让创造者体现价值和回报。我们的一切都是围绕着点展开。不能因为拥有流量，我们就要分发流量，要让小程序来体现这个流量价值，这跟我们自己的原动力是完全不一样的。</p><p>很多人看不懂为什么小程序要去中心化。如果不去中心化的话，腾讯自己垄断了头部几个小程序，那就没有外部的开发者什么事了。看起来腾讯可以短期获利，但这个生态就没有了。</p><p>哪怕是腾讯投资的公司，也应该一样的遵循平台的规则，否则也会破坏平台的公正性，我们更看重的是平台的健康。我知道过去大家都认为平台对于投资的公司似乎有倾斜。我只能说，可能是我们做得不够好，相信我们团队今后在这块会投入更多人力和资源，使得我们可以对所有的公司包括我们投资的公司是一视同仁的。</p><p>回顾一下小程序，从最早酝酿到现在三年了，其实看起来挺慢的。我觉得小程序是我们，或者说也是我个人职业生涯里面最大的一个挑战。因为我们从来没有试过还没做一个事情，就先宣布出来了。</p><p>之所以这样做，其实是为了给自己一个压力，给团队一个压力，这个事情我们非做不可，而且一定要做到。</p><p>我还记得很清楚，我在微信公开课里面说我们要推出小程序这样一个服务的时候，当天晚上，我跟我们的团队就坐在一起讨论，讨论一个主题，我们小程序会有哪几种死法会挂掉？我记得特别清楚，因为当天晚上我们不是讨论小程序有多么美好的未来，而是说它有多难。我们会遇到哪一些障碍是跨不过去的，我们并不是对它乐观去做的，而是我们觉得这个事情很难我们一定要做到而去公布这个事情。</p><p>为什么非要做这个事情？因为我认为这就是一个未来必然的趋势。因为APP还要下载安装，网页的体验又太糟糕。这点，在之前的公开课，我已经详细讲过了，就不重复了。</p><p>其实很多人可能不理解网页的体验为什么不好，就像不理解为什么公众号的体验比网页好一样。这里，微信其实用了一些限定性的办法，比如说排版，使得哪怕是一个业余团队，做的公众号或者小程序，在用户端看起来体验都还不错。</p><p>对于小程序，我们的决心非常大，但我们并不急着说一下子就要做成它。因为它毕竟是一个生态，不是一个To C功能，所以我们有足够的耐心，慢慢的培育它。并且经过了公众号的过程，我们也不希望一上来就有一批投机分子来当作一种流量红利来滥用它。</p><p>即使到今天小程序还不能说完全的成功，但我认为它是一个逐步完善的过程，对我们来说，只要看到小程序在跟我们当时的初衷越来越接近，就是很好的信号。</p><p>所以现在看到越来越多的线下行业，已经用小程序来作为它和顾客的一个连接器，并且提高了效率，这都是特别好的案例。</p><p>因为小程序还不是特别完善，在19年我们还有几个重要的事情要去做。</p><p>一个是，搜索的直达。</p><p>我们希望在线下，小程序是一种扫码的方式来触达，在线上，是可以通过社交传播和搜索触达。</p><p>其实搜索一直应该是小程序的一个主要流量来源，并且小程序和APP的一个很大不同，APP是一个个的信息孤岛，互相之间没法交换信息。但是小程序是可以被系统统一检索到，是可以直接搜索到小程序里面的内容的。</p><p>所以我们做过一些试点，比如说我要查一个航班号，是可以输入一个航班号就搜到小程序。但这只是一个试点，我们还没有做到对于所有的小程序都能够通过搜索来找到它的内容，直接把用户连接到小程序去。</p><p>这会是我们在未来一年的一个工作重点。</p><p>另外一个是，小程序需要一个完善的评价体系，使得用户可以作出选择。这也是我们正在做的很重要的一块。举个例子，当你要买一个家乡的土特产，你搜到那么多小程序，不知道哪个是可信的。但是如果你发现你的一个朋友在土特产小程序里买过并且有好的评价，那你就会很放心，这就是社交评价的作用。</p><p>第三个是，小程序的找回也是一个问题。比如很多人说小程序为什么不能发通知或推送？但是我们看到在手机上，每一个APP都会把消息推送使用到尽，最终的结果是，用户只好忽略了所有的推送，所以靠推送是不能解决问题。</p><p>即使我们提供了一种叫模板消息的能力，也会被滥用掉。所有的公司都有骚扰用户的动机，就不能指望所有的公司有自我克制的能力。对于小程序的找回，大家会看到有最近使用、星标，通过微信主界面的下拉，来迅速的找回。但是我觉得这里还是不太足够。</p><p>最近微信7.0版本有一个功能叫强提醒，大家都没有怎么用它，他们会觉得这是对大家一个朋友式的强提醒，它会喊你开会了，当你发一个消息的时候就会时振动起来了，其实不是这样的，我们做强提醒的目的更多的是覆盖到线下的场景，我希望的场景是我将来在一个地方排队，我不需要关注它的公众号也不需要扫它的一个小程序，只需要扫一个二维码就可以获得一个提醒，一个关于排队的提醒，我一旦扫了这个二维码授权给了他获得后续的一条或者是几条提醒的通知，这个是最轻量的，我只是为了一次性的提醒去扫一个码而已。所以强提醒的本意是希望它用在线下，甚至包括线上的一些你可以在小程序里面设一个强提醒，用户可以说当发生什么事情的时候你可以提醒我一下。</p><p>对小程序和用户之间的粘性，我们会继续想办法来强化这一块。但未必是大家想的这种很粗暴的消息推送的方式。</p><p></p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：潘越飞<br>
+								来源：<a href="https://mp.weixin.qq.com/s/0izRhH-rTi6IdLcA5WTAVg" target="_blank">锌财经（ID：xincaijing）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/产品" title="产品">产品</a>
+								<a href="/wiki/服务" title="服务">服务</a>
+								<a href="/wiki/腾讯" title="腾讯">腾讯</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608451?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/a633a_HKUej4ca4R0YjJnG.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>地主家没有余粮了？今日头条母公司普惠红包大缩水 ！</span>
+				</a>
+								<a href="/post/608422?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/1329c_MiLAZ4Liyw841ivH.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>继小米做电视之后，荣耀也将推出电视！你会买吗？</span>
+				</a>
+								<a href="/post/608285?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/28ab7_s28ujmIdGJYikvPK.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>苹果裁员200人！究竟怎么回事？跟手机销量下降有关系吗？</span>
+				</a>
+								<a href="/post/608284?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/b03d3_9OIYB1W3LKcwYxsD.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>华为推出业界首款5G芯片——天罡芯片！国外还能继续封杀？</span>
+				</a>
+								<a href="/post/608188?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/2a595_p50McgkqL1wnREWb.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠摊上大事了！泄漏未公开重大信息，面临双重处罚</span>
+				</a>
+								<a href="/post/608187?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/22071_WxF0Y1r58lkuvCYO.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>顺丰发公告称过年不休息，但是收费高了多少？</span>
+				</a>
+								<a href="/post/608186?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/beee8_EvJszfz8DZk5AdIj.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>程序员突然跑路？游戏公司创始人600万元打水漂！</span>
+				</a>
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/608070?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+					</a>
+										<a href="/post/608069?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+					</a>
+										<a href="/post/608034?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+					</a>
+										<a href="/post/608033?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米股价腰斩，市值蒸发近3000亿！</span>
+					</a>
+										<a href="/post/608001?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+					</a>
+										<a href="/post/607963?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+					</a>
+										<a href="/post/607962?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+					</a>
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/sandyyy/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/43/small_31.jpg">
+													</a>
+						<a class="user-name" href="/author/sandyyy/">Sandy珊宁</a>
+						<a class="follow-btn " href="javascript:;" data-uid="164331">+&nbsp;关注</a>
+					</div>
+					<p>年华似水匆匆一瞥，多少岁月轻描淡写。</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7661","0","attach");
+Cms.viewCount("","7661");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml" target="_blank">新闻动态</a> > <a href="http://www.cpppc.org/zh/pppdfdt/index.jhtml" target="_blank">地方动态</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>北京冬奥会PPP项目实现开工建设，今年将现“双奥之城”建筑群</h2>
+			<span class="msg"><b>2019-01-10</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/1019111043d1.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">国家雪车雪橇中心施工人员在赛道模块实验段喷射水泥。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　1月10日，澎湃新闻从北京市重大项目办获悉，北京冬奥会场馆和配套基础设施工程建设已全面展开。北京赛区和延庆赛区包含8个新建竞赛场馆、5个改造竞赛场馆在内的共计42个冬奥工程项目实现开工建设。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　北京市重大项目办副主任丁建明介绍说，根据《北京2022年冬奥会场馆及配套基础设施总体建设计划》，北京2022年冬奥会场馆及配套基础设施共列入52个建设项目。2018年全年新开工建设冬奥工程项目27项，已开工项目正按计划稳步推进，各项年度建设目标实现。截至2018年底，全部8项新建场馆、5项改造场馆、1项临建场馆、25项配套基础设施（含交通项目7项、水利4项、市政项目14项）和3项其他配套项目，共计42个冬奥工程项目开工建设，总体开工率达到81%。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　8个新建场馆全面开工</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　北京赛区和延庆赛区共新建8个场馆，目前已全面实现开工建设。其中，国家速滑馆已实现结构封顶，国家高山滑雪中心完成50.1％，雪车雪橇中心完成44.7％。大多数新建场馆都是填补国内空白的项目，且建设周期仅有2年多时间。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/10191121zae4.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">国家速滑馆效果图。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/10191132wv8n.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">国家速滑馆冰丝带效果图。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/101911428zem.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">国家速滑馆已实现结构封顶。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　国家速滑馆作为北京冬奥会标志性建筑，采用了世界体育馆建筑跨度最大的马鞍形单层索网结构，从2018年4月开始地下结构施工，到2018年底实现结构封顶，仅用了8个月时间，实现了令人惊叹的“冬奥速度”。国家速滑馆充分采用全数字仿真，工厂化预制，现场组装的建设方式，用创新领先的“智慧建造”模式成倍提升建设速度和建设质量。与此同时，冬季运动管理中心综合训练馆已经实现“冰坛”封顶；北京冬奥村人才公租房，首钢滑雪大跳台中心也都按计划实现开工。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/10191153q1jv.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">首钢滑雪大跳台效果图。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　另外，国家雪车雪橇中心已累计完成总工程量的44.7%，国家高山滑雪中心已累计完成总工程量的50.1%；延庆冬奥村和延庆山地新闻中心已完成PPP项目招标和项目公司组建，实现开工建设。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/101912036kyh.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">高山滑雪中心。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　改造场馆开始“华丽转身”</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　充分利用北京2008年奥运会场馆改造后承担冬奥比赛任务，是北京冬奥会落实奥林匹克运动发展理念“可持续、可利用、可收益”的重要措施。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　澎湃新闻了解到，北京冬奥会计划改造8个2008年奥运场馆。国家游泳中心、国家体育馆、首都体育馆、首都滑冰馆、首体综合馆5个改造场馆已经全面开始改造。水立方通过在游泳池里架空结构实现转换，将原来的游泳池区域转换成冰壶场地，成为世界首个“冰水转换”的场馆。国家体育馆将原有玻璃幕墙改造成为仿冰玻璃砖充分引入自然采光，减少照明能耗。首都体育馆通过最新的声光电技术打造“最美的冰”，并与首都滑冰馆、首体综合馆和三个配套场馆整体改造为运动园区。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　五棵松体育中心目前已经完成6小时冰场和篮球场快速转换实验，达到国际一流水平，五棵松体育中心计划于2020年开始改造。承担冬奥会、冬残奥会四次开闭幕式的国家体育场“鸟巢”将在2021年最后进入改造。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　据介绍，改造后的场馆将实现体育场馆冬奥赛事和赛后冰雪运动普及的“双目标”；实现冬季和夏季运动可快速转换的“双轮驱动”运营模式；实现绿色标准和场馆功能“双提升”。奥运遗产可持续再利用的“中国方案”获得国际奥委会的一致好评。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/10191214yp2p.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); text-align: center; color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: navy; font-family: 楷体;">国家体育馆效果图。</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　31项配套设施快速推进</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　据北京市重大项目办介绍，纳入北京2022年冬奥会配套基础设施建设计划的31个项目中，综合管廊1项，交通设施11项，电力设施12项，水利设施4项，通讯设施3项。截至2018年底，已开工建设25项。其中，兴延高速、松闫路（改线段）、昌平500千伏主变增容工程三项已于2018年率先实现完工。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　通车后的兴延高速、延崇高速和京张高铁将把延庆、张家口纳入首都“一小时交通圈”。作为北京冬奥会延庆赛区基础性保障“生命线”的综合管廊，为延庆赛区造雪用水、生活用水、再生水、电力、电信及有线电视等硬件接入提供通道，目前已经实现隧道全线贯通。世界领先的张北柔性直流电网将张家口的风电、太阳能电力、抽蓄式电力等清洁电力送往北京，使延庆赛区成为“零碳赛区”。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　“双奥之城”建筑群</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　北京市重大项目办介绍，2019年，北京冬奥将进入承上启下、攻坚突破的关键之年。2019年计划新开工建设3项配套基础设施项目；计划建设完工19项，其中配套基础设施项目18项、其他配套项目1项。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　国家速滑馆22条“冰丝带”将在北京奥林匹克公园飞舞，与国家体育场“鸟巢”、国家游泳中心“水立方”、国家体育馆等共同组成世界首个“双奥之城”的标志性建筑群。</p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); color: rgb(64, 64, 64); font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, ？？？è？ˉé？…é？‘, STHeitiSC-Light, simsun, ？？？？？“, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 18px; box-sizing: border-box !important; word-wrap: break-word !important;">　　此外，延庆赛区综合管廊将具备通水、通电的条件，先于场馆建设实现完工，为冬奥会高山滑雪、雪车雪橇赛场提供保障；国家高山滑雪中心竞速赛道及配套附属设施的建设将达到测试赛要求，为2020年2月北京冬奥会首个测试赛顺利举行奠定坚实基础；延崇高速将建设完工；冬季运动管理中心综合训练馆项目“冰坛”将完工交付使用；国家雪车雪橇中心将实现主体结构完工，1.9公里的赛道将如“巨龙”呈现于山脚下。（记者 赵实）</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 澎湃新闻网</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7661");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","518");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

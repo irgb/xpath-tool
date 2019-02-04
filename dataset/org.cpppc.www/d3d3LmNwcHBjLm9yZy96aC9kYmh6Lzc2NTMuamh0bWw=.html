@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7653","0","attach");
+Cms.viewCount("","7653");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="javascript:void(0);" target="_blank">国际合作</a> > <a href="http://www.cpppc.org/zh/dbhz/index.jhtml" target="_blank">多边合作</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>“一带一路”倡议会降低多少贸易成本？</h2>
+			<span class="msg"><b>2019-01-16</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; white-space: normal; background-color: rgb(255, 255, 255); border-width: 0px; border-style: initial; border-color: currentcolor; word-wrap: break-word !important;"><section style="margin: 0px; padding: 20px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; border-width: 5px 1px 1px; border-style: solid; border-color: rgb(55, 74, 174);"><section style="margin: 0px; padding: 0px 0px 0px 5px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; height: auto; border-left: 2px solid rgb(55, 74, 174);"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(55, 74, 174); font-size: 1.1rem; line-height: normal; box-sizing: border-box !important; word-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 15px;">“一带一路”倡议会降低多少贸易成本？</span></strong></p></section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/16195515zp65.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px; color: rgb(2, 30, 170);">(摄影：杨爱军/世界银行）</span></p></section></section><p><section style="margin: 0px; padding: 15px; max-width: 100%; box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); text-align: center; font-size: 14px; word-wrap: break-word !important;"><section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; border-width: 0px; border-style: initial; border-color: currentcolor;"><section style="margin: 15px 0px 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; text-align: justify; color: rgb(120, 114, 114); line-height: 1.8; font-size: 15px;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">&nbsp;“一带一路”倡议是中国为加强跨洲际合作提出的一项发展战略。“一带一路”倡议包含的各种项目和活动内容非常广泛，包括政策协调、基础设施、贸易投资、金融和人际交流。但这项倡议的一个关键目标是通过新建和改善交通基础设施项目促进互联互通，降低贸易成本。</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">在我们最近的研究工作中，我们初步尝试把“一带一路”倡议对贸易成本的影响进行量化，通过两个步骤：</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><ul class=" list-paddingleft-2" style="padding: 0px 0px 0px 2.2em; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><li><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">第一步，我们采用地理数据与网络算法相结合计算出全世界191个国家1000个城市之间的运输时间。作为起点，我们采用全世界现有铁路和港口网络，估算每一对城市之间目前的货运时间。从这个参考点出发，我们运行一个“改善情景”，即，加入“一带一路“倡议相关的规划基础设施的交通运输网络（图1）。将”一带一路“倡议前后的情景进行比较，使我们得以量化交通基础设施新建和改善交通基础设施项目带来的货运时间变化。</span></p></li></ul><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px;">图 1. “一带一路”相关交通项目</span><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; line-height: normal; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/16195613z1r9.png" title="image.png" alt="image.png"/></p><p style="padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: normal; box-sizing: border-box !important; word-wrap: break-word !important; text-align: center;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px;">（<span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-family: &quot;Open Sans&quot;, sans-serif;">资料来源: Reed and Trubetskoy (2018).</span>）</span></p><ul class=" list-paddingleft-2" style="padding: 0px 0px 0px 2.2em; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><li><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">第二步，我们采用“时间价值“估算将货运时间缩短转化为贸易成本降低。不同的货物具有不同的时间价值。例如，新鲜水果之类货物容易腐烂，对时间非常敏感；有些原材料如微型芯片需要准时送达生产厂家。在这种情况下，我们需要计算每对国家和每个行业的”时间价值“。每对国家--行业的时间价值可以进一步汇总来按国家对贸易成本变化进行量化。</span></p></li></ul><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">采用这些方法，我们发现：</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><ul class=" list-paddingleft-2" style="padding: 0px 0px 0px 2.2em; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><li><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">&nbsp;“一带一路“倡议对”一带一路“经济体和非”一带一路“经济体都会缩短货运时间。对于全世界每对国家的货运时间平均缩短1.2%--2.5%。”一带一路“经济体获得的货运时间平均缩短在1.7%--3.2%之间。估算收益最大的是连接东亚及南亚的贸易路线和”一带一路“涵盖的交通走廊。例如，中国—中亚—西亚经济走廊沿线国家的货运时间将会因交通基础设施改善而缩短12%。&nbsp;</span></p></li><li><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">货运时间的缩短转化为贸易成本的大幅下降。我们的分析显示，实施所有“一带一路“交通基础设施项目将会使全世界降低贸易总成本1.1%--2.2%。对于”一带一路“经济体，贸易成本的变化将会在1.5%--2.8%之间。就货运时间而言，每对国家间的贸易成本收益有很大差异，东亚及太平洋和南亚是平均成本降幅最大的地区（图2）。同样，交通走廊沿线的贸易成本降幅较大。</span></p></li></ul><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px;">图2:&nbsp;</span><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px;">每个国家的贸易成本<span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">平均</span>降幅</span><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/16195657c3ah.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; line-height: normal; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 12px;">（资料来源: de Soyres, Mulabdic, Murray, Rocha and Ruta (2018)。注释: 对于每个国家/地区，所有目的地都按进口流量加权）</span><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">我们研究中值得强调的发现是“一带一路“倡议的系统性影响：该倡议对非”一带一路“经济体也能产生积极的溢出效应，原因是”一带一路“倡议将缩短货运时间，进而最终降低贸易成本，不仅是在”一带一路“国家之间，也有可能在非”一带一路“国家之间。例如，坦桑尼亚的巴加莫约港预计不仅会给坦桑尼亚带来效益，也会给该地区其他一些国家带来效益。因此，我们的分析显示，当”一带一路“交通项目全部实施后，澳大利亚与卢旺达之间的货运时间预计将缩短0.5%。同样，吉布提港的改善预计将使澳大利亚与埃塞俄比亚之间的货运时间缩短1.2%。</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">这是我们针对“一带一路“对货运时间和贸易成本的影响的初步探讨，还需要开展进一步的研究。但是我们研究中开发的新数据将有助于研究者更好地理解”一带一路“对经济增长、贸易、外资以及经济活动配置的影响。这些数据也有益于调研”一带一路“项目对非经济变量的系统性影响，比如空气污染或生物多样性，或者对于社会结果的影响，比如对于特定地理位置的某些群体贫困状况的改变。</span></p></section></section></section></section></p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 世界银行</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7653");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","526");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

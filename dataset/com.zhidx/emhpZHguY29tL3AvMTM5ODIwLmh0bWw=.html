@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>逛遍CES2019，发现这7大场景最赚钱！ - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="CES开展第一日，智东西暴走全馆，看到了这几大智能新趋势！">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/6691507300105_.pic_hd.jpg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="Lina" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/liulina" title="由Lina发布" rel="author">Lina</a></div>
+                <div class="author-posts">共发表391篇文章</div>
+                <div class="author-desc">关注AI芯片、5G、虚拟现实等前沿技术，智东西副主编兼AI报道负责人。邮箱：lln@zhidx.com</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag1">通用</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/vr" class="tag2">VR</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag2">华为</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag2">三星</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag1">百度</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                逛遍CES2019，发现这7大场景最赚钱！            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/specialtopic/2019ces" rel="category tag">2019CES美国消费电子展</a>  <a href="http://zhidx.com/p/category/specialtopic/2019ces/2019cestopic" rel="category tag">2019CES重磅报道</a>  <a href="http://zhidx.com/p/category/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" rel="category tag">人工智能</a>  <a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/intelligent-home" rel="category tag">智能家庭</a>  <a href="http://zhidx.com/p/category/mobiledevice" rel="category tag">移动终端</a>  <a href="http://zhidx.com/p/category/virtualreality" rel="category tag">虚拟现实</a></span><span class="time">2019/01/09 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2019/01/无标题15.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/无标题15.jpg 850w, http://oss.zhidx.com/uploads/2019/01/无标题15.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/无标题15.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong>智东西（公众号：zhidxcom）<br />
+文 | Lina</strong></p>
+<p>智东西1月8日拉斯维加斯报道，年度科技盛宴CES 2019今天正式开展，智东西赴美小分队分头暴走一整天，带来最新最全CES逛展报道。</p>
+<p>每年CES都是着全球科技消费电子的重要风向标，CES上展示的新技术、新产品、新趋势无不主导着全球科技产品在接下来一年的风势走向。从CES这扇窗口里，我们得以一窥最新的芯片、最前沿的技术、与最火爆的科技趋势，对有意出海的中国厂商来说有着重要的参考意义。</p>
+<p>在今年CES 2019上，我们看到了这七大新趋势：AI音箱成家居标配、语音AI无处不在、翻译机越来越火、5G近在眼前、8K遍地开花、XR有望复苏、中国企业参展数大幅下降。</p>
+<h2>一、语音大战下沉，AI音箱成家居标配</h2>
+<p>去年CES上令人津津乐道的一大话题当属亚马逊与谷歌的语音AI大战，双方都采用了极其激进的广告策略，你轻轨糊满Hey Google，我贴10米宽的Alexa大海报，掐得不亦乐乎。</p>
+<p><img class="alignnone size-full wp-image-139840" src="http://oss.zhidx.com/uploads/2019/01/WechatIMG1789.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/WechatIMG1789.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/WechatIMG1789.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/WechatIMG1789.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/WechatIMG1789.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲CES展馆外</p>
+<p>不过，今年这场掐架似乎已经告一段落。虽然谷歌仍在展馆外不少显眼的地方都铺有广告，但在CES的主展馆里没有看到（像去年那么）密集的Google Assistant或亚马逊Alexa广告投放。</p>
+<p><img class="alignnone size-full wp-image-139830" src="http://oss.zhidx.com/uploads/2019/01/无标题10.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题10.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题10.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题10.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题10.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲TCL的XESS品牌智能音箱</p>
+<p>但这并不代表语音AI已经不“火”了。恰恰相反，今年语音AI的竞争已经从谷歌和亚马逊这两大技术方案提供商下沉到各大品牌商的竞争。在CES 2019上三星、索尼、百度、甚至海尔、TCL等都陆续展出了自家最新的智能音箱，其中大部分重点突出其智能家居控制中枢的定位。</p>
+<p><img class="alignnone size-full wp-image-139834" src="http://oss.zhidx.com/uploads/2019/01/无标题13.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题13.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题13.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题13.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题13.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>而阿里巴巴人工智能实验室则直接在CES上推出了天猫精灵语音模组方案，这是一款直径约为5厘米的硬件，结合天猫精灵的软件AI能力，能够让厂商方便快捷地打造属于自己品牌的智能音箱，成为自家智能家居设备控制中枢。</p>
+<p>一方面是大厂们纷纷入局，另一方面却是中小厂家的连连退却。去年的CES场馆里我们还能看到众多中小企业（以来自深圳的硬件商居多）推出自家的智能音箱或音箱方案，今年这类产品则少了很多。</p>
+<p>除了将智能音箱作为控制中枢之外，各大厂商也在智能家居领域玩出了不少花样。比如三星的智能厕所（Smart Bathroom）方案就获得了不少参展观众的“强势围观”。</p>
+<p><img class="alignnone size-full wp-image-139833" src="http://oss.zhidx.com/uploads/2019/01/无标题7.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题7.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题7.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题7.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题7.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲海尔智能家居方案</p>
+<p>海尔这次则提前展出了一套以触碰屏为控制中枢的智能厨房方案，用户不仅可以通过它来控制厨房里的微波炉、洗碗机、冰箱等家电（通过Wi-Fi或蓝牙连接），同时也可以通过它来购买日用品、实时查阅菜谱、远程视频通话等。据海尔工作人员透露，这块控制中枢将在今年上半年上市，售价1199美元，众多配套家电也会在今年之类陆续上市。</p>
+<h2>二、AI硬件崛起：翻译机打头阵，AI硬件无处不在</h2>
+<p>在去年的CES上我们已经发现AI硬件大爆发，人工智能全面占领CES，AI电视、AI音箱、AI机器人等新品越来越多地涌现出来。</p>
+<p><img class="size-full wp-image-139821" src="http://oss.zhidx.com/uploads/2019/01/无标题18.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题18.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题18.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题18.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题18.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲IBM AI辩论冠军</p>
+<p>在今年我们更发现，以语音AI打头阵的各类智能硬件场景更加精细化、更加多元化了，越来越多传统的家电、耳机、可穿戴、机器人、儿童故事机等产品都开始加入AI技术。IBM还把前阵子打败人类辩论冠军的AI机器人也搬来了现场。</p>
+<p>出门问问今年CES上也推出了一款“智能交互屏TicKasa Show”，这是一款近似带屏智能音箱的设备，能够支持可定制化的语音交互、视频通话、生活助手等功能。</p>
+<p><img class="alignnone size-full wp-image-139828" src="http://oss.zhidx.com/uploads/2019/01/无标题12.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题12.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题12.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题12.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题12.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲优必选Walker</p>
+<p>优必选这次也推出了Walker机器人的升级版，与此前的版本相比，它带有双臂、更成熟、同时也更类人，能够双足行走，同时也能够根据人类的语音命令进行“端茶倒水”、开门、关灯等操作。</p>
+<p>而在众多细分场景中，有一个品类值得一提——翻译机。</p>
+<p><img class="alignnone size-full wp-image-139826" src="http://oss.zhidx.com/uploads/2019/01/无标题5.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题5.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题5.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题5.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题5.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲网易有道翻译机</p>
+<p>今年CES上的翻译机玩家比往年都要多，它们中包括讯飞翻译机、新款讯飞翻译耳机、准儿翻译机、网易有道翻译机、时空壶WT2翻译耳机等等，甚至TCL旗下的智能家居子品牌XESS也展示了自家的翻译机。</p>
+<p>除了翻译机之外，XESS还展示了智能音箱、智能电动牙刷、智能美容镜等一系列场景更新颖、更细分的智能产品。TCL的工作人员告诉智东西，这些产品在国内都还未正式上市，预计这两个月内会举办一场集中发布会。</p>
+<p><img class="alignnone size-full wp-image-139832" src="http://oss.zhidx.com/uploads/2019/01/无标题8.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题8.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题8.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题8.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题8.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲科大讯飞翻译耳机</p>
+<p>除了讯飞翻译机外，科大讯飞今天还带来了三款翻译耳机，左边两款带有扬声器/麦克风的产品还处在概念原型研发阶段，最右这款则是此前曾推出的讯飞/咪咕莫比斯智能翻译耳机（两个黑色的无线耳机，后面黑色的圆柱是其充电设备），需要配合手机APP使用。这款产品获得了2019 CES创新产品奖，不过价格略高，1499人民币。</p>
+<p>虽说目前翻译机的市场需求并不明朗当，但对于拥有AI语音技术的各大厂商而言，翻译设备无疑是一项极好的AI技术变现路径，只看能不能成功探出一条商业变现之路了。</p>
+<h2>三、牛刀小试，5G今年见！</h2>
+<p>2019年正值5G网络的关键节点，也被认为是5G超越炒作成为现实的一年。因此虽说一个月后的MWC 2019世界移动通信大会才是5G主场，但是这次在CES 2019上我们也看到了不少玩家亮出5G新品。</p>
+<p><img class="size-full wp-image-139823" src="http://oss.zhidx.com/uploads/2019/01/无标题2.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="600" height="800" srcset="http://oss.zhidx.com/uploads/2019/01/无标题2.jpeg 600w, http://oss.zhidx.com/uploads/2019/01/无标题2.jpeg?x-oss-process=image/resize,m_fill,w_225,h_300 225w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>▲上：5G网络设备，下：5G样品机</p>
+<p>首先，把“5G”logo铺满展厅的高通不仅拿出了和OPPO、vivo、小米分别打造的5G手机原型（内置了高通X50 5G基带），还在展台上方布置了真正能够传输5G网络的设备。（图片上方的白色小盒子）</p>
+<p>在三星的展台上，我们不仅看到了内置高通骁龙X50基带的三星5G手机原型，还看到了一系列家用、商用、公用的5G网络接收/分发装置。不过当智东西问该款5G手机什么时候上市时，三星工作人员则露出一副高深莫测的笑容，让我们“期待MWC”。</p>
+<p><img class="alignnone size-full wp-image-139699" src="http://oss.zhidx.com/uploads/2019/01/002-2.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/002-2.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/002-2.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/002-2.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>昨天，英特尔在展前发布了专门面向5G无线接入和边缘计算的网络系统芯片Snow Ridge（雪岭），采用10nm制程工艺。这款网络系统芯片旨在将英特尔的架构引入无线基站领域，并允许更多的计算功能分布在网络边缘，预计将在2019年下半年面世。</p>
+<p>而在夏普的展台上，我们还能看到5G+8K的结合，去年12月夏普在日本成功实验基于5G的视频传输，这次CES上展示的8K电视中播放的就是那段由5G传输的视频。</p>
+<p><img class="alignnone size-full wp-image-139825" src="http://oss.zhidx.com/uploads/2019/01/无标题4.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题4.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题4.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题4.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题4.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲TCL的8K电视</p>
+<p>8K其实同样也是今年的一大热点，索尼和TCL都在今年CES上发布了8K电视，索尼发布的是8K HDR液晶电视Z9G，TCL发布的则是采用量子点技术的QLED 8K电视X10。</p>
+<p><img class="alignnone size-full wp-image-139829" src="http://oss.zhidx.com/uploads/2019/01/无标题11.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="600" height="800" srcset="http://oss.zhidx.com/uploads/2019/01/无标题11.jpeg 600w, http://oss.zhidx.com/uploads/2019/01/无标题11.jpeg?x-oss-process=image/resize,m_fill,w_225,h_300 225w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>此外，三星、华为海思等展台上也都展示了8K电视，其中华为海思作为电视芯片提供方进行展示。据海思工作人员告诉智东西，目前国内几乎所有主流电视厂商的8K电视用的都是海思的芯片。</p>
+<h2>四、虚拟社交：XR的复苏之路？</h2>
+<p>虽说比不上2016年CES上VR/AR展区的火爆，但每年CES上VR/AR展区还是照例吸引了不少目光，今年同样如此。</p>
+<p><img class="alignnone size-full wp-image-139827" src="http://oss.zhidx.com/uploads/2019/01/无标题6.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题6.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题6.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题6.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题6.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲永远人山人海的VR/AR展区</p>
+<p>而且，随着AR技术在手机端的进一步落地，以及谷歌、苹果、华为等大厂对于手机AR技术的推广与普及，暗淡了一年多的XR技术有望跟随着这一波浪潮逐渐复苏。无论是Animoji、Memoji、还是人体骨骼识别等玩法的火爆都可见一斑。</p>
+<p>在这次CES上，HTC Vive、索尼SPVR、小派、nolo等我们眼熟的面孔同样没有缺席。</p>
+<p>高通高级总监及XR业务负责人Hugo Swart认为，XR最大的潜在市场就是线上的全虚拟社交，我们都将以一个数字化的3D形象出现在虚拟世界里。这也是为什么全球社交巨头Facebook愿意砸下重金收购Oculus部署VR的原因。</p>
+<p><img class="alignnone size-full wp-image-139837" src="http://oss.zhidx.com/uploads/2019/01/无标题16.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="592" srcset="http://oss.zhidx.com/uploads/2019/01/无标题16.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题16.jpeg?x-oss-process=image/resize,m_fill,w_405,h_300 405w, http://oss.zhidx.com/uploads/2019/01/无标题16.jpeg?x-oss-process=image/resize,m_fill,w_768,h_568 768w, http://oss.zhidx.com/uploads/2019/01/无标题16.jpeg?x-oss-process=image/resize,m_fill,w_220,h_162 220w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>国内视觉巨头虹软这次也带来了一系列基于手机视觉的新玩法，其中就包括了基于人体表情或骨骼识别的Avatar虚拟形象。比如当AI识别到视频中人物的跳舞动作时，能够自动生成随之舞动的虚拟形象。</p>
+<p>除此之外，虹软还带来了超级夜景、ToF 3D建模、单摄像头测距、单摄像头人像模式、以及车载司机疲劳监测等一系列基于视觉AI的产品。</p>
+<h2>五、美团/京东首次参展，中国玩家的潮涨潮落</h2>
+<p>此前据香港媒体报道，在CES 2019上中国企业的展位数量较去年减少了20%以上。从现场来看，确实有一部分此前参与的中国厂商今年没有来到现场。</p>
+<p>不过，有人辞官归故里，自然也有人星夜奔考场。在这次CES的众多展台上，我们也看到了不少新面孔，其中大家最为熟悉的当属美团和京东了。</p>
+<p><img class="alignnone size-full wp-image-139831" src="http://oss.zhidx.com/uploads/2019/01/无标题9.jpeg" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/无标题9.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/无标题9.jpeg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/无标题9.jpeg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/无标题9.jpeg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>京东这次相对比较低调，主要是智慧零售、无界零售、以及无人配送小车的静态展示。</p>
+<p>美团这次则在现场搭了一个供无人外卖小车运行的环形“车道”，并宣布与法国Valeo、美国英伟达、意大利意柯分别进行关键部件、AI计算、设计等方面的合作。</p>
+<p><img class="alignnone size-full wp-image-139822" src="http://oss.zhidx.com/uploads/2019/01/无标题.png" alt="逛遍CES2019，发现这7大场景最赚钱！" width="800" height="534" srcset="http://oss.zhidx.com/uploads/2019/01/无标题.png 800w, http://oss.zhidx.com/uploads/2019/01/无标题.png?x-oss-process=image/resize,m_fill,w_449,h_300 449w, http://oss.zhidx.com/uploads/2019/01/无标题.png?x-oss-process=image/resize,m_fill,w_768,h_513 768w, http://oss.zhidx.com/uploads/2019/01/无标题.png?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲美团无人配送车“魔袋”</p>
+<p>除了此前已经推出的“小袋”无人配送小车外，这次美团还拉来了两个新品，分别是一个大码的无人配送车“魔袋”，可以一次装下众多外卖，适合区域性交接送餐；以及一个一米左右的室内无人配送机器人“福袋”，它能够通过与电梯连接交互并自动识别目标送餐楼层，做到室内电梯上下送餐。</p>
+<p>根据香港媒体报道，虽然中国企业展位数量有所减少，但是在4500家参展商中，中国企业仍占1/4以上，仅次于美国（往年中国企业约占1/3），像是网易有道、彩云科技、肇观电子等中国企业也是头回参加CES。</p>
+<h2>结语：从CES之窗一窥全球科技走势</h2>
+<p>正如前文提到的，每年CES都是着全球科技消费电子的重要风向标，很多厂商都会将未发布的最新产品提前拿来展示，这些趋势都对有意出海的中国厂商来说非常值得参考。</p>
+<p>与去年相比，亚马逊与谷歌的掐架明面上已告一段落，但是AI语音的争夺战越来越火热，而5G、8K、XR等新技术也纷纷来到了爆发前夜，尤其是5G推广以后，收益的将不仅仅是手机厂商，IoT、自动驾驶、VR/AR等等场景都将开辟一片崭新的市场。</p>
+<p>在未来几天里，智东西与车东西CES小分队将继续在现场带来针对IoT、AI、自动驾驶相关的现场报道与解读，敬请期待。</p>
+<hr />
+
+<h2 style="text-align: center;"><strong>每日一头条</strong></h2>
+<p style="text-align: center;"><strong>趋势·深度·犀利·干货，最专业的行业解读</strong></p>
+<p style="text-align: center;">深喉爆料、投稿：guoren@zhidx.com</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139820'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139820">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="逛遍CES2019，发现这7大场景最赚钱！" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139820">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139820">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

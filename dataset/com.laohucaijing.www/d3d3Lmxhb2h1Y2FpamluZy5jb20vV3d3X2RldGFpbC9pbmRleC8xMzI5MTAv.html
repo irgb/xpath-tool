@@ -1,0 +1,634 @@
+<!-- 作者排名标签 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="Cache-Control" content="no-transform"> -->
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="老虎财经,资产管理公司,价值投资,股票分析师,阳光私募基金,互联网证券,理财知识,财经自媒体,财经新媒体,互联网金融媒体,金融知识问答,资产配置,投资,基本面分析,投资知识,股事,白小生,财经短视频,股事小课堂" >
+	<meta name="description" content="环球老虎财经，是一个原创金融投资分析平台，关注A股的价值投资趋势、金融机构交易行为以及金融市场的波动要素等。网站汇聚众多金融行业精英，共同构建最有价值的投资分析体系，旨在助力用户战胜市场。" >
+	<title>环球老虎财经 | 首页</title>
+	<link rel="shortcut icon" type="http://images.laohucaijing.com/new_www/image/x-icon" href="http://images.laohucaijing.com/images/favicon-1.ico" media="screen" />
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/swiper.min.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/base.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/index.css?v=2018086">
+	<script src="http://images.laohucaijing.com/new_www/js/jquery-2.2.3.min.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72690f86452e67e2d55534f3bc1cd4a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+
+	</head>
+<body>
+<header>
+	<div class="down">
+		<img src="http://images.laohucaijing.com/new_www/images/down.png" id="wexin" alt="下拉">
+		<a class="wexin_code"><img src="http://images.laohucaijing.com/new_www/images/ewm.jpg"  alt="二维码"><br>环球老虎财经</a>
+	</div>
+	<div class="wrap">
+		<nav>
+			<a href="http://www.laohucaijing.com/" class="logo"></a>
+			<ul>
+				<li>
+					<a class="index" href="http://www.laohucaijing.com/">首页</a>
+				</li>
+				<li>
+					<a href="/live">快讯</a>
+				</li>
+				<li>
+					<a href="/original_index">文章</a>
+				</li>
+				<li>
+					<a href="/author_index">热门作者</a>
+				</li>
+
+				<!--<li>
+					<a href="/video_index">股事视频</a>
+				</li>-->
+				<!--<li>
+					<a href="/Www_partner">联系我们</a>
+				</li>-->
+			</ul>
+		</nav>
+		<div class="navRight">
+			<ul>
+				<li>
+					<div class="searBox">
+						<label><i></i><input type="text" class="searInput" placeholder="关键字/证券代码" id="searchKeywords" onfocus="this.placeholder=''" onblur="this.placeholder='关键字/证券代码 '"></label>
+						<span id="searId" onclick="search()"></span>
+					</div>
+				</li>
+				<li>
+					<a href="/Www_about">关于我们</a>
+				</li>
+				<li>
+					<a class="work">合作</a>
+				</li>
+				<li>
+					<a class="report">寻求报道</a>
+				</li>
+				<li>
+					<a class="comp">举报或投诉</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="shadow"></div>
+<div class="partner animated" style="height: 310px;margin-top: -180px">
+	<div>
+		<p>
+			<span>商务合作   请您联系</span>
+			<span>胡坤云（15538185779）</span>
+			<span>WX：hukunyun335</span>
+			<span>huky@laohucaijing.com</span>
+		</p>
+		<!-- <p>
+			<span>媒体合作 请您联系</span>
+			<span>Wilbur (15988172629)</span>
+			<span>WX:281177407</span>
+			<span>yangwb@laohucaijing.com</span>
+		</p> -->
+		<button class="know">我知道了</button>
+	</div>
+</div>
+<div class="reWarp animated" style="height: 365px">
+	<div class="reportDiv">
+		<!-- <p>扫描二维码，添加环球老虎「寻求报道小编」为好友</p>
+		<img src="http://images.laohucaijing.com/new_www/images/bd.jpg" alt="" /> -->
+		<p class="rep">满足以下条件，获得更高通过率：</p>
+		<span>1、贵公司为A股、港股、美股上市公司</span>
+		<span>2、贵公司正在进行并购重组或战略调整</span>
+		<span>3、贵公司正在发生重大融资</span>
+		<span>4、贵公司的产品具有行业性的重大意义</span>
+		<span>联系电话：13681646214（同微信）</span>
+		<button>我知道了</button>
+	</div>
+</div>
+<div class="Complaint animated">
+	<div>
+		<span>信息举报或投诉可联系:</span> <br/>
+		<span>tousu@laohucaijing.com </span>
+		<button>我知道了</button>
+	</div>
+</div>
+<script>
+
+var urlstr = location.href;
+var urlstatus = false;
+console.log(urlstr)
+$("header ul li a").each(function() {
+	if(urlstr=="http://www.laohucaijing.com/"){
+		$(".index").addClass('active');
+	}else{
+		$(".index").removeClass('active');
+	}
+    if((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+		$(this).addClass('active');
+		urlstatus = true;
+	} else {
+		$(this).removeClass('active');
+	}
+});
+$("input").focus(function(){
+
+})
+$('#searchKeywords').bind('keypress', function(event) {
+	if(event.keyCode == "13") {
+		search();
+		return false;
+	}
+})
+$('.work').click(function(){
+	$('.partner').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.know').click(function(){
+	$('.partner,.shadow').hide();
+})
+$('.report').click(function(){
+	$('.reWarp').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.reWarp button').click(function(){
+	$('.reWarp,.shadow').hide();
+})
+$('.comp').click(function(){
+	$('.Complaint').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.Complaint button').click(function(){
+	$('.Complaint,.shadow').hide();
+})
+function search() {
+	var key = $('.searInput').val();
+	location.href = "/www_search/index/?keyword=" + key;
+}
+</script>
+<style type="text/css">
+	iframe{
+		width: 100%;
+    	height: 490px;
+	}
+	.articalRight p{
+		color: #555;
+	}
+	blockquote{
+		padding:16px 20px;
+		font-size: 12px;
+		background: #eee;
+		line-height: 1.8;
+		border-left: 9px solid #05a6f2;
+		margin-bottom: 20px; 
+	}
+	blockquote strong{
+		font-style: italic;
+	}
+	.articalRight blockquote p{
+		font-size: 14px;
+		line-height: 1.8; 
+		font-style: italic;
+		color: #333;
+	}
+	.jiathis_style_32x32 .jtico_qzone{
+		background-position: 0;
+	}	
+	.jiathis_style_32x32 .jtico {
+	    padding-left: 0!important;
+	    background: none!important;
+	    cursor: pointer;
+	    padding-bottom: 6px;
+	}
+	
+	.jiathis_style_32x32 a {
+		height: 38px!important;
+	    display: inline-block;
+	    text-indent: 34px;
+	    width: 100%;
+	    color: #4a4a4a;
+	    font-size: 14px;
+	    float: left;
+	    margin: 0;
+	    margin-top: 20px;
+	    background: none;
+	    padding-left: 0;
+	}
+	.jiathis_button_tsina .jtico_tsina {
+	    background: url(http://images.laohucaijing.com/new_www/images/wb.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	.jiathis_button_qzone .jtico_qzone {
+	    background: url(http://images.laohucaijing.com/new_www/images/qq.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	#test table td span[style],#test p span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span[style],#test span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span span[style],#test span span[style]{ font-style: normal;font-size:16px!important;font-family: 'Microsoft YaHei' !important; }
+    #test span font[size],#test font[size]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+</style>
+<div class="wrap clearfix" style="position: relative;padding-bottom: 50px;">
+	<div class="main fl mt20 clearfix bgwhite boxSizing">
+		<div class="fl articalLeft">
+            <div class="bdsharebuttonbox">
+            	<div class="fiex">
+            		<div class="jiathis_style_32x32">
+	            		<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_qzone"></a>
+					</div>
+					<span class="sp3 mt20"><a class="wechat" data-cmd="weixin"></a></span>
+				</div>
+            </div>
+		</div>
+		<div class="fr articalRight">
+			<h1>三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</h1>
+			<div class="clearfix mt20 title">
+				<div class="fl artInfo1">
+					<a href="/www_author_detail/index/13797">环球老虎财经  陈夏君</a><span><i style="margin-right:10px"><img src="http://images.laohucaijing.com/new_www/images/d_hot.png" alt="">41853</i>01/02 17:09</span>
+				</div>	
+			</div>
+			<div class="artDeta">
+				<img class="tip1" src="http://images.laohucaijing.com/new_www/images/yh_01.jpg" alt=""/>
+			 	<!--<img src="http://oss.laohucaijing.com//upload/images/201812/20181229182744196.jpg" width="680"  class="mt20" alt="比特币为什么会“现象级”暴涨？">-->
+			 	<p>近日，昔日白马股三安光电连续两个交易日暴跌，市值蒸发近86亿元。2017年7月，林志强接班其父林秀成担任三安光电董事长，上任以来，上市公司股价下跌近四成。现今，三安光电再度暴跌，如何度过难关，正在考验着“厦门最有钱的富二代”林志强。                      </p>
+				<img class="tip2" src="http://images.laohucaijing.com/new_www/images/yh_02.jpg" alt=""/>
+			</div>
+			<p class="Label"><a>标签：</a>
+				<span>
+							<em><i class="act"></i><i class="test" title="三安光电"><a href="/www_search/index/?keyword=三安光电">三安光电</a></i></em>
+							<em><i class="act"></i><i class="test" title="上市公司"><a href="/www_search/index/?keyword=上市公司">上市公司</a></i></em>
+							<em><i class="act"></i><i class="test" title="下跌"><a href="/www_search/index/?keyword=下跌">下跌</a></i></em>
+						</span>	
+			</p>
+			<!-- 文章引用 -->
+			<!-- 文章正文 -->
+			<div class="text mt20" id="test">
+				<p>继上个交易日大跌9.02%以后，12月28日，三安光电收报11.31元，再度暴跌7.30%。从成交量上看，两日分别成交8.53亿元和10.28亿元，相比之前的平均量能翻了数倍，不排除是有机构出逃所致。</p></br>
+
+<p>12月26日收盘，三安光电仍有546.86亿市值，经过两个交易日的暴跌后，截至12月28日收盘，三安光电市值仅为461.27亿元，两个交易日蒸发了85.59亿元。</p></br>
+
+<p>三安光电董事长为林志强，其父林秀成是三安光电实控人，同时也是厦门首富。因此，林志强也凭借&ldquo;厦门最有钱的富二代&rdquo;为外界熟知。2017年7月，林志强子继父业，接班林秀成担任三安光电董事长。其接手三安光电以来，上市公司股价跌了近四成，面临上市公司此番暴跌，如何重整旗鼓成为富二代林志强眼前的难题。</p></br>
+
+<p>回顾2018年，作为LED行业的龙头企业，市场公认的白马股，三安光电今年的走势与其传统形象大为不同，全年累计跌幅已达55%。</p></br>
+
+<p>从业绩看，今年三季度公司实现营业总收入63.93亿元，同比增长1.76%，归属净利润25.94亿元，同比增长9.09%。虽受行业整体影响，增速放缓，但是其营收与净利在行业中依旧遥遥领先，龙头地位难以撼动。究竟是什么导致了惨跌？</p></br>
+
+<p><strong>回购难阻股价腰斩</strong></p></br>
+
+<p>事实上，如果把第三季度的业绩单独拿出来看，其下跌态势就已经开始凸显了。公司单三季度实现收入22.20亿，同比增长为0.19%，环比下降0.37%，实现归母净利润7.41亿，同比下降14.14%，环比下降16.27%。</p></br>
+
+<p>蹊跷的是，就在三季报公布之前的一周里，三安光电出现了3笔大宗交易，总成交额接近1.5亿元，折价率由3.03%至8.61%不等。</p></br>
+
+<p>其中，在10月23日和10月26日出现的两笔合计逾1.4亿的大宗交易里，买卖营业部是同一家，都是中国国际金融股份有限公司厦门莲岳路证券营业部，而三安光电的所在地也是厦门。</p></br>
+
+<p>随着股价了一路下跌，三安光电祸不单行。12月，有媒体对公司远高于同行的销售净利润提出了质疑，并列举大量证据暗示三安光电与大客户之间或存在隐秘关系，同时发现公司存在一笔逾31亿元的采购差额。对此，<strong>三安光电仅表示，该差额&ldquo;是由于披露口径不一致导致&rdquo;。</strong></p></br>
+
+<p>之后，公司股价再度开启新一轮下挫，12月单月跌幅超20%，这也是全年月跌幅之最。</p></br>
+
+<p>股价的持续低迷，也让三安光电的回购显得苍白无力。10月12日，公司通过集中竞价交易方式首次回购了公司股份，截止12 月 7 日，公司回购股份期满，通过集中竞价交易方式累计回购股份 24,494,328 股，成交最高价为 14.81 元/股，成交最低价为 13.45 元/股，支付总金额为人民币3.5亿元。</p></br>
+
+<p>据悉，本次回购的股份计划用于公司员工持股计划或股权激励计划，若公司未能实施员工持股计划或 股权激励计划，公司将依法对回购的股份予以注销。</p></br>
+
+<p><strong>存货减值风险悬顶？</strong></p></br>
+
+<p>近十年来，三安光电的存货金额有逐年攀升的趋势，相比于2011至2016年的平稳表现，2017和2018年前三季度存货猛增。</p></br>
+
+<p><img src="http://oss.laohucaijing.com/UserFiles/Image/201812/20181229182358324.png" /></p></br>
+
+<p>而从库存周转率来看， 2018年相比2017年的周转率更低。</p></br>
+
+<p><img src="http://oss.laohucaijing.com/UserFiles/Image/201812/20181229182422698.png" /></p></br>
+
+<p>受宏观经济影响，今年LED 芯片出现供大于求的局面，随着价格竞争的加剧，产品价格一路下跌，导致企业库存高企，面临去库存的压力。</p></br>
+
+<p>近日，中金公司下调了三安光电评级至中性，下调目标价40％至12.00元（目前股价为11.31元），并下调公司2019全年净利润至34亿。分析认为，受房地产、汽车、消费电子等下游需求放缓，及地方政府补贴减少影响，明年 LED相关终端需求或将继续恶化，对上游LED芯片厂商盈利压力增大。</p></br>
+
+<p>中金公司还在表研报指出，从三季度业绩来看，三安光电的存货和存货周转天数分别达到26亿元和189天。<strong>未来如果需求没有大的回升，公司可能面临存货减值导致利润下降等问题。</strong></p></br>
+
+<p>不过，关于中金公司研报提到的存货减值问题，三安光电表示，公司产品从原材料到成品，生产周期较长，加上产能扩张，原材料、半成品、在产品都会相应增加，有合理的库存是正常。公司会计处理严格按照会计准则和相关法律法规执行。</p></br>
+
+<p><strong>厦门最有钱的&ldquo;富二代&rdquo; 如何应对？</strong></p></br>
+
+<p>其实， 所谓的&ldquo;库存危机&rdquo;对于三安光电来说也不是新鲜事了。2011年三季度时，三安光电实现营收净利双增，但是库存也在一路猛涨，从2010年四季度的3.1亿，增至2011年三季度的9.33亿。</p></br>
+
+<p>同年11月，三安光电发布公告，由于个人原因，林科闯申请辞去公司董事、总经理职务及董事会下属委员会相关职务，由林志强兼任总经理一职，并替补林科闯担任公司董事会下属委员会相关职务。</p></br>
+
+<p>公开资料显示，三安光电实控人为林秀成，也是公司的创始人。<strong>其育有两子，哥哥林志强与弟弟林志东。而林科闯是林秀成的女婿，林志强的妹夫。</strong>从2007年11月借壳上市后，林科闯就是公司董事、总经理，其年轻有为，获得过MBA，为林秀成家族中的重要成员。</p></br>
+
+<p>而大儿子林志强从1996年就在三安任要职，之前也持有三安集团一定的股份，后来顺理成章成为总经理。外界普遍认为，林志强的接班是林秀成的意思。而从三安集团的持股情况看，林秀成持股76.79%，林志强持股15.64%，并没有其他个人股东，可见林秀成对其的重视程度。</p></br>
+
+<p>但是三安光电面临的不仅是高企的库存，还有销售的困境，不过林志强表现不错，2012年公司净利润出现了下滑，之后便重回上升轨道。</p></br>
+
+<p>2017年7月，林志强担任公司第九届董事会董事长职务，这意味着原董事长林秀成将不再担任三安光电董事长一职。</p></br>
+
+<p>公开资料显示，&ldquo;2012少壮派富豪榜&rdquo;上，林志强以21亿元身家排名第23位，成为厦门最有钱的&ldquo;富二代&rdquo;。 2016年胡润百富榜，林秀成、林志强父子以240亿财富排名第77位。2018年10月，林秀成、林志强父子以330亿元人民币财富位居2018年胡润百富榜第79位。</p></br>
+
+<p>面对LED日趋残酷的竞争环境，三安光电正开始朝着化合物半导体迈进。2014年5月，三安光电投资30亿元成立的三安集成，主要从事化合物半导体集成电路业务，已布局完成6寸的砷化镓和氮化镓部分产线。如今已成为化合物半导体龙头。</p></br>
+
+<p>不过对于以化合物半导体为载体的新兴模块的发展，林科闯称：今后这三大模块的规模随随便便就可以成倍地翻，但是目前化合物半导体的发展还处于初级阶段，营收占比很小。</p></br>
+
+<p>数据显示，2018上半年，三安光电化合物半导体集成电路公司实现营收规模仅0.67亿元。</p></br>
+			</div>
+			
+			
+						
+						<p style="width:100%;float:left;color: #999;margin-top: 30px;font-size: 14px;line-height: 1.5;padding: 15px;border: 1px solid #efefef;border-radius: 4px;box-sizing: border-box;">本文系环球老虎财经原创文章，未经授权严禁转载或镜像，违者必究。</p>
+						
+										
+			<div class="related-articles">
+				<h4>您可能感兴趣的文章</h4>
+				<ul>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132912" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229195845472.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼...</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132925" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102140148133.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132910" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229182744196.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132922" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102135046173.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132916" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102111621940.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132914" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102110216897.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+						</p>
+					</li>
+									</ul>
+			</div>
+		</div>
+		<div class="sTop" style="position: fixed;width: 59px;left: auto; bottom:200px;margin-left: -10px; display: none;">
+			<img src="http://test.image.laohucaijing.com/new_www/images/top.png" alt="">
+		</div>
+	</div>
+	<div class="aside fr">
+		<div class="hot_recom">
+			<p class="type"><span>热门推荐</span></p>
+			<a href="/www_detail/index/132912"><img src="http://oss.laohucaijing.com/upload/images/201812/20181229195845472.jpg" alt=""></a>
+			<h2><a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼减持</a></h2>
+			<p class="name"><a href="/www_author_detail/index/13594">环球老虎财经 韩理</a><span>01/02 17:09</span></p>
+		</div>
+		<!---->
+		<div class="edit_recom">
+			<p class="type"><span>编辑推荐</span></p>
+			<ul>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+					<p>01/02 17:10</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+					<p>01/02 17:09</p>
+					</li>
+							</ul>
+		</div>
+	</div>
+</div>
+<!-- JiaThis Button BEGIN -->
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8">
+</script>
+<!-- JiaThis Button END -->
+<script type="text/javascript" >
+function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                 window.location.href =  "http://m.laohucaijing.com"+'/home/detail/'+"132910"  ;
+            }
+        }
+
+        browserRedirect();
+
+
+var jiathis_config={
+	pic:"http://oss.laohucaijing.com//upload/images/201812/20181229182744196.jpg"
+}
+</script>
+<!-- JiaThis Button END -->
+
+<script>
+	$(function(){
+
+		$("#test p font").removeAttr("face");
+		$("#test p span").removeAttr("style");
+		$("#test p font").css({"font-size:":'16px',"font-family":'Microsoft YaHei'});
+		$('blockquote').find('br:last').remove();
+        var Test1 = $('.artDeta p').text();
+        var test = $('.Label .test').text();
+        	test = $.trim(test)
+       var Img = $('.artImg img').attr('src');
+        if (Test1=='') {
+            $('.artDeta').hide();
+        }
+        if (test=='') {
+            $('.Label').hide();
+        }
+		$(".text img").css({
+            "height":"auto",
+            "float":"none",
+        })
+        $(".text img").each(function(){ 
+        var Width = $(this).attr("style").indexOf("width"); 
+        if(Width != (-1)){
+             $(this).wrapAll("<div style='text-align:center'></div>");
+        }else{$(this).css({"width":"100%"});} 
+        }); 
+	})
+
+	$(".sTop").click(function () {
+	    var speed=300;
+	    $('body,html').animate({ scrollTop: 0 }, speed);
+	    return false;
+	});
+	var aHeight=$(".bdsharebuttonbox").offset().top;
+	var bHeight=$(".edit_recom").offset().top;
+	var cHeight=$(".related-articles").offset().top;
+	$(window).scroll(function(){
+	  	
+		var scroH = $(this).scrollTop();
+	
+	    if(scroH>=aHeight){
+	   		$(".bdsharebuttonbox .fiex").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<aHeight){
+    		$(".bdsharebuttonbox .fiex").css({'position':'relative'});
+    	}
+    	if(scroH>=bHeight+10){
+	   		$(".edit_recom").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<bHeight){
+    		$(".edit_recom").css({'position':'relative'});
+    	}
+    	if (cHeight >= $(window).scrollTop() && cHeight < ($(window).scrollTop()+$(window).height())) {
+			$(".related-articles .img-box a").addClass('fadeIn')
+    	}
+    	
+	})
+	
+	var video_url = $("iframe").attr('src');
+	if(video_url!= undefined){
+		var urlId=(video_url.split('page/')[1]).split('.html')[0];
+		var Url="https://v.qq.com/iframe/player.html?vid="+urlId+"&tiny=0&auto=0"
+		$('iframe').attr('src',Url);
+	}
+	
+
+	$(window).scroll(function(){
+		var wHeight=$(window).height();
+		var top = $(document).scrollTop();
+		if(top>wHeight){
+			$(".sTop").show();
+		}
+		else{
+			$(".sTop").hide();
+		}
+
+	})
+
+
+</script>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : "三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？",	
+			bdDesc : "近日，昔日白马股三安光电连续两个交易日暴跌，市值蒸发近86亿元。2017年7月，林志强接班其父林秀成担任三安光电董事长，上任以来，上市公司股价下跌近四成。现今，三安光电再度暴跌，如何度过难关，正在考验着“厦门最有钱的富二代”林志强。                      ",	
+			bdUrl : "http://m.laohucaijing.com"+'/home/detail/'+"132910"	
+		},
+		share : [{
+			"bdSize" : 16
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<footer style="background-size:cover">
+    <div class="wrap">
+        <img alt="老虎财经" src="http://images.laohucaijing.com/new_www/images/ewm.jpg" class="fl code" width="92" height="92" style="float: right;margin-left:0;margin-right:51px">
+        <div class="fl footRight" style="width:1040px">
+            <div class="fl aboutLink" style="margin-top: 70px">
+                <span class="fl">友情链接：</span>
+                <ul class="clearfix" style="float: left;">
+                
+                                    
+                    <li><a rel="" href="http://www.pedaily.cn" target="_blank">投资界</a></li>
+                                    
+                    <li><a rel="" href="http://finance.ifeng.com" target="_blank">凤凰网财经</a></li>
+                                    
+                    <li><a rel="" href="http://news.cnfol.com/" target="_blank">中金在线</a></li>
+                                    
+                    <li><a rel="" href="http://money.stockstar.com/" target="_blank">证券之星</a></li>
+                                    
+                    <li><a rel="" href="http://www.gupiao8.com/" target="_blank">股票吧</a></li>
+                                    
+                    <li><a rel="" href="http://www.cir.cn/" target="_blank">中国产业调研网</a></li>
+                                    
+                    <li><a rel="" href="http://www.jpm.cn" target="_blank">金评媒</a></li>
+                                    
+                    <li><a rel="" href="http://www.wangdaidongfang.com" target="_blank">网贷东方</a></li>
+                                    
+                    <li><a rel="" href="http://www.pedata.cn/" target="_blank">私募通</a></li>
+                    
+                </ul>
+                <span style="float: left;">信息举报或投诉可联系: 021-80316509</span>
+            </div>
+            <div class="copyright">
+              Copyright © 2012 - 2015 Laohucaijing.com <i>环球老虎财经</i>版权所有 沪ICP备12011498号
+              <span style="margin-left: 15px;"><img style="margin-right:5px;" src="http://images.laohucaijing.com/newimages/hao.png">沪公网安备 31011002001247号 </span>
+              <a style="color: #fff;margin-left: 22px" href="/Www_protocol">免责声明</a>
+              <a href="http://www.shjbzx.cn/ " target="_blank"><img style="width: 140px;margin-top: -37px;margin-left: 111px;" src="http://images.laohucaijing.com/new_www/images/jb.png" alt=""></a>
+             </div>
+        </div>
+    </div>
+</footer>
+<script>
+    //头部微信
+    var timerc;
+    //鼠标移入微信，微信二维码显示
+    $("#wexin").mouseenter(function(){
+        clearTimeout(timerc);
+        $(".wexin_code").animate({"width":'150px',"opacity":'1'},500);
+    })
+    //鼠标移出微信，
+    $("#wexin").mouseleave(function(){
+        timerc=setTimeout(function(){
+            //半秒钟延迟看鼠标是否在悬浮框中
+            if(!$(".wexin_code").hasClass("hover")){//不在悬浮框
+                $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+            }
+            else{
+                $(".wexin_code").fadeIn();
+            }
+        },500);
+    })
+    // 鼠标移入微信二维码
+    $(".wexin_code").mouseenter(function(){
+        $(".wexin_code").addClass("hover");
+    })
+    // 鼠标移出微信二维码
+    $(".wexin_code").mouseleave(function(){
+        $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+        $(".wexin_code").removeClass("hover");
+    })
+</script>
+</body>

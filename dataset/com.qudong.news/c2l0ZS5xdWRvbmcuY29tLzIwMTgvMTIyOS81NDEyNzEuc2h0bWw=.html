@@ -1,0 +1,1920 @@
+<!DOCTYPE html><head>
+<meta charset="UTF-8">
+<title>年关将至，一起近T级别DDoS攻击来袭_驱动中国</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="年关将至，一起近T级别DDoS攻击来袭" />
+    <link rel="stylesheet" type="text/css" href="//img.qudong.com/ncss/news.css">
+    <script type="text/javascript" src="//img.qudong.com/ncss/jquery.min.js"></script>
+    <script type="text/javascript" src="//img.qudong.com/ncss/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="//img.qudong.com/ncss/jquery.flexText.js"></script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1536767712402430"></script>
+	<!--[if lt IE 9 ]>
+		<script type="text/javascript" src="http://img.qudong.com/templates/qudong/js/helper/modernizr.js"></script>
+	<![endif]-->
+    <script type="text/javascript" src="//img.qudong.com//js/config.js"></script>
+    <script type="text/javascript" src="//img.qudong.com/templates/qudong/js/cmstop-common.js"></script>
+    <script src="//tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        var contentid = '541271';// 文章ID
+        var title = "\u5e74\u5173\u5c06\u81f3\uff0c\u4e00\u8d77\u8fd1T\u7ea7\u522bDDoS\u653b\u51fb\u6765\u88ad";//文章标题
+        var topicid = '604735';// 评论主题
+        var context = '';//全文内容缓存
+        var content = '';//第一页内容缓存
+        var _IMG_URL = 'http://img.qudong.com/templates/qudong';
+    </script>
+    <script type="text/javascript" src="//img.qudong.com/templates/qudong/js/cmstop-imagezoom.js"></script>
+    <script>
+    $(function(){
+        $('.js-overlay').mouseenter(function() {
+            overlayPlay($(this));
+        }).mouseleave(function(){
+            var timeSpan = $('.time',$(this));
+            timeSpan.css({'background-color':timeSpan.attr('data-bgc')});
+            $(this).find('.overlay').fadeOut('fast');
+        });
+        if ($('.article-pictures').length > 0) {
+            // 图组调用
+            gallery({
+                icontainer : "gal_scrl_ct",
+                idrag : "bar",
+                panel : "thumb",
+                content : "gal_scrl_main",  
+                direction : "left",
+                acceleration : 5,
+                sliderAcc : 1
+            });
+        }
+        //$.getJSON(APP_URL+'?app=system&controller=content&action=stat&jsoncallback=?&contentid='+contentid, function(data){
+        $.getJSON('//app.qudong.com/?app=system&controller=content&action=stat&jsoncallback=?&contentid='+contentid, function(data){
+        	if(data.pv > 10000){
+        		var pv = data.pv / 10000;
+            	$('.qudongpv').html(pv.toFixed(2)+'万');
+        	}else{
+        		$('.qudongpv').html(data.pv);
+        	}
+        });
+    });
+    </script>
+<script type="text/javascript" src="//img.qudong.com/js/fet.js"></script>
+<script type="text/javascript" src="//img.qudong.com/js/repos.js"></script>
+<script type="text/javascript">fet.setAlias({IMG_URL: "//img.qudong.com/"})</script>
+     <script>
+        $().ready(function(){
+            $(".tab-menu li").mouseover(function(){
+                //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+                var _index = $(this).index();
+                //让内容框的第 _index 个显示出来，其他的被隐藏
+                $(".tab-box>div").eq(_index).show().siblings().hide();
+                //改变选中时候的选项框的样式，移除其他几个选项的样式
+                $(this).addClass("on").siblings().removeClass("on");
+            });
+        });
+    </script>
+ <style type="text/css">
+     body{background: #f0f0f0}	.dujia{border: 1px solid #fb5261;padding:0 10px;color: #fb5261;display: inline-block;margin-left: 20px;line-height: 22px;border-radius: 12px;}
+	.dtop{width: 100%; height:26px; background: #446fb2; filter:alpha(opacity:100); opacity:1; }
+	.guanzhu{border: 1px solid #6aa3ff;padding:1px 10px;color: #FFFFFF ;display: inline-block;margin-left: 20px;line-height: 22px;border-radius: 12px; background-color:#6aa3ff; margin-left:15px;}
+</style>   
+</head>
+<body>
+	<div class="dtop">
+		<div class="topuser" id="top_panl">
+        <span>旗下平台:
+        <a href="http://www.hvtong.com.cn/" target="_blank">媒体+</a>
+        <a href="http://hao.qudong.com/" target="_blank">驱动号</a>
+        <a href="http://www.aliqiche.com/" target="_blank">阿里汽车</a>
+        <a href="http://www.veryol.com/" target="_blank">非常在线</a>
+        </span></div>
+	</div>
+<div class="top auto">
+    <div style="width:100%; height:80px; background-color:#446fb2;">
+        <div class="newstop">
+        <a href="http://www.hvtong.cn/service/yundj.html" target="_blank" >
+ <img style="padding-top:8px;"  src="//upload.qudong.com/2018/1119/1542615759865.jpg" width="1200" height="60"/>
+</a>
+
+        </div>
+    </div>
+    <div class="nav auto">
+        <div class="navbox w1200 auto">
+            <div class="navcen fl auto">
+                <a class="alogo" href="//www.qudong.com"><img src="//img.qudong.com/icon/logo.png"/></a>
+                <a href="//news.qudong.com/" data-url="//news.qudong.com">新闻</a>
+                <a href="//mobile.qudong.com/" data-url="//mobile.qudong.com">手机</a>
+                <a href="//www.qudong.com/jiadian/" data-url="//www.qudong.com/jiadian">家电</a>
+                <a href="//digi.qudong.com/" data-url="//digi.qudong.com">数码</a>
+                <a href="//www.qudong.com/robot" data-url="//www.qudong.com/robot">机器人</a>
+                <a href="//news.qudong.com/cloud/" data-url="//news.qudong.com/cloud/">云计算</a>
+                <a href="//news.qudong.com/ec/" data-url="//news.qudong.com/ec/">电商</a>
+                <a href="//v.qudong.com" data-url="//v.qudong.com">视频</a>
+                <a href="//game.qudong.com" data-url="//game.qudong.com">游戏</a>
+                <a href="//site.qudong.com/" data-url="//site.qudong.com/">互联网+</a>
+                <a href="//www.qudong.com/ebikes" data-url="//www.qudong.com/ebikes">共享单车</a>
+                <a href="//www.qudong.com/vr" data-url="//www.qudong.com/vr">VR</a>
+                <a href="//www.qudong.com/ai" data-url="//www.qudong.com/ai">AI+</a>
+                <a href="//www.qudong.com/blockchain/" data-url="//www.qudong.com/blockchain/">区块链</a>
+                <a class="item-32" href="//zhibo.qudong.com" data-url="//zhibo.qudong.com">直播</a>
+                <a class="item-32" href="//hao.qudong.com/App/down/" data-url="//hao.qudong.com/App/down/">APP下载</a>
+            </div>
+            <div class="navsearch fr auto">
+                <form action="//app.qudong.com/" id="search" name="search" method="get" target="_blank">
+                    <input type="hidden" name="app" value="search">
+                    <input type="hidden" name="controller" value="index">
+                    <input type="hidden" name="action" value="search">
+                    <input type="text" id="wd" name="wd" value="" class="searchtext">
+                    <input type="submit" name="" value="" class="searchsub">
+                </form> 
+            </div>
+        </div>
+    </div>
+<!--文章内容stat-->    
+    <div class="news">
+        <div class="wenzhang wenzhang1">
+            <h1>年关将至，一起近T级别DDoS攻击来袭</h1>   
+<div class="let_nav">   
+<!-- 代码 开始 -->
+<div id="appgame-leftside-share" style="margin-top: -100px;">
+	<div class="appgame-leftside-share rwt_share" id="rwt_share">
+        <a class="appgame-leftside-weixin" data-cmd="weixin" title="分享到微信">微信</a>
+		<a class="appgame-leftside-qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+		<a class="appgame-leftside-sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a>
+		<a class="appgame-leftside-tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    </div>
+		<a class="appgame-leftside-top" onClick="gotoTPoint(&#39;top&#39;,400)"></a>
+</div>
+<script type="text/javascript" src="//img.qudong.com/ncss/lrtk.js"></script>
+<script type="text/javascript" src="//img.qudong.com/ncss/share.min.js"></script>
+<!-- 代码 结束 -->
+            </div>
+            <div class="news_right">
+             <dd>
+                <li>
+                                        <span>来源：
+                    北国网                                                </span>
+                                        <span id="pubtime">2018-12-29/15:28</span>
+                    <span>访问量：<span class="qudongpv"></span></span>
+                    <span class="comment_count"></span>
+                </li>
+            <ul class="crumb">
+						<a href="http://site.qudong.com/">互联网</a>
+						<a href="http://site.qudong.com/other/">新闻</a>
+						<span>正文</span>
+		    </ul>
+            </dd>
+                                          
+                    <div class="tese">
+                                                                                                    </div>                      
+<p>&nbsp;</p>
+<p>2018年已接近尾声,回顾这一年,网络安全事件频频爆发,上半年的一起Memcached DDoS攻击的峰值达到1.7 Tbps!创下历史最高纪录。这背后折射出黑客的攻击行为越来越复杂激进,造成的影响也越来越大。尤其是对大型企业,其面临的威胁更是不容小视。</p>
+<p>而就在近日,某知名互联网行业公司遭受了一次大型DDoS攻击,流量峰值一度逼近T级,再次拷问了大型公司的网络安全防线。</p>
+<p><strong>近T级流量&ldquo;造访&rdquo;知名互联网公司</strong></p>
+<p>年关将至,各行业都在努力完成各自的&ldquo;KPI&rdquo;,黑产也不甘落后,互联网安全战场正在暗流涌动,腾讯云某互联网行业知名客户连续遭受了2次大流量DDoS攻击。</p>
+<p>2018年12月13日,凌晨3点46分,一波试探性意味浓厚的攻击正在袭来,流量峰值达到138Gbps,这也是今年整个互联网DDoS攻击的常见攻击流量。《2018上半年互联网 DDoS 攻击趋势分析》显示,以每月超过百Gbps的攻击次数统计来看,100-200 Gbps 占比最大,基本在75%以上。</p>
+<p>常年的攻防经验让腾讯云安全团队意识到,这次攻击仅仅是序幕。要知道,对不法分子而言,针对大型公司发起一次DDoS攻击的成本并不低,而且他们一旦找准了目标,轻易不会放弃,&ldquo;重头戏&rdquo;在后面。</p>
+<p>17个小时之后,12月13日晚20点07分,第二波攻击&ldquo;如约而至&rdquo;,攻击流量峰值远超过第一次,飙升至710Gbps。虽然今年DDoS攻击流量峰值出现了1.7T这一天文数字,将DDoS防护推向T级战场,但710Gbps这一数额仍然十分罕见。</p>
+<p>腾讯云安全团队还发现,本次DDoS攻击手法同样&ldquo;老练&rdquo;,攻击类型包含SSDP反射攻击和DNS反射攻击,目的端口也比较分散,对防御工作带来极大的挑战。</p>
+<p><strong>火线救援,腾讯云大禹的防御之道</strong></p>
+<p>客户遭受大流量DDoS攻击时,如何抗D维稳是当务之急。710Gbps大流量攻击对业界传统防护方案而言面临重重挑战。</p>
+<p>本次受攻击的公司源站部署在北京,需要考虑云平台上不同线路、地域防护节点问题,单节点防护能力不足;</p>
+<p>攻击超出防护界限后,用户手动配置跳转,时间窗口根据运维人员及准备情况,30分钟到几小时不等,影响公司业务;</p>
+<p>叠加不同地域节点获取更高流量高防,要求购买多个基础高防包,防护成本高;</p>
+<p>目前业界云清洗方案主流为三网线路,网络延迟费时,影响用户访问速度。</p>
+<p>如何在防护节点、调度速度、防护成本等多重因素之间权衡达到最优解还不够,最重要的还是要保证用户的体验,一旦用户体验受损,届时面临的&ldquo;内忧外患&rdquo;是任何一家公司都难以承受的。</p>
+<p>在快速分析完客户情况之后,腾讯云大禹团队立即响应。针对客户业务情况提供大禹高防IP专业版解决方案,包含北京、上海和南京三网的节点,可在攻击状态下自由调度。虽然攻击持续了一天,但决战却在一分钟内完成。</p>
+<p>在这两波大型攻击中:</p>
+<p>13日凌晨03:46:18,北京高防IP遭受攻击,在不到一分钟之内,防护智能调度到上海节点,成功抵抗住了第一波攻势,而此时攻击峰值已高达138G。</p>
+<p>晚上20:08:09,上海高防IP遭受新一轮大流量攻击,攻击峰值高达710G,同样是不到一分钟之内,CName调度防护节点到南京三网,直到22:10:15,攻击停止,防护切回初始节点(北京节点),完成了对该客户的成功护航。</p>
+<p>快速灵活的节点调度背后,体现出腾讯云大禹BGP高防IP专业版对于解决客户超大流量DDoS攻击的核心优势&mdash;&mdash;智能调度防护节点,满足跨区域T级大流量抗D需求。</p>
+<p>企业无需购买多个地域IP,自动调度防护节点;无需手动切换配置,封堵时自动解析更新至新高防IP;依托腾讯云大禹30线BGP IP接入节点和全球部署的超过20个防御节点,以及定制化的高级防护策略,可以轻松应对DDoS攻击。</p>
+<p>目前,腾讯云大禹DDoS高防,还在江苏省公安厅、阅文集团、熊猫直播、携程、摩拜单车等各行各业的客户中守护企业网络安全。</p>
+<p>---------------------------------------------------------</p>
+<p>免责声明：</p>
+<p>1.本文援引自互联网，旨在传递更多网络信息，仅代表作者本人观点，与本网站无关。</p>
+<p>2.本文仅供读者参考，本网站未对该内容进行证实，对其原创性、真实性、完整性、及时性不作任何保证。</p>                    <div class="tese">
+                                                                                                    </div>
+<!--文章内容end-->
+<div style="margin:0 auto; width:800px; margin-top:20px; margin-bottom:15px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2868209467010131"
+     data-ad-slot="6238995862"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<br>
+			<a href="javascript:;" id="api_zan" onClick="api_zan(541271)">赞(0)</a>
+            </div>
+			
+			<!---底部广告开始--->
+			<div class="advert_bottom">
+            	<a target="_blank" href="http://www.hvtong.cn/service/yundj.html" style="display: block;width: 840px; float: right;">
+            		<img style="width: 100%" src="https://www.qudong.com/123456.jpg">
+            	</a>
+            </div>
+			<!---底部广告结束--->
+			
+			
+            <div class="commentAll">
+                <!--评论区域 begin-->
+                <div class="reviewArea clearfix">
+                    <textarea class="content comment-input" placeholder="请输入评论内容" onKeyUp="keyUP(this)"></textarea>
+                    <a href="javascript:;" onClick="pinglun(541271)" class="plBtn">评论</a>
+                </div>
+                <!--评论区域 end-->
+                <!--回复区域 begin-->
+                <div class="comment-show">
+                </div>
+                <!--回复区域 end-->
+                <a href="javascript:;" class="get_more_comments" onClick="get_comment_list(541271)" page="1" style="display: block; margin:0 auto; border:1px solid #CCCCCC;   width: 120px; height: 30px; font-size:16px; text-align: center;line-height: 30px;">加载更多</a>
+            </div>
+            <div class="tab">
+                <div id="wp" class="screen tab-menu">
+                    <ul>
+                        <li class="on"><a href="#">焦点</a></li>
+                        <li class=""><a href="#">手机</a></li>
+                        <li class=""><a href="#">家电</a></li>
+                        <li class=""><a href="#">数码</a></li>
+                        <li class=""><a href="#">互联网+</a></li>
+                        <li class=""><a href="#">AI/VR</a></li>
+                        <li class=""><a href="#">云计算</a></li>
+                        <li class=""><a href="#">汽车</a></li>
+                        <li class=""><a href="#">O2O</a></li>
+                        <li class=""><a href="#">机器人</a></li>
+                    </ul>
+                </div>
+                <div class="tab-box">
+                    <div class="list_con" style="display: block;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541391.shtml" target="_blank">
+                                    <h4>苹果为iPhone XR发布新广告，挤牙膏创新还能走多远？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                                        <a href="http://app.qudong.com/tags.php?tag=iPhone降价">iPhone降价</a>
+                                                       </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541391.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/acc2adfa96e1e4cda94b99d55e104fc6.jpg" alt="苹果为iPhone XR发布新广告，挤牙膏创新还能走多远？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541363.shtml" target="_blank">
+                                    <h4>2018年手机发布会一场接一场，但只有这三场让我印象深刻</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                                        <a href="http://app.qudong.com/tags.php?tag=坚果R1">坚果R1</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=vivo">vivo</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=NEX">NEX</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=努比亚X">努比亚X</a>
+                                                       </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541363.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/16a4de4cda1a5a95d428195212daa621.png" alt="2018年手机发布会一场接一场，但只有这三场让我印象深刻" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541361.shtml" target="_blank">
+                                    <h4>押金池或超30亿，漩涡中的享骑单车还能活命吗？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                                        <a href="http://app.qudong.com/tags.php?tag=共享单车">共享单车</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=OFO">OFO</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=享骑">享骑</a>
+                                                       </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541361.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/52aff47ffc90a9ee22e76e9f9a265c39.jpg" alt="押金池或超30亿，漩涡中的享骑单车还能活命吗？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541385.shtml" target="_blank">
+                                    <h4>TMT2018年度十大关键词出炉 美团收摩拜排名第一</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                                        <a href="http://app.qudong.com/tags.php?tag=美团">美团</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=OFO">OFO</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=自媒体">自媒体</a>
+                                                       </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541385.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/66079888882056c25c5a4c8aab502d82.jpeg" alt="TMT2018年度十大关键词出炉 美团收摩拜排名第一" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541351.shtml" target="_blank">
+                                    <h4> 实力华为C位出道 获外国媒体“联合”力挺</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                                        <a href="http://app.qudong.com/tags.php?tag=华为">华为</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=5G">5G</a>
+                                                        <a href="http://app.qudong.com/tags.php?tag=外媒报道">外媒报道</a>
+                                                       </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541351.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546076759568.jpg" alt=" 实力华为C位出道 获外国媒体“联合”力挺" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                          </div>
+                    <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541391.shtml" target="_blank">
+                                    <h4>苹果为iPhone XR发布新广告，挤牙膏创新还能走多远？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=iPhone降价">iPhone降价</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541391.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/acc2adfa96e1e4cda94b99d55e104fc6.jpg" alt="苹果为iPhone XR发布新广告，挤牙膏创新还能走多远？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541363.shtml" target="_blank">
+                                    <h4>2018年手机发布会一场接一场，但只有这三场让我印象深刻</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=坚果R1">坚果R1</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=vivo">vivo</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=NEX">NEX</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=努比亚X">努比亚X</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541363.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/16a4de4cda1a5a95d428195212daa621.png" alt="2018年手机发布会一场接一场，但只有这三场让我印象深刻" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541351.shtml" target="_blank">
+                                    <h4> 实力华为C位出道 获外国媒体“联合”力挺</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=华为">华为</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=5G">5G</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=外媒报道">外媒报道</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541351.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546076759568.jpg" alt=" 实力华为C位出道 获外国媒体“联合”力挺" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541341.shtml" target="_blank">
+                                    <h4>地球人都已经无法阻止！花旗研究下调iPhone产量预期</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=iPhone">iPhone</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=苹果公司">苹果公司</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541341.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546075796890.jpg" alt="地球人都已经无法阻止！花旗研究下调iPhone产量预期" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://mobile.qudong.com/article/541339.shtml" target="_blank">
+                                    <h4>iPhone新专利疑曝光  可支持正、方两个反向折叠</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=可折叠">可折叠</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=苹果">苹果</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://mobile.qudong.com/article/541339.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546075520372.jpg" alt="iPhone新专利疑曝光  可支持正、方两个反向折叠" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>
+                    <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541395.shtml" target="_blank">
+                                    <h4>错失电商黄金时代，宜家中国要如何破局新零售？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=宜家">宜家</a>
+                                              </span>
+                                    <span>2018-12-30</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541395.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181230/4f9e27c0b141c2aeb54d21c831878003.jpg" alt="错失电商黄金时代，宜家中国要如何破局新零售？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541307.shtml" target="_blank">
+                                    <h4>威王冰箱登质检黑榜！广东省监管局：多项目不合格</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=威王冰箱">威王冰箱</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=质检黑榜">质检黑榜</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541307.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546073272708.jpg" alt="威王冰箱登质检黑榜！广东省监管局：多项目不合格" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541259.shtml" target="_blank">
+                                    <h4>价格战真成了风口？传三星计划推出mini版Galaxy Home音箱</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=三星">三星</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=三星智能音箱">三星智能音箱</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541259.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546067437362.png" alt="价格战真成了风口？传三星计划推出mini版Galaxy Home音箱" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541201.shtml" target="_blank">
+                                    <h4>中国市场持续失手，三星电视也难逃衰败的魔咒？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=三星手机">三星手机</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=三星电视">三星电视</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541201.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546060622498.png" alt="中国市场持续失手，三星电视也难逃衰败的魔咒？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541123.shtml" target="_blank">
+                                    <h4>改革开放四十年生活大变迁 “美的二代”与时代同步</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=美的">美的</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541123.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/7b2d405dff50002741c4eb6ecbe44d17.jpg" alt="改革开放四十年生活大变迁 “美的二代”与时代同步" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>                  
+                    <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://sound.qudong.com/2018/1229/541179.shtml" target="_blank">
+                                    <h4>All In智能驾驶的时代，却是汽车后市场的凛冬？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=智能驾驶">智能驾驶</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://sound.qudong.com/2018/1229/541179.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/e2475d3326a5173bd7388cdab0a189d7.png" alt="All In智能驾驶的时代，却是汽车后市场的凛冬？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://digi.qudong.com/2018/1229/541145.shtml" target="_blank">
+                                    <h4>骨声纹加持创新黑科技，简约不简单的荣耀FlyPods Pro尝鲜体验</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=荣耀">荣耀</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=骨声纹">骨声纹</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=蓝牙耳机">蓝牙耳机</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://digi.qudong.com/2018/1229/541145.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/5591bbe94fb89c88d0568de92dbec9ea.jpg" alt="骨声纹加持创新黑科技，简约不简单的荣耀FlyPods Pro尝鲜体验" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://digi.qudong.com/2018/1229/541103.shtml" target="_blank">
+                                    <h4>三星或推屏幕声场手机，能带来更好的“无扬声器”声音体验吗？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=三星">三星</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=扬声器">扬声器</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://digi.qudong.com/2018/1229/541103.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/5a781bf62bd87935f7795e3d7d609349.jpg" alt="三星或推屏幕声场手机，能带来更好的“无扬声器”声音体验吗？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://notebook.qudong.com/2018/1228/541071.shtml" target="_blank">
+                                    <h4>强者对决  华为MateBook 13、联想小新Air 13笔记本对比测评</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=华为MateBook13">华为MateBook13</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=联想小新Air13">联想小新Air13</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://notebook.qudong.com/2018/1228/541071.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1228/thumb_200_100_1545995260771.jpg" alt="强者对决  华为MateBook 13、联想小新Air 13笔记本对比测评" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://digi.qudong.com/2018/1228/540795.shtml" target="_blank">
+                                    <h4>腾讯入局带屏智能音箱 能否打造差异化社交新场景？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=腾讯">腾讯</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=智能音箱">智能音箱</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://digi.qudong.com/2018/1228/540795.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/4d6f6f6108913cc1f55d2c4e48a48b58.png" alt="腾讯入局带屏智能音箱 能否打造差异化社交新场景？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>                  
+                    <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://site.qudong.com/2018/1229/541293.shtml" target="_blank">
+                                    <h4>猎豹移动傅盛：人工智能将极大提升社会效率，行业壁垒正在消失</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=猎豹移动">猎豹移动</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://site.qudong.com/2018/1229/541293.shtml" target="_blank">
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://site.qudong.com/2018/1229/541191.shtml" target="_blank">
+                                    <h4>沉睡八年的锦程消费金融，增资后是突飞猛进还是原地踏步？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=消费金融">消费金融</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://site.qudong.com/2018/1229/541191.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/53d983dbd1c31a00d52c2ff10216f77b.jpg" alt="沉睡八年的锦程消费金融，增资后是突飞猛进还是原地踏步？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://site.qudong.com/2018/1229/541205.shtml" target="_blank">
+                                    <h4>傅盛出席人民网大会 猎豹机器人智慧解决方案多场景落地</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=猎豹移动">猎豹移动</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://site.qudong.com/2018/1229/541205.shtml" target="_blank">
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://site.qudong.com/2018/1228/541029.shtml" target="_blank">
+                                    <h4>猎豹移动7年初心不改  2019橙色大巴再次启程</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=猎豹移动">猎豹移动</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://site.qudong.com/2018/1228/541029.shtml" target="_blank">
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://site.qudong.com/2018/1228/540987.shtml" target="_blank">
+                                    <h4>WiFi万能钥匙VS腾讯WIFI管家：元老未老还是新秀更贵？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=wifi">wifi</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://site.qudong.com/2018/1228/540987.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/84520639490bde3723f6206d0c01bdb2.jpg" alt="WiFi万能钥匙VS腾讯WIFI管家：元老未老还是新秀更贵？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>                   
+                    <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541113.shtml" target="_blank">
+                                    <h4>荣耀V20为什么会选择神奇AR这个创业公司合作研发YOYO炫舞？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=AR">AR</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541113.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/4bdb08eac73cc2caaae86ac3076cac7b.jpg" alt="荣耀V20为什么会选择神奇AR这个创业公司合作研发YOYO炫舞？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/541011.shtml" target="_blank">
+                                    <h4>墙都不扶，就服NBA赛场上的这些黑科技</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=NBA">NBA</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=VR">VR</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=3D投影技术">3D投影技术</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/541011.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1228/thumb_200_100_1545984337822.jpg" alt="墙都不扶，就服NBA赛场上的这些黑科技" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/1228/540949.shtml" target="_blank">
+                                    <h4>2019年，对于AI的三大预测</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=AI">AI</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=人工智能">人工智能</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/1228/540949.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/ac11249816dd7d04b4d2b19d0422fdc0.jpg" alt="2019年，对于AI的三大预测" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/1228/540879.shtml" target="_blank">
+                                    <h4>2025年AI或将建立新的社会形态 人工智能如何破局？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=AI">AI</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=人工智能">人工智能</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/1228/540879.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/72a29f227013b9d941952a4469c2ff48.jpg" alt="2025年AI或将建立新的社会形态 人工智能如何破局？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/1228/540881.shtml" target="_blank">
+                                    <h4>当鸿茅药酒和权健们不再被信任，试试AI养生怎样？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=AI养生">AI养生</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/1228/540881.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/4d9e55553d24e72d87df92045e8a24e9.png" alt="当鸿茅药酒和权健们不再被信任，试试AI养生怎样？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>  
+                     <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/540821.shtml" target="_blank">
+                                    <h4>印度云服务争夺战 是一场中美对决</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=腾讯">腾讯</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=阿里巴巴">阿里巴巴</a>
+                                              </span>
+                                    <span>2018-12-28</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/540821.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181228/8fad5291d0b669b923332c4755d28361.jpg" alt="印度云服务争夺战 是一场中美对决" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/539553.shtml" target="_blank">
+                                    <h4>2018云南-华为软件产业峰会成功举办 加快构建数字中国</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=2018华为软件产业峰会">2018华为软件产业峰会</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=云南">云南</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=数字中国">数字中国</a>
+                                              </span>
+                                    <span>2018-12-22</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/539553.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1222/thumb_200_100_1545408726555.jpg" alt="2018云南-华为软件产业峰会成功举办 加快构建数字中国" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/538879.shtml" target="_blank">
+                                    <h4>云服务成产业智能中流，百度云会是那个砥柱吗</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=百度">百度</a>
+                                              </span>
+                                    <span>2018-12-19</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/538879.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181219/f7ffdcd8a1d176746be8c0f905f88954.png" alt="云服务成产业智能中流，百度云会是那个砥柱吗" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/538017.shtml" target="_blank">
+                                    <h4>健康发展云助力 京东云亮相“怀化健博会”</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=京东云">京东云</a>
+                                              </span>
+                                    <span>2018-12-14</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/538017.shtml" target="_blank">
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/538013.shtml" target="_blank">
+                                    <h4>东云携手鹤壁高校 打通产教融合“最后一公里”</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=京东云">京东云</a>
+                                              </span>
+                                    <span>2018-12-14</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/538013.shtml" target="_blank">
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div> 
+                     <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541303.shtml" target="_blank">
+                                    <h4>首款五星安全新能源座驾  全新一代唐荣膺史上最严2018版C-NCAP五星安全认证</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=比亚迪唐">比亚迪唐</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541303.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546072890206.jpg" alt="首款五星安全新能源座驾  全新一代唐荣膺史上最严2018版C-NCAP五星安全认证" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541281.shtml" target="_blank">
+                                    <h4>大乘G60S正式下线 或将2019年1月上市</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=大乘汽车">大乘汽车</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541281.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546070448973.jpg" alt="大乘G60S正式下线 或将2019年1月上市" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541277.shtml" target="_blank">
+                                    <h4>新速腾即将到来 明年3月上市</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=大众速腾">大众速腾</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541277.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546068890451.jpg" alt="新速腾即将到来 明年3月上市" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541211.shtml" target="_blank">
+                                    <h4>神州优车接管宝沃汽车 将成为其最大股东</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=宝沃汽车">宝沃汽车</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=神州优车">神州优车</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541211.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1229/thumb_200_100_1546062700889.jpg" alt="神州优车接管宝沃汽车 将成为其最大股东" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://news.qudong.com/article/541137.shtml" target="_blank">
+                                    <h4>哈啰出行完成新一轮融资，大出行领域迎来新势力</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=哈啰出行">哈啰出行</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=滴滴">滴滴</a>
+                                              </span>
+                                    <span>2018-12-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://news.qudong.com/article/541137.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181229/b502a6400988102c3f1031442713bccb.png" alt="哈啰出行完成新一轮融资，大出行领域迎来新势力" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>  
+                     <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/1129/534595.shtml" target="_blank">
+                                    <h4>从财报看外卖平台众生相：美团为何从容、饿了么缘何焦虑</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=美团">美团</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=饿了么">饿了么</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=外卖">外卖</a>
+                                              </span>
+                                    <span>2018-11-29</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/1129/534595.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181128/6f329b42e583c902c39c4d785ffb6f89.jpg" alt="从财报看外卖平台众生相：美团为何从容、饿了么缘何焦虑" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/1009/521559.shtml" target="_blank">
+                                    <h4>半年亏损30亿，摩拜发力电商寻求新的业务增长点</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=阿里">阿里</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=美团">美团</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=摩拜">摩拜</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=电商">电商</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=雄墨商业">雄墨商业</a>
+                                              </span>
+                                    <span>2018-10-09</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/1009/521559.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181009/a6cc64e38ee5deb898cc8a8b246e2104.png" alt="半年亏损30亿，摩拜发力电商寻求新的业务增长点" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/0925/519195.shtml" target="_blank">
+                                    <h4>面对越骑越少的单车 哈啰出行逆转可能性能有多大？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=共享单车">共享单车</a>
+                                              </span>
+                                    <span>2018-09-25</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/0925/519195.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20180925/13cc49768e799e11702b53388c598cd4.png" alt="面对越骑越少的单车 哈啰出行逆转可能性能有多大？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/0917/517117.shtml" target="_blank">
+                                    <h4>超强台风山竹来袭，美团外卖、饿了么画风截然相反</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=美团外卖">美团外卖</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=饿了么">饿了么</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=山竹">山竹</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=台风">台风</a>
+                                              </span>
+                                    <span>2018-09-17</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/0917/517117.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20180916/c1accb854b219bafe5288fd47d445644.jpg" alt="超强台风山竹来袭，美团外卖、饿了么画风截然相反" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/2018/0913/516493.shtml" target="_blank">
+                                    <h4> 上线拼团业务跟风拼多多，58到家缺的只是流量吗？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=58到家">58到家</a>
+                                              </span>
+                                    <span>2018-09-13</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/2018/0913/516493.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20180913/ca8aed6c8fb4ed98c5fe3447c5d10aec.png" alt=" 上线拼团业务跟风拼多多，58到家缺的只是流量吗？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>  
+                     <div class="list_con" style="display: none;">
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/540085.shtml" target="_blank">
+                                    <h4>服务机器人商业化拐点到来：优地的优势与野望</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=机器人">机器人</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=服务型机器人">服务型机器人</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=优地科技">优地科技</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=AI">AI</a>
+                                              </span>
+                                    <span>2018-12-25</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/540085.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181225/28c729dd8f286e01ed81658c5a0c7d30.png" alt="服务机器人商业化拐点到来：优地的优势与野望" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/536607.shtml" target="_blank">
+                                    <h4>五感之外，机器的“第六感”也比人类强</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=机器人">机器人</a>
+                                              </span>
+                                    <span>2018-12-08</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/536607.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181208/71af17c2bdf9fcd2c7ba686673c26a99.png" alt="五感之外，机器的“第六感”也比人类强" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/528465.shtml" target="_blank">
+                                    <h4>派诺特ANAFI简单体验：一款以轻量易用切入用户需求的新品</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=派诺特">派诺特</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=无人机">无人机</a>
+                                              </span>
+                                    <span>2018-11-02</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/528465.shtml" target="_blank">
+                                                    <img src="https://upload.qudong.com/2018/1102/thumb_200_100_1541150698813.jpg" alt="派诺特ANAFI简单体验：一款以轻量易用切入用户需求的新品" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/521269.shtml" target="_blank">
+                                    <h4>无人机市场趋于平静，深陷泥潭的零度智控能否化险为夷？</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=无人机">无人机</a>
+                                              </span>
+                                    <span>2018-10-08</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/521269.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20181008/94df61d5e4cd5bc844380b21d6797e68.jpg" alt="无人机市场趋于平静，深陷泥潭的零度智控能否化险为夷？" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                              <div class="picture_text">
+                            <div class="text">
+                                <a href="http://www.qudong.com/article/520919.shtml" target="_blank">
+                                    <h4>星图fairy小精灵迷你无人机，实现我的飞行梦</h4>
+                                </a>
+                                <div class="time_tag">
+                            <span class="tags">标签：
+                                      <a href="http://app.qudong.com/tags.php?tag=无人机">无人机</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=星图">星图</a>
+                                      <a href="http://app.qudong.com/tags.php?tag=性价比">性价比</a>
+                                              </span>
+                                    <span>2018-09-30</span>
+                                </div>
+                            </div>
+                            <div class="picture">
+                                <a href="http://www.qudong.com/article/520919.shtml" target="_blank">
+                                                    <img src="//hao.qudong.com/public/uploads/20180930/1e33bc416dbd9bf15a5132065140b2e7.jpg" alt="星图fairy小精灵迷你无人机，实现我的飞行梦" width="200" height="100" >
+                                                        </a>
+                            </div>
+                        </div>
+                                        </div>       
+                </div>           
+              </div>
+            </div>
+                <div class="wenzhang_right project">
+            <h3>专题
+                <a href="//special.qudong.com/">更多</a>
+            </h3>
+               <a href="https://www.qudong.com/20181111/index.shtml"><img src="https://upload.qudong.com/2018/1106/1541473351585.jpg"  alt="2018“双十一”全球购物狂欢节专题"></a>
+   <p><a href="https://www.qudong.com/20181111/index.shtml">2018“双十一”全球购物狂欢节专题</a></p>
+   
+
+        </div>
+        <div class="wenzhang_right project">
+            <h3>驱动号
+                <a href="//hao.qudong.com/">更多</a>
+            </h3>
+        <div class="blog-list">
+            <ul id="postlist" id="content">
+                <div class="loading_content loading1" style="display: block;">
+                    <img src="//hao.qudong.com/static/index/images/loading.gif" alt="">
+                </div>
+                <span class="blank20"></span>
+            </ul>
+        </div>
+        </div>        
+    </div>
+    <!--End:主体内容-->
+    <div class="footer">
+        <div class="w1200">
+            <div class="footer-a">
+                <div class="a-bor a-bor-frist">
+                    <h2 class="transition"><img src="//img.qudong.com/ncss/images/logo.png"/></a></h2>
+                    <p>联系电话：010-62681584</p>
+                    <p>电子邮箱：sw@qudong.com</p>
+                    <p>地址：北京市海淀区学院路30号</p>
+                </div>
+                <div class="a-bor a-bor-text">
+                    <ul>
+                        <li><a href="//www.veryol.com/baodao">寻求报道</a></li>
+                        <li><a href="//www.qudong.com/about/" title="">关于我们</a></li>
+                        <li><a href="//www.qudong.com/about/contact.shtml" title="">联系我们</a></li>
+                        <li><a href="//www.qudong.com/about/jobs.shtml" title="">加入我们</a></li>
+                        <li><a href="//www.qudong.com/about/copyright.shtml" title="">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="a-bor a-bor-text">
+                    <ul>
+                        <li><a href="//m.qudong.com" title="">手机访问</a></li>
+                        <li><a href="//app.qudong.com/map.php" title="">网站地图</a></li>
+                        <li><a href="//app.qudong.com/?app=guestbook" title="">留言反馈</a></li>
+                        <li><a href="//app.qudong.com/rss.php" title="">RSS订阅</a></li>
+                        <li><a href="//www.qudong.com/original/" title="">原创报道</a></li>
+                    </ul>
+                </div>
+                <div class="a-bor a-bor-text a-bor-max">
+                    <ul>
+                        <li><a>广播电视节目许可证：（京）字第07618号</a></li>
+                        <li><a>北京市网监中心备案编号：11010802009555号</a></li>
+                    </ul>
+                </div>
+                <div class="a-bor a-bor-last">
+                    <h4><img src="//img.qudong.com/ncss/images/weixin.jpg" width="103" height="103" alt="驱动中国官方微信"/></h4>
+                    <span>驱动中国官方微信</span>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="w1200 clearfix">
+                <div class="copy-text copy-text1">
+                    <p>©驱动中国&nbsp;Qudong.com &nbsp;All Rights Reserved 版权所有&nbsp;复制必究&nbsp;<a
+                            href="//www.miibeian.gov.cn"></a><i class="ico-gongan"></i>京ICP备11013097号<a></a>广播电视节目许可证：（京）字第07618号
+                    </p>
+                </div>
+                <div class="footer-share clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End:底部-->
+    <!--textarea高度自适应-->
+    <script type="text/javascript">
+        $(function () {
+            $('.content').flexText();
+        });
+    </script>
+    <!--textarea限制字数-->
+    <script type="text/javascript">
+        function keyUP(t){
+            var len = $(t).val().length;
+            if(len > 139){
+                $(t).val($(t).val().substring(0,140));
+            }
+        }
+    </script>
+    <!--点击评论创建评论条-->
+    <script type="text/javascript">
+        $('.commentAll').on('click','.plBtn',function(){
+            var myDate = new Date();
+            //获取当前年
+            var year=myDate.getFullYear();
+            //获取当前月
+            var month=myDate.getMonth()+1;
+            //获取当前日
+            var date=myDate.getDate();
+            var h=myDate.getHours();       //获取当前小时数(0-23)
+            var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+            if(m<10) m = '0' + m;
+            var s=myDate.getSeconds();
+            if(s<10) s = '0' + s;
+            var now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
+            //获取输入内容
+            var oSize = $(this).siblings('.flex-text-wrap').find('.comment-input').val();
+            console.log(oSize);
+            //动态创建评论模块
+            var exp = $.cookie('headimgurl');
+              if( !exp && typeof(exp)!="undefined" && exp!=0 &&typeof(exp) != "undefined"){
+                var head ='//www.qudong.com/user/images/user_icon.png';
+              }else{            
+                var head =exp;
+              }
+              var exp = $.cookie('nickname');
+              if( !exp && typeof(exp)!="undefined" && exp!=0 &&typeof(exp) != "undefined"){
+                var nickname ='//www.qudong.com/user/images/user_icon.png';
+              }else{            
+                var nickname =exp;
+              }
+            oHtml = '<div class="comment-show-con show-con clearfix"><div class="comment-show-con-img pull-left"><img src="'+head+'" alt=""></div> <div class="comment-show-con-list pull-left clearfix"><div class="pl-text clearfix"> <a href="#" class="comment-size-name">'+nickname+': </a> <span class="my-pl-con">&nbsp;'+ oSize +'</span> </div> <div class="date-dz"> <span class="date-dz-left pull-left comment-time">'+now+'</span> <div class="date-dz-right pull-right comment-pl-block"><a href="javascript:;" class="removeBlock"><!--删除--></a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left"><!--回复--></a> <span class="pull-left date-dz-line"><!--|--></span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞(<i class="z-num">0</i>)</a> </div> </div><div class="hf-list-con"></div></div> </div>';
+            if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
+                $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
+                $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value','').siblings('pre').find('span').text('');
+            }
+        });
+    </script>
+    <!--点击回复动态创建回复块-->
+    <script type="text/javascript">
+        $('.comment-show').on('click','.pl-hf',function(){
+            //获取回复人的名字
+            var fhName = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            //回复@
+            var fhN = '回复@'+fhName;
+            //var oInput = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.hf-con');
+            var fhHtml = '<div class="hf-con pull-left"> <textarea class="content comment-input hf-input" placeholder="" onkeyup="keyUP(this)"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
+            //显示回复
+            if($(this).is('.hf-con-block')){
+                $(this).parents('.date-dz-right').parents('.date-dz').append(fhHtml);
+                $(this).removeClass('hf-con-block');
+                $('.content').flexText();
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.pre').css('padding','6px 15px');
+                //console.log($(this).parents('.date-dz-right').siblings('.hf-con').find('.pre'))
+                //input框自动聚焦
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.hf-input').val('').focus().val(fhN);
+            }else {
+                $(this).addClass('hf-con-block');
+                $(this).parents('.date-dz-right').siblings('.hf-con').remove();
+            }
+        });
+    </script>
+    <!--评论回复块创建-->
+    <script type="text/javascript">
+        $('.comment-show').on('click','.hf-pl',function(){
+            var oThis = $(this);
+            var myDate = new Date();
+            //获取当前年
+            var year=myDate.getFullYear();
+            //获取当前月
+            var month=myDate.getMonth()+1;
+            //获取当前日
+            var date=myDate.getDate();
+            var h=myDate.getHours();       //获取当前小时数(0-23)
+            var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+            if(m<10) m = '0' + m;
+            var s=myDate.getSeconds();
+            if(s<10) s = '0' + s;
+            var now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
+            //获取输入内容
+            var oHfVal = $(this).siblings('.flex-text-wrap').find('.hf-input').val();
+            console.log(oHfVal)
+            var oHfName = $(this).parents('.hf-con').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            var oAllVal = '回复@'+oHfName;
+            if(oHfVal.replace(/^ +| +$/g,'') == '' || oHfVal == oAllVal){
+            }else {
+                $.getJSON("json/pl.json",function(data){
+                    var oAt = '';
+                    var oHf = '';
+                    $.each(data,function(n,v){
+                        delete v.hfContent;
+                        delete v.atName;
+                        var arr;
+                        var ohfNameArr;
+                        if(oHfVal.indexOf("@") == -1){
+                            data['atName'] = '';
+                            data['hfContent'] = oHfVal;
+                        }else {
+                            arr = oHfVal.split(':');
+                            ohfNameArr = arr[0].split('@');
+                            data['hfContent'] = arr[1];
+                            data['atName'] = ohfNameArr[1];
+                        }
+                        if(data.atName == ''){
+                            oAt = data.hfContent;
+                        }else {
+                            oAt = '回复<a href="#" class="atName">@'+data.atName+'</a> : '+data.hfContent;
+                        }
+                        oHf = data.hfName;
+                    });
+                    var oHtml = '';
+                    oHtml += '<div class="all-pl-con"><div class="pl-text hfpl-text clearfix"><a href="#" class="comment-size-name">我的名字 : </a><span class="my-pl-con">'+oAt+'</span></div><div class="date-dz"> <span class="date-dz-left pull-left comment-time">'+now+'</span> <div class="date-dz-right pull-right comment-pl-block"> <a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div></div>';
+                    oThis.parents('.hf-con').parents('.comment-show-con-list').find('.hf-list-con').css('display','block').prepend(oHtml) && oThis.parents('.hf-con').siblings('.date-dz-right').find('.pl-hf').addClass('hf-con-block') && oThis.parents('.hf-con').remove();
+                });
+            }
+        });
+    </script>
+    <!--删除评论块-->
+    <script type="text/javascript">
+        $('.commentAll').on('click','.removeBlock',function(){
+            var oT = $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con');
+            if(oT.siblings('.all-pl-con').length >= 1){
+                oT.remove();
+            }else {
+                $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con').parents('.hf-list-con').css('display','none')
+                oT.remove();
+            }
+            $(this).parents('.date-dz-right').parents('.date-dz').parents('.comment-show-con-list').parents('.comment-show-con').remove();
+        })
+    </script>
+	<script type="text/javascript" src="//img.qudong.com/templates/qudong/js/apps/digg.js"></script>
+	<script type="text/javascript" src="//img.qudong.com/templates/qudong/js/article-show.js"></script>	
+	<script type="text/javascript" src="//img.qudong.com/templates/qudong/js/mood-show.js"></script>
+	<script>
+	$(function() {
+		$('.article-content a').each(function(i,a){
+			var $a = $(a);
+			if(!$a.attr('target')) 
+			{
+				$a.attr('target','_blank');
+			}
+		});
+	});
+	</script>
+	  
+	<script type="text/javascript" src="//hao.qudong.com/static/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="//hao.qudong.com/static/js/layer/layer.js"></script>
+	<script src="//hao.qudong.com/static/js/md5.js"></script>
+	<script type="text/javascript">
+		// 根据文章的contentid 获取文章的作者信息
+		var url = '//hao.qudong.com/authorinfo';
+		var html = '';
+		function beforeSend() {
+			var index = layer.load(1, {
+			  shade: [0.1,'#fff'] //0.1透明度的白色背景
+			});
+		}
+		function redirect(url) {
+			window.location.href=url;
+		}
+		function success(msg) {
+			layer.msg(msg,{icon:1});
+		}
+		function error(msg) {
+			layer.msg(msg,{icon:0});
+		}
+		function clearcookies() {
+            $.cookie('uid', '', {expires:-1,path:"/",domain:".qudong.com"});
+            $.cookie('username', '', {expires:-1,path:"/",domain:".qudong.com"});
+            $.cookie('password', '', {expires:-1,path:"/",domain:".qudong.com"});
+            $.cookie('login_status', '', {expires:-1,path:"/",domain:".qudong.com"});
+        }
+		$.ajax({
+            url:url,
+            data:{contentid:541271},
+            type:"post",
+            dataType:"json",
+            beforeSend: function(){
+                // $('.loading').css('display','block');
+            },
+            success:function (data) {
+            	if(data.status == 200){
+            		var info = data.data;
+                    $('#pubtime').html(info.published) ;
+            		html += '<div class="tc1" id="userinfo">';
+					var exp = info.headimgurl;
+					 if( !exp){
+							 html +='    <img src="//hao.qudong.com/static/index/img/defaulthead.jpg" alt="'+info.nickname+'" width="150" height="150">';
+						}else {
+							html +='    <img src="//hao.qudong.com/'+info.headimgurl+'" alt="'+info.nickname+'" width="150" height="150">';
+						}
+					html += '    <i class="big_v1"></i>';
+		            html += '</div>';
+		            var exp = info.zhuanlanming;
+                        if( !exp && typeof(exp)!="undefined" && exp!=0 &&typeof(exp) != "undefined"){
+                            html += '<div class="mingzi"><h2><a href="//hao.qudong.com/'+info.id+'" title="">'+info.nickname+' </a></h2></div>';
+							var zhuanlanming = '//hao.qudong.com/'+info.id;
+						}else {
+                            html += '<div class="mingzi"><h2><a href="//hao.qudong.com/'+info.zhuanlanming+'" title="">'+info.nickname+' </a></h2></div>';
+							var zhuanlanming = '//hao.qudong.com/'+info.zhuanlanming;
+						}
+		            html += '<div class="art1"><span>文章数：<strong class="count">'+info.count+'</strong></span></div>';
+		            html += '<div class="art1"><span>访问量：<strong class="pv">'+(info.zongrenqi/10000).toFixed(1)+'万</strong></span></div>';
+		            html += '<div class="spj"><button class="guanzhu" onclick="guanzhu('+info.id+')">关注</button></div>';
+		            $('#userinfo').append(html);
+					$('.zhuanlanming').attr('href',zhuanlanming);
+                    get_guanzhu_status(info.id);//获取关注状态
+            	}else{
+            		console.log(data.msg);
+           		}
+            },
+            error:function(data){
+            	console.log(data.msg);
+            }
+        })
+        //顶部用户信息
+		function top_panl(){
+			var login_url = '//hao.qudong.com/is_login';
+			var uid = $.cookie('uid');
+            var username = $.cookie('username');
+	        var password = $.cookie('password');
+            var nickname = $.cookie('nickname');
+	        $.ajax({
+	            url:login_url,
+	            data:{username:username,password:password,uid:uid},
+	            type:"post",
+	            dataType:"json",
+	            beforeSend: function(){
+	                // $('.loading').css('display','block');
+	            },
+	            success:function (data) {
+	            	var html = '';
+	            	if(data.status == 200){
+						html +='	<a href="//www.qudong.com/user/ucenter.html">'+nickname+'</a>';
+						html +='	<a href="javascript:;" onclick="qudonghao_logout()">退出登录</a>';
+	            	}else{
+						html +='	<a href="//www.qudong.com/user/login.html">登录</a>';
+						html +='	<a href="//www.qudong.com/user/reg.html">注册</a>';
+	           		}
+	           		$('#top_panl').append(html);
+	            },
+	            error:function(data){
+	            }
+	        })
+		}
+		top_panl();
+		//辅助函数  用户是否登录  如果未登录则跳转到登录页
+        function is_login(){
+        	var login_url = '//hao.qudong.com/is_login';
+        	var username = $.cookie('username');
+            var uid = $.cookie('uid');
+	        var password = $.cookie('password');
+        	$.ajax({
+	            url:login_url,
+	            data:{username:username,password:password,uid:uid},
+	            type:"post",
+	            dataType:"json",
+	            beforeSend: function(){
+	                // $('.loading').css('display','block');
+	            },
+	            success:function (data) {
+	            	if(data.status == 200){
+	            		$.cookie('login_status', 1, {expires:7,path:"/",domain:".qudong.com"});
+	            	}else{
+	            		$.cookie('login_status', 0, {expires:7,path:"/",domain:".qudong.com"});
+	            		layer.open({
+                          title:"用户登录",
+                          type: 2,
+                          area: ['700px', '700px'],
+                          fixed: false, //不固定
+                          maxmin: true,
+                          content: '//www.qudong.com/user/login.html'
+                		});
+	           		}
+	            },
+	            error:function(data){
+	            }
+	        });
+        }
+        //退出登录
+        function qudonghao_logout() {
+        	var url = '//hao.qudong.com/qudonghao_logout';
+        	var username = $.cookie('username');
+	        var password = $.cookie('password');
+	        $.ajax({
+	            url:url,
+	            data:{username:username,password:password},
+	            type:"post",
+	            dataType:"json",
+	            beforeSend: function(){
+	                beforeSend();
+	            },
+	            success:function (data) {
+	            	if(data.status == 200){
+	            		clearcookies();
+	            		redirect('//www.qudong.com/user/login.html');
+	            		layer.closeAll(); //疯狂模式，关闭所有层
+	            	}	else{
+	            		clearcookies();
+                        layer.closeAll(); //疯狂模式，关闭所有层
+                        redirect('//www.qudong.com/user/login.html');
+	            	}                   
+	            },
+	            error:function(data){
+	            }
+	        })
+        }
+        //ajax  评论
+        function pinglun(contentid){
+        	var formUrl=document.location.href;
+        	$.cookie('formUrl', formUrl, {expires:7,path:"/",domain:".qudong.com"});
+        	var comment = $('.comment-input').val();
+        	var username = $.cookie('username'); 
+        	var uid = $.cookie('uid'); 
+        	var password = $.cookie('password');
+        	is_login();
+        	var login_status = $.cookie('login_status');
+        	if(login_status == 1){
+        		if(comment == null){
+                    error('评论内容不能为空');
+	            }
+	            var url = '//hao.qudong.com/api_comment';
+	                $.ajax({
+	                    url:url,
+	                    data:{username:username,contentid:contentid,comment:comment,uid:uid},
+	                    type:"post",
+	                    dataType:"json",
+	                    beforeSend: function(){
+	                        beforeSend();
+	                    },
+	                    success:function (data) {
+	                        layer.closeAll(); //疯狂模式，关闭所有层
+	                        if(data.status == 200){
+	                        }   else{
+	                        }                   
+	                    },
+	                    error:function(data){
+	                        layer.closeAll(); //疯狂模式，关闭所有层
+	                    }
+	            })
+        	}else{
+        		layer.open({
+                          title:"用户登录",
+                          type: 2,
+                          area: ['700px', '700px'],
+                          fixed: false, //不固定
+                          maxmin: true,
+                          content: '//www.qudong.com/user/login.html'
+                });
+        	}
+        }
+        //获取评论列表
+        function get_comment_list(contentid){
+        	var url = '//hao.qudong.com/api_get_comment_list';
+        	var page = $('.get_more_comments').attr('page');
+        	$.ajax({
+	            url:url,
+	            data:{contentid:contentid,page:page},
+	            type:"post",
+	            dataType:"json",
+	            beforeSend: function(){
+	                beforeSend();
+	            },
+	            success:function (data) {
+	            	layer.closeAll(); //疯狂模式，关闭所有层
+	            	if(data.status == 200){
+	            		var html = '';
+	            		var d = data.data;
+	            		var length = d.length;
+	            		for (var i = 0; i < length; i++) {
+	            			html += '<div class="comment-show-con clearfix">';
+                            var exp = d[i].headimgurl;
+                              if( !exp && typeof(exp)!="undefined" && exp!=0 &&typeof(exp) != "undefined"){
+                                 html += '<div class="comment-show-con-img pull-left"><img class="comment_head comment_head1" src="//www.qudong.com/user/images/user_icon.png" alt=""></div>';
+                              }else{            
+                                 html += '<div class="comment-show-con-img pull-left"><img class="comment_head comment_head1" src="'+exp+'" alt=""></div>';
+                              }
+                            html += '<div class="comment-show-con-list pull-left clearfix">';
+	                        html += '    <div class="pl-text clearfix">';
+	                        html += '        <a href="javascript:;" class="comment-size-name">'+d[i].nickname+' : </a>';
+	                        html += '        <span class="my-pl-con">&nbsp;'+d[i].content+'</span>';
+	                        html += '    </div>';
+	                        html += '    <div class="date-dz">';
+	                        html += '        <span class="date-dz-left pull-left comment-time">'+d[i].add_time+'</span>';
+	                        html += '        <div class="date-dz-right pull-right comment-pl-block">';
+	                        //html += '            <a href="javascript:;" class="removeBlock">删除</a>';
+	                        //html += '            <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>';
+	                        //html += '            <span class="pull-left date-dz-line">|</span>';
+	                        html += '            <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num" comment-id="'+d[i].id+'">'+d[i].zan+'</i>)</a>';
+	                        html += '        </div>';
+	                        html += '    </div>';
+	                        html += '    <div class="hf-list-con"></div>';
+	                        html += '</div>';
+	                    	html += '</div>';
+	                    }
+	                    $('.comment-show').append(html);
+	                    $('.get_more_comments').attr('page',data.page);
+	                    if(data.count != 0){
+                            $(".comment_count").html("评论："+data.count+"条");
+                        }
+	            	}	else{
+                        if(page == 1){
+                            return false;
+                        }else{
+                            error('没有更多信息了');
+                        }
+	            	}                   
+	            },
+	            error:function(data){
+	            	error('没有更多信息了');
+	            	layer.closeAll(); //疯狂模式，关闭所有层
+	            }
+	        })
+        }
+        get_comment_list(541271);
+        //文章点赞  需要登录
+        function api_zan(contentid) {
+        	is_login();
+        	var username = $.cookie('username');
+        	var url = '//hao.qudong.com/api_zan';
+        	$.ajax({
+	            url:url,
+	            data:{username:username,contentid:contentid},
+	            type:"post",
+	            dataType:"json",
+	            beforeSend: function(){
+	                beforeSend();
+	            },
+	            success:function (data) {
+	            	layer.closeAll(); //疯狂模式，关闭所有层
+	            	if(data.status == 200){
+	            		$('#api_zan').html('赞('+data.data.zan+')');
+	            	}	else{
+	            		error('失败，请重试');
+	            	}                   
+	            },
+	            error:function(data){
+	            	layer.closeAll(); //疯狂模式，关闭所有层
+	            }
+	        })
+        }
+        //网页首次加载，动态获取赞的数量，避免生成模板时候保存的固定数字
+        function get_zan_nums(contentid){
+            var url = '//hao.qudong.com/api_get_zan_nums';
+            $.ajax({
+                url:url,
+                data:{contentid:contentid},
+                type:"post",
+                dataType:"json",
+                success:function (data) {
+                    layer.closeAll(); //疯狂模式，关闭所有层
+                    if(data){
+                        $('#api_zan').html('赞('+data.zan+')');
+                    }   else{
+                        $('#api_zan').html('赞(加载失败！)');
+                    }                   
+                }
+            })
+        }
+        get_zan_nums(541271)
+        //is_login();
+        //新版评论点赞--远程
+        $('.comment-show').on('click','.date-dz-z',function(){
+            var zNum = $(this).find('.z-num').html();
+            if($(this).is('.date-dz-z-click')){
+                zNum--;
+                $(this).removeClass('date-dz-z-click red');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').removeClass('red');
+            }else {
+                zNum++;
+                $(this).addClass('date-dz-z-click');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').addClass('red');
+            }
+            var commentid = $(this).find('.z-num').attr('comment-id');
+            var url = '//hao.qudong.com/api_comment_zan';
+            $.ajax({
+                url:url,
+                data:{commentid:commentid,zNum:zNum},
+                type:"post",
+                dataType:"json",
+                success:function (data) {
+                    layer.closeAll(); //疯狂模式，关闭所有层
+                    console.log(data.msg);
+                }
+            })
+        })
+        /**
+         * 获取关注状态
+         */
+      function get_guanzhu_status(bgz_uid) {
+            var url="//hao.qudong.com/api_get_guanzhu_status";
+            var gz_uid = $.cookie('uid');
+            if(!gz_uid){
+                $(".guanzhu").html("关注");
+            }else{
+                $.post(url,{bgz_uid:bgz_uid,gz_uid:gz_uid},function(e){
+                    if(e.status == 1){
+                        $(".guanzhu").html("已关注");
+                    }else {
+                        $(".guanzhu").html("未关注");
+                    }
+                },'json');
+            }
+      }
+        /**
+         * 点击关注或者取消关注
+         * @param bgz_uid
+         */
+		function guanzhu(bgz_uid){
+		    var url="//hao.qudong.com/api_guanzhu";
+			var gz_uid = $.cookie('uid');
+			if(!gz_uid){
+                is_login();
+			}else{
+				$.post(url,{bgz_uid:bgz_uid,gz_uid:gz_uid},function(e){
+                    if(e.status == 1){
+                        success(e.msg);
+                    }else {
+                        error(e.msg);
+                    }
+                    $(".guanzhu").html(e.data);
+				},'json');
+			}
+		}
+    /**
+     * 20180524驱动号api接口_驱动中国技术部
+     */
+    //***********获取首页文章列表******************************
+    var url="//hao.qudong.com/qudong2018_article_list";
+    $.get(url,{limit:10},function (e) {
+        if(e.code == 200){
+            var data = e.data;
+            var html="";
+            for (var i=0;i<10;i++){
+                if(i==9){
+                    html+='<div class="clearfix">';
+                    html+='     <div class="hot-text">';
+                    html+='     <a class="left" href="'+data[i].url+'">';
+                    html+='     <img src="//hao.qudong.com/'+data[i].qudonghao_img+'" width="110" height="65">';
+                    html+='     </a>';
+                    html+='     <h2 class="color-link">';
+                    html+='     <a href="'+data[i].url+'" target="_blank">';
+                    html+=data[i].title;
+                    html+='</a>';
+                    html+=' </h2>';
+					html+=' <div class="pvdate">';
+					html+=' <span class="color-date-from">';
+                    html+=' <a target="_blank" href="//hao.qudong.com/'+data[i].uid+'">';
+                    html+='    '+data[i].nickname;
+                    html+='     </a>';
+                    html+='     </span>';
+					html+=' <span class="color-date-from">'+data[i].created+'</span>';
+                    html+='<a href="javascript:;"></a>';
+                    html+='      <span class="hit f-l">';
+                    if(data[i].pv > 10000){
+                        var pv = data[i].pv/10000;
+                        pv = pv.toFixed(2)+"万";
+                    }else {
+                        var pv = data[i].pv;
+                    }
+                    html+='     <font style="color:#999999;font-size:12px; "><i class="pv1"></i>&nbsp;'+pv+'</font>';
+                    html+=' </span><br>';
+					html+='        </div>';
+                    html+='     </div>';
+                    html+='</div>';
+                }else {
+                    html+='<div class="clearfix">';
+                    html+='     <div class="hot-text">';
+                    html+='     <a class="left" href="'+data[i].url+'">';
+                    html+='     <img src="//hao.qudong.com/'+data[i].qudonghao_img+'" width="110" height="65">';
+                    html+='     </a>';
+                    html+='     <h2 class="color-link">';
+                    html+='     <a href="'+data[i].url+'" target="_blank">';
+                    html+=data[i].title;
+                    html+='</a>';
+                    html+=' </h2>';
+					html+=' <div class="pvdate">';
+					html+=' <span class="color-date-from">';
+                    html+=' <a target="_blank" href="//hao.qudong.com/'+data[i].uid+'">';
+                    html+='     '+data[i].nickname;
+                    html+='     </a>';
+                    html+='     </span>';
+                    html+=' <span class="color-date-from">'+data[i].created+'</span>';
+                    html+='<a href="javascript:;"></a>';
+                    html+='      <span class="hit f-l">';
+                    if(data[i].pv > 10000){
+                        var pv = data[i].pv/10000;
+                        pv = pv.toFixed(2)+"万";
+                    }else {
+                        var pv = data[i].pv;
+                    }
+                    html+='     <font style="color:#999999;font-size:12px; "><i class="pv1"></i>&nbsp;'+pv+'</font>';
+                    html+=' </span><br>';
+					html+='        </div>';
+                    html+='     </div>';
+                    html+='</div>';
+                    html+='<span class="blank20"></span>';
+                }
+            }
+            $('.loading_content').remove();
+            $('#postlist').append(html);
+        }
+    },"json" );
+    var url="//hao.qudong.com/qudong2018_author_list";
+    var uid = $.cookie("uid");
+    if(uid ==undefined){
+        uid = 0;
+    }
+</script>
+</body>
+</html>

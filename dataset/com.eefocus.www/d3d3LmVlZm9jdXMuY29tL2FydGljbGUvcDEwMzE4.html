@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!-- Charset -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="//www.eefocus.com/asset/custom/image/favicon.ico" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+<title>大事要闻：电子业界前沿产业资讯、市场分析、技术方案，以及业内专业人士和与非网编辑团队的深入观察和报道。-与非网</title>
+
+<meta name="copyright" content="Copyright &amp;copy; 2013">
+<meta name="author" content="与非网,eefocus.com">
+<meta name="generator" content="Pi Engine">
+<meta name="keywords" content="电子行业,电子设计,模拟技术,电源技术,嵌入式,射频技术">
+<meta name="description" content="及时报道国内外电子行业最新动态,深度解读电子行业重大事件,权威分析电子行业发展趋势,精选国内外经典电子设计方案,涵盖模拟技术,电源管理,嵌入式技术,射频技术,传感技术,汽车电子,医疗电子,工业控制等多个技术和应用领域。">
+
+<link href="http://asset.semidata.info/new.eefocus.com/module-article/script/article-front.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://asset.semidata.info/new.eefocus.com/theme-eefocus/css/front.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://asset.semidata.info/new.eefocus.com/theme-eefocus/bootstrap/font-awesome/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://asset.semidata.info/new.eefocus.com/theme-eefocus/css/toper.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://asset.semidata.info/new.eefocus.com/theme-eefocus/css/upgrade.css?v=20180824" media="screen" rel="stylesheet" type="text/css">
+<link href="http://asset.semidata.info/new.eefocus.com/module-widget/script/jcarousel/jcarousel.css" media="screen" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="http://static.semidata.info/new.eefocus.com/vendor/jquery/jquery.min.js"></script>
+<!--[if lt IE 10]><script type="text/javascript" src="http://asset.semidata.info/new.eefocus.com/theme-eefocus/js/jPlaceholder.js"></script><![endif]-->
+<script type="text/javascript" src="http://static.semidata.info/new.eefocus.com/custom/widget/scrollWord/scrollWord-min.js"></script>
+<script type="text/javascript" src="http://asset.semidata.info/new.eefocus.com/module-widget/script/jcarousel/jcarousel-min.js"></script>
+
+
+</head>
+
+<body id="pi-article" class="zh-cn">
+    <!-- Top bar: include  entrance -->
+    <!-- Entrance -->
+  <link rel="stylesheet" type="text/css" href="//www.eefocus.com/asset/theme-eefocus/css/header.css?v=2018-1546131212">
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <section class="common-h-wper">
+    <div class="common-h-top">
+      <header class="common-h-outer">
+        <!--Common Nav-->
+        <nav class="common-h-nav">
+          <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eefocus&amp;utm_term=eefocus" class="nav-link active" title="看行业资讯，观技术交流" target="_blank">
+            <span class="brand b-eefocus"></span>
+            <span class="web">与非网</span>
+          </a>
+
+          <a href="//www.eeboard.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eeboard&amp;utm_term=eeboard" class="nav-link" title="评最新板卡、拆热门产品" target="_blank">
+            <span class="brand b-eeboard"></span>
+            <span class="web">爱板网</span>
+          </a>
+          <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=cirmall&amp;utm_termcirmall" class="nav-link" title="看别人设计、晒自己方案" target="_blank">
+            <span class="brand b-cirmall"></span>
+            <span class="web">电路城</span>
+          </a>
+          <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=moore8&amp;utm_term=moore8" class="nav-link" title="做行业名师、学专业技能" target="_blank">
+            <span class="brand b-moore8"></span>
+            <span class="web">摩尔吧</span>
+          </a>
+
+          <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eda&amp;utm_term=bom2buy" class="nav-link" title="比供应报价，推荐最优方案" target="_blank">
+            <span class="brand b-bom2buy"></span>
+            <span class="web">买芯片</span>
+          </a>
+          <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=datasheet5&amp;utm_term=datasheet5" class="nav-link" title="查器件信息，下数据手册" target="_blank">
+            <span class="brand b-d5"></span>
+            <span class="web">元件库</span>
+          </a>
+
+          <a href="//www.stepfpga.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=stepfpga&amp;utm_term=stepfpga" class="nav-link last-link" title="小脚丫" target="_blank">
+            <span class="brand b-step"></span>
+            <span class="web">小脚丫</span>
+          </a>
+        </nav>
+
+        <!--Common login-->
+        <section class="common-h-login">
+          <div class="common-logo-name">
+            <a href="//www.eefocus.com" target="_blank">
+              <img src="//www.eefocus.com/asset/theme-eefocus/image/eefocus-logo-white.png">
+            </a>
+          </div>
+            <ul class="nav navbar-nav navbar-right" id="userBarAnonymous" style="display: none;">
+    <li>
+      <a href="/saml/index/login/?redirect=http%3A%2F%2Fwww.eefocus.com%2Farticle%2Fp10318">
+        登录      </a>
+    </li>
+    <li>
+      <a href="http://account.eefocus.com/user/register?app=pib2a5">
+        注册      </a>
+    </li>
+  </ul>
+  <div class="login-wper" id="userBarMember" style="display: none">
+
+    <!--User-->
+    <div class="member-wper">
+      <a class="member-card-item" id="memberCard" href="#"></a>
+      <div class="member-card-wper" id="memberProfile">
+        <i class="drop-icon"></i>
+        <span class="card-item">
+            <a id="memberName" href="#">
+                名称            </a>
+       </span>
+        <span class="card-item">
+            <a id="member-logout" href="/saml/index/logout/?redirect=http%3A%2F%2Fwww.eefocus.com%2Farticle%2Fp10318">
+                退出            </a>
+        </span>
+      </div>
+    </div>
+    <!--Msg-->
+    <div class="msg-wper">
+      <a id="memberMsg" class="msg-place" href="#">
+        <span class="msg-bell"></span>
+        <span class="msg-point"></span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+        
+    $(function() {
+      $.getJSON("/system/index/user/?" + new Date().getTime(), function(user) {
+        var ela = $('#userBarAnonymous');
+        var elm = $('#userBarMember');
+        if (user.uid > 0) {
+          ela.hide();
+          elm.show();
+          $('#memberMsg').attr('href', user.message);
+          $('#memberCard').attr('href', user.profile).html(user.avatar);
+          $('#memberName').attr('href', user.profile).html(user.name);
+
+          /*show message number*/
+          $.ajax({
+            type: "GET",
+            url: "//www.eefocus.com/activity/m/getCount",
+            dataType: "json",
+            success: function(data) {
+              if (data.status == 1 && data.data > 0) {
+                $('#memberMsg').children('.msg-point').show();
+              } else {
+                $('#memberMsg').children('.msg-point').hide();
+              }
+            }
+          });
+        } else {
+          ela.show();
+          elm.hide();
+        }
+
+      });
+      var cardTimer = null;
+      var $mCard = $('#memberCard');
+      var $mProfile = $('#memberProfile');
+      $mCard.on('mouseover', function() {
+        clearCardTime();
+      }).on('mouseout', function() {
+        cardTime();
+      });
+
+      $mProfile.on('mouseover', function() {
+        clearCardTime();
+      }).on('mouseout', function() {
+        cardTime();
+      });
+
+      function cardTime() {
+        cardTimer = setTimeout(function() {
+          $mCard.css('borderColor','transparent');
+          $mProfile.hide();
+        }, 400);
+      }
+
+      function clearCardTime() {
+        clearTimeout(cardTimer);
+        $mCard.css('borderColor','#d80d1f');
+        $mProfile.show();
+      }
+    })
+  </script>
+        </section>
+        <!--Common wxcode-->
+        <style>
+.pi-ellipsis-moore8{
+    line-height: 1.5;
+    height: 36px;
+    overflow: hidden;
+    display: block;
+}
+</style>
+
+<section class="common-h-wx common-h-login" >
+    <a class="wx-wper-tit" id="wxWperTit" href="javascript:;"><span class="wx-l-logo"></span>技术交流群</a>
+    <div class="wx-wper-con" id="wxWperCon">
+        <img src="https://upload.semidata.info/www.eefocus.com/widget/tmp.5b514488a67f3.jpg" alt="二维码" width="148" height="148">
+        <span class="wx-con-info">添加小编微信，我们会将你拉到相应的技术讨论群</span>
+    </div>
+</section>
+<script type="text/javascript">
+  (function() {
+    var timer,
+        wxWperTit = document.getElementById('wxWperTit'),
+        wxWperCon = document.getElementById('wxWperCon');
+    wxWperTit.onmouseover = wxWperCon.onmouseover = function() {
+        clearTimeout(timer);
+        wxWperCon.style.display = "block";
+    }
+    wxWperTit.onmouseout = wxWperCon.onmouseout = function() {
+        timer = setTimeout(function() {
+            wxWperCon.style.display = "none";
+        },500);
+    }
+  })();
+</script>
+      </header>
+    </div>
+    <div class="common-h-bottom">
+      <header class="common-h-outer">
+        <!--Common Search-->
+        <section class="common-h-search">
+          <form id="form1" action="//search.eefocus.com/s" name="form1" target="_blank">
+
+            <div class="common-input-group">
+              <input type="hidden" name="app_id" value="1001">
+              <input type="text" class="common-form-control" gtbfieldid="2" autocomplete="off" name="q" value="" maxlength="100" placeholder="请输入关键词&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搜资讯查资料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;找开发板寻电路方案">
+              <span class="common-input-group-btn">
+                  <button class="common-btn" type="submit" name="sub" value="1">搜索</button>
+              </span>
+            </div>
+          </form>
+        </section>
+      </header>
+    </div>
+  </section>
+
+    
+    <script type="text/javascript">
+        // org.openx.SWFObject.prototype.addParam=function () {
+        //     this.params[arguments[0]]=arguments[1];
+        //             if(!this.params['wmode']){
+        //                 this.params['wmode']="transparent";
+        //             }
+        // }
+    </script>
+
+    <!-- Site logo bar -->
+    <style>
+.pull-right-ads {
+    height: 60px;
+    margin-top: 3px;
+    background-color: transparent;
+}
+.logo-bar{
+    margin-top: 20px;
+    margin-bottom: 18px;
+}
+.logo-bar a {
+    text-decoration: none;
+}
+</style>
+<div class="container logo-bar">
+    <div class="pull-left">
+        <a href="http://www.eefocus.com"
+           title="与非网">
+            <img id="logoPic" src="http://asset.semidata.info/new.eefocus.com/theme-eefocus/image/logo.png"
+                 class="img-responsive">
+        </a>
+    </div>
+   
+    <!-- Ads -->
+    <div class="pull-right pi-banner-ad pull-right-ads">
+        <!-- /* [id210] 与非网主站 - 文章页logo右侧矩形广告位（583×60） */ -->
+<!--/*
+*
+* Revive Adserver Asynchronous JS Tag
+* - Generated with Revive Adserver v3.2.4
+*
+*/-->
+<ins data-revive-zoneid="210" data-revive-id="938569507b5eec61bf3aa452464fb480"></ins>
+<script async src="//gg.eefocus.com/www/delivery/asyncjs.php"></script>
+    </div>
+    <!-- Ads -->
+</div>
+<script type="text/javascript">
+(function($) {
+    var designModule = {
+        init: function() {
+            var logoSrc = '',
+            logoName = 'logo',
+            picStyle = 'png',
+            pageModal = 'article';
+
+            switch(pageModal) {
+                case 'embedded':
+                    logoName = pageModal;
+                    break;
+                case 'component':
+                    logoName = pageModal;
+                    break;
+                case 'analog-power':
+                    logoName = pageModal;
+                    break;
+                case 'medical-electronics':
+                    logoName = pageModal;
+                    break;
+                case 'sensor':
+                    logoName = pageModal;
+                    break;
+                case 'automobile-electronics':
+                    logoName = pageModal;
+                    break;
+                case 'rf-microwave':
+                    logoName = pageModal;
+                    break;
+                case 'consumer-electronics':
+                    logoName = pageModal;
+                    break;
+                case 'test-measurement':
+                    logoName = pageModal;
+                    break;
+                case 'industrial-electronics':
+                    logoName = pageModal;
+                    break;
+                case 'mcu-dsp':
+                    logoName = pageModal;
+                    break;
+                case 'communication':
+                    logoName = pageModal;
+                    break;
+                case 'fpga':
+                    logoName = pageModal;
+                    break;
+                case 'eda-pcb':
+                    logoName = pageModal;
+                    break;
+                default:
+                    logoName = 'logo';
+            }
+
+            if(logoName == 'logo') {
+                picStyle = 'png';
+            } else {
+                picStyle = 'jpg';
+            }
+
+            logoSrc = "http://asset.semidata.info/new.eefocus.com/theme-eefocus/image/"+ logoName +"."+ picStyle +"";
+
+            $('#logoPic').attr('src', logoSrc);
+        }
+    };
+    window.designModule = designModule;
+})(jQuery);
+
+// 设计技巧Logo更换
+designModule.init();
+    
+
+</script>
+
+    <!-- Navbar -->
+        <div class="container">
+        <div class="navbar navbar-default">
+            <ul class="nav navbar-nav pi-navbar-nav">
+    <li>
+        <a href="/">首页</a>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/article">大事要闻</a>
+        <ul>
+            <li>
+                <a href="http://www.eefocus.com/embedded/">嵌入式系统</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/component">基础器件</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/analog-power">模拟/电源</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/medical-electronics">医疗电子</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/sensor">传感技术</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/automobile-electronics">汽车电子</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/rf-microwave">射频/微波</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/consumer-electronics">消费电子</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/test-measurement">测试测量</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/industrial-electronics">工业电子</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/mcu-dsp/">控制器/处理器</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/communication/">通信/网络</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/fpga/">可编程逻辑</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/eda-pcb/">EDA/PCB</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/article/tag/可穿戴设备">可穿戴设备</a>
+            </li>
+            <li>
+                <a href="http://www.eefocus.com/article/tag/物联网">物联网</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/original">与非原创</a>
+    </li>
+    <li>
+        <a href="/NPI">新品发布</a>
+    </li>
+    <li>
+        <a href="/document">资料下载</a>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/blog">博客空间</a>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/interaction">精彩活动</a>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/resource">资源中心</a>
+    </li>
+    <li>
+        <a href="http://www.eefocus.com/enewsletter/">资讯合辑</a>
+    </li>
+    <li>
+        <a href="javascript:void(0)">社区汇</a>
+        <ul>
+            <li>
+                <span>模拟/射频/电源社区</span>
+                <ul>
+                    <li>
+                        <a href="http://adi.eefocus.com/" target="_blank">Power by Linear 技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://analog.eefocus.com/" target="_blank">模拟与电源技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://rf.eefocus.com/">射频微波技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://rohm.eefocus.com" target="_blank">ROHM技术社区</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>MCU/嵌入式社区</span>
+                <ul>
+                    <li>
+                        <a href="http://www.infineonic.org/" target="_blank">英飞凌技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://microchip.eefocus.com/" target="_blank">Microchip技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://www.nxpic.org/" target="_blank">恩智浦技术社区</a>
+                    </li>
+                    <li>
+                        <a href="http://www.stmcu.org.cn/" target="_blank">意法半导体STM8/STM32社区</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>PLD/FPGA社区</span>
+                <ul>
+                    <li>
+                        <a href="http://www.openhw.org/" target="_blank">OpenHW开源硬件社区</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>生态圈</span>
+                <ul>
+                    <li>
+                        <a href="http://mm.nxpic.org" target="_blank">恩智浦智慧联网生态圈</a>
+                    </li>
+                    <li>
+                        <a href="https://www.infineon-autoeco.com/Home/Index" target="_blank">英飞凌汽车电子生态圈</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+            <script>
+                jQuery(function($){
+                    /* Fixed navbar dropdown-menu style */
+                    var $lastNav = $('.pi-navbar-nav > li:last');
+                    $lastNav.addClass('pi-navbar-nav-last');
+                    $lastNav.find('ul').removeClass('dropdown-menu').addClass('list-unstyled');
+                    var count = 0, width = 0;
+                    $lastNav.find('ul:first > li').each(function (){
+                        count++;
+                    });
+                    width = count * 155 + 54;
+                    $lastNav.find('ul:first').css('width', width + 'px');
+                    var channelNav = $('.pi-navbar-nav > li:nth-child(2)');
+                    channelNav.addClass('channel-nav');
+                    channelNav.find('ul').removeClass('dropdown-menu').addClass('sub-channel');
+
+                    var module = 'article';
+                    if ('article' === module) {
+                        $('.pi-navbar-nav > li:nth-child(2)').addClass('active');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Flash messenger -->
+        
+        <!-- Blocks starts -->
+                        <div class="pi-zone-1">
+            <div class="panel panel-default widget-second_title">
+    <div class="panel-body"><style type="text/css">
+.navbar-default .navbar-nav > li > a {padding:15px 32px;}</style>
+<style type="text/css">
+.resource-nav {
+/*        line-height: 28px;
+*/        border-style: none solid solid;
+        border-width: 0 1px 1px;
+        border-color: #e6e5e5;
+        display: table;
+        min-height: 50px;
+        width: 100%;
+    }
+    .resource-nav > strong {
+        color: #222;
+        display: table-cell;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        width: 88px;
+    }
+    .resource-nav > div {
+        display: table-cell;
+        padding: 8px 0 8px 0;
+        vertical-align: middle;
+    }
+    .resource-nav a {
+        color: #969696;
+        display: inline-block;
+        margin-right: 12px;
+        vertical-align: middle;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .container .navbar.navbar-default {
+        margin-bottom: 0;
+    }</style>
+<div class="resource-nav">
+	<p style="color: #969696; display: table-cell; font-size: 13px; text-align: center; vertical-align: middle; width: 76px;">
+		看点 :</p>
+	<div>
+		<a class="article-front-title" href="http://www.eefocus.com/tag/%E7%9B%98%E7%82%B92018" target="_blank" title="盘点2018">盘点2018 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eeboard.com/" target="_blank" title="开发板"> 开发板 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.cirmall.com/" target="_blank" title="电路方案"> 电路方案 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.moore8.com/" target="_blank" title="在线课程"> 在线课程 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.bom2buy.com" target="_blank" title="芯片全球购"> 芯片全球购 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" target="_blank" title="人工智能"> 人工智能 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E6%83%85%E6%8A%A5%E5%B1%80" target="_blank" title="与非情报局">与非情报局 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E8%A7%82" target="_blank" title="芯片世界观"> 芯片世界观 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E4%B8%AD%E5%9B%BD%E8%8A%AF%E5%8A%BF%E5%8A%9B" target="_blank" title="芯势力"> 芯势力 </a> <span style="color: #969696;margin-right: 11px;">|</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E8%8A%AF%E9%A2%86%E8%A2%96" target="_blank" title="芯领袖"> 芯领袖 </a> <span style="color: #969696;margin-right: 11px;">｜</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E8%A7%A3%E7%A0%81" target="_blank" title="与非解码"> 与非解码 </a> <span style="color: #969696;margin-right: 11px;">｜</span> <a class="article-front-title" href="http://www.eefocus.com/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE" target="_blank" title="芯地图"> 芯地图 </a></div>
+</div>
+</div></div>
+<div class="panel panel-default widget-rolling-info-home">
+    <div class="panel-body"><style type="text/css">
+    #js-up li {
+        background-position: left 8px;
+    }
+    .last-item {
+        margin: 3px 16px 0 0;
+    }
+    .col-wrap {
+        padding: 11px 8px 10px 10px;
+        height: 67px;
+        width: 190px;
+        background: #f5f5f5;
+        border: 1px solid #e6e6e6;
+        overflow: hidden;
+    }
+    .col-wrap li {
+        height: auto;
+        line-height: 17px;
+    }
+    .scrollwrap {
+        height: 67px;
+        overflow: hidden;
+    }
+    .gg725 {
+        width: 725px;
+        height: 90px;
+        float: left;
+    }
+    .gg725 img,
+    .gg725 embed {
+        display: block;
+    }
+    .scrollwrap ul li {
+    margin-bottom: 6px;
+    padding-left: 0px;
+    background: none !important;
+    line-height: 17px !important;
+    *zoom: 1;
+    }
+</style>
+
+<div class="widget-rolling-news ">
+    <div class="gg725"><!-- /* [[id207] 与非网主站 - 文章页导航栏下方矩形广告位（728×90）） */ -->
+<!--/*
+*
+* Revive Adserver Asynchronous JS Tag
+* - Generated with Revive Adserver v3.2.4
+*
+*/-->
+<ins data-revive-zoneid="207" data-revive-id="938569507b5eec61bf3aa452464fb480"></ins>
+<script async src="//gg.eefocus.com/www/delivery/asyncjs.php"></script></div>
+    <div class="pull-right col-wrap">
+        <div class="scrollwrap">
+            <ul id="js-up"  class="list">
+
+
+                
+                                    <li>
+                    <a title="BOOM！2019来点不一样，电源大师元旦首炸福利来袭~" target="" href="http://www.moore8.com/courses/2360">
+                        BOOM！2019来点不一样，电源大师元旦首炸福利来袭~                    </a>
+
+                </li>
+                    
+
+                                        
+                                    <li>
+                    <a title="【邀请函】5G攻略——从仿真设计到测试验证 @苏州 1月8日" target="" href="http://www.insight-china.cn/conference/Admin/Attender/Register/3111?uedm=EEfocus&amp;LiveShowUrl=">
+                        【邀请函】5G攻略——从仿真设计到测试验证 @苏州 1月8日                    </a>
+
+                </li>
+                    
+
+                                        
+                                    <li>
+                    <a title="【免费申请】OSC802 PC示波器——虚拟示波器还有明天吗？" target="" href="http://www.eeboard.com/bbs/thread-102253-1-1.html">
+                        【免费申请】OSC802 PC示波器——虚拟示波器还有明天吗？                    </a>
+
+                </li>
+                    
+
+                                        
+                    
+
+                    
+                <li>
+                    <a title="http://www.eeboard.com/bbs/thread-102253-1-1.html" target="" href="http://www.eeboard.com/bbs/thread-102253-1-1.html">
+                        <img src="https://eeb-edm.eefcdn.com/334-67%E8%99%9A%E6%8B%9F%E7%A4%BA%E6%B3%A2%E5%99%A8.jpg"   style="width:334px;height:67px;"/>
+                    </a>
+                </li>
+                                        
+                                    <li>
+                    <a title="恩智浦LPC54018物联网模块OM40007，让你的方案更快落地" target="" href="http://www.eefocus.com/NPI/23">
+                        恩智浦LPC54018物联网模块OM40007，让你的方案更快落地                    </a>
+
+                </li>
+                    
+
+                                        
+                                    <li>
+                    <a title="学习Qorvo移动放大器，送保暖围巾！" target="" href="http://rf.eefocus.com/module/forum/thread-611127-1-1.html">
+                        学习Qorvo移动放大器，送保暖围巾！                    </a>
+
+                </li>
+                    
+
+                                        
+                                    <li>
+                    <a title="爱板六周年庆奖品加码啦，看看有没有你想要的？" target="" href="http://www.eeboard.com/bbs/thread-101943-1-1.html">
+                        爱板六周年庆奖品加码啦，看看有没有你想要的？                    </a>
+
+                </li>
+                    
+
+                                        
+                    
+
+                    
+                <li>
+                    <a title="http://www.stmcu.org.cn/module/forum/thread-618204-1-1.html?jjq" target="" href="http://www.stmcu.org.cn/module/forum/thread-618204-1-1.html?jjq">
+                        <img src="http://upload.semidata.info/www.eefocus.com/ckeditor/images/334_67(2).png"   style="width:334px;height:67px;"/>
+                    </a>
+                </li>
+                                        
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    new ScrollWord('js-up');
+</script>
+</div></div>
+        </div>
+        
+        <!--Breadcrumb starts-->
+                <!--Breadcrumb ends-->
+
+        <div class="row">
+            <div class="pi-zone-wrap">
+                <div class="col-xs-8">
+                                        <div class="pi-zone-2">
+                        <div class="panel panel-default widget-rediantuijian rediantuijian">
+    <div class="panel-heading">
+                        <span class="pi-icon-dot-o"></span>
+                        <div class="pi-panel-heading-inner">热点推荐</div>
+                    </div><div class="panel-body"><div id="carousel-5c28170cd99e1" class="jcarousel-skin">
+    <ul>
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E7%A1%AC%E8%A7%A6%E8%A7%92">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.583bd7e322759.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E7%A1%AC%E8%A7%A6%E8%A7%92" title="硬件技术不稀奇" class="link">硬件技术不稀奇</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.56d7cfeebb156.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E5%9C%B0%E5%9B%BE" title="描画一个芯片的世界地图" class="link">描画一个芯片的世界地图</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E8%A7%82">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.583bd67e50114.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E7%89%87%E4%B8%96%E7%95%8C%E8%A7%82" title="芯片产业热点事件的深入分析" class="link">芯片产业热点事件的深入分析</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/e%E4%B8%96%E7%BB%98">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.583bd6c390ce1.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/e%E4%B8%96%E7%BB%98" title="看清电子产业都在发生什么" class="link">看清电子产业都在发生什么</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E9%A2%86%E8%A2%96">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.583bd7856728b.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E8%8A%AF%E9%A2%86%E8%A2%96" title="这一波本土芯片大佬都什么来头" class="link">这一波本土芯片大佬都什么来头</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E5%A5%BD%E6%9C%BA%E5%8F%8B">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.583bdaad30d9e.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E5%A5%BD%E6%9C%BA%E5%8F%8B" title="手机圈好乱？" class="link">手机圈好乱？</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/article/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%B6%A3%E4%BA%8B%E4%B8%80%E7%AE%A9%E7%AD%90">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.54d337b8f1e3b.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/article/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%B6%A3%E4%BA%8B%E4%B8%80%E7%AE%A9%E7%AD%90" title="程序员在工作中到底是怎样的？" class="link">程序员在工作中到底是怎样的？</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%AD%E5%9B%BD%E8%8A%AF%E5%8A%BF%E5%8A%9B">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.5c18b5b55b040.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%AD%E5%9B%BD%E8%8A%AF%E5%8A%BF%E5%8A%9B" title="本土芯片企业都在做什么" class="link">本土芯片企业都在做什么</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E8%A7%A3%E7%A0%81">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.5c18b5b5d15c9.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E8%A7%A3%E7%A0%81" title="剥开产业真相" class="link">剥开产业真相</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/tag/%E8%B6%A3%E7%A7%91%E6%8A%80">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.5c18b5f1d86f7.jpg" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/tag/%E8%B6%A3%E7%A7%91%E6%8A%80" title="科技有意思" class="link">科技有意思</a>
+            </div>   
+                <li class="jcarousel-item"> 
+            <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E6%83%85%E6%8A%A5%E5%B1%80">
+                <img src="http://upload.semidata.info/new.eefocus.com/widget/tmp.5c18b61487681.png" style="height:114px;width:152px;" >
+            </a>
+            <div style="text-align:center;margin-top:5px;">
+                <a target="_blank" href="http://www.eefocus.com/tag/%E4%B8%8E%E9%9D%9E%E6%83%85%E6%8A%A5%E5%B1%80" title="产业链全面梳理" class="link">产业链全面梳理</a>
+            </div>   
+           
+    </ul>  
+</div>
+<script>
+$('#carousel-5c28170cd99e1').jcarousel({
+    auto: 4,
+    wrap: 'circular',
+    initCallback: function($jcarousel) {
+        $jcarousel.container.hover(function() {
+            $jcarousel.stopAuto();
+        }, function() {
+            $jcarousel.startAuto();
+        });
+    }
+});   
+</script></div></div>
+<div class="panel panel-default widget-hottag">
+    <div class="panel-body"><style>
+    #pi-block-widget-hottag {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+</style>
+<div class="clearfix">
+    <strong class="pull-left muted" style="margin-top:4px">热门标签:</strong>
+    <div style="line-height:20px;margin:0 0 0 70px;">
+                <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/%E5%B0%8F%E7%B1%B3">小米</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/STM32">STM32</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/%E6%99%BA%E8%83%BD%E7%A1%AC%E4%BB%B6">智能硬件</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/LED%E9%A9%B1%E5%8A%A8%E5%99%A8">LED驱动器 </a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6">电动汽车</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/article/tag/NFC">NFC</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/%E6%9C%BA%E5%99%A8%E4%BA%BA">机器人</a>
+                        <a class="mr10 muted" target="_blank" href="http://www.eefocus.com/tag/SOC">SOC</a>
+                    </div>
+</div></div></div>
+                    </div>
+                                                            <div class="pi-zone-module"><div class="main-block">
+    <div class="tech-classify">
+        <strong>技术分类:</strong>
+        <div>
+                         <a class="mr10" target="_blank" href="/analog-power/list" title="模拟/电源">模拟/电源</a>
+                         <a class="mr10" target="_blank" href="/sensor/list" title="传感技术">传感技术</a>
+                         <a class="mr10" target="_blank" href="/rf-microwave/list" title="射频/微波">射频/微波</a>
+                         <a class="mr10" target="_blank" href="/test-measurement/list" title="测试测量">测试测量</a>
+                         <a class="mr10" target="_blank" href="/mcu-dsp/list" title="控制器/处理器">控制器/处理器</a>
+                         <a class="mr10" target="_blank" href="/embedded/list" title="嵌入式系统">嵌入式系统</a>
+                         <a class="mr10" target="_blank" href="/fpga/list" title="可编程逻辑">可编程逻辑</a>
+                         <a class="mr10" target="_blank" href="/eda-pcb/list" title="EDA/PCB">EDA/PCB</a>
+                         <a class="mr10" target="_blank" href="/component/list" title="基础器件">基础器件</a>
+                         <a class="mr10" target="_blank" href="/communication/list" title="通信/网络">通信/网络</a>
+                         <a class="mr10" target="_blank" href="/automobile-electronics/list" title="汽车电子">汽车电子</a>
+                         <a class="mr10" target="_blank" href="/medical-electronics/list" title="医疗电子">医疗电子</a>
+                         <a class="mr10" target="_blank" href="/consumer-electronics/list" title="消费电子">消费电子</a>
+                         <a class="mr10" target="_blank" href="/industrial-electronics/list" title="工业电子">工业电子</a>
+                   </div>
+    </div>
+
+    <div class="panel panel-default panel-main">
+        <div class="panel-heading">
+            <span class="pi-icon-dot-o"></span>
+            <div class="pi-panel-heading-inner">
+                <div class="pull-right">
+                                            <a href="/article/list-news" title="新闻">新闻</a>
+                                            <a href="/article/list-product" title="新品">新品</a>
+                                            <a href="/article/list-design" title="技术方案">技术方案</a>
+                                        <span style="margin: 0 -3px 0 12px; color: #555; font-family: arial;">&middot;</span>
+                    <a href="/article/list" title="更多">更多</a>
+                </div>
+                最新资讯
+            </div>
+        </div>
+
+        <div class="panel-body">
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165701" title="手机电视：方寸之间的较量">手机电视：方寸之间的较量</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        从3G这个名词出现开始，手机电视就是一项被集体看好的3G应用，然而随着技术的发展，手机电视已经不再局限于通信领域，数字广播电视技术也盯上了手机                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 12:05:04<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165700" title="手机电视三大技术之争 中国市场该怎样走？">手机电视三大技术之争 中国市场该怎样走？</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        “随时随地看电视”，一度曾是人们的梦想；如今随着手机电视业务的出现，却正在变成现实。在手机电视的背后，存在着不同的技术阵营之争。这些技术究竟将给我们带来怎样不同的收视体验？它们在中国市场上各自又将走出怎样的路呢？ 
+                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 11:54:16<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165238" title="IPTV系统在酒店VOD上的应用">IPTV系统在酒店VOD上的应用</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                                            </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 11:31:56<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/communication/170549" title="WiMAX主要技术标准">WiMAX主要技术标准</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        WiMAX国际标准、发布的时间以及所适用的范围                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/communication/" title="通信/网络">通信/网络</a>
+                    <span style="color: #969696;">发表于：2006-09-08 11:07:48<span>
+                    <a class="pull-right" href="/article/list-design" title="技术方案">技术方案</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165006" title="数字电视机顶盒 ">数字电视机顶盒 </a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        随着数字视频技术的发展和各国对数字电视的努力推进，数字电视机顶盒已成为人们观念中真正的机顶盒。由于它与电视机紧密联系，且是一种数字化设备，就被称为数字电视机顶盒。 
+                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 11:01:23<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165005" title="数字机顶盒关键技术及交互应用">数字机顶盒关键技术及交互应用</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        本文提出交互式电视是未来有线电视的发展方向，对其重要组成部分的数字机顶盒进行了详细介绍，重点是关键技术和交互应用，最后指出发展数字机顶盒的重要意义。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 10:53:00<span>
+                    <a class="pull-right" href="/article/list-design" title="技术方案">技术方案</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165004" title="数字机顶盒技术综述 （一）">数字机顶盒技术综述 （一）</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        机顶盒（STB，Set Top Box）的概念是比较广泛的。从广义上说，凡是与电视机连接的网络终端设备都可称为机顶盒，从基于有线电视网络的模拟频道增补器、模拟频道解扰器，到将电话线与电视机联系在一起的&quot;上网机顶盒&quot;、数字卫星的综合接收解码器（IRD，Integrated Receive Decoder）、数字地面机顶盒，以及有线电视数字机顶盒都可称为机顶盒。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 10:50:32<span>
+                    <a class="pull-right" href="/article/list-design" title="技术方案">技术方案</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/communication/170548" title="WiMAX组织机构及标准演进状况简介">WiMAX组织机构及标准演进状况简介</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                         WiMAX论坛的主席单位为英特尔公司，论坛主席由该公司的宽带无线部的行销总裁Ron Resnick担任。领导小组由13家公司组成，包括中国的中兴通讯。而高级会员大约有95个，包括中国的华为公司。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/communication/" title="通信/网络">通信/网络</a>
+                    <span style="color: #969696;">发表于：2006-09-08 10:49:15<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165003" title="数字机顶盒技术">数字机顶盒技术</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        机顶盒是目前信息家电中至关重要的技术设备。目前机顶盒的功能已从一个多频率的调谐器和解码器跃升为大量电影、多媒体事件、新闻等联机数据库的一个控制终端                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 10:42:04<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/communication/170547" title="WiMAX技术的发展">WiMAX技术的发展</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        WiMAX技术的演进以及厂商、论坛、国际组织对WiMAX技术的推进                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/communication/" title="通信/网络">通信/网络</a>
+                    <span style="color: #969696;">发表于：2006-09-08 10:01:36<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/164656" title="高清数字电视的发展方向及解决方案">高清数字电视的发展方向及解决方案</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        从用户对高清音视频娱乐的需求来看，高清和数字化是电视发展的必然方向之一                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-08 09:22:58<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165237" title="影响IPTV发展的六大因素">影响IPTV发展的六大因素</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                                            </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 18:10:21<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165236" title="IPTV系统及其发展的影响因素">IPTV系统及其发展的影响因素</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                                            </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 17:56:20<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165235" title="IPTV业务开展中的关键问题">IPTV业务开展中的关键问题</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        随着宽带网络的快速发展，IPTV越来越受到各大运营商的关注。有别于传统的VOD业务，IPTV业务一开始就要求是一个可运营、可管理的业务，同时要求具有电信级的高可靠性。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 17:29:49<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165234" title="IPTV机顶盒发展趋势 ">IPTV机顶盒发展趋势 </a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        传统的硬件IP机顶盒是一种专用设备，包括软件模块和硬件模块。软件模块包括嵌入式操作系统、应用软件。硬件模块根据CPU的不同，分为ASIC专用芯片组、多媒体DSP、X86三种.                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 17:27:10<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165233" title="IPTV促使广电和电信产业融合">IPTV促使广电和电信产业融合</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        IPTV的诞生和发展是市场需求和技术驱动的共同作用。从市场需求来看，近几年电信运营商真正的“杀手级”宽带应用服务还没有出现。IPTV已经大大超出了已往增值服务的范畴，能带给用户的是一种全新的服务形态和消费体验，是宽带应用上的革命。因此IPTV对于目前电信运营商来说将是一项新业务，一个新增长点。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 17:25:42<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165232" title="IPTV市场的五大催化剂 ">IPTV市场的五大催化剂 </a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                         早几年，就有人预言，传统电视将被数字电视取代。然而，在数字电视推广之初，利用宽带传送节目的电视形式——IPTV也大有与数字电视一较高下之意。
+ 2006年，IPTV市场在催化剂的作用下，用户数量迅速猛增，IPTV市场已经趋于成熟。那么，什么是使这个市场快速生长的催化剂呢？                     </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 17:22:40<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/consumer-electronics/165231" title="宽带网络数字电视探究">宽带网络数字电视探究</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        宽带网络数字电视（IPTV）的横空出世，为人们提供了这样的一种家庭电子消费产品。它可以让人们通过互联网，观看世界上各个国家的影视节目，进行VOD点播，浏览最新的信息，第一时间聆听最流行的音乐。IPTV的诞生将为每个家庭打开数字娱乐世界的大门，其强大的互动功能，能将被动地接受信息，转变为主动地索取信息，这将会进一步改变人们的娱乐消费习惯，让普通消费者体会到数字技术所带来的多姿多彩的现代生活                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/consumer-electronics/" title="消费电子">消费电子</a>
+                    <span style="color: #969696;">发表于：2006-09-07 16:57:03<span>
+                    <a class="pull-right" href="/article/list-news" title="新闻">新闻</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/analog-power/171206" title="UPnP协议的来龙去脉">UPnP协议的来龙去脉</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        UPnP基本上是基于现有的技术，将一套协议作为一个集合定义出来，
+并作为一个开放的协议规格对外公开。
+                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/analog-power/" title="模拟/电源">模拟/电源</a>
+                    <span style="color: #969696;">发表于：2006-09-07 13:33:44<span>
+                    <a class="pull-right" href="/article/list-design" title="技术方案">技术方案</a>
+                </div>
+            </div>
+                        <div class="article-box">
+                <div class="article-title-box">
+                    <a class="title" target="_blank" href="/fpga/220613-UCD9240" title="TI将数字电源管理UCD9240成功应用于新一代Xilinx FPGA设计">TI将数字电源管理UCD9240成功应用于新一代Xilinx FPGA设计</a>
+                </div>
+                <div class="clearfix article-desc">
+                                        <p>
+                        日前，德州仪器 (TI) 宣布，Xilinx 在其最新 Virtex®-6 ML605 现场可编程门阵列 (FPGA) 评估套件中采用 TI 电源管理技术简化电源设计。TI Fusion Digital Power™ 控制器可为 FPGA 用户提供高级电源管理功能以及高度的设计灵活性，可实时监控电源系统的工作情况。                    </p>
+                </div>
+                <div class="article-meta">
+                    来自：<a style="margin-right: 40px; color: #165488;" target="_blank" href="/fpga/" title="可编程逻辑">可编程逻辑</a>
+                    <span style="color: #969696;">发表于：1971-05-25 20:41:12<span>
+                    <a class="pull-right" href="/article/list-product" title="新品">新品</a>
+                </div>
+            </div>
+                    </div>
+    </div>
+
+</div>
+
+
+<!--
+See http://developer.yahoo.com/ypatterns/pattern.php?pattern=searchpagination
+-->
+
+<div class="text-center">
+    <ul class="pagination">
+    <!-- First page link -->
+        <li><a href="/article" title="«">«</a>
+        <!-- Previous page link -->
+        <li><a href="/article/p10317" title="‹">‹</a>
+        <!-- Numbered page links -->
+        <li class=""><a href="/article/p10309" title="10309">10309</a>
+        <li class=""><a href="/article/p10310" title="10310">10310</a>
+        <li class=""><a href="/article/p10311" title="10311">10311</a>
+        <li class=""><a href="/article/p10312" title="10312">10312</a>
+        <li class=""><a href="/article/p10313" title="10313">10313</a>
+        <li class=""><a href="/article/p10314" title="10314">10314</a>
+        <li class=""><a href="/article/p10315" title="10315">10315</a>
+        <li class=""><a href="/article/p10316" title="10316">10316</a>
+        <li class=""><a href="/article/p10317" title="10317">10317</a>
+        <li class="active"><a href="/article/p10318" title="10318">10318</a>
+            <!-- Last page link -->
+        </ul>
+</div></div>
+                                                        </div>
+                                <div class="pi-zone-5 col-xs-4">
+                     <div class="panel panel-default widget-article-300250-ad ad-border">
+    <div class="panel-body"><!-- /* [id268] 与非网主站 - 首页&频道首页右侧矩形广告位_300×250  */ -->
+<!--/*
+*
+* Revive Adserver Asynchronous JS Tag
+* - Generated with Revive Adserver v3.2.4
+*
+*/-->
+<ins data-revive-zoneid="268" data-revive-id="938569507b5eec61bf3aa452464fb480"></ins>
+<script async src="//gg.eefocus.com/www/delivery/asyncjs.php"></script>
+<noscript>
+<a target='_blank' href='http://gg.eefocus.com/www/delivery/ck.php?n=7a69efd'>
+<img border='0' alt='' src='http://gg.eefocus.com/www/delivery/avw.php?zoneid=268&amp;n=7a69efd' /></a>
+</noscript>
+</div></div>
+<div class="panel panel-default widget-bom2buy">
+    <div class="panel-body"><style type="text/css">
+/* 2015-4-24 bom2buy add */
+.bom2buy-div-home {
+  background: url("http://www.eefocus.com/asset/theme-eefocus/css/imgss/article-bom2.png") no-repeat;
+  width: 318px;
+  height: 140px;
+  margin-top: 16px;
+}
+
+.bom2buy-div-home .bom-form {
+   margin: 0 auto;
+  width: 280px;
+  height: 32px;
+  position: absolute;
+  top: 98px;
+  left: 20px;
+}
+
+.bom2buy-div-home .enter-bom {
+   float: left;
+  height: 30px;
+  width: 265px;
+  padding-left: 7px;
+  border: 1px solid #ccc;
+  border-right: none;
+  font-size: 13px;
+  color: #fff;
+  outline: 0;
+  background: url(/asset/theme-eefocus/css/imgss/bg-op.png) repeat;
+}
+
+.bom2buy-div-home .enter-bom:focus {
+  outline: 0;
+}
+
+.bom2buy-div-home .search-bom-btn {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 58px;
+  height: 50px;
+  border-top-right-radius:6px;
+  border-bottom-right-radius:6px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.bom2buy-div-home .search-bom-btn .search-img {
+  vertical-align: middle;
+  margin-left: 8px;
+  background: url(/asset/theme-eefocus/css/imgss/cn-search.png) no-repeat 
+
+0 0;
+  width: 58px;
+  height: 50px;
+  text-align: center;
+}</style>
+<script>
+$(function(){
+$("#key").focus(function(){
+   if ($(this).val() == '请输入芯片型号') $(this).val('');
+});
+
+$("#key").blur(function(){
+   if ($(this).val() == '') $(this).val('请输入芯片型号');
+});
+
+})
+</script>
+<div class="bom2buy-div-home">
+	<div style="position:relative;">
+		<form action="http://www.bom2buy.com/search?utm_campaign=BOM2BUYshangxian&amp;utm_medium=search&amp;utm_source=eefocus&amp;utm_content=yizhanshigouwu&amp;utm_term=BOM2BUY" class="bom-form" method="get" name="bom2buy">
+			<input autocomplete="off" class="enter-bom" id="key" name="part" type="text" value="请输入芯片型号" /><button class="search-bom-btn" type="submit">
+			<div class="search-img">
+				&nbsp;</div>
+			</button></form>
+	</div>
+</div>
+</div></div>
+<div class="panel panel-default analog-power-weekly-rank">
+    <div class="panel-heading">
+                        <span class="pi-icon-dot-o"></span>
+                        <div class="pi-panel-heading-inner">资讯点击排行</div>
+                    </div><div class="panel-body"><ul class="list list-rank">
+            <li>
+           <span style="_margin-left:-10px;" class="strong">01</span>
+           <a target="_blank" href="/mcu-dsp/412503" title="DSP到底是个什么鬼？看完你就懂了">
+               DSP到底是个什么鬼？看完你就懂了           </a>       
+            <li>
+           <span style="_margin-left:-10px;" class="strong">02</span>
+           <a target="_blank" href="/consumer-electronics/412534" title="智能音箱大盘点：天猫精灵/小米AI/小度/小豹智能音箱哪个好？">
+               智能音箱大盘点：天猫精灵/小米AI/小度/小豹智能音箱哪个好？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" class="strong">03</span>
+           <a target="_blank" href="/mcu-dsp/388097" title="骁龙835和骁龙660评测对比，为什么只有OPPO R11选择660的“真相”？">
+               骁龙835和骁龙660评测对比，为什么只有OPPO R11选择660的“真相”？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >04</span>
+           <a target="_blank" href="/consumer-electronics/416735" title="2018 款 MacBook Pro续航能力是变差了吗？">
+               2018 款 MacBook Pro续航能力是变差了吗？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >05</span>
+           <a target="_blank" href="/sensor/379412" title="人脸识别坑太多，五大破解方法花式来虐？">
+               人脸识别坑太多，五大破解方法花式来虐？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >06</span>
+           <a target="_blank" href="/mcu-dsp/390452" title="英特尔第八代酷睿评测，全面四核的i5-8250U这么“辣鸡”？">
+               英特尔第八代酷睿评测，全面四核的i5-8250U这么“辣鸡”？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >07</span>
+           <a target="_blank" href="/mcu-dsp/380695" title="一文看懂Exynos8895和骁龙835差异，这个依旧是三星硬伤">
+               一文看懂Exynos8895和骁龙835差异，这个依旧是三星硬伤           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >08</span>
+           <a target="_blank" href="/mcu-dsp/426346" title="国产十大硅晶圆厂商都有哪家企业？">
+               国产十大硅晶圆厂商都有哪家企业？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >09</span>
+           <a target="_blank" href="/mcu-dsp/426229" title="5G时代，联发科能否用AI翻身？">
+               5G时代，联发科能否用AI翻身？           </a>       
+            <li>
+           <span style="_margin-left:-10px;" >10</span>
+           <a target="_blank" href="/communication/366914" title="5G通信中的微基站，这么小有啥用？">
+               5G通信中的微基站，这么小有啥用？           </a>       
+        
+</ul></div></div>
+<div class="panel panel-default remote-list">
+    <div class="panel-heading">
+                        <span class="pi-icon-dot-o"></span>
+                        <div class="pi-panel-heading-inner">技术讨论</div>
+                    </div><div class="panel-body">
+<div class="list-widget common-list">
+    <ul>
+            <li class="">
+            <a href="http://www.stmcu.org.cn/module/forum/thread-618204-1-1.html" 
+               title="ST粉丝狂欢节倒计时"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                ST粉丝狂欢节倒计时            </a>
+        </li>
+            <li class="">
+            <a href="http://www.stmcu.org.cn/module/forum/thread-618751-1-1.html" 
+               title="这是我爱STM8的理由"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                这是我爱STM8的理由            </a>
+        </li>
+            <li class="">
+            <a href="http://jingyan.eeboard.com/activity" 
+               title="本期经验频道推荐试用板卡——物联网套件Thunderboard Sense"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                本期经验频道推荐试用板卡——物联网套件Thunderboard Sense            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/evaluation/aimax/" 
+               title="加拿大血统的组装AI机器人MAX试玩体验"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                加拿大血统的组装AI机器人MAX试玩体验            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/bbs/thread-102019-1-1.html" 
+               title="【原创翻译】ESP8266-基于太阳能与超级电容的湿度传感器"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                【原创翻译】ESP8266-基于太阳能与超级电容的湿度传感器            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/bbs/thread-97892-1-1.html" 
+               title="树莓派+ Kali Linux =便携式的黑客工作站"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                树莓派+ Kali Linux =便携式的黑客工作站            </a>
+        </li>
+            <li class="">
+            <a href="http://rohm.eefocus.com/module/forum/thread-617456-1-1.html" 
+               title="【奖品公布】传感器评测大奖花落谁家，你上榜了吗？"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                【奖品公布】传感器评测大奖花落谁家，你上榜了吗？            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/teardown/airpods-29/" 
+               title="高仿苹果AirPods真无线蓝牙耳机拆解：有你意想不到的惊喜！"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                高仿苹果AirPods真无线蓝牙耳机拆解：有你意想不到的惊喜！            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/bbs/thread-101963-1-1.html" 
+               title="让我用树莓派制造一个绘图机器人"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                让我用树莓派制造一个绘图机器人            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/bbs/thread-101966-1-1.html" 
+               title="【原创翻译】树莓派IP 相机AWS和HLS流"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                【原创翻译】树莓派IP 相机AWS和HLS流            </a>
+        </li>
+            <li class="">
+            <a href="http://www.eeboard.com/bbs/thread-102095-1-1.html" 
+               title="【树莓派+.NET MF打造视频监控智能车】控制篇(树莓派)"
+               class="pi-ellipsis pi-ellipsis-1"
+               target="_blank">
+                【树莓派+.NET MF打造视频监控智能车】控制篇(树莓派)            </a>
+        </li>
+        </ul>
+</div>
+</div></div>
+<div class="panel panel-default remote-all-focus">
+    <div class="panel-heading">
+                        <span class="pi-icon-dot-o"></span>
+                        <div class="pi-panel-heading-inner"><div class="pi-panel-subline"><a href="/tags"target="_blank" style="float:  right;">更多</a></div>大家都在看</div>
+                    </div><div class="panel-body">
+<div class="list-widget focus-list">
+    <ul>
+                <li class="focus-block-div2"><a href="http://www.eefocus.com/tag/华为" target="_blank">
+            华为危机？</a>
+        </li>
+                <li class="focus-block-div2"><a href="http://www.eefocus.com/tag/AI芯片" target="_blank">
+            AI芯片</a>
+        </li>
+                <li class="focus-block-div1"><a href="http://www.eefocus.com/tag/锤子" target="_blank">
+            锤子如何调整</a>
+        </li>
+                <li class="focus-block-div3"><a href="http://www.eefocus.com/tag物联网" target="_blank">
+            物联网何处飞起？</a>
+        </li>
+                <li class="focus-block-div3"><a href="http://www.eefocus.com/tag/苹果" target="_blank">
+            iPhone禁售</a>
+        </li>
+                <li class="focus-block-div1"><a href="http://www.eefocus.com/tag/高通" target="_blank">
+            高通专利</a>
+        </li>
+                <li class="focus-block-div2"><a href="http://www.eefocus.com/tag/英特尔" target="_blank">
+            英特尔架构</a>
+        </li>
+                <li class="focus-block-div2"><a href="http://www.eefocus.com/tag/5G" target="_blank">
+            5G卡位战</a>
+        </li>
+            </ul>
+</div>
+</div></div>
+                </div>
+                           </div>
+         </div>
+
+                 
+                <!-- Blocks ends -->
+
+    </div>
+
+    
+    <!-- WeiXin -->
+    <script src="https://www.eefcdn.com/vendor/qrcode/qrcode.js"></script>
+
+    <!-- Footer: sitelink -->
+    <div class="footer pi-footer text-center">
+      <div>
+          <div>
+              <a href="/corp/aboutEefocus.html" title="关于我们">关于我们</a> |
+              <a href="/corp/contact.html" title="联系我们">联系我们</a> |
+              <a href="/corp/EefocusHr.html" title="加入我们">加入我们</a> |
+              <a href="/corp/OnlineService.html" title="客户服务">客户服务</a> |
+              <a href="/corp/law.html" title="相关法律">相关法律</a> |
+              <a href="/corp/map.html" title="网站地图">网站地图</a> |
+              <a href="/page/app/" title="客户端">客户端</a> |
+              <a href="/corp/link.html" title="友情链接">友情链接</a> |
+              <a href="//www.eefocus.com/feedback/" title="建议指正">建议指正</a> |
+              <a target="_blank" href="//weibo.com/eefocus" class="fc" title="@与非网"><i class="wb-icon"></i>@与非网</a>
+          </div>
+          <div>
+              &copy; 2010 - 2018 苏州灵动帧格网络科技有限公司 版权所有. <br>
+              ICP经营许可证 苏B2-20140176&nbsp;
+              <a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备14012660号-6</a><br>
+              <div style="width:300px;margin:0 auto; padding:5px 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001874" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src='//upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png' lazysrc="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">苏公网安备 32059002001874号</p></a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script async src="//gg.eefocus.com/www/delivery/asyncjs.php"></script>
+    <script>
+        // 右侧二维码
+        eef_qrcode.init();
+        
+        /* Reset jcarousel when resize window */
+        (function(){
+            if ((window.styleMedia || window.matchMedia) && $('.jcarousel-skin').length) {
+                var resetJcarousel;
+                $(window).resize(function(){
+                    $(window).unbind('resize.jcarousel');
+                    $('.jcarousel-skin > div').data('jcarousel').stopAuto();
+                    if (resetJcarousel) {
+                        clearTimeout(resetJcarousel);
+                    }
+                    resetJcarousel = setTimeout(function() {
+                        try {
+                            var $jcarouselSkin = $('.jcarousel-skin');
+                            var $ul = $jcarouselSkin.find('ul');
+                            var $li = $('.jcarousel-item');
+                            $ul.removeClass().css({
+                                width: 'auto',
+                                overflow: 'visible'
+                            });
+                            $li.removeClass().css({
+                                'float': 'none'
+                            }).addClass('jcarousel-item');
+                            $jcarouselSkin.html($('.jcarousel-skin ul').parent().html());
+                            $jcarouselSkin.jcarousel({
+                                auto: 4,
+                                wrap: 'circular',
+                                initCallback: function($jcarousel) {
+                                    $jcarousel.container.hover(function() {
+                                        $jcarousel.stopAuto();
+                                    }, function() {
+                                        $jcarousel.startAuto();
+                                    });
+                                }
+                            });
+                        } catch(e) {}
+                    }, 400);
+                });
+            }
+        })();
+    </script>
+
+    <script>
+        if (!Function.prototype.bind) {
+            Function.prototype.bind = function (oThis) {
+                if (typeof this !== "function") {
+                    // closest thing possible to the ECMAScript 5
+                    // internal IsCallable function
+                    throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+                }
+
+                var aArgs = Array.prototype.slice.call(arguments, 1),
+                fToBind = this,
+                fNOP = function () {},
+                fBound = function () {
+                  return fToBind.apply(this instanceof fNOP && oThis
+                         ? this
+                         : oThis,
+                         aArgs.concat(Array.prototype.slice.call(arguments)));
+                };
+
+                fNOP.prototype = this.prototype;
+                fBound.prototype = new fNOP();
+
+                return fBound;
+            };
+        }
+    </script>
+                 <img src="//analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&zone=EE_article" style="display:none;"  />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1502657-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-8']);
+  _gaq.push(['new._trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-10']);
+  _gaq.push(['new._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type='text/javascript'><!--//<![CDATA[
+
+var browser={
+    versions:function(){
+           var u = navigator.userAgent, app = navigator.appVersion;
+           return {
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+         }(),
+         language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+if (browser.versions.mobile != true){
+
+   var ox_u = 'http://gg.eefocus.com/www/delivery/al.php?zoneid=339&target=_blank&layerstyle=simple&align=center&valign=middle&padding=2&closetime=8&padding=2&shifth=0&shiftv=0&closebutton=t&backcolor=FFFFFF&bordercolor=000000';
+   if (document.context) ox_u += '&context=' + escape(document.context);
+   document.write("<scr"+"ipt type='text/javascript' src='" + ox_u + "'></scr"+"ipt>");
+
+}
+//]]>--></script>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F644a837956e91928688d4a74b9917d47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5499aafcda37a38c5f0000b5.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+<script>
+ (function(){
+       var bp = document.createElement('script');
+       var curProtocol = window.location.protocol.split(':')[0];
+       if(curProtocol === 'https'){
+           bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }else{
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+           var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+<!-- track for url.eefocus.com for PI short links -->
+<script type="text/javascript">
+window.onload = function() {
+    var _pi = document.getElementsByClassName('widget-PI专区');
+    if(_pi) {
+        var _pi_a = _pi[0];
+        if(_pi_a) {
+            var _pageLinks = _pi[0].getElementsByTagName('a');
+            for(var i = 0; i <_pageLinks.length; i++) {
+                _pageLinks[i].onclick = function() {
+                    var url = this.toString() || '';
+                    if (url.indexOf('url.eefocus.com') != -1) {
+                        _gaq.push(['new._trackPageview',url]);
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
+<script type="text/javascript" src="http://asset.semidata.info/new.eefocus.com/theme-eefocus/js/front.js"></script>
+
+</body>
+</html>

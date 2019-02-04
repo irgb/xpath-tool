@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.highConcurrency = false; //高压开关
+    var WEB_URL = 'http://www.ebrun.com';
+    var WAP_URL = 'http://m.ebrun.com';
+    var RESOURCE_URL = 'http://imgs.ebrun.com';
+    var IMGS_URL = 'http://imgs.ebrun.com';
+    var U_URL = 'http://u.ebrun.com';
+    var API_URL = 'http://api.ebrun.com';
+    var IMAGE_ONERROR = 'http://imgs.ebrun.com' + '/master/images/img_system_logo.png';
+    var DATE_LOCAL = '2018-12-29 14:08:22';
+</script>
+
+<html lang="ZH">
+<head>
+    <meta charset="UTF-8">
+    <!-- saved from url=(0014)about:internet -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="mobile-agent" content="format=xhtml; url=http://m.ebrun.com/314630.html">
+    <meta name="keywords" content='除了“拼爹” 生鲜新零售还能怎么做？,生鲜,零售,社区生鲜,阿里巴巴,腾讯,京东'/>
+    <meta name="description" content='今年已经披露的融资事件中，生鲜新零售占生鲜行业总数的比重超过了的50%，资本的偏爱可谓有目共睹。'/>
+                                                                                                                                                                                                                        <title>除了“拼爹” 生鲜新零售还能怎么做？-其他-亿邦动力网</title>
+    <script type="text/javascript">
+        var articleId = '314630';
+        var styleType = '1';
+        var articleTitle = '除了“拼爹” 生鲜新零售还能怎么做？';
+        var articleUrl = 'http://www.ebrun.com/20181229/314630.shtml';
+        var articleImage = 'http://imgs.ebrun.com/resources/2018_12/2018_12_29/20181229_1546063699823.jpg';
+        var ebrunLevel1 = '2001';
+        var ebrunLevel2 = '2184';
+        var ebrunLevel3 = '2137';
+        var ebrunLevel4 = '0';
+        var nodeId = 'article';
+        var corpId = '1';
+        var price = '0.0';
+    </script>
+    <script src="http://imgs.ebrun.com/master/script/lib/jquery-1.11.1.min.js"></script>
+<script src="http://imgs.ebrun.com/master/script/special.js"></script>
+<!--[if lt IE 9]>
+<script src="http://imgs.ebrun.com/master/script/lib/html5shiv.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://imgs.ebrun.com/master/style/xiangqing.css"/>
+</head>
+<body>
+<!-- top -->
+<!-- 吸顶条 登录 -->
+<script>
+    // 根据JS变量决定是否尝试读取COOKIE里的用户信息身份, 如果没有登录就 继续通过接口获取登录用户信息
+    if (window.highConcurrency) {
+        //尝试获取COOKIE里的值
+        function _getCookie(key) {
+            var cookieString = document.cookie;
+            var start = cookieString.indexOf(key + "=");
+            if (start != -1) {
+                var start = start + key.length + 1;
+                var end = cookieString.indexOf(";", start);
+                if (end == -1) {
+                    end = cookieString.length;
+                }
+                return cookieString.substring(start, end);
+            }
+            return null;
+        }
+        function getAvatarPath(uid) {
+            //返回 高位补0的9位数字的特定格式 '001/52/32/02'
+            return ('000000000' + (uid || '')).slice(-9).replace(/(\d{2})(?=(?:\d{2})+$)/g, '$1/');
+        }
+        var trackUname = decodeURIComponent(_getCookie('trackUname'));
+        var trackUid = _getCookie('trackUid');
+        if (trackUname && trackUid) {
+            //拼装用户信息显示效果
+            var my_uid = trackUid;
+            var my_username = trackUname;
+            var trackUid_str = getAvatarPath(trackUid);
+            var my_avatar = 'http://dev.ebrun.com/2009/uc/data/avatar/' + trackUid_str + '_real_avatar_big.jpg';
+
+            document.write('<div class="g-top-bar"><header class="g-top-bar-panel"><nav class="g-top-bar-nav"><span class="first"><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="1" href="http://www.ebrun.com" title="亿邦首页" target="_blank">亿邦首页</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="2" href="http://www.ebrun.com/retail/" title="零售电商" target="_blank">零售电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="3" href="http://www.ebrun.com/intelligent/" title="智能商业" target="_blank">智能商业</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="4" href="http://www.ebrun.com/b2b/" title="产业电商" target="_blank">产业电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="5" href="http://www.ebrun.com/fto/" title="跨境电商" target="_blank">跨境电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="6" href="http://www.ebrun.com/intl/" title="国际电商" target="_blank">国际电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="7" href="http://www.ebrun.com/conference/" title="电商会议" target="_blank">电商会议</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="8" href="http://www.ebrun.com/feng/" title="电商学院" target="_blank">电商学院</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="9" href="http://www.ebrun.com/about/yanjiuyuan.html" title="研究咨询" target="_blank">研究咨询</a></span></nav>' +
+                '<ul class="g-top-bar-user"><li class="user"><a rel="nofollow" title="' + my_username + '"  class="user-head"><img src="' + my_avatar + '" alt="" onerror="this.onerror=null;this.src=\'http://dev.ebrun.com/2009/uc/images/noavatar_small.gif\'"></a><a class="user-name"  title="' + my_username + '">' + my_username + '</a></li><li class="g-top-bar-line"></li>' +
+                '<li id="btn-message" class="message" data-dropdown-id="message-dropDown"><a rel="nofollow" href="javascript:void(0);" title="消息">消息</a><!--标记消息的红点--><span id="redDot"></span></li><li class="g-top-bar-line"></li><li id="btn-setting" class="setting" data-dropdown-id="setting-dropDown"><a rel="nofollow" href="javascript:void(0);" title="设置">设置</a></li></ul></header><div class="g-drop-down"><div class="g-drop-down-panel"><div class="dropdown message hide" id="message-dropDown"><p><a rel="nofollow" href="http://u.ebrun.com/notification/comment?eb=com_dtl_func_xlogin" title="">评论&nbsp;&nbsp;<span id="comment"></span></a></p><p><a rel="nofollow" href="http://u.ebrun.com/notification/private-letter" title="">私信&nbsp;&nbsp;<span id="private_letter"></span></a></p><p><a rel="nofollow" href="http://u.ebrun.com/notification/system-message" title="">通知&nbsp;&nbsp;<span id="system_message"></span></a></p></div><!--消息下拉结束--><!--设置下拉--><div class="dropdown setting hide" id="setting-dropDown"><p><a rel="nofollow" href="http://u.ebrun.com/user/profile?eb=com_dtl_func_xlogin" title="账号设置">账号设置</a></p><p><a rel="nofollow" href="http://u.ebrun.com/order/index" title="订单中心">订单中心</a></p><p><a rel="nofollow" href="javascript:void(0);" onclick="document.location.href=\'http://u.ebrun.com/ebrunAuth/logout?refer=\'+encodeURIComponent(window.location.href);return false;" title="退出登录">退出登录</a></p></div><!--设置下拉结束--></div></div></div>');
+            window.topbar_global_status_islogin = 1;
+        } else {
+            document.write('<div class="g-top-bar"><header class="g-top-bar-panel"><nav class="g-top-bar-nav"><span class="first"><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="1" href="http://www.ebrun.com" title="亿邦首页" target="_blank">亿邦首页</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="2" href="http://www.ebrun.com/retail/" title="零售电商" target="_blank">零售电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="3" href="http://www.ebrun.com/intelligent/" title="智能商业" target="_blank">智能商业</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="4" href="http://www.ebrun.com/b2b/" title="产业电商" target="_blank">产业电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="5" href="http://www.ebrun.com/fto/" title="跨境电商" target="_blank">跨境电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="6" href="http://www.ebrun.com/intl/" title="国际电商" target="_blank">国际电商</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="7" href="http://www.ebrun.com/conference/" title="电商会议" target="_blank">电商会议</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="8" href="http://www.ebrun.com/feng/" title="电商学院" target="_blank">电商学院</a></span><span><a eb="com_dtl_nav_xddh" acpos="www.ebrun.com_dtl_nav_xddh" acnum="9" href="http://www.ebrun.com/about/yanjiuyuan.html" title="研究咨询" target="_blank">研究咨询</a></span></nav>' +
+                '<ul class="g-top-bar-login"><li><a eb="com_dtl_func_xdlogin" acpos="www.ebrun.com_dtl_func_xdlogin" href="javascript:void(0);" onclick="document.location.href=\'http://u.ebrun.com/ebrunAuth/login?jump=\'+encodeURIComponent(window.location.href);return false;" rel="nofollow">登录</a></li><li><a eb="com_dtl_func_xdregist" acpos="www.ebrun.com_dtl_func_xdregist" href="javascript:void(0);" onclick="document.location.href=\'http://u.ebrun.com/ebrunAuth/register?jump=\'+encodeURIComponent(window.location.href);return false;" rel="nofollow">注册</a></li></ul></header><div class="g-drop-down"><div class="g-drop-down-panel"></div></div></div>');
+            window.topbar_global_status_islogin = 0;
+        }
+    } else {
+        document.write('<script type="text/javascript" src="http://www.ebrun.com/index/login?for=detail"><\/script>');
+    }
+</script>
+<!-- 吸顶条 登录结束 -->
+
+<!-- 广告通栏 -->
+<aside class="adv-panel hide">
+    <section class="bar-adv" id="ebj_1">
+        <span class="adv-text">广告</span>
+    </section>
+</aside>
+<!-- 广告通栏 结束 -->
+<main class="g-sublevel-content">
+    <div class="g-sublevel-bar">
+        <div class="sublevel-bar-panel">
+            <a class="logo f-left" href="http://www.ebrun.com" title="" target="_blank">
+    <img src="http://imgs.ebrun.com/master/images/logo_sublevel.png" alt="">
+</a>
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb-navigation-panel f-left">
+                <div class="breadcrumb-navigation">
+                    <ul>
+                                                                                                                        <li><a acpos="www.ebrun.com_dtl_func_mbx" acnum="1" eb="com_dtl_func_mbx" href='http://www.ebrun.com/' title='亿邦动力网' target="_blank">亿邦动力网</a></li>
+                                                                                                                                                <li>/</li>
+                                                                        <li><a acpos="www.ebrun.com_dtl_func_mbx" acnum="2" eb="com_dtl_func_mbx" href='http://www.ebrun.com/retail/' title='零售' target="_blank">零售</a></li>
+                                                                                                                                                <li>/</li>
+                                                                        <li><a acpos="www.ebrun.com_dtl_func_mbx" acnum="3" eb="com_dtl_func_mbx" href='http://www.ebrun.com/retail/more/' title='其他' target="_blank">其他</a></li>
+                                                                                                <li>/</li>
+                        <li>正文</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 搜索 -->
+            <div class="search-panel f-right">
+    <div class="header-search">
+        <form id="tform" target="_blank" action="http://www.ebrun.com/search.php" method="GET">
+            <label for="search">
+                <input id="search" class="search-control" name="keyword" type="text" value="">
+            </label>
+            <a class="header-search-submit" rel="nofollow" eb="com_dtl_func_xss" acpos="www.ebrun.com_dtl_func_xss" href="javascript:void(0)" onclick="document.getElementById('tform').submit()"></a>
+        </form>
+    </div>
+</div>
+        </div>
+    </div>
+    <section class="g-sublevel-main post-body f-left">
+        <article>
+                        <div class="post-header">
+                <!-- 标题-->
+                                <h1 class="post-text-title">除了“拼爹” 生鲜新零售还能怎么做？</h1>
+                                <p class="source">
+                    <span class="f-left">作者: 公众号-青桐资本</span>
+                    <span class="f-left">来源: 36氪</span>
+                    <span class="f-right">2018-12-29 14:08</span>
+                </p>
+            </div>
+            <!-- cms编辑器过来的详情样式 -->
+            <div class="post-text">
+                                <p><strong>生鲜新零售</strong>是2018这个资本寒冬里为数不多的热门赛道。今年已经披露的融资事件中，生鲜新零售占生鲜行业总数的比重超过了的50%，<strong>资本的偏爱可谓有目共睹。</strong></p>
+<p><strong>2018即将结束，青桐资本对生鲜新零售赛道做了一次盘点，</strong>挖掘它们背后的经济现象，希望能给业内的从业者一点启发，给业外的旁观者一个清晰的认知。</p>
+<p><strong>一、生鲜新零售的市场现状</strong></p>
+<p>果蔬、肉类、水产、面包、熟食一般被统称为<strong>“生鲜五品”</strong>。我们在研究<strong>生鲜新零售的概念</strong>时发现，它的的特点可以用<strong>消费场景多元化、线上线下全渠道、技术手段的加持</strong>三个关键词总结</p>
+<p><strong>生鲜零售的发展历经了农贸市场、生鲜超市、生鲜电商、新零售4个阶段。</strong>特别的是，这4个阶段并不是依次替代，而是有交叉共存。<strong>2014年和2016年</strong>是重要的两个时间点：2014年生鲜电商发展进入了快车道，2016年生鲜新零售开始出现，同一年，生鲜电商走入了冷静期。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122931415460632800291.jpg" data-width="550" data-height="309" /></p>
+<p><strong>青桐资本对市场上生鲜新零售的企业形态进行了梳理</strong>，包括生鲜配送平台、超市+餐饮、社区生鲜便利店、生鲜超市、办公室便利货架、无人货柜等，<strong>其中最主流的三类是生鲜配送平台、超市+餐饮、社区生鲜便利店</strong>，稍后我们将进行详细的解读。</p>
+<p><strong>生鲜新零售在资本市场表现不俗</strong></p>
+<p>虽然从出现至今只有两年的时间，但是生鲜新零售在资本市场的表现毫不逊色。<strong>青桐资本梳理了2018年度生鲜行业已披露的融资事件，生鲜新零售约有22起，占总数的比重超过50%。</strong></p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122918715460632804510.jpg" data-width="550" data-height="719" /></p>
+<p>通过梳理我们发现，<strong>从融资效率来看</strong>：这一赛道资本的追投意愿较高，企业的融资速度也很快，每日一淘用半年的时间从天使轮走到了B轮；从获投项目覆盖的消费场景来看，获投项目中超过10家覆盖的消费场景主要为社区，办公室、写字楼等消费场景也开始受到青睐；从项目阶段来看，超过70%的项目融资阶段集中在B轮以前，行业整体偏中早期。</p>
+<p><strong>二、生鲜新零售的3大主流模式</strong></p>
+<p>生鲜新零售行业整体偏中早期，其中很多企业是在原有的业务模式基础上转型，市场上玩家的具体界限还不明确。我们采用行业通常方式，<strong>根据企业最初的业务形态来分类，主要有生鲜配送、餐饮+超市、社区便利店衍生的三种模式 。</strong></p>
+<p><strong>1. 模式一：生鲜配送跨界线下布局</strong></p>
+<p>生鲜配送模式的新零售做法，一般是在<strong>线上端提升原有电商业务的配送效率</strong>，同时在<strong>线下端以便利货架、便利货柜等形式进行布局。</strong>以每日优鲜、易果生鲜为代表。</p>
+<p><strong>线上端：配送速度决定了消费者的满意度</strong></p>
+<p><strong>配送速度直接影响消费者的满意度和复购率。</strong>艾瑞发布的《2018年中国生鲜电商行业消费洞察报告》中，45.5%的用户希望配送时长在1小时内，只有32.3%的生鲜网购配送时长短于1小时，远远低于用户的期望时长。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122935515460632813452.jpg" data-width="550" data-height="309" /></p>
+<p><strong>目前企业在提升配送效率上的做法主要有三种</strong>：一是自己经营物流公司服务电商配送业务，以易果生鲜为例；二是与其他配送服务平台合作，以京东到家为例；三是建立前置仓，缩短配送距离和环节，以易果生鲜为例。</p>
+<p><strong>线下端：抢占无人零售的先机</strong></p>
+<p><strong>生鲜配送企业通过无人货架、无人货柜实现对办公室、公共场所等线下场景的覆盖。</strong>他们凭借自身在供应链上的优势定期补货，节约了实体开店的租金成本，也实现了用户的线上线下导流，增强用户的粘性。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122904615460632818682.jpg" data-width="550" data-height="309" /></p>
+<p>根据移动动互联网大数据监测平台Trustdata发布的《2018上半年无人货架领域发展研究报告》显示，每日优鲜布局的办公室无人零售服务“便利购”，在无人货架领域的市场综合占有率已经超过55%，其中点位占比74%，日转化率为9.8%，明显高于行业均值。</p>
+<p><strong>2. 模式二：生鲜超市+餐饮</strong></p>
+<p><strong>生鲜超市+餐饮模式比较典型的做法是 “线下门店+线上电商”</strong>，主打生鲜产品和即时餐饮，代表是盒马鲜生和永辉旗下的超级物种。</p>
+<p>线下门店主要承载生鲜超市、餐饮体验和前置仓的功能，<strong>线上平台</strong>可以将线下客户引流到线上，通过门店的物流体系实现快速配送，给消费者更好的消费体验。</p>
+<p><strong>复制性强是这个模式的重要特点。</strong>以盒马鲜生为例，从2016年1月在上海金桥第一家店开业到2018年10月初，已经在全国16个城市开了89家线下门店。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122980215460632822835.jpg" data-width="550" data-height="309" /></p>
+<p><strong>消费者对于这种创新模式的整体满意度比较高。</strong>艾瑞发布的《2018年中国生鲜电商行业消费洞察报告》中，消费者对生鲜超市+餐饮类玩家的高评价占比要高于一般的生鲜网购。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122967515460632830932.jpg" data-width="550" data-height="309" /></p>
+<p><strong>3. 模式三：社区生鲜便利店</strong></p>
+<p>社区生鲜便利店的定位是满足社区居民的生鲜购买需求。在新零售的趋势下，<strong>社区生鲜便利店也出现了多种做法：</strong></p>
+<p>线上运营：主要通过微信建群的方式获取流量；门店自提：门店可以给产品做信任背书，并作为自提点；社区拼团：通过拼团等方式提前购买，仓储中心调度，消费者线下自提。</p>
+<p><strong>社区生鲜便利店在生鲜零售渠道中的占比虽然很低，但是具有明显的引流作用。</strong>根据前瞻产业研究院统计，2017年便利店渠道的生鲜零售占比仅为0.9%，但是超过超过7成的用户会在网购生鲜的同时购买其他品类的商品，日用百货是最常购买的品类。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122904015460632834871.jpg" data-width="550" data-height="309" /></p>
+<p><strong>三、生鲜新零售进入“拼爹”时代</strong></p>
+<p><strong>互联网巨头和产业基金是生鲜新零售企业培育的主要力量。</strong>阿里巴巴、腾讯、京东等，或以自营，或以投资，都在生鲜新零售市场上占据了举足轻重的位置。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122968215460632839052.jpg" data-width="550" data-height="309" /></p>
+<p><strong>阿里和腾讯是这个市场最突出的布局者，</strong>他们在生鲜配送、餐饮+超市、社区生鲜便利店三种模式中已经有非常突出的典型代表。</p>
+<p style="text-align:center"><img alt="除了“拼爹”，生鲜新零售还能怎么做？" src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/2018122900415460632843515.jpg" data-width="550" data-height="309" /></p>
+<p><strong>阿里和腾讯的做法稍有不同。阿里巴巴</strong>自营的业务范围已经覆盖到生鲜，它在对生鲜新零售进行投资的同时，也在考虑如何将二者进行结合，易果生鲜经营的物流公司安鲜达承担了天猫超市一小时达服务的运营。而腾讯在产业链的布局，在依靠社交流量优势（特别是微信入口）来支持被投企业的同时，也在为微信支付业务寻找高频消费支付入口。</p>
+<p><strong>四、挑战与机会并存</strong></p>
+<p>对于生鲜零售而言，线上和线下只是渠道的外在表现， 当行业发展到一定阶段，各种渠道的融合是必然。<strong>围绕用户本身，满足他们不断升级的消费需求，提供更好、更快、更近的消费体验，是新零售的核心。</strong></p>
+<p><strong>在巨头带动下，目前生鲜新零售的行业格局基本已经确定。</strong>对于其他的生鲜创业者来说，<strong>“小而美”</strong>是他们未来的机会所在， 如何解决消费者购买生鲜时面临的品质、距离、价格、时间痛点，是必须接受的挑战。</p>
+<p><strong>供应链是未来生鲜新零售企业的核心竞争力。</strong>供应链包括采购、流通、仓储、配送等多个环节，每个环节的质量把控最终都会影响到消费者的体验。虽然生鲜新零售企业都在加码供应链基础设施的改造，但冷链物流技术渗透率低、产品损耗大、跨区域运输设施不完善等问题依然存在，难以满足生鲜产品的仓储配送需求。<strong>企业如果能通过技术手段优化供应链并建立自己的核心优势，就能在未来的市场上占得先机。</strong></p>
+<p><strong>技术手段的运用不仅是供应链改造的方向，也是解决消费者体验问题的重要砝码。</strong>未来的生鲜新零售企业如果可以通过大数据画像，就能 精准了解消费者的购买需求并进行趋势预测，做到精准营销 。</p>
+                            </div>
+            <!-- cms编辑器过来的详情样式 结束 -->
+            
+            <!-- 作者来源标签-->
+            <div class="post-bottom">
+                <div class="tag">
+                    <p class="first">标签：</p>
+                    <ul>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="1" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/36" title="" target="_blank">便利店</a>
+                        </li>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="2" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/128" title="" target="_blank">生鲜</a>
+                        </li>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="3" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/189" title="" target="_blank">电商</a>
+                        </li>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="4" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/195" title="" target="_blank">京东</a>
+                        </li>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="5" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/236" title="" target="_blank">阿里巴巴</a>
+                        </li>
+                                                <li class="first">
+                            <a acpos="www.ebrun.com_dtl_lcol_bq" acnum="6" eb="com_dtl_lcol_bq" href="http://www.ebrun.com/label/1268" title="" target="_blank">盒马鲜生</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+            <!-- 版权提示 -->
+            <div class="post-copyright">
+    <p>
+        【版权提示】亿邦动力网倡导尊重与保护知识产权。未经许可，任何人不得复制、转载、或以其他方式使用本网站的内容。如发现本站文章存在版权问题，烦请提供版权疑问、身份证明、版权证明、联系方式等发邮件至<span>run@ebrun.com</span>，我们将及时沟通与处理。
+    </p>
+</div>
+            <!-- 分页和点赞 -->
+            <div class="caozuo">
+                                <!-- 点赞 -->
+                <!-- 已点赞的加 liked -->
+<div class="like f-right" id="btn_article_praise">
+    <p>点赞</p>
+    <!-- 做动画 加上 fadeOutUp liked -->
+    <span class="zan-animate hide">
+        <img src="http://imgs.ebrun.com/master/images/ico_like_animate.png" alt="">
+    </span>
+</div>
+            </div>
+        </article>
+        <!-- 广告位置 -->
+<aside class="adv-panel hide">
+    <div class="post-adv" id="ebj_2">
+        <span class="adv-text">广告</span>
+    </div>
+</aside>
+<!-- comment-->
+<section class="comm">
+    <!--<script type="text/javascript" src="http://imgs.ebrun.com/js/2017/ucomment.js"></script>-->
+<div class="talkLun">
+    <div id="commentWrap"></div>
+    <script type="text/javascript" src="http://u.ebrun.com/comment/jssdk/launcher.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        window.showAlertMsg = function (showMsg, btnMsg, state, ok_callback, error_callback) {
+            $(".tongyong-alert-msg-box .eb-popup-well .popup-message").html(showMsg);
+            $(".tongyong-alert-msg-box .eb-popup-well .popup-btn").html(btnMsg);
+            $(".tongyong-alert-msg-box").css('z-index', '9');
+            if (state == 'success') {
+                $(".tongyong-alert-msg-box .eb-popup-well .popup-img ").attr('src', "http://u.ebrun.com/assets/images/popup_success.png");
+            } else if (state == 'error') {
+                $(".tongyong-alert-msg-box .eb-popup-well .popup-img ").attr('src', "http://u.ebrun.com/assets/images/popup_success.png");
+            }
+            $(".tongyong-alert-msg-box").removeClass('hide');
+
+            $(".tongyong-alert-msg-box .popup-close").unbind('click.close').bind('click.close', function () {
+                $(".tongyong-alert-msg-box").addClass('hide');
+                ok_callback();
+            });
+            $(".tongyong-alert-msg-box .eb-popup-well .popup-btn").unbind('click.ok').bind('click.ok', function () {
+                $(".tongyong-alert-msg-box").addClass('hide');
+                ok_callback();
+            });
+        };
+    </script>
+    <link rel="stylesheet" href="http://imgs.ebrun.com/master/style/login.css" charset="UTF-8"/>
+    <!--	<script src="http://imgs.ebrun.com/master/script/lib/jquery-1.11.1.min.js" charset="UTF-8"></script>-->
+    <script type="text/javascript">
+        window.user_center_domain = 'http://u.ebrun.com';
+        //window.show_login_box_callback = $.noop;
+    </script>
+    <script type="text/javascript" src="http://imgs.ebrun.com/master/script/lib/mod.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://imgs.ebrun.com/master/script/ebrun-api.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://imgs.ebrun.com/master/script/login-pop_page.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        window.loginBoxObj = require("static/js/login-pop");
+    </script>
+    <script type="text/javascript">
+        var nodeId;
+        window.ebrunComment.api.config({
+            debug: true,
+            caller_id: '2',
+            caller_resource_id: articleId,
+            name: articleTitle,
+            url: articleUrl,
+            caller_resource_type: nodeId,
+            comment_readable: 1,
+            comment_writable: 1,
+            access_frequency_restrict: 100,
+            comment_pass: 1,
+            commentBoxId: 'commentWrap',
+            loginCallback: function () {
+                window.loginBoxObj.show_login_box();
+            }
+        });
+    </script>
+</div>
+</section>
+<!-- 相关阅读 -->
+<section class="post-panel" id="uluai"></section>
+<!-- 广告位置 -->
+<aside class="adv-panel hide">
+    <div class="post-adv" id="ebj_3">
+        <span class="adv-text">广告</span>
+    </div>
+</aside>
+<!-- 猜你喜欢 -->
+<section class="post-panel" id='guest-your-love'></section>
+<!-- 分享 -->
+<!-- 滚动的时候 加上 sublevel-share-fixed -->
+<div class="sublevel-share" id="box_shareIcon">
+    <ul>
+        <li class="weibo">
+            <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var f='http://v.t.sina.com.cn/share/share.php?appkey=1152258540',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent,'','','',articleTitle,articleUrl,'gb2312'));" title="微博" rel="nofollow" class="sinaa" _hover-ignore="1">微博</a>
+        </li>
+        <li class="weixin">
+            <a href="javascript:void(0);" rel="nofollow">微信</a>
+        </li>
+        <li class="qzone">
+            <a href="javascript:void(0)" rel="nofollow">QQ<br>空间</a>
+        </li>
+        <li class="baidu">
+            <!-- 百度分享 -->
+            <div class="bdsharebuttonbox" data-tag="share_1">
+                <a class="bds_more" rel="nofollow" data-cmd="more">更多</a>
+            </div>
+        </li>
+    </ul>
+</div>
+    </section>
+    <aside class="g-sublevel-side f-right">
+        <!-- 专题活动 -->
+<!--2018双十一-->
+<section class="aside-panel">
+    <div class="side2-panel renqiang-shuangshiyi">
+        <a href="http://www.ebrun.com/tc/649.shtml" target="_blank" class="shuangshiyi-click">
+            <img src="http://imgs.ebrun.com/resources/2018_11/2018_11_26/2018112612915432010456785.png"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';"  alt="">
+        </a>
+                <dl>
+                                        <dt>
+                    <a href="http://www.ebrun.com/20181221/313280.shtml" target="_blank">
+                        <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_21/20181221_15453844357796.jpg"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';"  alt="">
+                        <p class="pindao-shuang-text">跨境电商综试区新机遇在？</p>
+                        <p class="pindao-shuang-bg"></p>
+                    </a>
+                </dt>
+                                                            <dd>
+                    <a href="http://www.ebrun.com/20181220/312954.shtml" target="_blank">年度复盘：零售未来走向？</a>
+                </dd>
+                                                            <dd>
+                    <a href="http://www.ebrun.com/20181220/313102.shtml" target="_blank">5大佬剖析风口下社区拼团</a>
+                </dd>
+                                                                        </dl>
+    </div>
+</section>
+<!-- 头条推荐-->
+<section class="aside-panel">
+    <div class="side-panel toutiao">
+        <div class="side-com-title">
+            <h3>头条推荐</h3>
+        </div>
+        <ul class="tuijian-well">
+            <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181228/314520.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="1"  eb="com_dtl_lcol_tttj" title="阿拉木斯解读《电商法》" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_28/20181228_1545997885543.jpg" alt="阿拉木斯解读《电商法》"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181228/314520.shtml" title="阿拉木斯解读《电商法》" target="_blank">阿拉木斯解读《电商法》</a>
+        </p>
+    </li>
+        <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181228/314527.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="2"  eb="com_dtl_lcol_tttj" title="国家级服务业标准化试点立项" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_28/20181228_1546004918714.jpg" alt="国家级服务业标准化试点立项"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181228/314527.shtml" title="国家级服务业标准化试点立项" target="_blank">国家级服务业标准化试点立项</a>
+        </p>
+    </li>
+        <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181229/314563.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="3"  eb="com_dtl_lcol_tttj" title="农产品网络零售额将超3000亿" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/20181229_1546049328233.jpg" alt="农产品网络零售额将超3000亿"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181229/314563.shtml" title="农产品网络零售额将超3000亿" target="_blank">农产品网络零售额将超3000亿</a>
+        </p>
+    </li>
+        <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181228/314484.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="4"  eb="com_dtl_lcol_tttj" title="天猫国际启动三大计划" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_28/20181228_1545986070469.jpg" alt="天猫国际启动三大计划"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181228/314484.shtml" title="天猫国际启动三大计划" target="_blank">天猫国际启动三大计划</a>
+        </p>
+    </li>
+        <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181229/314592.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="5"  eb="com_dtl_lcol_tttj" title="2018外卖骑手报告详解" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_29/20181229_1546055208951.jpg" alt="2018外卖骑手报告详解"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181229/314592.shtml" title="2018外卖骑手报告详解" target="_blank">2018外卖骑手报告详解</a>
+        </p>
+    </li>
+        <li>
+        <a class="tuijian-image" href="http://www.ebrun.com/20181228/314471.shtml"  acpos="www.ebrun.com_dtl_lcol_tttj" acnum="6"  eb="com_dtl_lcol_tttj" title="有赞拥抱观麦" target="_blank">
+            <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_28/20181228_1545983354405.jpg" alt="有赞拥抱观麦"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+        </a>
+        <p>
+            <a href="http://www.ebrun.com/20181228/314471.shtml" title="有赞拥抱观麦" target="_blank">有赞拥抱观麦</a>
+        </p>
+    </li>
+            
+        </ul>
+    </div>
+</section>
+<!-- 频道侧栏广告样式-->
+<aside class="aside-panel sublevel-aside-adv hide"><section id="ebj_4"></section></aside>
+<section id="article_all_watching_4paradigm"></section>
+<!-- 热门词汇 -->
+<section class="aside-panel">
+    <div class="side-panel">
+        <div class="side-com-title">
+            <h3>热门词汇</h3>
+        </div>
+        <div class="side-well">
+            <ul class="side-keyword">
+                <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="1"  href="http://www.ebrun.com/qpd/41.html" title="在线订餐" target="_blank">在线订餐</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="2"  href="http://www.ebrun.com/qpd/81.html" title="俄罗斯电商" target="_blank">俄罗斯电商</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="3"  href="http://www.ebrun.com/qpd/8.html" title="海淘网站" target="_blank">海淘网站</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="4"  href="http://www.ebrun.com/qpd/61.html" title="商超O2O" target="_blank">商超O2O</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="5"  href="http://www.ebrun.com/qpd/83.html" title="家教O2O" target="_blank">家教O2O</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="6"  href="http://www.ebrun.com/qpd/16.html" title="海淘" target="_blank">海淘</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="7"  href="http://www.ebrun.com/dsc/7018.html" title="玛丽黛佳" target="_blank">玛丽黛佳</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="8"  href="http://www.ebrun.com/dsc/3378.html" title="电子商务技术" target="_blank">电子商务技术</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="9"  href="http://www.ebrun.com/dsc/2880.html" title="总营收" target="_blank">总营收</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="10"  href="http://www.ebrun.com/dsc/303.html" title="直销业务" target="_blank">直销业务</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="11"  href="http://www.ebrun.com/dsc/2716.html" title="菜鸟网络物流" target="_blank">菜鸟网络物流</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="12"  href="http://www.ebrun.com/dsc/962.html" title="电子商务服务商" target="_blank">电子商务服务商</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="13"  href="http://www.ebrun.com/dsc/6668.html" title="滴滴车主" target="_blank">滴滴车主</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="14"  href="http://www.ebrun.com/dsc/388.html" title="京东投资" target="_blank">京东投资</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="15"  href="http://www.ebrun.com/dsc/4329.html" title="双十一数据" target="_blank">双十一数据</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="16"  href="http://www.ebrun.com/dsc/4036.html" title="电商和互联网" target="_blank">电商和互联网</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="17"  href="http://www.ebrun.com/dsc/1189.html" title="苏宁超级店" target="_blank">苏宁超级店</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="18"  href="http://www.ebrun.com/dsc/872.html" title="理财产品" target="_blank">理财产品</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="19"  href="http://www.ebrun.com/dsc/437.html" title="购物习惯" target="_blank">购物习惯</a>
+    </li>
+    <li>
+        <a eb="com_dtl_lcol_rmch"  acpos="www.ebrun.com_dtl_lcol_rmch" acnum="20"  href="http://www.ebrun.com/dsc/1805.html" title="百度用户" target="_blank">百度用户</a>
+    </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- 频道侧栏广告样式-->
+<aside class="aside-panel sublevel-aside-adv hide"><section id="ebj_5"></section></aside>
+
+        <!-- 热门排行 -->
+                                <section class="aside-panel">
+            <div class="side-panel">
+    <div class="side-com-title">
+        <h3>热门排行</h3>
+    </div>
+    <div class="side-well">
+        <ol class="bangdan">
+                            <li class="  highlight  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="1"  href="http://www.ebrun.com/20181228/314376.shtml" title="继淘宝后 京东宣布违规商家可“以考代罚”" target="_blank">
+                        <span>1</span>
+                        继淘宝后 京东宣布违规商家可“以考代罚”
+                    </a>
+                </li>
+                            <li class="  highlight  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="2"  href="http://www.ebrun.com/20181227/314209.shtml" title="天猫成全球最大的时尚消费平台" target="_blank">
+                        <span>2</span>
+                        天猫成全球最大的时尚消费平台
+                    </a>
+                </li>
+                            <li class="  highlight  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="3"  href="http://www.ebrun.com/20181226/313984.shtml" title="这款商品描述不当 商家保证金将受解冻限制" target="_blank">
+                        <span>3</span>
+                        这款商品描述不当 商家保证金将受解冻限制
+                    </a>
+                </li>
+                            <li class="  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="4"  href="http://www.ebrun.com/20181227/314172.shtml" title="百亚股份加入拼多多新品牌计划 深化C2M模式" target="_blank">
+                        <span>4</span>
+                        百亚股份加入拼多多新品牌计划 深化C2M模式
+                    </a>
+                </li>
+                            <li class="  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="5"  href="http://www.ebrun.com/20181227/314332.shtml" title="苏宁小店将进军社区拼团 全国招募10万团长" target="_blank">
+                        <span>5</span>
+                        苏宁小店将进军社区拼团 全国招募10万团长
+                    </a>
+                </li>
+                            <li class="  ">
+                    <a eb="com_dtl_lcol_rmph"  acpos="www.ebrun.com_dtl_lcol_rmph" acnum="6"  href="http://www.ebrun.com/20181226/313938.shtml" title="亿邦研究院｜2018中国服饰数字化零售报告" target="_blank">
+                        <span>6</span>
+                        亿邦研究院｜2018中国服饰数字化零售报告
+                    </a>
+                </li>
+                    </ol>
+    </div>
+</div>
+        </section>
+                        <!-- 频道侧栏广告样式-->
+<aside class="aside-panel sublevel-aside-adv hide"><section id="ebj_6"></section></aside>
+<!-- 电商会议 -->
+<!-- 电商会议，电商学院 -->
+<section class="aside-panel sublevel-side-panel">
+    <div class="side4-panel">
+        <div class="side-com-title">
+            <h3>电商会议</h3>
+            <a class="side-more-arrow" eb="com_chan_nav_gd" acpos="www.ebrun.com_chan_nav_gd" acnum="2" href="http://www.ebrun.com/conference/" target="_blank" title="更多"></a>
+        </div>
+        <dl>
+        <dt>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="1"  href="http://www.ebrun.com/conference/2727.shtml" title="2018年度金牛角案例盛典" target="_blank">
+                <img src="http://imgs.hy2046.com/resources/2018_12/2018_12_29/20181229_1546060828481.jpg" alt="2018年度金牛角案例盛典"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+            </a>
+        </dt>
+        <dd>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="1"  href="http://www.ebrun.com/conference/2727.shtml" title="2018年度金牛角案例盛典" target="_blank">2018年度金牛角案例盛典</a>
+        </dd>
+        <dd class="aside4-dl-dress">
+            <span>北京</span>
+            <a eb="com_dtl_nav_hybm"  acpos="www.ebrun.com_dtl_nav_hybm" acnum="1"  href="http://www.ebrun.com/conference/2727.shtml" title="报名" target="_blank" rel="nofollow">报名</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="2"  href="http://www.ebrun.com/conference/2708.shtml" title="电商法下，微商、代购、个人卖家的生存之道" target="_blank">
+                <img src="http://imgs.hy2046.com/resources/2018_12/2018_12_18/20181218_1545114531955.jpg" alt="电商法下，微商、代购、个人卖家的生存之道"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+            </a>
+        </dt>
+        <dd>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="2"  href="http://www.ebrun.com/conference/2708.shtml" title="电商法下，微商、代购、个人卖家的生存之道" target="_blank">电商法下，微商、代购、个人卖家的生存之道</a>
+        </dd>
+        <dd class="aside4-dl-dress">
+            <span>天津</span>
+            <a eb="com_dtl_nav_hybm"  acpos="www.ebrun.com_dtl_nav_hybm" acnum="2"  href="http://www.ebrun.com/conference/2708.shtml" title="报名" target="_blank" rel="nofollow">报名</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="3"  href="http://www.ebrun.com/conference/2726.shtml" title="第四届亚太银行数字化转型 暨风控创新峰会" target="_blank">
+                <img src="http://imgs.hy2046.com/resources/2018_12/2018_12_28/20181228_1545986022724.jpg" alt="第四届亚太银行数字化转型 暨风控创新峰会"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+            </a>
+        </dt>
+        <dd>
+            <a eb="com_dtl_lcol_hy"  acpos="www.ebrun.com_dtl_lcol_hy" acnum="3"  href="http://www.ebrun.com/conference/2726.shtml" title="第四届亚太银行数字化转型 暨风控创新峰会" target="_blank">第四届亚太银行数字化转型 暨风控创新峰会</a>
+        </dd>
+        <dd class="aside4-dl-dress">
+            <span>上海</span>
+            <a eb="com_dtl_nav_hybm"  acpos="www.ebrun.com_dtl_nav_hybm" acnum="3"  href="http://www.ebrun.com/conference/2726.shtml" title="报名" target="_blank" rel="nofollow">报名</a>
+        </dd>
+    </dl>
+
+    </div>
+</section>
+<!-- 频道侧栏广告样式-->
+<aside class="aside-panel sublevel-aside-adv hide"><section id="ebj_7"></section></aside>
+<!-- 电商干货 -->
+<!-- 电商干货 -->
+<section class="aside-panel sublevel-side-panel">
+    <div class="side6-panel">
+        <div class="side-com-title">
+            <h3>电商干货</h3>
+            <a class="side-more-arrow" href="http://www.ebrun.com/experience/" target="_blank" title="更多"></a>
+        </div>
+        <dl>
+            <dt>
+            <a eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="1"  href="http://www.ebrun.com/20181211/311560.shtml" title="2019年 微信流量怎么玩？" target="_blank">
+                <img src="http://imgs.ebrun.com/resources/2018_12/2018_12_11/20181211_1544521207119.jpg" alt="2019年 微信流量怎么玩？"  onerror="this.src='http://imgs.ebrun.com/wapsite/images/lazyImg.png';" >
+            </a>
+        </dt>
+        <dd class="side6-panel-list">
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="1"  href="http://www.ebrun.com/20181211/311560.shtml" title="2019年 微信流量怎么玩？">2019年 微信流量怎么玩？</a>
+        </dd>
+                        <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="2"  href="http://www.ebrun.com/20181210/311350.shtml" title="干货｜经销商转型手册">干货｜经销商转型手册</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="3"  href="http://www.ebrun.com/20181206/310805.shtml" title="干货｜龚焱：山寨是捷径 原创才是终点">干货｜龚焱：山寨是捷径 原创才是终点</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="4"  href="http://www.ebrun.com/20181206/310953.shtml" title="干货｜会发光的类目 点不亮老特拉福德的夜">干货｜会发光的类目 点不亮老特拉福德的夜</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="5"  href="http://www.ebrun.com/20181205/310595.shtml" title="干货｜关于新零售本质 吴晓波 吴声这么看">干货｜关于新零售本质 吴晓波 吴声这么看</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="6"  href="http://www.ebrun.com/20181121/308670.shtml" title="品牌商的渠道数字化建设要注意四个关键点">品牌商的渠道数字化建设要注意四个关键点</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="7"  href="http://www.ebrun.com/20181120/308592.shtml" title="干货｜死店快速激活技巧 提升免费访客">干货｜死店快速激活技巧 提升免费访客</a>
+        </dd>
+                    <dd>
+            <a target="_blank" eb="com_dtl_lcol_gh"  acpos="www.ebrun.com_dtl_lcol_gh" acnum="8"  href="http://www.ebrun.com/20181115/307972.shtml" title="侃侃专栏｜精油选品卖货指南">侃侃专栏｜精油选品卖货指南</a>
+        </dd>
+    
+        </dl>
+    </div>
+</section>
+    </aside>
+</main>
+<footer class="g-footer">
+    <!-- 亿邦体系 -->
+    <section class="g-ststem">
+    <section class="system-panel">
+        <section class="system-logo f-left">
+            <img src="http://imgs.ebrun.com/master/images/img_system_logo.png" alt="">
+        </section>
+        <section class="system-link f-left">
+            <ul class="f-left">
+                <li class="bold">新闻导航</li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/top/" title="" target="_blank">原创新闻</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/label/co/" title="" target="_blank">企业库</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/experience/" title="" target="_blank">干货</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/obs/" title="" target="_blank">观察</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/column/" title="" target="_blank">栏目</a>
+                </li>
+            </ul>
+            <ul class="f-left">
+                <li class="bold">关于我们</li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/comInfo_about.shtml" title="" target="_blank" rel="nofollow">关于亿邦</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/work_together.shtml" title="" target="_blank" rel="nofollow">内容合作</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/work_adv.shtml" title="" target="_blank" rel="nofollow">商务合作</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/job.shtml" title="" target="_blank" rel="nofollow">加入我们</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/agreement.shtml" title="" target="_blank" rel="nofollow">法律声明</a>
+                </li>
+            </ul>
+            <ul class="f-left">
+                <li class="bold">产品服务</li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/kh/marketing/" title="" target="_blank" rel="nofollow">亿邦营销</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/meeting/" title="" target="_blank">亿邦会展</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/feng/" title="" target="_blank">亿邦商学院</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/yanjiuyuan.html" title="" target="_blank">亿邦研究院</a>
+                </li>
+                <li>
+                    <a eb="com_dtl_nav_fdh" href="http://www.ebrun.com/about/instruction/bjzk.shtml" title="" target="_blank">邦加智库</a>
+                </li>
+            </ul>
+        </section>
+        <aside class="system-flow f-left">
+            <div class="system-ewm">
+                <div class="f-left">
+                    <img src="http://imgs.ebrun.com/master/images/img_system_app.jpg" alt="">
+                    <p>扫一扫立即下载</p>
+                </div>
+                <div class="f-left">
+                    <img src="http://imgs.ebrun.com/master/images/img_system_wechat.jpg" alt="">
+                    <p>扫一扫立即关注</p>
+                </div>
+            </div>
+            <p class="system-weibo">
+                <a eb="com_dtl_func_2wm" href="https://weibo.com/ebrun" title="关注亿邦动力网" target="_blank" rel="nofollow">
+                    关注亿邦动力网
+                </a>
+            </p>
+        </aside>
+    </section>
+</section>
+    <!-- 亿邦体系 结束 -->
+    <!-- 友情链接 电商热词-->
+                <section class="g-keywords">
+        <div class="tab-panel system-tab-panel">
+            <ul class="tab-menu">
+                <li class="tab-menu-active">电商热词</li>
+            </ul>
+            <div class="tab-body">
+                <div class="tab-well">
+                    <ul>
+<li><a href="http://www.ebrun.com/art/293051.shtml" title="" target="_blank">创响中国</a></li>
+<li><a href="http://www.ebrun.com/art/278953.shtml" title="" target="_blank">天猫618</a></li>
+<li><a href="http://www.ebrun.com/dsc/3244.html" title="双11" target="_blank">沃尔玛零售链</a></li>
+<li><a href="http://www.ebrun.com/dsc/2995.html" title="" target="_blank">IPO上市</a></li>
+<li><a href="http://www.ebrun.com/qpd/5.html" title="" target="_blank">母婴电商</a></li>
+<li><a href="http://www.ebrun.com/dsc/726.html" title="" target="_blank">外贸出口</a></li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- 友情链接 电商热词 结束 -->
+    <!-- 版权信息 -->
+    <section class="g-copyright">
+    <div class="copyright-panel">
+        <div class="g-copyright-text g-copyright-left f-left text-left">
+            亿邦动力网是国内具有影响力的电子商务资讯网站
+        </div>
+        <p class="g-copyright-text g-copyright-center f-left text-center">
+            <span>© 2007-2018 亿邦动力版权所有</span>
+            <span>京ICP证070369号 京ICP备09097961号 京公网安备110107000429</span>
+        </p>
+        <p class="g-copyright-text g-copyright-right f-left text-right">电话：010-88825657 </p>
+    </div>
+</section>
+    <!-- 版权信息 结束 -->
+</footer>
+<!-- 右侧边栏 返回顶部-->
+<section class="sider-bar">
+    <div class="app">
+        <p>下载APP</p>
+        <img src="http://imgs.ebrun.com/master/images/img_side_app.png" alt="">
+    </div>
+    <div class="back hidden"></div>
+</section>
+<!-- 右侧边栏 返回顶部 结束-->
+<!-- 底部脚本 -->
+<!-- 搜索框关键词 -->
+<script type="text/javascript" src="http://imgs.ebrun.com/js/2017/adtrack.js"></script>
+<div id="searchBoxDefaultVal" style="display: none">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1672.js" charset="GBK"></script>
+</div>
+<script src="http://imgs.ebrun.com/master/script/public.js"></script>
+<script src="http://imgs.ebrun.com/master/script/lib/mod.js"></script>
+<script type="text/javascript" src="http://imgs.ebrun.com/master/script/xiangqing_page.js"></script>
+<script>
+    require("static/js/xiangqing");
+</script>
+<!--广告 开始-->
+<!--以下为广告js-->
+<!--<script language="javascript" type="text/javascript" src="http://www.ebrun.com/manage/sysdata/tmp/effect/psa.php?ps=wenzhangye_dingbutonglan"></script>-->
+<!-- 顶部通栏01 -->
+<div id="ebjh_1" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1675.js" charset="GBK"></script>
+</div>
+<!-- 正文下banner -->
+<div id="ebjh_2" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1676.js" charset="GBK"></script>
+</div>
+<!-- 相关阅读下banner -->
+
+<div id="ebjh_3" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1677.js" charset="GBK"></script>
+</div>
+<!-- 右侧button01 -->
+<div id="ebjh_4" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1678.js" charset="GBK"></script>
+</div>
+<!-- 右侧button02 -->
+<div id="ebjh_5" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1679.js" charset="GBK"></script>
+</div>
+<!-- 右侧button03 -->
+<div id="ebjh_6" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1680.js" charset="GBK"></script>
+</div>
+<!-- 右侧button04 -->
+<div id="ebjh_7" class="ebj0 hide">
+    <script type="text/javascript" src="http://j.ebrun.com/jfile/position/js/1681.js" charset="GBK"></script>
+</div>
+
+<script>
+    require("static/js/xiangqing").render_ad();
+</script>
+<!-- bi -->
+<script type="text/javascript" src="http://imgs.ebrun.com/js/track.js"></script>
+<script type="text/javascript" src="http://imgs.ebrun.com/js/analy.js"></script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_30003236'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30003236' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    //百度站长推荐统计
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    if (!document.referrer.match("www.ebrun.com/manage/sysdata/tmp/effect/index.php")) {
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F87daad7faca22f66ec178d201d855ddb' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+
+</body>
+</html>

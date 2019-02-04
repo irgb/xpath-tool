@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2019年干散货海运贸易将小幅增长_国际海事信息网</title>
+<meta name="keywords" content="2019年干散货海运贸易将小幅增长" />
+<meta name="description" content="2019年干散货海运贸易将小幅增长" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">2019年干散货海运贸易将小幅增长</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-02 &nbsp;&nbsp;
+					浏览量：1353&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p>　　过去的2018年国际干散货运输市场运价回升力度减弱，预估全年海运贸易增速将低于运力增速。截至圣诞假期前夕，2018年BDI指数均值为1353点，较2017年全年均值1145点增长18.08%。</p>
+<p>　　世界贸易组织预计，2019年全球贸易量增长将较2018年降低0.2个百分点。但东南亚主要新兴市场或持续向好，BDI指数均值可能小幅回调至1300点左右。</p>
+<p>　　2018年市场总体平稳恢复</p>
+<p>　　2018年市场总体平稳恢复，但增速减缓。</p>
+<p>　　2018年国际干散货海运预估量约52.1亿吨，同比增长2.25%，增速较2017年大幅下降。其中，铁矿石海运贸易量14.7亿吨，同比稍降0.20%，煤炭海运贸易量12.4亿吨，同比增长3.33%，粮食海运贸易量4.86亿吨，同比增长1.67%，小宗散货海运贸易量20亿吨，同比增长3.61%。</p>
+<p>　　2018年中国铁矿石海运进口量约10.53亿吨，较2017年小幅下降1%，动力煤进口量为1.90亿吨，增幅9%。印度铁矿石海运进口量大幅增长至1500万吨，增幅高达117%，动力煤进口1.61亿吨，同比增长7%。东南亚动力煤进口也大幅提升，其中越南动力煤海运进口量1370万吨，增幅达35%;菲律宾进口量为2540万吨，增幅18%。</p>
+<p>　　大豆贸易受中美贸易摩擦影响较大，中国铝土矿进口增长加速。2018年6月开始美国出口至中国大豆数量大幅下降，9月出口量下降至6.74万吨，较上年同期的287万吨，大幅下跌97.65%。同时美国农业部12月供需报告预测2018/19年度(10月至次年9月)美国出口大豆5171万吨，同比下降12.29%。中国11月大豆进口量为538.4万吨，较上年同期进口的868万吨骤降38%。中国1&mdash;11月大豆进口量为8231万吨，同比减少4.3%。但同时美国出口至欧盟、印尼、泰国等国家和地区市场大豆数量大幅提升。2018年1&mdash;10月中国铝土矿进口量累计6784万吨左右，同比增加21.7%。</p>
+<p>　　运力方面，干散货船队运力小幅增长，海岬型运力增长步伐明显加快。截至2018年12月初，全球干散货船运运力达11337艘、8.39亿载重吨。其中海岬型船运力达1726艘、3346万载重吨;巴拿马型船运力2566艘、2065万载重吨;大灵便型船运力3622艘、2005万载重吨;灵便型船运力3423艘、981万载重吨。国际干散货船总运力增速达2.82%，海岬型船舶运力增长步伐加快，增速达3.43%。</p>
+<p>　　新船订单量逐步减少，海岬型船订单居高不下。截至12月初，国际干散货船新船订单209艘、2297万载重吨，同比下降41.2%。但海岬型干散货船新船订单量达75艘、1562万载重吨，新船订单运力与2017年持平。手持订单中海岬型船占比已达56.8%， 占现有运力比重攀升至14.51%，远高于灵便型船的4.11%。而海岬型船新船订单中Newcastlemax(20万&mdash;20.9万DWT)达34艘、708万载重吨;Guaibamax(32.5万DWT)达12艘，且船东多为与淡水河谷签订长期租约的Pan Ocean, SK Shipping, H-Line Shipping等。</p>
+<p>　　海岬型船市场集中度不断提升，联盟合作形式趋于常态。截至2018年12月初，海岬型散货船市场仅自有运力统计的CR8(8家最大的干散货船航运企业的市场份额总和)就已达23.62%(以载重吨计算)，表明海岬型船已进入低集中竞争型市场。</p>
+<p>　　为稳定承租双方成本和收益，船东与大货主间长期协议逐步加强，目前淡水河谷共使用约300艘船舶运输铁矿石，其中通过长协合同运输的铁矿石贸易量高达70%。此外，航运企业为提高船舶运营效率，稳定公司收益，联营池和长期租约占比不断提升，传统即期市场中的船舶数量比例大幅下降。</p>
+<p>　　各货种产量涨跌不一</p>
+<p>　　2018年铁矿石总体产量微降但高品粉矿供应增加，粗钢、煤炭、铝土矿产品产量均实现不同幅度的增长。</p>
+<p>　　2018年全球高成本低品位矿山产量大幅减少，主流矿山市场份额持续扩大，整体增量不及预期，预计同比微降390万吨。中国1&mdash;11月累计铁矿石原矿产量为6.95亿吨，同比下降3.3%，国际五大主流矿山增产约4410万吨，增量主要为高品粉矿。矿产资源集中度不断提高，澳洲高成本矿山面临成本压力，一些处于边际成本的矿山如Cliffs、Atlas被迫减产或遭遇收购。2018年1&mdash;10月淡水河谷S11D铁矿石出口量4830万吨，同比增长250%。预计全年高品粉矿供应增加2800万吨。</p>
+<p>　　世界粗钢产量平稳增长，印度成为全球第二大产钢国。1&mdash;10月，亚洲粗钢产量为10.58亿吨，同比增长5.6%。其中，中国和印度是推动全球粗钢产量的强劲力量。中国1&mdash;10月粗钢产量达7.82亿吨，累计同比大幅增加6.4%。随着中国持续实行环保限产政策，打响&ldquo;蓝天保卫战&rdquo;，环保限产已进入常态化。2018&mdash;2019年生态环境部强调&ldquo;一厂一策&rdquo;以及实行分级限产，限产得到一定程度上的放松。随着工艺技术不断改进，中国转炉废钢比持续攀升，同时&ldquo;中频炉&rdquo;出清后拉动废钢消费需求，在建、新建电炉产能持续释放。2018年7月印度累计粗钢产量首次超过日本，成为世界第二大产钢国。</p>
+<p>　　而由于全球发达经济体投资市场的复苏和新兴经济体表现出众，全球钢铁需求继续表现强劲，根据世界钢铁协会10月预计2018年全球钢材消费需求将达到16.579亿吨，同比增速为3.9%，世界钢铁需求平稳增长，钢铁消费达历史新高。</p>
+<p>　　世界煤炭市场在经历了数年的深度调整后，2017年煤炭产量开始止跌回升，全年总产量达77.3亿吨，同比增长3.4%。但受产能增量不足和环保限制等影响，增幅有限。其中1&mdash;11月中国原煤产量为3.21亿吨，同比增长5.4%。而据印度煤炭部统计，2018年1&mdash;9月印度煤炭产量5.18亿吨，同比增长近7.7%。1&mdash;10月份，印尼煤炭产量为4.1亿吨，其中78%用于出口。</p>
+<p>　　另外，东南亚基础建设以及工业生产的加快，泰国和越南煤炭进口大幅提升，2018年1&mdash;10月两国进口量分别达到0.215亿吨和0.1734亿吨，同比增速分别高达13.4%与48.8%。</p>
+<p>　　2018年受澳大利亚铝土矿新项目上线、印尼扩大铝土矿出口并增加产量以及几内亚铝土矿现有项目的增长推动等利好因素影响，全球铝土矿产量保持高位增长。2018年前三季度，几内亚依然是中国最大铝土矿来源国，供应量高达2897万吨左右，同比增加43.9%。随着在建项目的持续投产，几内亚扩产将持续高速发展。</p>
+<p>　　中国铝产品产量平稳增长，消费结构持续升级。2018年1&mdash;11月我国主要铝产品产量平稳增长，氧化铝、电解铝、铝材产量分别为6627万吨、3144万吨、4108万吨，分别同比增长9.1%、7.5%、0.2%。由于铝的轻量性、耐蚀性、易成形性、再生性等优越性能，中国铝应用领域不断扩大，以铝代铜、以铝代木、以铝代钢的应用正在实现高速发展。</p>
+<p>　　今年BDI指数或小幅回调</p>
+<p>　　2019年，世界经济环境挑战加剧，全球贸易增速预计整体放缓。据国际货币基金组织(IMF)预计，2019年世界经济将增长3.7%，与2018年持平。受&ldquo;逆全球化&rdquo;的贸易投资政策以及发达国家加息、减税等宏观经济政策调整影响，全球企业和消费者信心出现波动，同时美国单边主义和保护主义可能导致全球贸易摩擦升级。总体来看，未来贸易增速走势面临的风险相当大，且在很大程度上偏向于下行。世界贸易组织预计，2019年全球贸易量增长3.7%，较2018年降低0.2个百分点。</p>
+<p>　　展望2019年，国际干散货海运贸易量将继续小幅增长，或将低于2.5%增长。随着中国钢材需求偏弱运行，钢材价格下行压力较大，港口进口矿库存高企危机持续，同时废钢比例上升和电炉炼厂产能持续增加，都将减少对进口铁矿石需求。</p>
+<p>　　中国煤炭平衡局面持续，山东、河南等地已出台相关煤炭消费减量替代工作方案，进口限制政策将较大程度影响2019年煤炭进口局面。</p>
+<p>　　东南亚主要新兴市场持续看好，煤炭进口需求有望进一步提升。在经济快速发展，进口矿优势明显背景下，印度高品矿进口需求将持续高速增长，同时煤炭进口持续高涨。东南亚市场钢厂产能扩张加快，中国钢材出口降幅将持续。</p>
+<p>　　运力方面，2019年运力增速将持续高于运量增速，海岬型船运力交付压力加大。在2017&mdash;2018年初新船订单回升影响下，后续交付运力压力开始进一步增加，2019年交付计划提升至4049万载重吨。海岬型运力增速将持续提升，其中预计2019年交付的40万吨级VLOC达到12艘。展望2019年，笔者预计2019年国际干散货船队运力增速小幅提升至3.1%左右，继续高于运量增速。</p>
+<p>　　综上所述，国际干散货运输市场仍处于恢复调整阶段，新兴市场海运贸易发展迅速，但全球干散货海运供需增速已经开始错配，且中国铁矿石进口量降幅将会进一步加大，煤炭消费减量行动逐步落实，预计2019年BDI指数均值将小幅回调至1300点左右。随着大船市场集中度和长期合作协议比例的持续攀升，即期市场波动受长协价格谈判影响进一步加大。</p>
+					<p align="center"></p>
+					<p align="right">来源：中国水运报</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=218980">[下一篇] 长油重回A股，开盘首日不设跌涨幅限制</a>
+					   
+					 
+						<a href="news_show.php?id=218978">[上一篇] 麦基嘉收购TTS获韩国批准</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219604" title="韩国海洋部为国内航运企业提供3亿美元资金支持">韩国海洋部为国内航运企业提供3亿美元资金支持</a></li>
+							<li><a href="news_show.php?id=219608" title="以色列顶级货运公司Zim向所有客户开放区块链平台">以色列顶级货运公司Zim向所有客户开放区块链平台</a></li>
+							<li><a href="news_show.php?id=219610" title="中国船级社检验完成国产首套导管架裙桩夹桩器">中国船级社检验完成国产首套导管架裙桩夹桩器</a></li>
+							<li><a href="news_show.php?id=219616" title="现代商船：2020年将是实现飞跃的一年">现代商船：2020年将是实现飞跃的一年</a></li>
+							<li><a href="news_show.php?id=219619" title="2020 Bulkers计划为其新造船融资准备上市">2020 Bulkers计划为其新造船融资准备上市</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">
+				<img src="../../imgs/nimg/smallimg/1547356668_thumb.jpg" />
+				<p>Cosco售后回租四艘1万TEU...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">
+				<img src="../../imgs/nimg/smallimg/1546877495_thumb.jpg" />
+				<p>EMGS第四季度船舶利用率达32...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219053" title="中国船配业加速“弯道超车”">
+				<img src="../../imgs/nimg/smallimg/1546565340_thumb.jpg" />
+				<p>中国船配业加速“弯道超车”</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+						<li><a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">SwissMarine与戴安娜航运签约，租下好望角型船舶</a></li>
+						<li><a href="news_show.php?id=218753" title="苏伊士运河延长原油船通行费优惠">苏伊士运河延长原油船通行费优惠</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

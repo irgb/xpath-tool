@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="48,206,84,206,84,262,48,262" shape="polygon" href="./content_585860.htm?div=0"><Area coords="82,206,118,206,118,262,82,262" shape="polygon" href="./content_585860.htm?div=1"><Area coords="116,206,151,206,151,262,116,262" shape="polygon" href="./content_585860.htm?div=2"><Area coords="149,206,185,206,185,262,149,262" shape="polygon" href="./content_585860.htm?div=3"><Area coords="182,206,219,206,219,261,182,261" shape="polygon" href="./content_585860.htm?div=4"><Area coords="216,206,251,206,251,262,216,262" shape="polygon" href="./content_585860.htm?div=5"><Area coords="249,206,285,206,285,262,249,262" shape="polygon" href="./content_585860.htm?div=6"><Area coords="282,206,319,206,319,262,282,262" shape="polygon" href="./content_585860.htm?div=7"><Area coords="316,206,351,206,351,262,316,262" shape="polygon" href="./content_585860.htm?div=8"><Area coords="31,374,68,374,68,430,31,430" shape="polygon" href="./content_585860.htm?div=9"><Area coords="65,374,100,374,100,430,65,430" shape="polygon" href="./content_585860.htm?div=10"><Area coords="98,374,134,374,134,430,98,430" shape="polygon" href="./content_585860.htm?div=11"><Area coords="132,374,168,374,168,430,132,430" shape="polygon" href="./content_585860.htm?div=12"><Area coords="166,374,202,374,202,430,166,430" shape="polygon" href="./content_585860.htm?div=13"><Area coords="198,374,234,374,234,430,198,430" shape="polygon" href="./content_585860.htm?div=14"><Area coords="232,374,268,374,268,430,232,430" shape="polygon" href="./content_585860.htm?div=15"><Area coords="266,374,300,374,300,430,266,430" shape="polygon" href="./content_585860.htm?div=16"><Area coords="298,374,334,374,334,430,298,430" shape="polygon" href="./content_585860.htm?div=17"><Area coords="332,374,367,374,367,430,332,430" shape="polygon" href="./content_585860.htm?div=18"><Area coords="16,169,385,169,385,552,16,552" shape="polygon" href="./content_585860.htm?div=-1"><Area coords="90,52,385,52,385,142,90,142" shape="polygon" href="content_585861.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/02/03/zgyyb2019010203_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            03版:化妆品
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/02/03/zgyyb2019010203.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_83.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_35.htm">下一版 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_81.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>我们为化妆品产业发展而努力！</h1>
+<h2></h2>
+<h4></h4>
+        
+        <div class="c_c">
+          <TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123531_pangc_1545789324076_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;王钢力</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123550_pangc_1545798897421_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;郭昌茂<br>&nbsp;&nbsp;&nbsp;&nbsp;</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123554_pangc_1545799001504_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;桑武庆<br>&nbsp;&nbsp;&nbsp;&nbsp;</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123785_pangc_1545881119747_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;刘雨治<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/1/zgyyb/2019-01/02/03/20180102C1_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;徐伟红<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123508_pangc_1545732680487_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;何聪芬<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123504_pangc_1545732679691_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;陈少军<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123563_pangc_1545799876358_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;谈益妹<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123513_pangc_1545732681813_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;郑俊芳<br></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123509_pangc_1545732680736_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;高祥钦</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123507_pangc_1545732680268_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;斯铂涵</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123506_pangc_1545732680112_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;封帅</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123503_pangc_1545732679442_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;秦皖民</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123510_pangc_1545732680908_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;林进生</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123540_pangc_1545797145139_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;周丽娟</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123511_pangc_1545732681189_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;蓸平</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123560_pangc_1545799112125_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;郭振宇</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123559_pangc_1545799111891_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;王力</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/02/03/123936_pangc_1545904950530_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;刘雨飞</p></TD></TR></TBODY></TABLE>
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;中检院食品化妆品检定所副所长王钢力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新的一年，中国食品药品检定研究院将继续发挥化妆品监管的技术支撑作用。一是配合立法，组织制定完善化妆品相关规范性技术文件，加强检验检测技术的研究。二是以风险发现为目标，主动监测，不断整合风险监测、监督检查、不良反应监测、投诉举报等各类化妆品监管信息，为化妆品监督抽检提供线索和思路，保障化妆品使用安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;广东省药监局化妆品监管处处长郭昌茂</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新一轮机构改革明确了化妆品各环节监管职责、体制机制，进一步优化了监管资源配置，逐步构建权威统一、严密高效的化妆品安全治理体系。展望2019年，化妆品监管和产业发展必将在2018年工作的基础上迈上新台阶。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;河北省保定市市场监管局保化监管处处长桑武庆</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为肩负化妆品监管职责的基层市场监管人员，我们从事的既是一份“守护美丽”的事业，更承担着一份沉甸甸的责任。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着化妆品相关配套法规制度的陆续出台，新的一年，化妆品监管工作将更加规范、科学。我们将以“踏石留印，抓铁有痕”的过硬作风，实现化妆品监管事业的新发展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;江苏省药品监管局主任科员刘雨治</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，在新组建的国家药品监管局，化妆品监管司成为专门的内设机构，标志着“美丽事业”监管展露出新气象。过去的征程已然化作身后的风景，当下需要我们重整行装再次出发。作为整个监管体系中的最后一道防线，稽查执法不会缺席这场“美丽的邂逅”。而且，只有稽查强大了，我们才能更有效地遏制不法行为，聚力推动“美丽事业”全面持续焕发“真彩”！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;浙江省药监局主任科员徐伟红</p><p>&nbsp;&nbsp;&nbsp;&nbsp;展望2019年，期待在新的监管体系下，建立新的考核评价机制，更注重调动监管人员积极性；还期待建立全国集成的监管数据平台与畅通的信息通报和数据共享渠道，形成线索共享、精准监管、社会共治模式；更期待《化妆品监督管理条例》尽快颁布实施，各环节配套法规制度尽快出台，为行业提供严谨的标准遵循。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京工商大学理学院副院长何聪芬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我将一如既往地为实现“通过美让人幸福”而努力工作，积极进行化妆品科普教育宣传，让消费者理解皮肤健康的重要性和化妆品护肤的基本特性；加紧开展化妆品基础科学研究，使科研与实践紧密结合；期待更严格的化妆品监管，让消费者买得放心、用得安心，让人生更加充裕和美丽。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国香料香精化妆品工业协会理事长陈少军</p><p>&nbsp;&nbsp;&nbsp;&nbsp;化妆品行业近年来的迅速崛起及改革开放40年来稳定的两位数的复合增长率，充分显示了其作为朝阳行业的无限潜力。期盼《中国医药报》化妆品版成为宣传新政和化妆品科普的平台，纠正偏激舆论，净化不实谣言，为推动我国化妆品行业持续高速发展助力。相信在政府、行业协会、媒体等多方努力下，化妆品产业的新时代将更加辉煌。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海市皮肤病医院化妆品研究室副主任谈益妹</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，希望化妆品企业增强主体责任意识，以安全为底线，以科学数据为功效宣称依据，打造出真正具有核心竞争力的优质产品；期待化妆品新法规和相关技术指南尽快出台，以规范化妆品行业行为；同时，也相信在化妆品企业、行业和管理部门等多方共同努力下，化妆品产业将不断规范，真正保障和满足消费者的健康美丽需求。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;阿里巴巴集团首席风险官郑俊芳</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，我们联合全球十大知名美妆品牌启动了“颜如玉”专项打假行动；积极配合监管部门和公安部门，推动线上线下化妆品专项整治行动，让“执法机关+品牌权利人+阿里平台”打假共治系统平稳运转，并逐步探索出政企合作的新模式。新的一年，期待与监管部门、品牌权利人继续携手，共同构建更加称心的美妆购物环境和更加高效精准的打假治劣模式。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;爱茉莉太平洋中国总裁高祥钦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，国家药品监督管理部门先后推出首次进口非特殊用途化妆品审批改备案管理制度、化妆品生产许可换证制度，并全力推进《化妆品监督管理条例》修订，化妆品相关法规及标准体系日臻健全。放眼未来，爱茉莉太平洋看好中国化妆品市场释放的活力和对全球市场的能动作用，抓住中国市场新一轮发展机遇，充满信心地开启2019年的新旅程。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;欧莱雅（中国）首席执行官斯铂涵</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，中国政府不断推出新的减负降税及便利化市场准入政策，进一步优化了营商环境。2017年初在上海浦东新区推出的备案政策大大缩短了产品上市时间，欧莱雅在进口非特备案试点中有幸获得首个企业账号及产品备案证书。欧莱雅对中国市场充满信心，并将继续紧跟中国政府步伐，与广大中国消费者共享“美的新黄金时代”！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海相宜本草化妆品股份有限公司董事长封帅</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为中国本土化妆品行业的一员，相宜本草始终以传扬中草药护肤传统为己任。我们坚信，越是民族的，就越是世界的，中国需要更多触动心灵的品牌。新的一年，我们将一如既往，坚持理想，继续以自然为师，以民族为傲，以坚定的文化自信为品牌赋能，从中医药文化中汲取营养，赋予品牌更深厚的文化内涵，让世界因相宜而更加美丽。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;云南白药集团健康产品有限公司总经理秦皖民</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，云南白药集团健康产品有限公司与北京工商大学、北京科技大学联合创办东亚肌肤健康研究中心，并借此平台在云南大理成功举办了“皮肤健康管理与植物护肤研讨会”，由此拉开从肌肤机理研究着手，从植物护肤切入的发展之路。未来，公司将在监管部门的帮助下，严格执行各项法规，不断创新，以最优质的化妆品为人民群众的美好生活增添更多绚丽的色彩。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;福建片仔癀化妆品有限公司董事长林进生</p><p>&nbsp;&nbsp;&nbsp;&nbsp;传承中国传统中医药文化，创新现代时尚护肤科技。新的一年，福建片仔癀化妆品有限公司将继续秉承片仔癀“济世惠人”的使命和责任，坚持打造“安全、专业、天然、时尚”的护肤精品，为广大爱美人士带去健康和美丽，让更多人感受到片仔癀化妆品的健康之美、国粹之美。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;金日制药（中国）有限公司副总裁周丽娟</p><p>&nbsp;&nbsp;&nbsp;&nbsp;金日制药将结合在生物医药领域近40年的专业技术积累，融合传统中医药理论与现代皮肤护理学理论，为消费者的皮肤健康提供更专业、更系统的“医、养、护”管理与服务体验。同时，也期待监管部门进一步推进“放管服”改革，优化产品准入流程，为化妆品产业结构调整和供给侧改革做出更大的贡献。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海家化联合股份有限公司研发部总监曹平</p><p>&nbsp;&nbsp;&nbsp;&nbsp;秉承着“让每个人美丽健康，让每个家庭洁净幸福”的使命，上海家化始终将关爱消费者放在首位，致力于成为美容护肤、个人护理、家居护理的最佳提供者，在保障产品安全性的同时，兼顾对产品功效性的高要求；并积极履行社会责任，书写“华美与共”新篇章；也祝愿《中国医药报》“化妆品版”成为政策解读、产品创新交流互动的平台，为化妆品行业提供强力支持。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;昆明贝泰妮生物科技有限公司董事长郭振宇</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我们要紧跟时代的发展，深入拓展线下终端及O2O新零售布局，致力于打造中国皮肤健康生态系统，为社会传递科学的护肤理念，推动中国皮肤护理大健康事业的发展。未来，公司团队也会秉着一贯的专业态度，怀着匠心精神雕刻贝泰妮旗下所有产品，争取让民族品牌早日走上世界舞台。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新疆天药生物科技有限公司董事长王力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，新疆天药生物科技有限公司将不忘初心，牢记使命，提高自身竞争力，增强企业的品牌和质量意识，力争成为中国芳香产业的一流企业，打造出让政府放心、让消费者称心的中国天然芳香产业的知名品牌。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;厦门舒菲娅化妆品有限公司总经理刘雨飞</p><p>&nbsp;&nbsp;&nbsp;&nbsp;当前，监管部门采取的简政放权、优化服务等改革措施，为企业提供了高效的服务和便利的环境。未来，我们将围绕“中国婴幼儿洗护领导者”的企业愿景，实施“多品牌、多品类、多渠道”的发展战略，逐步提高研发和投入，生产出更适合中国宝宝的洗护产品。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（排名不分先后）</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_81.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+<a class=preart href="content_585861.htm?div=-1">下一篇</a></div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;中检院食品化妆品检定所副所长王钢力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新的一年，中国食品药品检定研究院将继续发挥化妆品监管的技术支撑作用。一是配合立法，组织制定完善化妆品相关规范性技术文件，加强检验检测技术的研究。二是以风险发现为目标，主动监测，不断整合风险监测、监督检查、不良反应监测、投诉举报等各类化妆品监管信息，为化妆品监督抽检提供线索和思路，保障化妆品使用安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;广东省药监局化妆品监管处处长郭昌茂</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新一轮机构改革明确了化妆品各环节监管职责、体制机制，进一步优化了监管资源配置，逐步构建权威统一、严密高效的化妆品安全治理体系。展望2019年，化妆品监管和产业发展必将在2018年工作的基础上迈上新台阶。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;河北省保定市市场监管局保化监管处处长桑武庆</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为肩负化妆品监管职责的基层市场监管人员，我们从事的既是一份“守护美丽”的事业，更承担着一份沉甸甸的责任。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着化妆品相关配套法规制度的陆续出台，新的一年，化妆品监管工作将更加规范、科学。我们将以“踏石留印，抓铁有痕”的过硬作风，实现化妆品监管事业的新发展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;江苏省药品监管局主任科员刘雨治</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，在新组建的国家药品监管局，化妆品监管司成为专门的内设机构，标志着“美丽事业”监管展露出新气象。过去的征程已然化作身后的风景，当下需要我们重整行装再次出发。作为整个监管体系中的最后一道防线，稽查执法不会缺席这场“美丽的邂逅”。而且，只有稽查强大了，我们才能更有效地遏制不法行为，聚力推动“美丽事业”全面持续焕发“真彩”！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;浙江省药监局主任科员徐伟红</p><p>&nbsp;&nbsp;&nbsp;&nbsp;展望2019年，期待在新的监管体系下，建立新的考核评价机制，更注重调动监管人员积极性；还期待建立全国集成的监管数据平台与畅通的信息通报和数据共享渠道，形成线索共享、精准监管、社会共治模式；更期待《化妆品监督管理条例》尽快颁布实施，各环节配套法规制度尽快出台，为行业提供严谨的标准遵循。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京工商大学理学院副院长何聪芬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我将一如既往地为实现“通过美让人幸福”而努力工作，积极进行化妆品科普教育宣传，让消费者理解皮肤健康的重要性和化妆品护肤的基本特性；加紧开展化妆品基础科学研究，使科研与实践紧密结合；期待更严格的化妆品监管，让消费者买得放心、用得安心，让人生更加充裕和美丽。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国香料香精化妆品工业协会理事长陈少军</p><p>&nbsp;&nbsp;&nbsp;&nbsp;化妆品行业近年来的迅速崛起及改革开放40年来稳定的两位数的复合增长率，充分显示了其作为朝阳行业的无限潜力。期盼《中国医药报》化妆品版成为宣传新政和化妆品科普的平台，纠正偏激舆论，净化不实谣言，为推动我国化妆品行业持续高速发展助力。相信在政府、行业协会、媒体等多方努力下，化妆品产业的新时代将更加辉煌。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海市皮肤病医院化妆品研究室副主任谈益妹</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，希望化妆品企业增强主体责任意识，以安全为底线，以科学数据为功效宣称依据，打造出真正具有核心竞争力的优质产品；期待化妆品新法规和相关技术指南尽快出台，以规范化妆品行业行为；同时，也相信在化妆品企业、行业和管理部门等多方共同努力下，化妆品产业将不断规范，真正保障和满足消费者的健康美丽需求。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;阿里巴巴集团首席风险官郑俊芳</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，我们联合全球十大知名美妆品牌启动了“颜如玉”专项打假行动；积极配合监管部门和公安部门，推动线上线下化妆品专项整治行动，让“执法机关+品牌权利人+阿里平台”打假共治系统平稳运转，并逐步探索出政企合作的新模式。新的一年，期待与监管部门、品牌权利人继续携手，共同构建更加称心的美妆购物环境和更加高效精准的打假治劣模式。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;爱茉莉太平洋中国总裁高祥钦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，国家药品监督管理部门先后推出首次进口非特殊用途化妆品审批改备案管理制度、化妆品生产许可换证制度，并全力推进《化妆品监督管理条例》修订，化妆品相关法规及标准体系日臻健全。放眼未来，爱茉莉太平洋看好中国化妆品市场释放的活力和对全球市场的能动作用，抓住中国市场新一轮发展机遇，充满信心地开启2019年的新旅程。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;欧莱雅（中国）首席执行官斯铂涵</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，中国政府不断推出新的减负降税及便利化市场准入政策，进一步优化了营商环境。2017年初在上海浦东新区推出的备案政策大大缩短了产品上市时间，欧莱雅在进口非特备案试点中有幸获得首个企业账号及产品备案证书。欧莱雅对中国市场充满信心，并将继续紧跟中国政府步伐，与广大中国消费者共享“美的新黄金时代”！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海相宜本草化妆品股份有限公司董事长封帅</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为中国本土化妆品行业的一员，相宜本草始终以传扬中草药护肤传统为己任。我们坚信，越是民族的，就越是世界的，中国需要更多触动心灵的品牌。新的一年，我们将一如既往，坚持理想，继续以自然为师，以民族为傲，以坚定的文化自信为品牌赋能，从中医药文化中汲取营养，赋予品牌更深厚的文化内涵，让世界因相宜而更加美丽。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;云南白药集团健康产品有限公司总经理秦皖民</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，云南白药集团健康产品有限公司与北京工商大学、北京科技大学联合创办东亚肌肤健康研究中心，并借此平台在云南大理成功举办了“皮肤健康管理与植物护肤研讨会”，由此拉开从肌肤机理研究着手，从植物护肤切入的发展之路。未来，公司将在监管部门的帮助下，严格执行各项法规，不断创新，以最优质的化妆品为人民群众的美好生活增添更多绚丽的色彩。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;福建片仔癀化妆品有限公司董事长林进生</p><p>&nbsp;&nbsp;&nbsp;&nbsp;传承中国传统中医药文化，创新现代时尚护肤科技。新的一年，福建片仔癀化妆品有限公司将继续秉承片仔癀“济世惠人”的使命和责任，坚持打造“安全、专业、天然、时尚”的护肤精品，为广大爱美人士带去健康和美丽，让更多人感受到片仔癀化妆品的健康之美、国粹之美。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;金日制药（中国）有限公司副总裁周丽娟</p><p>&nbsp;&nbsp;&nbsp;&nbsp;金日制药将结合在生物医药领域近40年的专业技术积累，融合传统中医药理论与现代皮肤护理学理论，为消费者的皮肤健康提供更专业、更系统的“医、养、护”管理与服务体验。同时，也期待监管部门进一步推进“放管服”改革，优化产品准入流程，为化妆品产业结构调整和供给侧改革做出更大的贡献。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海家化联合股份有限公司研发部总监曹平</p><p>&nbsp;&nbsp;&nbsp;&nbsp;秉承着“让每个人美丽健康，让每个家庭洁净幸福”的使命，上海家化始终将关爱消费者放在首位，致力于成为美容护肤、个人护理、家居护理的最佳提供者，在保障产品安全性的同时，兼顾对产品功效性的高要求；并积极履行社会责任，书写“华美与共”新篇章；也祝愿《中国医药报》“化妆品版”成为政策解读、产品创新交流互动的平台，为化妆品行业提供强力支持。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;昆明贝泰妮生物科技有限公司董事长郭振宇</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我们要紧跟时代的发展，深入拓展线下终端及O2O新零售布局，致力于打造中国皮肤健康生态系统，为社会传递科学的护肤理念，推动中国皮肤护理大健康事业的发展。未来，公司团队也会秉着一贯的专业态度，怀着匠心精神雕刻贝泰妮旗下所有产品，争取让民族品牌早日走上世界舞台。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新疆天药生物科技有限公司董事长王力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，新疆天药生物科技有限公司将不忘初心，牢记使命，提高自身竞争力，增强企业的品牌和质量意识，力争成为中国芳香产业的一流企业，打造出让政府放心、让消费者称心的中国天然芳香产业的知名品牌。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;厦门舒菲娅化妆品有限公司总经理刘雨飞</p><p>&nbsp;&nbsp;&nbsp;&nbsp;当前，监管部门采取的简政放权、优化服务等改革措施，为企业提供了高效的服务和便利的环境。未来，我们将围绕“中国婴幼儿洗护领导者”的企业愿景，实施“多品牌、多品类、多渠道”的发展战略，逐步提高研发和投入，生产出更适合中国宝宝的洗护产品。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（排名不分先后）</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585860.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_1-03>我们为化妆品产业发展而努力！</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585861.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_2-03>2019</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-02
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>我们为化妆品产业发展而努力！
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle></founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/02/03/zgyyb2019010203_b.jpg</founder-pagepicurl>
+<founder-pagenum>03</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>81</founder-nodeid> /mpproperty-->
+
+

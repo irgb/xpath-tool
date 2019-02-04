@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>汽车头条 - 啃代码的不一定都是程序员，也有可能是...汽车工程师？</title>
+<meta name="description" content="汽车网购车，汽车新闻头条就选汽车头条网，实时更新的汽车新闻头条，最优惠的购车报价，最全的汽车网评测。购车，看汽车新闻优选的汽车网！"/>
+<meta name="keywords" content=""/>
+<link rel="apple-touch-icon" size="72x72" href="//www.qctt.cn/desktop/images/logo72.png" />
+<link rel="apple-touch-icon" size="114x114" href="//www.qctt.cn/desktop/images/logo114.png" />
+<link rel="shortcut icon" href="//www.qctt.cn/desktop/images/logo72.png" />
+
+<link  href="//www.qctt.cn/desktop/css/style_L.css" type="text/css" rel="stylesheet">
+<link  href="//www.qctt.cn/desktop/css/style.css" type="text/css" rel="stylesheet">
+<link  href="//www.qctt.cn/desktop/css/home.css" type="text/css" rel="stylesheet">
+<meta name="baidu-site-verification" content="c3CerWGMp7" />
+<style>
+   .word2 div:nth-child(1){
+      font-size: 24px;
+      margin-bottom:30px;
+   }
+  
+</style>
+</head>
+<body>
+   <!-- <a href="http://oldpc.qctt.cn/" style="position:absolute;top:200px;left:1px;width:20px;height:100px;background-color:#1FADC2;display:block;z-index:99999;color:#fff;padding:5px;" target="_blank">
+返回旧站
+</a> -->
+
+<style>
+	.p-header-hide3 {
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -moz-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -o-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+}
+.p-header-show3 {
+    -webkit-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    transform: translateY(-60px);
+    -webkit-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -moz-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -o-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+}
+
+
+	
+		.p-header-hide {
+    -webkit-transform: translateY(-110px);
+    -ms-transform: translateY(-110px);
+    transform: translateY(-110px);
+    -webkit-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -moz-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -o-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+}
+.p-header-show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -moz-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -o-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+}
+
+
+.p-header-hide2 {
+    -webkit-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    transform: translateY(-60px);
+    -webkit-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -moz-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    -o-transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+    transition: all 300ms cubic-bezier(.55, .055, .675, .19);
+}
+.p-header-show2 {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -moz-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    -o-transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+    transition: all 900ms cubic-bezier(.19, 1, .22, 1);
+}
+
+</style>
+<div class="log_box">
+    <div class="cancel isButton" data-oper="cancel"><img src="//www.qctt.cn/desktop/img/cancel_02.png" alt=""></div>
+    <div class="content">
+        <div class="head">
+		    <a href="https://www.qctt.cn/home">
+			   <img src="//www.qctt.cn/desktop/img/logo.png" alt="">
+			</a>
+		</div>
+        <ul class="user clearfix">
+            <li class="select">普通用户</li>
+            <li>头条客用户</li>
+        </ul>
+        <div class="log">
+            <div >
+                <form method="post" style="margin-top:35px;">
+                    <div>
+                        <input type="text" name="username" class="input_username" placeholder="有户名/手机号/邮箱">
+                        <input type="text" name="password" class="input_password" placeholder="密码">
+                        <input type="submit" class="btn_login" value="登录">
+                    </div>
+                    <div class="ctrl_box m-t-20">
+                        <input type="checkbox" class="remember" name="remember">记住我
+                        <a href="" class="text fr">忘记密码？</a>
+                    </div>
+                    <div class="sign_up m-t-20">
+                        没有账号去注册?
+                        <a href="//www.qctt.cn/userregisterfirst" class="blue">去注册</a>
+                    </div>
+                    <div class="third_login" style="margin-top:30px">
+                        <span>第三方登录</span>
+                        <img src="//www.qctt.cn/desktop/img/qq.png" style="vertical-align: middle">
+                        <img src="//www.qctt.cn/desktop/img/sina.png" style="vertical-align: middle">
+                    </div>
+                    <div class="down_load blue isButton" data-oper="down_load">
+                        <div class="erweima_big"><img src="//www.qctt.cn/desktop/img/dianji.png" alt=""></div>
+                        <div class="word">下载汽车头条APP</div></div>
+                </form>
+            </div>
+            <div style="display:none">
+                <form method="post" style="margin-top:35px;">
+                    <div>
+                        <input type="text" name="username" class="input_username" placeholder="有户名/手机号/邮箱">
+                        <input type="text" name="password" class="input_password" placeholder="密码">
+                        <input type="submit" class="btn_login" value="登录">
+                    </div>
+                    <div class="ctrl_box m-t-20">
+                        <input type="checkbox" class="remember" name="remember">记住我
+                        <a href="" class="text fr">忘记密码？</a>
+                    </div>
+                    <div class="sign_up m-t-20">
+                        没有账号去注册?
+                        <a href="//www.qctt.cn/userregisterfirst" class="blue">去注册</a>
+                    </div>
+                        <div class="third_login" style="margin-top:30px">
+                        </div>
+                    <div class="down_load blue isButton" data-oper="down_load">
+                        <div class="erweima_big">
+                            <img src="//www.qctt.cn/desktop/img/dianji.png" alt="">
+                        </div>
+                        <div class="word">下载汽车头条APP</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ 
+
+<div class="nav" style="top:0px">
+    <div class="nav_1"><div class="top clearfix">
+        <div class="top_inner">
+            <div class="logo"><a href="https://www.qctt.cn/home"></a></div>
+            <ul class="clearfix fl info">
+              <li><a class="select" href="https://www.qctt.cn/home">资讯</a></li>
+<li><a  href="https://www.qctt.cn/video">视频</a></li>
+<li><a  href="https://www.qctt.cn/ttkChannelList">头条客</a></li>
+            </ul>
+            <ul class="clearfix fr">
+                <li class="client">
+                      <div class="erweima"></div>
+					  <a href="#" style="font-weight:300">客户端</a>
+                </li>
+                <li>
+                    <div class="gao"><a href="//www.qctt.cn/intoadmin" style="font-weight:300">投稿</a></div>
+                </li>
+                                <li class="log_in">
+                    <!--<a href="//www.qctt.cn/login" class="" data-oper="log">登录</a>|-->
+                    <a href="//www.qctt.cn/login/index.php" class="" data-oper="log">登录</a>|
+                    <a href="//www.qctt.cn/userregisterfirst">注册</a>
+                </li>
+                            </ul>
+            
+            <div class="search" style="float:right;    padding: 0 10px;
+    width: 180px;
+    height: 28px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 10px;">
+            <form action="" method="get" id="search_form">
+              <input type="text"  name="keyword" id="key" style="width: 130px;
+    height: 26px;
+    background-color: #f9f9f9;
+    border: none;
+    float: left;
+    font-size: 14px;">
+              <input type="button" style="    width: 26px;
+    height: 26px;
+    background-color: #f9f9f9;
+    border: none;
+    float: right;
+    background-image: url(//www.qctt.cn/desktop/img/search2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+    cursor: pointer;"  class="usousuo">
+               </form>
+            </div>
+            
+          <!--  <div class="mod_search_input fr">
+                <form action="" method="get" id="search_form">
+                    <input class="search fr" type="text" name="search" id="key" >
+                    <input type="button" class="btn usousuo" value="">
+                </form>
+            </div>-->
+        </div>
+    </div></div>
+    <div class="nav_2">
+	<ul class="top2 clearfix">
+		 <li ><a href="https://www.qctt.cn/home">首页</a></li>
+                    		  <li  id="nav1">
+			  <a href="//www.qctt.cn/home/channel/0_1">新车</a>
+		  </li>
+                    		  <li  id="nav2">
+			  <a href="//www.qctt.cn/home/channel/0_2">行业</a>
+		  </li>
+                    		  <li  id="nav3">
+			  <a href="//www.qctt.cn/home/channel/0_3">导购</a>
+		  </li>
+                                                		  <li  id="nav30">
+			  <a href="//www.qctt.cn/home/channel/0_30">用车</a>
+		  </li>
+        		<!--<li ><a href="https://www.qctt.cn/home/mp">头条客</a></li>-->
+		<!-- <li ><a href="https://www.qctt.cn/home/topic?type=all&amp;page=1">选题会</a></li> -->
+	</ul>
+</div>
+</div>
+
+   <style>
+.content_detail {
+	margin: 0px auto;
+	width: 1000px;
+}
+.y_text a{
+  text-decoration: underline;
+  color:#0372c9;
+}
+.y_text2 table{
+    background-color: #FAFAFA;
+    width: 100%;
+    border-collapse: collapse;
+}
+.y_text2 p{
+    word-break: break-all;
+}
+.y_text2 table tr td{
+    border: 1px solid #C8C8C8;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.y_text2 table tr:first-child td{
+    font-size: 14px;
+}
+.y_text2 ol,.y_text2 ul,.y_text ol,.y_text ul{
+    padding-left: 20px;
+}
+.y_text2 ul,.y_text ul{
+    list-style-type: disc;
+}
+.y_text2 em,.y_text2 i,.y_text em,.y_text i{
+    font-style: italic !important;
+}
+.y_text2 video,.y_text video{
+    width: 100%;
+    height: auto;
+}
+.content_detail_left {
+	float: left;
+	width: 680px;
+}
+.content_detail_left img{
+    width:100%;
+}
+.content_detail_left .title {
+	font-size: 26px;
+}
+.part2 {
+	margin: 20px 0;
+}
+.part2 a {
+	color: #3cb0fa;
+}
+.part2 span {
+	color: #acacac;
+}
+.p_mid {
+	/*margin: 0 25px;*/
+}
+.content_detail_left .y_text2 div,.content_detail_left .y_text div{
+    width: 100% !important;
+}
+.content_detail_left p {
+    margin: 5px 0;
+    font-size: 16px;
+    word-wrap:break-word;
+}
+.content_detail_left p span img {
+    display: block;
+}
+/*reset default*/
+.content_detail_left ol, .content_detail_left ol li {
+    list-style-type: decimal;
+}
+
+.copyright {
+	color: #ccc;
+    border: 1px solid #E2E2E2;
+    padding:15px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+.copyright span.statement {
+	color: #ec3a4d;
+    display: inline-block;
+    width: 16%;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.copyright span.special{
+    color: #000;
+    padding: 0 2px;
+}
+.copyright span.contText{
+    display: inline-block;
+    width: 84%;
+    letter-spacing: 1px;
+}
+.adver {
+	margin: 40px 0 40px 0;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	background: #ccc;
+	color: #fff;
+}
+.comment {}
+.comment_left .head_pic {
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.comment_left .head_pic img{ width:50px; height:50px; border-radius:50px;}
+.comment_right {
+	margin-left: 26px;
+	width:600px;
+}
+.comment_left{
+	margin:30px 0 30px 0;
+	float: left;
+}
+.comment_right{
+	margin:30px 0 30px 26px;
+}
+.comment_right textarea {
+	width:580px;
+	height:100px;
+	max-height: 100px;
+	max-width:580px;
+
+	outline:none;
+	padding:10px
+}
+.confirm {
+	/*margin-left: 470px;*/
+	text-align: center;
+	display:inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	color: #28b3c6;
+	border: 1px solid #28b3c6;
+	border-radius: 20px;
+	float:right;
+}
+.comment_right span:nth-child(1) {
+	color: #333;
+	margin-right: 10px;
+}
+.comment_right div {
+	/*background: #f9f9f9;*/
+	height:auto;
+	line-height: 40px;
+}
+.comment_right span {
+	color: #ddd;
+}
+.spacing {
+	height: 30px;
+}
+.content_detail_right {
+	background: #f9f9f9;
+	float: right;
+	width: 260px;
+	overflow:hidden;
+}
+.content_detail_right p {
+	padding-left: 10px;
+	border-left: 4px solid #17adc1;
+}
+.content_detail_right img {
+	width: 200px;
+	height: 150px;
+}
+.content_detail_right img:hover {
+	width: 220px;
+	height: 170px;
+	margin-left:-10px;
+	margin-top:-10px;
+}
+.content_detail_right .a_img{
+	margin-left:30px;
+	margin-top:30px;
+}
+.content_detail_right .title{
+	margin-top:10px;
+}
+.content_detail_right .a_img span{
+	display:inline-block;
+	width:200px;
+	height:150px;
+	overflow:hidden;
+	padding:0;
+	margin:0 auto;
+}
+.share {
+	position: fixed;
+	top: 160px;
+	left: 5%;
+	width: 55px;
+	z-index:99;
+}
+.share a {
+	float: left;
+    display:block;
+	height: 55px;
+	width: 55px;
+}
+.share a.friend {
+   background: url("//www.qctt.cn/desktop/img/detail/朋友圈_默认_1.png")no-repeat;
+    margin: 0;
+}
+.share a.friend:hover {
+   background: url("//www.qctt.cn/desktop/img/detail/朋友圈_划过_1.png")no-repeat;
+    margin: 0;
+}
+.share a.weiBo {
+   background: url("//www.qctt.cn/desktop/img/detail/微博_默认_1.png")no-repeat;
+    margin: 0;
+}
+.share a.weiBo:hover {
+   background: url("//www.qctt.cn/desktop/img/detail/微博_划过_1.png")no-repeat;
+    margin: 0;
+}
+.share a.qqSpace {
+   background: url("//www.qctt.cn/desktop/img/detail/QQ空间_默认_1.png")no-repeat;
+    margin: 0;
+}
+.share a.qqSpace:hover {
+   background: url("//www.qctt.cn/desktop/img/detail/QQ空间_划过_1.png")no-repeat;
+    margin: 0;
+}
+.share a.comment {
+   background: url("//www.qctt.cn/desktop/img/detail/评论_默认_1.png")no-repeat;
+    margin: 55px 6px 0px 0;
+}
+.share a.comment:hover {
+   background: url("//www.qctt.cn/desktop/img/detail/评论_划过_1.png")no-repeat;
+    margin:55px 6px 0px 0;
+}
+.share a.keep {
+   background: url("//www.qctt.cn/desktop/img/detail/收藏_默认_1.png")no-repeat;
+    margin: 0px 6px 0px 0;
+}
+.share a.keep:hover {
+   background: url("//www.qctt.cn/desktop/img/detail/收藏_划过_1.png")no-repeat;
+    margin: 0px 6px 0px 0;
+}
+.head_pic img{
+	width:50px;border-radius:50px;
+}
+.test{
+	overflow: hidden;
+	height:43px;
+}
+.test_input{
+	float: left;
+	margin-left: 75px;
+	padding-left:7px;
+	width:150px;
+	height:38px;
+
+}
+.test_pic{
+	text-align: center;
+	float: left;
+	margin:0 10px;
+	width:103px;
+	height:40px;
+	line-height: 40px;
+	background: #ddd;
+}
+.test_error{
+	color: #ec3a4d;
+	height:40px;
+	line-height:40px;
+	float:left;
+}
+#key{
+   width:158px;
+}
+.bdshare-slide-button-box{display: none !important;}
+.content_detail_left .y_text2 a:link {
+    text-decoration: underline;
+    color:blue;
+}
+.content_detail_left .y_text2 a{
+  color:blue;
+}
+    .content_detail_left .title{
+      margin-top:40px
+    }
+</style>
+<div class="con">
+<div class="share clearfix bdsharebuttonbox" data-tag="share_1">
+    <a href="#" class="bds_weixin friend" data-cmd="weixin"></a>
+    <a class="bds_tsina weiBo" data-cmd="tsina"></a>
+    <a class="bds_qzone qqSpace" data-cmd="qzone" href="#"></a>
+    <a class="comment" href="#w" style="display:block;"></a>
+        <a class="keep" da="1"></a>
+    </div>
+<div class="back" id="back"></div>
+  <div class="content_detail clearfix">
+
+  <div class="content_detail_left" style="max-width:100%; ">
+        <div class="title">啃代码的不一定都是程序员，也有可能是...汽车工程师？</div>
+    <div class="part2">
+      <a href="https://www.qctt.cn/author/52213" target="_blank">视知车学院</a>
+              <span>2018-12-29 11:40:06</span>
+            <span style="float:right;margin-right:20px">阅读数 <span style="color:#17abc1">2363</span></span>
+          </div>
+        <div class="y_text2">
+            <p class="ql-align-justify" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">1885年，卡尔本茨将带着高效出行的理想发明了汽车，经100多年来的不断改进、创新，凝聚了人类的智慧和匠心，并得益于石油、钢铁、铝、化工、塑料、机械设备、电力、道路网、电子技术与金融等多种行业的支撑，为汽车产业的带来了飞速的进步。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/8aca2a4a80f446e296bb9d332d725eff" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">人们的生活在变，需求在变，汽车产品就必须跟上变化的脚步，这就给研发制造层面出了难题。如何造车才能保质保量，更抓住用户需求呢？我们不妨从头梳理下造车发展史，看看是否能从中寻得答案。&nbsp;&nbsp;<br/></p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/8831cfc7cc84457e8d05a3aeee78c86f" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-justify" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">过去造车，有人出技术，有人出钱，毕竟那时候有车一族很少，需求也很简单，几个人看看大家想要什么，再合计一下，埋头猛干就完了。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/8dca6816383f47149d23963932b4781e" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">首席工程师大概率就是创始人，零部件草图、工程图、造型图......全是手绘的，倍儿艺术！接着，一张张图纸被翻译成真正的零部件，除了有机器锤炼、手工打磨，装配过程也要靠手，难怪当年的工程师都是手持扳手一身油。手工装配的样车在大街上跑几圈就算是测试了，如果没啥大问题就开始批量生产；否则，就得回到底层图纸修改调整，再一步步锤上来。这套研发制造流程周期长、成本高、精度差，不仅产量上不去，甚至每一辆汽车的性能也不重样。可能这就是手工的魅力吧…</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/09a248ea798c4dea800cfa8ad474f9f8" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">后来造车可不能像以前那么粗暴了，汽车厂商们引入了更深层次的市场调研和对经济社会发展的分析，通过各项数据和反馈来确定消费者到底需要什么车型。那...怎么造？手绘图纸依然是基础，不过随着计算机技术的铺开，工程师们的绘图阵地先后转移到了CADAM工程绘图系统和AutoCAD二维设计软件之上。虽然这提升了设计研发的精度和效率，但是对于工程师们来说，远离了油污但是熬白了头，依然是个苦差事。而在图纸变零件的环节，机床甚至数控机床，还有规模化流水线的应用，让生产制造的精度和效率迈上了新台阶。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/14d600c754f748678b52a07b3aa2b25f" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-justify" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">另外，最重要的一点忘了说，那就是油泥模型的兴起和应用，让汽车外形设计变得更为直观。造车后的审核和测试也更加完善了，但是成本可不低，为了最终产品能质量稳定，沙漠山地都要跑一跑。可以说这一阶段已经奠定了造车的基本流程。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/51d049279d0145e68c8857d4e1f825c8" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-justify" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">现在造车在基本的设计，研发，验证流程之上，更依赖于多重的数字化手段。不仅是用户的需求可以转化为数字模型，研发设计阶段也少不了各类更加先进的数字化工具。AutoCAD二维设计软件虽然也在用，但Catia、UG这类三维设计软件才是主流——工程师们直接用三维数模自动转换成三维图纸，甚至还会有自动化设计工具的帮助，这样，在底层设计环节，效率和精度又完成了一次跃升。也难怪最近的年轻设计师们都放下了画笔啃起了代码，毕竟这才是未来生产力。&nbsp;&nbsp;<br/></p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/257de25018d346b4a77e0a0778246532" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-justify" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">设计完成之后，按照之前的套路应该是翻译成零部件，小规模试制测试后进行调整，直至完善后再考虑量产，但整个过程时间成本很高，可靠性却不高。为了解决这个问题，模拟仿真技术应运而生。现在，几乎所有车型都要在尚未诞生之前，借助CAE模拟仿真软件进行各种测试，然后进行针对性调整和改进，一切妥当之后，再去试制实车，测试修正，最后实现机械化、智能化量产。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/8449e6839daf4208af27d22b20e4b16f" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">总之，整个过程完全是数字化，这样的运作模式让汽车设计研发测试制造等等各个环节都更加高效，节约时间成本，同时更重要的是保证最终产品的可靠性。而作为上汽通用汽车设计与工程技术的核心，泛亚汽车技术中心早在2012年就开启了<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">数字化战略转型</span>。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/5455db1185f04943aba6aad706f2e9a1" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">原先，工程师们严谨细致的工作成果是厚厚一叠的图纸和一轮一轮的方案设计；而现在，工程师们可能只需要一个U盘、硬盘或是数据库的某个角落，把所有设计参数和性能指标打包填充进去就好了。在泛亚汽车技术中心，这叫做<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">产品数字化</span>。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/752ae6b33b3e4fc597bdacdf0b837aa1" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">当然，仅仅产品数字化是不够的，工程师们在设计研发环节会遇到大量重复甚至无穷尽的运算操作，枯燥又低效，所以这部分工作就交给“机器”来做。于是，自动化设计工具KBE、虚拟仿真CAE工具就铺开了。在泛亚汽车技术中心，这叫做<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">研发数字化</span>。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p9.pstatp.com/large/pgc-image/46166d4b90e24b17bfa016530a9fca94" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">（图片来源于网络）</p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">俗话说，工欲善其事，必先利其器，到这里，工程师们的技术关就算搞定了，但还差最关键的一缕东风，那就是什么时间要干什么，谁来负责系统安排。别担心，泛亚汽车技术中心将设计研发过程中的管理过程进行梳理优化，然后再建立数字化模型，高效协同各项业务管理过程。这样，工程师们有了明确的时间表和管理规划，整体研发效率自然就提上来了。在泛亚汽车技术中心，这叫做<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">业务数字化</span>。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p99.pstatp.com/large/pgc-image/7a841c64b69d4734a0cd593cf401b4ae" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">除了上面的三个“化”，泛亚汽车技术中心还在<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">电动化、智能化</span>和<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">网联化</span>方面不断迈进，推动<span style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; font-weight: 700;">数字化战略转型</span>。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/cc5a787143694232887a9b6c2f867381" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">首先，市面上的48V微混、全混、插电混动到纯电动的新能源产品，泛亚汽车技术中心都可以做，或是已经在做；另外，在最关键的电池和充电技术上，泛亚汽车技术中心正在与国内供应商合作开发下一代动力电池，同时像大功率充电、非接触充电、即停即充等技术，或许在不久的将来就会应用到全新车型之上。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/96b41f12447c4636add5d4f87d26e63b" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">其次，泛亚汽车技术中心已形成ADAS智能驾驶辅助功能的全过程开发和本土化试验认证能力，不仅能够满足通用全球的安全标准，更能够适应国内的特殊工况和路况，当然最重要的是实现ADAS功能在雪佛兰、别克和凯迪拉克车型上的普及。&nbsp;&nbsp;<br/></p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p1.pstatp.com/large/pgc-image/f10ceee151704ae88491a4075e3bfcd0" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">最后，泛亚汽车技术中心正在与一些互联网企业接触，发挥各自在大数据挖掘以及互联产品上的优势；另外，在“第二引擎”——车联网方面，泛亚汽车技术中心不仅拥有开放度和兼容性更出色的芯片和系统，来为将来车联应用的拓展提供入口。而且还为未来千兆级别的数据吞吐量预留了拓展空间，同时还能严格保证网络安全。总结而言，未来的车联网体验将会更加快速，内容更加丰富，用户体验更好。</p><div class="pgc-img" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: "><img src="http://p3.pstatp.com/large/pgc-image/5a83e399ee404cf4b5c1a397372725b4" alt="啃代码的不一定都是程序员，也有可能是……汽车工程师？"/><p class="pgc-img-caption" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: center; font-size: 12px; color: rgb(119, 119, 119); line-height: 16px;">&nbsp;&nbsp;<br/></p></div><p class="ql-align-center" style="-webkit-tap-highlight-color: transparent; box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; padding: 0px; color: rgb(34, 34, 34); font-family: ">研发是汽车厂商最重要也是最核心的一部分，汽车厂商之间的角力，往往就是研发实力的较量。我们能看到，今天，泛亚汽车技术中心乘着数字化战略转型的东风，已经成为上汽集团和通用汽车全球研发体系的重要组成部分；明天，希望泛亚汽车技术中心会为大家带来更多可能。</p>
+    </div>
+        <div class="copyright">
+                    <span class="statement">【版权声明】</span><span class="contText">本文系入驻头条客平台作者撰写，观点仅代表作者本人，不代表<span class="special">汽车头条</span>立场</span>
+            </div>
+            <a name="w">
+    <div class="comment clearfix" style=" border:none; padding:0;" >
+      <div class="comment_left clearfix">
+        <div class="head_pic"> <img src="http://qcttapp.qctt.cn/touxiang.png" alt=""> </div>
+      </div>
+      <div class="comment_right fl">
+        <textarea placeholder="在此处输入内容..."></textarea>
+      </div>
+    </div>
+    </a>
+    <div class="comment clearfix" new_id="415615" style=" border-bottom:none; padding:0;">
+      <div class="test clearfix">
+        <input type="text" class="test_input" placeholder="请输入验证码">
+        <span class="test_pic"> <img src="https://www.qctt.cn/verify" alt="" onclick="this.src='https://www.qctt.cn/verify?'+Math.random()"> </span>
+        <span class="test_error" style="display: none">验证码错误</span>
+        <span class="confirm" style="cursor: pointer" at=1>发布评论</span>
+      </div>
+    </div>
+        <div class="more">
+      <div class="more_btn" style="display: none"  data-page="1">点击加载更多</div>
+    </div>
+       </div>
+
+  <div class="content_detail_right">
+    <p>相关资讯</p>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415631"><span><img src="http://cools.qctt.cn/1546055801933?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415631">钟观 | 汽车产业投资新规将落地，新势力能否跨越生死门槛？</a></div>
+    </div>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415630"><span><img src="http://cools.qctt.cn/1546055476800?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415630">5-10万，自主品牌和不挂VW标的&ldquo;捷达&rdquo;，你选谁？</a></div>
+    </div>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415628"><span><img src="http://cools.qctt.cn/1546055293786?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415628">节能减排应该是做多项选择题，纯电动车并不能取代燃油车！</a></div>
+    </div>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415627"><span><img src="http://cools.qctt.cn/1546055275925?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415627">百姓的口碑终获官方认可，长城汽车荣获&ldquo;人民之选40年成就大奖&rdquo;</a></div>
+    </div>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415570"><span><img src="http://cools.qctt.cn/1546052155653?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415570">油价迎&ldquo;五连降&rdquo; 92号汽油每升下调0.29元</a></div>
+    </div>
+        <div class="a_img"><a href="https://www.qctt.cn/news/415573"><span><img src="http://cools.qctt.cn/1546052315580?imageView2/1/w/750/h/560/"></span></a>
+      <div class="title"><a href="https://www.qctt.cn/news/415573">投资3000万美元 特斯拉在上海成立融资租赁公司</a></div>
+    </div>
+     </div>
+</div>
+     
+   <div class="footer">
+     <div class="clearfix">
+		  <span>
+			  <a href="//www.qctt.cn/home/about">关于我们</a>
+		  </span>
+		  <small>|</small>
+		  <span>
+			  <a href="//www.qctt.cn/home/contact">联系我们</a>
+		  </span>
+		  <small>|</small>
+		  <span>
+			  <a href="//www.qctt.cn/home/joinus">加入我们</a>
+		  </span>
+		  <small>|</small>
+		  <span>
+			  <a href="//www.qctt.cn/home/partner">合作伙伴</a>
+		  </span>
+		  <small>|</small>
+		  <span>
+			  <a href="//www.qctt.cn/home/link">友情链接</a>
+		  </span>
+		  <small>|</small>
+		  <span><a href="//www.qctt.cn/home/appdown">移动应用</a></span>
+    </div>
+    <div class="copyright">Copyright &copy; 2016 汽车头条 All Rights Reserved</div>
+    <div class="qctt"><img src="//www.qctt.cn/desktop/img/qctt_logo.png" ></div>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		    if(window.location.href.indexOf("foreignnews") < 0){
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?70af9ea91e7adc8195f6d49511b9a2f1";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+			}
+		})();
+	</script>
+  
+</div>
+</div>
+</body>
+<script type="text/javascript" src="//www.qctt.cn/desktop/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="//www.qctt.cn/assets/js/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="//www.qctt.cn/desktop/js/style.js"></script>
+<script type="text/javascript" src="//www.qctt.cn/desktop/js/scrollTop.js"></script>
+  <script>
+      $(document).ready(function (){
+          // 去除空的P标签
+          $(".y_text2 p.app_hidden").each(function (index,item){
+              if($(item).html() == "" || $(item).html() == "&nbsp;&nbsp;"){
+                  $(item).remove();
+              }
+          })
+          $(".y_text p.app_hidden").each(function (index,item){
+              if($(item).html() == "" || $(item).html() == "&nbsp;&nbsp;"){
+                  $(item).remove();
+              }
+          })
+      })
+      var html=HTMLDecode('啃代码的不一定都是程序员，也有可能是...汽车工程师？');
+      window._bd_share_config = {
+          common : {
+              bdText : html+' -汽车头条|行业频道',
+              bdUrl : "https://www.qctt.cn/news/415615",
+              bdPic : 'http://cools.qctt.cn/Fuwuz-qCHYOy8yAF30Ipl1EoD1CS'
+          },
+          share : [{
+              "bdSize" : 16
+          }],
+          slide : [{
+              bdImg : 0,
+              bdPos : "right",
+              bdTop : 100
+          }],
+          image : [{
+              viewType : 'list',
+              viewPos : 'top',
+              viewColor : 'black',
+              viewSize : '16',
+              viewList : ['qzone','tsina','huaban','tqq','renren']
+          }],
+          selectShare : [{
+              "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+          }]
+      }
+      with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+      function HTMLDecode(text) {
+          var temp = document.createElement("div");
+          temp.innerHTML = text;
+          var output = temp.innerText || temp.textContent;
+          temp = null;
+          //$("#decode").html(output);
+          return output;
+      }
+  </script>
+<script>
+  $("title").html("啃代码的不一定都是程序员，也有可能是...汽车工程师？ -汽车头条|行业频道");
+              //收藏
+              $(".keep").click(function(){
+                var status=$(this).attr("da");
+                var id='415615';
+                var obj=$(this);
+                $.get("https://www.qctt.cn/collection",{'_token':'RmeWKxtTYpewAvwdChB6qqDcSN3iAIhU2zuvRDK3',id:id,type:1,status:status},function(r){
+                        if(r=='1'){
+                           //location.reload();
+                            if(status == 1){
+                                obj.attr('da',0);
+                                obj.css({'background':'url("/desktop/img/detail/收藏_已收藏_1.png")no-repeat'});
+                            }else{
+                                obj.attr('da',1);
+                                obj.css({'background':''});
+                            }
+                        }else if(r=='2'){
+                          window.location="//www.qctt.cn/login";
+                        }
+                    });
+              });
+                $('.more_btn').click(function(){
+                    obj=this;
+                    var comm_index=$(this).parent().prev().attr('comm_index');
+                    var new_index=$(this).parent().prev().attr('new_index');
+                    var _page = parseInt($(this).attr('data-page')) +1;
+                    var result= '';
+                    var new_id= "415615";
+                    $.post("https://www.qctt.cn/commentMoren",{'_token':'RmeWKxtTYpewAvwdChB6qqDcSN3iAIhU2zuvRDK3',id:new_index,page:_page},function(data){
+                        if(data!=''){
+                            $.each(eval('('+data+')'),function(k,v){
+                                result +='<div class="comment clearfix" new_index="'+new_id+'" comm_index="'+v.comment_id+'">'
+                                        +'  <div class="comment_left">'
+                                        +'      <div class="head_pic">'
+                                        +'          <img src="'+v.headlogo+'"  alt="">'
+                                        +'      </div>'
+                                        +'  </div>'
+                                        +'  <div class="comment_right fl">'
+                                        +'      <div><span>'+v.user_nicename+'</span> <span>'+v.comment_date+'</span> </div>'
+                                        +'      <div>'+v.comment_content+'</div>'
+                                        +'  </div>'
+                                        +'</div>';
+                            });
+                            $(obj).parent().prev().after(result);
+                            $(obj).attr('data-page',_page++);
+                        }
+                        else{
+                            alert('亲，没有更多了！');
+                        }
+                    });
+                });
+                var is_comment=parseInt("1");
+                $('.confirm').click(function(){
+                    obj=this;
+                    at=$(this).attr('at');
+                    if(at==1){
+                        if(is_comment==1){
+                            var code=$('.test_input').val();
+                            obj=this;
+                            var comment=$.trim($('textarea').val());
+                            if(comment==''){
+                                alert('请输入评论内容');
+                                return false;
+                            }
+                            if(code==''){
+                                alert('请输入验证码');
+                                return false;
+                            }
+                            $(obj).attr('at',0);
+                            $.post("https://www.qctt.cn/verify",{'_token':'RmeWKxtTYpewAvwdChB6qqDcSN3iAIhU2zuvRDK3',code:code},function(r) {
+                                if (r == 0) {
+                                    $('.test_error').css({'display': 'inline'});
+                                    alert('请输入正确的验证码');
+                                    $(obj).attr('at',1);
+                                }
+                                if (r == 1) {
+                                    $('.test_error').css({'display': 'none'});
+                                    var new_id = $('.confirm').parent().parent().attr('new_id');
+                                    $.post("https://www.qctt.cn/commentn", {
+                                        '_token': 'RmeWKxtTYpewAvwdChB6qqDcSN3iAIhU2zuvRDK3',
+                                        comment: comment,
+                                        new_id: new_id
+                                    }, function (r) {
+                                        if (r.status==1) {
+                                            $('.test_pic img').click();
+                                            $('.confirm').parent().parent().after(r.data);
+                                            $('textarea').val('');
+                                            $('.test_input').val('')
+                                            $(obj).attr('at',1);
+                                            //alert(r);
+                                        }
+                                        if(r.status==0) {
+                                            alert(r.data);
+                                            $(obj).attr('at',1);
+                                            //location.reload();
+                                        }
+                                    },'json');
+                                }
+                            })
+                        }else{
+                            alert('该文章已禁言');
+                        }
+                    }
+
+
+                });
+                $(".bshare-custom a").css("height","55px");
+                $(".bshare-custom a").css("width","55px");
+                $(".bshare-custom a").css("background","url()");
+                // $(".content_detail_left p").find("br").remove();
+                $('.y_text p span').attr('style','');
+                $('.y_text section').attr('style','');
+                $('.y_text img').attr('height','');
+                $('.y_text img').css({'height':'auto'});
+
+            </script>
+
+<script>
+   $('.usousuo').click(function(){
+      var keyword=$("#key").val();
+      var url="https://www.qctt.cn/news_result";
+      if(keyword==''){
+         $('#search_form').preventDefault();
+      }
+      else{
+         $("#search_form").attr("action",url);
+         $("#search_form").submit();
+      }
+   });
+
+   $("#search_form").keydown(function (event) {
+       var e = event || window.event;
+       var keyCode = e.keyCode;
+       if(keyCode == 13 ){
+           return false;
+       }
+   });
+
+   $('#search_form').keyup(function(event){
+		var e = event || window.event;
+		var keyCode = e.keyCode || e.which;
+        if(keyCode ==13){
+            var keyword=$("#key").val();
+            var url="https://www.qctt.cn/news_result";
+            if(keyword==''){
+               $('#search_form').preventDefault();
+            }
+            else{
+               $("#search_form").attr("action",url);
+               $("#search_form").submit();
+            }
+         }
+   });
+</script>
+</html>

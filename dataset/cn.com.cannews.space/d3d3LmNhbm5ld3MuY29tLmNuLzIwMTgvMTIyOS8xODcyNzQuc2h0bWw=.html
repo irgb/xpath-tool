@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- <link href="css/sitehead.css" rel="stylesheet" type="text/css"> -->
+  <link href="http://img.cannews.com.cn//2018tmpl/pc_static/css/head.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://img.cannews.com.cn//2018tmpl/pc_static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://img.cannews.com.cn//2018tmpl/pc_static/css/public.css">
+  <script type="text/javascript" src="http://img.cannews.com.cn//js/config.js"></script> 
+  <script type="text/javascript" src="http://img.cannews.com.cn//js/zeroclipboard/ZeroClipboard.js"></script> 
+  <script type="text/javascript" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/jquery.min.js"></script>
+  <script type="text/javascript">
+  /*!
+ * jQuery Migrate - v1.4.1 - 2016-05-19
+ * Copyright jQuery Foundation and other contributors
+ */
+(function( jQuery, window, undefined ) {
+// See http://bugs.jquery.com/ticket/13335
+// "use strict";
+
+
+jQuery.migrateVersion = "1.4.1";
+
+
+var warnedAbout = {};
+
+// List of warnings already given; public read only
+jQuery.migrateWarnings = [];
+
+// Set to true to prevent console output; migrateWarnings still maintained
+// jQuery.migrateMute = false;
+
+// Show a message on the console so devs know we're active
+if ( window.console && window.console.log ) {
+	window.console.log( "JQMIGRATE: Migrate is installed" +
+		( jQuery.migrateMute ? "" : " with logging active" ) +
+		", version " + jQuery.migrateVersion );
+}
+
+// Set to false to disable traces that appear with warnings
+if ( jQuery.migrateTrace === undefined ) {
+	jQuery.migrateTrace = true;
+}
+
+// Forget any warnings we've already given; public
+jQuery.migrateReset = function() {
+	warnedAbout = {};
+	jQuery.migrateWarnings.length = 0;
+};
+
+function migrateWarn( msg) {
+	var console = window.console;
+	if ( !warnedAbout[ msg ] ) {
+		warnedAbout[ msg ] = true;
+		jQuery.migrateWarnings.push( msg );
+		if ( console && console.warn && !jQuery.migrateMute ) {
+			console.warn( "JQMIGRATE: " + msg );
+			if ( jQuery.migrateTrace && console.trace ) {
+				console.trace();
+			}
+		}
+	}
+}
+
+function migrateWarnProp( obj, prop, value, msg ) {
+	if ( Object.defineProperty ) {
+		// On ES5 browsers (non-oldIE), warn if the code tries to get prop;
+		// allow property to be overwritten in case some other plugin wants it
+		try {
+			Object.defineProperty( obj, prop, {
+				configurable: true,
+				enumerable: true,
+				get: function() {
+					migrateWarn( msg );
+					return value;
+				},
+				set: function( newValue ) {
+					migrateWarn( msg );
+					value = newValue;
+				}
+			});
+			return;
+		} catch( err ) {
+			// IE8 is a dope about Object.defineProperty, can't warn there
+		}
+	}
+
+	// Non-ES5 (or broken) browser; just set the property
+	jQuery._definePropertyBroken = true;
+	obj[ prop ] = value;
+}
+
+if ( document.compatMode === "BackCompat" ) {
+	// jQuery has never supported or tested Quirks Mode
+	migrateWarn( "jQuery is not compatible with Quirks Mode" );
+}
+
+
+var attrFn = jQuery( "<input/>", { size: 1 } ).attr("size") && jQuery.attrFn,
+	oldAttr = jQuery.attr,
+	valueAttrGet = jQuery.attrHooks.value && jQuery.attrHooks.value.get ||
+		function() { return null; },
+	valueAttrSet = jQuery.attrHooks.value && jQuery.attrHooks.value.set ||
+		function() { return undefined; },
+	rnoType = /^(?:input|button)$/i,
+	rnoAttrNodeType = /^[238]$/,
+	rboolean = /^(?:autofocus|autoplay|async|checked|controls|defer|disabled|hidden|loop|multiple|open|readonly|required|scoped|selected)$/i,
+	ruseDefault = /^(?:checked|selected)$/i;
+
+// jQuery.attrFn
+migrateWarnProp( jQuery, "attrFn", attrFn || {}, "jQuery.attrFn is deprecated" );
+
+jQuery.attr = function( elem, name, value, pass ) {
+	var lowerName = name.toLowerCase(),
+		nType = elem && elem.nodeType;
+
+	if ( pass ) {
+		// Since pass is used internally, we only warn for new jQuery
+		// versions where there isn't a pass arg in the formal params
+		if ( oldAttr.length < 4 ) {
+			migrateWarn("jQuery.fn.attr( props, pass ) is deprecated");
+		}
+		if ( elem && !rnoAttrNodeType.test( nType ) &&
+			(attrFn ? name in attrFn : jQuery.isFunction(jQuery.fn[name])) ) {
+			return jQuery( elem )[ name ]( value );
+		}
+	}
+
+	// Warn if user tries to set `type`, since it breaks on IE 6/7/8; by checking
+	// for disconnected elements we don't warn on $( "<button>", { type: "button" } ).
+	if ( name === "type" && value !== undefined && rnoType.test( elem.nodeName ) && elem.parentNode ) {
+		migrateWarn("Can't change the 'type' of an input or button in IE 6/7/8");
+	}
+
+	// Restore boolHook for boolean property/attribute synchronization
+	if ( !jQuery.attrHooks[ lowerName ] && rboolean.test( lowerName ) ) {
+		jQuery.attrHooks[ lowerName ] = {
+			get: function( elem, name ) {
+				// Align boolean attributes with corresponding properties
+				// Fall back to attribute presence where some booleans are not supported
+				var attrNode,
+					property = jQuery.prop( elem, name );
+				return property === true || typeof property !== "boolean" &&
+					( attrNode = elem.getAttributeNode(name) ) && attrNode.nodeValue !== false ?
+
+					name.toLowerCase() :
+					undefined;
+			},
+			set: function( elem, value, name ) {
+				var propName;
+				if ( value === false ) {
+					// Remove boolean attributes when set to false
+					jQuery.removeAttr( elem, name );
+				} else {
+					// value is true since we know at this point it's type boolean and not false
+					// Set boolean attributes to the same name and set the DOM property
+					propName = jQuery.propFix[ name ] || name;
+					if ( propName in elem ) {
+						// Only set the IDL specifically if it already exists on the element
+						elem[ propName ] = true;
+					}
+
+					elem.setAttribute( name, name.toLowerCase() );
+				}
+				return name;
+			}
+		};
+
+		// Warn only for attributes that can remain distinct from their properties post-1.9
+		if ( ruseDefault.test( lowerName ) ) {
+			migrateWarn( "jQuery.fn.attr('" + lowerName + "') might use property instead of attribute" );
+		}
+	}
+
+	return oldAttr.call( jQuery, elem, name, value );
+};
+
+// attrHooks: value
+jQuery.attrHooks.value = {
+	get: function( elem, name ) {
+		var nodeName = ( elem.nodeName || "" ).toLowerCase();
+		if ( nodeName === "button" ) {
+			return valueAttrGet.apply( this, arguments );
+		}
+		if ( nodeName !== "input" && nodeName !== "option" ) {
+			migrateWarn("jQuery.fn.attr('value') no longer gets properties");
+		}
+		return name in elem ?
+			elem.value :
+			null;
+	},
+	set: function( elem, value ) {
+		var nodeName = ( elem.nodeName || "" ).toLowerCase();
+		if ( nodeName === "button" ) {
+			return valueAttrSet.apply( this, arguments );
+		}
+		if ( nodeName !== "input" && nodeName !== "option" ) {
+			migrateWarn("jQuery.fn.attr('value', val) no longer sets properties");
+		}
+		// Does not return so that setAttribute is also used
+		elem.value = value;
+	}
+};
+
+
+var matched, browser,
+	oldInit = jQuery.fn.init,
+	oldFind = jQuery.find,
+	oldParseJSON = jQuery.parseJSON,
+	rspaceAngle = /^\s*</,
+	rattrHashTest = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,
+	rattrHashGlob = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g,
+	// Note: XSS check is done below after string is trimmed
+	rquickExpr = /^([^<]*)(<[\w\W]+>)([^>]*)$/;
+
+// $(html) "looks like html" rule change
+jQuery.fn.init = function( selector, context, rootjQuery ) {
+	var match, ret;
+
+	if ( selector && typeof selector === "string" ) {
+		if ( !jQuery.isPlainObject( context ) &&
+				(match = rquickExpr.exec( jQuery.trim( selector ) )) && match[ 0 ] ) {
+
+			// This is an HTML string according to the "old" rules; is it still?
+			if ( !rspaceAngle.test( selector ) ) {
+				migrateWarn("$(html) HTML strings must start with '<' character");
+			}
+			if ( match[ 3 ] ) {
+				migrateWarn("$(html) HTML text after last tag is ignored");
+			}
+
+			// Consistently reject any HTML-like string starting with a hash (gh-9521)
+			// Note that this may break jQuery 1.6.x code that otherwise would work.
+			if ( match[ 0 ].charAt( 0 ) === "#" ) {
+				migrateWarn("HTML string cannot start with a '#' character");
+				jQuery.error("JQMIGRATE: Invalid selector string (XSS)");
+			}
+
+			// Now process using loose rules; let pre-1.8 play too
+			// Is this a jQuery context? parseHTML expects a DOM element (#178)
+			if ( context && context.context && context.context.nodeType ) {
+				context = context.context;
+			}
+
+			if ( jQuery.parseHTML ) {
+				return oldInit.call( this,
+						jQuery.parseHTML( match[ 2 ], context && context.ownerDocument ||
+							context || document, true ), context, rootjQuery );
+			}
+		}
+	}
+
+	ret = oldInit.apply( this, arguments );
+
+	// Fill in selector and context properties so .live() works
+	if ( selector && selector.selector !== undefined ) {
+		// A jQuery object, copy its properties
+		ret.selector = selector.selector;
+		ret.context = selector.context;
+
+	} else {
+		ret.selector = typeof selector === "string" ? selector : "";
+		if ( selector ) {
+			ret.context = selector.nodeType? selector : context || document;
+		}
+	}
+
+	return ret;
+};
+jQuery.fn.init.prototype = jQuery.fn;
+
+jQuery.find = function( selector ) {
+	var args = Array.prototype.slice.call( arguments );
+
+	// Support: PhantomJS 1.x
+	// String#match fails to match when used with a //g RegExp, only on some strings
+	if ( typeof selector === "string" && rattrHashTest.test( selector ) ) {
+
+		// The nonstandard and undocumented unquoted-hash was removed in jQuery 1.12.0
+		// First see if qS thinks it's a valid selector, if so avoid a false positive
+		try {
+			document.querySelector( selector );
+		} catch ( err1 ) {
+
+			// Didn't *look* valid to qSA, warn and try quoting what we think is the value
+			selector = selector.replace( rattrHashGlob, function( _, attr, op, value ) {
+				return "[" + attr + op + "\"" + value + "\"]";
+			} );
+
+			// If the regexp *may* have created an invalid selector, don't update it
+			// Note that there may be false alarms if selector uses jQuery extensions
+			try {
+				document.querySelector( selector );
+				migrateWarn( "Attribute selector with '#' must be quoted: " + args[ 0 ] );
+				args[ 0 ] = selector;
+			} catch ( err2 ) {
+				migrateWarn( "Attribute selector with '#' was not fixed: " + args[ 0 ] );
+			}
+		}
+	}
+
+	return oldFind.apply( this, args );
+};
+
+// Copy properties attached to original jQuery.find method (e.g. .attr, .isXML)
+var findProp;
+for ( findProp in oldFind ) {
+	if ( Object.prototype.hasOwnProperty.call( oldFind, findProp ) ) {
+		jQuery.find[ findProp ] = oldFind[ findProp ];
+	}
+}
+
+// Let $.parseJSON(falsy_value) return null
+jQuery.parseJSON = function( json ) {
+	if ( !json ) {
+		migrateWarn("jQuery.parseJSON requires a valid JSON string");
+		return null;
+	}
+	return oldParseJSON.apply( this, arguments );
+};
+
+jQuery.uaMatch = function( ua ) {
+	ua = ua.toLowerCase();
+
+	var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+		/(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+		/(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+		/(msie) ([\w.]+)/.exec( ua ) ||
+		ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+		[];
+
+	return {
+		browser: match[ 1 ] || "",
+		version: match[ 2 ] || "0"
+	};
+};
+
+// Don't clobber any existing jQuery.browser in case it's different
+if ( !jQuery.browser ) {
+	matched = jQuery.uaMatch( navigator.userAgent );
+	browser = {};
+
+	if ( matched.browser ) {
+		browser[ matched.browser ] = true;
+		browser.version = matched.version;
+	}
+
+	// Chrome is Webkit, but Webkit is also Safari.
+	if ( browser.chrome ) {
+		browser.webkit = true;
+	} else if ( browser.webkit ) {
+		browser.safari = true;
+	}
+
+	jQuery.browser = browser;
+}
+
+// Warn if the code tries to get jQuery.browser
+migrateWarnProp( jQuery, "browser", jQuery.browser, "jQuery.browser is deprecated" );
+
+// jQuery.boxModel deprecated in 1.3, jQuery.support.boxModel deprecated in 1.7
+jQuery.boxModel = jQuery.support.boxModel = (document.compatMode === "CSS1Compat");
+migrateWarnProp( jQuery, "boxModel", jQuery.boxModel, "jQuery.boxModel is deprecated" );
+migrateWarnProp( jQuery.support, "boxModel", jQuery.support.boxModel, "jQuery.support.boxModel is deprecated" );
+
+jQuery.sub = function() {
+	function jQuerySub( selector, context ) {
+		return new jQuerySub.fn.init( selector, context );
+	}
+	jQuery.extend( true, jQuerySub, this );
+	jQuerySub.superclass = this;
+	jQuerySub.fn = jQuerySub.prototype = this();
+	jQuerySub.fn.constructor = jQuerySub;
+	jQuerySub.sub = this.sub;
+	jQuerySub.fn.init = function init( selector, context ) {
+		var instance = jQuery.fn.init.call( this, selector, context, rootjQuerySub );
+		return instance instanceof jQuerySub ?
+			instance :
+			jQuerySub( instance );
+	};
+	jQuerySub.fn.init.prototype = jQuerySub.fn;
+	var rootjQuerySub = jQuerySub(document);
+	migrateWarn( "jQuery.sub() is deprecated" );
+	return jQuerySub;
+};
+
+// The number of elements contained in the matched element set
+jQuery.fn.size = function() {
+	migrateWarn( "jQuery.fn.size() is deprecated; use the .length property" );
+	return this.length;
+};
+
+
+var internalSwapCall = false;
+
+// If this version of jQuery has .swap(), don't false-alarm on internal uses
+if ( jQuery.swap ) {
+	jQuery.each( [ "height", "width", "reliableMarginRight" ], function( _, name ) {
+		var oldHook = jQuery.cssHooks[ name ] && jQuery.cssHooks[ name ].get;
+
+		if ( oldHook ) {
+			jQuery.cssHooks[ name ].get = function() {
+				var ret;
+
+				internalSwapCall = true;
+				ret = oldHook.apply( this, arguments );
+				internalSwapCall = false;
+				return ret;
+			};
+		}
+	});
+}
+
+jQuery.swap = function( elem, options, callback, args ) {
+	var ret, name,
+		old = {};
+
+	if ( !internalSwapCall ) {
+		migrateWarn( "jQuery.swap() is undocumented and deprecated" );
+	}
+
+	// Remember the old values, and insert the new ones
+	for ( name in options ) {
+		old[ name ] = elem.style[ name ];
+		elem.style[ name ] = options[ name ];
+	}
+
+	ret = callback.apply( elem, args || [] );
+
+	// Revert the old values
+	for ( name in options ) {
+		elem.style[ name ] = old[ name ];
+	}
+
+	return ret;
+};
+
+
+// Ensure that $.ajax gets the new parseJSON defined in core.js
+jQuery.ajaxSetup({
+	converters: {
+		"text json": jQuery.parseJSON
+	}
+});
+
+
+var oldFnData = jQuery.fn.data;
+
+jQuery.fn.data = function( name ) {
+	var ret, evt,
+		elem = this[0];
+
+	// Handles 1.7 which has this behavior and 1.8 which doesn't
+	if ( elem && name === "events" && arguments.length === 1 ) {
+		ret = jQuery.data( elem, name );
+		evt = jQuery._data( elem, name );
+		if ( ( ret === undefined || ret === evt ) && evt !== undefined ) {
+			migrateWarn("Use of jQuery.fn.data('events') is deprecated");
+			return evt;
+		}
+	}
+	return oldFnData.apply( this, arguments );
+};
+
+
+var rscriptType = /\/(java|ecma)script/i;
+
+// Since jQuery.clean is used internally on older versions, we only shim if it's missing
+if ( !jQuery.clean ) {
+	jQuery.clean = function( elems, context, fragment, scripts ) {
+		// Set context per 1.8 logic
+		context = context || document;
+		context = !context.nodeType && context[0] || context;
+		context = context.ownerDocument || context;
+
+		migrateWarn("jQuery.clean() is deprecated");
+
+		var i, elem, handleScript, jsTags,
+			ret = [];
+
+		jQuery.merge( ret, jQuery.buildFragment( elems, context ).childNodes );
+
+		// Complex logic lifted directly from jQuery 1.8
+		if ( fragment ) {
+			// Special handling of each script element
+			handleScript = function( elem ) {
+				// Check if we consider it executable
+				if ( !elem.type || rscriptType.test( elem.type ) ) {
+					// Detach the script and store it in the scripts array (if provided) or the fragment
+					// Return truthy to indicate that it has been handled
+					return scripts ?
+						scripts.push( elem.parentNode ? elem.parentNode.removeChild( elem ) : elem ) :
+						fragment.appendChild( elem );
+				}
+			};
+
+			for ( i = 0; (elem = ret[i]) != null; i++ ) {
+				// Check if we're done after handling an executable script
+				if ( !( jQuery.nodeName( elem, "script" ) && handleScript( elem ) ) ) {
+					// Append to fragment and handle embedded scripts
+					fragment.appendChild( elem );
+					if ( typeof elem.getElementsByTagName !== "undefined" ) {
+						// handleScript alters the DOM, so use jQuery.merge to ensure snapshot iteration
+						jsTags = jQuery.grep( jQuery.merge( [], elem.getElementsByTagName("script") ), handleScript );
+
+						// Splice the scripts into ret after their former ancestor and advance our index beyond them
+						ret.splice.apply( ret, [i + 1, 0].concat( jsTags ) );
+						i += jsTags.length;
+					}
+				}
+			}
+		}
+
+		return ret;
+	};
+}
+
+var eventAdd = jQuery.event.add,
+	eventRemove = jQuery.event.remove,
+	eventTrigger = jQuery.event.trigger,
+	oldToggle = jQuery.fn.toggle,
+	oldLive = jQuery.fn.live,
+	oldDie = jQuery.fn.die,
+	oldLoad = jQuery.fn.load,
+	ajaxEvents = "ajaxStart|ajaxStop|ajaxSend|ajaxComplete|ajaxError|ajaxSuccess",
+	rajaxEvent = new RegExp( "\\b(?:" + ajaxEvents + ")\\b" ),
+	rhoverHack = /(?:^|\s)hover(\.\S+|)\b/,
+	hoverHack = function( events ) {
+		if ( typeof( events ) !== "string" || jQuery.event.special.hover ) {
+			return events;
+		}
+		if ( rhoverHack.test( events ) ) {
+			migrateWarn("'hover' pseudo-event is deprecated, use 'mouseenter mouseleave'");
+		}
+		return events && events.replace( rhoverHack, "mouseenter$1 mouseleave$1" );
+	};
+
+// Event props removed in 1.9, put them back if needed; no practical way to warn them
+if ( jQuery.event.props && jQuery.event.props[ 0 ] !== "attrChange" ) {
+	jQuery.event.props.unshift( "attrChange", "attrName", "relatedNode", "srcElement" );
+}
+
+// Undocumented jQuery.event.handle was "deprecated" in jQuery 1.7
+if ( jQuery.event.dispatch ) {
+	migrateWarnProp( jQuery.event, "handle", jQuery.event.dispatch, "jQuery.event.handle is undocumented and deprecated" );
+}
+
+// Support for 'hover' pseudo-event and ajax event warnings
+jQuery.event.add = function( elem, types, handler, data, selector ){
+	if ( elem !== document && rajaxEvent.test( types ) ) {
+		migrateWarn( "AJAX events should be attached to document: " + types );
+	}
+	eventAdd.call( this, elem, hoverHack( types || "" ), handler, data, selector );
+};
+jQuery.event.remove = function( elem, types, handler, selector, mappedTypes ){
+	eventRemove.call( this, elem, hoverHack( types ) || "", handler, selector, mappedTypes );
+};
+
+jQuery.each( [ "load", "unload", "error" ], function( _, name ) {
+
+	jQuery.fn[ name ] = function() {
+		var args = Array.prototype.slice.call( arguments, 0 );
+
+		// If this is an ajax load() the first arg should be the string URL;
+		// technically this could also be the "Anything" arg of the event .load()
+		// which just goes to show why this dumb signature has been deprecated!
+		// jQuery custom builds that exclude the Ajax module justifiably die here.
+		if ( name === "load" && typeof args[ 0 ] === "string" ) {
+			return oldLoad.apply( this, args );
+		}
+
+		migrateWarn( "jQuery.fn." + name + "() is deprecated" );
+
+		args.splice( 0, 0, name );
+		if ( arguments.length ) {
+			return this.bind.apply( this, args );
+		}
+
+		// Use .triggerHandler here because:
+		// - load and unload events don't need to bubble, only applied to window or image
+		// - error event should not bubble to window, although it does pre-1.7
+		// See http://bugs.jquery.com/ticket/11820
+		this.triggerHandler.apply( this, args );
+		return this;
+	};
+
+});
+
+jQuery.fn.toggle = function( fn, fn2 ) {
+
+	// Don't mess with animation or css toggles
+	if ( !jQuery.isFunction( fn ) || !jQuery.isFunction( fn2 ) ) {
+		return oldToggle.apply( this, arguments );
+	}
+	migrateWarn("jQuery.fn.toggle(handler, handler...) is deprecated");
+
+	// Save reference to arguments for access in closure
+	var args = arguments,
+		guid = fn.guid || jQuery.guid++,
+		i = 0,
+		toggler = function( event ) {
+			// Figure out which function to execute
+			var lastToggle = ( jQuery._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+			jQuery._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+
+			// Make sure that clicks stop
+			event.preventDefault();
+
+			// and execute the function
+			return args[ lastToggle ].apply( this, arguments ) || false;
+		};
+
+	// link all the functions, so any of them can unbind this click handler
+	toggler.guid = guid;
+	while ( i < args.length ) {
+		args[ i++ ].guid = guid;
+	}
+
+	return this.click( toggler );
+};
+
+jQuery.fn.live = function( types, data, fn ) {
+	migrateWarn("jQuery.fn.live() is deprecated");
+	if ( oldLive ) {
+		return oldLive.apply( this, arguments );
+	}
+	jQuery( this.context ).on( types, this.selector, data, fn );
+	return this;
+};
+
+jQuery.fn.die = function( types, fn ) {
+	migrateWarn("jQuery.fn.die() is deprecated");
+	if ( oldDie ) {
+		return oldDie.apply( this, arguments );
+	}
+	jQuery( this.context ).off( types, this.selector || "**", fn );
+	return this;
+};
+
+// Turn global events into document-triggered events
+jQuery.event.trigger = function( event, data, elem, onlyHandlers  ){
+	if ( !elem && !rajaxEvent.test( event ) ) {
+		migrateWarn( "Global events are undocumented and deprecated" );
+	}
+	return eventTrigger.call( this,  event, data, elem || document, onlyHandlers  );
+};
+jQuery.each( ajaxEvents.split("|"),
+	function( _, name ) {
+		jQuery.event.special[ name ] = {
+			setup: function() {
+				var elem = this;
+
+				// The document needs no shimming; must be !== for oldIE
+				if ( elem !== document ) {
+					jQuery.event.add( document, name + "." + jQuery.guid, function() {
+						jQuery.event.trigger( name, Array.prototype.slice.call( arguments, 1 ), elem, true );
+					});
+					jQuery._data( this, name, jQuery.guid++ );
+				}
+				return false;
+			},
+			teardown: function() {
+				if ( this !== document ) {
+					jQuery.event.remove( document, name + "." + jQuery._data( this, name ) );
+				}
+				return false;
+			}
+		};
+	}
+);
+
+jQuery.event.special.ready = {
+	setup: function() {
+		if ( this === document ) {
+			migrateWarn( "'ready' event is deprecated" );
+		}
+	}
+};
+
+var oldSelf = jQuery.fn.andSelf || jQuery.fn.addBack,
+	oldFnFind = jQuery.fn.find;
+
+jQuery.fn.andSelf = function() {
+	migrateWarn("jQuery.fn.andSelf() replaced by jQuery.fn.addBack()");
+	return oldSelf.apply( this, arguments );
+};
+
+jQuery.fn.find = function( selector ) {
+	var ret = oldFnFind.apply( this, arguments );
+	ret.context = this.context;
+	ret.selector = this.selector ? this.selector + " " + selector : selector;
+	return ret;
+};
+
+
+// jQuery 1.6 did not support Callbacks, do not warn there
+if ( jQuery.Callbacks ) {
+
+	var oldDeferred = jQuery.Deferred,
+		tuples = [
+			// action, add listener, callbacks, .then handlers, final state
+			[ "resolve", "done", jQuery.Callbacks("once memory"),
+				jQuery.Callbacks("once memory"), "resolved" ],
+			[ "reject", "fail", jQuery.Callbacks("once memory"),
+				jQuery.Callbacks("once memory"), "rejected" ],
+			[ "notify", "progress", jQuery.Callbacks("memory"),
+				jQuery.Callbacks("memory") ]
+		];
+
+	jQuery.Deferred = function( func ) {
+		var deferred = oldDeferred(),
+			promise = deferred.promise();
+
+		deferred.pipe = promise.pipe = function( /* fnDone, fnFail, fnProgress */ ) {
+			var fns = arguments;
+
+			migrateWarn( "deferred.pipe() is deprecated" );
+
+			return jQuery.Deferred(function( newDefer ) {
+				jQuery.each( tuples, function( i, tuple ) {
+					var fn = jQuery.isFunction( fns[ i ] ) && fns[ i ];
+					// deferred.done(function() { bind to newDefer or newDefer.resolve })
+					// deferred.fail(function() { bind to newDefer or newDefer.reject })
+					// deferred.progress(function() { bind to newDefer or newDefer.notify })
+					deferred[ tuple[1] ](function() {
+						var returned = fn && fn.apply( this, arguments );
+						if ( returned && jQuery.isFunction( returned.promise ) ) {
+							returned.promise()
+								.done( newDefer.resolve )
+								.fail( newDefer.reject )
+								.progress( newDefer.notify );
+						} else {
+							newDefer[ tuple[ 0 ] + "With" ](
+								this === promise ? newDefer.promise() : this,
+								fn ? [ returned ] : arguments
+							);
+						}
+					});
+				});
+				fns = null;
+			}).promise();
+
+		};
+
+		deferred.isResolved = function() {
+			migrateWarn( "deferred.isResolved is deprecated" );
+			return deferred.state() === "resolved";
+		};
+
+		deferred.isRejected = function() {
+			migrateWarn( "deferred.isRejected is deprecated" );
+			return deferred.state() === "rejected";
+		};
+
+		if ( func ) {
+			func.call( deferred, deferred );
+		}
+
+		return deferred;
+	};
+
+}
+
+})( jQuery, window );
+  </script>
+
+  <script type="text/javascript" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" charset="utf-8" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/jquery.share.min.js"></script>
+  <script type="text/javascript" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/rd.js"></script>
+  <script type="text/javascript" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/style.js"></script>
+  <script type="text/javascript" src="http://img.cannews.com.cn//2018tmpl/pc_static/js/doT.min.js"></script>
+  <script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/cmstop-common.js"></script>
+  
+<script type="text/javascript" language="javascript">
+if (!!navigator.userAgent.match(/iPhone|iPod|Android|MicroMessenger/ig)) {
+    var dpi = window.devicePixelRatio||1;
+    var syswidth = window.screen.width>750 ? window.screen.width/dpi : window.screen.width;
+    var sysheight = window.screen.height>750 ? window.screen.height/dpi : window.screen.height;
+    var minDeviceWH = Math.min(syswidth, sysheight);
+    if(minDeviceWH < 750){
+        window.location.href = 'http://wap.cannews.com.cn/newwap/index.php?a=viewa&id=187274';
+    }
+}
+</script>
+
+  <title>突破！贵州有了第一个取证通用机场_中国航空新闻网_航空行业第一新闻门户_CANNEWS</title>
+  <!--[if lt IE 9]> 
+        <script src="//cdn.bootcss.com/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+        <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    var contentid = '187274';// 文章ID
+    var title = '"\u7a81\u7834\uff01\u8d35\u5dde\u6709\u4e86\u7b2c\u4e00\u4e2a\u53d6\u8bc1\u901a\u7528\u673a\u573a"';//文章标题
+    var topicid = '169421';// 评论主题
+    var context = '';//全文内容缓存
+    var content = '';//第一页内容缓存
+    var _IMG_URL = 'http://img.cannews.com.cn/templates/default';
+  </script>
+  <script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/cmstop-imagezoom.js"></script>
+<script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/apps/digg.js"></script>
+    <script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/article-show.js"></script> 
+    <script type="text/javascript" src="http://img.cannews.com.cn/templates/default/js/mood-show.js"></script>
+    <script>
+    $(function() {
+        $('.article-content a').each(function(i,a){
+            var $a = $(a);
+            if(!$a.attr('target')) 
+            {
+                $a.attr('target','_blank');
+            }
+        });
+    });
+    </script>    
+
+<script type="text/javascript" src="http://img.cannews.com.cn/js/fet.js"></script>
+<script type="text/javascript" src="http://img.cannews.com.cn/js/repos.js"></script>
+<script type="text/javascript">fet.setAlias({IMG_URL: "http://img.cannews.com.cn/"})</script>
+        <style type="text/css">
+    .top_news{
+      margin-bottom:10px;
+    }
+            /*分页样式*/
+        .page{margin:0 auto;padding-left: 150px;padding-top: 15px;}
+.page tr td{    padding-left: 15px;}
+    .bdshare-button-style0-16 a, .bdshare-button-style0-16 .bds_more{
+            background: none!important;
+    }
+    /*编辑*/
+    .bdsharebuttonbox .author{margin-top: 20px;}
+    /*专栏作者*/
+    .article-menu {
+        float: right;
+        width: 100%;
+        text-align: right;
+        padding-right: 10px;
+        color: #666;
+    }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header_top" style="width: 1220px">
+      <h1><a href=""><img src="http://img.cannews.com.cn//2018tmpl/pc_static/images/logo.png"></a></h1>
+      <div class="header_right">
+        <div class="header_info">
+          
+          <a href="http://www.cannews.com.cn/about/" target="_blank">我<span>们</span></a>
+                  <a href="http://special.cannews.com.cn/150331-4/" target="_blank">投<span>稿</span></a>
+                  <a class="click_pop" target="_blank">会<span>员</span></a>
+                  <a href="http://special.cannews.com.cn/150618/" target="_blank">刊<span>例</span></a>
+                  <a href="http://special.cannews.com.cn/180906/" target="_blank">新媒体</a>
+                  <a href="http://ep.cannews.com.cn/publish/zghkb7" target="_blank">数字报</a>
+                  <div class="hdif_s clearfix">
+                      <form action="searchResult.jsp">
+                      <input type="submit" class="hds_bt" id="search_key" value="">
+                      <input type="text" name="inpsearch" class="hds_inp" id="hds_inp" value="" maxlength="20">
+                      </form>
+                      <div class="hdifani" id="hdshowsearch"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>    <nav>
+      <ul class="nav">
+                <li>
+                    <a href="http://www.cannews.com.cn/"  target="_self">首页</a>
+                </li>
+                 
+                <li>
+                    <a href="http://www.cannews.com.cn//video/" target="_self">视频</a>
+                </li>
+                <li>
+                    <a href="http://photo.cannews.com.cn/"  target="_self">图集</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn//hkpd/"  target="_self">航空</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn//fwpd/" target="_self">防务</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn//airshow/" target="_self">航展</a>
+                </li>
+                <li>
+                    <a href="http://special.cannews.com.cn/" target="_self">专题</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn/hkgy/"  target="_self">航空工业</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn/zghf/" target="_self">中国航发</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn/zgsf/" target="_self">中国商飞</a>
+                </li>
+                <li>
+                    <a href="http://www.cannews.com.cn//enews/"  target="_self">ENGLISH</a>
+                </li>
+            </ul>
+
+    </nav>
+  </header>
+  
+  <main>
+    <div class="ns_area second2016_main clearfix">
+            <!-- 左侧 -->
+            <div class="second_left">
+                <div class="content">
+                  <div class="cont_top">
+                    <h3>突破！贵州有了第一个取证通用机场</h3>
+                                        <p class="article_info">
+                      <span>2018-12-29 11:24</span>
+                                            <span class="info-span">中国航空新闻网</span>
+                                            <span class="info-span"><a href="http://space.cannews.com.cn/kanhangkong" target="_blank" title="访问个人专栏">看航空</a></span>
+                                          </p>
+                  </div>
+                                    <div class="tips" style="display: none;">
+                    12月21日，民航西南地区管理局颁发了黄平旧州机场通用机场使用许可证，黄平旧州机场正式取证运行。                  </div>
+                                    <!-- 左侧右边分享 head.css57行 -->
+            <div class="post_body">
+                <div class="post_topshare_wrap">
+                  <div class="post_topad"><!--触发擎天柱投放代码开始--></div>
+            <!-- <div class="post_tie_top">
+            <a class="post_icon_tie" target="_self" href="#post_comment_area" title="快速发贴"></a>
+            <a class="post_cnum_tie js-tielink js-tiejoincount" href="#" title="点击查看跟贴">0</a>
+              </div> -->
+            <div class="post_topshare">
+            <span class="post_topshare_title">分享到：</span>
+           
+
+
+          </div>
+          
+                </div>
+            </div>
+                   
+                
+                  <div class="con_content article-content">
+                     <!-- top addon_place -->                                                            <!-- top addon_place --><p>12月21日，民航西南地区管理局颁发了黄平旧州机场通用机场使用许可证，黄平旧州机场正式取证运行。</p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053098173.jpg" border="0" alt="da1562bc-c85b-4bcf-90da-a26cea546cf7" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">通用机场使用许可证</span></p>
+<p>目前全国取证通用机场数量已经突破200个，主要集中在东部地区，西南地区取证机场数量为10个，且主要集中在四川省（8个）。此前除重庆地区有1个取证通用机场外，贵州、云南、西藏地区尚无取证机场。黄平旧州机场的取证填补了贵州省取证通用机场的空白，不仅成为本省第一个取证运行的通用机场，也为推动西南地区通用机场整体发展起到了重要作用，为贵州省通航发展奠定了良好基础。</p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053272696.jpg" border="0" alt="c2051520-b008-4a3f-a945-179e26c542b7" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p>黄平旧州机场位于黄平县旧州镇王坡寨，距旧州古镇1公里，是抗战时期由美国出资、中国出人修建的大型军用机场，是当时贵州境内唯一对日作战的机场。从现代民航机场设计的角度看，当年的机场选址非常成功，周边没有高大山体遮挡，这在号称&ldquo;地无三尺平&rdquo;的贵州地区殊为难得。当时的跑道也建造得相当&ldquo;坚实&rdquo;，据史料记载，跑道地基处理深达2米，主要由卵石和块石铺筑，承载能力非常大，当时最大起飞重量60吨的B29&ldquo;超级堡垒&rdquo;重型轰炸机可以满载起飞。</p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053302828.jpg" border="0" alt="b667efe1-21e7-4ad8-ab6a-5de161c65865" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">抗战时期修建机场的情形</span></p>
+<p>2015年以来，黄平县政府对该机场进行了恢复建设，逐步完善了机场设施，在原土质跑道上铺筑了水泥混凝土道面，新建了平行滑行道、停机坪、机库，平整了升降带和端安全区，并按要求划设了目视助航设施。建成后的机场飞行区指标为2B，跑道长度为1000米，宽度为30米，同时设有1000米长的平行滑行道和4条联络道，空域环境良好。</p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053338891.jpg" border="0" alt="7a42c650-82e6-42b0-8553-03fec83974a9" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053366744.jpg" border="0" alt="fd7f56de-2e81-410d-91cd-2be1e0375150" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053419657.jpg" border="0" alt="25c106e6-2dbc-4df2-9460-a48dbe211676" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p>该机场作为黄平县全域旅游的低空游览项目基础设施，同时服务于当地低空游览、应急救援、航拍测绘、私人飞行等通用航空活动，自复建以来开展了一系列通航活动，2016年、2017年、2018年曾成功举办了三届飞行大会。</p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053452844.jpg" border="0" alt="4442a6f0-985f-47c2-b0ea-4182c1e1ea91" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">飞行大会表演现场</span></p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053477504.jpg" border="0" alt="be5d702d-9c92-4507-a090-50d0370d810f" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">飞行大会表演现场</span></p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053510243.jpg" border="0" alt="5bc41f48-bd2e-4b5e-ac14-3ab1f703e9a5" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p style="text-align: center; text-indent: 0;"><img src="http://upload.cannews.com.cn/2018/1229/1546053539533.jpg" border="0" alt="abc06121-7fe7-44ef-8540-87db18433b70" /></p>
+<p style="text-align: center;"><span style="font-size: 12px;">机场掠影</span></p>
+<p>作为贵州省第一个取证运行的通用机场，黄平旧州机场此次成功取证意义深远。在中国AOPA的专业指导下，本机场获颁A2级通用机场使用许可证，可对公众开放开展10座以下短途运输飞行活动以及其他各类通用航空飞行活动。其顺利通过民航主管部门的审查充分表明了行业主管部门对本机场基础设施和飞行条件的肯定。随着机场正式纳入行业管理，黄平旧州机场将在局方的监管下进一步提升安全保障能力，为低空游览、飞行员培训等业务继续提供基础保障服务，在警务、消防、应急救援等公共服务飞行中发挥更加重要的作用，为促进贵州省通用航空业发展发挥应有的贡献<span style="text-indent: 2em;">。</span></p>                        <!-- bottom addon_place -->                                                            <!-- bottom addon_place -->                  </div>
+                   
+                  
+                            
+                  <!-- **************分享************** -->
+                  <div class="bdsharebuttonbox">
+
+                  	<div class="buttonbox">
+			            
+                  		<a href="#" class="share-wx" data-cmd="weixin" title="分享到微信"><i title="分享到微信"></i>微信</a>
+                        <a href="#" class="share-qqkj" data-cmd="qzone" title="分享到QQ空间"><i title="分享到QQ空间"></i>QQ空间</a>
+                        <a href="#" class="share-wb" data-cmd="tsina" title="分享到新浪微博"><i title="分享到新浪微博"></i>微博</a>
+                        <a href="#" class="share-more" data-cmd="more"><i title="更多"></i>更多</a>
+		            </div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+          </script>
+                   
+                              <!-- 专栏作家 -->
+          <div class="article-menu topblank">
+            <div class="m-head">
+              <div class="title">专栏作者</div>
+            </div>
+            <div class="m-main">
+              <div class="article-author" id="space_content"></div>
+            </div>
+          </div>
+          <!-- @end 专栏作家 -->
+                              <div class="author">
+                      <p>责任编辑：助理编辑 朱晗瑜</p>
+                    </div>
+                                          
+                    </div>
+
+          <!-- **************评论************** -->
+                  <!-- 评论 -->
+			<div class="article-comment" id="comment">
+				<div class="inner">
+					<div class="m-head title-head">
+						<p class="f-r">
+						<a href="http://app.cannews.com.cn/?app=comment&controller=review&action=index&topicid=169421" title="点击查看全部评论">
+						已有<span class="comments">0</span>人发表了评论
+						</a>
+						</p>
+						<em class="ico"></em>
+						<div class="title"><a href="javascript:;" title="" class="words">网友评论</a></div>
+					</div>
+					<div class="m-main">
+						<!-- 评论模块 -->
+						<div class="comment">
+						<!-- 注意： 这里只显示5条评论 	 -->
+							<div class="comment-list" id="commentWrapper">
+							</div>
+							<!-- 评论框 -->
+							<div class="comment-form">
+	<div class="c-inner">
+		<form action="http://app.cannews.com.cn/?app=comment&controller=review&action=add" method="post" onsubmit="return commentPost(this);">
+			<input type="hidden" name="topicid" value="" />
+			<input type="hidden" name="followid" value="" />
+			<div class="textarea-wrap"><textarea name="content" class="textarea"></textarea><div class="login-warn"><p class="info">
+				您需要登录后才可以评论，<a href="javascript:;" class="cloud-login" hideFocus="true">登录</a>| <a href="http://app.cannews.com.cn/?app=member&controller=index&action=register"  hideFocus="true">注册</a>
+			</p></div></div>
+			<div class="ov">
+				<div class="loginform-user-info"></div>
+				<input class="btn-post" type="submit" value="发表评论">
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+if (typeof(window.dialog) == 'undefined') {
+	document.write('<script type="text/javascript" src="http://img.cannews.com.cn/js/lib/cmstop.dialog.js"><\/script>');
+	document.write('<link href="http://img.cannews.com.cn/js/lib/dialog/style.css" type="text/css" rel="stylesheet" \/>');
+}
+if (typeof(cmstop) == 'undefined' || typeof(cmstop.loginDialog) == 'undefined') {
+	document.write('<script type="text/javascript" src="http://img.cannews.com.cn/apps/member/js/logindialog.js"><\/script>');
+}
+var islogin = 1;
+var ischeck = 1;
+var defaultname = '网友';
+var commentPost = function (form) {
+	var content = form.content.value;
+	if (content == '') {
+		alert('评论内容不能为空');
+		return false;
+	}
+	if (typeof(window.postingComment)!='undefined' && window.postingComment) {
+		// 正在提交评论中
+		return false;
+	}
+	form.topicid.value = topicid;
+
+	// 如果跨域则通过非ajax方法请求
+	if (APP_URL.search(location.host) < 1) {
+		return true;
+	}
+	window.postingComment = true;
+	$.post($(form).attr('action'), $(form).serialize(), function (data) {
+		if (data.state) {
+			if (typeof(comment) != 'undefined' && typeof(comment.page) != 'undefined') {
+				comment.page(topicid, page, pagesize);
+			}
+			alert(ischeck ? '评论发表成功，请等待审核！' : '评论发表成功!');
+			form.reset();
+			try {
+				replyDialog.close();
+			} catch (exc) {}
+		} else {
+			alert(data.error);
+		}
+		if ($('.seccode_image').length > 0) {
+			$('.seccode_image').click();
+		}
+		window.postingComment = false;
+	}, 'json');
+	return false;
+}
+var getSeccode = function () {
+		return new Array('<span class="seccode">',
+			'<label for="seccode">验证码： </label>',
+			'<input type="text" name="seccode" id="seccode" size="4" maxlength="4" style="ime-mode:disabled;width: 30px;"/>',
+			'<img class="seccode_image" src="http://app.cannews.com.cn/?app=system&controller=seccode&action=image&='+Math.random()*5+'" style="cursor:pointer;" alt="验证码,看不清楚?请点击刷新验证码" align="absmiddle" onclick="this.src=\'http://app.cannews.com.cn/?app=system&controller=seccode&action=image&=\'+Math.random()*5;" onload="$(this).parent(\'span\').slideDown(\'fast\');" />',
+		'</span>').join('\r\n');
+		return '';
+}
+$(function() {
+	cmstop.loginDialog();
+	$.getJSON(APP_URL+'?app=comment&controller=review&action=ajax_allow_weibo&jsoncallback=?', function(json){
+		if (json.state) {
+			$('.loginform-user-info').children('.seccode-area').append('<label><input type="checkbox" class="comment-postweibo" name="post_weibo" value="1" />转发到微博</label>');
+		}
+	});
+});
+</script>							<!-- @end 评论框 -->
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- @end 评论 -->
+			<script type="text/javascript">
+				var commentTpl = '<div class="comment-item">\
+									<div class="comment-content">\
+										<p class="cont">{content}</p>\
+									</div>\
+							     </div>';
+				$(function(){
+					getCommemt(topicid,$('#commentWrapper'),function(json) {
+						$('.comments').html(json.total);
+						if(json.total >0 ) $('.view-comment').show();
+					});
+				});
+				//取评论函数
+				function getCommemt(topicid,wrapper,callback) {
+					if(!topicid) return ;
+					$.getJSON(APP_URL+'?app=comment&controller=review&action=page&pagesize=5&all=1&topicid='+topicid+'&jsoncallback=?', function(json){
+						if(typeof(json) == 'object') {
+							for (var i=0,item;item=json[i++];) {
+				                var html = commentTpl;
+								for (var key in item) {
+									html = html.replace(new RegExp('{'+key+'}',"gm"), item[key]);
+								}
+								wrapper.append(html);
+							}
+						}
+						// 非评论页不能进行评论操作
+						$('.operate').remove();
+						typeof callback == 'function' && callback(json);
+					});
+				}
+			</script>
+
+
+          <!-- 相关阅读 -->
+          <div class="mod-list rel-news topblank">
+              <div class="hd ov">
+                  <strong class="rel-title">
+                      相关阅读
+                  </strong>
+                                    <div class="keywords">
+                      <strong>
+                          关键词：
+                      </strong>
+                                            <a href="http://app.cannews.com.cn/tags.php?tag=%E8%B4%B5%E5%B7%9E" title="贵州" target="_blank">贵州</a>
+                                           <a href="http://app.cannews.com.cn/tags.php?tag=%E9%80%9A%E7%94%A8%E6%9C%BA%E5%9C%BA" title="通用机场" target="_blank">通用机场</a>
+                                           <a href="http://app.cannews.com.cn/tags.php?tag=%E9%BB%84%E5%B9%B3%E6%9C%BA%E5%9C%BA" title="黄平机场" target="_blank">黄平机场</a>
+                                       </div>
+                                </div>
+              <div class="bd">
+                  <ul class="list list-point">
+                                          <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1228/187220.shtml" class="title"
+                          target="_blank">
+                              大同云冈机场旅客吞吐量突破百万人次                          </a>
+                          <span class="date">
+                              2018-12-28                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1227/187156.shtml" class="title"
+                          target="_blank">
+                              承德普宁机场旅客吞吐量已突破41.5万人次                          </a>
+                          <span class="date">
+                              2018-12-27                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1227/187153.shtml" class="title"
+                          target="_blank">
+                              海口美兰机场2019年力争新开多条境外航线                          </a>
+                          <span class="date">
+                              2018-12-27                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1227/187121.shtml" class="title"
+                          target="_blank">
+                              俄罗斯在乌克图斯机场建立飞机装配厂                          </a>
+                          <span class="date">
+                              2018-12-27                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1226/187113.shtml" class="title"
+                          target="_blank">
+                              巴塞罗那机场改新名字 被网友恶搞为披萨机场                          </a>
+                          <span class="date">
+                              2018-12-26                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1224/186961.shtml" class="title"
+                          target="_blank">
+                              巴黎勒布尔热机场利用无人机维护地面设备                          </a>
+                          <span class="date">
+                              2018-12-24                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1224/186949.shtml" class="title"
+                          target="_blank">
+                              Transair航空肖特360客机在夏威夷机场降落爆胎                          </a>
+                          <span class="date">
+                              2018-12-24                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1224/186946.shtml" class="title"
+                          target="_blank">
+                              反无人机测试失败暴露美国机场安全隐患                          </a>
+                          <span class="date">
+                              2018-12-24                          </span>
+                      </li>
+                                             <li class="item">
+                          <span class="ico">
+                          </span>
+                          <a href="http://www.cannews.com.cn/2018/1224/186944.shtml" class="title"
+                          target="_blank">
+                              英机场疑遭无人机干扰事件续 警方释放2名嫌疑人                          </a>
+                          <span class="date">
+                              2018-12-24                          </span>
+                      </li>
+                       
+                  </ul>
+              </div>
+          </div>
+                </div>
+      </div>
+      <!-- 右侧 -->
+        <div class="second_right">
+                <!-- 航空视频 -->
+                <div class="mt40 mod_wonderful_video">
+                    <div class="idx_cm_title">
+                        <h2 class="title"><a href="http://www.cannews.com.cn//video/"  target="_self">视频/<span>Video</span></a></h2>
+                    </div>
+                                        <a href="http://www.cannews.com.cn/2018/0625/178679.shtml" class="big_video" target="_blank">
+                        <img src="http://upload.cannews.com.cn/2018/0625/thumb_300_180_1529901363244.jpg" title="视频：V-22“鱼鹰”垂直旋翼的变形金刚设计" width="300" height="190">
+                          <span class="bg"></span><div class="video_btn"></div>
+                        <span class="title">视频：V-22“鱼鹰”垂直旋翼的变形金刚设计</span>
+                    </a>
+
+                    <div class="video_text">
+                        <ul>
+                                            </ul>
+                    </div>
+                                                 <li>
+                              <a href="http://www.cannews.com.cn/2018/0625/178677.shtml" title="视频：日本的“空中忍者” OH-6D轻型直升机" target="_blank">视频：日本的“空中忍者” OH-6D轻型直升机                              </a>
+                            </li>
+                                                         <li>
+                              <a href="http://www.cannews.com.cn/2018/0625/178676.shtml" title="视频：F-22战机打破物理原则的矢量机动！" target="_blank">视频：F-22战机打破物理原则的矢量机动！                              </a>
+                            </li>
+                                 
+                </div>
+                <!-- 策划图集 开始-->
+                <div class="mt2255 mod_chtj">
+                    <div class="idx_cm_title">
+                        <h2 class="title">
+                            <a href="http://photo.cannews.com.cn/"  target="_self">图集/<span>Photos</span></a>
+                        </h2>
+                    </div>
+                    <div ne-module="" class="mod_right_focus">
+						<div class="mod_focus">
+    						<div class="f_body bd" >
+       							<ul class="f_main clearfix">
+                                    <li ne-role="slide-page">
+                            <a href="http://www.cannews.com.cn/2018/0626/178798.shtml"  title="组图：国航完成A350法国本场训练任务" target="_blank">
+                                <img src="http://upload.cannews.com.cn/2018/0626/thumb_300_180_1529998027739.jpg" width="300" height="180">
+                                 <span class="bg"></span>
+                                 
+                                <h3>组图：国航完成A350法国本场训练任务</h3>
+                            </a>
+                        </li>
+                        <li ne-role="slide-page">
+                            <a href="http://www.cannews.com.cn/2018/0626/178749.shtml"  title="组图：俄罗斯军队进行无人机联合演习" target="_blank">
+                                <img src="http://upload.cannews.com.cn/2018/0626/thumb_300_180_1529982383484.png" width="300" height="180">
+                                 <span class="bg"></span>
+                                 
+                                <h3>组图：俄罗斯军队进行无人机联合演习</h3>
+                            </a>
+                        </li>
+                        <li ne-role="slide-page">
+                            <a href="http://www.cannews.com.cn/2018/0626/178703.shtml"  title="组图：2018世界无人机大会暨第三届深圳国际无人机展举行" target="_blank">
+                                <img src="http://upload.cannews.com.cn/2018/0626/thumb_300_180_1529977795442.jpg" width="300" height="180">
+                                 <span class="bg"></span>
+                                 
+                                <h3>组图：2018世界无人机大会暨第三届深圳国际无人机展举行</h3>
+                            </a>
+                        </li>
+                            
+						            
+                    			</ul>
+    						</div>
+				    		<div class="hd">
+								<ul></ul>
+							</div>
+						    <script type="text/javascript">
+								$('.mod_focus .bd li').each(function(){
+									$('.mod_focus .hd ul').append($('<li/>'));
+								})
+								$(".mod_focus").slide({mainCell:".bd ul",autoPlay:true,effect:'left'});
+							</script>
+						</div>
+					</div>
+                </div>
+                <!-- 策划图集 结束-->
+                <span id="js_rfix_baseline"></span>
+                <!-- 专栏  开始 -->
+                <div class="mt2255 mod_kongzhongren" id="js_right_last">
+                    <div class="idx_cm_title">
+                        <h2 class="title">
+                            <a href="http://space.cannews.com.cn/"  target="_self">专栏/<span>Column</span></a>
+                        </h2>
+                    </div>
+                    
+                    <div>
+                    
+                    						                      <div class="idx_cm_img">
+						                <a href="http://www.cannews.com.cn/2018/1229/187274.shtml" target="_blank">
+						                    <img src="http://upload.cannews.com.cn/2018/1229/thumb_300_150_1546053770863.jpg"  title="突破！贵州有了第一个取证通用机场" width="300" height="150" alt="">
+						                      <div class="bg">
+						                          <h3>突破！贵州有了第一个取证通用机场</h3>
+						                      </div>
+						                </a>
+						            </div>
+                     
+					<ul class="mt12 idx_cm_list idx_cm_list_h">
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1228/187219.shtml" tppabs="http://www.cannews.com.cn/2018/1228/187219.shtml" target="_blank">CR929项目复材前机身攻关全尺寸筒段下线</a>
+						                </li>
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1227/187125.shtml" tppabs="http://www.cannews.com.cn/2018/1227/187125.shtml" target="_blank">一起看下中国直升机40年的“扶摇”直上</a>
+						                </li>
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1227/187120.shtml" tppabs="http://www.cannews.com.cn/2018/1227/187120.shtml" target="_blank">航空工业：我就是中国制造</a>
+						                </li>
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1227/187117.shtml" tppabs="http://www.cannews.com.cn/2018/1227/187117.shtml" target="_blank">航空工业与北航签约 发挥双方特色优势共建航空</a>
+						                </li>
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1227/187115.shtml" tppabs="http://www.cannews.com.cn/2018/1227/187115.shtml" target="_blank">亚航以7.68亿美元售出25架飞机 美国私人投资公</a>
+						                </li>
+                    						                    <li>
+						                    <a href="http://www.cannews.com.cn/2018/1226/187090.shtml" tppabs="http://www.cannews.com.cn/2018/1226/187090.shtml" target="_blank">无人机发展有了“国家队”  或迎来高速发展时期</a>
+						                </li>
+                     
+                </ul>
+                </div>
+    
+                </div>
+                <!--专题策划  -->
+                <div class="mt2255 mod_news_special">
+                    <div class="idx_cm_title">
+                        <h2 class="title"><a href="http://special.cannews.com.cn/"  target="_self">专题/<span>Topic</span></a></h2>
+                    </div>
+                    <div ne-module="">
+                    	<div class="bd">
+                            <div class="photo">
+                    <a href="http://special.cannews.com.cn/180319" target="_blank">
+                        <img src="http://upload.cannews.com.cn/2018/0323/1521782567498.jpg"  title="专题：纪念歼10首飞20周年" width="300" height="150">
+                    </a>
+                </div>
+                <h3>    
+                    <span>HOT</span>
+                    <strong><a href="http://special.cannews.com.cn/180319" target="_blank">专题：纪念歼10首飞20周年</a></strong>
+                </h3>
+                  <ul class="idx_cm_list">
+                                      </ul>
+            </div>
+                                      <li>
+                        <a href="http://special.cannews.com.cn/180227" target="_blank">专题：2018年全国两会</a>
+                    </li>
+                                                <li>
+                        <a href="http://special.cannews.com.cn/180419" target="_blank">专题：2018年郑州航展</a>
+                    </li>
+                       
+					</div>
+                </div>
+            </div>        </div>
+    
+
+  </main>
+
+  <!-- 底部 -->
+  <div class="hr"></div>
+  <div class=" friend_link">
+      <ul class="footer-link">
+        <li><a href="http://www.avic.com/" target="_blank">中国航空工业集团公司</a></li>
+        <li><a href="http://www.dongangroup.cn/" target="_blank">中国航发东安发动机</a></li>
+        <li><a href="http://www.lmaeg.com/" target="_blank">中国航发黎明</a></li>
+        <li><a href="http://www.xac.com.cn/" target="_blank">航空工业西飞</a></li>
+    
+        <li><a href="http://www.xaec.com" target="_blank">中国航发西航</a></li>
+    
+        <li><a href="http://www.shanfei.com/" target="_blank">航空工业陕飞</a></li>
+    
+        <li><a href="http://www.hongdu.com.cn/" target="_blank">航空工业洪都</a></li>
+    
+        <li><a href="http://www.avic1-fai.com/" target="_blank">航空工业第一飞机设计研究院</a></li>
+    
+        <li><a href="http://www.avicsm.com/" target="_blank">航空工业特材</a></li>
+
+        <li><a href="http://zhgyxyyy.com/" target="_blank">航空工业364医院</a></li>
+
+        <li><a href="http://www.hz3201.com/" target="_blank">航空工业3201医院</a></li>
+        <li><a href="http://www.joyga.com.cn/" target="_blank">幸福通航</a></li>
+    </ul>
+  </div>
+  <div style="padding:0; margin:0; height:1px; overflow:hidden; font:1px/1px simsun; border-bottom:1px dashed #e0d4d4;"></div>
+  <div class="divclear friend_link">
+    <ul class="footer-link">
+      <li><a href="http://www.airshow.com.cn/" target="_blank">珠海航展</a></li>
+      <li><a href="http://www.promosalons-china.com/index.php?ac=article&amp;at=read&amp;did=367" target="_blank">巴黎航展</a></li>
+      <li><a href="http://www.cgaa.com.cn/" target="_blank">中航协通航委</a></li>
+      <li><a href="http://mil.news.sina.com.cn/" target="_blank">新浪军事</a></li>
+      <li><a href="http://military.people.com.cn/" target="_blank">人民网军事</a></li>
+      <li><a href="http://www.carnoc.com/" target="_blank">民航资源网</a></li>
+      <li><a href="http://mil.chinanews.com/" target="_blank">中新网军事</a></li>
+      <li><a href="http://mil.huanqiu.com/" target="_blank">环球网军事</a></li>
+      <li><a href="http://mil.qq.com/mil_index.htm" target="_blank">腾讯军事</a></li>
+      <li><a href="http://news.163.com/air/" target="_blank">网易航空</a></li>
+      <li><a href="http://news.ifeng.com/mil/" target="_blank">凤凰军事</a></li>
+      <li><a href="http://military.china.com/" target="_blank">中华网军事</a></li> 
+      <li><a href="http://www.hangkonglaw.com" target="_blank">航行网</a></li>
+      <li><a href="http://www.81tech.com/" target="_blank">国防科技网</a></li>
+      <li><a href="http://www.aviationnow.com.cn/" target="_blank">航空在线</a></li>
+      <li><a href="http://www.gobetter.com.cn/" target="_blank">高博特军工网</a></li>
+      <li><a href="http://www.zgcbcm.com.cn/" target="_blank">中国出版传媒网</a></li>
+      <li><a href="http://www.zgcyjia.com.cn/" target="_blank">中国创业家网</a></li>
+      <li><a href="http://www.avicone.com/" target="_blank">中国航空在线</a></li>
+      <li><a href="http://www.top81.com.cn/" target="_blank">鼎盛军事</a></li>
+      <li><a href="http://www.sirenfeiji.com/" target="_blank">私人飞机产业网</a></li>
+      <li><a href="http://www.xinhuanet.com/air/" target="_blank">新华网民航频道</a></li>
+      <li><a href="http://www.csstoday.net" target="_blank">中国社会科学在线</a></li>
+      <li><a href="http://www.hangkong.com/" target="_blank">航空网</a></li>
+      <li><a href="http://www.81uav.cn/" target="_blank">全球无人机网</a></li>
+      <li><a href="http://www.gaero.com/" target="_blank">极飞网</a></li> 
+      <li><a href="http://www.airyc.cn" target="_blank">中国航空英才网</a></li>
+      <li><a href="http://hkht.job1001.com/" target="_blank">一览航空航天英才网</a></li>   
+      <li><a href="http://www.u-jet.com.cn/" target="_blank">U-jet私人飞机</a></li>
+      <li><a href="http://www.spacechina.com/n25/index.html" target="_blank">中国航天网</a></li>
+      <li><a href="http://www.chinafeatures.com/" target="_blank">新华社穿越中国</a></li>  
+      <li><a href="http://www.chinaflier.com/" target="_blank">飞行者联盟</a></li> 
+      <li><a href="http://www.jixiezb.com.cn/" target="_blank">高端装备网</a></li>
+      <li><a href="http://www.afzhan.com/" target="_blank">安防展览网</a></li>
+      <li><a href="http://www.afwing.com/" target="_blank">空军之翼</a></li>
+      <li><a href="http://www.yuchen360.com/" target="_blank">宇辰网</a></li>   
+      <li><a href="http://www.airforceworld.com/" target="_blank">空军世界</a></li>
+      <li><a href="http://www.aopa.org.cn/" target="_blank">中国AOPA</a></li>   
+      <li><a href="http://www.aopayun.com/" target="_blank">AOPA云</a></li>
+      <li><a href="http://fly.tuobar.com/" target="_blank">拖把儿飞行社区</a></li>   
+      <li><a href="http://www.feishou.com/" target="_blank">飞兽社区</a></li>
+      <li><a href="http://www.cncopter.com/" target="_blank">中国直升机网</a></li>   
+    </ul>
+    </div>
+    <div class="footer">
+    <div class="footer_copy">
+      CopyRight CAN Press 2009-2018 中国航空报社 中国航空新闻网 版权所有<br>
+      本网站文字内容归中国航空报社 中国航空新闻所有，任何单位及个人未经许可，不得擅自转载使用<br>
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033597" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://beian.gov.cn/img/ghs.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#5d696f;">京公网安备 11010502033597号</p></a>
+      京ICP备09035612号      
+           <!--京公网安备11010102000999号 --> 
+      <a href="http://webscan.360.cn/index/checkwebsite/url/www.cannews.com.cn" name="6668d2332523275bd10c3f080b8bcc1a"></a>
+
+    </div>
+  </div>
+<!-- 登录注册 -->
+<!--遮罩层-->
+<div class="bgPop"></div>
+<!--弹出框-->
+<!--弹出框-->
+<div class="pop">
+    <div class="pop-top">
+        <span class="pop-close">Ｘ</span>
+    </div>
+   
+<!-- 登录 -->
+<div class="login_div">
+  <h2>用户登录</h2>
+  <form class="login-cont">
+    <div class="login-user">
+      <div class="user-name">
+        用 户 名:<span></span>
+      </div>
+      <input type="text" name="" class="user-text">
+    </div>
+    <div class="login-user">
+      <div class="user-name">
+        密 码:<span></span>
+      </div>
+      <input type="password" name="" class="user-text">
+    </div>
+    <div class="login-btn">
+      <input type="submit" name="" value="登录" class="login-sub">
+      <div class="next-btn">
+        <input name="cookietime" value="1296000" type="checkbox" class="checkbox-btn">
+        <span>下次自动登录</span>
+      </div>
+      <a href="" class="forget">
+        忘记密码？
+      </a>
+    </div>
+    <div class="third">
+      <p>使用第三方账号登录</p>
+      <div class="share">
+        <a href="" class="shareqq"><img src="images/qq.png"></a>
+        <a href="" class="sharewx"><img src="images/wx.png"></a>
+        <a href="" class="sharewb"><img src="images/wb.png"></a>
+      </div>
+    </div>
+  </form>
+
+  <div class="barter_btnDiv">
+    <button class="barter_btn" onClick="javascript:barter_btn(this)">没有账号?<span>请注册</span></button>
+  </div>
+</div>
+
+<!-- 注册 -->
+<div class="register_body">
+  <h2>用户注册</h2>
+  <form class="register-cont"  action="" method="POST" name="registerForm" id="member_registerForm">
+    <div class="regis-user">
+      <div class="user-name">
+        用 户 名:<span></span>
+      </div>
+      <input type="text" name="" class="user-text">
+      <p>3-16字，可由中文,字母,数字及”_”组成</p>
+    </div>
+    <div class="regis-user">
+      <div class="user-name">
+        密 码:<span></span>
+      </div>
+      <input type="password" name="" class="user-text">
+      <p>字符长度在6到16个字符之间</p>
+    </div>
+    <div class="regis-user">
+      <div class="user-name">
+        确认密码:<span></span>
+      </div>
+      <input type="password" name="" class="user-text">
+    </div>
+    <div class="regis-user">
+      <div class="user-name">
+        邮 箱:<span></span>
+      </div>
+      <input type="text" name="" class="user-text">
+    </div>
+    <div class="regis-user">
+      <div class="user-name">
+        验 证 码:<span></span>
+      </div>
+      <input type="text" name="" class="user-yzm">
+      <img src="images/验证码.png">
+      <a href="" class="regis-tab">换一张？</a>
+    </div>
+    <div class="regis-next">
+      <input class="checkbox-btn" id="iagree" name="checkbox" type="checkbox" value="checkbox" >
+      <span class="regis-text">我同意<a href="">《本站免责声明》</a></span>
+    </div>
+    <div  class="regis-btn">
+      <input type="submit" name="" value="注册" class="regis-sub" alt="必须先阅读并同意《本站免责声明》" disabled="">
+    </div>
+  </form>
+  <div class="barter_register">
+    <button class="barter_registerBtn" onClick="javascript:barter_btn(this)" style="">已有账号?<span>请登录</span></button>
+  </div>
+</div>
+
+</div>
+<!-- @结束 -->
+  
+  <!-- 专栏内容提取 -->
+  <!--<script type="text/javascript" src="http://img.cannews.com.cn/apps/article/js/space_content.js"></script>-->  
+  <!-- @end 脚本区域 -->
+    
+    <script type="text/javascript">
+        // bShare划词分享
+        if(typeof(bShare) == 'undefined'){
+            document.write('<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"><\/script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+        }else{
+            document.write('<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+        }
+  </script>
+<script type="text/javascript">
+  // 点击登录弹出
+   $(document).ready(function () {
+        $('.pop-close').click(function () {
+            $('.bgPop,.pop').hide();
+        });
+        $('.click_pop').click(function () {
+            $('.bgPop,.pop').show();
+        });
+    });
+   //点击同意复选框改变注册按钮
+   $('#iagree').on('click', function() {
+      if ($('#iagree').is(':checked')) {
+        $('#member_registerForm').find('input:submit').removeClass('regis-sub').addClass('btn-common').attr('disabled',false).attr('alt', '');
+      } else {
+        $('#member_registerForm').find('input:submit').removeClass('btn-common').addClass('regis-sub').attr('disabled', 'disabled').attr('alt', '必须先阅读并同意《本站免责声明》');
+      }
+    });
+    //登录注册切换
+    function barter_btn(bb) {
+  $(bb).parent().parent().fadeOut(0);
+  $(bb).parent().parent().siblings().fadeIn(0);
+}
+
+  $(function () {
+            $("#list").hide();
+            $("#menu").hover(function () {
+                $("#list").show();
+            }, function () {
+                $("#list").hide();
+            })
+            // 鼠标移动到list的div上的时候list div不会被隐藏
+            $("#list").hover(function () {
+                $("#list").show();
+            }, function () {
+                $("#list").hide();
+            })
+        });
+</script>
+
+</body>
+</html>

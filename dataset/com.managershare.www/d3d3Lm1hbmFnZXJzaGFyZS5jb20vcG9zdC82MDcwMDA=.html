@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>悬崖上的造车梦 : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">悬崖上的造车梦</h1>
+			<input type="hidden" value="607000" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/naipan/" class="post-author">乃潘</a>&nbsp;
+				<span class="post-date">01月07日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15468281323545.jpg?imageView2/2/w/760" alt="悬崖上的造车梦">
+				</div>
+								<p>作者 | 汪小楼</p><p>编辑 | 李越</p><p>“造车并不是一件容易的事情，不仅需要大量的资金投入，还要长期的技术沉淀，在未来大部分汽车企业将会被淘汰出局，造车新势力经过三五年的淘汰，大多数也将成为‘先烈’。”在今年6月初的全球汽车论坛上，长安汽车总裁朱华荣对于汽车行业的发展发表了自己的看法。</p><p>中国汽车行业起步较晚，2000年以前国内汽车行业流淌着计划经济时代的基因，没有太大的市场，所以根本谈不上竞争，更谈不上形成一个完整的产业链。</p><p>不过，由于人口基数大，中国汽车行业也很快迎来了飞跃。据吴晓波《激荡十年，水大鱼大》一书记载，2009年，中国汽车的年产销量达到1364万辆，并首次超越美国，成为新的“车轮上的国家”。</p><p>“希望国家给我们这些民营企业家一个造车的梦，如果失败的话，也请给我们一次失败的机会。”就在那一年，被誉为汽车界“狂人”的吉利董事长李书福带着他那句造车梦想台词高调收购了沃尔沃，成为中国汽车领域的标志性事件，而他另外一句“汽车不就是四个轮子加两张沙发”的口头禅也流传至今。&nbsp;</p><p>近几年，随着互联网、人工智能、新能源产业的相互渗透和发展，更重要的是由于特斯拉成功的先例，大量热钱开始涌入这一领域，很多创业者踏入了造车这条赛道。</p><p>从2014年到2018年，中国有超过三百家注册公司进入造车领域。他们踏着新能源汽车的东风，如雨后春笋般冒了出来，纷纷涌入并以各自的姿态意欲争夺这几十万亿规模的蓝海市场。</p><p>从诞生之初，它们就被冠上“造车新势力”的头衔，蔚来、车和家、小鹏、威马、奇点、游侠、拜腾等公司则成为了这波造车新生势力中的代表性企业。</p><h3><strong>壹</strong></h3><p>阿里大手笔收购UC后，其创始人何小鹏怀揣大把财富并买了一艘游艇，闲置了一段时间觉得很无趣，于是便萌生了再创业的想法。</p><p>在一次特斯拉测评马斯克访问阿里的活动上，何小鹏向马斯克请教了关于如何使用特拉斯专利的问题，马斯克回答了一句“你们可以拿去用，但是怎么用就和我们没有关系了。”马斯克的回答让何小鹏看见了进军电动汽车领域的契机。不过，最初他只是以投资形式进入。</p><p>“传统汽车在过去几十年里没有变化，而我们就是想加速这个变化”，一家名叫小鹏汽车的公司在广州应运而生。</p><p>在小鹏汽车诞生之初，对于要花多少钱这个问题，创始团队并没有经过严谨的预算。当时何小鹏去拜访了一家名为观致汽车的公司，当了解观致汽车的组织和运营成本之后，他觉得造车也不是一件特别难的事情。</p><p>当时观致汽车花了近100亿元人民币，由于自身贴着成功互联网创业者的标签，所以何小鹏坚定地认为，如果是自己造车的话根本花不了那么多钱，顶多40亿人民币就够了。</p><p>但如今，何小鹏才发现，自己当初定下40亿人民币的预算太天真，光从组织体系来看，从研发到生产，销售服务到运营体系，就要200亿元人民币的规模。所以他由衷的感叹了一句：造车的难度比互联网高100倍。</p><p>魔都上海，一家名叫游侠汽车的公司也已经在当年3月宣布成立，其创始人黄修源拿着仅有的1800万元融资，以15人的创始团队，在没有相应技术基础和生产线的情况下，不顾反对之声毅然杀入。</p><p>几个月后，黄修源在朋友圈秀了一段小跑车在路上行驶的画面，并高调宣布：游侠汽车demo版已经行驶上路。这疯狂的举动立马引起了行业的关注，当人们深扒之后才发现，黄修源展现的并不是他们自己制造的车，而是通过现有车型进行改装。</p><p>虽然这种极致的模仿和抄袭立马遭到了不少吐槽，但黄修源万万没想到，一年以后，游侠汽车将会被媒体扒得体无完肤。</p><p>2015年7月底，游侠汽车X系列在北京三里屯开首场发布会，并宣称：“游侠X续航可达460km，百公里加速仅需5.6秒。”</p><p>特拉斯耗时五年，投入大量得人力物力，才取得续航480公里的成绩，游侠汽车却在短短几个月内就几乎达到了这一高度，这对于几十人团队的初创公司几乎是不可能完成的。不久后媒体开始“挖坟式”调查，人们才发现游侠汽车这场发布会不过是哗众取宠、博人眼球。</p><p>在游侠汽车舆论风波刚过不久，曾任360副总裁的沈海寅也带着奇点汽车加入这一战场。“奇点打造的不仅仅是一款车，而是一个懂你的轮式机器人。”</p><p>沈海寅没有黄修源的高调，并将那句“敬畏传统、大胆创新”挂在嘴边。当然这句话你可以理解为：老人（传统汽车）我们还是要尊敬的，但不代表他们所说的话全是正确的。</p><p>在沈海寅看来，传统汽车能保证质量是在于它能够遵守流程，很难创新也是因为太遵守流程。就犹如笨重的大象难转身一样，这给予了新入局者一个莫大的机会。</p><p>沈海寅的想法几乎是每个新入局者的共识，传统车企往往有很高的收入，甚至有很高的利润，但是他们不敢拿更多的资金去投入研发，并以ALL IN的姿态投入到未来的电动汽车和无人驾驶当中去。</p><h3><strong>贰</strong></h3><p>“我们致力于一款用户用的起，用得爽的汽车”，这是在今年6月CCTV—2举办的《对话》造车新势力节目中，威马汽车联合创始人杜立喊出的口号。</p><p>在创立威马之前，沈晖曾在博格华纳、菲亚特、沃尔沃等大牌汽车公司就职。在他的职业生涯中，最让人津津乐道的是2009年吉利收购沃尔沃时，李书福运筹帷幄，沈晖带领团队摇旗呐喊、冲锋陷阵，并在之后两年多时间里帮助沃尔沃扭亏为盈。</p><p>在创立威马时沈晖豪情地说了一句：“从45岁搞到65岁还有20年，如果这辈子不自己搞点事情，太可惜。”威马一词最早来源于德国，其意思是世界冠军，从起名不难看出威马汽车和沈晖的野心。</p><p>相对于沈晖的野心和抱负，李想加入这条赛道的动机显然更“单纯”，原因就是不喜欢：“今天的汽车不是我喜欢的，世界变化太快，汽车变化太慢。”当李想带着他的车和家进入这一领域时，这个赛道已经是风起云涌。</p><p>不难理解李想这一“任性”的想法，毕竟当互联网重新定义和颠覆社交、电商、出行等诸多领域时，作为一个互联网“老兵”却眼睁睁看着自己“喜欢”的赛道插满了巨头和新贵们的旗帜。</p><p>面对质疑和不看好，李想给出了自己的看法：“当一个事情所有人都看好的时候，这个事情一定有问题了，恰恰是所有人都不看好的时候才是机会。”</p><p>事实上，李想也的确是把所有人都不看好的事情当作了机会，并在这个领域下了重注。李想除了自己做车和家以外，蔚来汽车成立时，他也成为这家公司的六大创始投资人之一，其他五位创始投资人分别是马化腾、雷军、刘强东、张磊和李斌。</p><p>蔚来创始人李斌头顶知名投资人、“出行教父”等多重光环，虽然蔚来汽车现在已经是所有造车新势力中最耀眼的明星公司，但李斌也曾说过蔚来汽车是他有史以来经历最难的一次创业。</p><p>从一开始，李斌在这个巨型的烧钱机器面前并没有像何小鹏那样乐观，但还是远远超出了他的预期：原来觉得200亿就可以，后来发现，200亿只是造车的一个门槛。</p><p>事实上，蔚来创立到交付第一辆车就花了超过100亿人民币。对于钱上有着深刻的认识，所以在引入投资方时，李斌对资本保持着谨慎和一颗“八面玲珑”的心。</p><p>据刘二海透露，早期蔚来汽车并不缺钱，在原有豪华投资阵容的基础上后来还引入了小米创始人雷军。他说：“这就是李斌，他的特点是跟谁都聊得来，从来不会觉得别人是敌人，要把他们干掉。”</p><p>在2018年《中国企业家》领袖年会上，李斌说，创业要广交朋友，不能死在钱上。“从第一天开始，我就觉得朋友圈一定要大点，不要指望一个朋友能帮你搞定所有的事情。”</p><p>其实更准确地说，见惯了缺钱的窘迫和资本的血腥，从现在蔚来五十多个投资人的阵容来看，李斌知道要将鸡蛋放在尽可能多的篮子里才能确保有小鸡孵出。</p><p>2009年，美国通用汽车的破产成了压死“汽车之城”底特律的最后一棵稻草，而此时特拉斯经过几年的发展和资本市场的看好，已俨然成为美国汽车界一股全新的势力，其总部所在地硅谷也摇身一变成为了美国新的汽车革命根据地，而善于编织梦想的马斯克因此成为了拯救美国汽车工业的全民英雄，受万人敬仰。</p><p>而另一个比马斯克还会编织梦想的“超级梦想家”贾跃亭就没有这么好运了。2016年北京车展，乐视的LeSEE电动概念车跑车粉墨登场。在现场，贾跃亭用他那一向具有煽动性的言辞并激动地说到：我们用全新的方式来定义汽车，我们希望超越特拉斯，引领产业跳入新时代。</p><p>贾跃亭显然没有超越特拉斯，也没能重新定义汽车，却把乐视债权人拖入了一个绝望的时代。</p><p>当时乐视已属于强弩之末，贾跃亭的汽车梦想虽然短暂地让乐视“回光返照”，但之后不久乐视就全线崩盘，贾跃亭被迫远走异国他乡，“下周回国”也成了永久传唱。</p><h3><strong>叁</strong></h3><p>不管贾跃亭，还是李斌、何小鹏、沈晖等人，虽然他们都喊着自己响亮的口号，扛着属于自己的大旗，用互联网思维重新定义这个行业，但无一列外地逃避不了要交的学费。在这所学校里，不论是提前辍学的、还是正在饱受昂贵学费煎熬的学生，都没有得到丝毫眷顾和同情。</p><p>游侠汽车经历了三里屯那次舆论浪潮后，算是在“鬼门关”走了一遭。团队时常面临资金链断档，甚至被媒体爆出吃过“散伙饭”。为了不让吹过的牛逼过早破灭，黄修源也不得不寻找新的接盘侠，游侠也因此沉寂于江湖两年多时间。</p><p>从2015年12月开始，现任游侠董事长卫俊开始坐镇游侠总部。黄修源也为他曾经吹过的牛付出了代价，卫俊成为游侠新掌门人后，黄修源仅保留少数股份，美言可曰是退居幕后，但实际上等同于出局。</p><p>“那个冬天无比的冷，我一辈子都忘不了，桌子上放一杯水，第二天就结了冰。”回忆这段往事卫俊仍然心有余悸。</p><p>卫俊的入股和加盟，不但为游侠带来了上亿元人民币的资金，还对内部进行了组织大换血，不去回避之前的舆论，终于将游侠短暂地从“鬼门关”拉了回来。</p><p>游侠汽车在今年3月底完成了B轮融资，卫俊也专门为其量身订制了一个“三个梯度”的销售计划，并谦虚地说：这是游侠团队当前能力所能承受的最大值。</p><p>今年8月，游侠汽车宣布完成 B+轮3.5 亿美元融资，本轮融资由格致资产独家战略入股。与此同时，格致资产不仅仅参与了投资，同时也进入了游侠管理层。格致资产 CEO 秦逸飞将出任游侠汽车全球联席董事长兼联合创始人。难道，这将是继卫俊之后，又一个新的接盘侠？</p><p>2018年，奇点汽车的日子也不好过，其大胆创新的步子还未迈出多远，2018年11月中旬，奇点汽车被多家媒体爆料出资金链吃紧，拖欠员工三个月工资。奇点汽车针对此事作出过相关回应，并称其目前发展顺利，已经得到多个地方政府和投资机构的看好和支持，多轮融资顺利，资金问题纯粹子虚乌有。</p><p>媒体爆料自然不会空穴来风，也有好事网友趁机吐槽了奇点汽车一把：对于奇点汽车来说，最大的痛苦莫过于，四个轮子还在，机器人半死不活，钱却没有了。</p><p>当资本不再激进，热钱不再涌动，奇点汽车就传出如此“噩耗”。这对于沈海寅来说可不是什么好消息，毕竟战斗才刚刚打响，后面还需要大量的“军需供应”。</p><p>威马汽车虽然目前没有面临缺钱的问题，但汽车自燃事件和“隐瞒”补贴政策将其推向了舆论讨伐高潮。</p><p>自燃事件发生后，威马汽车很快在其官方声明中也给出了一个自认为合理的解释：那辆自燃的威马EX5是遭遇多轮破坏性试验后的报废车辆。</p><p>言下之意，汽车自燃事件属于正常，不必过于解读。如今虽然此事件已经过去，但是车主对电动汽车质量安全担忧的“这把火”才刚刚点燃。</p><p>自燃事件刚过不久，“隐瞒”补贴政策再次将威马汽车推向了舆论高潮。10月底就有车主爆料和控诉威马汽车不讲诚信，不提示国家补贴政策调整的风险，低价诱导用户下单，同时设定不退款协议。</p><p>可惜，在真金白银面前不是谁都能讲诚信、原则和企业文化，更何况在这个都极度缺钱的大环境下。</p><p>除了昂贵的学费，造车新势力内部团队融合的问题也同样不容小觑。在做车和家时，李想说：“希望汽车行业的人、互联网行业的人（包括科技行业的人）能够融合。”</p><p>但在实际操作上很难做到融合、互补，表面上大家坐在一起了，其实谁也不服谁。就如同特斯拉工程师团队，很多来自传统汽车行业，有也很多来自思科和谷歌这样的科技互联网公司，表面上一片融洽，实际上私底下相互掐得不可开交，到今天这个问题也未得到实质性解决。去年6月，特斯拉的“内鬼”门事件，就是由于内部工程师团队互掐所导致。</p><h3><strong>肆</strong></h3><p>“没有一家新造车企业今年能够交付一万辆，要努力实现说到做到，才可以更持续的发展”。2018年8月，何小鹏发了这样一条朋友圈。</p><p>何小鹏的话可以理解为对自身的焦虑，但李斌并不赞同他这说法，并隔空与其立下赌约：“可以和小鹏打一个赌，在年底前，不用到 12 月 31 日，蔚来肯定能做到。”</p><p>转眼间，李斌、何小鹏赌约将至，造车新势力的“交车元年”已过，新造车厂家可谓是曾经有几多高调如今就有几多愁。</p><p>2018年11月底，蔚来汽车与江淮汽车举行了万台下线仪式。这次抢先下线一万台，看似抢占了市场先机，实际上蔚来汽车从首批交付开始就一再延期，李斌的“赌约”还没算真正赢。</p><p>“李斌干得非常漂亮，三个月内完成一万台下线，他赢的机会很大。”小鹏汽车今年显然无法兑现量产交付承诺。</p><p>威马汽车创始人沈晖也曾公开表示，对2018年交付1万辆充满信心。不过，前不久沈晖却说了一句：“因交付环节太复杂，今年内将无法完成1万辆的交付。”并给威马订下了一个来年冲刺10万辆的目标。</p><p>沈晖这个来年十万辆的目标也被吐槽：今年的承诺都没兑现，就谈到了明年，真是人有多大胆，地就有多大产。</p><p>还有一家知名造车公司叫拜腾汽车，其前身名叫“和谐富腾”，其名字来源是三大潜在投资方和谐汽车、富士康和腾讯的名字合集，但尴尬之处在于，最终富士康和腾讯并没有投资，于是这家公司并没有叫和谐富腾，而是叫拜腾汽车。</p><p>由于腾讯和富士康未参投，和谐汽车话语权加强，和谐汽车创始人冯长革“硬要”了一个拜腾汽车董事长兼创始人的职务，但实际上，这家公司的真正创始人是毕福康和戴雷。</p><p>2018年6月亚洲CES展前夜，拜腾汽车发布了第二款概念车，之后8月底的在北京车展上，拜腾汽车第一台纯电动SUV拜腾BYTON M-BYTE概念车首次高调亮相。这款概念车也确实足够惊艳，科幻的造型、独特的设计理念。最让人印象深刻的是，一块49英寸的共享全面屏幕，几乎占据了整个中控台，让人耳目一新。</p><p>但从北京车展之后，拜腾汽车再也没有过惊艳的消息。其巡回展出第一台概念车则成为了常态，后来推出的第二台概念车BYTON K-BYTE也基本上是在第一款概念车原有的基础上改变了车身造型，此举无异于新瓶装老酒。</p><p>看起来，拜腾汽车目前的日子并不好过，其量产交付要比蔚来、小鹏和威马等车厂晚不少，与此同时，其被爆出急上市融资的消息，据多家媒体报道，拜腾汽车创始人毕福康在前不久接受《欧洲汽车周报》时表示，拜腾汽车将会通过IPO融资来支持业务增长，并为此解释说，“由于造车是一项资本密集型业务，而且我们希望扩张，所以上市是有意义的。”次消息曝光不久，便遭到了拜腾内部人士的否认。</p><p>与其他新造车企业一样，拜腾汽车同样缺钱。2018年9月，拜腾用1元人民币的价格收购了一汽华利，获得了乘用车造车资质，但也因此多了不低于8亿元人民币的债务。其本来还在咬牙坚持建设南京总工厂，这无异于豪赌，如果不能顺利实现量产和C轮融资，很可能会提前倒在这条赛道上，为他人做嫁衣。</p><p>与拜腾收购一汽华利的目标相似，最近车和家以6.5亿人民币的价格收购了力帆汽车造车资质牌照，这使得车和家离量产又更进了一步，但与以代工方式的蔚来和小鹏汽车相比，显然在时间上要落后不少。</p><h3><strong>终</strong></h3><p>2016年李书福说了一句：“今后主导汽车工业的一定是汽车企业，而不是互联网公司，有些企业不懂汽车，也没有很多钱，之所以造车，是意欲在资本市场上圈钱，所谓的造车新势力就是一天到晚瞎忽悠老百姓，老百姓的血汗钱来得不容易。”</p><p>李书福打着为老百姓利益着想的口号，赢得掌声无数。但同时也有诸多吃瓜群众对此发表了自己不同的看法：“你自己的梦想实现了，就不准别人有梦想了，这是哪门子的道理”、“如果你没有成功，你也许比他们还不如......”、“有人即将到你盘子里抢食，我们表示可以理解和原谅你的说法....”</p><p>但如今，通过观察造车新势力的现状，然后仔细想想李书福的言论虽然激烈，其实也不无道理。贾跃亭曾经为了造车四处融资，甚至到散户那里募资，最后乐视帝国崩塌，散户的投资资金也血本无归。</p><p>造车确实是一件超级花钱的事，为了打造高端品牌，蔚来汽车在全国各大城市最贵的地段，大手笔兴建NIO HOUSE，比如北京长安街、上海中心大厦、深圳平安金融中心。而在研发方面，蔚来汽车的投入比建NIO HOUSE更大。</p><p>虽然在对标特拉斯这条路上蔚来汽车走在了前列，但也并不意味着高枕无忧。前不久，伯恩斯坦研究发布一份题为《漫长未来》的研报认为，蔚来将在2019年上半年耗光其自2016年至今筹得的所有资金；2025年前都将持续亏损，并由此面临超过700亿元人民币（2019-2025）的资金缺口。</p><p>在《蔚来汽车在争议中行驶，李斌自称还没做到100分》一文中，作者作出了这样的测算：如果对标特斯拉20%的毛利率，蔚来要实现盈亏平衡，每年需要卖出16万辆ES8，假如换作是价格更低的ES6，每年需要卖出20万辆。</p><p>这对于蔚来汽车来说，无疑是一个巨大的考验。同时也意味着，其他所有玩家在造车这条赛道上，不但前景不如他们自己的期望，甚至有可能是绝望。</p><p>12月18日，在腾讯汽车主办的2018全球汽车AI大会上，蔚来汽车副总裁朱江语惊四座：其实大家心里都很清楚，我们这些新的企业最后能存活下来的不过两三家，这是一定的。这是商业的规律，所以我们应该都非常清楚的，以及勇敢地面对这个现实。</p><p>其实朱江并不是第一个提出这种观点的人，早在2018年6月央视举办的《对话》新势力的节目中，当主持人问到：未来两三年，剩下来的造车新势力大概还有多少家？</p><p>杜立刚和沈海寅给出的答案是十家，李想给出的是五家，而何小鹏最后给出的是两三家。</p><p>其实所有的造车新势力都明白，在未来的竞争中，说不定自己在某一刻就会被悄无声息地淘汰掉从而被遗忘，只是所有人都不愿意成为被淘汰掉的那一个。</p><p>小鹏汽车计划在明年年底完成300亿人民币的融资，虽然有巨头站台，但在目前这个资本市场的大环境下，要想完成这一目标仍有不小难度。</p><p>更为严重的是，如果在2019年，蔚来、小鹏、威马汽车这造车新势力中的三匹“头马”率先获得了大笔融资，很可能其他排名靠后的玩家将会无钱可融，毕竟寒冬才刚刚来临。</p><p>这就引发了很多车主这个行业的担忧：如果钱烧完了，我们的订单怎么办，就算订单如期交付，到时又有谁来管我们的售后？</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者： 汪小楼<br>
+								来源：<a href="https://mp.weixin.qq.com/s/_SSoEiA2VdPr93a5W-gupg" target="_blank">微信公众号：银杏财经（ID:threemornings）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/竞争" title="竞争">竞争</a>
+								<a href="/wiki/资金" title="资金">资金</a>
+								<a href="/wiki/互联网" title="互联网">互联网</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">1</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+						<div class="comment-list-item">
+		<div class="comment-user">
+			<a href="/author/linbinbin/" target="_blank" class="user-avatar">
+								<img src="/uploads/avatar/000/24/56/small_01.jpg">
+							</a>
+			<a href="/author/linbinbin/" class="user-name">Brooklin</a>
+			<span>01月09日</span>
+		</div>
+		<div class="comment-con">既然互联网汽车行业在收购传统行业生产线，未来大胆的设想，传统行业也虎视眈眈的在筹谋收购互联网汽车行业的技术和运营乃至团队。</div>
+		<div class="comment-meta">
+			<a href="javascript:;" class="reply-comment" data-comment-id="75355">回复</a>
+						<a href="javascript:;" class="comment-dig" data-comment-id="75355"><i class="iconfont icon-like"></i><span class="dig-count">0</span></a>
+		</div>
+			</div>
+	
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608188?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/2a595_p50McgkqL1wnREWb.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠摊上大事了！泄漏未公开重大信息，面临双重处罚</span>
+				</a>
+								<a href="/post/608187?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/22071_WxF0Y1r58lkuvCYO.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>顺丰发公告称过年不休息，但是收费高了多少？</span>
+				</a>
+								<a href="/post/608186?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/beee8_EvJszfz8DZk5AdIj.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>程序员突然跑路？游戏公司创始人600万元打水漂！</span>
+				</a>
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+								<a href="/post/608070?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+				</a>
+								<a href="/post/608069?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+				</a>
+								<a href="/post/608034?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+				</a>
+								<a href="/post/608033?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米股价腰斩，市值蒸发近3000亿！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/608001?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+					</a>
+										<a href="/post/607963?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+					</a>
+										<a href="/post/607962?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+					</a>
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+										<a href="/post/607815?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/b2f0f_4wly0J0wYJ8uvQQg.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>新款iPhone两个月内二次减产，苹果股价跌到谷底？</span>
+					</a>
+										<a href="/post/607814?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c3c03_6p28n3cJ5VYFr5Lj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>支付宝改名换法人了！网友：花呗不用还了？</span>
+					</a>
+										<a href="/post/607810?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4764f_nKHMu2Kt5Mw3sdGd.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>资本寒冬？这家企业却逆势给员工加薪，人均每月1000元！</span>
+					</a>
+										<a href="/post/607809?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/2b35d_Y8CnjCei97EZVKmL.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>是有信心还是卖不出去？雷军承诺未来一年不出售小米股票</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/naipan/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/67/small_49.png">
+													</a>
+						<a class="user-name" href="/author/naipan/">乃潘</a>
+						<a class="follow-btn " href="javascript:;" data-uid="166749">+&nbsp;关注</a>
+					</div>
+					<p>心有乃盼</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">1</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

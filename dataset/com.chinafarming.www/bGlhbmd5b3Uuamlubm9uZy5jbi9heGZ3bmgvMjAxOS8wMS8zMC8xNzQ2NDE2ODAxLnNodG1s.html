@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="http://www.chinagrain.cn">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>1月30日国际国内金融要闻一览_行业资讯_中国粮油信息网</title>
+</head>
+
+<body>  
+
+<link type="text/css" href="http://www.chinagrain.cn/liangyou/css/style.css" rel="stylesheet">
+<script type="text/javascript" src="http://www.chinagrain.cn/liangyou/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.chinagrain.cn/liangyou/js/main.js"></script>
+  <div class="header-top">
+    <div class="container header-top-a">
+      <a href="http://my.chinagrain.cn/jinnong/Liangyouregpage.htm" target="_blank">免费注册</a><span>·</span><a href="http://www.chinagrain.cn/rss.asp" target="_blank">RSS源</a><span>·</span><a href="http://wap.chinagrain.cn" target="_blank">手机版</a><span>·</span><a href="http://www.chinagrain.cn/about/ad.html" target="_blank">广告服务</a><span>·</span><a href="http://www.chinagrain.cn/about/service.html" target="_blank">服务介绍</a><span>·</span><a href="http://www.chinagrain.cn/about/tougao.html" target="_blank">投稿中心</a><span>·</span><a onclick="javascript:window.external.AddFavorite('http://www.chinagrain.cn','中国粮油信息网')" href="http://www.chinagrain.cn">收藏本站</a><span>·</span>
+      <a href="http://www.chinagrain.cn" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.chinagrain.cn/?index=index');"  target="_blank">设为首页</a><span>·</span><span style="margin-right: 10px" >食用油:48963353</span><span style="margin-right: 10px">玉米:60102854</span><span style="margin-right: 10px">QQ群:大豆:52200431</span>
+    </div>
+  </div> 
+  
+  <div class="container">
+  
+   <div class="clearf" style="height:96px;">
+      <a href="http://www.chinagrain.cn" class="logo fl"><img src="http://www.chinagrain.cn/liangyou/images/logo.jpg" width="232" height="57"></a>
+      <form name="hyformnew" id="hyformnew" onsubmit="return check();" method="get" target="_blank" class="searchBlank fl">      
+      <div class="selectDiv fl sim-select">
+        <select style="display: none;" name="stype" id="stype" autocomplete="off">
+				<option value="行业资讯" selected="selected">行业资讯</option>
+			    <option value="交易供应">交易供应</option>
+				<option value="交易求购">交易求购</option>
+				<option value="交易招商">交易招商</option>
+			    <option value="商情中心">商情中心</option>
+			    <option value="人才中心">人才中心</option>
+			    
+		    </select>
+        <h3>行业资讯</h3>
+        <div class="v-line"></div>
+        <div class="sim-ul-flt" style="width: 72px;">
+          <div class="sim-ul-bg"></div>
+            <ul>
+			<li>行业资讯</li>	
+             <li>交易供应</li>
+			 <li>交易求购</li>
+			 <li>交易招商</li>
+             <li>商情中心</li>
+			 <li>人才中心</li>
+             
+           </ul>
+         </div>
+         <i class="arrow-se"></i>
+         <span class="line-m"></span>
+	      </div>
+        <input id="word" size="40" value="" name="word">
+        <div class="submit-img">
+         <input id="submit" type="image" name="Submit" src="http://www.chinagrain.cn/liangyou/images/btnSub.gif">
+        </div>
+        <input id="field" type="hidden" value="title" name="field">
+		    <input id="class" type="hidden" value="供应信息:供应信息" name="class"> 
+        <input type="hidden" name="ind">
+        <input type="hidden" name="address">
+        <input type="hidden" value="2" name="dt"> 
+      </form> 
+<script>
+var aaaa='行业资讯';
+ $(function(){
+   $('.sim-select h3,.arrow-se').click(function(){
+	   $(".sim-ul-flt ul").slideToggle();
+	   })
+   $(".sim-ul-flt ul li").click(function(){
+	   $(this).parent().slideUp();
+	   $(".sim-select h3").html($(this).text());
+	   aaaa=$(this).text();
+	   })   	 
+	 })
+	 function check(){
+    var v=$("#word").val();
+	if (v.substring(0,3) =="请输入" || v== null || v == "")
+	{
+		alert("请输入查询内容！");
+		return false;
+	}
+	if(v.length>50)  {
+     alert("输入关键词超出字数限制，你最多可以输入 50 字！");
+     return false;
+    }
+	if(aaaa == '交易中心')
+    {
+    location.href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------"+v+".htm";
+	return false;
+    }else if(aaaa == '交易供应'){
+	 location.href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------"+v+".htm?type=0";
+	return false;
+	}else if(aaaa == '交易求购'){
+	 location.href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------"+v+".htm?type=1";
+	return false;
+	}else if(aaaa == '交易招商'){
+	 location.href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------"+v+".htm?type=2";
+	return false;
+	}
+   else if(aaaa == '供应信息')
+   {
+    location.href="http://www.chinagrain.cn/supply/?q="+v;
+	return false;
+   }
+    else if(aaaa == '商情中心')
+   {
+    location.href="http://www.chinagrain.cn/supply/?q="+v;
+	return false;
+   }
+   else if(aaaa == '人才中心')
+   {
+    location.href="http://www.chinagrain.cn/job/?q="+v;
+	return false;
+   }
+   else if(aaaa=='企业名录'){
+   location.href="http://www.chinagrain.cn/company/?q="+v;
+   return false;
+   }else if(aaaa == '产品名录'){
+   location.href="http://www.chinagrain.cn/product/?q="+v;
+   return false;
+   }
+   else if(aaaa == '求购信息')
+  {
+   location.href="http://www.chinagrain.cn/buy/?q="+v;
+   return false;
+   }
+   else if(aaaa == '合作信息')
+  {
+   location.href="http://www.chinagrain.cn/Cooperation/?q="+v;
+   return false;
+   }
+   else if(aaaa == '行业资讯')
+  {
+   location.href="http://www.chinagrain.cn/news/?key="+v;
+   return false;
+   }
+   else if(aaaa == '其他搜索')
+   {
+   location.href="http://so.chinagrain.cn/cse/search?s=5365816506851693444&ie=utf8&q="+encodeURI(v)+"&submit=&field=title";
+   return false;
+   }
+	return false;
+}
+
+</script>
+	 <div class="right-btn right-login">
+        <a href="http://my.chinagrain.cn/jinnong/Liangyouregpage.htm" target="_blank"><img src="http://www.chinagrain.cn/liangyou/images/register.png" width="40" height="40"></a><br>
+        <a href="http://my.chinagrain.cn/jinnong/Liangyouregpage.htm" target="_blank">免费注册</a>        
+      </div>
+      <div class="m-right-line"></div>
+      <div class="right-btn right-login">
+        <a href="http://my.chinagrain.cn/jinnong/a/login" target="_blank"><img src="http://www.chinagrain.cn/liangyou/images/login.png" width="40" height="40"></a></br>
+        <a href="http://my.chinagrain.cn/jinnong/a/login" target="_blank">用户登录</a>        
+      </div>
+      <div class="m-right-line"></div>
+      <div class="right-btn right-app">
+        <a href="http://www.chinagrain.cn/about/app.html" target="_blank"><img src="http://www.chinagrain.cn/liangyou/images/app.png" width="40" height="40"></a></br>
+        <a href="http://www.chinagrain.cn/about/app.html" target="_blank">粮信网APP</a>
+      </div>    
+      <div class="m-right-line"></div>      
+      <div class="right-btn right-fert-center">
+        <a href="https://biz.chinagrain.cn/" target="_blank"><img src="http://www.chinagrain.cn/liangyou/images/cart.png" width="40" height="40"></a><br>
+        <a href="https://biz.chinagrain.cn/" target="_blank">买卖招商</a>
+      </div> 
+      </div>
+      
+      
+      <div class="menu-bar">
+        <div class="menu-bar-titl">粮<br/>信</div>
+        <div class="menu-bar-block menu-bar-block-l">
+          <a href="http://www.chinagrain.cn/news/" target="_blank">资讯</a><a href="http://www.chinagrain.cn/analytics/" target="_blank">分析</a><a href="http://www.chinagrain.cn/market/" target="_blank">行情</a><a href="http://www.chinagrain.cn/report/">报告</a><a href="http://www.chinagrain.cn/inter/">国际</a><a href="http://www.chinagrain.cn/futures/">期货</a><br />
+          <a href="http://www.chinagrain.cn/fair/" target="_blank">展会</a><a href="http://www.chinagrain.cn/stat/" target="_blank">统计</a><a href="http://www.chinagrain.cn/weather/" target="_blank">气象</a><a href="http://www.chinagrain.cn/standard/" target="_blank">标准</a><a href="http://www.chinagrain.cn/gov/" target="_blank">政策</a><a href="http://www.chinagrain.cn/companynews/" target="_blank">企业</a>
+        </div>
+        <div class="menu-bar-titl">商机</div>
+        <div class="menu-bar-block menu-bar-block-l">
+		<a href="http://biz.chinagrain.cn/lyindexpc.htm" target="_blank">交易</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=0" target="_blank">供应</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=1" target="_blank">求购</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=2" target="_blank">招商</a>
+          <br>
+          <a href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E8%B1%86%E7%B1%BB%E4%BD%9C%E7%89%A9-%E9%BB%84%E8%B1%86-----.htm" target="_blank">大豆</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E8%B0%B7%E7%B1%BB%E4%BD%9C%E7%89%A9-%E7%8E%89%E7%B1%B3-----.htm?type=&isvip=&personreal=&companyreal=" target="_blank">玉米</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E8%B0%B7%E7%B1%BB%E4%BD%9C%E7%89%A9-%E5%B0%8F%E9%BA%A6-----.htm" target="_blank">小麦</a><a href="https://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E8%B0%B7%E7%B1%BB%E4%BD%9C%E7%89%A9-%E5%A4%A7%E7%B1%B3-----.htm?type=&isvip=&personreal=&companyreal=" target="_blank">大米</a>
+
+          <!--<a href="http://biz.chinagrain.cn/lyindexpc.htm" target="_blank">交易</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=0" target="_blank">供应</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=1" target="_blank">求购</a><br />
+          <a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-------.htm?type=2" target="_blank">招商</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E6%9C%BA%E6%A2%B0%E8%AE%BE%E5%A4%87------.htm" target="_blank">机械</a><a href="http://biz.chinagrain.cn/lylistpc/%E5%86%9C%E4%BA%A7%E5%93%81-%E7%B2%AE%E6%B2%B9%E4%BD%9C%E7%89%A9-%E8%B0%B7%E7%B1%BB%E4%BD%9C%E7%89%A9-%E5%B0%8F%E9%BA%A6-----.htm" target="_blank">小麦</a>-->
+        </div>
+        <div class="menu-bar-titl menu-bar-titl-p">资讯</div>
+        <div class="menu-bar-block menu-bar-block-r" style="width:672px">
+		<div class="menu-items-1">
+			<a href="http://www.chinagrain.cn/dadou/" target="_blank" style="color:#f00">大豆</a><a href="http://www.chinagrain.cn/yumi/" target="_blank" style="color:#f00">玉米</a><a href="http://www.chinagrain.cn/xiaomai/" target="_blank" style="color:#f00">小麦</a><a href="http://www.chinagrain.cn/mianhua/" target="_blank">棉花</a><br><a href="http://www.chinagrain.cn/daogu/" target="_blank" style="color:#f00">稻谷</a><a href="http://www.chinagrain.cn/dami/" target="_blank" style="color:#f00">大米</a><a href="http://www.chinagrain.cn/mianfen/" target="_blank" style="color:#f00">面粉</a><a href="http://www.chinagrain.cn/zaliang/" target="_blank">杂粮</a>
+		</div>
+		<div class="menu-items-2"></div>
+		<div class="menu-items-1">
+			<a href="http://www.chinagrain.cn/douyou/" target="_blank" style="color:#f00">豆油</a><a href="http://www.chinagrain.cn/zonglvyou/" target="_blank" style="color:#f00">棕榈油</a><a href="http://www.chinagrain.cn/yumiyou/" target="_blank">玉米油</a><a href="http://www.chinagrain.cn/kuihuazi/" target="_blank">葵花籽油</a><br><a href="http://www.chinagrain.cn/caiyou/" target="_blank" style="color:#f00">菜油</a><a href="http://www.chinagrain.cn/mianyou/" target="_blank" style="color:#f00">棉<span style="margin-left:14px;">油</span></a><a href="http://www.chinagrain.cn/mikangyou/" target="_blank">米糠油</a><a href="http://www.chinagrain.cn/huashengyou/" target="_blank">花<span style="margin-left:7px;margin-right:7px">生</span>油</a>
+		</div>
+		<div class="menu-items-2"></div>
+		<div class="menu-items-1">
+			<a href="http://www.chinagrain.cn/caizi/" target="_blank" style="color:#f00">菜籽</a><a href="http://www.chinagrain.cn/huasheng/" target="_blank" style="color:#f00">花生</a><a href="http://www.chinagrain.cn/mikang/" target="_blank">米<span style="margin-left:13px;">糠</span></a><br><a href="http://www.chinagrain.cn/mianzi/" target="_blank" style="color:#f00">棉籽</a><a href="http://www.chinagrain.cn/zhima/" target="_blank" style="color:#f00">芝麻</a><a href="http://www.chinagrain.cn/kuihuazi/" target="_blank">葵花籽</a>
+		</div>
+		<div class="menu-items-2"></div>
+		<div class="menu-items-1">
+			<a href="http://www.chinagrain.cn/doupo/" target="_blank" style="color:#f00">豆粕</a><a href="http://www.chinagrain.cn/caipo/" target="_blank" style="color:#f00">菜粕</a><a href="http://www.chinagrain.cn/huashengpo/" target="_blank">花生粕</a><br><a href="http://www.chinagrain.cn/mianpo/" target="_blank" style="color:#f00">棉粕</a><a href="http://www.chinagrain.cn/yufen/" target="_blank" style="color:#f00">鱼粉</a><a href="http://www.chinagrain.cn/mikangpo/" target="_blank">米糠粕</a>
+		</div>
+          <!--<a href="http://www.chinagrain.cn/dadou/" target="_blank">大豆</a><a href="http://www.chinagrain.cn/yumi/" target="_blank">玉米</a><a href="http://www.chinagrain.cn/xiaomai/" target="_blank">小麦</a><a href="http://www.chinagrain.cn/mianfen/" target="_blank">面粉</a><a href="http://www.chinagrain.cn/daogu/" target="_blank">稻谷</a><a href="http://www.chinagrain.cn/dami/" target="_blank">大米</a><a href="http://www.chinagrain.cn/caizi/" target="_blank">菜籽</a><a href="http://www.chinagrain.cn/mianzi/" target="_blank">棉籽</a><a href="http://www.chinagrain.cn/mianhua/" target="_blank">棉花</a><a href="http://www.chinagrain.cn/huasheng/" target="_blank">花生</a><a href="http://www.chinagrain.cn/kuihuazi/" target="_blank">葵花籽</a><a href="http://www.chinagrain.cn/mikangpo/" target="_blank">米糠粕</a><a href="http://www.chinagrain.cn/huashengpo/" target="_blank">花生粕</a><a href="http://www.chinagrain.cn/kuihuazi/" target="_blank">葵花籽油</a><br />
+          <a href="http://www.chinagrain.cn/douyou/" target="_blank">豆油</a><a href="http://www.chinagrain.cn/caiyou/" target="_blank">菜油</a><a href="http://www.chinagrain.cn/mianyou/" target="_blank">棉油</a><a href="http://www.chinagrain.cn/doupo/" target="_blank">豆粕</a><a href="http://www.chinagrain.cn/caipo/" target="_blank">菜粕</a><a href="http://www.chinagrain.cn/mianpo/" target="_blank">棉粕</a><a href="http://www.chinagrain.cn/zhima/" target="_blank">芝麻</a><a href="http://www.chinagrain.cn/zaliang/" target="_blank">杂粮</a><a href="http://www.chinagrain.cn/yufen/" target="_blank">鱼粉</a><a href="http://www.chinagrain.cn/mikang/" target="_blank">米糠</a><a href="http://www.chinagrain.cn/zonglvyou/" target="_blank">棕榈油</a><a href="http://www.chinagrain.cn/huashengyou/" target="_blank">花生油</a><a href="http://www.chinagrain.cn/yumiyou/" target="_blank">玉米油</a><a href="http://www.chinagrain.cn/mikangyou/" target="_blank">米<span style="margin:0 7px">糠</span>油</a>-->
+        </div>                       
+      </div> 
+  </div>
+
+  
+  <div class="container clearf">
+    <div class="current-path" style="border-bottom:none;">
+         当前位置：<a href="http://www.chinagrain.cn">首页</a><span class="current-path-1">></span><a href="/news/">行业资讯</a><span class="current-path-1">></span><span>正文</span> 
+    </div>
+   
+    <div class="article-title">
+       <h1>1月30日国际国内金融要闻一览</h1>
+      <div class="clearf arti-origin"> 
+        <div class="fl article-time">
+         <span>2019-01-30 08:17:46</span><span>来源：中国粮油信息网</span><span>作者：粮信网</span><span>编辑：xwbj3</span>
+       </div>
+       <div class="fr">
+         <div class="mirror">
+          <a href="javascript:void(0)" class="mirror-1"></a><span class="mirror-line"></span><a href="javascript:void(0)" class="mirror-2"></a><span class="mirror-line"></span>
+         </div> 
+         <!--此处分享引入文件share.html-->
+          <div class="bdsharebuttonbox"><span style="float:left;font-size:12px;margin-top:22px;color: #666;margin-right:12px;">分享到：</span><!--<a href="#" class="bds_more" data-cmd="more"></a>--><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" onclick="return false;" class="popup_copy" data-cmd="copy" title="复制网址"></a></div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://www.fert.cn/baiduShare/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
+       </div>
+      </div>
+    </div>
+    
+    
+     <!--左边列表开始-->
+    <div class="list-left-side-n">
+      <div class="article-conte-infor">
+        <p align="center">
+	<img alt="" src="http://cms.jinnong.cn/attached/image/20190124/20190124075134_702.jpg" /> 
+	<div align="left">
+		&nbsp;
+	</div>
+	<p style="font-size:16px;">
+		<strong>国际新闻：</strong> 
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;">1、<u><a href="http://www.chinagrain.cn/axfwnh/2019/01/30/5822680715.shtml" target="_blank"><span style="color:#337FE5;">韩国政府拟加大吸引外国直接投资力度</span></a></u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 韩国产业通商资源部29日表示，韩国政府将为在韩外国企业提供更多优惠措施，以吸引更多外国直接投资。</span>
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;"></span>&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;">2、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/0022668354.shtml" target="_blank"><u><span style="color:#337FE5;">美报告称政府</span></u><u><span style="color:#337FE5;">"</span></u><u><span style="color:#337FE5;">停摆</span></u><u><span style="color:#337FE5;">"</span></u><u><span style="color:#337FE5;">造成</span></u><u><span style="color:#337FE5;">110</span></u><u><span style="color:#337FE5;">亿美元经济损失</span></u></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 美国国会预算办公室28日发布的报告显示，2018年12月22日至2019年1月25日的联邦政府部分“停摆”预计导致美国经济损失约110亿美元。</span>
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;"></span>&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;">3、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/0309992307.shtml" target="_blank"><span style="color:#337FE5;">希腊重返资本市场 将发行</span><span style="color:#337FE5;">5</span><span style="color:#337FE5;">年期国债</span></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当地时间28日，希腊总理齐普拉斯在内阁会议上确认，希腊即将发行5年期国债。 </span>
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;"><span style="font-size:16px;"></span></span>&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;"><span style="font-size:16px;">4、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/0507817051.shtml" target="_blank"><u><span style="color:#337FE5;">英国</span></u><u><span style="color:#337FE5;">"</span></u><u><span style="color:#337FE5;">脱欧</span></u><u><span style="color:#337FE5;">"</span></u><u><span style="color:#337FE5;">的三种走向及其经济影响</span></u></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 尽管各怀不同的诉求，英欧双方大多数人还是希望排除“无协议脱欧”的可能性，以避免短期的经济混乱，尽可能降低英国“脱欧”的经济风险。</span></span>
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;"><span style="font-size:16px;"><span style="font-size:16px;"></span></span></span>&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;">5、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/0636174273.shtml" target="_blank"><u><span style="color:#337FE5;">韩媒</span></u><u><span style="color:#337FE5;">:</span></u><u><span style="color:#337FE5;">三星减塑动真格 今年起改用绿色包装</span></u></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 韩媒称，三星电子有限公司27日宣布，从今年起逐步淘汰旗下产品的塑料包装，改用绿色材料。</span>
+	</p>
+	<p style="font-size:16px;">
+		&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<strong><span style="font-size:16px;">国内新闻：</span></strong><strong><br />
+</strong> 
+	</p>
+<span style="line-height:1.5;font-size:16px;">
+	<p>
+		<span style="font-size:16px;">1、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/0937813994.shtml" target="_blank"><u><span style="color:#337FE5;">2018</span></u><u><span style="color:#337FE5;">年工业增加值首超</span></u><u><span style="color:#337FE5;">30</span></u><u><span style="color:#337FE5;">万亿 制造业投资高增速力保高产出</span></u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018年我国工业增加值规模首次超过30万亿，工业继续保持全球第一。</span>
+	</p>
+	<p>
+		<span style="font-size:16px;"></span>&nbsp;
+	</p>
+	<p>
+		<span style="font-size:16px;">2、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/1149107117.shtml" target="_blank"><u><span style="color:#337FE5;">10</span></u><u><span style="color:#337FE5;">部门联合，</span></u><u><span style="color:#337FE5;">24</span></u><u><span style="color:#337FE5;">条重磅政策，消费板块迎来特大利好！</span></u></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 扩消费政策比预期来得更快，内容也更实。</span>
+	</p>
+	<p>
+		&nbsp;
+	</p>
+	<p>
+		<span style="line-height:1.5;"><span style="font-size:16px;">3、<u><a href="http://www.chinagrain.cn/axfwnh/2019/01/30/1348170977.shtml" target="_blank"><span style="color:#337FE5;">安徽推动国企混改 淮南矿业今年或将整体上市</span></a></u></span></span><span style="line-height:1.5;font-size:16px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 作为国资大省，安徽国资改革的每一个动作都备受关注。</span></span>
+	</p>
+</span> 
+	<p>
+		&nbsp;
+	</p>
+	<p style="font-size:13.33px;">
+		<span style="line-height:1.5;font-size:16px;"><span style="font-size:16px;">4、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/1544837320.shtml" target="_blank"><u><span style="color:#337FE5;">2019</span></u><u><span style="color:#337FE5;">宏观经济政策怎么走？</span></u></a></span></span><span style="line-height:1.5;font-size:16px;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018年底的中央经济工作会议提出：2019年是新中国成立70周年，也是中国全面建成小康社会的关键之年，要“创新和完善宏观调控……</span></span>
+	</p>
+	<p style="font-size:13.33px;">
+		&nbsp;
+	</p>
+	<p style="font-size:16px;">
+		<span style="font-size:16px;">5、<a href="http://www.chinagrain.cn/axfwnh/2019/01/30/1655388587.shtml" target="_blank"><u><span style="color:#337FE5;">30</span></u><u><span style="color:#337FE5;">个地区公布</span></u><u><span style="color:#337FE5;">2019</span></u><u><span style="color:#337FE5;">年</span></u><u><span style="color:#337FE5;">GDP</span></u><u><span style="color:#337FE5;">增长目标，其中七成地区下调</span></u></a></span><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 七成地区下调GDP增长目标 幅度在0.5至1个百分点</span>
+	</p>
+	<p>
+		&nbsp;
+	</p>
+      </div> 
+       <!--免责声明-->   
+       <div class="statement">
+            <ol>
+               <li>1,凡本网注明“来源：中国粮油信息网”的所有作品，版权均属于中国粮油信息网，未经本网授权不得转载、摘编或利用其它方式使用上述作品。已经本网授权使用作品的，应在授权范围内使用，并注明“来源：金农网”。违反上述条款，本网将追究其相关法律责任。 </li>
+               <li>2,凡本网注明“来源：XXX（非本网站）”的作品，均转载自其它媒体，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。</li>
+               <li>3,本网所展示的信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。本网站不提供任何保证，并不承担任何法律责任。</li>
+               <li class="red">4,友情提醒：网上交易有风险,请买卖双方谨慎交易,本地最好是见面交易,异地交易请多学、多看、多问、多了解,网上骗术多种多样,谨防上当受骗！</li>
+               <li>5,本网刊载之所有信息，仅供投资者参考，并不构成投资建议。投资者据此操作，风险自担。</li>
+               <li>6,如因作品内容、版权、地址不清稿酬未付和其它问题需要同本网联系的，请在30日内进行，联系方式：编辑部电话：0451-88003358 电子信箱:info#chinagrain.cn(请把#换成@)</li>
+            </ol>
+         </div>    
+    </div>
+    <!--左边列表结束-->
+    <!--右边列表开始-->
+    <div class="list-right-side">
+    	<div class="hot-titl">粮油交易
+<a href="http://my.chinagrain.cn/jinnong/a/login" style="float:right;color:#08a04b;margin-top:16px">发起买卖招商<span style="margin-left:3px">&gt;</span></a>
+</div>
+       <ul class="article-items" id="npricetop10">
+         <li><a href="http://www.chinagrain.cn/u71560/2019/01/11/ly4439147695.shtml" target="_blank"><i class="number-bg-1">供</i><h3>大量供，黄豆</h3></a></li><li><a href="http://www.chinagrain.cn/u838928/2018/08/09/ly3616456215.shtml" target="_blank"><i class="number-bg-1">供</i><h3>大量供应高筋红麦</h3></a></li><li><a href="http://www.chinagrain.cn/u819696/2018/08/04/ly3446380724.shtml" target="_blank"><i class="number-bg-1">供</i><h3>优质大米</h3></a></li><li><a href="http://www.chinagrain.cn/u826901/2018/09/19/ly4410182554.shtml" target="_blank"><i class="number-bg-1">供</i><h3>葵仁粕，蛋白46%以上</h3></a></li><li><a href="http://www.chinagrain.cn/u528837/2018/08/10/ly3643519789.shtml" target="_blank"><i class="number-bg-1">求</i><h3>我处常年收购各种霉变大豆，霉变粕，各种饲</h3></a></li><li><a href="http://www.chinagrain.cn/u833461/2018/06/13/ly0915301265.shtml" target="_blank"><i class="number-bg-1">供</i><h3>风筝牌超级精粉</h3></a></li><li><a href="http://www.chinagrain.cn/u834807/2018/10/27/ly4349639452.shtml" target="_blank"><i class="number-bg-1">招</i><h3>柬埔寨茉莉香米</h3></a></li><li><a href="http://www.chinagrain.cn/u839917/2018/10/12/ly4347891804.shtml" target="_blank"><i class="number-bg-1">供</i><h3>超级稻大米10kg</h3></a></li><li><a href="http://www.chinagrain.cn/u836311/2018/11/09/ly4347315715.shtml" target="_blank"><i class="number-bg-1">供</i><h3>优质豆</h3></a></li><li><a href="http://www.chinagrain.cn/u833830/2018/06/04/ly4514943022.shtml" target="_blank"><i class="number-bg-1">供</i><h3>万年贡有机米东北大米5kg</h3></a></li>       
+       </ul>
+       
+       
+<script>
+var type111 = '';
+$(function() {
+var title1 = document.title;
+if(title1.indexOf("大豆") > -1 || title1.indexOf("黄豆") > -1){
+	type111 = '黄豆';
+}else if(title1.indexOf("豆油") > -1){
+	type111 = '豆油';
+}else if(title1.indexOf("豆粕") > -1){
+	type111 = '豆粕';
+}else if(title1.indexOf("棕榈油") > -1){
+	type111 = '棕榈油';
+}else if(title1.indexOf("菜籽") > -1){
+	type111 = '菜籽';
+}else if(title1.indexOf("菜油") > -1){
+	type111 = '菜油';
+}else if(title1.indexOf("菜粕") > -1){
+	type111 = '菜粕';
+}else if(title1.indexOf("棉籽") > -1){
+	type111 = '棉籽';
+}else if(title1.indexOf("棉油") > -1){
+	type111 = '棉油';
+}else if(title1.indexOf("棉粕") > -1){
+	type111 = '棉粕';
+}else if(title1.indexOf("棉花") > -1){
+	type111 = '棉花';
+}else if(title1.indexOf("米糠油") > -1){
+	type111 = '米糠油';
+}else if(title1.indexOf("米糠油") > -1){
+	type111 = '米糠油';
+}else if(title1.indexOf("米糠粕") > -1){
+	type111 = '米糠粕';
+}else if(title1.indexOf("花生") > -1){
+	type111 = '花生';
+}else if(title1.indexOf("花生油") > -1){
+	type111 = '花生油';
+}else if(title1.indexOf("花生粕") > -1){
+	type111 = '花生粕';
+}else if(title1.indexOf("玉米") > -1){
+	type111 = '玉米';
+}else if(title1.indexOf("玉米油") > -1){
+	type111 = '玉米油';
+}else if(title1.indexOf("淀粉") > -1){
+	type111 = '淀粉';
+}else if(title1.indexOf("小麦") > -1){
+	type111 = '小麦';
+}else if(title1.indexOf("麦") > -1){
+	type111 = '小麦';
+}else if(title1.indexOf("面粉") > -1){
+	type111 = '面粉';
+}else if(title1.indexOf("稻谷") > -1){
+	type111 = '稻谷';
+}else if(title1.indexOf("谷") > -1 || title1.indexOf("稻") > -1){
+	type111 = '稻谷';
+}else if(title1.indexOf("大米") > -1){
+	type111 = '大米';
+}else if(title1.indexOf("芝麻") > -1){
+	type111 = '芝麻';
+}else if(title1.indexOf("杂粮") > -1){
+	type111 = '杂粮';
+}else if(title1.indexOf("葵花籽") > -1 || title1.indexOf("葵花籽油") > -1){
+	type111 = '葵花籽油';
+}
+console.log(type111);
+	if(type111 != null && type111 != ''){
+		nprice();
+	}
+});
+var url1 = location.href;
+if(url1.indexOf("my.chinagrain.cn") > -1){
+	url1 = "getpricepctop10.htm";
+}else if(url1.indexOf("www.chinagrain.cn") > -1){
+	url1 = "http://www.chinagrain.cn/getpricepctop10.htm";
+}else{
+	url1 = "/getpricepctop10.htm";
+}
+function nprice(){
+$.ajax({
+		type: "post",
+		contentType: "application/x-www-form-urlencoded; charset=utf-8", 
+		url: url1,
+		data: {type:type111},
+		success: function(json){
+			json = JSON.parse(json);
+			if('111'== json['stateCode']){
+				$("#npricetop10").empty();
+				$("#npricetop10").html(json['row']);
+			}
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown){
+			console.log("error textStatus:"+textStatus);
+		}
+});
+}
+</script> 
+       <div class="hot-titl">热文TOP10</div>
+       <ul class="article-items">
+         <li><a href="http://www.chinagrain.cn/axfwnh/2019/01/29/4708850740.shtml" target="_blank"><i class="number-bg-1">1</i><h3>国内成品油价格按机制上调</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/29/2432601684.shtml" target="_blank"><i class="number-bg-1">2</i><h3>2019年1月29日粮油早间行情简析</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/29/1041401733.shtml" target="_blank"><i class="number-bg-1">3</i><h3>[独家]回首萧条豆市2019你还站大豆的队吗？</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/29/1413440784.shtml" target="_blank"><i class="number-bg-1">4</i><h3>1月29日国际国内金融要闻一览</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/28/2856116685.shtml" target="_blank"><i class="number-bg-1">5</i><h3>2019年1月28日粮油早间行情简析</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/28/1710724959.shtml" target="_blank"><i class="number-bg-1">6</i><h3>大豆振兴计划即将发布今年大豆或扩产1000万亩</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/28/4027949678.shtml" target="_blank"><i class="number-bg-1">7</i><h3>【独家】玉米：政策打支撑，看涨势力再度抬头</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/28/1950828365.shtml" target="_blank"><i class="number-bg-1">8</i><h3>1月28日国际国内金融要闻一览</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/27/3545209007.shtml" target="_blank"><i class="number-bg-1">9</i><h3>【独家】19稻谷库存销售底价是多少？　值得关注！</h3></a></li><li><a href="http://www.chinagrain.cn/axfwnh/2019/01/26/1027685487.shtml" target="_blank"><i class="number-bg-1">10</i><h3>【独家】年前油脂市场的末班车来了！</h3></a></li>           
+       </ul>
+      <!--广告两个-->
+        <div>
+        <style>
+.right_a_2017 { position:relative; }
+.remark_ind { position: absolute;right: 0;bottom: 0;padding: 0 5px;
+height: 20px!important; text-align: center;display: inline-block; line-height: 20px;color: #fff;background-color:#000000;  filter:alpha(opacity=30); -moz-opacity:0.7; opacity: 0.7;border-radius: 8px 0 0 0; z-index: 1;background-color:rgba(0,0,0,.3);}
+
+</style>
+<div style="position:fixed;left:50%;top:180px;margin-left:-755px;"><img src="http://www.chinagrain.cn/tuiguang/20160524st/1.gif" width="100" height="340"></div>
+<DIV id=AdZoneRa>
+<DIV id=News_F_Rectangle>
+<div class="right_a_2017">
+<a href="http://www.chinagrain.cn/tuiguang/20171208/index.html" target=_blank style="display:block;"><img src=http://www.chinagrain.cn/tuiguang/20171214/zs.jpg width=300 height=300 alt="稻香龙江招商" board="0"></a>
+<span class="remark_ind">广告</span>
+</div>
+<div class="right_a_2017">
+<a href="http://www.chinagrain.cn/app/" target=_blank style="margin-top:10px;display:block;"><img src=http://www.chinagrain.cn/app/liangxinapp.jpg width=300 height=300 alt="中国粮油信息网手机APP" board="0" ></a>
+<span class="remark_ind">广告</span>
+</div>
+</DIV>
+</DIV>
+ 
+        </div>
+    </div>
+    <!--右边列表结束--> 
+  </div>
+  <div class="clearf arti-origin-new"> 
+      <div class="container">  
+        <div class="fl article-time">
+          <h6 class="top-titl-fixed">1月30日国际国内金融要闻一览</h6>
+       </div>
+       <div class="fr" style="margin-top: 7px;">
+         <div class="mirror">
+          <a href="javascript:void(0)" class="mirror-1"></a><span class="mirror-line"></span><a href="javascript:void(0)" class="mirror-2"></a><span class="mirror-line"></span>
+         </div> 
+          <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1521100460091"><span style="float:left;font-size:12px;margin-top:22px;color: #666;margin-right:12px;">分享到：</span><!--<a href="#" class="bds_more" data-cmd="more"></a>--><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" onclick="return false;" class="popup_copy" data-cmd="copy" title="复制网址"></a></div>
+		 <script>
+ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+       </div>
+      </div>
+     </div> 
+<script>
+$(function(){
+	$(".mirror-1").click(function(){
+		$(".article-conte-infor p").css('font-size','22px');
+		$(".article-conte-infor p").css('line-height','44px');
+		})
+    $(".mirror-2").click(function(){
+		$(".article-conte-infor p").css('font-size','18px');
+		$(".article-conte-infor p").css('line-height','34px');
+		})
+
+	$(window).scroll(function(){
+	var Ling = $(document).scrollTop();
+	var Height = $(".list-left-side-n").offset().top;		
+		if( Ling > Height ){ 
+			$(".arti-origin-new").slideDown();
+			}else{
+			 $(".arti-origin-new").css('display','none');	
+				}
+		})
+	})
+</script>
+<script type="text/javascript">
+var flag='0';
+function a(){
+if(flag=='0'){
+$(".select-group-content").attr("style","display: block;");
+flag='1';
+}else if(flag=='1'){
+$(".select-group-content").attr("style","display: none;");
+flag='0'
+}
+}
+</script>
+
+  <div class="container footer-box clearf">
+    <div class="footer-box-top">
+     <i class="footer-box-1 fl"></i>
+     <div class="footer-box-2 fl">
+       <p>入网咨询电话：</p>
+       <p>0451-88001128<span style="margin:0 10px;"></span>88001138</p>
+     </div>
+     <div class="line-b fl"></div>
+     <i class="footer-box-4 fl"></i>
+     <div class="footer-box-5 fl">
+       <p>本站中文域名：</p>
+       <p>中国粮油信息网.com 中国粮油信息网.中国</p>
+     </div>
+     <div class="line-b fl"></div>  
+     <i class="footer-box-6 fl"></i>
+     <div class="footer-box-7 fl">
+       <p>在线咨询：</p>
+       <p>投诉反馈：</p>
+     </div>   
+     <div class="footer-box-8 fl">
+       <p>
+         
+          <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1051418430&amp;site=qq&amp;menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:1051418430:51" alt="点击这里给我发消息" title="点击这里给我发消息">
+         </a>
+		  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1298708&amp;site=qq&amp;menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:1298708:51" alt="点击这里给我发消息" title="点击这里给我发消息">
+          </a>
+        </p>
+       <p><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=232325&amp;site=qq&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:232325:51" alt="点击这里给我发消息" title="点击这里给我发消息"></a></p>
+     </div>  
+    </div> 
+    <div class="footer-box-bottom">
+       <p class="footer-box-bottom-1">
+         <a href="http://www.chinagrain.cn/about/about.html" target="_blank">网站简介</a>|<a href="http://www.chinagrain.cn/about/service.html" target="_blank">服务介绍</a>|<a href="http://www.chinagrain.cn/about/fwxy.html" target="_blank">服务协议</a>|<a href="http://www.chinagrain.cn/about/ad.html" target="_blank">广告服务</a>|<a href="http://www.chinagrain.cn/about/tougao.html" target="_blank">投稿中心</a>|<a href="http://www.chinagrain.cn/about/law.html" target="_blank">法律声明</a>|<a href="http://www.chinagrain.cn/about/copyright.html" target="_blank">版权投诉</a>|<a href="http://www.chinagrain.cn/sitemap.xml" target="_blank">Sitemap</a>|<a href="http://www.chinagrain.cn/about/link.html" target="_blank">友情链接</a>|<a href="http://www.chinagrain.cn/about/contact.html" target="_blank">联系我们</a> 
+       </p>
+       <p class="footer-box-bottom-2">Copyright <span style="font-family:'微软雅黑';">©</span> 2002 - 2018 中国粮油信息网. All Rights Reserved.  中国粮油信息网 保留所有权利 未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。</p>
+       <p class="footer-box-bottom-2">《中华人民共和国增值电信业务经营许可证》编号:黑B2-20060616号   哈公网监备2301001147</p>
+       <a href="javascript:void(0)"  target="_self" class="select-group">
+          <p>金农网群</p> 
+          <div class="line-right-select"></div>
+          <i class="arrow-bottom"></i>
+       </a>
+       <div class="select-group-content">
+          <a href="https://www.jinnong.cn" target="_blank">金农网</a> 
+          <a href="http://www.agrichem.cn/" target="_blank">农药</a> 
+          <a href="https://www.fert.cn" target="_blank">化肥</a> 
+          <a href="http://www.seedinfo.cn" target="_blank">种子</a> 
+          <a href="http://www.nyjx.cn" target="_blank">农机</a> 
+          <a href="http://www.chinagrain.cn" target="_blank">粮油</a> 
+          <a href="http://www.chinafarming.com" target="_blank">畜牧</a> 
+          <a href="http://www.cgin.cn" target="_blank">园艺</a> 
+          <a href="http://www.cfvin.com" target="_blank">果蔬</a> 
+          <a href="http://www.aquainfo.cn" target="_blank">水产</a> 
+          <a href="http://www.richagri.com" target="_blank">富农网</a> 
+       </div>
+    </div>       
+  </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.bai"+"du.com/hm.js?ed9ce5b5e7eac7ef67080e8491208574";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.bai'+'du.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?b16743da426ed19cdd256d19e928cd7e":"https://jspassport.ssl.qhimg.com/11.0.1.js?b16743da426ed19cdd256d19e928cd7e";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<script>
+checkuser();
+function checkuser(){
+	var str = location.pathname;
+	if(location.href.indexOf('bxfw') > -1){
+		str = str.substring(str.indexOf('/')+1);
+		str = str.substring(0,str.indexOf('/'));
+		str = str.replace('bxfw','');
+		$.ajax({
+				type: "post",
+				contentType: "application/x-www-form-urlencoded; charset=utf-8", 
+				url: "http://www.chinagrain.cn/20181220checkuser.htm",
+				data: {uid:str},
+				success: function(json){
+					json = JSON.parse(json);
+					if(json['flag'] == '2'){
+						location.href="http://www.chinagrain.cn";
+					}
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown){
+					console.log("error textStatus:"+textStatus);
+				}
+		});
+	}else if(location.href.indexOf('LYhtml') > -1){
+		str = str.substring(str.indexOf('/')+1);
+		str = str.substring(str.indexOf('/')+1);
+		str = str.substring(0,str.indexOf('/'));
+		str = str.replace('u','');
+		$.ajax({
+				type: "post",
+				contentType: "application/x-www-form-urlencoded; charset=utf-8", 
+				url: "http://www.chinagrain.cn/20181220checkuser.htm",
+				data: {uid:str},
+				success: function(json){
+					json = JSON.parse(json);
+					if(json['flag'] == '2'){
+						location.href="http://www.chinagrain.cn";
+					}
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown){
+					console.log("error textStatus:"+textStatus);
+				}
+		});
+	}
+}
+
+</script>
+</body>
+</html>

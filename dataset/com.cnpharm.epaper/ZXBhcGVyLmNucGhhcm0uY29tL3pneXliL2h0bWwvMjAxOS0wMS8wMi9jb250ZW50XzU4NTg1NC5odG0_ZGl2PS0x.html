@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="315,152,315,136,315,43,3,43,3,136,3,152,3,439,82,439,82,183,232,183,232,439,315,439" shape="polygon" href="./content_585854.htm?div=-1"><Area coords="323,34,397,34,397,233,323,233" shape="polygon" href="content_585856.htm?div=-1"><Area coords="323,242,397,242,397,392,323,392" shape="polygon" href="content_585857.htm?div=-1"><Area coords="323,401,397,401,397,553,323,553" shape="polygon" href="content_585858.htm?div=-1"><Area coords="3,457,316,457,316,543,3,543" shape="polygon" href="content_585859.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/02/04/zgyyb2019010204_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            04版:产经观察
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/02/04/zgyyb2019010204.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_81.htm"> 上一版</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_35.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>“4+7”带量采购开启仿制药降价之路</h1>
+<h2>“聚焦带量采购背景下的仿制药发展”系列报道之一</h2>
+<h4></h4>
+        
+        <div class="c_c">
+          
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近段时间以来，“4+7”城市带量采购试点始终是医药行业的火热话题。25个中选品种中有22个为通过一致性评价的仿制药；与试点城市2017年同种药品最低采购价相比，药价平均降幅达52%，最高降幅达96%……这一结果让整个医药行业极为关注。2018年12月26日，恒瑞医药、齐鲁制药在安徽、陕西两省主动申请下调其药品采购价格，下调后的价格甚至比“4+7”城市带量采购中选价更低。很多企业对仿制药下一步该如何发展展开讨论。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;我国是仿制药生产大国，在医保资金紧张的现状下，发展高质量仿制药符合我国的国情。为此，本版从本期开始，邀请业内资深人士，从多角度分析带量采购对仿制药价格及行业发展可能产生的影响，引导企业更好地降成本、提效率，研发高端仿制药，满足临床需求，促进仿制药行业健康发展。敬请关注。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;魏利军&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“4+7”城市带量采购试点预中标结果一经公示，两天内资本市场A股、港股医药板块整体缩水约3400亿元，成为资金流出最大的板块。有业内人士发出疑问：“4+7”城市带量采购试点或将开启药品降价之路，仿制药未来应如何发展？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;笔者认为，综观国际国内市场，仿制药价格下降是大趋势，但发展仿制药依然大有可为。通过仿制药质量和疗效一致性评价的品种，面临的只是降价，但进入国家战略采购，可以大大节省销售成本，实现薄利多销。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;仿制药降价是国际趋势</p><p>&nbsp;&nbsp;&nbsp;&nbsp;药品价格关系民生，也关系国家财政负担。近年来，很多国家都在想办法降低药价。原研药议价、促进仿制药替代原研药、促进仿制药竞争等，都是国际主流做法，且近10年来效果明显，各发达国家或地区仿制药价格都有不同程度下降。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美国是全球第一大仿制药市场，市场规模达700亿美元；与此同时，美国也是全球仿制药替代率最高、替代速度最快的国家。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为了让仿制药第一时间替代原研药，美国在《药品价格竞争与专利补偿法》中授予首仿药180天的市场独占期；为了降低仿制药价格，美国食品药品管理局（FDA）大量批准仿制药，仅2017年就批准近900个ANDA文号。此外，FDA还在推行仿制药全球一体化，进而推动仿制药竞争，以进一步降低药价。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;得益于FDA持续不断地推进仿制药替代原研药，美国仿制药可在1~2年内抢占原研药70%以上的处方量，有的产品甚至超过90%。氯吡格雷是最典型的案例。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;氯吡格雷是美国处方量最大的抗血栓药。2012年5月，原研药专利失效，Apotex公司仿制药上市，原研药在两年内失去了95%的市场。价格方面，据Drug.com数据显示，75mg氯吡格雷仿制药最低售价为0.1美元/片，原研药为6.81美元/片，仿制药价格只有原研药的1.5%。从处方量来看，原研药专利到期后，氯吡格雷的总处方量还有小幅增长，但年销售额却从70亿美元下降到1.3亿美元。氯吡格雷的降价充分说明了美国仿制药价格战的残酷性。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;日本是全球第五大仿制药市场，但日本几乎是仿制药替代率最低的发达国家，由于没有仿制药市场独占期机制，日本仿制药替代原研药的速度比较慢。尽管如此，近10年来，日本在仿制药替代原研药方面也取得了突出成就，2017年仿制药替代率已超过70%。虽然日本的仿制药替代率还不高，但药品价格却得到了很好的控制，日本相关部门通过制定药物价格目录，促进药品价格下降。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美国仿制药处方量占比超过90%，销售额占比不足20%；日本仿制药处方量占比约30%，销售额占比约10%。美国和日本是发达国家的两个极端，但日本正在迅速朝着美国的方向发展。过去10年，日本出台了一系列促进仿制药发展的政策，效果非常明显。相信未来10年内，日本的仿制药替代率将达到90%。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;其他发达国家的仿制药替代率和替代速度介于日本与美国之间，其中德国与美国最为接近。在众多发达国家中，英国仿制药销售额占比最高，超过25%，但近年来下降趋势明显；其次是加拿大，其仿制药销售额占比长期维持在24%左右，由于近年来加拿大推出一系列政策，仿制药销售额占比大幅下降，价格指数下降幅度在发达国家中最大。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;企业应以积极心态面对</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在我国，虽然国家层面尚未出具相关数据，但基于笔者的统计，部分品种原研药占有率高达80%。笔者认为，仿制药没有充分替代原研药有两方面原因：一是我国仿制药价格优势有限；二是仿制药质量参差不齐，部分产品不具备替代原研药的基础。而仿制药质量和疗效一致性评价是仿制药替代原研药的基础。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;当前,我国药品市场仿制药销售额占比高达45%左右，高于发达国家水平，究其原因，一是我国仿制药没有形成降价机制；二是辅助性用药销量太大，而绝大多数辅助性用药也是仿制药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“4+7”城市带量采购试点使中选药品价格平均下降52%，或将开启仿制药降价之路，但企业也不必因此恐慌。因为国家组织的带量采购可以节省大量药品流通环节的成本。据了解，以往仿制药营销费用再加上经销商的层层加价，仿制药企业的销售费用大多要占到营收的60%，有的企业甚至高达70%以上。国家组织带量采购，将节约大部分营销费用，因此，很多企业敢以超低的价格竞标。这同时也说明企业报价尚存利润，仿制药仍存降价空间。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;仿制药质量和疗效一致性评价既是仿制药替代原研药的基础，也是价格竞争的基础。价格战的角逐只是优胜劣汰，只要生产成本足够低，质量足够好，商标足够知名，完全有能力在激烈的价格竞争中胜出。因此，仿制药企业要树立积极的心态，做好战略布局，精准立项，力争在市场竞争中脱颖而出。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，我国医改政策主要围绕以下工作展开：解决药品短缺问题，控制医疗费用支出，解决看病难看病贵问题；促进药品生产从“市场需求为导向”到“临床需求为导向”转型；医疗保障机制正在“从无到有”向“从有到优”方向转变。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;结合医改政策，笔者认为，仿制药企业应在以下几方面发力：一是生产有临床需求、不可替代的品种，如氢氯噻嗪、地西泮、多巴丝肼等；二是在产品布局时，可把有临床优势的缓控释制剂、辅助治疗药物、二线治疗药物考虑在内（此辅助性药物指获得美国FDA批准用于并发症治疗或辅助治疗的药物，如帕金森病用药匹莫范色林、沙非酰胺，癫痫用药布瓦西坦等）。</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_35.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+<a class=preart href="content_585856.htm?div=-1">下一篇</a></div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近段时间以来，“4+7”城市带量采购试点始终是医药行业的火热话题。25个中选品种中有22个为通过一致性评价的仿制药；与试点城市2017年同种药品最低采购价相比，药价平均降幅达52%，最高降幅达96%……这一结果让整个医药行业极为关注。2018年12月26日，恒瑞医药、齐鲁制药在安徽、陕西两省主动申请下调其药品采购价格，下调后的价格甚至比“4+7”城市带量采购中选价更低。很多企业对仿制药下一步该如何发展展开讨论。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;我国是仿制药生产大国，在医保资金紧张的现状下，发展高质量仿制药符合我国的国情。为此，本版从本期开始，邀请业内资深人士，从多角度分析带量采购对仿制药价格及行业发展可能产生的影响，引导企业更好地降成本、提效率，研发高端仿制药，满足临床需求，促进仿制药行业健康发展。敬请关注。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;魏利军&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“4+7”城市带量采购试点预中标结果一经公示，两天内资本市场A股、港股医药板块整体缩水约3400亿元，成为资金流出最大的板块。有业内人士发出疑问：“4+7”城市带量采购试点或将开启药品降价之路，仿制药未来应如何发展？</p><p>&nbsp;&nbsp;&nbsp;&nbsp;笔者认为，综观国际国内市场，仿制药价格下降是大趋势，但发展仿制药依然大有可为。通过仿制药质量和疗效一致性评价的品种，面临的只是降价，但进入国家战略采购，可以大大节省销售成本，实现薄利多销。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;仿制药降价是国际趋势</p><p>&nbsp;&nbsp;&nbsp;&nbsp;药品价格关系民生，也关系国家财政负担。近年来，很多国家都在想办法降低药价。原研药议价、促进仿制药替代原研药、促进仿制药竞争等，都是国际主流做法，且近10年来效果明显，各发达国家或地区仿制药价格都有不同程度下降。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美国是全球第一大仿制药市场，市场规模达700亿美元；与此同时，美国也是全球仿制药替代率最高、替代速度最快的国家。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为了让仿制药第一时间替代原研药，美国在《药品价格竞争与专利补偿法》中授予首仿药180天的市场独占期；为了降低仿制药价格，美国食品药品管理局（FDA）大量批准仿制药，仅2017年就批准近900个ANDA文号。此外，FDA还在推行仿制药全球一体化，进而推动仿制药竞争，以进一步降低药价。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;得益于FDA持续不断地推进仿制药替代原研药，美国仿制药可在1~2年内抢占原研药70%以上的处方量，有的产品甚至超过90%。氯吡格雷是最典型的案例。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;氯吡格雷是美国处方量最大的抗血栓药。2012年5月，原研药专利失效，Apotex公司仿制药上市，原研药在两年内失去了95%的市场。价格方面，据Drug.com数据显示，75mg氯吡格雷仿制药最低售价为0.1美元/片，原研药为6.81美元/片，仿制药价格只有原研药的1.5%。从处方量来看，原研药专利到期后，氯吡格雷的总处方量还有小幅增长，但年销售额却从70亿美元下降到1.3亿美元。氯吡格雷的降价充分说明了美国仿制药价格战的残酷性。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;日本是全球第五大仿制药市场，但日本几乎是仿制药替代率最低的发达国家，由于没有仿制药市场独占期机制，日本仿制药替代原研药的速度比较慢。尽管如此，近10年来，日本在仿制药替代原研药方面也取得了突出成就，2017年仿制药替代率已超过70%。虽然日本的仿制药替代率还不高，但药品价格却得到了很好的控制，日本相关部门通过制定药物价格目录，促进药品价格下降。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美国仿制药处方量占比超过90%，销售额占比不足20%；日本仿制药处方量占比约30%，销售额占比约10%。美国和日本是发达国家的两个极端，但日本正在迅速朝着美国的方向发展。过去10年，日本出台了一系列促进仿制药发展的政策，效果非常明显。相信未来10年内，日本的仿制药替代率将达到90%。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;其他发达国家的仿制药替代率和替代速度介于日本与美国之间，其中德国与美国最为接近。在众多发达国家中，英国仿制药销售额占比最高，超过25%，但近年来下降趋势明显；其次是加拿大，其仿制药销售额占比长期维持在24%左右，由于近年来加拿大推出一系列政策，仿制药销售额占比大幅下降，价格指数下降幅度在发达国家中最大。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;企业应以积极心态面对</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在我国，虽然国家层面尚未出具相关数据，但基于笔者的统计，部分品种原研药占有率高达80%。笔者认为，仿制药没有充分替代原研药有两方面原因：一是我国仿制药价格优势有限；二是仿制药质量参差不齐，部分产品不具备替代原研药的基础。而仿制药质量和疗效一致性评价是仿制药替代原研药的基础。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;当前,我国药品市场仿制药销售额占比高达45%左右，高于发达国家水平，究其原因，一是我国仿制药没有形成降价机制；二是辅助性用药销量太大，而绝大多数辅助性用药也是仿制药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“4+7”城市带量采购试点使中选药品价格平均下降52%，或将开启仿制药降价之路，但企业也不必因此恐慌。因为国家组织的带量采购可以节省大量药品流通环节的成本。据了解，以往仿制药营销费用再加上经销商的层层加价，仿制药企业的销售费用大多要占到营收的60%，有的企业甚至高达70%以上。国家组织带量采购，将节约大部分营销费用，因此，很多企业敢以超低的价格竞标。这同时也说明企业报价尚存利润，仿制药仍存降价空间。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;仿制药质量和疗效一致性评价既是仿制药替代原研药的基础，也是价格竞争的基础。价格战的角逐只是优胜劣汰，只要生产成本足够低，质量足够好，商标足够知名，完全有能力在激烈的价格竞争中胜出。因此，仿制药企业要树立积极的心态，做好战略布局，精准立项，力争在市场竞争中脱颖而出。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，我国医改政策主要围绕以下工作展开：解决药品短缺问题，控制医疗费用支出，解决看病难看病贵问题；促进药品生产从“市场需求为导向”到“临床需求为导向”转型；医疗保障机制正在“从无到有”向“从有到优”方向转变。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;结合医改政策，笔者认为，仿制药企业应在以下几方面发力：一是生产有临床需求、不可替代的品种，如氢氯噻嗪、地西泮、多巴丝肼等；二是在产品布局时，可把有临床优势的缓控释制剂、辅助治疗药物、二线治疗药物考虑在内（此辅助性药物指获得美国FDA批准用于并发症治疗或辅助治疗的药物，如帕金森病用药匹莫范色林、沙非酰胺，癫痫用药布瓦西坦等）。</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585854.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_1-04>“4+7”带量采购开启仿制药降价之路</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585856.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_2-04>药审中心公示36个优先审评品种</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_585857.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_3-04>阿扎那韦等7个过期 专利药尚无仿制申请</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585858.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_4-04>禁止网络销售处方药</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_585859.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_5-04>“4+7”带量采购倒逼企业控制成本</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-02
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>“4+7”带量采购开启仿制药降价之路
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle>“聚焦带量采购背景下的仿制药发展”系列报道之一</founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/02/04/zgyyb2019010204_b.jpg</founder-pagepicurl>
+<founder-pagenum>04</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>35</founder-nodeid> /mpproperty-->
+
+

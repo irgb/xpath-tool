@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有 - 智东西</title>
+    <meta name="keywords" content="英特尔">
+    <meta name="description" content="2019CES英特尔大打出手，连抛6款芯片，10nm全面出击！">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/WechatIMG8-1.jpeg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="寓扬" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/yyyang" title="由寓扬发布" rel="author">寓扬</a></div>
+                <div class="author-posts">共发表339篇文章</div>
+                <div class="author-desc">笑看智能家居江湖！欢迎爆料、交流，邮箱：yuyang@zhidx.com</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag1">通用</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag1">苹果</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag2">华为</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag2">特斯拉</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/specialtopic/2019ces" rel="category tag">2019CES美国消费电子展</a>  <a href="http://zhidx.com/p/category/specialtopic/2019ces/2019cestopic" rel="category tag">2019CES重磅报道</a>  <a href="http://zhidx.com/p/category/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" rel="category tag">人工智能</a>  <a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a></span><span class="time">2019/01/08 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2019/01/850-2.jpeg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/850-2.jpeg 850w, http://oss.zhidx.com/uploads/2019/01/850-2.jpeg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/850-2.jpeg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong>智东西（公众号：zhidxcom）<br />
+文 | 寓扬</strong></p>
+<p>智东西1月7日拉斯维加斯现场报道，在CES（国际消费类电子产品展览会）正式开幕前，今天英特尔数据中心、客户端、Mobileye负责人分享了英特尔在5G、AI、自动驾驶、数据中心等方面的最新进展，也抛出了系列10纳米芯片新产品。</p>
+<p>今年PC产品也是英特尔CES重点发布的内容，其推出第一款10nm的移动PC平台Ice Lake（冰湖），预览了基于10nm工艺的全新客户端平台Lakefield。</p>
+<p>面向数据中心场景，英特尔推出专门面向5G无线接入和边缘计算网络系统芯片Snow Ridge（雪岭），以及特尔至强可扩展处理器Ice Lake（面向数据中心的冰湖），并且都基于10nm工艺。</p>
+<p>此外，面向云端推理场景，英特尔还推出Nervana神经网络处理器，没错这正是英特尔2016年花了3.5亿美元收购的创企Nervana打造的AI芯片。</p>
+<p>可以看出，PC、AI、5G、数据中心、自动驾驶将会是今年英特尔发力的中心，通过这一系列的创新，来追逐并开发一个价值3000亿美元的巨大市场。</p>
+<h2>一、从以PC为中心到以数据为中心</h2>
+<p>英特尔高级副总裁兼客户端计算事业部总经理 Gregory Bryant谈道，我们正处于一个计算新时代的起点，在这个新时代中从客户端到云、到网络、到边缘，需要彼此之间密切配合；整个世界更加互联，更加依赖于计算的基础架构。</p>
+<p>在这个样的背景下，英特尔也在上演一场自我转型，从以PC为中心的公司转变成以数据为中心的公司。</p>
+<p><img class="size-full wp-image-139705" src="http://oss.zhidx.com/uploads/2019/01/008-1.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/008-1.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/008-1.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/008-1.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>Gregory说，英特尔发现，80%的人还是选择PC作为他们接触、使用和存储数据的首要接触点，因此PC仍然是英特尔接触数据和计算的重要接触点。</p>
+<p>首先针对PC市场，最近英特尔面向台式机，发布了第一批的第九代处理器家族产品酷睿9900k，并取得了11项全球领先和10项世界纪录。<img class="size-full wp-image-139711" src="http://oss.zhidx.com/uploads/2019/01/012.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/012.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/012.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/012.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>在此基础上，今天英特尔又推出六款第九代酷睿处理器芯片产品，这是一个系列家族产品，满足从普通用户到高性能专业人士的需求。</p>
+<h2>二、首发10nm移动PC平台，推雅典娜计划</h2>
+<p>接着，Gregory Bryant展示了新的移动PC平台，第一款10nm的Ice Lake（冰湖）处理器。Ice Lake整合英特尔全新的“Sunny Cove”微架构，没错就是前不久在英特尔“架构日”上推出的，当时英特尔就表明该架构将采用10nm工艺，并将于2019年上市。</p>
+<p><img class="size-full wp-image-139704" src="http://oss.zhidx.com/uploads/2019/01/007-1.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/007-1.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/007-1.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/007-1.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>Ice Lake采用AI加速指令集以及英特尔第11代核心显卡，从而提升图形性能，带来更加丰富的游戏和内容创作体验。</p>
+<p>该平台还支持英特尔Adaptive Sync技术保证平滑的帧速率，可提供1 TFLOP以上的性能；它集成Thunderbolt 3的平台，并支持Wi-Fi 6无线标准，让数据传输、WiFi更快速；同时，它通过DLBoost指令集来加速人工智能的工作负载。</p>
+<p>可以看出Ice Lake是一款更高性能的移动PC平台，戴尔也展示了基于该平台的未来布局，搭载该平台的系列PC设备预计将在2019年假期（圣诞季）推出。</p>
+<p>英特尔还宣布了Project Athena（雅典娜项目）创新计划，它旨在定义一种新型高端笔记本电脑，将优越的性能、超长续航时间、连接性和时尚美观的设计集于一身，首批搭载Project Athena的设备预计将于2019年下半年面世。</p>
+<p>宏碁（Acer）、戴尔、联想、谷歌、三星、华为等都是该计划的合作伙伴。</p>
+<h2>三、将3D封装应用到客户端平台</h2>
+<p>英特尔正在采用混合CPU的架构和3D封装技术，来加速客户端创新。今天，Gregory Bryant预览了全新的客户端平台Lakefield。</p>
+<p><img class="size-full wp-image-139708" src="http://oss.zhidx.com/uploads/2019/01/011.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/011.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/011.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/011.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>该平台采用业界首创的“Foveros”3D封装技术，没错这项3D堆叠技术也是前不久英特尔架构日的重点展示之一，今天则展示了它在Lakefield平台中的应用。</p>
+<p>Lakefield采用5个CPU核心，分别是一个高性能Sunny Cove核心和4个基于英特尔Atom处理器核心，都采用了10nm工艺，具备低功耗、高性能的特征。</p>
+<p>这种混合CPU的架构，可以确保先前采用分离设计的不同IP整合至搭载更小尺寸主板的单一产品中，使得OEM合作伙伴可以设计更加轻薄的产品。预计搭载Lakefield的产品将在2019年下半年投产。</p>
+<p>Gregory还介绍了英特尔与有线电视厂商Comcast的合作，针对下一波千兆及以上的宽带技术，从而为人们提供全新的沉浸式体验，这其中就包括2020年东京奥运会。</p>
+<h2>四、面向推理端推AI芯片</h2>
+<p>在数据中心方面，英特另执行副总裁Navin Shenoy分享道，过去20年间，英特尔不断提升至强可扩展处理器的能力，已经创下95项性能的世界纪录。</p>
+<p><img class="size-full wp-image-139706" src="http://oss.zhidx.com/uploads/2019/01/009.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/009.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/009.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/009.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>他首先宣布，英特尔新一代至强处理器Cascade Lake已经开始出货。Cascade Lake支持英特尔傲腾数据中心级持久内存和英特尔DL Boost，旨在加速人工智能深度学习推理。</p>
+<p>Navin现场介绍了英特尔与阿里巴巴在该方面的合作，将其应用与3D运动员追踪技术，并将应用在2020年的东京奥运会中。该技术从多个标准摄像机中提取训练和比赛中运动员的3D镜头，通过至强放到云上进行非常实时的分析，以便观众对于运动员有实时的观赛体验，并且帮助运动员在训练过程中提升训练绩效。</p>
+<p><img class="size-full wp-image-139700" src="http://oss.zhidx.com/uploads/2019/01/003-4.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/003-4.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/003-4.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/003-4.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>除了云端训练外，他还宣布，推出英特尔Nervana神经网络处理器，面向云端推理场景，旨在帮助那些有高负载需求的企业加快推理速度，Facebook便是合作伙伴之一。</p>
+<p>没错这款芯片，正是由之前英特尔收购公司Nervana打造的AI芯片。</p>
+<h2>五、再推两款10nm数据中心芯片</h2>
+<p>Navin Shenoy称，即将到来的5G，不仅仅是新一代技术，它也是未来创新平台的基石，带来无缝连接、几乎无限的计算。5G在智慧城市、智能工厂、智能家居、自动驾驶、VR/AR领域都会有非常大的应用空间。</p>
+<p>针对这一潜在的需求，英特尔将推出专门面向5G无线接入和边缘计算的网络系统芯片Snow Ridge（雪岭），采用10nm制程工艺。这款网络系统芯片旨在将英特尔的架构引入无线基站领域，并允许更多的计算功能分布在网络边缘。</p>
+<p><img class="size-full wp-image-139699" src="http://oss.zhidx.com/uploads/2019/01/002-2.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/002-2.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/002-2.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/002-2.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>Snow Ridge预计将在2019年下半年面世。</p>
+<p>针对数据中心，英特尔还推出一款基于10nm工艺的英特尔至强处理器Ice Lake，他有望提供更卓越的性能，以及全新硬件增强型安全功能等，预计将于2020年出货。</p>
+<p>一不小心跟前面面向客户端移动PC平台（Ice Lake）重名了。</p>
+<p><img class="size-full wp-image-139701" src="http://oss.zhidx.com/uploads/2019/01/004-1.jpeg" alt="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2019/01/004-1.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/004-1.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2019/01/004-1.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>此外，在自动驾驶领域，英特尔还宣布Mobileye EyeQ5芯片进入量产阶段。</p>
+<h2>结语：10nm全面出击的英特尔</h2>
+<p>此前，英特尔在10nm工艺制程上遇到一些困难，导致10nm量产芯片迟迟未能面世。在2018年12月份的英特尔架构日上，英特尔推出下一代Sunny Cove架构，并直指它将采用10nm工艺，预计将在2019年的新品种上市。</p>
+<p>而今天，英特尔宣布了面向PC、AI、5G、数据中心的系列芯片，推动10nm制程全面开花。</p>
+<p>英特尔中国研究院院长宋继强也告诉智东西，未来一段时间英特尔会主推10nm制程的芯片产品，芯片的性能也并非只受制程工艺影响，还受到封装技术、架构等方面的影响，英特尔会采取最均衡的方案。</p>
+<p>此外，他还透露到，英特尔的7nm工艺已研发布局不下3年，也在路上。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139698'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139698">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="英特尔四大10nm芯片轰向CES！PC/AI/5G/数据中心全都有" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+            <a href="/p/tag/英特尔">英特尔</a>            </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139698">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139698">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

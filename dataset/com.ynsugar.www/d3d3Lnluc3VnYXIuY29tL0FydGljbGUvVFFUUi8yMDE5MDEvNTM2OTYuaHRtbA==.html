@@ -1,0 +1,592 @@
+</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>广西糖业集团收购重组大新制糖有限公司-云南糖网</title>
+<meta name="Keywords" content="中国访问量第一糖网,红糖,黑糖,红糖网,云南红糖,云南糖网,广西糖网,昆明糖网,白糖期货,红糖价格,白糖价格,糖业,最新白糖糖价,昆明糖网">
+<meta name="Description" content="云南糖网-广西糖业集团收购重组大新制糖有限公司" />
+<link href='/Skin/DefaultSkin.css' rel='stylesheet' type='text/css'> 
+
+<script language="JavaScript">
+<!--
+//改变图片大小
+function resizepic(thispic)
+{
+if(thispic.width>700) thispic.width=700;
+}
+//无级缩放图片大小
+function bbimg(o)
+{
+  var zoom=parseInt(o.style.zoom, 10)||100;
+  zoom+=event.wheelDelta/12;
+  if (zoom>0) o.style.zoom=zoom+'%';
+  return false;
+}
+-->
+</script>
+</head>
+
+
+<body>
+<script src="/images/i09/xxk.js"></script>
+<script language=javascript>
+function refreshimg(){
+  document.all.checkcode.src='/Inc/CheckCode.asp?'+Math.random();
+}
+function SetFocus()
+{
+if (document.Login.UserName.value=="")
+    document.Login.UserName.focus();
+else
+    document.Login.UserName.select();
+}
+function CheckForm()
+{
+    if(document.Login.UserName.value=="")
+    {
+        alert("请输入用户名！");
+        document.Login.UserName.focus();
+        return false;
+    }
+    if(document.Login.UserPassword.value == "")
+    {
+        alert("请输入密码！");
+        document.Login.UserPassword.focus();
+        return false;
+    }
+}
+</script>
+<script language=javascript>
+function CheckForm()
+{
+  if (document.UserReg.UserName.value==""){
+    alert("请输入用户名！");
+    document.UserReg.UserName.focus();
+    return false;
+  }
+  if (document.UserReg.Password.value==""){
+    alert("请输入密码！");
+    document.UserReg.Password.focus();
+    return false;
+  }
+  if (document.UserReg.PwdConfirm.value==""){
+    alert("请输入确认密码！");
+    document.UserReg.PwdConfirm.focus();
+    return false;
+  }
+  if (document.UserReg.Question.value==""){
+    alert("请输入密码提示问题！");
+    document.UserReg.Question.focus();
+    return false;
+  }
+  if (document.UserReg.Answer.value==""){
+    alert("请输入问题答案！");
+    document.UserReg.Answer.focus();
+    return false;
+  }
+  if (document.UserReg.Email.value==""){
+    alert("请输入Email！");
+    document.UserReg.Email.focus();
+    return false;
+  }
+  document.UserReg.Country.value=frm1.document.regionform.Country.value;
+  document.UserReg.Province.value=frm1.document.regionform.Province.value;
+  document.UserReg.City.value=frm1.document.regionform.City.value;
+}
+function checkuser(inputname){
+    var chedkurl = '../inc/checklist.asp';
+    var CheckDOM = new ActiveXObject("Microsoft.XMLDOM");
+    CheckDOM.async=false;
+    var p = CheckDOM.createProcessingInstruction('xml','version=\"1.0\" encoding=\"gb2312\"'); 
+    CheckDOM.appendChild(p); 
+    var CheckRoot = CheckDOM.createElement('root');
+    var Cfield = CheckDOM.createNode(1,'text',''); 
+    Cfield.text = "ChongFuUserCheck";
+    CheckRoot.appendChild(Cfield);
+    Cfield = CheckDOM.createNode(1,'inputname',''); 
+    Cfield.text = inputname;
+    CheckRoot.appendChild(Cfield);
+    CheckDOM.appendChild(CheckRoot);
+    var CHttp = getHTTPObject();
+    CHttp.open('POST',chedkurl,true);
+    CHttp.onreadystatechange = function () 
+    {
+        if(CHttp.readyState == 4 && CHttp.status==200){
+            if(CHttp.responseText == '1'){
+                alert("您填写的会员名已被使用！");
+                $('nameruler').innerHTML="<font color='red'>您注册的会员名已被使用，请重新填写。</font>";
+                Field.activate('UserName');
+            }else if(CHttp.responseText == '2'){
+                alert("您填写的会员名含有非法字符！");
+                $('nameruler').innerHTML="<font color='red'>您注册的会员名含有非法字符，请重新填写。</font>";
+                Field.activate('UserName');
+            }else if(CHttp.responseText == '3'){
+                alert("您填写的会员名长度不合！");
+                $('nameruler').innerHTML="<font color='red'>您注册的会员名长度不合，请重新填写。</font>";
+                Field.activate('UserName');
+            }else if(CHttp.responseText == '4'){
+                alert("您填写的会员名已被禁止使用！");
+                $('nameruler').innerHTML="<font color='red'>您注册的会员名被禁止使用，请重新填写。</font>";
+                Field.activate('UserName');
+            }else{
+                $('nameruler').innerHTML="<font color=green>您注册的会员名尚未被使用，可以申请。</font>";
+            }
+        }
+    }
+    CHttp.send(CheckDOM);
+}
+</script>
+<table width="962" height="4" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#009900">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<table width="962" height="90" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="180" align="center" valign="bottom" background="/images/i09/top_bg.jpg"><div id="betaimg"><a href="/GuestBook/Guest_Write.asp"><img src="/images/i09/beta.gif" alt="2009版" border="0" /></a></div>
+    <a href="/"><img src="/images/Logo.gif" alt="云南糖网" width="150" height="61" border="0" /></a></td>
+    <td align="center" valign="top" background="/images/i09/top_bg.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="9"><img src="/images/i09/dl_bg1.jpg" width="9" height="35" /></td>
+        <td align="left" valign="bottom" background="/images/i09/dl_bg2.jpg"><form action="User/User_ChkLogin.asp" method="post" name="login" class="top_form" id="login">
+          <table width="100%" height="20" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="24" valign="bottom"><img src="/images/i09/dl1.gif" width="20" height="20" /></td>
+            <td align="left">用户名：<input name="UserName" type="text" class="top_form_wbk" id="UserName" size="12" />
+密码：<input name="UserPassword" type="password" class="top_form_wbk" id="UserPassword" size="12" />
+验证码：<input name="CheckCode" type="text" class="top_form_wbk" id="CheckCode" size="6" maxlength="6" />
+<img src='/Inc/CheckCode.asp' name="checkcode" width=40 height="15" class="code_img" id='checkcode' style='border: 1px solid #ffffff' /> <a href="javascript:refreshimg()" class="a_hui">看不清楚?</a>
+<input name="Submit2" type="image" class="code_img" src="/images/i09/dl2.gif" />
+<a href="/Reg/User_Reg.asp"><img src="/images/i09/dl3.gif" width="87" height="20" border="0" class="code_img" /><input name="ComeUrl" type="hidden" id="ComeUrl" value="/user"></a>
+</td>
+            <td width="80" align="right" valign="bottom"><a href="/xml/Rss.xml" target="_blank"><img src="/images/i09/rss.gif" alt="信息订阅Rss2.0" border="0" /></a> <a href="http://yntw.net/?ReadMe=Yes" target="_blank"><img src="/images/i09/wap.gif" alt="用手机访问糖网!" border="0" /></a></td>
+          </tr>
+        </table>
+          <table width="22%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="4"></td>
+            </tr>
+          </table>
+        </form>        </td>
+        <td width="6"><img src="/images/i09/dl_bg3.jpg" width="6" height="35" /></td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="30" align="left" valign="bottom" id="nav"><strong><a title="糖业信息中心" href="/Article" target="_blank">资讯中心</a></strong> | <a title="云之糖红糖报价" href="http://www.yntw.com/Article/Brownsugar/Index.html" target="_blank">红糖现货报价</a> | <a title="糖业网址大全" href="http://www.ynsugar.com/Article/web/" target="_blank">糖业网址大全</a> | <strong><a title="地区频道中心" href="/channelcenter.html" target="_blank">地区频道</a></strong> | <a title="云之糖系列产品诚招代理" href="http://www.yntw.com/Article/BZZX/201509/46699.html" target="_blank">"云之糖"招商</a> | <a title="糖网淘宝店" href="http://yntw.taobao.com/" target="_blank">糖网淘宝店</a> | <a title="糖业专题" href="/Article/SpecialList.asp" target="_blank">糖业专题</a> | <a title="各地糖价查询" href="http://www.ynsugar.com/spotprice/chinasugarindex.html" target="_blank">糖价走势图</a> | <a title="广告服务" href="http://www.yntw.com/About/AD.html" target="_blank">广告</a></td>
+        </tr>
+        <tr>
+          <td height="24" align="left" valign="bottom"><a href="/Article/Video/">视频</a> | 
+		<font color="red"><a href="/Article/hot/" target="_blank">热点</a></font> | <a href="http://weibo.com/yntw" target="_blank">微博</a> | <a href="/Article/zcgg/" target="_blank">政策公告</a> | <a href="/Article/JCK/" target="_blank">进出口</a> |
+		<a href="/Article/PPKS/" target="_blank">评盘看市</a> | <a href="/Article/HuiX/" target="_blank">会讯</a> | 
+	         <a href="/Article/ZXZX/CHANXIAO/" target="_blank">产销</a> | 
+		<a href="/Article/International/" target="_blank">国际糖讯</a> | <a href="/Article/JiuJ/" target="_blank">酒精</a> | 
+		<font color="red"><a href="/Article/DTXX/" target="_blank">滇糖</a></font> | <a href="/Article/TYWX/" target="_blank">网校</a> | 
+		<a href="http://www.ynsugar.com/chuyun.html" target="_blank">储运</a> | <a href="/Article/ZXZX/zlbg/Index.html" target="_blank">质量</a> | 
+                <a href="/soft/" target="_blank">下载</a> | <a href="/Article/ZXZX/CYLink/" target="_blank">产业链</a></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="962" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="236"><img src="/images/i09/so1.jpg" width="236" height="16" /></td>
+    <td width="389"><img src="/images/i09/so2.jpg" width="389" height="16" /></td>
+    <td><img src="/images/i09/so3.jpg" width="337" height="16" /></td>
+  </tr>
+</table>
+<table width="962" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="193" align="center" background="/images/i09/so_1.jpg" class="font_12bai"><table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" align="center" valign="top"><FORM class="top_form" target=_blank>
+<Select onChange=location=this.options[this.selectedIndex].value>
+  <Option value=# selected>其他服务项目</Option> 
+  <Option value=http://weibo.com/yntw>云南糖网微博</Option> 
+  <Option value=http://www.ynsugar.com/Article/>糖业资讯中心</Option> 
+  <Option value=http://mail.ynsugar.com/>电子信箱登录</Option> 
+  <Option value=/About/AD.html>网站广告服务</Option> 
+  <Option value=http://www.yntw.com/sugarPC.htm>进口糖成本计算</Option>
+</Select> </FORM></td>
+      </tr>
+    </table></td>
+    <td width="348" background="/images/i09/so_2.jpg"><table width="91%" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="26"><form action="/search.asp" method="post" name="form1" target="_blank" class="top_form" id="form1">
+          <input name="keyword" type="text" class="so_wbk" id="keyword" size="26" />
+                        <input name="imageField2" type="image" class="so_img" src="/images/i09/so_go.gif" /><Input id=Field type=hidden value=Title name=Field>
+        </form>
+        </td>
+      </tr>
+    </table></td>
+    <td width="335" background="/images/i09/so_3.jpg"><table width="93%" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="20%" height="26" valign="middle" class="font_12hui"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="18" valign="bottom">通知公告：</td>
+          </tr>
+        </table></td>
+        <td width="80%" align="left" valign="bottom" class="font_12hui"><MARQUEE onmouseover=this.stop() style="WIDTH: 238px; HEIGHT: 19px" onmouseout=this.start() scrollAmount=1 scrollDelay=4 width=238 align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp;<a class="AnnounceBody2" href="#" onclick="javascript:window.open('/Announce.asp?ChannelID=1&ID=27', 'newwindow', 'height=440, width=400, toolbar=no, menubar=no, scrollbars=auto, resizable=no, location=no, status=no')" title="通&nbsp;&nbsp;&nbsp;&nbsp;知&nbsp;&nbsp;&nbsp;&nbsp;为更好的服务于广大网站浏览者，云南糖网即日起开放所有频道不涉密文章阅读权限（包括开放VIP资">云南糖网开放所有文章阅读权限（包括开放VIP资讯等）的通知&nbsp;&nbsp;[云南糖网&nbsp;&nbsp;2010年12月17日]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </MARQUEE></td>
+      </tr>
+    </table></td>
+    <td width="104"><a href="/Article/BZZX/200910/1304.html"><img src="/images/i09/so_4.jpg" width="104" height="43" border="0" /></a></td>
+  </tr>
+</table> <table class=ad_tabel cellSpacing=0 cellPadding=0 width=962 align=center border=0>
+    <tr>
+      <td align=left width=446 height=30>您现在的位置：&nbsp;<a class='LinkPath' href='http://www.ynsugar.com/'>云南糖网</a>&nbsp;>>&nbsp;<a class='LinkPath' href='/Article/TQTR/Index.html'>糖企糖人</a>&nbsp;>>&nbsp;正文</td>
+      <td align=left width=516 height=30><A href="http://yntw.taobao.com/" target=_blank><font color="#FF0000">云南糖网B2C商城>>></font></A>&nbsp;&nbsp; <A href="http://www.ynsugar.com/spotprice/chinasugarindex.html" target=_blank>全国糖价指数</A>&nbsp;&nbsp; <A href="http://www.yntw.com/Article/BZZX/201509/46699.html" target=_blank>--“云之糖”系列产品招商>></A></td>
+    </tr>
+  </table> 
+  <table cellSpacing=0 cellPadding=0 width=962 align=center border=0>
+    <tr>
+      <td vAlign=top align=middle>
+        <table class=hui_bk cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td vAlign=top align=middle bgColor=#ffffff height=780>
+              <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+                <tr>
+                  <td height=10></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="96%" border=0>
+                <tr>
+                  <td class=font_bt align=middle height=60>广西糖业集团收购重组大新制糖有限公司</td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="98%" border=0>
+                <tr>
+                  <td bgColor=#cccccc height=1></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="98%" border=0>
+                <tr>
+                  <td class=font_12hui align=middle bgColor=#f7f7f7 height=26>更新时间：2019-1-3 10:51:48  &nbsp; 分享到微博：<script type="text/javascript" charset="utf-8">
+(function(){
+  var _w = 72 , _h = 16;
+  var param = {
+    url:location.href,
+    type:'3',
+    count:'1', /**是否显示分享数，1显示(可选)*/
+    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+    pic:'', /**分享图片的路径(可选)*/
+    ralateUid:'1799286677', /**关联用户的UID，分享微博会@该用户(可选)*/
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+</script></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+                <tr>
+                  <td height=20></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="96%" border=0>
+                <tr>
+                  <td class=font_nr vAlign=top align=left><p>
+	　　12月28日，广西糖业集团大新制糖有限公司举行2018/2019榨季开榨仪式，广西大新县委常委、常务副县长黄信佩出席仪式并致词，县领导韦金红、梁俊刚、叶永亮、陈晓程参加开榨仪式。
+</p>
+<p>
+	　　黄信佩代表大新县委、县政府对广西糖业集团为大新经济发展所作出的贡献表示衷心的感谢。他表示，广西糖业集团与世纪飞龙签订了收购重组协议，标志着企业走上了新的发展轨道，企业规模及可持续发展能力显著增强，这将极大促进了大新县乃至崇左市蔗糖产业的健康发展，进一步加快大新蔗农脱贫致富步伐。他指出，在2018/2019年榨季，大新县委、县政府将继续按照自治区、崇左市关于推动糖业“二次创业”发展的决策部署，把产业发展和精准扶贫有机结合起来，强化服务，为企业发展营造良好的法治环境和营商环境，为共同实现大新县2019年甘蔗生产工作目标而不懈努力。同时，也希望广西糖业集团大新制糖有限公司继续加强与我们榨季生产指挥部相关部门的组织协调，做好砍运的服务工作，在扩大面积和推广良种良法上下功夫，抓好今冬明春甘蔗生产，落实好榨季的安全生产工作，推动原料蔗实现深加工，延长产业链，增强企业效益，努力开创广糖事业发展新局面，为大新的蔗糖业发展作出更大的贡献。大新县人民政府
+</p>&nbsp;<BR>&nbsp; &nbsp;&nbsp;&nbsp; </td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="98%" border=0>
+                <tr>
+                  <td vAlign=top align=middle>
+                    <table id=xgxx cellSpacing=8 cellPadding=0 width="100%" border=0>
+                      <tr>
+                        <td class=font_14h26 align=left height=26>
+                        <P><STRONG>相关信息：&nbsp;<FONT color=#ffffff><script language='javascript' src='/Article/GetHits.asp?ArticleID=53696'></script> </FONT><BR></STRONG><a class='LinkArticleCorrelative' href='/Article/ZXZX/chanqu/201812/53682.html' title='文章标题：2018年广西糖业发展工作绩效亮点
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-28 11:00:36' target="_self">2018年广西糖业发展工作绩效亮点</a><br><a class='LinkArticleCorrelative' href='/Article/ZXZX/chanqu/201812/53663.html' title='文章标题：交通银行广西分行大力支持广西糖业发展
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-24 4:16:55' target="_self">交通银行广西分行大力支持广西糖业发展</a><br><a class='LinkArticleCorrelative' href='/Article/ZXZX/chanqu/201812/53662.html' title='文章标题：广西启动糖料蔗价格指数保险理赔工作
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-24 4:12:42' target="_self">广西启动糖料蔗价格指数保险理赔工作</a><br><a class='LinkArticleCorrelative' href='/Article/hot/201812/53652.html' title='文章标题：广西淘汰落后制糖产能&nbsp;优胜劣汰
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-21 3:01:08' target="_self">广西淘汰落后制糖产能&nbsp;优胜劣汰</a><br><a class='LinkArticleCorrelative' href='/Article/TQTR/201812/53651.html' title='文章标题：广西东亚糖业：推行订单农业&nbsp;筑牢发展根基
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-21 2:39:02' target="_self">广西东亚糖业：推行订单农业&nbsp;筑牢发展根基</a><br><a class='LinkArticleCorrelative' href='/Article/TQTR/201812/53629.html' title='文章标题：广西糖业集团有限公司简介
+作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名
+更新时间：2018-12-18 3:13:28' target="_self">广西糖业集团有限公司简介</a><br><A href="/@asds"></A></P></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="20%" border=0>
+                <tr>
+                  <td height=10></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="98%" border=0>
+                <tr>
+                  <td vAlign=top align=middle>
+                    <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                      <tr>
+                        <td class=font_12 align=middle bgColor=#c2efb4 height=26><STRONG>网友评论</STRONG></td>
+                        <td width=550>
+                          <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                            <tr>
+                              <td bgColor=#c2efb4 height=10></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellSpacing=0 cellPadding=0 width="20%" border=0>
+                      <tr>
+                        <td height=6></td>
+                      </tr>
+                    </table>
+                    <table cellSpacing=6 cellPadding=0 width="100%" bgColor=#ffffac border=0>
+                      <tr>
+                        <td align=left height=30>
+                          <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                            <tr>
+                              <td class=font_12 align=left height=30>
+                              <script language="javascript" src="/Article/Comment.asp?Action=JS&CommentNum=20&ArticleID=53696"></script></td>
+                            </tr>
+                            <tr>
+                              <td align=left height=6></td>
+                            </tr>
+                            <tr>
+                              <td align=middle>
+                                <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                  <tr>
+                                    <td vAlign=top align=left height=150>
+<FORM id=form2 name=form2 action=/Article/Comment.asp method=post target=_blank>
+                                      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td class=font_12 align=right width=40 height=20>笔名：</td>
+                                          <td class=font_12>
+                                            <Input class=top_form id=Name size=18 value=匿名网友 name=Name> &nbsp;&nbsp;</td>
+                                        </tr>
+                                      </table>
+                                      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td class=font_12 align=right width=40 height=25>评分：</td>
+                                          <td class=font_12>
+  <Input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type=radio value=1 name=Score> 1分 
+  <Input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type=radio CHECKED value=2 name=Score> 2分 
+                                            <Input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type=radio value=3 name=Score> 3分 </td>
+                                        </tr>
+                                      </table>
+                                      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td class=font_12 vAlign=top align=right width=40>内容：</td>
+                                          <td><TEXTAREA class=top_form id=Content name=Content rows=9 cols=36></TEXTAREA></td>
+                                        </tr>
+                                      </table>
+                                      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td height=10></td>
+                                        </tr>
+                                      </table>
+                                      <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td vAlign=bottom align=right height=20>
+  <Input id=Action type=hidden value=Save name=Action> 
+                                            <Input id=ArticleID type=hidden value="53696" name=ArticleID> </td>
+                                          <td align=middle>
+                                            <Input type=submit value=" 提 交 " name=Submit2></td>
+                                        </tr>
+                                      </table>
+                                    </FORM></td>
+                                    <td vAlign=top align=middle width=270>
+                                      <table cellSpacing=5 cellPadding=0 width="100%" border=0>
+                                        <tr>
+                                          <td class=font_12h24 vAlign=top align=left>·遵守中华人民共和国有关法律、法规，遵守《互联网新闻信息服务管理规定》。<BR>·尊重网上道德，承担一切因您的行为而直接或间接引起的法律责任。<BR>·云南糖网拥有管理笔名和留言的一切权利。 <BR>·您在云南糖网留言板发表的言论，云南糖网有权在网站内转载或引用。 <BR>·云南糖网新闻留言板管理人员有权保留或删除其管辖留言中的任意内容。 <BR>·参与本留言即表明您已经阅读并接受上述条款,如您对管理有意见请向留言板管理员反映。</td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="20%" border=0>
+                <tr>
+                  <td height=6></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td vAlign=top align=middle width=10></td>
+      <td vAlign=top align=middle width=320>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=26><IMG height=34 src="/images/i09/c1/c1_1.jpg" width=26></td>
+            <td class=font_12bai align=left width=80 background=/images/i09/c1/c1_2.jpg><STRONG>图 片 文 章</STRONG></td>
+            <td width=11><IMG height=34 src="/images/i09/c1/c1_3.jpg" width=11></td>
+            <td class=font_12 align=right background=/images/i09/c1/c1_4.jpg><A href="/Article/" target=_blank>更多&gt;&gt;</A></td>
+            <td width=10><IMG height=34 src="/images/i09/c1/c1_5.jpg" width=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10 background=/images/i09/c1/c1_6.jpg>&nbsp;</td>
+            <td width=0 bgColor=#ffffff>
+              <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+                <tr>
+                  <td height=10></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                <tr>
+                  <td class=font_12h24 vAlign=top align=left><script language='javascript' src='/Article/JS/Article_Pic4.js'></script></td>
+                </tr>
+              </table>
+            </td>
+            <td width=10 background=/images/i09/c1/c1_7.jpg>&nbsp;</td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_8.jpg" width=10></td>
+            <td width=360 background=/images/i09/c1/c1_9.jpg></td>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_10.jpg" width=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+          <tr>
+            <td height=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=26><IMG height=34 src="/images/i09/c1/c1_1.jpg" width=26></td>
+            <td class=font_12bai align=left width=80 background=/images/i09/c1/c1_2.jpg><STRONG>项 目 推 荐</STRONG></td>
+            <td width=11><IMG height=34 src="/images/i09/c1/c1_3.jpg" width=11></td>
+            <td class=font_12 align=right background=/images/i09/c1/c1_4.jpg>&nbsp;</td>
+            <td width=10><IMG height=34 src="/images/i09/c1/c1_5.jpg" width=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10 background=/images/i09/c1/c1_6.jpg>&nbsp;</td>
+            <td width=0 bgColor=#ffffff>
+              <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+                <tr>
+                  <td height=10></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                <tr>
+                  <td class=font_12h24 vAlign=top align=left><P><A href="http://www.yntw.com/Article/BZZX/201509/46699.html" target=_blank><IMG border=0 src="/images/1688-300300.jpg" width=300 height=300></A></P></td>
+                </tr>
+              </table>
+            </td>
+            <td width=10 background=/images/i09/c1/c1_7.jpg>&nbsp;</td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_8.jpg" width=10></td>
+            <td width=360 background=/images/i09/c1/c1_9.jpg></td>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_10.jpg" width=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+          <tr>
+            <td height=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=26><IMG height=34 src="/images/i09/c1/c1_1.jpg" width=26></td>
+            <td class=font_12bai align=left width=80 background=/images/i09/c1/c1_2.jpg><STRONG>最 近 更 新</STRONG></td>
+            <td width=11><IMG height=34 src="/images/i09/c1/c1_3.jpg" width=11></td>
+            <td class=font_12 align=right background=/images/i09/c1/c1_4.jpg><A href="/Article/" target=_blank>更多&gt;&gt;</A></td>
+            <td width=10><IMG height=34 src="/images/i09/c1/c1_5.jpg" width=10></td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10 background=/images/i09/c1/c1_6.jpg>&nbsp;</td>
+            <td width=0 bgColor=#ffffff>
+              <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+                <tr>
+                  <td height=10></td>
+                </tr>
+              </table>
+              <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                <tr>
+                  <td class=font_12h24 vAlign=top align=left><script language='javascript' src='/Article/JS/News10.js'></script></td>
+                </tr>
+              </table>
+            </td>
+            <td width=10 background=/images/i09/c1/c1_7.jpg>&nbsp;</td>
+          </tr>
+        </table>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_8.jpg" width=10></td>
+            <td width=360 background=/images/i09/c1/c1_9.jpg></td>
+            <td width=10><IMG height=10 src="/images/i09/c1/c1_10.jpg" width=10></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+    <tr>
+      <td height=10></td>
+    </tr>
+  </table>
+<table height=4 cellSpacing=0 cellPadding=0 width=962 align=center bgColor=#009900 border=0>
+    <tr>
+      <td></td>
+    </tr>
+  </table>
+  <table id=table1 height=16 cellSpacing=0 cellPadding=0 width=962 align=center border=0>
+    <tr>
+      <td class=font_12 vAlign=top align=middle height=16></td>
+    </tr>
+  </table>
+  <table cellSpacing=0 cellPadding=0 width=962 align=center border=0>
+    <tr>
+      <td width=7>　</td>
+      <td class=font_14 align=middle>| <A href="/About/Us.html">关于我们</A> | <A href="/Announcelist.asp">网站公告</A> | <A href="/About/AD.html">广告服务</A> | <A href="/bbs/">意见反馈</A> | <A href="/About/Copy.html">版权申明</A> | <A href="/About/Net.html">产品介绍</A> | <A href="/Article/BZZX/200612/1304.html">在线投稿</A> | <A href="/About/Pay.html">支付方式</A> |</td>
+      <td width=7>　</td>
+    </tr>
+  </table>
+  <table cellSpacing=0 cellPadding=0 width="20%" align=center border=0>
+    <tr>
+      <td height=10></td>
+    </tr>
+  </table>
+  <table cellSpacing=0 cellPadding=0 width=962 align=center border=0 height="39">
+    <tr>
+      <td class=font_12 vAlign=top align=middle height=20>本站信息仅供参考，风险自当！广告内容请自行核实！如有任何建议、合作、版权等问题请联系我们</td>
+    </tr>
+    <tr>
+      <td class=font_12 vAlign=top align=middle height=19>Copyright &copy; yntw.com Inc. All rights reserved 版权所有  邮箱：ynsugar@Gmail.com</td>
+    </tr>
+  </table>
+<p align="center"><img border="0" src="/images/weix50.jpg" width="150" height="150"><br>有事您微我！</p>
+<P align=center><script src="http://s94.cnzz.com/stat.php?id=850524&web_id=850524&show=pic" language="JavaScript" charset="gb2312"></script>  </P> 
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F998ed76e94495ee4fdab4bbb033095f9' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+</body>
+</html>

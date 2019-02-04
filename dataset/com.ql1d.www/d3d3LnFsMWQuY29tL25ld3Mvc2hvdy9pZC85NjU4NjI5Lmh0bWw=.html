@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>新华保险山东分公司司展厅正式开放_齐鲁壹点网</title>
+        <meta name="description" content='新华保险山东分公司司展厅正式开放。2018年12月28日，全新升级的新华保险山东分公司司展厅正式揭牌，全面开放。上午10时，山东分公司举行司展厅揭幕仪式，总经理刘崇松和副总经理王景华为司展厅揭幕。 
+ 
+ 
+2018年，借助新华保险总公司“五位一体”司展场所建设东风，山东分' />
+        <meta name="keywords" content="新华保险,山东分公司,司展厅,开放,社会责任,品牌文化" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9658629";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">新华保险山东分公司司展厅正式开放</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9658629.html' class='sh_9658629'>新华保险山东分公司司展厅正式开放</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">昨天 13:04</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">齐鲁壹点</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9658629' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9658629' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9658629'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        <p>2018年12月28日，全新升级的新华保险山东分公司司展厅正式揭牌，全面开放。上午10时，山东分公司举行司展厅揭幕仪式，总经理刘崇松和副总经理王景华为司展厅揭幕。</p> 
+<p><img src="https://wscdn.ql1d.com/37809087007622218319.jpg" data-width="800" data-height="533"></p> 
+<p><img src="https://wscdn.ql1d.com/69355852834946087851.jpg" data-width="800" data-height="533"></p> 
+<p>2018年，借助新华保险总公司“五位一体”司展场所建设东风，山东分公司全面开启司展厅、司展室、司展墙的设计和建设工作，以分公司统一设计、制作的方式推进，历时四个月，分公司司展厅正式竣工。此次建设的司展厅是2016年2月建成的司展室的升级版。</p> 
+<p><img src="https://wscdn.ql1d.com/45002389764662540527.jpg" data-width="800" data-height="533"></p> 
+<p><img src="https://wscdn.ql1d.com/25341557362335909547.jpg" data-width="800" data-height="533"></p> 
+<p>新华保险山东分公司司展厅位于办公职场23楼，建筑面积105平方米，展示面积150平方米，司展厅为封闭式设计，光源全部来自于展厅顶灯，顶灯设计以蓝天白云为底色，配以新华司徽效果，给人一种浩瀚无穷的视觉感受。</p> 
+<p><img src="https://wscdn.ql1d.com/80425977612751780763.jpg" data-width="800" data-height="533"></p> 
+<p>司展厅展示内容共分十一个板块，分别是前言、品牌文化、企业荣誉、发展规划、成长足迹、社会责任、服务体系、数说新华、党群园地、名人堂、重要活动，通过文字、图片、影像等全面展现新华保险山东分公司18载发展历程。</p> 
+<p>前言部分通过公司简介和总经理寄语两部分概括展现了山东分公司从无到有、从弱到强的发展历史，分公司党委书记、总经理刘崇松对山东新华人提出了“脚踏实地创业，砥砺前行，再创新功”的殷切期望。</p> 
+<p><img src="https://wscdn.ql1d.com/77052864463316389997.jpg" data-width="800" data-height="533"></p> 
+<p>品牌文化部分综合集中展示公司企业文化，包括公司愿景、使命、价值观、经营理念、行为准则、品牌口号、品牌标识、品牌个性、品牌内涵、品牌理念、司训、司歌等内容。</p> 
+<p><img src="https://wscdn.ql1d.com/83321313540932854461.jpg" data-width="861" data-height="715"></p> 
+<p>新华荣誉——承载希望，放飞梦想，本板块集中重点展示了新华保险山东分公司在机构管理、服务质量等方面所获得的各项内外部荣誉。</p> 
+<p>发展规划展示了新华保险山东分公司“十三五”发展目标及2018年方针目标，并对2020年主要经营目标进行了详细阐述。</p> 
+<p><img src="https://wscdn.ql1d.com/04111047081387591099.jpg" data-width="800" data-height="533"></p> 
+<p>成长足迹展示了创立起步时期的新华保险山东分公司和山东新华人，历任领导展示带我们重回历史，不忘每一任山东分公司的领路人。</p> 
+<p>服务体系展现公司在增值服务及理赔服务方面的成果和成就，公司始终坚持为客户提供高效、实际的增值服务和更快、更高、更易、更优、更多的理赔服务。</p> 
+<p><img src="https://wscdn.ql1d.com/07715555533699599718.jpg" data-width="1080" data-height="565"></p> 
+<p>社会责任展现新华保险总分公司在社会公益方面做出的成绩，从公益扶贫、关爱环卫工人、捐资助学等方面全面践行企业社会责任。</p> 
+<p>数说新华集中展示新华保险总分公司自成立以来各项经营数据，用数字直观地展现公司的发展历史，数说新华旁设置了电子显示屏，滚动展示山东分公司辖内16家中支的经营成绩与机构风采。</p> 
+<p><img src="https://wscdn.ql1d.com/43089861134547946680.jpg" data-width="953" data-height="503"></p> 
+<p>党群园地展示新华保险山东分公司党建成果、党员交流及各类工会活动，充分发挥党员的先锋模范带头作用，营造党群一家亲的和谐局面。</p> 
+<p>名人堂展示各渠道业务精英，感谢他们为公司业务发展做出的突出贡献。</p> 
+<p><img src="https://wscdn.ql1d.com/67529420884300433424.jpg" data-width="800" data-height="533"></p> 
+<p>重要活动展示新华保险山东分公司自成立以来的外部领导视察、公司领导莅临、媒体活动及公司重要活动，利用珍贵的照片资料展示公司发展历程中的重要活动。</p> 
+<p>12月28日，司展厅迎来了首批参观者，新华保险山东分公司总经理室成员、部门中层以上人员、分公司机关全体员工186人分八批参观了司展厅。</p> 
+<p><img src="https://wscdn.ql1d.com/91062771615436447508.jpg" data-width="800" data-height="529"></p> 
+<p>很多老员工在展厅内找到了自己的身影，找回了跟山东分公司共同成长的珍贵记忆，新员工通过司展厅更加直观地了解了山东分公司18年的发展历史，虽然自己没能亲身参与，但却依然有满满的自豪感，激励自己不断前行，为公司发展助力！</p>                    </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                    <span style="display:inline-table;width:111px;"><a style="float:left;text-decoration:none;" target="_blank" href="http://www.banquanyin.com/u/101606150001856"><img src="http://s1.banquanyin.com/c/icon-yin-32.png" title="更多授权" style="width:inherit;"></a><a target="_blank" href="http://101606150001856.bqy.pub"><img src="http://s1.banquanyin.com/c/icon-auth-cr-32.png" title="获取授权" style="width:inherit;"></a></span>                    -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">1</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9658553.html">
+                            <div data-background="https://wscdn.ql1d.com/28932696741044376391QN1D549NDQ4.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/28932696741044376391QN1D549NDQ4.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>他为“复兴号”奔驰在齐鲁大地保驾护航</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9648978.html">
+                            <div data-background="https://wscdn.ql1d.com/91f4c7def4e1050f5bc9bfa640874874.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/91f4c7def4e1050f5bc9bfa640874874.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>南昌瑶湖机场获中国民航部门颁发使用许可证</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9648984.html">
+                            <div data-background="https://wscdn.ql1d.com/1515a5bbaf0db5684fb177de7376d3dd.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/1515a5bbaf0db5684fb177de7376d3dd.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>南昌瑶湖机场获民航部门颁发使用许可证 可试飞C919</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">4</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9658629";
+    var all_page_comment = "4";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

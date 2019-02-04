@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7673","0","attach");
+Cms.viewCount("","7673");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="javascript:void(0);" target="_blank">国际合作</a> > <a href="http://www.cpppc.org/zh/dbhz/index.jhtml" target="_blank">多边合作</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>南亚交通走廊的更广泛 经济利益（WEB）</h2>
+			<span class="msg"><b>2019-01-16</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; letter-spacing: 0.544px; text-align: justify; white-space: normal; background-color: rgb(255, 255, 255); border-width: 0px; border-style: initial; border-color: currentcolor; word-wrap: break-word !important;"><section style="margin: 0px; padding: 20px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; border-width: 5px 1px 1px; border-style: solid; border-color: rgb(55, 74, 174);"><section style="margin: 0px; padding: 0px 0px 0px 5px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; height: auto; border-left: 2px solid rgb(55, 74, 174);"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(55, 74, 174); font-size: 1.1rem; line-height: normal; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 15px;">南亚交通走廊的更广泛经济利益（WEB）</span></strong></p></section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/16194318yhvu.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p></section></section><p><section style="margin: 0px; padding: 15px; max-width: 100%; box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; letter-spacing: 0.544px; white-space: normal; background-color: rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); text-align: center; font-size: 14px; word-wrap: break-word !important;"><section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important; border-width: 0px; border-style: initial; border-color: currentcolor;"><section style="margin: 15px 0px 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;"><section class="" style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; text-align: justify; color: rgb(120, 114, 114); line-height: 1.8; font-size: 15px;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">世界银行新报告《南亚交通走廊的更广泛经济利益》称连接国家和大陆的高速公路、铁路和水路等交通走廊对促进南亚经济增长、创造就业和减贫具有巨大潜力。由于交通走廊建设耗资数万亿美元，远超现有财力，各国需要优先考虑那些最有希望推动经济转型和造福沿线人民的项目。<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 1.75em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">发展大型交通基础设施项目——交通走廊——越来越被视为刺激区域一体化和经济增长的一种方式。各国通常在国际社会的帮助下，在这些走廊进行投资，希望创造巨大的经济盈余，并将其扩散到整个经济和社会之中。但是如果这些走廊没有产生预期的盈余，它们就会变成“无价值”的浪费——交通流量不足的运输基础设施。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">即使在走廊产生总体盈余的情况下，一个相关的问题是，净收益是否在所有人口中公平地分布。否则，走廊可能成为不公平的投资。运输走廊的终端节点可能比它所经过的过境地区和国家受益更多。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">在这条走廊上，拥有不同技能天赋的人可能会获得不同的利益，如果他们的土地保有权得不到保障，走廊沿线的农户可能会处于不利地位。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/16194357a655.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">只有当运输走廊广泛共享繁荣时，即不仅创造出赢家、也不会拉下输家时，才能刺激公平增长，帮助减少贫困。南亚和世界各地正在建设或正提议建设许多走廊。一项雄心勃勃的提议是整修从阿富汗的喀布尔（ Kabul） 到孟加拉国吉大港 （Chittagong） 的主干道（ Grand Trunk Road），这条主干道连接着世界上大部分贫困人口的家园。新丝绸之路经济带（ New Silk Road Economic Belt）的规划可能更加雄心勃勃。这条巨大的运输走廊从北京一直通连至布鲁塞尔。它还将延伸到南亚国家，就像中巴经济走廊倡议一样。与这些倡议和其他提议的倡议有关的投资可能需要大量美元。这一数额超过了可预见的将来用于支助这些走廊的财政资源。<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">考虑到巨大的资源成本和高风险，各国政府和国际社会需要清楚地考虑如何确定走廊投资建议的优先顺序，具体而言，即如何选出更有前途的项目，而非前景有限或可能造成浪费的项目。清楚了解什么是构成交通走廊的关键是朝这个方向迈出的重要一步。更重要的是要关注经济分析，而不仅仅是关注地缘政治方面的考量。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">尽管地缘政治考虑无疑是合理的，但它们也带来了风险。一些拟议中的走廊可能成为无用投资或不公平的公共投资，这些投资以牺牲国家纳税人的利益为代价，惠及少数群体。对较小的内陆国家来说，风险甚至可能更高，这些国家可能承担大量投资的成本，但却认为自己只是成为过境通道。南亚的内陆国家包括阿富汗、不丹和尼泊尔。几个中亚国家也属于这一类。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-align: center; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><img src="/u/cms/ppp/201901/161944322db6.png" title="image.png" alt="image.png"/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">只有当交通走廊产生广泛当地利益时才能被视为经济走廊。</strong></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">报告旨在通过充分的实证分析来权衡交通走廊的政治经济和地缘政治。它的目标是使主要利益相关方（政策制定者、经济顾问、企业和社会团体）在考虑对交通走廊进行投资时具备评估其社会经济效益的能力。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">为此，报告提供了一个考虑经济走廊、对计划和项目建议进行总体评估的概念性框架。这一框架超越了交通走廊在当下影响——比如降低车辆运营成本——而是重点关注对当地经济活动、就业、性别平等和减贫等其他倍受期待的社会经济目标产生积极影响的最终目标。它还有助于考虑诸如交通拥堵、回归再分配、社会排斥、环境退化以及其他风险或意想不到的后果等负面影响。该框架的一个重要组成部分是以可操作的方式定义交通走廊。这个框架还进一步考虑了不同的市场——如资本市场、劳动力市场、土地市场和产品市场——对交通走廊的影响。这样做有助于确定需要哪些政策干预来加强市场，最大限度地发挥交通走廊实现更大收益的潜力。此外，该框架还试图加深对有能力帮助毗邻交通走廊的经济发展成为繁荣和包容社区的机构的了解。该框架还研究了如何利用激励机制来促进健康的商业竞争和创造更好的工作岗位。利用这一框架，本报告研究了在何种条件下，对交通基础设施的大规模投资能够对当地家庭收入、就业、公平和减贫产生积极的溢出效应。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">报告还研究了政策制定者可能面临的潜在矛盾，并就如何对这些矛盾进行管理进行了讨论——例如，利用补充性政策和制度，以环境质量恶化为代价来增加收入。为了为其建议建立一个全面的知识库，报告对过去和目前的交通走廊倡议进行了案例研究。与此相结合的是，报告对有关交通走廊空间影响的现有文献进行了系统性审核，并对国际开发组织支持的交通走廊投资项目进行了评估。在这种综合方法的基础上，并依靠空间粒度数据，报告对南亚三大交通走廊进行了示意性评估。报告对交通走廊的一些方面进行了一系列重点分析。一些分析是关于对特定群体的影响（如，中小微企业（MSME）；不丹、印度和斯里兰卡的妇女；以及为了利用与市场的更紧密联系所带来的机遇而寻求融资的人群）。另外一些重点分析则讨论了在南亚和世界各地让私营部门在交通走廊的不同开发阶段进行联合投资、或通过不同的金融工具进行联合投资所面临的挑战。其中一个重点是更为详细地评估了现代空间计量经济学对严谨地评估交通走廊投资建议的潜力。另外两个重点是关注实施跨境交通走廊的经验教训，以及建筑工人的涌入给当地妇女带来的风险。报告认识到，交通走廊的干预除了旅行时间和车辆运营成本（这是传统成本效益分析的重点）之外，还会产生一系列影响。交通走廊干预措施可能对更广泛的社会经济成果产生影响。它们的经济影响包括聚集效应、贸易和人口流动的增加、以及当地经济结构的变化。这些长期的影响最终会产生更广泛经济利益（WEB）——如，收入和消费增长、产生新的就业机会，以及公平性提升。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;">交通走廊会产生赢家和输家，但精心设计的交通走廊计划会有助于更广泛地的分享利益。</strong></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">评估国际连接的潜力需要前瞻性和整体体视角。小型走廊在未来能否成功，关键在于它们能否与跨国界、跨地区和跨大陆交通走廊融合。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; box-sizing: border-box !important; word-wrap: break-word !important;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; text-indent: 2em; box-sizing: border-box !important; word-wrap: break-word !important;">交通走廊投资可以具有转型功能，并为实现更大经济和社会福利铺平道路。但它们需要整体设计，以增加收益，并使其扩散，同时降低负面结果的可能性。报告中的示例、方法框架和结果将作为给政策制定者提供的实现南亚和其他地区交通走廊WEB的最大化的指南。</p></section></section></section></section></p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 世界银行</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7673");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","526");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

@@ -1,0 +1,667 @@
+<!-- 作者排名标签 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="Cache-Control" content="no-transform"> -->
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="老虎财经,资产管理公司,价值投资,股票分析师,阳光私募基金,互联网证券,理财知识,财经自媒体,财经新媒体,互联网金融媒体,金融知识问答,资产配置,投资,基本面分析,投资知识,股事,白小生,财经短视频,股事小课堂" >
+	<meta name="description" content="环球老虎财经，是一个原创金融投资分析平台，关注A股的价值投资趋势、金融机构交易行为以及金融市场的波动要素等。网站汇聚众多金融行业精英，共同构建最有价值的投资分析体系，旨在助力用户战胜市场。" >
+	<title>环球老虎财经 | 首页</title>
+	<link rel="shortcut icon" type="http://images.laohucaijing.com/new_www/image/x-icon" href="http://images.laohucaijing.com/images/favicon-1.ico" media="screen" />
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/swiper.min.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/base.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/index.css?v=2018086">
+	<script src="http://images.laohucaijing.com/new_www/js/jquery-2.2.3.min.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72690f86452e67e2d55534f3bc1cd4a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+
+	</head>
+<body>
+<header>
+	<div class="down">
+		<img src="http://images.laohucaijing.com/new_www/images/down.png" id="wexin" alt="下拉">
+		<a class="wexin_code"><img src="http://images.laohucaijing.com/new_www/images/ewm.jpg"  alt="二维码"><br>环球老虎财经</a>
+	</div>
+	<div class="wrap">
+		<nav>
+			<a href="http://www.laohucaijing.com/" class="logo"></a>
+			<ul>
+				<li>
+					<a class="index" href="http://www.laohucaijing.com/">首页</a>
+				</li>
+				<li>
+					<a href="/live">快讯</a>
+				</li>
+				<li>
+					<a href="/original_index">文章</a>
+				</li>
+				<li>
+					<a href="/author_index">热门作者</a>
+				</li>
+
+				<!--<li>
+					<a href="/video_index">股事视频</a>
+				</li>-->
+				<!--<li>
+					<a href="/Www_partner">联系我们</a>
+				</li>-->
+			</ul>
+		</nav>
+		<div class="navRight">
+			<ul>
+				<li>
+					<div class="searBox">
+						<label><i></i><input type="text" class="searInput" placeholder="关键字/证券代码" id="searchKeywords" onfocus="this.placeholder=''" onblur="this.placeholder='关键字/证券代码 '"></label>
+						<span id="searId" onclick="search()"></span>
+					</div>
+				</li>
+				<li>
+					<a href="/Www_about">关于我们</a>
+				</li>
+				<li>
+					<a class="work">合作</a>
+				</li>
+				<li>
+					<a class="report">寻求报道</a>
+				</li>
+				<li>
+					<a class="comp">举报或投诉</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="shadow"></div>
+<div class="partner animated" style="height: 310px;margin-top: -180px">
+	<div>
+		<p>
+			<span>商务合作   请您联系</span>
+			<span>胡坤云（15538185779）</span>
+			<span>WX：hukunyun335</span>
+			<span>huky@laohucaijing.com</span>
+		</p>
+		<!-- <p>
+			<span>媒体合作 请您联系</span>
+			<span>Wilbur (15988172629)</span>
+			<span>WX:281177407</span>
+			<span>yangwb@laohucaijing.com</span>
+		</p> -->
+		<button class="know">我知道了</button>
+	</div>
+</div>
+<div class="reWarp animated" style="height: 365px">
+	<div class="reportDiv">
+		<!-- <p>扫描二维码，添加环球老虎「寻求报道小编」为好友</p>
+		<img src="http://images.laohucaijing.com/new_www/images/bd.jpg" alt="" /> -->
+		<p class="rep">满足以下条件，获得更高通过率：</p>
+		<span>1、贵公司为A股、港股、美股上市公司</span>
+		<span>2、贵公司正在进行并购重组或战略调整</span>
+		<span>3、贵公司正在发生重大融资</span>
+		<span>4、贵公司的产品具有行业性的重大意义</span>
+		<span>联系电话：13681646214（同微信）</span>
+		<button>我知道了</button>
+	</div>
+</div>
+<div class="Complaint animated">
+	<div>
+		<span>信息举报或投诉可联系:</span> <br/>
+		<span>tousu@laohucaijing.com </span>
+		<button>我知道了</button>
+	</div>
+</div>
+<script>
+
+var urlstr = location.href;
+var urlstatus = false;
+console.log(urlstr)
+$("header ul li a").each(function() {
+	if(urlstr=="http://www.laohucaijing.com/"){
+		$(".index").addClass('active');
+	}else{
+		$(".index").removeClass('active');
+	}
+    if((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+		$(this).addClass('active');
+		urlstatus = true;
+	} else {
+		$(this).removeClass('active');
+	}
+});
+$("input").focus(function(){
+
+})
+$('#searchKeywords').bind('keypress', function(event) {
+	if(event.keyCode == "13") {
+		search();
+		return false;
+	}
+})
+$('.work').click(function(){
+	$('.partner').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.know').click(function(){
+	$('.partner,.shadow').hide();
+})
+$('.report').click(function(){
+	$('.reWarp').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.reWarp button').click(function(){
+	$('.reWarp,.shadow').hide();
+})
+$('.comp').click(function(){
+	$('.Complaint').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.Complaint button').click(function(){
+	$('.Complaint,.shadow').hide();
+})
+function search() {
+	var key = $('.searInput').val();
+	location.href = "/www_search/index/?keyword=" + key;
+}
+</script>
+<style type="text/css">
+	iframe{
+		width: 100%;
+    	height: 490px;
+	}
+	.articalRight p{
+		color: #555;
+	}
+	blockquote{
+		padding:16px 20px;
+		font-size: 12px;
+		background: #eee;
+		line-height: 1.8;
+		border-left: 9px solid #05a6f2;
+		margin-bottom: 20px; 
+	}
+	blockquote strong{
+		font-style: italic;
+	}
+	.articalRight blockquote p{
+		font-size: 14px;
+		line-height: 1.8; 
+		font-style: italic;
+		color: #333;
+	}
+	.jiathis_style_32x32 .jtico_qzone{
+		background-position: 0;
+	}	
+	.jiathis_style_32x32 .jtico {
+	    padding-left: 0!important;
+	    background: none!important;
+	    cursor: pointer;
+	    padding-bottom: 6px;
+	}
+	
+	.jiathis_style_32x32 a {
+		height: 38px!important;
+	    display: inline-block;
+	    text-indent: 34px;
+	    width: 100%;
+	    color: #4a4a4a;
+	    font-size: 14px;
+	    float: left;
+	    margin: 0;
+	    margin-top: 20px;
+	    background: none;
+	    padding-left: 0;
+	}
+	.jiathis_button_tsina .jtico_tsina {
+	    background: url(http://images.laohucaijing.com/new_www/images/wb.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	.jiathis_button_qzone .jtico_qzone {
+	    background: url(http://images.laohucaijing.com/new_www/images/qq.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	#test table td span[style],#test p span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span[style],#test span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span span[style],#test span span[style]{ font-style: normal;font-size:16px!important;font-family: 'Microsoft YaHei' !important; }
+    #test span font[size],#test font[size]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+</style>
+<div class="wrap clearfix" style="position: relative;padding-bottom: 50px;">
+	<div class="main fl mt20 clearfix bgwhite boxSizing">
+		<div class="fl articalLeft">
+            <div class="bdsharebuttonbox">
+            	<div class="fiex">
+            		<div class="jiathis_style_32x32">
+	            		<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_qzone"></a>
+					</div>
+					<span class="sp3 mt20"><a class="wechat" data-cmd="weixin"></a></span>
+				</div>
+            </div>
+		</div>
+		<div class="fr articalRight">
+			<h1>中石化的原油“魔鬼交易”</h1>
+			<div class="clearfix mt20 title">
+				<div class="fl artInfo1">
+					<a href="/www_author_detail/index/12730">  阿尔法工场</a><span><i style="margin-right:10px"><img src="http://images.laohucaijing.com/new_www/images/d_hot.png" alt="">30192</i>01/02 17:09</span>
+				</div>	
+			</div>
+			<div class="artDeta">
+				<img class="tip1" src="http://images.laohucaijing.com/new_www/images/yh_01.jpg" alt=""/>
+			 	<!--<img src="http://oss.laohucaijing.com//upload/images/201812/20181229110316730.jpg" width="680"  class="mt20" alt="比特币为什么会“现象级”暴涨？">-->
+			 	<p>超预期的波动永远是一个巨大的、看不见的深坑，客户、投顾总有一个会掉到坑里。           </p>
+				<img class="tip2" src="http://images.laohucaijing.com/new_www/images/yh_02.jpg" alt=""/>
+			</div>
+			<p class="Label"><a>标签：</a>
+				<span>
+							<em><i class="act"></i><i class="test" title="中石化"><a href="/www_search/index/?keyword=中石化">中石化</a></i></em>
+							<em><i class="act"></i><i class="test" title="原油交易"><a href="/www_search/index/?keyword=原油交易">原油交易</a></i></em>
+							<em><i class="act"></i><i class="test" title="市场经济"><a href="/www_search/index/?keyword=市场经济">市场经济</a></i></em>
+						</span>	
+			</p>
+			<!-- 文章引用 -->
+			<!-- 文章正文 -->
+			<div class="text mt20" id="test">
+				<p style="text-align: justify;">来源：阿尔法工场（ID：alpworks）</p></br>
+
+<p style="text-align: justify;">超预期的波动永远是一个巨大的、看不见的深坑，客户、投顾总有一个会掉到坑里。</p></br>
+
+<p style="text-align: justify;">所有的巨亏都是一样的，</p></br>
+
+<p style="text-align: justify;">下单时的贪婪、亏损后的不认错。</p></br>
+
+<p style="text-align: justify;">关于中石化子公司的原油交易&ldquo;亏损事件&rdquo;，市场上的传言有好几个版本，都说谣言止于智者，其实谣言止于算账，我们来算笔账，就知道哪个版本更接近真相。</p></br>
+
+<p style="text-align: justify;">损失的影响有多大和公司的收入相关，要先看公司的收入是多少，再评估损失对公司的影响。</p></br>
+
+<p style="text-align: justify;">中石化财务数据：</p></br>
+
+<p style="text-align: justify;">通过公开数据中石化是一个几乎日赚2亿人民币的公司。所以第一个问题，亏多少才会对这样的公司产生影响？</p></br>
+
+<p style="text-align: justify;">传言版本一：</p></br>
+
+<p style="text-align: justify;">3000万美金做多原油期货产生的亏损，于原油70美元处做多期货。</p></br>
+
+<p style="text-align: justify;">先来看国际油价的走势：</p></br>
+
+<p style="text-align: justify;">期货的亏损有两种算法，基于期货仓位的杠杆倍数和基于对应现货仓位的损失。两种算法的结果都一样。</p></br>
+
+<p style="text-align: justify;">我们所有的版本都用基于对应实际现货仓位的算法，便于大家理解。</p></br>
+
+<p style="text-align: justify;">按照期货通用的10倍杠杆，3000万美元的期货仓位，相当于买入3亿美元的原油。</p></br>
+
+<p style="text-align: justify;">图中原油期货自70美元跌至目前45美元附近，跌幅36%。对应3亿美元的原油仓位，实际亏损是1亿美元，相当于6.8亿人民币。对于日赚2亿人民币的中石化来说，这点亏损，3天就赚回来了，不算什么亏损。</p></br>
+
+<p style="text-align: justify;">可传言是亏了几十亿美元，按照上面的公式倒推回去，要亏几十亿美金，36%的跌幅，就要有100亿美元的现货仓位，对应的期货仓位就是10亿美元，这么大的期货仓位，可是要用真金白银的期货持仓的，有这么多外汇下单吗？可信度有多高？</p></br>
+
+<p style="text-align: justify;">所以，做多期货产生巨亏，是可信度最低的版本。</p></br>
+
+<p style="text-align: justify;">传言版本二：</p></br>
+
+<p style="text-align: justify;">对冲套保，使用了期权组合，零成本衣领期权（zero cost collar&nbsp;option），导致巨亏。</p></br>
+
+<p style="text-align: justify;">期权策略懂的人不多，所以有巨大的想象空间。近几年有大量做期权巨亏的案例，尤其在今年有一条新闻《那个写书教你做期权的人爆仓了》，大家对期权策略的理解就是，这是一个可以让人巨亏的方式。到底有没有亏损？我们看收益曲线就知道了。后边的分析，会借用50etf期权的收益曲线进行说明。</p></br>
+
+<p style="text-align: justify;">零成本衣领期权，是持有原油现货，借助期权组合保持对方向的看法，保护下跌的空间。</p></br>
+
+<p style="text-align: justify;">如图：</p></br>
+
+<p style="text-align: justify;">50ETF零成本衣领组合：持有10000股50ETF，卖出一个高位的看涨期权，买入一个低位的看跌期权。这样的期权组合，在市场上涨时，可以有更多的利润，下跌时也保护了亏损的幅度。</p></br>
+
+<p style="text-align: justify;">看看上面的收益曲线，再想想这个版本的传言，这样的收益曲线要产生几十亿美金的巨亏，需要上千亿美金的仓位（上万亿人民币的持仓），这个版本的可信度也很低。</p></br>
+
+<p style="text-align: justify;">传言版本三：</p></br>
+
+<p style="text-align: justify;">高盛推销了零成本期权组合策略，导致的损失，也有说是高盛的阴谋。</p></br>
+
+<p style="text-align: justify;">在原油75美元处买入90美元的看涨期权，卖出60美元的看跌期权，零成本，博方向，风险低。</p></br>
+
+<p style="text-align: justify;">先来说说阴谋，这市场只有banker和broker，大家只是为了挣钱，这就是高盛的角色。说的通俗点，如果中石化是个股民的话，高盛的角色就是证券公司的投资顾问，他来卖投顾服务。投顾的级别有高低，投顾费有高低，但投顾的方案都有赔钱的时候，这就是股民的悲哀之处。</p></br>
+
+<p style="text-align: justify;">在期权和场外期权领域，这种投顾服务是（solution）解决方案不是大家传统意义上理解的，我建议你做多，还是做空。期权领域的解决方案，更像是做生意的讨价还价&mdash;&mdash;你的需求是什么？我给你出方案。</p></br>
+
+<p style="text-align: justify;">而这个解决方案背后就是一个巨大的坑。有时候客户掉坑里了，有时候投顾掉坑里了。高盛也赔过很多钱，就像15年有的国内的券商做场外期权，也亏了很多钱一样。</p></br>
+
+<p style="text-align: justify;">我们先用50etf期权组合来模拟一下这样的零成本期权策略收益曲线是什么样的？</p></br>
+
+<p style="text-align: justify;">这样一个组合的收益曲线，我们看到中间平的那一段收益和成本为零，这是零成本的安全区域。如果上涨突破临界值，会产生巨大的利润，同样如果下跌跌破临近临界值，也会产生巨大的亏损。也就是说原油突破90美元会产生巨大的利润，但跌破60美元会产生巨大的亏损。</p></br>
+
+<p style="text-align: justify;">很多人看到这样的收益曲线和解决方案，都会看到下跌的风险，但是这样一个存在巨大利益诱惑又存在巨大风险的方案，怎么把它卖出去呢？我们就要写一个研究报告，把它包装一下，大多数broker用波动率来介绍这样的方案。</p></br>
+
+<p style="text-align: justify;">首先，在安全区域成本为零，如果方向做对，零成本同时又有巨大的收获。很诱人哦。</p></br>
+
+<p style="text-align: justify;">那风险的部分怎么解释？统计一下市场过去历史的波动，来设定一个安全区域。</p></br>
+
+<p style="text-align: justify;">例如，统计过去市场的平均波动区域不超过20%。然后，假定20%是一个安全波动幅度。那么我们就可以把20%设定为安全边界，75美元向上20%是90美元，75美元向下波动20%是60美元，完美。说一句，你看按照历史的表现，这个方案是安全的，还有机会白赚钱，多好。</p></br>
+
+<p style="text-align: justify;">如果是这样的方案，一旦风险发生就会产生很大的亏损，但是这样的亏损还不够，还要加一味更大风险的调料&mdash;&mdash;&ldquo;人性的贪婪&rdquo;。</p></br>
+
+<p style="text-align: justify;">如果你告诉一个人，这个方案很安全，还能白赚钱，人的第一反应是，能不能赚得更多。这就要说到期权市场解决方案上的变通&mdash;&mdash;你有需求，我都可以满足。</p></br>
+
+<p style="text-align: justify;">首先明确一个前提，大家都假定20%以内是一个非常安全的空间，市场不会向下波动超过20%的。既然安全的问题解决了，咱们就来说说怎么多赚吧，可以double short put，卖出更多的看跌期权。</p></br>
+
+<p style="text-align: justify;">看一下收益曲线的变化：</p></br>
+
+<p style="text-align: justify;">买入看涨期权和卖出看跌期权变成1:2或者1:3。</p></br>
+
+<p style="text-align: justify;">原来中间零成本安全区域的收益变多了（红圈部分），虽然不是特别多，但还是会增加一点收益。即使市场不涨，不能暴赚，就在这震荡，也能赚些收益。</p></br>
+
+<p style="text-align: justify;">但是，注意图片左边的部分，这样的操作让左边亏损的斜率变大，也就是说一旦超出下面的安全临界值，亏损会成倍的增加。虚值期权本身就带有几十倍的杠杆，那么这样的操作背后的风险就是几十倍的杠杆，再乘以几倍的风险。</p></br>
+
+<p style="text-align: justify;">而这样的期权组合在市场波动率低的时候，交易深度的虚值期权，并不需要多少保证金，但杠杆比例却可以达到几十倍甚至上百倍。</p></br>
+
+<p style="text-align: justify;">当一个客户看一份投顾写的策略报告时，他看到的内容是这样的&mdash;&mdash;这个市场过去这么多年波动都很低，不会超过20%，所以20%是一个安全的区域，我们可以在这个安全的区域里，做一个期权组合，既可以白赚钱，风险又很低。</p></br>
+
+<p style="text-align: justify;">这时客户说，I Need More！</p></br>
+
+<p style="text-align: justify;">于是就有了上面的组合。</p></br>
+
+<p style="text-align: justify;">其实这样的组合，如果市场没有单边的行情，最终的结果是皆大欢喜的，客户赚钱，投顾赚钱。而这样的情况在市场稳定的时候，大家都是这么做的，其乐融融。</p></br>
+
+<p style="text-align: justify;">但是超预期的波动永远是一个巨大的、看不见的深坑，客户、投顾总有一个会掉到坑里。</p></br>
+
+<p style="text-align: justify;">以上的计算只能解释这个版本的传言，但这并不一定是事实的真相。期权的组合可以有更复杂的设计，例如ratio策略，等等。</p></br>
+
+<p style="text-align: justify;">有一点是确定的，一旦当我们假定一个价格是安全的边界，并在此卖出了巨量的put。那么这个巨大的风险就无法避免。</p></br>
+			</div>
+			
+			
+										
+			<div class="related-articles">
+				<h4>您可能感兴趣的文章</h4>
+				<ul>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132912" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229195845472.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼...</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132925" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102140148133.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132910" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229182744196.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132922" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102135046173.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132916" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102111621940.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132914" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102110216897.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+						</p>
+					</li>
+									</ul>
+			</div>
+		</div>
+		<div class="sTop" style="position: fixed;width: 59px;left: auto; bottom:200px;margin-left: -10px; display: none;">
+			<img src="http://test.image.laohucaijing.com/new_www/images/top.png" alt="">
+		</div>
+	</div>
+	<div class="aside fr">
+		<div class="hot_recom">
+			<p class="type"><span>热门推荐</span></p>
+			<a href="/www_detail/index/132912"><img src="http://oss.laohucaijing.com/upload/images/201812/20181229195845472.jpg" alt=""></a>
+			<h2><a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼减持</a></h2>
+			<p class="name"><a href="/www_author_detail/index/13594">环球老虎财经 韩理</a><span>01/02 17:09</span></p>
+		</div>
+		<!---->
+		<div class="edit_recom">
+			<p class="type"><span>编辑推荐</span></p>
+			<ul>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+					<p>01/02 17:10</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+					<p>01/02 17:09</p>
+					</li>
+							</ul>
+		</div>
+	</div>
+</div>
+<!-- JiaThis Button BEGIN -->
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8">
+</script>
+<!-- JiaThis Button END -->
+<script type="text/javascript" >
+function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                 window.location.href =  "http://m.laohucaijing.com"+'/home/detail/'+"132907"  ;
+            }
+        }
+
+        browserRedirect();
+
+
+var jiathis_config={
+	pic:"http://oss.laohucaijing.com//upload/images/201812/20181229110316730.jpg"
+}
+</script>
+<!-- JiaThis Button END -->
+
+<script>
+	$(function(){
+
+		$("#test p font").removeAttr("face");
+		$("#test p span").removeAttr("style");
+		$("#test p font").css({"font-size:":'16px',"font-family":'Microsoft YaHei'});
+		$('blockquote').find('br:last').remove();
+        var Test1 = $('.artDeta p').text();
+        var test = $('.Label .test').text();
+        	test = $.trim(test)
+       var Img = $('.artImg img').attr('src');
+        if (Test1=='') {
+            $('.artDeta').hide();
+        }
+        if (test=='') {
+            $('.Label').hide();
+        }
+		$(".text img").css({
+            "height":"auto",
+            "float":"none",
+        })
+        $(".text img").each(function(){ 
+        var Width = $(this).attr("style").indexOf("width"); 
+        if(Width != (-1)){
+             $(this).wrapAll("<div style='text-align:center'></div>");
+        }else{$(this).css({"width":"100%"});} 
+        }); 
+	})
+
+	$(".sTop").click(function () {
+	    var speed=300;
+	    $('body,html').animate({ scrollTop: 0 }, speed);
+	    return false;
+	});
+	var aHeight=$(".bdsharebuttonbox").offset().top;
+	var bHeight=$(".edit_recom").offset().top;
+	var cHeight=$(".related-articles").offset().top;
+	$(window).scroll(function(){
+	  	
+		var scroH = $(this).scrollTop();
+	
+	    if(scroH>=aHeight){
+	   		$(".bdsharebuttonbox .fiex").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<aHeight){
+    		$(".bdsharebuttonbox .fiex").css({'position':'relative'});
+    	}
+    	if(scroH>=bHeight+10){
+	   		$(".edit_recom").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<bHeight){
+    		$(".edit_recom").css({'position':'relative'});
+    	}
+    	if (cHeight >= $(window).scrollTop() && cHeight < ($(window).scrollTop()+$(window).height())) {
+			$(".related-articles .img-box a").addClass('fadeIn')
+    	}
+    	
+	})
+	
+	var video_url = $("iframe").attr('src');
+	if(video_url!= undefined){
+		var urlId=(video_url.split('page/')[1]).split('.html')[0];
+		var Url="https://v.qq.com/iframe/player.html?vid="+urlId+"&tiny=0&auto=0"
+		$('iframe').attr('src',Url);
+	}
+	
+
+	$(window).scroll(function(){
+		var wHeight=$(window).height();
+		var top = $(document).scrollTop();
+		if(top>wHeight){
+			$(".sTop").show();
+		}
+		else{
+			$(".sTop").hide();
+		}
+
+	})
+
+
+</script>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : "中石化的原油“魔鬼交易”",	
+			bdDesc : "超预期的波动永远是一个巨大的、看不见的深坑，客户、投顾总有一个会掉到坑里。           ",	
+			bdUrl : "http://m.laohucaijing.com"+'/home/detail/'+"132907"	
+		},
+		share : [{
+			"bdSize" : 16
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<footer style="background-size:cover">
+    <div class="wrap">
+        <img alt="老虎财经" src="http://images.laohucaijing.com/new_www/images/ewm.jpg" class="fl code" width="92" height="92" style="float: right;margin-left:0;margin-right:51px">
+        <div class="fl footRight" style="width:1040px">
+            <div class="fl aboutLink" style="margin-top: 70px">
+                <span class="fl">友情链接：</span>
+                <ul class="clearfix" style="float: left;">
+                
+                                    
+                    <li><a rel="" href="http://www.pedaily.cn" target="_blank">投资界</a></li>
+                                    
+                    <li><a rel="" href="http://finance.ifeng.com" target="_blank">凤凰网财经</a></li>
+                                    
+                    <li><a rel="" href="http://news.cnfol.com/" target="_blank">中金在线</a></li>
+                                    
+                    <li><a rel="" href="http://money.stockstar.com/" target="_blank">证券之星</a></li>
+                                    
+                    <li><a rel="" href="http://www.gupiao8.com/" target="_blank">股票吧</a></li>
+                                    
+                    <li><a rel="" href="http://www.cir.cn/" target="_blank">中国产业调研网</a></li>
+                                    
+                    <li><a rel="" href="http://www.jpm.cn" target="_blank">金评媒</a></li>
+                                    
+                    <li><a rel="" href="http://www.wangdaidongfang.com" target="_blank">网贷东方</a></li>
+                                    
+                    <li><a rel="" href="http://www.pedata.cn/" target="_blank">私募通</a></li>
+                    
+                </ul>
+                <span style="float: left;">信息举报或投诉可联系: 021-80316509</span>
+            </div>
+            <div class="copyright">
+              Copyright © 2012 - 2015 Laohucaijing.com <i>环球老虎财经</i>版权所有 沪ICP备12011498号
+              <span style="margin-left: 15px;"><img style="margin-right:5px;" src="http://images.laohucaijing.com/newimages/hao.png">沪公网安备 31011002001247号 </span>
+              <a style="color: #fff;margin-left: 22px" href="/Www_protocol">免责声明</a>
+              <a href="http://www.shjbzx.cn/ " target="_blank"><img style="width: 140px;margin-top: -37px;margin-left: 111px;" src="http://images.laohucaijing.com/new_www/images/jb.png" alt=""></a>
+             </div>
+        </div>
+    </div>
+</footer>
+<script>
+    //头部微信
+    var timerc;
+    //鼠标移入微信，微信二维码显示
+    $("#wexin").mouseenter(function(){
+        clearTimeout(timerc);
+        $(".wexin_code").animate({"width":'150px',"opacity":'1'},500);
+    })
+    //鼠标移出微信，
+    $("#wexin").mouseleave(function(){
+        timerc=setTimeout(function(){
+            //半秒钟延迟看鼠标是否在悬浮框中
+            if(!$(".wexin_code").hasClass("hover")){//不在悬浮框
+                $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+            }
+            else{
+                $(".wexin_code").fadeIn();
+            }
+        },500);
+    })
+    // 鼠标移入微信二维码
+    $(".wexin_code").mouseenter(function(){
+        $(".wexin_code").addClass("hover");
+    })
+    // 鼠标移出微信二维码
+    $(".wexin_code").mouseleave(function(){
+        $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+        $(".wexin_code").removeClass("hover");
+    })
+</script>
+</body>

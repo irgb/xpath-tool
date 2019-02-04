@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>30+新造车公司进入淘汰赛！生死看这四张牌 - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="新造车淘汰赛开启，这四张牌决定生死！凑齐王炸，还是底裤输光？">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://0.gravatar.com/avatar/6449afc226cce888c35b7535f0309947?s=96&#038;d=retro&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/xiongyuxiang" title="由origin发布" rel="author">origin</a></div>
+                <div class="author-posts">共发表554篇文章</div>
+                <div class="author-desc"></div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag2">微软</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag1">小米</a><a href="http://zhidx.com/p/tag/360" class="tag2">360</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag2">谷歌</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                30+新造车公司进入淘汰赛！生死看这四张牌            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/chedongxi/%e6%96%b0%e9%80%a0%e8%bd%a6%e8%bf%90%e5%8a%a8" rel="category tag">新造车运动</a>  <a href="http://zhidx.com/p/category/chedongxi" rel="category tag">车东西</a></span><span class="time">2019/01/08 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="851" height="555" src="http://oss.zhidx.com/uploads/2019/01/elon-e1546518291634-2.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/elon-e1546518291634-2.jpg 851w, http://oss.zhidx.com/uploads/2019/01/elon-e1546518291634-2.jpg?x-oss-process=image/resize,m_fill,w_460,h_300 460w, http://oss.zhidx.com/uploads/2019/01/elon-e1546518291634-2.jpg?x-oss-process=image/resize,m_fill,w_768,h_501 768w" sizes="(max-width: 851px) 100vw, 851px" />                </div>
+            <p><strong>车东西（公众号：chedongxi）</strong><br />
+<strong>文 | Origin</strong></p>
+<p>2018年，轰轰烈烈的新造车运动刚刚结束了它的第四年。经历了4年大爆炸，据说市面上一度出现了数百家车企，仅仅是车东西统计到的有名有姓的企业，就超过了30家，行业可谓空前繁荣。</p>
+<p>然而，同样是在2018年，新造车企业的分化全面显现，有人上市交付，有人却落得退场结局。</p>
+<p>传统上，一辆汽车的研发周期为4-5年。终于，在经历了4年的竞赛后，新造车这个班级中的优等生、次优生、中等生，乃至于“掉队生”，大致已经清晰。</p>
+<p>如何分辨一家新造车企业的发展态势与前景？看其四张关键手牌便可知晓。</p>
+<h2>一、决定新造车生死的四张牌</h2>
+<p>要想留在新造车的牌桌上，最关键的要看底牌够不够硬。</p>
+<p>那么，决定一家新造车是否留下来的关键牌是什么？</p>
+<p>“<b>车、厂、人、钱</b>”是造车最重要的四要素与关键牌。</p>
+<p>其中“车”指的是“<b>新造车产品到底进入到哪一步”。</b></p>
+<p>其中有两个关键点——一是从概念车到量产定型，二是量产车上市开卖。如果一家新造车企业在2019年仍然没有量产车型上市，那就意味着已经错过了造车的窗口期，将面临传统车企大军压境下的白热化竞争。</p>
+<p><b>“厂”的关键是“新造车企业采取何种生产模式，以及是否搞定了生产”。</b></p>
+<p><b>一家新造车企业采取代工模式生产车辆，还是</b><b>自建工厂</b>进行生产，以及自建工厂生产是否取得了资质。解决生产问题，是新造车团队拿出量产车后最关键的一步，直接决定产品能否走上市场。</p>
+<p><b>“人”的关键是“管理团队是否足够完成造车事业”。</b></p>
+<p>从产品设计到最终上市，新造车需要多方面的人才，并且每个方面的人才都不能有明显的短板。</p>
+<p>同时，进入到2019年，新造车进入决胜期，对“人”还有另一个重大要求——人才团队需要稳定，核心团队不能有重大变动或流失。</p>
+<p><b>最后，“钱”的关键在于，“造车团队的资金是否够花”。</b></p>
+<p>面对资本寒冬，重资产的造车要有充足<b>的</b>现金储备。同时公司背后的金主是否强大也相当重要——如果金主够大够呛，就可以为团队持续输血，在逆境下也能维持公司生存。</p>
+<p>需要注意的是，上述四个指标，是一家新造车企业必不可少的。这相当于是决定新造车生死的四张牌，缺失了任何一环，木桶效应就可能出现，让造车之路步履维艰。</p>
+<p><strong>反过来，一家车企如果集齐了“车厂人钱”四张牌，那么就相当于拥有了“王炸”，在眼下暂时进入了造车的“安全领域”。</strong></p>
+<p><strong>如果缺了一张牌，那么可以认为是新造车中的追赶者，努努力还有希望进入第一梯队；</strong></p>
+<p><strong>缺两张牌的玩家，造车之路已经初现危机，需要帮扶；</strong></p>
+<p><strong>如果缺了三张以上的牌，那么无疑是新造车中的掉队者，造车已经进入地狱难度。</strong></p>
+<p><img class="alignnone size-full wp-image-139756" src="http://oss.zhidx.com/uploads/2019/01/未标题-1-拷贝.jpg" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="710" height="1582" srcset="http://oss.zhidx.com/uploads/2019/01/未标题-1-拷贝.jpg 710w, http://oss.zhidx.com/uploads/2019/01/未标题-1-拷贝.jpg?x-oss-process=image/resize,m_fill,w_135,h_300 135w, http://oss.zhidx.com/uploads/2019/01/未标题-1-拷贝.jpg?x-oss-process=image/resize,m_fill,w_460,h_1024 460w" sizes="(max-width: 710px) 100vw, 710px" /></p>
+<h2>二、A类玩家：四张牌齐全 造车已经上岸</h2>
+<p>按照“车厂人钱”的标准，目前能够算得上四张牌齐全的新造车玩家，能够数出来的也就不到五家——最显眼的是蔚来、小鹏、威马。</p>
+<p>他们一个共同的特点是，车都开始卖了，但同时，各家手上的牌又略有不同。</p>
+<p><strong>在“钱”这张牌上，蔚来、威马、小鹏背后都有大资本、大金主支持。</strong></p>
+<p>其中蔚来通过股权融资+IPO，已经募得超过30亿美元资金，背后站着腾讯、小米、百度、京东、红杉、高瓴等互联网圈半壁江山，同时蔚来还是美股上市公司；</p>
+<p>而威马则通过两轮超级融资收获20亿美元，百度腾讯都是其投资方；</p>
+<p>原来在资本动作上相对低调的小鹏汽车，在2018年也迎来融资大爆发，拿到了100亿元左右的融资，背后的大金主则是阿里。</p>
+<p><img class="alignnone size-full wp-image-136784" src="http://oss.zhidx.com/uploads/2018/11/%E5%B0%8F%E9%B9%8F%E5%B1%95%E5%8F%B0%E5%89%AF%E6%9C%AC800.png" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2018/11/%E5%B0%8F%E9%B9%8F%E5%B1%95%E5%8F%B0%E5%89%AF%E6%9C%AC800.png 800w, http://oss.zhidx.com/uploads/2018/11/%E5%B0%8F%E9%B9%8F%E5%B1%95%E5%8F%B0%E5%89%AF%E6%9C%AC800.png?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2018/11/%E5%B0%8F%E9%B9%8F%E5%B1%95%E5%8F%B0%E5%89%AF%E6%9C%AC800.png?x-oss-process=image/resize,m_fill,w_768,h_480 768w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="500" /></p>
+<p>小鹏汽车董事长 何小鹏</p>
+<p><strong>“车”这张牌，三家公司的定位有着明显的不同。</strong></p>
+<p>蔚来高举高打，蔚来ES 8与ES 6都瞄向豪华纯电SUV市场，超规格的随车服务是一大独创；同时蔚来的ES 8已经交付了近万台。</p>
+<p>小鹏定位“低配版特斯拉”，强调自动驾驶与智能运营，小鹏G3在15万以下的智能电动SUV市场上竖起了一面旗；小鹏G3刚刚开始交付，今年一季度会正式上量。</p>
+<p>威马则发挥其传统汽车人造车的供应链资源优势，用10万起步的EX5在造车新势力的纯电动SUV中扮演着“价格屠夫”；威马EX 5略微遭遇了一些交付问题，但目前也有数千台交付量。</p>
+<p><strong>而“人”这张牌上，三家企业的团队组成有传统派主导与互联网派主导。</strong></p>
+<p>蔚来组建了一个中美德的国际化团队，李斌、秦力洪、朱江、李峰等高管人才都是互联网、汽车、管理咨询行业的翘楚。创始人李斌的互联网出身让蔚来看重软件，但蔚来最近因为车载系统的缓慢进度，刚刚“炒”掉了分管业务的蔚来北美CEO伍思丽，团队略有变动。</p>
+<p><img class="alignnone size-full wp-image-138533" src="http://oss.zhidx.com/uploads/2018/12/WechatIMG265.jpeg-%E6%8B%B7%E8%B4%9D.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2018/12/WechatIMG265.jpeg-%E6%8B%B7%E8%B4%9D.jpg 800w, http://oss.zhidx.com/uploads/2018/12/WechatIMG265.jpeg-%E6%8B%B7%E8%B4%9D.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2018/12/WechatIMG265.jpeg-%E6%8B%B7%E8%B4%9D.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2018/12/WechatIMG265.jpeg-%E6%8B%B7%E8%B4%9D.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="600" /></p>
+<p>蔚来汽车董事长李斌与总裁秦力洪</p>
+<p>小鹏汽车在2018年迎来了董事长、UC创始人何小鹏的All in，随即人员扩张到5000人以上，每个月引入一个副总裁，包括前特斯拉Autopilot机器学习负责人谷俊丽、前京东集团高级副总裁熊青云、前摩根大通亚太区投行主席等股宏地等人分管自动驾驶、品牌构建、销售、融资等具体业务，目前团队相对稳定，且高管阵容较去年有了明显的增强。</p>
+<p>威马的团队则一直相对稳定，沃尔沃中国销售公司CEO出身沈晖搭班一批上汽通用的汽车老兵，使得威马对供应链的掌管能力极强。</p>
+<p><strong>在“厂”这张牌上，蔚来、小鹏同威马的出身不同带来了路线的分化。</strong></p>
+<p>蔚来、小鹏两个互联网造车派都选择了代工模式，分别与江淮、海马合作解决了生产问题，并且各自在上海、肇庆储备了生产工厂的建设用地。</p>
+<p>威马有传统造车经验加身，相信自己生产更能保证品质，因此一上场就通过收购大连黄海取得造车资质，在温州自建工厂，克服种种阻力完成了车辆自产。</p>
+<p>总地来说，蔚来、威马、小鹏的四张牌各有各的特色，但无疑都是齐全的。上文已经说过，凑齐四张，便是新造车企业的一张王炸，在竞争中可保“平安”。</p>
+<p>换句话说，蔚来、威马、小鹏在这一阶段的新造车竞赛中，已经“先行上岸”。</p>
+<h2>三、B类玩家：首款车进度过半 需加速追赶</h2>
+<p>新造车中的A类玩家一只手数得过来，而第二梯队的玩家数量更多。</p>
+<p>“车厂人钱”四大要素中，他们主要缺失其中的一项，但就是这一项让他们的距离被拉开，车东西将其归为B类玩家。</p>
+<p>B类新造车企业也有三个典型：爱驰、拜腾与车和家。他们的共同点在于“钱、人、厂”都不缺，但没有可交付的量产车来证明自己。</p>
+<p><strong>在关键的“车”维度上，三家企业的量产车不约而同地在2019年下半年上市。</strong></p>
+<p>三家企业都在造车路上遭遇了一些挫折。其中拜腾与爱驰都在原和谐富腾的风波中遭受了影响，实际上是在2017年重新出发；同样，车和家的首款车SEV也因为政策被毙，受到了影响。</p>
+<p><strong>具体到现在的产品上，三家车企的产品有自身的差异性——一定程度上也意味着竞争力。</strong></p>
+<p>爱驰的U5定位20万左右的纯电动车，虽然极力强调智能属性，但总体偏传统，可以插拔的后备箱电池包是一大亮点。</p>
+<p><img class="alignnone size-full wp-image-137468" src="http://oss.zhidx.com/uploads/2018/11/wxtt-%E6%8B%B7%E8%B4%9D-e1543500046430.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2018/11/wxtt-%E6%8B%B7%E8%B4%9D-e1543500046430.jpg 800w, http://oss.zhidx.com/uploads/2018/11/wxtt-%E6%8B%B7%E8%B4%9D-e1543500046430.jpg?x-oss-process=image/resize,m_fill,w_450,h_300 450w, http://oss.zhidx.com/uploads/2018/11/wxtt-%E6%8B%B7%E8%B4%9D-e1543500046430.jpg?x-oss-process=image/resize,m_fill,w_768,h_512 768w, http://oss.zhidx.com/uploads/2018/11/wxtt-%E6%8B%B7%E8%B4%9D-e1543500046430.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="533" /></p>
+<p>爱驰U5</p>
+<p>拜腾的M-Byte则用48寸的车载全面屏吸引了大量目光，虽然创始人是传统车企出身，但思维很超前，具有突破性，甚至可以说是新造车中最激进的存在。</p>
+<p><img class="alignnone size-full wp-image-139658" src="http://oss.zhidx.com/uploads/2019/01/%E5%86%85%E9%A5%B0800.png" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2019/01/%E5%86%85%E9%A5%B0800.png 800w, http://oss.zhidx.com/uploads/2019/01/%E5%86%85%E9%A5%B0800.png?x-oss-process=image/resize,m_fill,w_533,h_300 533w, http://oss.zhidx.com/uploads/2019/01/%E5%86%85%E9%A5%B0800.png?x-oss-process=image/resize,m_fill,w_768,h_432 768w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="450" /></p>
+<p>▲拜腾M-Byte量产车内饰</p>
+<p>车和家的理想智造one，则从里程焦虑入手，选择了增程式纯电动车的路线，这使得其成为新造车中的“孤例”。</p>
+<p><strong>在“钱”这个方面，这三家新造车公司虽然是二线玩家，但都不缺钱。</strong></p>
+<p>爱驰累计融资约70亿元，股东包括沙钢等产业资本，融钱够多，金主够大。</p>
+<p>拜腾累计融资约55亿元，引入了一汽作为关键股东，同时有宁德时代加持。</p>
+<p>车和家累计融资也有近60亿元，股东兼有首钢等产业资本，也有经纬创投这样的互联网资本。</p>
+<p><strong>“人”的维度，这三家公司都有各自的“门脸”，并且人才团队比较稳定。</strong></p>
+<p>爱驰汽车总裁付强，原沃尔沃中国销售公司CEO；CEO付强，原上汽集团CFO；CTO王东晨，原一汽技术研究中心部长。三个从业经历均超过20年的老汽车人组在爱驰组建了专业团队，与威马颇有些相似。</p>
+<p>拜腾，其CEO毕福康曾是宝马集团副总裁、i8的缔造者，总裁戴雷也曾是宝马中国销售高级副总裁，两人搭伴组建的中国新造车品牌，在调性上天生带了德国血统。</p>
+<p>车和家，汽车之家创始人李想创办，新造车中又一个互联网派。李想的产品经理特质吸引了一批认可其思维的产品人。</p>
+<p><img class="alignnone size-full wp-image-134520" src="http://oss.zhidx.com/uploads/2018/10/%E6%9D%8E%E6%83%B3%E8%AE%B2%E8%A7%A3800.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2018/10/%E6%9D%8E%E6%83%B3%E8%AE%B2%E8%A7%A3800.jpg 800w, http://oss.zhidx.com/uploads/2018/10/%E6%9D%8E%E6%83%B3%E8%AE%B2%E8%A7%A3800.jpg?x-oss-process=image/resize,m_fill,w_600,h_300 600w, http://oss.zhidx.com/uploads/2018/10/%E6%9D%8E%E6%83%B3%E8%AE%B2%E8%A7%A3800.jpg?x-oss-process=image/resize,m_fill,w_768,h_384 768w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="400" /></p>
+<p>车和家CEO李想讲解理想智造One</p>
+<p><strong>“厂”的维度，三家企业都选择了自建工厂进行生产，在资质上不存在难以克服的问题。</strong></p>
+<p>其中，爱驰汽车在江西上饶的工厂已经封顶，设备开始进驻，如无意外也会收购一张资质。</p>
+<p>车和家与拜腾则分别收购力帆、华利的资产，初步解决了造车的资质问题。</p>
+<p>从团队、资本等方面来看，拜腾、爱驰、车和家这些B类玩家，与蔚来等第一梯队的差距并不明显，但不巧都遭遇了相当影响产品进度的“黑天鹅事件”。</p>
+<p><strong>B类新造车玩家们的当务之急，是保证各自的产品在2019年能够上市交付，尽力挤入第一梯队，在新造车的窗口关闭之前拿到上岸的船票。</strong></p>
+<p>同样，零跑、天际等新造车企业，也可以归入这一档中。</p>
+<p>此外，云度、前途等有传统汽车行业背景的新造车公司，虽然已经拿出了车，但团队对产品进行定义、寻找目标消费者的能力不强，后续缺乏发展空间，也可以归入B类玩家。</p>
+<h2>四、C类玩家：缺了两张牌，前路多艰险</h2>
+<p>一家新造车企业如果在“车厂人钱”中同时在两项资源上吃紧，那就意味着手牌出现问题，要通向造车彼岸的船，也开始漏水了。</p>
+<p>这样的新造车企业，车东西将其归为C类，典型案例包括合众新能源与奇点汽车。</p>
+<p><strong>从四张牌来看，两家新造车公司的“钱”与“车”都已经出现明显问题了。</strong></p>
+<p><strong>在“钱”这一方面，奇点欠薪，合众则是被“抽资”。</strong></p>
+<p>奇点汽车在公开的渠道上累计融资达到了70亿元，看上去应该不缺钱。但最近奇点汽车被爆出已经欠薪三月；同时奇点汽车的城市体验店建设计划也停滞了。多种迹象表明奇点目前的资金状况不容乐观。</p>
+<p>而合众新能源纸面上融资达到25亿元，不算多。更关键的是，合众新能源刚刚失去了大金主——曾经为其带来12.5亿资金的地产大亨华夏幸福董事长王文学。王文学曾经一度是合众新能源的代表法人，但房地产主业压力增大后，王文学选择从出行产业推出，目前他在合众的股份只剩下个位数。而合众新能源的新金主也还未找到。</p>
+<p><strong>在“车”的维度，奇点是无车可卖，合众是有车但很难卖出去。</strong></p>
+<p>奇点汽车的量产车iS6名义上会在2019年上市，但在此之前，其量产车上市时间已经多次跳票，从2018年第三季度一直改到了今年初。结合其缺钱的现状，量产进度不容乐观。</p>
+<p>合众新能源在量产车上的问题在于，华夏幸福的离开也带走了旱涝保守的订单——华夏幸福曾经依托旗下的共享出行产业签下了2万台合众新能源量产车哪吒N01。原本为B端渠道而生的哪吒N01，现在要面对C端市场，压力可想而知。其真正面向C端消费者的哪吒N03，眼下还处在概念车阶段。</p>
+<p><img class="alignnone size-full wp-image-139565" src="http://oss.zhidx.com/uploads/2019/01/哪吒-拷贝.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://oss.zhidx.com/uploads/2019/01/哪吒-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/哪吒-拷贝.jpg?x-oss-process=image/resize,m_fill,w_495,h_300 495w, http://oss.zhidx.com/uploads/2019/01/哪吒-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_466 768w" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="800" height="485" /></p>
+<p>哪吒N01</p>
+<p><strong>缺了“车”与“钱”两个关键要素的奇点和合众新能源，情况已经不容乐观。如果要继续造车，急需实力强大的外援相助。</strong></p>
+<p>有一些新造车企业虽然没有坏消息传出，但在2018年末、2019年初的时间点仍然在玩概念、没有实车推出的，也说明对关键的窗口期把握不牢，获得顶级资本青睐的机会也很少。华人运通、万向、帝特律、昶洧等可归为此类。</p>
+<h2>五、D类玩家：无牌可打，濒临淘汰</h2>
+<p>如果一家新势力的造车四要素中缺乏了三项乃至更多，那么其处境基本就是无牌可打。他们要考虑的问题不是造车何时上岸，而是如何避免已经岌岌可危的船下一秒就沉没。</p>
+<p>车东西将这一类新造车玩家归为D类，其中既有不那么出名的蓥石汽车，也有人人皆知的FF（法拉第未来）。</p>
+<p><strong>在关键的“钱”方面，两家目前都在断炊中。</strong></p>
+<p>蓥石汽车在2018年也有一份工资延发通知被曝光，从2017年开始，蓥石汽车就再未融到钱，处于断粮的状态。</p>
+<p>而FF虽然总融资超过了20亿美金，但目前也处于极度缺钱的状态，和恒大的争端导致没有新的融资进入，在硅谷的员工还被迫降薪至当地最低标准。</p>
+<p><strong>同样重要的“人”的维度，蓥石和FF的团队都是四分五裂</strong>。</p>
+<p>蓥石汽车的团队为上汽泛亚背景，CEO高卫民曾是泛亚汽车副总经理，但知情人士表示，在薪资出现问题后，蓥石的团队大部分已经各谋出路。</p>
+<p>FF这边，FF核心高管走出殆尽。到目前为止，法拉第未来分管各项业务的5名创始高管，已经悉数离开。连一直坚守到最后的元老高级副总裁Dag Reckhorn，也在2018年11月辞职。</p>
+<p><strong>“厂”这一指标上，蓥石与FF的生产问题都未能解决。</strong></p>
+<p>蓥石汽车并未取得资质，也未和某一传统大车企达成长期的合作伙伴关系，车型生产问题没有解决。</p>
+<p>FF则在与恒大的争端中，失去了位于广州的南海工厂，加上贾跃亭的“老赖”身份，FF在国内生产的可能性微乎其微。</p>
+<p><strong>而在“车”的维度上，两家公司的车型都还没有开启量产阶段。</strong></p>
+<p>蓥石汽车的A0级量产车，直到危机爆发时，还在测试过程中，未曾公开路面。</p>
+<p>FF的量产车FF91，则只有少量试装车出现在照片中，其产品开发进度至今是个谜。</p>
+<p><img class="alignnone size-full wp-image-139749" src="http://oss.zhidx.com/uploads/2019/01/006kDdwVly1fwy20gez69j30xc0hg0wg.jpg" alt="30+新造车公司进入淘汰赛！生死看这四张牌" width="690" height="361" srcset="http://oss.zhidx.com/uploads/2019/01/006kDdwVly1fwy20gez69j30xc0hg0wg.jpg 690w, http://oss.zhidx.com/uploads/2019/01/006kDdwVly1fwy20gez69j30xc0hg0wg.jpg?x-oss-process=image/resize,m_fill,w_573,h_300 573w" sizes="(max-width: 690px) 100vw, 690px" /></p>
+<p>路测中的FF91</p>
+<p>在车厂人钱的关键指标上，蓥石汽车和FF目前可以说是“一无所有”，一只脚已经悬空，在失败的深渊旁摇摇欲坠。</p>
+<p>其中，FF有大量的专利以及亮眼的产品，理论上还存在白衣骑士挺身而出相救的可能，而一直都没什么声响的蓥石汽车可能会在沉默中走向消失。</p>
+<h2><b>结语：新造车残酷淘汰开始</b></h2>
+<p><b>回望新造车这四年发展，声势不可谓不浩大，数十家企业竞发。但造车的艰难考卷下，高分岂是轻易就能拿到？</b></p>
+<p>海量的资本、复杂的生产、真正能打入消费者心中的车型，以及一个足够靠谱的团队，缺一不可。任何一面的欠缺，都会让造车的努力前功尽弃——不是市场占有率多少的问题，而是生死存亡的问题。</p>
+<p>在2020年新能源车补贴退坡、合资车企纯电动车入华之前，新造车们还有一年的时间补足短板。可以预见的是，在2019年，众多新造车企业会消失在历史中。2019年，新造车的末位淘汰赛将会成为残酷的30进5乃至进3的生存之战。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139741'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139741">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>17</span>
+                </div>
+                <div class="social-share" data-title="30+新造车公司进入淘汰赛！生死看这四张牌" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139741">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139741">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电动公交时代来了！燃油公交出租将成历史 - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="国内公共交通体系将率先实现电动化，并推动新能源乘用车发展。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/头像.jpeg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="晓寒" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/xiaohan" title="由晓寒发布" rel="author">晓寒</a></div>
+                <div class="author-posts">共发表642篇文章</div>
+                <div class="author-desc">油门踩到油箱，自动驾驶开始。</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag2">特斯拉</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag2">通用</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag1">微软</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/ar" class="tag1">AR</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag2">腾讯</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                电动公交时代来了！燃油公交出租将成历史            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/chedongxi/%e7%94%b5%e5%8a%a8%e6%b1%bd%e8%bd%a6" rel="category tag">电动汽车</a>  <a href="http://zhidx.com/p/category/chedongxi" rel="category tag">车东西</a></span><span class="time">2019/01/02 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="500" src="http://oss.zhidx.com/uploads/2019/01/850-3.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/850-3.jpg 850w, http://oss.zhidx.com/uploads/2019/01/850-3.jpg?x-oss-process=image/resize,m_fill,w_510,h_300 510w, http://oss.zhidx.com/uploads/2019/01/850-3.jpg?x-oss-process=image/resize,m_fill,w_768,h_452 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p class="p3"><strong><span class="s2">车东西（公众号：</span><span class="s1">chedongxi</span><span class="s2">）<br />
+</span><span class="s2" style="line-height: 1.5;">文</span><span class="s1" style="line-height: 1.5;"> | </span><span class="s2" style="line-height: 1.5;">晓寒</span></strong></p>
+<p class="p1"><span class="s1">元旦假期结束后第一个工作日，新能源汽车领域就传来两个重磅消息。</span></p>
+<p class="p1"><span class="s1">一是深圳完成了此前定下的目标</span><span class="s3">——2019</span><span class="s1">年前完成出租车全面电动化，而深圳早在</span><span class="s3">2017</span><span class="s1">年，还实现了公交车的纯电动化。另外一个是昆明市宣布自</span><span class="s3">2019</span><span class="s1">年起，新增网约车必须为纯电动汽车。</span></p>
+<p><img class="alignnone size-full wp-image-139474" src="http://oss.zhidx.com/uploads/2019/01/电动出租车800.jpg" alt="电动公交时代来了！燃油公交出租将成历史" width="800" height="400" srcset="http://oss.zhidx.com/uploads/2019/01/电动出租车800.jpg 800w, http://oss.zhidx.com/uploads/2019/01/电动出租车800.jpg?x-oss-process=image/resize,m_fill,w_600,h_300 600w, http://oss.zhidx.com/uploads/2019/01/电动出租车800.jpg?x-oss-process=image/resize,m_fill,w_768,h_384 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p class="p1"><span class="s1">在政府大力推动新能源车的背景下，国内诸多城市在推动乘用车的同时，也在着力对公交、出租等公共交通体系进行新能源升级。</span></p>
+<p class="p4"><span class="s2"><b>本次深圳率先完成公交</b></span><span class="s3"><b>/</b></span><span class="s2"><b>出租完全纯电化，昆明要求新增网约车必须是纯电动车，未来必将有跟多城市跟进，意味着以公交、出租</b></span><span class="s3"><b>/</b></span><span class="s2"><b>网约车为代表的公共交通体系的纯电动化时代来了！</b></span></p>
+<h2 class="p6"><span class="s1">一、深圳成全球首个公交出租全电动化城市</span></h2>
+<p class="p1"><span class="s1">元旦期间，据南方日报报道，深圳交委透露深圳市纯电出租车占已超过</span><span class="s3">99%</span><span class="s1">，基本实现全面电动化。</span></p>
+<p class="p1"><span class="s1">作为国家</span><span class="s3">“</span><span class="s1">节能与新能源汽车示范推广</span><span class="s3">”13</span><span class="s1">个试点城市之一，深圳自</span><span class="s3">2010</span><span class="s1">年就开始在乘用车、公交、出租等多个领域推广新能源汽车。</span><span class="s3">2017</span><span class="s1">年底，深圳已经率先实现公交车的完全纯电化。</span></p>
+
+<p class="p1"><span class="s1"><img class="alignnone size-full wp-image-139477" src="http://oss.zhidx.com/uploads/2019/01/电动公交800.jpg" alt="电动公交时代来了！燃油公交出租将成历史" width="800" height="400" srcset="http://oss.zhidx.com/uploads/2019/01/电动公交800.jpg 800w, http://oss.zhidx.com/uploads/2019/01/电动公交800.jpg?x-oss-process=image/resize,m_fill,w_600,h_300 600w, http://oss.zhidx.com/uploads/2019/01/电动公交800.jpg?x-oss-process=image/resize,m_fill,w_768,h_384 768w" sizes="(max-width: 800px) 100vw, 800px" />公交车实现完全纯电化后，深圳在今年上半年还印发《</span><span class="s3">2018</span><span class="s1">年</span><span class="s3">“</span><span class="s1">深圳蓝</span><span class="s3">”</span><span class="s1">可持续行动计划》，提出要在</span><span class="s3">2018</span><span class="s1">年底将现有</span><span class="s3">7500</span><span class="s1">辆出租车全部更换为纯电动车型，并在充电等基础设施以及行驶路权等方向发力配合。</span></p>
+<p class="p1"><span class="s1">元旦过后，深圳按照计划完成出租车电动化目标，成为全球首个将出租、电动化等城市公共交通体系全面实现电动化的城市，成果斐然。</span></p>
+<p class="p1"><span class="s1">此外，《</span><span class="s3">2018</span><span class="s1">年</span><span class="s3">“</span><span class="s1">深圳蓝</span><span class="s3">”</span><span class="s1">可持续行动计划》还指出，在</span><span class="s3">2018</span><span class="s1">年</span><span class="s3">5</span><span class="s1">月</span><span class="s3">1</span><span class="s1">日前新增营运类轻型货车要全部为纯电动车，在</span><span class="s3">2018</span><span class="s1">年底淘汰</span><span class="s3">2</span><span class="s1">万辆营运类轻型燃油车，并完成</span><span class="s3">1.34</span><span class="s1">万个配套充电桩的建设工作。</span></p>
+<h2 class="p6"><span class="s1">二、昆明要求新增网约车全部为纯电动车</span></h2>
+<p class="p1"><span class="s1">元旦过后第一天，昆明出租车管理局就向媒体表示，从</span><span class="s3">2019</span><span class="s1">年</span><span class="s3">1</span><span class="s1">月</span><span class="s3">1</span><span class="s1">日起，昆明市新增网约车必须是纯电动车，燃油车、混动汽车将不予发放车辆营运证，其也成为国内第一批在政策层面强制要求新增网约车为纯电车型的城市。</span></p>
+<p class="p1"><span class="s1">今年</span><span class="s3">9</span><span class="s1">月，云南省政府印发《云南省加快新能源汽车推广应用工作方案》，明确指出</span><span class="s3">2018</span><span class="s1">年昆明市要推广</span><span class="s3">3.7</span><span class="s1">万辆新能源汽车，并新增</span><span class="s3">1.1</span><span class="s1">万个充电桩。</span></p>
+<p><img class="alignnone size-full wp-image-139478" src="http://oss.zhidx.com/uploads/2019/01/云南800.png" alt="电动公交时代来了！燃油公交出租将成历史" width="800" height="434" srcset="http://oss.zhidx.com/uploads/2019/01/云南800.png 800w, http://oss.zhidx.com/uploads/2019/01/云南800.png?x-oss-process=image/resize,m_fill,w_553,h_300 553w, http://oss.zhidx.com/uploads/2019/01/云南800.png?x-oss-process=image/resize,m_fill,w_768,h_417 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p class="p1"><span class="s1">《云南省加快新能源汽车推广应用工作方案》指出，各地政府要积极从市政用车和政府主导的出租、公交等公共交通体系入手开始推进，进而有了昆明的这一规定。</span></p>
+<p class="p1"><span class="s1">与深圳一样，《云南省加快新能源汽车推广应用工作方案》中同样也在推动城市配送车、物流车的纯电动化，并且通过加快充电基础设施建设和给予优先路权等方式进行鼓励。</span></p>
+<h2><strong>三、一线城市走在前列</strong></h2>
+<p><strong>事实上，国内远不止深圳昆明在大力推动公共交通体系的新能源化。</strong></p>
+<p>12月5日，工信部与赛迪一同发布的《2018中国新能源公交车城市推广研究报告》显示，2017年全国公交车总体保有量在70多万台，其中新能源总体替换率已达35.9%，即每3辆公交中就有一台是新能源车，并且新增公交车中有87%都为新能源车型。</p>
+<p><strong>那么国内领军城市北上广的进展如何呢？</strong></p>
+<p>此前报道消息，北京公交集团计划在“十三五”期间更新1万辆纯电公交车，而2017年北京纯电公交车的保有量已经达4500台占比65%，纯电出租车超过2000台。</p>
+<p>上海市2017年10月公布的数据显示，其新能源公交车超过3800台，未来新增公交车中将主要采购纯电车型。与此同时，上海市也在今年开启了纯电出租车的投放使用。</p>
+<p>与深圳相邻的广州市动作更快，今年10月份纯电公交保有量就超过6600台。与此同时，广州市自2018年起，要求新增和更新出租车中的80%为新能源车型，并到2022年实现出租的完全新能源化。</p>
+<h2 class="p6"><span class="s1">结语：公共交通电动化时代真来了</span></h2>
+<p class="p1"><span class="s3">2018</span><span class="s1">年中国车市结束了连续</span><span class="s3">28</span><span class="s1">年的高速增长历史，出现车市寒冬，但新能源车市场却逆势上扬，产销量纷纷突破百万，真正成为车市中一股关键力量。</span></p>
+<p class="p1"><span class="s1">乘用车之外，各地政府推动公共交通新能源化的意愿同样坚决。</span></p>
+<p class="p1"><span class="s1">先行者深圳已经率先完成公交、出租的纯电动化，而昆明在推动公交出租纯电化的同时，也第一批规定新增网约车必须为纯电动车，将新能源车的推广范围更进一步。</span></p>
+<p class="p1"><span class="s1">我国政府推动新能源车的决心与执行力不必多言，在深圳、昆明这类城市的带动下，</span><span class="s3">2019</span><span class="s1">年势必将有更多城市跟进，出现更多的电动出租车和电动公交车。</span></p>
+<p class="p1"><span class="s1">很明显，从</span><span class="s3">2019</span><span class="s1">年开始，会有越来越多的城市完成公交、出租、网约车的纯电动化，带领公交体系真正进入电动时代！</span></p>
+<p class="p1"><span class="s1">最后，公交体系实现纯电化有诸多好处，不仅能带动起一批新能源产业，促进车型和充电基础设施的繁荣，同时也会给城市居民更多体验了解纯电动汽车的机会，进而推动纯电乘用车的进一步普及，最终促进所有汽车向着新能源方向发展。</span></p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139473'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139473">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>6</span>
+                </div>
+                <div class="social-share" data-title="电动公交时代来了！燃油公交出租将成历史" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139473">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139473">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

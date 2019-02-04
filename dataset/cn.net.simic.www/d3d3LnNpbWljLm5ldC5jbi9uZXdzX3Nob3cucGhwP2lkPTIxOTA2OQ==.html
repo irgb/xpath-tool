@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>上港集团总裁严俊：航运区块链应用已见曙光_国际海事信息网</title>
+<meta name="keywords" content="" />
+<meta name="description" content="上港集团总裁严俊：航运区块链应用已见曙光" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">上港集团总裁严俊：航运区块链应用已见曙光</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-04 &nbsp;&nbsp;
+					浏览量：1288&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p>海浪的品格，就是无数次被礁石击碎又无数次地扑向礁石。</p>
+<p>　　2018年是区块链最热的一年，除了熟为人知的比特币以外，大多数人其实还很难分清&ldquo;币圈&rdquo;与&ldquo;链圈&rdquo;的区别。而对比已经濒临爆仓的&ldquo;币圈&rdquo;而言，&ldquo;链圈&rdquo;所代表的区块链技术正一步步被人所熟识、认同、接纳。</p>
+<p>　　著名咨询公司OliverWyman曾在报告中预测&ldquo;利用区块链技术缩减结算周期，每年可以节省100亿至200亿美元，这笔节省的巨额费用正是与区块链产业相关的市场空间。&rdquo;</p>
+<p>　　而作为一家航运媒体，我们认为，链圈技术如果想成功应用到航运产业之中，一定离不开港口、船东（承运人）们的努力，以及货主等行业从业者的推动。而诸如马士基、中远海运、上港集团等行业领先企业，似乎在起跑线上就具备了整合这一资源的先天优势，但未必会带着优势跑到终点。</p>
+<p>　　更准确地来说船东+货主+港口+物流企业共同参与的区块链模式，其价值首先在于处在物流配送之中的&ldquo;货&rdquo;，可以多方账本实时共享、易于追踪，并且数据透明，这将极大地提高实体业务的工作效率。其次，区块链信息具有真实有效、不可篡改、精确追溯与责任界定的特质，在实操中还可以防止货物的无辜丢失，易于监管部门的分析和调查，在真实可视化展示物流过程中，可以实现全面电子化的管理。</p>
+<p>　　就是在这样的全民区块链热的契机之下，航运界网与上港集团总裁严俊先生进行了一期特别的采访。</p>
+<p>　　怎么定义跟中远海运的关系？</p>
+<p>　　严俊认为，上港集团和中远海运集团现在是&ldquo;完全战略合作&rdquo;的关系，这既是港航界的联合，也体现了制度优势，而且这种战略合作的关系将会朝着更好的方向发展。</p>
+<p>　　在航运界网的眼里，过去的两年是两家集团紧密联系的两年，而在2018年11月闭幕的中国首届进口博览会中的分论坛，由中远海运集团承办的2018国际海运（中国）年会，上港集团也是一如既往地参与其中。</p>
+<p>　　关于GSBN航运业区块链联盟</p>
+<p>　　2018年11月6日，迪拜环球港务集团、和记港口集团、PSA国际港务集团、上港集团、法国达飞集团、中远海运集运、长荣海运、东方海外、阳明海运等9家知名港航企业以及软件解决方案提供商货讯通（CargoSmart）共同签署意向书，就打造航运业区块链联盟&mdash;&mdash;全球航运商业网络（Global Shipping Business Network，GSBN）达成合作意向。</p>
+<p>　　作为当时的签约人，严俊告诉航运界网，GSBN联盟一定会朝着共赢多赢的方向去探索。</p>
+<p>　　彼时，航运界网曾评论称，这是一个超越海洋联盟的联盟，在区块链技术下，该联盟就联合打造航运业区块链在航运业的应用迈出了坚实的第一步。也许短期内我们还不清楚这些巨头要如何引领行业新趋势，但可以想象的是，众人拾柴火焰高，在链圈场景下其改变行业营商环境的影响力毋庸置疑。</p>
+<p>　　严俊认为，区块链上的所有利益相关方，都会根据其贡献多少，获得相应回报。但前述相关方要有以下四点共识：第一是认同行业标准；第二是认同链圈技术可以得到应用；第三是认同&ldquo;航运链圈&rdquo;架构的价值；最后是共同参与，即所有成员都要遵循利益分配格局的架构设计。</p>
+<p>　　当今全球有206个国家和地区、600多个港口，太多的市场机遇等待被&ldquo;链在一起&rdquo;。按照全球各地的当地法律法规，在同一数据标准下，实现跟全球性网络进行数据对接与数据交换。</p>
+<p>　　严俊表示，理想中的全球区块链联盟架构应该是&ldquo;区域链&rdquo;、&ldquo;行业链&rdquo;和&ldquo;国际联盟链&rdquo;，三者是相互融合的关系。</p>
+<p>　　在航运界网的理解中，航运、物流、港口都处在行业链之中，所有的物流数据信息都在行业链中运行、交换，随着&ldquo;货物&rdquo;的移动，如跨区域的&ldquo;货物&rdquo;运送，其背后的大数据将在区域链中行进交换，而区域与区域之间，所构成的就是基于每一个地区的区域链所形成的国际联盟链：全球所有的商品与产品，从产生起就被标记了相应的坐标、产品属性等相关数据。基于同一个大数据的链圈平台之中，任何被标记过的产品，都在&ldquo;国际联盟链&rdquo;的注视下，都有迹可循、精确追溯。</p>
+<p>　　例如一个从昆山经过上海出口到德国汉堡的集装箱，这个物流的全程将会被&ldquo;国际联盟链&rdquo;下的各个层级区域的区块链中进行痕迹标记。以往，货方只是大概了解自己的货装了箱、上了船，但具体船开到哪里、是否到港、货车信息等都无法精确地在第一时间掌握，简而言之，物流信息不对等。</p>
+<p>　　而如果运用链圈技术，物流配送的所有相关方都会清晰、及时地知晓某一票货物的真实状态等信息，完完全全数据化、透明化，这样一种技术，能够使整个行业从目前不透明的碎片化孤岛式运输得到彻底改变。</p>
+<p>　　严俊强调：&ldquo;航运区块链的应用已经看见了曙光。今后的2-3年是最关键的时间点，谁能够捅破窗户纸，在今后的行业地位中就会变的很重要。这一点，上港集团（SIPG）有自己的路要走。&rdquo;</p>
+<p>　　对此，航运界网向严俊也抛出一连串为什么：为什么要变革？没有区块链技术港航业就不能进步吗？如果一定有一家公司要站出来解决这件事，一定是船东或者港口公司吗，有没有可能是IT互联网公司？有没有可能是大货主公司？而严俊的答案也非常明确，区块链属于未来，链圈技术是安全的；同时在该技术背后，其理念是开放的。任何公司都有机会上牌桌，但任何一家公司想要在航运区块链的牌桌上得到呼风唤雨的话语权，除要有巨大的魄力和勇气外，还必须付出惊人的努力。</p>
+<p>　　没有船老大，也没有港老大，只有货老大</p>
+<p>　　在严俊看来，没有船老大，也没有港老大，只有货老大。就当前市场状况而言，货主、货代、船公司和港口公司的组成，其实是一个利益共同体，只有以服务为目的，平台才能够长久。坦率地说，航运界网曾遇见过有想法、有能力的货主，也知道许多勇气可嘉的船东，但如此有魄力、有远见、有格局的港口公司却并不多见。</p>
+<p>　　对于未来区块链牌桌上的人是谁，都有谁什么身份，其实并不重要。重要的是这个行业通过链圈技术会顺应时代潮流变得更好。在&ldquo;国际联盟链&rdquo;下，各方将最优势的部分整合在一起，加上人工智能、物联网等共同形成一个生态圈，就会出现新的突破，新的业态或者新的业务模式。</p>
+<p>　　区块链重新定义了NB？</p>
+<p>　　2017年时，严俊曾公开表示港口业大数据从整合走向跨界，数据的量级从过去的KB到现在的GB，未来可能是NB（数量级）。他表示，数据对一个行业来讲非常重要，企业通过对数据的分析来了解到客户的出货习惯、周期性变化等信息，从而有预见性的配置资源，更合理地使用资源进行调度。互联网也好，区块链也罢，都只是各代表一种技术阶段，而最终目标是为了让行业有更好的服务，而这都离不开大数据的支持。</p>
+<p>　　航运界网评论认为，按照目前区块链技术前进的脚步，&ldquo;国际联盟链&rdquo;的到来也许就是不久之后的事儿。如果&ldquo;国际联盟链&rdquo;日趋的完善，那集装箱行业势必会面临新的洗牌。港口码头、货主货代以及集装箱船东们的姿态与地位也将会改变。上港集团的经验告诉我们，优秀的决策者会促使企业不断进步与提升。</p>
+<p>　　后记：</p>
+<p>　　这是我们第二次与严俊总裁面对面深度的交流，不同于两年前在东大名678号红楼楼顶的交谈，这回我们对足球只字未提。对比两年前，这一次的交谈更加偏向技术从行业的宏观维度而言，严俊对链圈技术与港口航运业的结合有着透彻、长远的理解。这在过往我们所接触的受访者中，包括与链圈世界的老法师们对话而言，其格局都是不多见的，他所理解的区块链的世界更加真实、更易落地，更鼓舞人心。</p>
+<p>　　而从严俊身上，我们也可窥上港集团在新时代，新格局下致力于成为全球数字化港航业的引领者，他们正在积极把握开放型世界经济的发展规律，正在积极参与国际规则制定，并不断增强国际行业话语权。最清晰的脚印总会留在最泥泞的路上，唯有变革和提升感受科技的适应能力，才能让上港集团在航运界的江湖里值得期待，并始终保持领先。</p>
+<p>　　或许，&ldquo;航运+区块链&rdquo;的具体场景落地还需要一段时间。但我们有理由相信，这个世界终究会掌握在能够经受得住嘲笑与批评，并不断一路向前的人手中。</p>
+					<p align="center"></p>
+					<p align="right">来源：航运界</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219070">[下一篇] 2019年,“区块链+航运”这壶水会烧开么？</a>
+					   
+					 
+						<a href="news_show.php?id=219068">[上一篇] 今年山东青岛港、烟台港、日照港煤炭集港全部改为铁路或水路运输</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+									<li><a href="news_show.php?id=1" title="JCB打破记录成为第三大工程机械制造商">JCB打破记录成为第三大工程机械制造商</a></li>
+									<li><a href="news_show.php?id=2" title="用具制造商、物流商测试被动式RFID集装箱封条">用具制造商、物流商测试被动式RFID集装箱封条</a></li>
+									<li><a href="news_show.php?id=3" title="我国测控装备的发展现状及对策">我国测控装备的发展现状及对策</a></li>
+									<li><a href="news_show.php?id=4" title="射频识别技术原理、安全及应用研究">射频识别技术原理、安全及应用研究</a></li>
+									<li><a href="news_show.php?id=5" title="国内RFID应用及产业研究(中)">国内RFID应用及产业研究(中)</a></li>
+									<li><a href="news_show.php?id=6" title="制造业，向供应链要利润">制造业，向供应链要利润</a></li>
+									<li><a href="news_show.php?id=7" title="输送带行业必须坚持走可持续发展之路">输送带行业必须坚持走可持续发展之路</a></li>
+									<li><a href="news_show.php?id=8" title="整车企业如何才能实现实时物流管理">整车企业如何才能实现实时物流管理</a></li>
+									<li><a href="news_show.php?id=9" title="全自动运载-RFID系统优化物料流程和流通">全自动运载-RFID系统优化物料流程和流通</a></li>
+									<li><a href="news_show.php?id=10" title="仪征引资12亿建现代物流港">仪征引资12亿建现代物流港</a></li>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219664" title="我国首个石墨烯国家标准出炉">我国首个石墨烯国家标准出炉</a></li>
+							<li><a href="news_show.php?id=219672" title="中远海运集团有意接手韩进苏比克？">中远海运集团有意接手韩进苏比克？</a></li>
+							<li><a href="news_show.php?id=219674" title="权威报告：自动化时代来临！海员、码头工人要失业？！？">权威报告：自动化时代来临！海员、码头工人要失业？！？</a></li>
+							<li><a href="news_show.php?id=219665" title="新技术实现常温常压制备高纯度氢气">新技术实现常温常压制备高纯度氢气</a></li>
+							<li><a href="news_show.php?id=219667" title="红星造船厂将获14艘冰级LNG船大单">红星造船厂将获14艘冰级LNG船大单</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547743717_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">
+				<img src="../../imgs/nimg/smallimg/1547356668_thumb.jpg" />
+				<p>Cosco售后回租四艘1万TEU...</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+						<li><a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">SwissMarine与戴安娜航运签约，租下好望角型船舶</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

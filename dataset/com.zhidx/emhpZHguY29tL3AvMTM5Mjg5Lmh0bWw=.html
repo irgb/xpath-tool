@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞 - 智东西</title>
+    <meta name="keywords" content="苏宁">
+    <meta name="description" content="苏宁净赚141亿背后：一年三次斩仓，两年净利润总和49亿。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/123-2.jpg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="季瑜生" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/liurui" title="由季瑜生发布" rel="author">季瑜生</a></div>
+                <div class="author-posts">共发表55篇文章</div>
+                <div class="author-desc">半径增加的圆</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag1">华为</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/ar" class="tag2">AR</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag1">百度</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag2">微软</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag2">特斯拉</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/%e6%99%ba%e6%85%a7%e9%9b%b6%e5%94%ae" rel="category tag">智慧零售</a></span><span class="time">2018/12/29 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2018/12/苏宁1.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2018/12/苏宁1.jpg 850w, http://oss.zhidx.com/uploads/2018/12/苏宁1.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2018/12/苏宁1.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong><b>智东西（公众号：zhidxcom）</b></strong><strong><b><br />
+</b></strong><strong><b>文 | 季瑜生</b></strong></p>
+<p>2018年的12月28日晚，苏宁第三次抛售了手中的阿里股票，至此，它手中的阿里股票全数清零。这笔2015年140亿元的投资三年间共计为苏宁带来了141亿的收益，甚至超过了它连续两年的净利润之和。</p>
+<p>但是任谁也看得出这接连三次抛售背后苏宁智慧零售转型的窘迫。</p>
+<p>大环境的下行带来了整个行业的危机，新技术的崛起则带来了挑战者的迭起。但如何基于原有模式平稳的转型、如何在长期投入与眼下生存间平衡，对于企业掌舵者来说，每一步都走地格外艰难。</p>
+<p>机遇来自新技术、新业态探索可能带来的未来收益，这一年里苏宁的无人店、极物、小店、AGV机器人发展的如火如荼。风险则来自于新业态探索所需的巨额资金投入，对于已经连续多年股价下跌的苏宁来说，这注定是又一次长期的放血。</p>
+<p>持续的转型中，苏宁的一边对于负盈利资产从集团财务中剥离，另一方面则通过一次次对阿里股票的出售从战略角度不断为新兴业务输血。</p>
+<p>或许对于这家已经快三十岁的家电巨头来说抛售是一时的无奈之举，但也是为了长期发展的不得不为，破立之间，苏宁才能真正迎来第三次新生。</p>
+<h2>一、三次股票抛售，苏宁净赚阿里141亿</h2>
+<p>站在年末回望，对于身处互联网行业大多数人来说，这个接连遇到比特币泡沫、P2P暴雷、共享单车梦碎以及资本寒冬2018显然不是一个和好运沾边的年份。</p>
+<p>对于身处传统零售的苏宁同样如此，甚至对于掌舵人张近东来说，他还要多问自己一句，押注智慧零售后，苏宁真的会好吗？</p>
+<p>因为在2018年的12月28日晚，苏宁第三次抛售了手中的阿里股票。通过这三次抛售，苏宁共计赚取了141亿的投资回报，但是至此，这家连锁家电巨头手中的阿里股票持有量已经全数清零。</p>
+<p>根据12月28日晚间苏宁易购发布的公告，苏宁将对阿里巴巴集团合计1316.47万股股票择机出售，截至公告日，苏宁售股共获得18.627亿美元，预计可实现净利润约人民币52.05亿元。</p>
+<p>此次股票售出后，苏宁易购手中已经不再持有阿里股票，不过阿里依旧对苏宁持股19.99%，是仅次于张近东本人的第二大股东。</p>
+<p>关于此次股票售出的资金用途，苏宁方面表示“将用于支持公司大开发战略实施，商品供应链建设、物流服务质量提升以及科技研发等业务领域的发展。”</p>
+<p>与此同时，苏宁还宣布公司拟使用自有资金、自筹资金及其他筹资方式以不超过15元/股回购公司5亿元至10亿元的股份，以用于员工持股计划或者股权激励等活动。</p>
+<p>事实上，这已经不是苏宁首次抛售阿里的股份了。早在去年双十二，苏宁就已经开始了对于阿里股票的抛售计划。</p>
+<p>去年双十二前夜，苏宁称基于整体发展战略安排，将出售手中不到550万股的阿里巴巴股票。出售过后，苏宁收到股票出售价款合计9.4亿美元（约合62.2亿元人民币）。根据计算，这部分股票约为苏宁手中阿里股票的两成，占阿里股份比例为0.22%，套现后的苏宁实现净利润约32.5亿元人民币。</p>
+<p>到了今年五月，在首次抛售阿里股票尝到甜头之后，苏宁易购再一次减持阿里股票，这一次苏宁出售的阿里股份占阿里股份比例仅为0.30%。766万股被转手后，苏宁套现金额超过15亿美元。</p>
+<p>对于抛售阿里股份这件事情，张近东在今年的年初就曾回应“阿里的股价可能还会到250美元或者300美元，但是我们投阿里是财务投资，财务投资总要讲究收益的。”</p>
+<p>诚然，通过2015年买入的阿里股票抛售，苏宁共计净赚141亿，这甚至超过了苏宁连续两年的净利润总和。</p>
+<p>经过三年时间，阿里的股价已经从当时的81.51美元/股飙升到了如今的139.09美元/股。然而苏宁的股价则从15.23元/股跌到了如今的9.85元/股。</p>
+<p><img class="alignnone size-full wp-image-139301" src="http://oss.zhidx.com/uploads/2018/12/阿里股价.png" alt="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" width="800" height="381" srcset="http://oss.zhidx.com/uploads/2018/12/阿里股价.png 800w, http://oss.zhidx.com/uploads/2018/12/阿里股价.png?x-oss-process=image/resize,m_fill,w_600,h_286 600w, http://oss.zhidx.com/uploads/2018/12/阿里股价.png?x-oss-process=image/resize,m_fill,w_768,h_366 768w" sizes="(max-width: 800px) 100vw, 800px" /> <img class="alignnone size-full wp-image-139302" src="http://oss.zhidx.com/uploads/2018/12/苏宁.png" alt="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" width="800" height="321" srcset="http://oss.zhidx.com/uploads/2018/12/苏宁.png 800w, http://oss.zhidx.com/uploads/2018/12/苏宁.png?x-oss-process=image/resize,m_fill,w_600,h_241 600w, http://oss.zhidx.com/uploads/2018/12/苏宁.png?x-oss-process=image/resize,m_fill,w_768,h_308 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>苏宁笑了，但阿里却哭了，因为苏宁购入时的阿里股票正处于历史低点，而阿里购入时的苏宁股票却处于历史高点。甚至苏宁对阿里的投资也只是当年阿里以19.99%持股比例投资苏宁的一个赠品。</p>
+<p>根据2015年8月阿里苏宁双方的合作细节，当年阿里巴巴子公司淘宝以大约283亿元认购了苏宁19.99%股份，一跃成为苏宁第二大股东。</p>
+<p>与此同时，苏宁则通过境外全资子公司战略投资阿里巴巴新发行股份，持股1.04%，资金投入为140亿元。</p>
+<p>三年过后，阿里浮亏累计超过90亿。</p>
+<p>不过尽管苏宁不断通过抛售阿里股票实现了财务增长，阿里却在这笔生意中血赔。但是双方关于新零售合作却始终毫不动摇。</p>
+<p>关于此次股票抛售，苏宁方面表示“阿里巴巴集团开展战略合作以来，双方在零售、物流服务等方面的合作日益深化，合作效果显著。”另外“集苏宁易购将持续加深与阿里巴巴集团在联合采购、天猫旗舰店运营、物流服务、O2O融合等领域的战略合作”“不排除未来增持阿里巴巴集团股份的可能”。</p>
+<h2>二、寒冬下，连锁电器巨头走到了转型的重要关头</h2>
+<p>在上个世纪1990年的12月26日，南京江苏路和宁海路交界，有一家名叫“苏宁交电公司”的两层电器商铺悄然成立并在日后发展成为了在家电零售行业赫赫有名的苏宁集团。</p>
+<p><img class="alignnone size-full wp-image-139293" src="http://oss.zhidx.com/uploads/2018/12/苏宁创立.jpg" alt="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" width="800" height="662" srcset="http://oss.zhidx.com/uploads/2018/12/苏宁创立.jpg 800w, http://oss.zhidx.com/uploads/2018/12/苏宁创立.jpg?x-oss-process=image/resize,m_fill,w_363,h_300 363w, http://oss.zhidx.com/uploads/2018/12/苏宁创立.jpg?x-oss-process=image/resize,m_fill,w_768,h_636 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>作为一家以空调销售起家的零售企业，苏宁抓住了改革开放初期阶段人们从“温饱”向“小康”过渡时期的家电需求，以及计划经济向市场经济转型的巨大商机，一举成为家电零售行业的明星企业。</p>
+<p>到了1998年，中国的家电迎来爆发期，苏宁再一次抓住机遇转型综合连锁零售，借着这次转型，苏宁一举奠定了此后二十年的家电零售龙头之位。这一次转型也被看为是苏宁的第二次新生。</p>
+<p>但是到了电商崛起的2012年，苏宁的龙头地位不仅遭受着来自老对手国美的冲击，与此同时还受到了以京东、天猫等为代表的电商冲击。2015年的一场平京大战，不但将苏宁卷入了一场口水仗，同时也将传统家电零售的窘境展露无遗。</p>
+<p><img class="alignnone size-full wp-image-139292" src="http://oss.zhidx.com/uploads/2018/12/大战.jpg" alt="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" width="800" height="477" srcset="http://oss.zhidx.com/uploads/2018/12/大战.jpg 800w, http://oss.zhidx.com/uploads/2018/12/大战.jpg?x-oss-process=image/resize,m_fill,w_503,h_300 503w, http://oss.zhidx.com/uploads/2018/12/大战.jpg?x-oss-process=image/resize,m_fill,w_768,h_458 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>根据全国家用电器工业信息中心发布的《2018年中国家电行业三季度报告》显示：第三季度中国家电市场整体规模为1821亿元，同比下降5.6%。其中，黑白电、厨卫等大家电均出现不同程度下滑，空调市场零售额同比下跌8.7%，冰洗合计下跌2.2.%，厨卫电器同比下跌4.9%，彩电同比下跌最为严重，达到了18.3%。</p>
+<p>于苏宁、国美来说这无异于致命一击。</p>
+<p>而事实上，苏宁这些年无论是市值还是盈利状况都是一个堪忧的数字。</p>
+<p>数据显示，2016年苏宁净利润7.04亿，2017年净利润42.1亿，如果扣除2017年32.5亿的阿里股票抛售盈利，苏宁两年正常经营利润相加甚至还不及在投资上的回报高。</p>
+<p>而根据今年的10月30日晚间苏宁易购发布的2018年第三季度财报显示，苏宁易购当季度的营收为623亿人民币，归母净利润仅为1.24亿，同比大跌约67%，第四季度净利润预期为17亿至19亿，同比下跌47%至52%。</p>
+<p>尽管通过抛售阿里股票，苏宁大赚了一笔，但是如果从财务投资角度来说，拥有巨大流量优势以及技术优势的阿里无疑是一个会带来长期盈利的现金奶牛，苏宁当前的抛售显然不是一个明智的选择。</p>
+<p>但是对于苏宁来说，未来的投资回报远远比不上当前的存活要紧。行业寒冬以及原有业务模式衰落的双重夹击下，或者获取足够的资源以及现金转型成为了苏宁迎来第三次新生的唯一选择。</p>
+<h2>三、智慧零售转型步履维艰，苏宁卖股方能造血</h2>
+<p>一方面是既有业务的发展不顺，另一方面则是苏宁急速扩张以及新零售业态探索所需的巨大成本投入。</p>
+<p>2017年，在双十二前夜抛售了阿里股票之后，紧接着在年底，苏宁就召开苏宁智慧零售大开发活动。这场活动一举请来了全中国房地产行业的半壁江山，万达、恒大、碧桂园、保利、融创纷纷到场并于苏宁签订合作意愿。</p>
+<p>与此同时，苏宁还定下了“未来三年将互联网门店拓展到2万家、落地2000多万平方商业实体”的高速扩张计划。</p>
+<p>作为苏宁易购新业务探索的排头兵，苏宁小店在此次大扩张中占据了主力。</p>
+<p>作为主打最后一公里的社区店，苏宁小店通过便利店+APP的模式主要围绕社区内用户的厨房，提供生鲜、果蔬、热鲜食等品类商品，既能提供线下的购物体验，同时可以提供三公里半小时达等服务。这不仅需要强大的供应链搭建，同时也需要高效的物流团队建设，这些都是实打实的巨大资金投入。</p>
+<p>2017年，苏宁易购宣布要在2018年新开小店1500家。截至今年7月31日，苏宁小店已在全国开设878家门店。但是根据公开资料，苏宁小店2017年营业收入771.1万，净亏损1492.61万；2018年1-7月营业收入1.4亿，净亏损2.96亿。<img class="alignnone size-full wp-image-139294" src="http://oss.zhidx.com/uploads/2018/12/小店.png" alt="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" width="800" height="433" srcset="http://oss.zhidx.com/uploads/2018/12/小店.png 800w, http://oss.zhidx.com/uploads/2018/12/小店.png?x-oss-process=image/resize,m_fill,w_554,h_300 554w, http://oss.zhidx.com/uploads/2018/12/小店.png?x-oss-process=image/resize,m_fill,w_768,h_416 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>巨亏之下，苏宁选择为小店业务引入外部投资同时剔除上市公司财报。就在今年十月，苏宁易购发布公告称，其子公司苏宁小店将引入外部投资，投资协议生效后，苏宁易购将通过苏宁国际间接持有苏宁小店35%股权，与此同时，苏宁小店将被剔除上市公司合并财报。</p>
+<p>如果说通过布局小店，苏宁将智慧零售的毛细血管深扎到社区层级的体表，那么以无人店、无人机、物联网等为代表的新技术，以及以极物、云商为代表的新业态探索则成为了苏宁智慧零售的造血细胞。</p>
+<p>但是新业务的探索以及不仅是一个模式与盈利能力的问题，同样也是一个时间的问题，如何在保障长远发展的情况下挺过当下，给股东交出一份看的过眼的财务报表，并且获得充足的资金来源来支撑扩张变革计划就成了苏宁的当务之急。</p>
+<p>在这样的情况下，趁着美股的行情还不算坏的时候，抛售阿里股票来获得大量资金支持公司的新业务拓展以及门面装点对于苏宁来说，无疑是一笔划算的生意。</p>
+<h2>结语：卖股只是一时，苏宁的转型造血才能新生</h2>
+<p>在2018的收年之际，苏宁的这次大抛售对于行业来说是个坏消息同时也是个好消息。</p>
+<p>坏在一个蝉联近三十年的家电零售巨头竟已窘迫到如此境地，好在旧业务的破与新业务的立之间，苏宁的转型走的坚定而又迅速。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139289'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139289">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="苏宁卖空阿里股票求生！净赚141亿与智慧零售的无底洞" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+            <a href="/p/tag/苏宁">苏宁</a>            </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139289">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139289">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

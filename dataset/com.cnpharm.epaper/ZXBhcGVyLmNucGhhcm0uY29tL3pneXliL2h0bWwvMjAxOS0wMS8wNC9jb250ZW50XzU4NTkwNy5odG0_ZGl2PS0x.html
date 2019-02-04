@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="82,56,397,56,397,286,82,286" shape="polygon" href="./content_585907.htm?div=-1"><Area coords="3,33,75,33,75,169,3,169" shape="polygon" href="content_585916.htm?div=-1"><Area coords="3,178,75,178,75,304,3,304" shape="polygon" href="content_585917.htm?div=-1"><Area coords="3,313,75,313,75,444,3,444" shape="polygon" href="content_585919.htm?div=-1"><Area coords="326,313,394,313,394,448,326,448" shape="polygon" href="content_585921.htm?div=-1"><Area coords="3,454,75,454,75,569,3,569" shape="polygon" href="content_585922.htm?div=-1"><Area coords="82,462,397,462,397,569,82,569" shape="polygon" href="content_585923.htm?div=-1"><Area coords="89,313,267,313,267,446,89,446" shape="polygon" href="content_585925.htm?div=0"><Area coords="89,313,267,313,267,446,89,446" shape="polygon" href="content_585925.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/04/02/zgyyb2019010402_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            02版:综合新闻
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/04/02/zgyyb2019010402.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_21.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_81.htm">下一版 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_83.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>【规范促发展  瑰宝倍生香】平凉：“三个到位”为中药材产业固本强基</h1>
+<h2></h2>
+<h4></h4>
+        
+        <div class="c_c">
+          
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，中药饮片产业快速发展，在满足百姓健康需求方面作出了重要贡献：但中药饮片质量问题也一直备受关注。中药饮片质量安全必然涉及上下游产业，需要各方协同努力，形成共治局面，通过加强中药饮片管理，促进中药全产业链的健康发展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;本版自今日起开设“规范促发展&nbsp;瑰宝倍生香”栏目，报道各地药监部门加强中药饮片质量监管，督促企业提升质量管控水平，促进产业健康发展的经验和做法。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;本报记者&nbsp;&nbsp;丁怡媛&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;元旦期间，甘肃省平凉市华亭市西华镇食品药品监管所所长李强一刻也不得闲。因为此时正赶上中药饮片集中整治工作，李强带领所里的5名监管人员，加紧排查质量风险隐患，规范中药饮片经营使用行为。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;甘肃省素有“千年药乡”“天然药库”等美称，而平凉是甘肃省中药材重要产区之一。近年来，平凉市食品药品监管局高度重视中药材产业发展，通过进一步规范中药材市场和中药材、中药饮片流通秩序，落实企业主体责任等措施，切实保障中药材质量，促进中药材产业健康发展。目前，平凉市中药材产业已初步形成布局合理、功能互补、相互依托的产业发展格局。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;整治到位抓安全</p><p>&nbsp;&nbsp;&nbsp;&nbsp;平凉中药材产业发展以关山林缘高寒阴湿区、西北部干旱丘陵区和中南部土石山林区三大中药材种植区域为中心，以华亭市、庄浪县、灵台县等为重点地区，以独活、大黄、半夏等为主要品种，2018年全市中药材种植面积达15.08万亩，总产量约5.86万吨。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年10月，平凉市食药监局下发《平凉市中药饮片质量集中整治工作方案》（以下简称《方案》），要求各县（区）食药监局结合辖区实际制定具体工作方案。全市对2018年甘肃省公布的中药饮片重点监管品种进行工艺核査和监督抽验，对辖区药品生产企业执行药品GMP等情况进行监督检査，严格落实中药材、中药饮片质量溯源、索证索票索检验报告，全面排查原药材和中药饮片掺杂使假、染色增重、霉变虫蛀、污染变质等质量问题，并对抽验不合格的品种进行立案查处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;据李强介绍，在西华镇食药监所辖区内的1011户经营单位中，有药品零售单位19户、医疗机构34户。接到《方案》之后，李强和同事迅速明确中药饮片专项整治目标、重点及工作要求，开展中药饮片经营使用单位专项监督检查，发放中药饮片集中整治告知书，督促中药饮片经营单位严把中药饮片进货查验、储存养护、规范经营等关口。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“我们还组织召开药品经营使用单位约谈会，及时通报检查结果和对违法单位的处理情况，督促其自觉依法经营。”李强说。在平凉市，像西华所这样持续努力抓好中药饮片整治工作的基层监管所还有上百个。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;与此同时，平凉市各中药饮片生产经营使用单位也在对照中药饮片有关法律法规进行“自我开刀”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;静宁大众医药连锁有限公司全体员工在连续几日的共同努力下，终于形成了一份“沉甸甸”的中药饮片经营情况自查整改报告，内容涵盖中药饮片购进管理、验收管理、储存养护管理等，对验收工作不细致、计算机系统软件名称有误等问题也作出详细整改计划。公司负责人张小英说：“通过自查自纠，员工认识到了依法依规经营中药饮片的重要性，增强了安全质量意识。”</p><p>&nbsp;&nbsp;&nbsp;&nbsp;管控到位保质量</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着互联网的高速发展，网上销售假药、劣药及利用互联网发布药品违法广告等行为屡见不鲜，平凉市也存在利用网络违法销售中药饮片的隐患。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月以来，平凉市食药监局深入开展药品“净网”专项行动，全面摸底排查全市网络销售中药饮片情况，严厉打击网络非法收售药品等行为。对在互联网注册网店进行中药饮片销售的企业，确认其网络经营资质，并督促其确保网售中药饮片的资质完善、记录无误、质量安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;据平凉市药品稽查局稽查一科科长高剑云介绍，为确保中药饮片在市场的安全流通，监管人员不但要根据“双随机一公开”原则进行飞行检查和跟踪检查，还要结合日常监管，对中药饮片生产企业开展生产数据可靠性检查。包括对中药饮片生产企业原辅料和包装材料的购进、库存和销售数量进行检查，对生产批次多、产量大的中药饮片票、账、货进行核对。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高剑云表示，平凉市药品稽查局还督促中药饮片生产企业按季度向监管部门上报生产情况，包括中药饮片生产品种、批号、检验和数量等，监督企业按批准的品种生产药品，杜绝企业质量检验数据造假问题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;服务到位促发展</p><p>&nbsp;&nbsp;&nbsp;&nbsp;冬季，华亭县的农户家家门口晾晒着浅褐色的独活，散发着沁人心脾的药香。得天独厚的自然条件和生长环境造就出高品质的华亭独活。“华亭独活”“华亭大黄”还成功注册了国家地理标志证明商标。华亭县中药材产业化、规模化的发展离不开农民辛勤的种植劳作，也离不开监管人员对中药材种植、生产等环节质量的监督把控与服务指导。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，平凉市食药监局着力在影响和制约中药材产业健康发展的资金、技术、用地等关键环节下功夫，延长产业链、提升效益链、挖掘价值链，努力把平凉建设成为药材生产基地、仓储中心和饮片加工基地，使中药材产业真正成为群众发展致富的支柱产业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;依照“保品牌、调结构、强服务、促增收”的思路，华亭市狠抓中药材标准化种植基地建设、种子种苗标准化繁育、品种试验驯化推广、市场体系完善四大工程，鼓励企业走“联合社+公司+基地+农户”的发展模式。为了协助企业发展，监管人员配合乡镇政府制定中药材产业发展计划，推进建设中药材育苗及种植基地，在日常监管过程中利用自身专业知识，在种植、晾晒环节为农户提供指导，促进中药材品质提升。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;平凉市青松中药饮片有限公司负责人王继贤告诉记者，在当地政府与监管部门的帮助下，公司制定了中药材规范化生产技术要领和操作规程。监管人员还为公司原辅料购进渠道，中药饮片生产、配制和“分包装”等问题，提供标准化指导与技术服务。同时，帮助其与多家药材龙头企业签订协议，收购当地药材并广销全国。</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_83.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+<a class=preart href="content_585916.htm?div=-1">下一篇</a></div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，中药饮片产业快速发展，在满足百姓健康需求方面作出了重要贡献：但中药饮片质量问题也一直备受关注。中药饮片质量安全必然涉及上下游产业，需要各方协同努力，形成共治局面，通过加强中药饮片管理，促进中药全产业链的健康发展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;本版自今日起开设“规范促发展&nbsp;瑰宝倍生香”栏目，报道各地药监部门加强中药饮片质量监管，督促企业提升质量管控水平，促进产业健康发展的经验和做法。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;本报记者&nbsp;&nbsp;丁怡媛&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;元旦期间，甘肃省平凉市华亭市西华镇食品药品监管所所长李强一刻也不得闲。因为此时正赶上中药饮片集中整治工作，李强带领所里的5名监管人员，加紧排查质量风险隐患，规范中药饮片经营使用行为。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;甘肃省素有“千年药乡”“天然药库”等美称，而平凉是甘肃省中药材重要产区之一。近年来，平凉市食品药品监管局高度重视中药材产业发展，通过进一步规范中药材市场和中药材、中药饮片流通秩序，落实企业主体责任等措施，切实保障中药材质量，促进中药材产业健康发展。目前，平凉市中药材产业已初步形成布局合理、功能互补、相互依托的产业发展格局。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;整治到位抓安全</p><p>&nbsp;&nbsp;&nbsp;&nbsp;平凉中药材产业发展以关山林缘高寒阴湿区、西北部干旱丘陵区和中南部土石山林区三大中药材种植区域为中心，以华亭市、庄浪县、灵台县等为重点地区，以独活、大黄、半夏等为主要品种，2018年全市中药材种植面积达15.08万亩，总产量约5.86万吨。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年10月，平凉市食药监局下发《平凉市中药饮片质量集中整治工作方案》（以下简称《方案》），要求各县（区）食药监局结合辖区实际制定具体工作方案。全市对2018年甘肃省公布的中药饮片重点监管品种进行工艺核査和监督抽验，对辖区药品生产企业执行药品GMP等情况进行监督检査，严格落实中药材、中药饮片质量溯源、索证索票索检验报告，全面排查原药材和中药饮片掺杂使假、染色增重、霉变虫蛀、污染变质等质量问题，并对抽验不合格的品种进行立案查处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;据李强介绍，在西华镇食药监所辖区内的1011户经营单位中，有药品零售单位19户、医疗机构34户。接到《方案》之后，李强和同事迅速明确中药饮片专项整治目标、重点及工作要求，开展中药饮片经营使用单位专项监督检查，发放中药饮片集中整治告知书，督促中药饮片经营单位严把中药饮片进货查验、储存养护、规范经营等关口。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“我们还组织召开药品经营使用单位约谈会，及时通报检查结果和对违法单位的处理情况，督促其自觉依法经营。”李强说。在平凉市，像西华所这样持续努力抓好中药饮片整治工作的基层监管所还有上百个。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;与此同时，平凉市各中药饮片生产经营使用单位也在对照中药饮片有关法律法规进行“自我开刀”。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;静宁大众医药连锁有限公司全体员工在连续几日的共同努力下，终于形成了一份“沉甸甸”的中药饮片经营情况自查整改报告，内容涵盖中药饮片购进管理、验收管理、储存养护管理等，对验收工作不细致、计算机系统软件名称有误等问题也作出详细整改计划。公司负责人张小英说：“通过自查自纠，员工认识到了依法依规经营中药饮片的重要性，增强了安全质量意识。”</p><p>&nbsp;&nbsp;&nbsp;&nbsp;管控到位保质量</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着互联网的高速发展，网上销售假药、劣药及利用互联网发布药品违法广告等行为屡见不鲜，平凉市也存在利用网络违法销售中药饮片的隐患。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月以来，平凉市食药监局深入开展药品“净网”专项行动，全面摸底排查全市网络销售中药饮片情况，严厉打击网络非法收售药品等行为。对在互联网注册网店进行中药饮片销售的企业，确认其网络经营资质，并督促其确保网售中药饮片的资质完善、记录无误、质量安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;据平凉市药品稽查局稽查一科科长高剑云介绍，为确保中药饮片在市场的安全流通，监管人员不但要根据“双随机一公开”原则进行飞行检查和跟踪检查，还要结合日常监管，对中药饮片生产企业开展生产数据可靠性检查。包括对中药饮片生产企业原辅料和包装材料的购进、库存和销售数量进行检查，对生产批次多、产量大的中药饮片票、账、货进行核对。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高剑云表示，平凉市药品稽查局还督促中药饮片生产企业按季度向监管部门上报生产情况，包括中药饮片生产品种、批号、检验和数量等，监督企业按批准的品种生产药品，杜绝企业质量检验数据造假问题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;服务到位促发展</p><p>&nbsp;&nbsp;&nbsp;&nbsp;冬季，华亭县的农户家家门口晾晒着浅褐色的独活，散发着沁人心脾的药香。得天独厚的自然条件和生长环境造就出高品质的华亭独活。“华亭独活”“华亭大黄”还成功注册了国家地理标志证明商标。华亭县中药材产业化、规模化的发展离不开农民辛勤的种植劳作，也离不开监管人员对中药材种植、生产等环节质量的监督把控与服务指导。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;近年来，平凉市食药监局着力在影响和制约中药材产业健康发展的资金、技术、用地等关键环节下功夫，延长产业链、提升效益链、挖掘价值链，努力把平凉建设成为药材生产基地、仓储中心和饮片加工基地，使中药材产业真正成为群众发展致富的支柱产业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;依照“保品牌、调结构、强服务、促增收”的思路，华亭市狠抓中药材标准化种植基地建设、种子种苗标准化繁育、品种试验驯化推广、市场体系完善四大工程，鼓励企业走“联合社+公司+基地+农户”的发展模式。为了协助企业发展，监管人员配合乡镇政府制定中药材产业发展计划，推进建设中药材育苗及种植基地，在日常监管过程中利用自身专业知识，在种植、晾晒环节为农户提供指导，促进中药材品质提升。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;平凉市青松中药饮片有限公司负责人王继贤告诉记者，在当地政府与监管部门的帮助下，公司制定了中药材规范化生产技术要领和操作规程。监管人员还为公司原辅料购进渠道，中药饮片生产、配制和“分包装”等问题，提供标准化指导与技术服务。同时，帮助其与多家药材龙头企业签订协议，收购当地药材并广销全国。</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585907.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_1-02>【规范促发展  瑰宝倍生香】平凉：“三个到位”为中药材产业固本强基</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585916.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_2-02>安徽加强滋补类中药饮片质量检查</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_585917.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_3-02>天津举办中药饮片质控培训班</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585919.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_4-02>巴彦淖尔着力解决中药饮片突出问题</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_585921.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_5-02>征稿启事</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585922.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_6-02>宁远规范中药饮片生产经营秩序</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=content_585923.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_7-02>打好中药饮片整治“组合拳”</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+  <tr>
+	<td width="16" align="left"  bgcolor="#D8EFFF"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22"  bgcolor="#D8EFFF">
+<a href=content_585925.htm?div=0><div style="display:inline" id=mp_nw.D110000zgyyb_20190104_8-02>图片新闻</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-04
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>【规范促发展  瑰宝倍生香】平凉：“三个到位”为中药材产业固本强基
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle></founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/04/02/zgyyb2019010402_b.jpg</founder-pagepicurl>
+<founder-pagenum>02</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>83</founder-nodeid> /mpproperty-->
+
+

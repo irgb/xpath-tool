@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>大乘汽车再添羽翼  江西大乘汽车科技产业园正式投产_汽车投诉网</title>
+	<meta name="keywords" content="大乘汽车再添羽翼  江西大乘汽车科技产业园正式投产,企业资讯," />
+	<meta name="description" content="2018年12月29日，“创新引领兴赣 绿色崛起实干”——江西大乘汽车科技产业园投产暨整车下线仪式于江西抚州正式举办。" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="pragma" content="no-cache">  
+	<meta http-equiv="cache-control" content="no-cache">  
+	<meta http-equiv="expires" content="0">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link href="/css/headstyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/article/css/articleContent.css">
+	<style type="text/css">
+	.l-Content .titleNav p {line-height: 40px;}
+	.l-Content .titleNav em {margin: 0 0 0 12px;}
+	.l-Content .titleNav em.rightIocn{margin-left: 12px;}
+	</style>
+	<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+	<script src="http://dup.baidustatic.com/js/ds.js"></script>
+	<script type="text/javascript">
+		try{
+		    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		        window.location.href="/wap/articlecontent/20346.html";
+		    }
+		}catch(e){}
+	</script>
+	
+	<!-- 百度统计代码 -->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e64ac0694b29b54b1db025076c0c35d8";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+		
+</head>
+<body>
+	<div id="header">
+	<div class="w1000">
+		<div class="logo fl">
+			<a href="/index.jsp" title="汽车投诉网">
+				<img src="/images/styleImg/qctsw.png" alt="汽车投诉网">
+			</a>
+		</div>
+		<div class="navBox fl">
+			<div class="navHead">
+				<span class="fl">专业的汽车质量投诉平台！</span>
+				<em class="loginTsp">
+					
+				</em>
+				<i class="showNum" onclick="$('.twoNum').toggle();">
+					关注微信
+					<img class="twoNum" src="/images/styleImg/weixin_xiaochengxu.png">
+				</i>
+				<em class="loginBtn">
+					<a href="/emLogin.jsp">企业登录</a>
+					<a class="active" href="/mLogin.jsp">个人登录</a>
+				</em>
+			</div>
+			<div class="navBar">
+				<ul class="fix">
+					<li >
+						<a href="/">首页</a>
+					</li>
+					<li class='active'>
+						<a href="/article/information.html">资讯</a>
+						<span class="dropDownSelect">
+							<a href="/alist/7.html">深度点评</a>
+							<a href="/alist/6.html">媒体关注</a>
+							<a href="/alist/13.html">测评对比</a>
+							<a href="/alist/5.html">行业动态</a>
+							<a href="/alist/11.html">汽车召回</a>
+							<a href="/alist/17.html">维权法规</a>
+							<a href="/alist/15.html">专题大全</a>
+						</span>
+					</li>
+					<li >
+						<a href="/tousu/tousu.html">投诉</a>
+						<span class="dropDownSelect">
+							<a href="/tousu/tsSearch/0_0_0_0_0_0_0_0.html">搜索投诉</a>
+							<a href="/tousu/tslist/1.html">所有投诉</a>
+							<a href="/tousu/jiti.html">集体投诉</a>
+							<!-- <a href="/tousu/tslist/3.html">最多评论</a>
+							<a href="/tousu/tslist/4.html">经典投诉</a>
+							<a href="/tousu/tslist/2.html">今日投诉</a> -->
+							<a href="/tousu/tslist/3.html">多次投诉</a>
+						</span>
+					</li>
+					<li >
+						<a href="/tousu/koubei.html">口碑</a>
+					</li>
+					<li >
+						<a href="/tousu/tj.html">统计</a>
+					</li>
+					<li >
+						<a href="/article/rbi.html">红黑榜</a>
+					</li>
+					<li >
+						<a href="/article/cooChannel.html">合作媒体</a>
+					</li>
+					<li>
+						<a class="iconText" href="/tsPub.jsp">发表投诉</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function(){
+		//个人会员登陆信息
+		$.post("doMember_getLoginInfo",null,function(data){
+			var loginTsp = $(".loginTsp");
+			var loginBtn = $(".loginBtn");
+			if(null!=data&data.status==1&&data.loginMember!=null){
+				loginBtn.hide();
+				var appDom = "您好！";
+				appDom = "<i id='loginName'>";
+					appDom+=data.loginMember.showName;
+				appDom+="</i>";
+				appDom+="<a target='_self' href='/memberManager/'>个人中心</a>";
+				appDom+="<a target='_self' href='/memberManager/loginOut.jsp'>[退出]</a>";
+				loginTsp.html(appDom).show();
+			}else{
+				$.post("doEmMember_getLoginInfo",null,function(data){
+					var loginTsp = $(".loginTsp");
+					var loginBtn = $(".loginBtn");
+					if(null!=data&data.status==1&&data.loginEm!=null){
+						loginBtn.hide();
+						var appDom = "您好！";
+						appDom = "<i id='logineEmName'>";
+							appDom+=data.loginEm.lxrName;
+						appDom+="</i>";
+						appDom+="<a target='_self' href='/emm/'>企业中心</a>";
+						appDom+="<a target='_self' href='/emm/loginOut.jsp'>[退出]</a>";
+						loginTsp.html(appDom).show();
+					}else{
+						loginTsp.hide();
+						loginBtn.show();
+					}
+				});
+			}
+		});
+		
+		
+		
+		//百度统计
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		} else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})
+</script>
+<div id="wrapper" class="fix">
+		<div class="l-Content">
+			<h3 class="title">
+				<a href="/">首页</a>
+				&gt;
+				<a href="/alist/12.html">企业资讯</a>
+				&gt;
+				<span>正文</span>
+			</h3>
+			<h3 class="articleTit">
+				大乘汽车再添羽翼  江西大乘汽车科技产业园正式投产</h3>
+			<div class="titleNav fix">
+				<p class="fl">
+					<em>来源：<b>厂商供稿</b></em>
+					<em>发表于：<b>2018-12-29</b></em>
+					<em>作者：<b>佚名</b></em>
+					<em class="rightIocn" style="float: right;">
+						<em class="fl">分享：</em>
+						<span class="bdsharebuttonbox">
+							<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+							<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+							<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+							<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+							<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						</span>
+						<script>
+							window._bd_share_config = {
+								"common" : {
+									"bdSnsKey" : {},
+									"bdText" : "",
+									"bdMini" : "2",
+									"bdMiniList" : false,
+									"bdPic" : "",
+									"bdStyle" : "0",
+									"bdSize" : "24"
+								},
+								"share" : {},
+								"image" : {
+									"viewList" : [ "tsina", "tqq", "weixin", "sqq", "qzone" ],
+									"viewText" : "分享到：",
+									"viewSize" : "16"
+								},
+								"selectShare" : {
+									"bdContainerClass" : null,
+									"bdSelectMiniList" : [ "tsina", "tqq", "weixin", "sqq", "qzone" ]
+								}
+							};
+							with (document)
+								0[(getElementsByTagName('head')[0] || body)
+										.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+					</script>
+					</em>
+				</p>
+			</div>
+
+			<!-- 提示 -->
+			<div class="msg">
+				网站部分文章为转载，仅供参考。版权和著作权归原作者所有，转载目的在于传递更多信息，不代表本网赞同其观点和对其真实性负责。对于网站原创作品，版权归作者和网站所有，如需转载，请注明作者及出自于汽车投诉网。
+			</div>
+
+			<!-- 文章文字内容 -->
+			<div class="articleContent">
+				<p class="MsoNormal" style="text-indent:2em;">
+	2018年12月29日，“创新引领兴赣 绿色崛起实干”——江西大乘汽车科技产业园投产暨整车下线仪式于江西抚州正式举办。此次大乘汽车对标国际工业4.0的新工厂总建筑面积约50万㎡，历时13个月建设，是全面覆盖乘用车、商用车、传统燃油车和新能源汽车以及关键零部件，集研发、生产、销售为一体的复合型、高科技产业园区。江西大乘汽车科技产业园的落成，标志着大乘汽车构建常州、抚州、杭州及一流“核心研发能力”的“三州一核”基地布局战略以及江苏、江西、浙江及长三角经济带“三江一带”的汽车产业生态链资源聚合战略基本成型。
+</p>
+<p class="MsoNormal" style="text-align:center;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229162645_57.jpeg" alt="" width="550" height="243" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（投产仪式现场舞台照片）</strong> 
+</p>
+<p style="margin-left:0cm;text-align:justify;text-indent:2em;">
+	大乘汽车将于明年一季度上市的新车型G60S也在同期正式下线亮相，新车型的时尚外观和越级科技配置非常符合目前市场消费主流的需求。在这之前，大乘汽车G60S刚刚顺利完成了下线前最后一轮高原测试的极限检验，在平均海拔4000m的青海昆仑山垭口，完成了20大类高原标定测试，百余项整车合格，路试总里程长达180万公里。不仅很好验证了整车卓越的可靠性和耐久性，同时也体现了大乘汽车对于车辆性能的不懈追求，对于用户体验的高度负责。大乘汽车用稳健的新产品研发节奏、过硬的新产品实力向外界展示了这个年轻品牌“怀进取之心，与年轻同行”的决心与行动。
+</p>
+<p style="text-align:center;margin-left:0cm;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229162743_541.jpeg" alt="" width="550" height="367" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（大乘汽车G60S下线仪式照片）</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	江西省政府副省长吴晓军，江西省政协副主席、抚州市委书记肖毅、抚州市委副书记、市长张鸿星、江铃集团董事长邱天高、大乘汽车董事长兼CEO吴潇及江西、抚州各部门、各区县领导、嘉宾，以及供应商、经销商、媒体和相关单位代表等千余人在大乘汽车总装车间出席了本次活动，并共同见证了科技产业园落成投产与新车下线的重要时刻。
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229162931_533.jpeg" alt="" width="550" height="366" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（大乘汽车领导致辞）</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<strong>全面布局 实力强大的“智能工厂”</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	此次江西大乘汽车科技产业园的建成，是在大乘汽车江苏科技产业园建设经验的基础上，进一步的突破创新。整个科技产业园对标国际工业4.0的先进生产理念，通过整合上下游产业链，整体优化、提升冲压、焊装、涂装、总装四大工厂的制造水平和工艺水平，是高度智能化、自动化的汽车制造基地。
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	工厂生产线采用ABB自动化集成系统，智能物联网系统，拥有300多台KUKA机器人。其中焊装生产线上焊装四门两盖内板焊接实现全自动化，最大限度减少传统手工焊接带来的外覆盖件磕碰划伤及焊点不良等质量缺陷；涂装生产线上内表面采用机器人自动开门、开盖喷涂，对涂层厚度有效控制，节省涂料并提高漆面质量，还配备一次套色工艺设备，满足个性化车身涂装要求。总装生产线上总装油液加注采用集中供给方式，可实时监控加注的每个环节，提高生产效率、节省人力、物力、空间和成本，同时建立了恒温恒湿冷媒存储间，保证了加注精度。底盘AGV合装，在满足SUV前后桥同步举升的同时，针对皮卡车型新开发了二次举升功能，AGV在完成车身和底盘合装任务后经过二次举升使之不经过转换吊具即能满足转运要求，在国内行业尚属首例。
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229163206_152.jpg" alt="" width="550" height="366" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（工厂航拍照片）</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	吴潇董事长表示，大乘汽车是一个具备互联网思维和现代化工业基地的创新性中国汽车品牌，既拥有新势力造车的突破智能科技，也传承了传统车企的工匠精神，并将其融合、汇聚。同时，因为大乘汽车对汽车制造怀着一颗敬畏之心，钻研之心，精益求精之心，所以大乘汽车在高规格基地建设、高品质提升保障、高水平智能制造等方面具备了最新前沿科技支撑下的后发优势、比较优势。
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229163044_256.jpeg" alt="" width="550" height="366" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（实验室照片）</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<strong>产城融合 龙头起舞的“抚州基地”</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	作为我国长江经济带重要地区，江西省占有资源、区位等方面的良好优势。“江西制造”也曾经历过辉煌与荣耀。新中国第一架飞机、第一辆摩托车、第一辆轮式拖拉机是在江西诞生的……抚州高新区作为江西工业发展建设的新引擎，拥有独特的地理优势与先进的高新技术产业配套，为大乘汽车打造高标准的汽车制造基地奠定了良好的产业基础。
+</p>
+<p class="MsoNormal" style="text-align:center;text-indent:2em;">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20181229/20181229163115_698.jpeg" alt="" width="550" height="366" title="" align="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>（省市区主要领导工厂参观照片）</strong> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	江西大乘汽车科技产业园项目从立项之初就备受江西省、市、区各级政府的高度关注，省市各级领导密集在产业园建设过程中现场办公，终于促成了高质量、高效率的“抚州速度”。该项目作为抚州市目前投资规模最大的汽车项目，以“智能制造、绿色发展”的理念，坚持创新驱动、产业升级。对提升抚州当地制造业整体水平、带动相关配套产业发展，带动地方经济发展具有重要意义。抚州市委书记肖毅在讲话中指出，大乘汽车落户抚州，开启了抚州真正意义的大工业时代，也使得抚州汽车制造业拥有了名副其实的龙头企业，对于智能制造推进产城融合发展起到非常重要的作用。
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<strong>聚焦整合 战略布局“三江一带”</strong> 
+</p>
+<p class="MsoNormal" align="left" style="text-indent:2em;">
+	近年来，我国汽车产业发展迅速，形成了包括长三角、珠三角、环渤海湾、东北地区、中西部在内的5个初步成型的汽车产业集群。随着我国推动制造业转型升级和“一带一路”战略的深入实施，沿江内陆地区也迎来了发展汽车产业的新机遇。
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	大乘汽车充分抓住国家鼓励民营经济发展，江西省大力发展汽车工业的契机，加大投入，仅用时13个月，即实现了江西大乘科技产业园的投产与新车下线，创造了令业内瞩目的“抚州速度”。大乘汽车江西科技产业园与江苏基地、杭州研发中心一起，辐射江西、江苏、浙江“三江”及整个“长三角经济带”，形成了全系覆盖、配套完善的汽车产业生态链，使得大乘汽车对整个华东地区优势汽车产业资源具备了更强的整合、优化能力。大乘汽车董事长吴潇在致辞中表示，大乘汽车作为中国造车新势力在新的发展阶段，要善于接棒、勇于接棒、实力接棒，充分发挥中国自主汽车品牌几十年成果积淀、经验教训所形成的价值与能量，“一棒接着一棒跑下去，每一代人都要为下一代人跑出一个好成绩”。
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	随着江西大乘汽车科技产业园项目的竣工与新产品的正式下线，大乘汽车还将进一步加快在“智能化、网联化、共享化、电动化”等领域的布局，凭借扎实的双基地“智造”优势与产业链资源优势，大乘汽车在新的一年即将来临之际，用全新基地启用、全新产品下线的仪式举行，宣告着大乘汽车将积极投身到中国汽车3.0新时代的发展事业中来。
+</p></div>
+			<div class="wxText">
+				第一时间获取QCTSW行业新鲜资讯和深度商业分析，请在微信公众账号中搜索「 汽车投诉网」或者「 qctswcom」，或用手机扫描左方二维码，即可获得汽车投诉网每日精华内容推送和最优搜索体验，并参与编辑活动。
+			</div>
+
+			<!-- 相关阅读 -->
+			<div class="aboutArticle">
+				<h3 class="tit">相关阅读</h3>
+				<div class="aboutArticleList">
+					<ul id="xgyds" ></ul>
+				</div>
+			</div>
+			
+			<!-- 发表评论 -->
+			<form action="" id="myForm1" method="post" >
+			<div class="a-publish">
+				<h3 class="a-publish_title">发表评论</h3>
+				<form action="" id="myForm1" method="post" >
+				<input type="hidden" id="memberId" name="memberId" value=""/>
+				<input type="hidden" id="loginMember1" name="loginMember" value=""/>
+				<input type="hidden" id="articleId" name="articleId" value="20346"/>
+				<div class="a-publish_link">
+					<span>用户名:</span>
+					<input type="text" palceholder="请输入用户名" id="username" name="loginName"/>
+					<span class="mm">密码:</span>
+					<input type="password" palceholder="请输入密码" id="password" name="password"/>
+					
+					<input class="yzm" type="text" placeholder="输入验证码" id="yzm" name="mCheckNum"/>
+					<a href="javascript:void(0)" title="点击换一张"  onclick="changeImg($('#imageVerify').get(0));">
+						<img id="imageVerify" title="点击刷新" style="" src="/images.jsp?sName=mCheckNum" onclick="changeImg(this);"/>
+								看不清
+					</a>
+					
+					<a class="submitBtn" href="javascript: void(0);" onclick="login()">登录</a>
+					
+					</div>
+				<div class="a-publish_txt fix">
+					<textarea placeholder="输入评论内容" id="content1" name="content"></textarea>
+					<a class="a-publish_btn" href="###" onclick="checkPubForm()">发表</a>
+				</div>
+			</div>
+			</form>
+	
+			<!-- 评论内容 -->
+			<div class="a-comment">
+				<h3 class="a-comment_title">最新评论</h3>
+				
+				</div>
+		</div>
+		<!-- left end -->
+
+		<!-- right start -->
+		<div class="r-Content">
+			<!-- 热点推荐 -->
+			<div class="hotTj">
+				<h3 class="tit">热点推荐</h3>
+				<ul id="hottjs"></ul>
+			</div>
+		</div>
+		<!-- right end -->
+	</div>
+	<!-- wrapper end -->
+
+	<div id="footer">
+	<div class="foot">
+		<p>
+			<a href="/about/about.html" target="_blank">关于我们</a>
+			|
+			<a href="/about/friendLink.html" target="_blank">友情链接</a>
+			|
+			<a href="/about/yszc.html" target="_blank">隐私政策</a>
+			|
+			<a href="/about/reports.html" target="_blank">媒体报道</a>
+			|
+			<a href="/about/law.html" target="_blank">法律顾问团</a>
+			|
+			<a href="/about/del.html" target="_blank">撤贴须知</a>
+			|
+			<a href="/about/help.html" target="_blank">网站帮助</a>
+			|
+			<a href="/about/ad.html" target="_blank">商务合作</a>
+			|
+			<a href="http://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
+		</p>
+		<p>
+			Copyright © 2008 - 2018 <a href="/index.jsp" target="_blank">汽车投诉网</a> ALL RIGHTS RESERVED　粤ICP备12070654号-2
+		</p>
+	</div>
+</div>
+<script type="text/javascript">
+		$(function () {
+			fixedScrollDom($(".hotTj"), "fixedClass");
+			pinglun();
+			//相关阅读
+			$.post("/doArticle_getXgtjs",{id:20346},function(data){
+				var appDom = "";
+				if(null!=data&&data.status==1){
+					var a;
+					for(var i=0;i<data.articles.length;i++){
+						a = data.articles[i];
+						appDom+="<li>";
+							appDom+="<dl class='fix'>";
+								if(a.image!=""){
+									appDom+="<dt class='fl'>";
+										appDom+="<a href='/article/articlecontent/"+a.id+".html'>";
+											appDom+="<img src='"+a.image+"'>";
+										appDom+="</a>";
+									appDom+="</dt>";
+								}
+								appDom+="<dd>";
+									appDom+="<h4><a href='/article/articlecontent/"+a.id+".html'>"+a.title+"</a></h4>";
+										appDom+="<span class='articleInfo'>";
+											appDom+="<em>"+a.createTime+"</em>";
+											appDom+="<em>作者："+a.author+"</em>";
+										appDom+="</span>";
+									appDom+="<p>"+a.summary+"</p>";
+								appDom+="</dd>";
+							appDom+="</dl>";
+						appDom+="</li>";
+					}
+					$("#xgyds").html(appDom);
+				}
+			});
+			//热门推荐
+			$.post("/doArticle_getHottjs",function(data){
+				var appDom = "";
+				if(null!=data&&data.status==1){
+					var a;
+					for(var i=0;i<data.articles.length;i++){
+						a = data.articles[i];
+						appDom+="<li>";
+							appDom+="<a href='/article/articlecontent/"+a.id+".html' title=" +a.title+ ">";
+								appDom+="<dl class='fix'>";
+									appDom+="<dt class='fl'>";
+										appDom+="<img src='"+a.image+"'>";
+									appDom+="</dt>";
+									appDom+="<dd>";
+										appDom+="<h4>"+a.title+"</h4>";
+										appDom+="<p>"+a.createTime+"</p>";
+									appDom+="</dd>";
+								appDom+="</dl>";
+							appDom+="</a>";
+						appDom+="</li>";
+					}
+					$("#hottjs").html(appDom);
+				}
+			});
+		});
+
+		//固定
+		function fixedScrollDom(dom, fixedClassName) {
+			var columnTopHeight = dom.offset().top;
+			var $this = dom;
+			$(window).scroll(function () {
+				var bodyScrollTop = $(document).scrollTop();
+				if(bodyScrollTop > columnTopHeight) {
+					$this.addClass(fixedClassName);
+				}else {
+					$this.removeClass(fixedClassName);
+				}
+			});
+
+		}
+		
+		/*评论框*/
+		function pinglun() {
+			$(".txtBtn").bind("click", function(){
+				$(".a-comment .publishText").hide();
+				$(this).next().toggle();
+				$(this).next().children("textarea").focus();
+			});
+		}
+		/**
+		 * 登录
+		 */
+		 function login(){
+			var loginName = $("#username");
+			var password = $("#password");
+			var mCheckNum = $("#yzm");
+			
+			if($.trim(loginName.val())==""||$.trim(loginName.val()).length<2){
+				alert("请输入用户名,最少2位!");
+				loginName.focus();
+				return false;
+			}else if($.trim(password.val())==""||$.trim(password.val()).length<6){
+				alert("请输入密码,最少6位!");
+				password.focus();
+				return false;
+			}else if($.trim(mCheckNum.val()).length!=5){
+				alert("请输入5位验证码!");
+				mCheckNum.focus();
+				return false;
+			}
+			var dataF = $("#myForm1").serialize();
+			$.ajax({
+				type:"post",
+				aysnc:false,
+				url:"/doMember_login",
+				data:dataF,
+				success:function(data){
+					if(null==data){
+						alert("未知原因,登陆失败!");
+						
+					}else if(data.status==1){
+						window.location.reload();
+					}else{
+						if(data.msg){
+							alert(data.msg);
+							$("#imageVerify").click();
+							if(data.msg.indexOf("验证码")!=-1){
+								$("#mCheckNum").val("").focus();
+							}
+						}else{
+							alert("系统异常,登陆失败!");
+						}
+					}
+				}
+			});
+		 }
+		
+		function changeImg(dom){  
+		 	var imgSrc = $(dom);  
+			var src = imgSrc.attr("src");  
+			imgSrc.attr("src",chgUrl(src));  
+		}
+		//时间戳  
+		//为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳  
+		function chgUrl(url){  
+		 var timestamp = (new Date()).valueOf();  
+		 if(url.indexOf("timestamp")>=0){  
+		 	url = url.substr(0,url.indexOf("timestamp")-1);
+		 }  
+		 return url + "&timestamp=" + timestamp;  
+		} 
+		
+		//发布评论
+		function checkPubForm(){
+			var c = $("#loginMember1").val();
+			if(c ==null ||c==""){
+				alert("请先登录！");
+				return;
+			}
+			var content = $("#content1").val();
+			if(content ==null ||content ==""){
+				alert("评论内容不能为空!");
+				return;
+			}
+			
+			var data1 = $("#myForm1").serializeArray();
+			$.ajax({
+				url:"/doArticleComment_pubComment",
+				type:"post",
+				data:data1,
+				success:function(json){
+					if(json.status ==1){
+						 $("#content1").val(""); 
+						window.location.reload();
+					}else{
+						alert(json.msg);
+					}
+				}
+			});
+			
+		}
+		
+		//回复
+		function reply(parentId){
+			var c = $("#loginMember1").val();
+			if(c ==null){
+				alert("请先登录！");
+				return;
+			}
+			var content1 = "#content_"+parentId;
+			var content = $(content1).val();
+			if(content ==null ||content ==""){
+				alert("评论内容不能为空!");
+				return;
+			}
+			var memberId = $("#memberId").val();
+			var articleId = $("#articleId").val();
+			$.ajax({
+				url:"/doArticleComment_pubComment",
+				type:"post",
+				dataType: 'json',
+				data:{parentId:parentId,content:content,loginMember:c,memberId:memberId,articleId:articleId},
+				success:function(json){
+					if(json.status ==1){
+						 $(content1).val(""); 
+						window.location.reload();
+					}else{
+						alert(json.msg);
+					}
+				}
+			});
+			
+		}
+	</script>
+
+	<!-- 返回顶部 -->
+	<script type="text/javascript">returnTop();function returnTop(){var str = "<div class='returnTop' title='点击返回顶部'></div>";var $Dom = $("body");$Dom.append(str);var $returnTop = $(".returnTop");$(window).scroll(function (){if($(window).scrollTop() > 150){$returnTop.show();}else{$returnTop.hide();}$returnTop.bind("click", function (){$(window).scrollTop(0);})});}</script>
+</body>
+</html>

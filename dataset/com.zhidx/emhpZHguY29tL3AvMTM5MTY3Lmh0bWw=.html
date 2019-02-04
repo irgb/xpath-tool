@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这个曾比ARM还火的架构即将开源！中国造芯新机遇 - 智东西</title>
+    <meta name="keywords" content="arm,ar">
+    <meta name="description" content="中国自主造芯新希望，矛头指向RISC-V？MIPS开源推进路上还有很多挑战。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/DD.jpeg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="心缘" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/caoxinyuan" title="由心缘发布" rel="author">心缘</a></div>
+                <div class="author-posts">共发表120篇文章</div>
+                <div class="author-desc">人工智能&amp;前沿科技探索者</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag2">百度</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag1">无人机</a><a href="http://zhidx.com/p/tag/vr" class="tag2">VR</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag2">通用</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/me" class="tag1">me</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                这个曾比ARM还火的架构即将开源！中国造芯新机遇            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/series-article/aichip" rel="category tag">AI芯片 - 智东西人工智能芯片系列报道</a>  <a href="http://zhidx.com/p/category/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" rel="category tag">人工智能</a>  <a href="http://zhidx.com/p/category/series-article/aichip/aichip-top" rel="category tag">人工智能芯片重磅报道</a>  <a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a></span><span class="time">2019/01/02 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2008/12/MIPS-title.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2008/12/MIPS-title.jpg 850w, http://oss.zhidx.com/uploads/2008/12/MIPS-title.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2008/12/MIPS-title.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong>智东西（公众号：zhidxcom）</strong><br />
+<strong>文 | 心缘</strong></p>
+<p><strong>导语：“AI芯片”这个新鲜的概念在过去一年间逐渐走过了普及的阶段，越来越被大众所熟知。在行业走过野蛮生长，开始加速落地、加速整合的过程中，也有更多的AI芯片公司也开始走出属于自己的差异化路线。</strong></p>
+<p><strong>智东西在此前AI芯片系列报道第一季之后，再次出发，进一步对AI芯片全产业链上下近百间核心企业进行差异化的深度追踪报道。此为智东西AI芯片产业系列报道第二季之一。</strong></p>
+<p>2018年，是硬件开源起势的一年，是继ARM称霸移动市场多年后，RISC架构名望再涨的一年，更是我国自主造芯的热情高潮迭起的一年。</p>
+<p>这一年，RISC-V迅速崛起并扩张生态，诸多半导体公司和科技巨头热情加盟，国内外的RISC-V产业联盟都做得风生水起。智东西曾纵览国内外RISC-V浪潮（<a href="http://zhidx.com/p/137642.html">深度：AI芯片新风口！阿里华米已入局，将撼动ARM地位</a>）。</p>
+<p>师出同门的RISC-V和MIPS，在前者如日中天之时，后者却屡遭“卖身”。作为一个35岁的硅谷老前辈，MIPS却在今年年中被7岁的AI新秀Wave Computing收入麾下，一个开源大计也开始默默地在硅谷生根发芽。</p>
+<p>经过6个月的酝酿，赶在2018年的尾巴，Wave Computing贯彻其“不鸣则已一鸣惊人”的统一作风，在芯片界抛下了一颗重磅炸弹——宣布MIPS今年Q1开源！而这距离Wave收购MIPS只有短短6个月。</p>
+<p>日渐边缘化的MIPS能否靠开源计划重返主流市场？如果这个计划提前半年公布，RISC-V是否还有今日之备受瞩目？它是否会对RISC-V造成冲击？又对采用MIPS架构的老玩家们意味着什么？</p>
+<p>智东西走访国内外多家知名芯片企业，梳理了MIPS开源计划为其生态及Wave的AI大计带来的优势，并从生态、市场、社区、专利和技术五个方面进行剖析，力图复盘一个完整的MIPS开源布局。</p>
+<h2>一、从ARM前辈到声势渐微：江河日下的MIPS</h2>
+<p>MIPS全名为“无内部互锁流水级的微处理器”（Microprocessor without interlocked piped stages），是基于精简指令集（RISC） 的衍生架构之一。</p>
+<p>它曾比ARM还要火，是安卓系统支持的三大处理器平台之一，却最终在生态的较量中铩羽而归。</p>
+<p>也许是学院派出身使得MIPS对商业化不慎敏感，也许是长期寄人篱下和几度被转手的经历削损了MIPS的锋芒，再加上MIPS在移动时代的反应迟钝，以及架构授权带来的硬件落后等种种问题，致使MIPS在市场中的地位和知名度都开始裹足不前。</p>
+<h3>1、 移动败阵，荣光不再</h3>
+<p>作为精简指令集（RISC）的先行者，MIPS架构其实算是ARM的同门师兄，比ARM的诞生还早六年。甚至在1991年就推出了64位的设计R4000，而ARM到2012年才大范围推广64位处理器设计。</p>
+<p>早期MIPS公司是对标英特尔，面向中高端市场输出产品。Pacemips、IDT和东芝等半导体公司在MIPS发展早期采用了其设计来制造芯片，生产的芯片被用于索尼游戏机、Cisco的路由器和SGI超级计算机等终端设备。MIPS在家用路由器市场的垄断地位延续至今。</p>
+<p><img class="alignnone size-full wp-image-139251" src="http://oss.zhidx.com/uploads/2008/12/preso09071112.jpg" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="452" srcset="http://oss.zhidx.com/uploads/2008/12/preso09071112.jpg 800w, http://oss.zhidx.com/uploads/2008/12/preso09071112.jpg?x-oss-process=image/resize,m_fill,w_531,h_300 531w, http://oss.zhidx.com/uploads/2008/12/preso09071112.jpg?x-oss-process=image/resize,m_fill,w_768,h_434 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲MIPS是业界应用广泛的可扩展处理器架构</p>
+<p>不过，在后辈ARM果断踏入移动时代的大门并迅速完善生态时，MIPS却固守在高清盒子、打印机等原来的市场，反应迟缓、技术限制以及学院派风格等原因，使他们失去了2007-2017年这移动手机市场火速爆发的关键十年。</p>
+<h3>2、几度卖身，颓势难挽</h3>
+<p>自1984年被来自斯坦福大学前校长John Hennessy创立以来，命途多舛的MIPS公司，先后在Silicon Graphics、英特尔、Imagination Techologies、Tallwood Capital和Wave Computing手下几经辗转。</p>
+<p>Silicon Graphics使用MIPS的产品打造了业界首个多处理器服务器，并于1992年收购了MIPS公司。随后SGI遇到困难，英特尔接管了其服务器CPU业务，在1998年将MIPS进行IPO。</p>
+<p>当MIPS兵败如山倒之时，英国公司Imagination在2013年花1亿美元收购MIPS，并带动起业界对MIPS新的热情，英特尔、苹果、联发科等大客户纷纷伸出友好的手。</p>
+<p><img class="alignnone size-full wp-image-139244" src="http://oss.zhidx.com/uploads/2008/12/mips-Imagination-i6400-cpu-框图-F.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2008/12/mips-Imagination-i6400-cpu-框图-F.png 800w, http://oss.zhidx.com/uploads/2008/12/mips-Imagination-i6400-cpu-框图-F.png?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2008/12/mips-Imagination-i6400-cpu-框图-F.png?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2008/12/mips-Imagination-i6400-cpu-框图-F.png?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲Imagination MIPS I6400 CPU框图</p>
+<p>Imagination选择放弃手机市场这一攻不下的山头，开始从高性能CPU转向网络设备、物联网设备和其他低功耗应用的高能效处理器。</p>
+<p>在2017年再度被Imagination以6500万美元的赔本价转手给Tallwood Capital后，MIPS终于在今年6月找到新的“归宿”——AI芯片创企Wave Computing。</p>
+<h2>二、完善社区和生态，进军边缘计算市场</h2>
+<p>Wave Computing的AI IP事业部总裁Art Swift曾向外媒透露，Wave的CEO Derek Meyer是MIPS的资深人士，自6月收购MIPS科技起就一直在酝酿MIPS开源计划。一个AI芯片创企，为何在刚刚拿下硅谷老玩家后，就做出如此果敢大胆的决定呢？</p>
+<h3>1、补足MIPS社区和生态</h3>
+<p>对于MIPS本身而言，MIPS未来的成功很大程度上取决于生态建设和社区发展。Art Swift表示，MIPS开源对于加速MIPS在生态系统中的采用至关重要，而建立一个充满活力且蓬勃发展的社区是关键。</p>
+<p>按照MIPS官方介绍，MIPS开源将提供更强大、更完整的开发工具和第三方IP解决方案生态系统，还将进一步推动基于MIPS的解决方案在物联网范围内扩展到边缘设备，并实现广泛的社区创新，推动MIPS生态系统的软件应用增长。</p>
+<p>对于MIPS生态系统合作伙伴，MIPS将进一步巩固MIPS架构的稳定性和扩散性，大量增加MIPS开源授权持有者的商机，为更多授权收入创造机会，加速提供支持AI的解决方案，同时保持与现有MIPS产品的向后兼容性。</p>
+<p>此前在移动市场不如ARM吃香的MIPS，将注意力转向中国这一新的市场。而生态的重要性亦在其中国伙伴身上体现的淋漓尽致。</p>
+<p>从七八年前开始，我国龙芯中科、珠海炬力、北京君正等公司看中MIPS所展现的高性能和低功耗，陆续买下了MIPS授权，基于MIPS做自主设计，打造自己的指令集，并用在数字电视、机顶盒以及各类便携式设备等应用之中。</p>
+<p><img class="alignnone size-full wp-image-139239" src="http://oss.zhidx.com/uploads/2008/12/WechatIMG272.jpeg" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="533" srcset="http://oss.zhidx.com/uploads/2008/12/WechatIMG272.jpeg 800w, http://oss.zhidx.com/uploads/2008/12/WechatIMG272.jpeg?x-oss-process=image/resize,m_fill,w_450,h_300 450w, http://oss.zhidx.com/uploads/2008/12/WechatIMG272.jpeg?x-oss-process=image/resize,m_fill,w_768,h_512 768w, http://oss.zhidx.com/uploads/2008/12/WechatIMG272.jpeg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲基于MIPS64的龙芯（Loongson）处理器</p>
+<p>背负着“自主造芯”盛名的龙芯，曾一度因为太过关注参数而忽略了生态问题，导致产品做出后却无人问津。</p>
+<p>随后龙芯花了很大精力在生态建设上，先在工控、军用和企业级应用等领域站稳脚跟，然后再进军消费市场。据说基于龙芯CPU进行下游解决方案开发的合作伙伴已有数百家。</p>
+<p>炬力和君正均积极拥抱新时代，在移动互联网、物联网、智能穿戴和智能家居等新兴领域展开广泛布局。除了功耗之外，如今困扰可穿戴产品的主要问题亦在于生态，君正也在着力于完善基于君正方案的生态链。</p>
+<p>不过，由于MIPS在兼容性等问题上的缺陷，MIPS的发展势头不如人意，而完全开源的RISC-V架构的兴起，又给MIPS带来新的压力。 在MIPS开源消息宣布之前，行业普遍认为MIPS大势去矣，正在衰落的道路上踽踽独行。</p>
+<p>在部分人眼中，MIPS开源将会吸引到更多玩家加入MIPS的阵营，如果MIPS能够补足在生态建设上的短板，至少使之有望在新兴的边缘计算领域，突显其在相对于RISC-V更成熟的生态、技术和工具等方面的优势。</p>
+<h3>2、和DPU IP深度融合，AI边缘计算成重点</h3>
+<p>对于Wave Computing而言，MIPS开源亦是好处颇丰。Wave将MIPS视为推动Wave的AI进入大量应用的关键，为Wave拓展边缘计算和终端等新的市场。</p>
+<p>Wave的高级副总裁兼首席商务官Lee Flanagin在一份声明中说，MIPS开源将补充Wave现有和未来的MIPS IP核，确保当前和新的MIPS客户拥有广泛解决方案，可以从中选择他们的SoC设计，并且还可以访问充满活力的MIPS开发社区和生态系统。</p>
+<p>MIPS开源还将帮助Wave实现其计划的路线图，通过一整套基于AI的第三方软件产品，为基于AI-IP的SoC解决方案提供更快捷的途径。</p>
+<p>Swift也透露说，MIPS将为开源社区带来“商业准备”的“工业强度”架构指令集。“芯片设计人员将有机会根据经过验证且经过良好测试的指令集来设计自己的内核。”</p>
+<p><img class="alignnone size-full wp-image-139240" src="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午3.28.23.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="440" srcset="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午3.28.23.png 800w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午3.28.23.png?x-oss-process=image/resize,m_fill,w_545,h_300 545w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午3.28.23.png?x-oss-process=image/resize,m_fill,w_768,h_422 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>此前Wave主打的数据流处理器（Dataflow Processing Unit，DPU）主要面向云端，具有通用特性，能同时支持训练和推理计算。</p>
+<p>Wave将在适当时机将数据流处理器DPU的IP和MIPS做深度融合，使得MIPS成为Wave下一代AI芯片的内核。Wave还将AI芯片技术和以低功耗著称的MIPS CPU结合，形成适合边缘计算和终端的MIPS加速AI的解决方案，将AI应用到更为广阔的边缘计算领域。</p>
+<p>Wave认为，MIPS在AI的边缘计算有较大优势，尤其是其优异的对多线程的支持。MIPS也会支持AI深度学习专属的扩展指令集。</p>
+<p>基于MIPS优异的多任务多线程的性能，在AI、5G以及其他对性能有高要求的领域，我们将有望更多地看到MIPS的身影。</p>
+<h2>三、MIPS真的会挫伤RISC-V吗？</h2>
+<p>前有ARM进军移动领域，打下手机市场大半江山；后有RISC-V声名渐起，在赢得一众大小厂实名支持。我们看到铺天盖地的报道写到，如果MIPS开源，或会对起势的RISC-V造成冲击。</p>
+<p>一方面，看好MIPS开源的人认为，MIPS ISA是经过商业验证的ISA，有大量优质成熟的工具、软件环境和专利，比RISC-V更完整，对于一些SoC设计师来说可以取代RISC-V。有评论称：“如果MIPS发生在两三年前，那么RISC-V就不会诞生。”</p>
+<p>但另一方面，限于MIPS开源有限的信息量，一些行业人士对MIPS开源的态度趋于谨慎。他们认为，MIPS属于一家商业公司，没有独立组织，应该不会完全开源。Power、Spark指令架构开源更早，亦未能在市场上多分几杯羮。</p>
+<p>此外，RISC-V更加现代化，包括MIPS所没有的内容，比起MIPS更加通用可扩展。</p>
+<p>MIPS的主流玩家之一君正就在保持MIPS兼容产品开发和优化完善的同时，加入了RISC-V基金会，并且其已展开对基于RISC-V指令集CPU核的研发工作。</p>
+<p><img class="alignnone size-full wp-image-139247" src="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.21.37.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="409" srcset="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.21.37.png 800w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.21.37.png?x-oss-process=image/resize,m_fill,w_587,h_300 587w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.21.37.png?x-oss-process=image/resize,m_fill,w_768,h_393 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲君正在RISC-V基金会的成员名录中</p>
+<p>不过也有人认为，RISC-V距离“真正意义上符合工业标准、受专利保护且已被大量验证的RISC开放架构”尚远。</p>
+<p>Wave公司相关负责人告诉智东西：“RISC-V是一个非常优秀的行业联盟，它起源于学校院校，能在较短的时间就从一个学校的学术研究课题到在行业内积累一定的知名度和资源来共同参与，这本身对于芯片行业的IP发展提供了一种新的探索道路。</p>
+<p>市场很大，竞争也很公平，Wave希望MIPS开源能够给业界多一个CPU架构的选择，而且是成熟、符合工业标准的、受专利保护的CPU架构，实实在在地为客户带去更好的产品价值和服务，赢得客户的信赖和支持。”</p>
+<p>对此，智东西从生态、市场、社区、专利和技术五个方面，尽可能全面覆盖我们当前可获知的关于MIPS开源计划的全貌，看它能否给指令集领域带来新的变局。</p>
+<h3>1、生态成熟度</h3>
+<p>要打造有竞争力的处理器，所使用的架构不仅要是全球范围的一个通用架构，还要获得良性生态的支持。</p>
+<p>很多人认为，相比RISC-V，经过多年发展的MIPS经已经建立了相对成熟的生态体系，这将成为MIPS开源后的一大优势。</p>
+<p>UltraSoC是一家为嵌入式系统提供先进调试和分析技术的英国公司，是RISC-V的积极支持者。</p>
+<p>这家公司的CEO Rupert Baines告诉外媒EE Times：“鉴于RISC-V的势头，MIPS开源是一个有趣、精明的举动”，“MIPS已经拥有大量优质工具和软件环境，这是一种放大MIPS自身优势的聪明之举，而且没什么损失。”他认为，对于一些集成电路设计师而言，MIPS可以替代RISC-V。</p>
+<p><img class="alignnone size-full wp-image-139252" src="http://oss.zhidx.com/uploads/2008/12/preso09071120.jpg" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="356" srcset="http://oss.zhidx.com/uploads/2008/12/preso09071120.jpg 800w, http://oss.zhidx.com/uploads/2008/12/preso09071120.jpg?x-oss-process=image/resize,m_fill,w_600,h_267 600w, http://oss.zhidx.com/uploads/2008/12/preso09071120.jpg?x-oss-process=image/resize,m_fill,w_768,h_342 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲2011年MIPS在数字家居、网络和移动设备三大领域的授权商</p>
+<p>Linley Group的首席分析师Linley Gwennap则表示，MIPS在开源社区的影响力份额比不过RISC-V，各种所有权转换会对MIPS造成限制，但MIPS还有时间来增进设计。</p>
+<p>另外，MIPS原有内核授权业务优势过大，导致其他愿意参与的公司不多，其多样性和可选择性比起RISC-V内核偏弱，多家半导体IP公司已经开始做基于RISC-V指令集的内核。</p>
+<p>Gwennap认为MIPS ISA比RISC-V更完整，软件工具也相对更成熟，而且能提供RISC-V所缺乏的专利保护和中央授权来避免ISA碎片化，这些因素使得MIPS在商业应用方面具有优势。</p>
+<p>不过，此次开源计划针对的是MIPS R6指令集，这是MIPS的一个近乎全新的指令集，对此前MIPS的架构做了大量的优化工作，内核也是经过重新设计。</p>
+<p>它更近似于另一个RISC-V，之前积累的生态优势未必能发挥出来。而且尽管MIPS为早期MIPS版本的客户提供兼容工具，移植过程仍可能会有大量移植工作量。</p>
+<p>对此Wave相关负责人表示，其MIPS开源计划时认真的，这一问题会在今年第一季度公布。</p>
+<h3>2、市场走势</h3>
+<p>Imagination和Ceva曾在2012年为并购MIPS而争的火热，那时MIPS被曝出年营收约6000万美元并处于亏损中。</p>
+<p>而就这些年MIPS的布局来看，MIPS在服务器、网络中的应用相对稳定，但市场份额变化处于未知数。在移动市场几乎已经看不到希望，而在新兴的智能硬件领域暂时还没有一个巨头型玩家脱颖而出。</p>
+<p>如今MIPS还拥有博通、Cavium、英特尔Mobileye、龙芯、炬力、君正等行业领军角色的支持。一些市场观察家对MIPS依然保持信心，认为MIPS经过有效经营后，有望再次跻身主流架构。</p>
+<p><img class="alignnone size-full wp-image-139245" src="http://oss.zhidx.com/uploads/2008/12/Mobileye-EyeQ4使用了多MIPS处理器.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2008/12/Mobileye-EyeQ4使用了多MIPS处理器.png 800w, http://oss.zhidx.com/uploads/2008/12/Mobileye-EyeQ4使用了多MIPS处理器.png?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2008/12/Mobileye-EyeQ4使用了多MIPS处理器.png?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲Mobileye EyeQ4使用了多MIPS处理器</p>
+<p>MIPS并非首个期望通过开源重返高地的架构。诞生于1990年的IBM Power也曾所向披靡，其应用范围覆盖到各种类型的主机，曾占据服务器市场2/3的市场份额。</p>
+<p>然而，由于IBM偏向服务高端用户、不够重视民用蛋糕、对市场和研发综合掌握能力不足等因素，有高性能加持的Power却在Wintel联盟的进攻中节节退败，Power、Sparc等曾经风靡一时的架构CPU被x86架构CPU击得溃不成军，Power被挤到唯有在高端服务器市场立足。</p>
+<p>当Power江河日下，IBM亦选择开源的方式试图力挽狂澜，IBM联合谷歌、英伟达、TYAN、Mellanox成立OpenPower联盟和OpenPower基金会，在芯片设计、系统设计和开源软件三个层面推动Power生态环境的壮大。</p>
+<p>市场的不确定性，在某种程度上，可能会给选择它的客户带来些许疑虑。</p>
+<h3>3、社区归属</h3>
+<p>走“开源”绝非一张空头支票，Art Swift强调说必须全力支持和妥善管理开源工作，社区必须能够支持自身的发展。</p>
+<p>在MIPS架构开源后，它的管理者也是一个问题。如果要吸引更多企业加盟，一个中立的非盈利组织可能更为合适。</p>
+<p>Swift曾任RISC-V基金会营销委员会的副主席，并且是prpl基金会的主席。prpl基金会成立于2015年，是一个开源社区驱动的联盟。Swift称该基金会专注于实现在客户端设备、物联网等嵌入式设备的安全性和互操作性，成员包括Arris Technology、英特尔、沃达丰、高通和博通等。</p>
+<p><img class="alignnone size-full wp-image-139250" src="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.38.17.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="637" srcset="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.38.17.png 800w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.38.17.png?x-oss-process=image/resize,m_fill,w_377,h_300 377w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.38.17.png?x-oss-process=image/resize,m_fill,w_768,h_612 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲Art Swift在prpl基金会官网的简介</p>
+<p>当被问及谁将运行MIPS开源计划时，Swift建议建立一个新的基金会或者将其迁移到一个像prpl基金会之类的已存在的开源组织。</p>
+<p>不少人推测它会被放到前几年成立的prpl基金会中，UltraSoC CEO Baines也认为这是个不错的选择。</p>
+<p>不过按照Swift的说法，其指导委员会仍在就MIPS开源计划的管理者进行讨论。正确的管理对于确保MIPS客户确保MIPS开放式生态系统提供的开发工具，应用程序和其他增值功能和服务适合新的实施至关重要。</p>
+<p>而关于MIPS社区的支持和管理机制等更多细节，Wave也将在今年Q1公布。</p>
+<h3>4、专利保护</h3>
+<p>Wave在宣布MIPS开源计划时表示，“MIPS开源计划的参与者将获得MIPS授权的数百项现有全球专利”。</p>
+<p>Wave将允许开源计划的参与者自由修改授权，并且没有IP问题，但授权后产生的IP须经由MIPS 开源社区的第三方验证体系验证兼容性，以避免碎片化。</p>
+<p>有行业人士认为，MIPS开源将对君正、龙芯等MIPS的老玩家也会产生积极的影响，有助于他们实现真正的自主可控，并在专利上提供相当程度的保护。</p>
+<p>Linley Gwennap则表示，这种方法使得MIPS更难获得授权收入，其挑战在于找到一种能够平衡开放可用性和创收的商业模式。</p>
+<p>与此同时，专利问题存在些许隐忧。MIPS曾2012年将其拥有的580个专利中的498个专利都卖给了由ARM等几个科技巨头组成的专利联盟BridgeCrossing，总收益为3.5亿美元。MIPS保留了与MIPS架构直接相关的其余82项专利属性，并对卖出的专利均有永久授权。</p>
+<p>而Bridge Crossing在收购专利的第二年，就开始把手头的专利转给了ARM。所以从理论上来说，ARM现在已控制了大部分MIPS的原有专利，即便这些专利不会影响MIPS ISA，但依然会给客户带来一些担忧。</p>
+<p>Wave向智东西解答了部分疑虑，他们表示MIPS R6将完全开源，不仅完全开放ISA，架构授权者还可以自己生产基于MIPS架构的IP对外销售，且不会产生授权费和版权费，对于所承诺的数百项专利，尤其是关于64位和向量的专利，他们均会提供专利保护。</p>
+<h3>5、技术完善</h3>
+<p><img class="alignnone size-full wp-image-139248" src="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.32.27.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="353" srcset="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.32.27.png 800w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.32.27.png?x-oss-process=image/resize,m_fill,w_600,h_265 600w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.32.27.png?x-oss-process=image/resize,m_fill,w_768,h_339 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲MIPS官网信息</p>
+<p>根据MIPS官网公开的信息，在MIPS开源社区启动后，注册会员将可以访问的IP和技术资源包括：32和64位MIPS R6指令集架构的开源版本、MIPS SIMD扩展、MIPS DSP扩展、MIPS多线程（MT）、MIPS MCU、microMIPS架构和MIPS虚拟化（VZ）。</p>
+
+<p>由社区主导的技术创新已经成为一种技术创新的主流趋势，MIPS开源亦是为了顺应这一行业技术发展趋势，除了为业界提供优秀的IP设计，也为业界提供一个成熟的CPU架构选择，以推动和支持CPU设计的进一步发展。</p>
+<p>MIPS的含义是“无内部互锁流水级的微处理器”，其机制是尽量利用软件办法避免流水线中的数据相关问题。</p>
+<p>流水寄存器在相邻的流水段之间负责传递数据和控制信息，保证流水线中不同段的指令不会相互干扰，当发生互锁问题，互锁处理模块会暂停流水线直至互锁解决。</p>
+<p>由于MIPS原有指令集架构的设计已经过漫长岁月，其中遗留了一些历史问题，Andrew Shell Waterman博士在其2016年发表的《RISC-V指令集架构设计（Design of the RISC-V Instruction Set Architecture）》论文中列举了MIPS在高性能应用方面存在的八点缺陷。</p>
+<p>数据冲突问题影响流水线性能、乘法和除法使用特殊的架构寄存器增加指令数和位架构复杂性、使用特殊指令处理未对齐的加载和存储会消耗大量的代码空间等问题均在文中列数。</p>
+<p><img class="alignnone wp-image-139246" src="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.16.19.png" alt="这个曾比ARM还火的架构即将开源！中国造芯新机遇" width="800" height="559" srcset="http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.16.19.png 789w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.16.19.png?x-oss-process=image/resize,m_fill,w_430,h_300 430w, http://oss.zhidx.com/uploads/2008/12/屏幕快照-2018-12-28-下午4.16.19.png?x-oss-process=image/resize,m_fill,w_768,h_536 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲Andrew Shell Waterman博士论文片段</p>
+<p>MIPS推出的最新架构已经修订并消除了其中的一些瑕疵，但RISC-V是在吸取了MIPS、SPARC、Alpha、ARM等前辈的经验后诞生的新的RISC指令集，要和RISC-V同场竞技，MIPS的架构还需持续优化。</p>
+<h2>结语：中国自主造芯路上的新风向？</h2>
+<p>Wave Computing不是第一家收购传奇企业的创企，但它正以高效的行动力展示雄心壮志。但这是一条全新的征途，Wave究竟会为加入开源计划的成员们带来哪些具体的优待，开源的MIPS R6能不能为成为MIPS翻身的引擎……诸多问题还需等Wave在今年第一季度释放出更多的信息。</p>
+<p>从总体趋势来看，开源硬件已经成为IT行业的大潮，而指令集开源也成为这个浪潮中的重要趋势。MIPS开源究竟是一场漫无止境的苦旅，还是重返主流市场的新征途，谁也无法给出确切答案。</p>
+<p>就目前而言，无论是渐有起色的RISC-V，还是将在未来不久开源的MIPS，都无法撼动ARM在移动手机市场稳固的江山，但在AI、物联网等新兴领域，ARM、MIPS、RISC-V等指令集架构都站在相近的起跑线，开源必然会刺激更多的指令集的实现能力和创新能力，也为聚焦在相对小众的指令集的中国企业提供更多的选择，并创造了新的机遇。</p>
+<p>历经多次“假自主”事件的中国，需要的不是第二个“汉芯事件”，不是所谓“在巨人肩膀上做创新”的借口，更不是空喊口号的PPT造芯，自主研发高性能基础设施是我国科技届数十年的一大梦想，相比亦步亦趋的照搬者，这个梦想的实现更需要冷静踏实、潜心钻研的人。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139167'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139167">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="这个曾比ARM还火的架构即将开源！中国造芯新机遇" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139167">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139167">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

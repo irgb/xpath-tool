@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>每4分钟走进一个家庭 刷新8万元级SUV“幸福速度”_汽车投诉网</title>
+	<meta name="keywords" content="每4分钟走进一个家庭 刷新8万元级SUV“幸福速度”,企业资讯," />
+	<meta name="description" content="1月5日，“幸福百家宴”新远景SUV 30万辆交车仪式暨探寻民族幸福之旅活动在桂林举行，近百位新远景SUV车主与媒体共同见证最具民族幸福感的交车仪式。" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="pragma" content="no-cache">  
+	<meta http-equiv="cache-control" content="no-cache">  
+	<meta http-equiv="expires" content="0">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link href="/css/headstyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/article/css/articleContent.css">
+	<style type="text/css">
+	.l-Content .titleNav p {line-height: 40px;}
+	.l-Content .titleNav em {margin: 0 0 0 12px;}
+	.l-Content .titleNav em.rightIocn{margin-left: 12px;}
+	</style>
+	<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+	<script src="http://dup.baidustatic.com/js/ds.js"></script>
+	<script type="text/javascript">
+		try{
+		    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		        window.location.href="/wap/articlecontent/20363.html";
+		    }
+		}catch(e){}
+	</script>
+	
+	<!-- 百度统计代码 -->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e64ac0694b29b54b1db025076c0c35d8";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+		
+</head>
+<body>
+	<div id="header">
+	<div class="w1000">
+		<div class="logo fl">
+			<a href="/index.jsp" title="汽车投诉网">
+				<img src="/images/styleImg/qctsw.png" alt="汽车投诉网">
+			</a>
+		</div>
+		<div class="navBox fl">
+			<div class="navHead">
+				<span class="fl">专业的汽车质量投诉平台！</span>
+				<em class="loginTsp">
+					
+				</em>
+				<i class="showNum" onclick="$('.twoNum').toggle();">
+					关注微信
+					<img class="twoNum" src="/images/styleImg/weixin_xiaochengxu.png">
+				</i>
+				<em class="loginBtn">
+					<a href="/emLogin.jsp">企业登录</a>
+					<a class="active" href="/mLogin.jsp">个人登录</a>
+				</em>
+			</div>
+			<div class="navBar">
+				<ul class="fix">
+					<li >
+						<a href="/">首页</a>
+					</li>
+					<li class='active'>
+						<a href="/article/information.html">资讯</a>
+						<span class="dropDownSelect">
+							<a href="/alist/7.html">深度点评</a>
+							<a href="/alist/6.html">媒体关注</a>
+							<a href="/alist/13.html">测评对比</a>
+							<a href="/alist/5.html">行业动态</a>
+							<a href="/alist/11.html">汽车召回</a>
+							<a href="/alist/17.html">维权法规</a>
+							<a href="/alist/15.html">专题大全</a>
+						</span>
+					</li>
+					<li >
+						<a href="/tousu/tousu.html">投诉</a>
+						<span class="dropDownSelect">
+							<a href="/tousu/tsSearch/0_0_0_0_0_0_0_0.html">搜索投诉</a>
+							<a href="/tousu/tslist/1.html">所有投诉</a>
+							<a href="/tousu/jiti.html">集体投诉</a>
+							<!-- <a href="/tousu/tslist/3.html">最多评论</a>
+							<a href="/tousu/tslist/4.html">经典投诉</a>
+							<a href="/tousu/tslist/2.html">今日投诉</a> -->
+							<a href="/tousu/tslist/3.html">多次投诉</a>
+						</span>
+					</li>
+					<li >
+						<a href="/tousu/koubei.html">口碑</a>
+					</li>
+					<li >
+						<a href="/tousu/tj.html">统计</a>
+					</li>
+					<li >
+						<a href="/article/rbi.html">红黑榜</a>
+					</li>
+					<li >
+						<a href="/article/cooChannel.html">合作媒体</a>
+					</li>
+					<li>
+						<a class="iconText" href="/tsPub.jsp">发表投诉</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function(){
+		//个人会员登陆信息
+		$.post("doMember_getLoginInfo",null,function(data){
+			var loginTsp = $(".loginTsp");
+			var loginBtn = $(".loginBtn");
+			if(null!=data&data.status==1&&data.loginMember!=null){
+				loginBtn.hide();
+				var appDom = "您好！";
+				appDom = "<i id='loginName'>";
+					appDom+=data.loginMember.showName;
+				appDom+="</i>";
+				appDom+="<a target='_self' href='/memberManager/'>个人中心</a>";
+				appDom+="<a target='_self' href='/memberManager/loginOut.jsp'>[退出]</a>";
+				loginTsp.html(appDom).show();
+			}else{
+				$.post("doEmMember_getLoginInfo",null,function(data){
+					var loginTsp = $(".loginTsp");
+					var loginBtn = $(".loginBtn");
+					if(null!=data&data.status==1&&data.loginEm!=null){
+						loginBtn.hide();
+						var appDom = "您好！";
+						appDom = "<i id='logineEmName'>";
+							appDom+=data.loginEm.lxrName;
+						appDom+="</i>";
+						appDom+="<a target='_self' href='/emm/'>企业中心</a>";
+						appDom+="<a target='_self' href='/emm/loginOut.jsp'>[退出]</a>";
+						loginTsp.html(appDom).show();
+					}else{
+						loginTsp.hide();
+						loginBtn.show();
+					}
+				});
+			}
+		});
+		
+		
+		
+		//百度统计
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		} else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})
+</script>
+<div id="wrapper" class="fix">
+		<div class="l-Content">
+			<h3 class="title">
+				<a href="/">首页</a>
+				&gt;
+				<a href="/alist/12.html">企业资讯</a>
+				&gt;
+				<span>正文</span>
+			</h3>
+			<h3 class="articleTit">
+				每4分钟走进一个家庭 刷新8万元级SUV“幸福速度”</h3>
+			<div class="titleNav fix">
+				<p class="fl">
+					<em>来源：<b>厂商供稿</b></em>
+					<em>发表于：<b>2019-01-07</b></em>
+					<em>作者：<b>佚名</b></em>
+					<em class="rightIocn" style="float: right;">
+						<em class="fl">分享：</em>
+						<span class="bdsharebuttonbox">
+							<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+							<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+							<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+							<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+							<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						</span>
+						<script>
+							window._bd_share_config = {
+								"common" : {
+									"bdSnsKey" : {},
+									"bdText" : "",
+									"bdMini" : "2",
+									"bdMiniList" : false,
+									"bdPic" : "",
+									"bdStyle" : "0",
+									"bdSize" : "24"
+								},
+								"share" : {},
+								"image" : {
+									"viewList" : [ "tsina", "tqq", "weixin", "sqq", "qzone" ],
+									"viewText" : "分享到：",
+									"viewSize" : "16"
+								},
+								"selectShare" : {
+									"bdContainerClass" : null,
+									"bdSelectMiniList" : [ "tsina", "tqq", "weixin", "sqq", "qzone" ]
+								}
+							};
+							with (document)
+								0[(getElementsByTagName('head')[0] || body)
+										.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+					</script>
+					</em>
+				</p>
+			</div>
+
+			<!-- 提示 -->
+			<div class="msg">
+				网站部分文章为转载，仅供参考。版权和著作权归原作者所有，转载目的在于传递更多信息，不代表本网赞同其观点和对其真实性负责。对于网站原创作品，版权归作者和网站所有，如需转载，请注明作者及出自于汽车投诉网。
+			</div>
+
+			<!-- 文章文字内容 -->
+			<div class="articleContent">
+				<div style="text-indent:2em;" align="justify">
+	1月5日，“幸福百家宴”新远景SUV 30万辆交车仪式暨探寻民族幸福之旅活动在桂林举行，近百位新远景SUV车主与媒体共同见证最具民族幸福感的交车仪式。远景SUV自2016年8月上市至今，28个月累计销量已达30万辆，相当于每4分钟就有一辆远景SUV走进一个家庭。在车市进入寒冬，SUV市场销量不断下滑的环境中，新远景SUV以月均过万的稳定销量，迈入了30万的新起点，刷新了８万元级SUV的“幸福速度”。
+</div>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112834_908.png" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	<strong>汇聚30万多民族用户幸福能量 以“吉速”开启新征程</strong>
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	从百城万辆公益上市，到第10万辆交付，再到第30万辆交付，远景SUV承载着幸福的使命走过北京、广州、成都、杭州这些极具幸福感的城市。如今，新远景SUV来到少数民族聚集地桂林，向包含少数民族在内的多民族朋友传递幸福能量。第30万辆新远景SUV的成功交付，标志着新远景SUV新幸福征程的开启，同时也意味着新远景SUV以2018年1-11月110,618台的销量跑赢了SUV整体下滑的趋势，产品实力尽显。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112900_717.png" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	交付仪式现场，桂林吉利汽车宝路通总经理房粱亲手将代表着第30万辆新远景SUV幸福的侗族特色纪念品交付到来自桂林苗族的蒋先生手上，为他开启幸福远景。房粱表示：“新远景SUV是吉利针对家庭打造的‘8万元级超值家享SUV’，无论在外观造型、动力配置还是智能安全上，都表现出越级的产品实力，致力于为中国更多家庭带来幸福的出行体验。新远景SUV在山清水秀的少数民族聚集地桂林受到欢迎，也说明了其可靠品质得到了更多人的认可。”
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112908_7.png" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	作为第30万辆新远景SUV车主，蒋先生表达了他的感慨与期待：“2018年推出的新远景SUV颜值高，而且相比其它７-10万左右的SUV，动力更足，空间更大，安装的智能配置更全面。试开过朋友的新远景SUV，走山路、爬高坡、下雨走泥路，都可以轻松地过去，而且感觉很舒适，总体感觉买一辆新远景SUV特别值。以后有了新远景SUV，可以经常带家人回老家，或者去郊外游玩，为生活带来更多幸福。”
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112916_455.png" width="417" height="279" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	<strong>刷新家用SUV新体验 硬实力夯实“8万元级SUV性价王”地位</strong>
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	从2016年上市到2018年连续三年在偏远地区为韩红爱心百人援助活动保驾护航，远景SUV凭30万用户支持与信赖的产品硬实力，能够轻松应对复杂路况，始终为驾乘者提供舒适体验。此次借第30万辆新远景SUV交付活动的契机，在漓江风景区进行了自由试驾活动，再次体验新远景SUV作为“8万级超值家享SUV”，在动力、智联、舒适、安全、设计五方面所具有的优势。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112927_491.png" width="417" height="279" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	新远景SUV采用吉利全新1.4T涡轮增压发动机加8CVT无级变速箱“双T动力组合”，直线加速时起步更有力，行驶在阶梯路、颠簸路段也非常平顺，尤其是百公里超低油耗为6.3L，保证用户拥有充足动力的同时，大大降低了油费的支出。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112936_353.png" width="417" height="279" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	同时，新远景SUV采用EPS电动随速助力转向系统以及360°3D全景影像系统等配置，能够高效解决所有常见路况与场景下的弯道、湿滑、侧倾、紧急制动、上下坡等的安全问题，再加上360°3D全景影像系统全方位更立体直观的图像显示，为出行安全提供了有力保障。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112945_119.png" width="417" height="279" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	在舒适性方面，新远景SUV采用前麦弗逊、后4连杆独立悬挂系统，搭配纵深可达1.8m的超大空间、全景星空天窗等配置为用户打造了一个极具静谧、舒适的驾乘座舱，保证了用户即使在桂林复杂的路况下也能享有舒适体验。新远景SUV在动力、操控性、舒适性等方面都有着领先同级的表现。不难预测，新远景SUV将在现有的30万人气之上，继续保持“8万元级SUV性价王”市场地位。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107112956_284.png" alt="说明: f298be6f2909a714865dab8a09e95f6" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	<strong>30万幸福基数之上 新远景SUV传承品牌使命继续为幸福代言</strong>
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	作为30万用户认可的“幸福座驾”，远景SUV自诞生之日起就是一款有爱有温度的产品，也一直用实际行动将“幸福”理念贯彻到底。从未上市先公益助力韩红百人援甘公益行动，到百城万辆公益上市开启幸福助学行动，远景SUV又进行了“花田测”最美乡村体验之旅、韩红爱心百人援宁公益行动、“绿跑道”乡村少年体育梦想计划等幸福行动，让用户以及更多人感受到远景SUV的幸福温度。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107113014_594.png" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	新远景SUV自上市起，便传承品牌的幸福使命，通过点赞“礼让斑马线”倡议、韩红爱心百人援陕公益行动、32周年集体婚礼等活动，不断地深化和延续远景家族产品主打的“幸福”理念，继续为幸福代言。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107113026_689.png" width="417" height="278" />
+</p>
+<p class="MsoNormal" style="text-indent:2em;" align="justify">
+	远景SUV上市28个月来，见证了吉利SUV以“吉速”崛起，形成吉利轿车、SUV均衡发展格局，并以骄人的销量成绩助力吉利近三年来实现销量2016年超76万、2017年超124万、2018年超150万三级跳。如今，新远景SUV已赢得了包含多民族在内的30万用户的支持与青睐，助力30万用户及家庭开启幸福的远景。站在30万的新起点上，新远景SUV将继续担负幸福的理念与责任，为更多的家庭带去幸福出行生活。
+</p>
+<p class="MsoNormal" align="center">
+	<img src="http://img2.qcwp.com/temp/upfiles/article/image/20190107/20190107113044_247.png" alt="说明: C:\Users\user\AppData\Local\Temp\WeChat Files\c47e35c9bacda5fe4cad5c976053872.jpg" width="418" height="279" />
+</p>
+<p style="text-indent:2em;">
+	<br />
+</p></div>
+			<div class="wxText">
+				第一时间获取QCTSW行业新鲜资讯和深度商业分析，请在微信公众账号中搜索「 汽车投诉网」或者「 qctswcom」，或用手机扫描左方二维码，即可获得汽车投诉网每日精华内容推送和最优搜索体验，并参与编辑活动。
+			</div>
+
+			<!-- 相关阅读 -->
+			<div class="aboutArticle">
+				<h3 class="tit">相关阅读</h3>
+				<div class="aboutArticleList">
+					<ul id="xgyds" ></ul>
+				</div>
+			</div>
+			
+			<!-- 发表评论 -->
+			<form action="" id="myForm1" method="post" >
+			<div class="a-publish">
+				<h3 class="a-publish_title">发表评论</h3>
+				<form action="" id="myForm1" method="post" >
+				<input type="hidden" id="memberId" name="memberId" value=""/>
+				<input type="hidden" id="loginMember1" name="loginMember" value=""/>
+				<input type="hidden" id="articleId" name="articleId" value="20363"/>
+				<div class="a-publish_link">
+					<span>用户名:</span>
+					<input type="text" palceholder="请输入用户名" id="username" name="loginName"/>
+					<span class="mm">密码:</span>
+					<input type="password" palceholder="请输入密码" id="password" name="password"/>
+					
+					<input class="yzm" type="text" placeholder="输入验证码" id="yzm" name="mCheckNum"/>
+					<a href="javascript:void(0)" title="点击换一张"  onclick="changeImg($('#imageVerify').get(0));">
+						<img id="imageVerify" title="点击刷新" style="" src="/images.jsp?sName=mCheckNum" onclick="changeImg(this);"/>
+								看不清
+					</a>
+					
+					<a class="submitBtn" href="javascript: void(0);" onclick="login()">登录</a>
+					
+					</div>
+				<div class="a-publish_txt fix">
+					<textarea placeholder="输入评论内容" id="content1" name="content"></textarea>
+					<a class="a-publish_btn" href="###" onclick="checkPubForm()">发表</a>
+				</div>
+			</div>
+			</form>
+	
+			<!-- 评论内容 -->
+			<div class="a-comment">
+				<h3 class="a-comment_title">最新评论</h3>
+				
+				</div>
+		</div>
+		<!-- left end -->
+
+		<!-- right start -->
+		<div class="r-Content">
+			<!-- 热点推荐 -->
+			<div class="hotTj">
+				<h3 class="tit">热点推荐</h3>
+				<ul id="hottjs"></ul>
+			</div>
+		</div>
+		<!-- right end -->
+	</div>
+	<!-- wrapper end -->
+
+	<div id="footer">
+	<div class="foot">
+		<p>
+			<a href="/about/about.html" target="_blank">关于我们</a>
+			|
+			<a href="/about/friendLink.html" target="_blank">友情链接</a>
+			|
+			<a href="/about/yszc.html" target="_blank">隐私政策</a>
+			|
+			<a href="/about/reports.html" target="_blank">媒体报道</a>
+			|
+			<a href="/about/law.html" target="_blank">法律顾问团</a>
+			|
+			<a href="/about/del.html" target="_blank">撤贴须知</a>
+			|
+			<a href="/about/help.html" target="_blank">网站帮助</a>
+			|
+			<a href="/about/ad.html" target="_blank">商务合作</a>
+			|
+			<a href="http://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
+		</p>
+		<p>
+			Copyright © 2008 - 2018 <a href="/index.jsp" target="_blank">汽车投诉网</a> ALL RIGHTS RESERVED　粤ICP备12070654号-2
+		</p>
+	</div>
+</div>
+<script type="text/javascript">
+		$(function () {
+			fixedScrollDom($(".hotTj"), "fixedClass");
+			pinglun();
+			//相关阅读
+			$.post("/doArticle_getXgtjs",{id:20363},function(data){
+				var appDom = "";
+				if(null!=data&&data.status==1){
+					var a;
+					for(var i=0;i<data.articles.length;i++){
+						a = data.articles[i];
+						appDom+="<li>";
+							appDom+="<dl class='fix'>";
+								if(a.image!=""){
+									appDom+="<dt class='fl'>";
+										appDom+="<a href='/article/articlecontent/"+a.id+".html'>";
+											appDom+="<img src='"+a.image+"'>";
+										appDom+="</a>";
+									appDom+="</dt>";
+								}
+								appDom+="<dd>";
+									appDom+="<h4><a href='/article/articlecontent/"+a.id+".html'>"+a.title+"</a></h4>";
+										appDom+="<span class='articleInfo'>";
+											appDom+="<em>"+a.createTime+"</em>";
+											appDom+="<em>作者："+a.author+"</em>";
+										appDom+="</span>";
+									appDom+="<p>"+a.summary+"</p>";
+								appDom+="</dd>";
+							appDom+="</dl>";
+						appDom+="</li>";
+					}
+					$("#xgyds").html(appDom);
+				}
+			});
+			//热门推荐
+			$.post("/doArticle_getHottjs",function(data){
+				var appDom = "";
+				if(null!=data&&data.status==1){
+					var a;
+					for(var i=0;i<data.articles.length;i++){
+						a = data.articles[i];
+						appDom+="<li>";
+							appDom+="<a href='/article/articlecontent/"+a.id+".html' title=" +a.title+ ">";
+								appDom+="<dl class='fix'>";
+									appDom+="<dt class='fl'>";
+										appDom+="<img src='"+a.image+"'>";
+									appDom+="</dt>";
+									appDom+="<dd>";
+										appDom+="<h4>"+a.title+"</h4>";
+										appDom+="<p>"+a.createTime+"</p>";
+									appDom+="</dd>";
+								appDom+="</dl>";
+							appDom+="</a>";
+						appDom+="</li>";
+					}
+					$("#hottjs").html(appDom);
+				}
+			});
+		});
+
+		//固定
+		function fixedScrollDom(dom, fixedClassName) {
+			var columnTopHeight = dom.offset().top;
+			var $this = dom;
+			$(window).scroll(function () {
+				var bodyScrollTop = $(document).scrollTop();
+				if(bodyScrollTop > columnTopHeight) {
+					$this.addClass(fixedClassName);
+				}else {
+					$this.removeClass(fixedClassName);
+				}
+			});
+
+		}
+		
+		/*评论框*/
+		function pinglun() {
+			$(".txtBtn").bind("click", function(){
+				$(".a-comment .publishText").hide();
+				$(this).next().toggle();
+				$(this).next().children("textarea").focus();
+			});
+		}
+		/**
+		 * 登录
+		 */
+		 function login(){
+			var loginName = $("#username");
+			var password = $("#password");
+			var mCheckNum = $("#yzm");
+			
+			if($.trim(loginName.val())==""||$.trim(loginName.val()).length<2){
+				alert("请输入用户名,最少2位!");
+				loginName.focus();
+				return false;
+			}else if($.trim(password.val())==""||$.trim(password.val()).length<6){
+				alert("请输入密码,最少6位!");
+				password.focus();
+				return false;
+			}else if($.trim(mCheckNum.val()).length!=5){
+				alert("请输入5位验证码!");
+				mCheckNum.focus();
+				return false;
+			}
+			var dataF = $("#myForm1").serialize();
+			$.ajax({
+				type:"post",
+				aysnc:false,
+				url:"/doMember_login",
+				data:dataF,
+				success:function(data){
+					if(null==data){
+						alert("未知原因,登陆失败!");
+						
+					}else if(data.status==1){
+						window.location.reload();
+					}else{
+						if(data.msg){
+							alert(data.msg);
+							$("#imageVerify").click();
+							if(data.msg.indexOf("验证码")!=-1){
+								$("#mCheckNum").val("").focus();
+							}
+						}else{
+							alert("系统异常,登陆失败!");
+						}
+					}
+				}
+			});
+		 }
+		
+		function changeImg(dom){  
+		 	var imgSrc = $(dom);  
+			var src = imgSrc.attr("src");  
+			imgSrc.attr("src",chgUrl(src));  
+		}
+		//时间戳  
+		//为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳  
+		function chgUrl(url){  
+		 var timestamp = (new Date()).valueOf();  
+		 if(url.indexOf("timestamp")>=0){  
+		 	url = url.substr(0,url.indexOf("timestamp")-1);
+		 }  
+		 return url + "&timestamp=" + timestamp;  
+		} 
+		
+		//发布评论
+		function checkPubForm(){
+			var c = $("#loginMember1").val();
+			if(c ==null ||c==""){
+				alert("请先登录！");
+				return;
+			}
+			var content = $("#content1").val();
+			if(content ==null ||content ==""){
+				alert("评论内容不能为空!");
+				return;
+			}
+			
+			var data1 = $("#myForm1").serializeArray();
+			$.ajax({
+				url:"/doArticleComment_pubComment",
+				type:"post",
+				data:data1,
+				success:function(json){
+					if(json.status ==1){
+						 $("#content1").val(""); 
+						window.location.reload();
+					}else{
+						alert(json.msg);
+					}
+				}
+			});
+			
+		}
+		
+		//回复
+		function reply(parentId){
+			var c = $("#loginMember1").val();
+			if(c ==null){
+				alert("请先登录！");
+				return;
+			}
+			var content1 = "#content_"+parentId;
+			var content = $(content1).val();
+			if(content ==null ||content ==""){
+				alert("评论内容不能为空!");
+				return;
+			}
+			var memberId = $("#memberId").val();
+			var articleId = $("#articleId").val();
+			$.ajax({
+				url:"/doArticleComment_pubComment",
+				type:"post",
+				dataType: 'json',
+				data:{parentId:parentId,content:content,loginMember:c,memberId:memberId,articleId:articleId},
+				success:function(json){
+					if(json.status ==1){
+						 $(content1).val(""); 
+						window.location.reload();
+					}else{
+						alert(json.msg);
+					}
+				}
+			});
+			
+		}
+	</script>
+
+	<!-- 返回顶部 -->
+	<script type="text/javascript">returnTop();function returnTop(){var str = "<div class='returnTop' title='点击返回顶部'></div>";var $Dom = $("body");$Dom.append(str);var $returnTop = $(".returnTop");$(window).scroll(function (){if($(window).scrollTop() > 150){$returnTop.show();}else{$returnTop.hide();}$returnTop.bind("click", function (){$(window).scrollTop(0);})});}</script>
+</body>
+</html>

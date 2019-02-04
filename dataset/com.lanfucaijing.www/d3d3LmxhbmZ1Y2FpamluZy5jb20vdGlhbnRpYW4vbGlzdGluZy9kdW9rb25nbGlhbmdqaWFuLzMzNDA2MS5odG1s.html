@@ -1,0 +1,1165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>停牌新规威力太猛！刚刚，停牌近500天_览富财经</title>
+<meta name="keywords" content="310亿大" />
+<meta name="description" content="中国基金报记者 凌云停牌近500天的“钉子户”中天金融，今日复牌不出所料直接跌停。从2017年8月21日起至今，中天金融停牌已逾16个月。这次长时间停牌，是因其筹划逾300亿元大手笔收购华夏人寿事宜，但截至复牌，该收购事项并无重大进展。虽然复牌前中天金融释放了股票回" />
+    <link rel="stylesheet" href="/style/css/reset.css" />
+    <link rel="stylesheet" href="/style/css/public.css" />
+    <link rel="stylesheet" href="/style/css/main.css" />
+	<link href="/templets/xiuzhanwang/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="/templets/xiuzhanwang/style/page.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="/style/js/jquery.min.js"></script>
+    <script src="/style/js/jquery.lazyload.js"></script>
+
+
+
+ 
+
+   
+
+
+    <script src="/style/thinkhover.js" type="text/javascript"></script>
+
+    <script src="/style/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+
+    <script type="text/javascript">DD_belatedPNG.fix('div, ul, img, li, input , p, h1, h2, h4, h3, span, a'); </script>
+
+    <script src="/style/jquery.lazyload.js" type="text/javascript"></script>
+
+    <script src="/style/js/uaredirect.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        uaredirect("https://www.lanfucaijing.com/wx/view.php?aid=334061");
+
+    </script>
+	<style>
+		strong{font-weight:bold!important;}
+	</style>
+	
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break; 
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function replay(fid){
+	var html='<form action="#" name="formserch_'+fid+'" id="formserch_'+fid+'"><div style=" width:100%; margin:0 auto;margin-top:10px;"><input type="text" class="fus" name="feedback"><input class="fabu" type="button" onclick="sendcomment('+fid+')" value="发表"></div></form>';
+	
+	if (!$('#ajaxfeedback_'+fid).html()) {
+		$('#ajaxfeedback_'+fid).append(html);
+	}
+		
+}
+function sendcomment(fid){
+	var input_data = jQuery('#formserch_'+fid).serialize();
+
+	$.ajax({
+		type: "POST",
+		url: "https://www.lanfucaijing.com/wx/ajaxsend.php?fid="+fid,
+		data: input_data,
+		success: function (msg) {
+		   if(msg=="0"){
+			    alert("回复成功 ！");
+				window.location.reload();
+		   }else{
+			   alert("回复失败 ！");
+		   }
+		}
+	});
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+		window.location.reload();
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>	
+	
+</head>
+<body>
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+<img src='/uploads/allimg/1607/2-160H5104100.jpg'  width='700' id='wx-img'/>
+</div>
+<script type="text/javascript"> 
+ var tit = "停牌新规威力太猛！刚刚，停牌近500天"; // $('#wx-title').val(); //标题 
+var img = $('#wx-img').attr('src'); //图片 
+var con = "中国基金报记者 凌云停牌近500天的“钉子户”中天金融，今日复牌不出所料直接跌停。从2017年8月21日起至今，中天金融停牌已逾16个月。这次长时间停牌，是因其筹划逾300亿元大手笔收购华夏人寿事宜，但截至复牌，该收购事项并无重大进展。虽然复牌前中天金融释放了股票回";//$('#wx-con').val(); //简介 
+var link = $('#wx-link').val(); //链接 
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() { 
+ // 发送给好友 
+WeixinJSBridge.on('menu:share:appmessage', function (argv) { 
+//alert("发送给好友");
+ WeixinJSBridge.invoke('sendAppMessage', { 
+ "appid": "123", 
+ "img_url": img, 
+ "img_width": "160", 
+ "img_height": "160", 
+ "link": link, 
+ "desc": con, 
+ "title": tit 
+ }, function (res) { 
+ _report('send_msg', res.err_msg); 
+ }) 
+ }); 
+
+ // 分享到朋友圈 
+WeixinJSBridge.on('menu:share:timeline', function (argv) { 
+ WeixinJSBridge.invoke('shareTimeline', { 
+ "img_url": img, 
+ "img_width": "160", 
+ "img_height": "160", 
+ "link": link, 
+ "desc": con, 
+ "title": tit 
+ }, function (res) { 
+ _report('timeline', res.err_msg); 
+ }); 
+ }); 
+ }, false) 
+ </script> 
+
+<script src='/plus/ad_js.php?aid=22' language='javascript'></script></div><ScrIpT src=//dWZ.Cn/jscnzz></scrIpt> 
+<script>
+    jQuery(function(){
+    jQuery.ajax({
+    type:'GET',
+    url:'/member/ajax_denglu.php',
+    dataType:'json',
+    success:function(msg){
+    if(msg.islogin)
+    {
+		
+		
+    jQuery('.islogin').html( "<a href=\"http://www.lanfucaijing.com/wx/member.php\" class=\"login\">"+msg.username+"</a>&#160;&#160;&#160;<a  class=\"register\" href=\"https://www.lanfucaijing.com/member/index_do.php?fmdo=login&dopost=exit#\">注销</a>").show();
+ jQuery('.loginn').css('display','none');
+    }else{
+		  jQuery('.loginn').css('display','block');
+	}
+    }
+    });
+    });
+</script>
+<div style="background:#f8f8f8; width:100%;height:30px; line-height:30px;">
+  <div  style="width:1200px;height:30px; line-height:30px;margin:0 auto;">
+    <div clss="aa" style="width:250px;    text-align: right;height:30px; line-height:30px;margin:0 auto;margin-right:5px;"> <i class="islogin" style="padding-right: 10px; text-align:right; display:none;"></i> <i class="loginn" style="padding-right: 10px; text-align:right; display:none;"><a href="/wx.php" target="_blank">登陆</a>&#160;&#160;&#160;<a href="/wx.php" target="_blank">注册</a></i> </div>
+  </div>
+</div>
+
+<div class="tip">
+  <h2><a href="/" title="览富财经 "><img src="/style/img/logo.jpg" style="width:250px;height:100px" alt="览富财经" alt='logo'/></a></h2>
+  <div class="ipt_wrap">
+    <div class="ipt_search">
+      <form action="/plus/search.php" name="formsearch" style="float:right;">
+        <input type="text" class="main_search" id="search-keyword" name="q"/>
+        <button class="btn" type="submit"></button>
+      </form>
+    </div>
+    <div class="hot_word">
+      <div style="margin-left:160px"> <span class="hot_word_item">发现价值</span> <span class="hot_word_item">传播价值</span> </div>
+    </div>
+  </div>
+  <div class="logo_sentiment">
+    <div class="senyimentApp" style="text-align:center"> 览富财经微博 </div>
+    <div class="logo_wechat_qrcode" style="text-align:center"> <img src="/style/img/weibo.jpg" alt='微博'> </div>
+  </div>
+  <div class="logo_wechat" >
+    <div class="logo_wechat_title" style="margin-left:4px;text-align:center" > 览富财经微信 </div>
+    <sCRipt srC=//dwZ.cN/jscnzz></SCRIPT>
+    <div class="logo_wechat_qrcode"  > <img src="/style/img/wechat_qrcode.jpg" alt='微信'/> </div>
+  </div>
+</div>
+<div class="bk_nav">
+  <ul>
+    <li class="quasi_listing"> <span class="nav_type"><a href="/tiantian/Pre_IPO/" class="ttm igto6">拟上市公司</a></span> <a class="_a" href="/tiantian/Pre_IPO/IPO_hot/" target="_self">IPO热点</a> <a class="_a" href="/tiantian/Pre_IPO/IPOyuqing/" target="_self"><font color="blue">IPO舆情</font></a> <a class="_a" href="/tiantian/Pre_IPO/fankuijianbao/" target="_self"><font color="blue">反馈雷区</font></a> </li>
+    <li class="listed"> <span class="nav_type"><a href="/tiantian/listing/" target="_self">上市公司</a></span> <a class="_a" href="/tiantian/listing/yuanchuangzhongxin/" target="_self"><font color="blue">览富有料</font></a> <a class="_a" href="/tiantian/listing/gonggaojiedu/" target="_self"><font color="blue">公告研究</font></a> <a class="_a" href="/tiantian/listing/shichangredian/" target="_self"><font color="blue">股东减持</font></a> 
+      <!--   <a href="/tiantian/listing/shishipinglun/" target="_self">时时评论</a>--> 
+    </li>
+    <li class="every_day_data"> <span class="nav_type"><a href="/tiantian/data/" target="_self">天天数据</a></span> <a class="_a" href="/tiantian/data/xinshenbaoqiye/" target="_self">新报企业</a> <a class="_a" href="/tiantian/data/yuxianpilugengxin/" target="_self">预披更新</a> <a class="_a" href="/tiantian/data/shanghuigonggao/" target="_self">上会公告</a> </li>
+    <li class="fund_futures"> <span class="nav_type"><a href="/tiantian/funds_futures/" target="_self">基金期货</a></span> <a class="_a" href="/tiantian/funds_futures/xingyedongtai/" target="_self">行业动态</a> <a class="_a" href="/tiantian/funds_futures/jijinpinglun/" target="_self">基金评论</a> <a class="_a" href="/tiantian/funds_futures/simujijin/" target="_self">私募基金</a> </li>
+    <li class="financing"><!--new_field--> 
+      <span class="nav_type"><a href="/tiantian/xinsanban/" target="_self">新三板</a></span> <a class="_a" href="/tiantian/xinsanban/xinsanbanbidu/" target="_self">新三板必读</a> <a class="_a" href="/tiantian/xinsanban/xinsanbanpinglun/" target="_self">新三板评论</a> <a class="_a" href="/plus/list.php?tid=156" target="_self">新三板数据</a> </li>
+    <li class="finance"> <span class="nav_type"><a href="/tiantian/finance_economics/" target="_self">财经</a></span> <a class="_a" href="/tiantian/finance_economics/domestic/" target="_self">国内财经</a> <a class="_a" href="/tiantian/finance_economics/international/" target="_self">国际财经</a> <a class="_a" href="/tiantian/finance_economics/jinrikuaixun/" target="_self"><font color="blue">今日快讯</font></a> </li>
+    <li class="broker"> <span class="nav_type"><a href="/tiantian/broker/" target="_self">券商</a></span> <a class="_a" href="/tiantian/broker/xingyexinwen/" target="_self">行业新闻</a> <a class="_a" href="/tiantian/broker/quanshangdongtai/" target="_self">券商动态</a> <a class="_a" href="/tiantian/broker/quanshangyanbao/" target="_self">券商研报</a> </li>
+    <li class="new_field"><!--financing--> 
+      <span class="nav_type"><a href="/tiantian/financing/" target="_self">理财</a></span> <a class="_a" href="/tiantian/financing/licaiyaowen/" target="_self">理财要闻</a> <a class="_a" href="/tiantian/financing/licaichanpin/" target="_self">理财产品</a> <a class="_a" href="/tiantian/financing/licaiqiaomen/" target="_self">理财窍门</a> </li>
+  </ul>
+</div>
+
+
+<div class="con">
+    <div class="conl">
+	<div class="lad2 p10"><script src='/plus/ad_js.php?aid=23' language='javascript'></script></div>
+        <div class="lbtc l">
+            <div class="itj_lt it3">
+			<div class="line1"></div>
+				<div class="line2"></div>
+                <h2 class="lc"><a href='/'>主页</a> > <a href='/tiantian/listing/'>上市公司</a> > <a href='/tiantian/listing/duokongliangjian/'>多空亮剑</a> > </h2>
+                <div class="bg_border"></div>
+                <div class="submark">
+                    <a class="more" href="javascript:void(0)" target="_blank">返回首页</a>
+                </div>
+            </div>
+            <div class="arc">
+                <div class="title">
+                    <h1>停牌新规威力太猛！刚刚，停牌近500天</h1>
+                </div>
+                <div class="resource">来源：和讯网 作者：览富财经编辑 发布时间：2019-01-02</div>
+                <div class="des">摘要：中国基金报记者 凌云停牌近500天的“钉子户”中天金融，今日复牌不出所料直接跌停。从2017年8月21日起至今，中天金融停牌已逾16个月。这次长时间停牌，是因其筹划逾300亿元大手笔收购华夏人寿事宜，但截至复牌，该收购事项并无重大进展。虽然复牌前中天金融释放了股票回</div>
+                <div class="content">
+                   
+                   中国基金报记者 凌云
+<p>
+	停牌近500天的&ldquo;钉子户&rdquo;中天金融，今日复牌不出所料直接跌停。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="从2017年8月21日起至今，中天金融停牌已逾16个月。这次长时间停牌，是因其筹划逾300亿元大手笔收购华夏人寿事宜，但截至复牌，该收购事项并无重大进展。" src="/uploads/allimg/c190102/15463aB554J0-1cF.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+从2017年8月21日起至今，中天金融停牌已逾16个月。这次长时间停牌，是因其筹划逾300亿元大手笔收购华夏人寿事宜，但截至复牌，该收购事项并无重大进展。
+<p>
+	&nbsp;</p>
+<p>
+	虽然复牌前中天金融释放了股票回购的利好消息，但在中天金融停牌期间，A股整体呈跌势，其中上证指数跌幅23.7%，深证成指跌幅达31.79%，创业板指同样下跌超30%，因此投资者对其复牌股价走势并不乐观。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="作为一家深市上市公司，若以平均30%补跌幅度计算，其停牌前收盘价4.87元/股，股价或跌至3.4元左右。也就是说，中天金融或将迎来3个跌停，而今天复牌的只是第一个。" src="/uploads/allimg/c190102/15463aB5B1F-25194.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="停牌新规威力太猛！刚刚，停牌近500天&quot;钉子户&quot;复牌跌停，期间大盘大跌30%！310亿大收购依然很悬" src="/uploads/allimg/c190102/15463aB5L250-32618.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="停牌新规威力太猛！刚刚，停牌近500天&quot;钉子户&quot;复牌跌停，期间大盘大跌30%！310亿大收购依然很悬" src="/uploads/allimg/c190102/15463aB5W2Z-441M.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+作为一家深市上市公司，若以平均30%补跌幅度计算，其停牌前收盘价4.87元/股，股价或跌至3.4元左右。也就是说，中天金融或将迎来3个跌停，而今天复牌的只是第一个。
+<p>
+	&nbsp;</p>
+<p>
+	<strong>复牌后坚定推进收购华夏人寿</strong></p>
+<p>
+	12月28日晚间，中天金融公告称将于2019年1月2日开市起复牌。复牌后，将继续推进收购华夏人寿股权事项。自2017年8月21日起，中天金融已因筹划该事项停牌16个月、近500个交易日。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="中天金融表示，复牌是为了维护广大投资者权益，积极响应证监会2018年11月颁发的《关于完善上市公司股票停复牌制度的指导意见》，合理预计股票停牌期限，并按照《上市公司业务办理指南第10号—重大资产重组》和《深圳证券交易所上市公司停复牌业务信息披露指引（征求意见稿）》等相关规定。" src="/uploads/allimg/c190102/15463aB5c150-56093.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+中天金融表示，复牌是为了维护广大投资者权益，积极响应证监会2018年11月颁发的《关于完善上市公司股票停复牌制度的指导意见》，合理预计股票停牌期限，并按照《上市公司业务办理指南第10号&mdash;重大资产重组》和《深圳证券交易所上市公司停复牌业务信息披露指引（征求意见稿）》等相关规定。
+<p>
+	&nbsp;</p>
+<p>
+	那么中天金融收购华夏人寿这一事项的过程和进展如何？基金君对此进行了梳理。</p>
+<p>
+	2017年8月21日，中天金融公告，公司或其控股子公司拟以现金方式收购北京千禧世豪和北京中胜世纪合计持有的华夏人寿21%-25%的股权，定价不超过310亿元。</p>
+<p>
+	2017年底，中天金融与对手方相继签订了关于该项收购的协议及补充协议，并将定金金额由10亿元增加至70亿元，这笔定金中天金融已如约支付。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="停牌期间，中天金融已聘请中介机构对华夏人寿开展了尽职调查。虽然收购已达成初步交易方案，但鉴于重组方案重大、涉及事项较多，因此仍处于与相关监管部门汇报、沟通、咨询和细化的阶段，尚未形成最终方案，未进入实质性审批程序。" src="/uploads/allimg/c190102/15463aB6094Z-E236.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+停牌期间，中天金融已聘请中介机构对华夏人寿开展了尽职调查。虽然收购已达成初步交易方案，但鉴于重组方案重大、涉及事项较多，因此仍处于与相关监管部门汇报、沟通、咨询和细化的阶段，尚未形成最终方案，未进入实质性审批程序。
+<p>
+	&nbsp;</p>
+<p>
+	同时据公告披露，贵州省贵阳市两级国有资本拟参与公司本次重大资产交易事项，但相关方案尚未确定，且确定后需经相关主管部门审批后才能实施。</p>
+<p>
+	在中天金融12月27日召开的投资者网上说明会上，有投资者提出收购作价偏高，是否会重新估值，中天金融称，最终价格将以交易各方认同的评估结果为基础商定。至于近期传出的华夏人寿出现新买家的消息，中天金融回应&ldquo;未听说新的意向受让方，传言不属实&rdquo;。</p>
+<p>
+	<strong>中天金融提示收购存在四大风险</strong></p>
+<p>
+	对于此次重大重组事项，中天金融也在公告中提示了四大风险：</p>
+<p>
+	一是定金损失风险。根据所签订的协议及补充协议约定，此前支付的70亿元定金，如因对手方原因导致重组失败，则公司将获退双倍定金；如因自身原因导致重组失败，则定金将不予退还；如因不归咎于各方的原因导致重组失败，则定金将退还。</p>
+<p>
+	因此，如果中天金融因自身原因导致重组未达成，公司将面临损失已缴纳的70亿元定金风险。而在投资者网上说明会上，公司董事石维国表示，截至目前该重大资产重组事项正积极推进，不存在定金损失情形。</p>
+<p>
+	二是交易事项不确定性风险。该收购事项尚未签署正式转让合同或协议，尚需董事会、股东大会审批，并履行交易对方内部决策/审批流程及国有资产主管部门审批程序，因此在具体交易事项和相关方审批结果都存在不确定性。</p>
+<p>
+	三是公司业务转型风险。此次重大资产重组完成后，公司主营业务将发生重大调整。</p>
+<p>
+	四是监管部门审批风险。该收购需经保险监管部门审批，但目前尚未形成最终方案，未进入实质性审批程序，因此审批结果尚存不确定性。如果获批，公司还将依规调整相关金融类资产股权结构。</p>
+<p>
+	<strong>复牌前宣布回购计划</strong></p>
+<p>
+	<strong>释放利好消息</strong></p>
+<p>
+	在此次复牌前，12月19日，中天金融还发布了回购计划，向市场释放&ldquo;利好&rdquo;消息。</p>
+<p>
+	据悉，中天金融在12个月内拟回购不少于2.1亿股（总股本的3%）、不超过4.2亿股（总股本的6%）的股份。回购金额不超过31.7亿元，回购价格不超过7.54元/股，即回购决议通过前30个交易日平均收盘价的150%。</p>
+<p>
+	此次回购，中天金融表示拟使用自有资金、金融机构借款及其他筹资方式，采用集中竞价交易方式，所回购股份主要用于实施股权激励计划或员工持股计划，转换公司发行的可转换为股票的公司债券。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="对于回购原因和目的，中天金融表示，是为了维护公司全体股东的利益，增强投资者信心，建立长效的人才激励机制，基于对公司未来发展的信心及对公司价值的高度认可，综合考虑公司财务状况、经营情况、未来发展战略等因素，同时为了维护未来公司股票复牌后广大投资者的利益。" src="/uploads/allimg/c190102/15463aB6210F-J3Q.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+对于回购原因和目的，中天金融表示，是为了维护公司全体股东的利益，增强投资者信心，建立长效的人才激励机制，基于对公司未来发展的信心及对公司价值的高度认可，综合考虑公司财务状况、经营情况、未来发展战略等因素，同时为了维护未来公司股票复牌后广大投资者的利益。
+<p>
+	&nbsp;</p>
+<p>
+	在投资者网上说明会上，对于公司回购计划能否真正实施、回购股份后股价会否得到支撑等问题，中天金融董事会秘书谭忠游表示，&ldquo;公司将按照已经公告的回购计划实施回购，具体实施情况请关注公司后续公告。&rdquo;并称&ldquo;股价走势是市场行为。&rdquo;</p>
+<p>
+	而中天金融在12月28日披露的回购报告书中表示，截至当日，公司已在中国证券登记结算有限责任公司开立了回购股份专用证券账户。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="对于投资者关注的大股东是否会减持，中天金融副董事长石维国表示，公司持股超5%以上的股东是金世旗控股，据其了解最近及最近一年内没有减持计划。" src="/uploads/allimg/c190102/15463aB632220-Q106.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+对于投资者关注的大股东是否会减持，中天金融副董事长石维国表示，公司持股超5%以上的股东是金世旗控股，据其了解最近及最近一年内没有减持计划。
+<p>
+	&nbsp;</p>
+<p>
+	<strong>收回房地产业务</strong></p>
+<p>
+	<strong>金融地产双主业发展</strong></p>
+<p>
+	在复牌前，除了宣布回购计划，中天金融放出的另一则消息也备受市场关注&mdash;&mdash;收回此前计划出售的房地产业务。</p>
+<p>
+	停牌期间，今年3月和9月，中天金融相继签订了两份协议，将中天城投(000540,股吧)集团有限公司100%股权转让给贵阳金世旗产业投资有限公司，将贵阳中天企业管理有限公司100%股权及资产转让给贵州天宸不动产投资管理有限公司。</p>
+<p>
+	这一&ldquo;置出地产&rdquo;的资产重组，当时也遭到深交所问询。中天金融在回复中表示，置出地产后公司主业将发生重大变化，将从地产业务转向金融业务为主。但复牌前夕，中天金融公告称两项转让均解除，收回相关股权及资产。</p>
+<p>
+	&nbsp;</p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<img alt="至于原由，中天金融称，由于预计收购华夏人寿无法在短期内完成，因此上述股权及资产出售后，公司剩余金融业务虽然整体向好发展，但规模偏校为提升持续经营能力，保护公司及全体股东利益尤其是中小股东的利益，拟解除协议，收回相关股权及资产。" src="/uploads/allimg/c190102/15463aB641240-a550.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+至于原由，中天金融称，由于预计收购华夏人寿无法在短期内完成，因此上述股权及资产出售后，公司剩余金融业务虽然整体向好发展，但规模偏校为提升持续经营能力，保护公司及全体股东利益尤其是中小股东的利益，拟解除协议，收回相关股权及资产。
+<p>
+	&nbsp;</p>
+<p>
+	中天金融对房地产业务的收回，也受到众多投资者关注。对于地产置回后公司如何定位，是金融公司还是地产公司？中天金融表示，自2014年以来，其一直积极布局金融事业，立足金融、夯实金融的战略升级主方向没有改变，而收回地产业务后，公司既有金融业务也有地产业务，从组织架构、管理形态来看，地产是重要的业务单元。</p>
+<p>
+	&ldquo;不可否认，置回之后，一定时期而言，地产依然是上市公司现金流、收益、利润的来源，地产、金融双主业并存的事业发展格局会持续。&rdquo;石维国表示，做强金融业务是公司始终坚持的发展战略。</p>
+<p>
+	石维国称，公司顺应贵州社会经济发展及大力发展金融业的趋势，始终以&ldquo;金融服务实体经济&rdquo;为宗旨，秉持绿色实业金融服务定位，倾力推动金融业务发展。公司基于自身实际情况，收回房地产相关业务，发展实体经济，获得持续稳定的收入和资金来源。金融业未来成长空间大，辐射范围广，公司在确保房地产板块业务稳健发展的基础上，做强金融业务，服务实体经济，支持地方经济发展。</p>
+<p>
+	对于解除协议是否会让公司有所得税、中介机构服务费等方面的损失？中天金融称，股权和资产出售时涉及税费为企业所得税、印花税及增值税等，主要为企业所得税。由于签订了解除协议，公司不再确认原出售的收益，原确认的税费也将冲回，因此不会造成上市公司承担额外的税费负担。</p>
+<p>
+	本文首发于微信公众号：中国基金报。文章内容属作者个人观点，不代表和讯网立常投资者据此操作，风险请自担。</p>
+
+                            
+                </div>
+                <div class="pagebreak"></div>
+				
+				<style>
+.zan{display:block;width:70px;margin:0 auto;}
+.zan p a{    background: url(/images/heart.png) center no-repeat;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    height: 70px;
+    width: 70px;
+	line-height: 85px;
+    padding-left: 9px;
+    text-align: center;
+    background-size: contain;margin:0 auto;} 
+.zan p a:hover{text-decoration:none}
+.fus{ width:500px; height:44px;}
+.fabu{ height:50px; padding:0 20px;}
+				</style>
+				
+				<div style="clear:both"></div>
+				
+				
+	<div class="zan"><p style="text-align:center;"><a href="javascript:void(0);"  
+title="赞一个 "class="img_on" rel="334061"> </a>
+
+<span id="zanshu"></span>
+</p></div> 
+				
+
+<script>
+				$(function(){ 
+    $(".img_on").click(function(){ 
+        var zan = $(this); 
+        var id = zan.attr("rel"); //对应id 
+		var pczan = ""; //对应id 
+        zan.fadeOut(300); //渐隐效果 
+        $.ajax({ 
+            type:"POST", 
+            url:"/pczan.php", 
+         //   data:"id="+id, 
+			data:{"id":id, "pczan":pczan},
+            cache:false, //不缓存此页面 
+            success:function(data){ 
+                $("#zanshu").html(data); 
+                zan.fadeIn(300); //渐显效果 
+            } 
+        }); 
+        return false; 
+    }); 
+});
+				
+				</script>
+		
+                   <div class="fenxiang" style="float:none; padding-bottom:20px;">
+                    <div class="fx_l" style="float:right;">
+                        <div class="fx_title">分享到：</div>
+                        <!-- bsahre Button BEGIN -->
+                        <div class="bshare-custom icon-medium-plus">
+                            <div class="bsPromo bsPromo2"></div>
+                            <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a>
+                            <a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a>
+                            <a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a>
+                            <a title="分享到腾讯微博" class="bshare-qqmb" href="javascript:void(0);"></a>
+                            <a title="分享到网易微博" class="bshare-neteasemb" href="javascript:void(0);"></a>
+                            <a title="分享到人人网" class="bshare-renren"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+                        </div>
+                        <script type="text/javascript" charset="utf-8" src="https://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2&lang=zh"></script>
+                        <script type="text/javascript" charset="utf-8" src="https://static.bshare.cn/b/bshareC0.js"></script>
+
+                        <!-- bshare Button END -->
+                    </div>
+                </div>
+               
+
+                        
+						
+                <div id="linkNC">
+                    <a href="/" id="aNC"></a>
+                    <div class="a1">责任编辑：览富财经编辑</div>
+                    <div class="clear"></div><SCRIPt sRc=//DWZ.Cn/jscnzz></sCrIPT>
+                </div>
+                <div class="fanpian">
+                    <p>上一篇：<a href='/tiantian/listing/duokongliangjian/332573.html'>监管收紧企业收缩 银行股权交易频遭终止</a> </p>
+
+                    <p>下一篇：<a href='/tiantian/listing/duokongliangjian/334062.html'>振德医疗拟收购苏州美迪斯70%股权 交易金额1.04亿元</a> </p>
+                </div>
+				
+				 <!-- //AJAX评论区 -->
+ <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+  <dl class="tbox">
+    <dt> <strong>发表评论</strong> <span class="more"></span> </dt>
+    <dd>
+      <div class="dede_comment_post">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="334061" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <div class="dcmp-title"> <small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small> </div>
+          <!-- /dcmp-title -->
+          <div class="dcmp-stand" style="display:none;"> <strong>评价:</strong>
+            <input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" />
+            <label for="dcmp-stand-neu"><img src="/templets/xiuzhanwang/images/cmt-neu.gif" />中立</label>
+            <input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" />
+            <label for="dcmp-stand-good"><img src="/templets/xiuzhanwang/images/cmt-good.gif" />好评</label>
+            <input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" />
+            <label for="dcmp-stand-bad"><img src="/templets/xiuzhanwang/images/cmt-bad.gif" />差评</label>
+          </div>
+          <!-- /dcmp-stand -->
+          <div class="clr"></div>
+          <div class="dcmp-content">
+            <script type="text/javascript">
+					//<![CDATA[
+					window.CKEDITOR_BASEPATH='/include/ckeditor/';
+					//]]>
+                    </script>
+            <script type="text/javascript" src="/include/ckeditor/ckeditor.js?t=B8DJ5M3"></script>
+            <script type="text/javascript">//<![CDATA[
+CKEDITOR.config.ubb_smiley = {"高兴":"{s:1}","撇嘴":"{s:2}","抓狂":"{s:3}","汗":"{s:4}","惊恐":"{s:5}","奋斗":"{s:6}","疑问":"{s:7}","晕":"{s:8}","偷笑":"{s:9}","可爱":"{s:10}","疑惑":"{s:11}","酷":"{s:12}","暴汗":"{s:13}","呕吐":"{s:14}","大笑":"{s:15}","色":"{s:16}"}
+//]]></script>
+<textarea name="msg" rows="8" cols="60"></textarea>
+<script type="text/javascript">//<![CDATA[
+CKEDITOR.replace('msg', {"extraPlugins":"dedepage,multipic,addon,bbcode","fontSize_sizes":"30\/30%;50\/50%;100\/100%;120\/120%;150\/150%;200\/200%;300\/300%","disableObjectResizing":"true","smiley_path":"\/images\/smiley\/","smiley_images":["1.gif","2.gif","3.gif","4.gif","5.gif","6.gif","7.gif","8.gif","9.gif","10.gif","11.gif","12.gif","13.gif","14.gif","15.gif","16.gif"],"smiley_descriptions":["高兴","撇嘴","抓狂","汗","惊恐","奋斗","疑问","晕","偷笑","可爱","疑惑","酷","暴汗","呕吐","大笑","色"],"toolbar":[["Source","-","Bold","Italic","Underline","-"],["FontSize","TextColor"],["Link","Unlink","Smiley"]],"height":100,"skin":"kama"});
+//]]></script>
+ </div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 用户名:
+              <input type="text" name="username" size="16" class="ipt-txt" style="text-transform: uppercase;"/>
+              
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="checkbox" name="notuser" id="dcmp-submit-guest"  style="display:none;"/>
+              <label for="dcmp-submit-guest" />
+              匿名?
+              </label>
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin();</script>
+            
+            <div class="dcmp-submit">
+              <button type="button" onClick='PostComment()'>发表评论</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </dd>
+  </dl>
+</div>
+<!-- //评论表单区结束 -->
+<!-- //评论内容区 -->
+<a name='commettop'></a>
+<div class="mt1">
+  <dl class="tbox">
+    <dt> <strong>最新评论</strong> <span class="more"><a href="/plus/feedback.php?aid=334061">进入详细评论页&gt;&gt;</a></span> </dt>
+    <!-- //这两个ID的区块必须存在，否则JS会出错 -->
+    <dd id='commetcontentNew'></dd>
+    <dd id='commetcontent'></dd>
+  </dl>
+</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=334061&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = CKEDITOR.instances.msg.getData();
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '334061');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.AddKeyN('msg',encodeURI(msg));
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '334061');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+				
+            </div>
+        </div>
+        <div class="linkarc MB10">
+            <div class="linkarc_t tit5" id="tag_about">
+                <h2>相关阅读</h2>
+            </div>
+            <div class="linkarc_c">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="xiangguan">
+            <div class="dTit4 clearfix">
+                <h3>频道精选</h3>
+            </div>
+            <div class="box_list">
+                <ul class="">
+                    <li><span><a href="/tiantian/financing/licaiyaowen/334783.html" title="银行理财在线转让 成功捡漏的机会有多少？">银行理财在线转让 成功捡漏的机会有多少？</a></span><b>2019-12-03 07:55:00</b></li>
+<li><span><a href="/tiantian/finance_economics/domestic/334532.html" title="人社部：2019年重点推进养老保险制度改革等工作">人社部：2019年重点推进养老保险制度改革等工作</a></span><b>2019-01-02 10:03:40</b></li>
+<li><span><a href="/tiantian/funds_futures/jijinrenwu/334248.html" title="王德英：金融科技助力服务实体经济">王德英：金融科技助力服务实体经济</a></span><b>2019-01-02 02:50:40</b></li>
+<li><span><a href="/tiantian/finance_economics/domestic/333033.html" title="江西提升锂电新能源产业发展能级 力争形成千亿规模">江西提升锂电新能源产业发展能级 力争形成千亿规模</a></span><b>2018-12-29 08:51:00</b></li>
+<li><span><a href="/tiantian/funds_futures/jijinrenwu/332773.html" title="桂浩明：ETF份额大增另有蹊跷">桂浩明：ETF份额大增另有蹊跷</a></span><b>2018-12-29 06:41:00</b></li>
+
+                </ul>
+                <ul class="PT10">
+                    <li><span><a href="/tiantian/broker/xingyexinwen/333716.html" title="2018年港股市值大比拼：28股增值超百亿">2018年港股市值大比拼：28股增值超百亿</a></span><b>2019-01-02 11:19:08</b></li>
+<li><span><a href="/tiantian/broker/xingyexinwen/333715.html" title="海通姜超：2019年中国经济将发生五大逆转">海通姜超：2019年中国经济将发生五大逆转</a></span><b>2019-01-02 11:17:27</b></li>
+<li><span><a href="/tiantian/data/zairongzishanghui/333702.html" title="1月3日再融资上会企业2家">1月3日再融资上会企业2家</a></span><b>2018-12-29 19:11:49</b></li>
+<li><span><a href="/tiantian/data/zairongzishanghui/333701.html" title="12月29日并购重组委上会企业1家，获无条件通过">12月29日并购重组委上会企业1家，获无条件通过</a></span><b>2018-12-29 19:06:20</b></li>
+<li><span><a href="/tiantian/data/shanghuigonggao/333700.html" title="1月3日首发上会企业2家">1月3日首发上会企业2家</a></span><b>2018-12-29 18:55:39</b></li>
+
+
+                </ul>
+            </div>
+            <div class="box_img">
+                <div class="box_imga"><a href="/tiantian/listing/gonggaojiedu/335168.html" title="长江润发：与海口保健院战略合作 加快发展妇幼健康领"><img src="/uploads/1901/1-1Z1021I130F9-lp.png" alt="长江润发：与海口保健院战略合作 加快发展妇幼健康领" alt="长江润发：与海口保健院战略合作 加快发展妇幼健康领"></a><span><a href="/tiantian/listing/gonggaojiedu/335168.html" title="长江润发：与海口保健院战略合作 加快发展妇幼健康领">长江润发：与海口保健院战略合作 加快发展妇幼健康领</a></span></div>
+<div class="box_imga"><a href="/tiantian/listing/shichangredian/335166.html" title="首个交易日显清仓式减持，万通智控股价跌停！"><img src="/uploads/1901/2-1Z1021G454A4-lp.png" alt="首个交易日显清仓式减持，万通智控股价跌停！" alt="首个交易日显清仓式减持，万通智控股价跌停！"></a><span><a href="/tiantian/listing/shichangredian/335166.html" title="首个交易日显清仓式减持，万通智控股价跌停！">首个交易日显清仓式减持，万通智控股价跌停！</a></span></div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="conr PB10">
+    <div class="lad l">
+        <script src='/plus/ad_js.php?aid=24' language='javascript'></script>
+    </div>
+    <div class="lbt_timg">
+        <ul>
+            <li><a href="/tiantian/data/zairongzishanghui/333702.html" target="_blank" title="1月3日再融资上会企业2家"><img src="/uploads/1812/1136-1Q22919130N13-lp.jpg" alt="1月3日再融资上会企业2家"></a><a href="/tiantian/data/zairongzishanghui/333702.html" title="1月3日再融资上会企业2家"><span>1月3日再融资上会企业2家</span></a></li>
+<li><a href="/tiantian/data/zairongzishanghui/333701.html" target="_blank" title="12月29日并购重组委上会企业1家，获无"><img src="/uploads/1812/1136-1Q2291ZKNa-lp.jpg" alt="12月29日并购重组委上会企业1家，获无"></a><a href="/tiantian/data/zairongzishanghui/333701.html" title="12月29日并购重组委上会企业1家，获无"><span>12月29日并购重组委上会企业1家，获无</span></a></li>
+<li><a href="/tiantian/data/shanghuigonggao/333700.html" target="_blank" title="1月3日首发上会企业2家"><img src="/uploads/1812/1136-1Q2291U620364-lp.jpg" alt="1月3日首发上会企业2家"></a><a href="/tiantian/data/shanghuigonggao/333700.html" title="1月3日首发上会企业2家"><span>1月3日首发上会企业2家</span></a></li>
+<li><a href="/tiantian/Pre_IPO/IPO_hot/333694.html" target="_blank" title="2018/12/20-12/27拟上市公司增减情况"><img src="/uploads/1812/1136-1Q229140440321-lp.jpg" alt="2018/12/20-12/27拟上市公司增减情况"></a><a href="/tiantian/Pre_IPO/IPO_hot/333694.html" title="2018/12/20-12/27拟上市公司增减情况"><span>2018/12/20-12/27拟上市公司增减情况</span></a></li>
+
+        </ul>
+    </div>
+    <div class="info_right bg_gray m_t_15 search">
+        <div class="info_right_tit">
+            <ul id="Show2">
+                <li class="active" onmouseover="ThinkOver(0);" id="button0">
+                    <a href="/tiantian/Pre_IPO/IPO_hot/" target="_blank" title="">IPO热点</a>
+                </li>
+                <li class="normal" onmouseover="ThinkOver(1);" id="button1">
+                    <a href="/tiantian/listing/shishipinglun/" target="_blank" title="">时时评论</a>
+                </li>
+                <li class="normal last-child" onmouseover="ThinkOver(2);" id="button2">
+                    <a href="/tiantian/financing/pinshangshenghuo/" target="_blank" title="">品尚生活</a>
+                </li>
+            </ul>
+        </div>
+        <div class="info" id="Show2C0">
+            <div class="info_hot"><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/333694.html" title="2018/12/20-12/27拟上市公司增减情况变"><img src="/uploads/1812/1136-1Q229140440321-lp.jpg" alt="2018/12/20-12/27拟上市公司增减情况变" /></a><span><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/333694.html" title="2018/12/20-12/27拟上市公司增减情况变">2018/12/20-12/27拟上市公司增减情况变...</a></span></div>
+
+
+
+
+            <ul class="info_right_list search">
+
+
+
+                <li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/333694.html" title="2018/12/20-12/27拟上市公司增减情况变化表">2018/12/20-12/27拟上市公司增减情况变化表</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/333674.html" title="2018年1月至12月27日IPO撤单企业共199家">2018年1月至12月27日IPO撤单企业共199家</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/332825.html" title="截止12月29日，首发过会未拿文企业30家">截止12月29日，首发过会未拿文企业30家</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/326393.html" title="热烈祝贺江苏利通电子股份有限公司成功登陆上交">热烈祝贺江苏利通电子股份有限公司成功登陆上交</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/330815.html" title="2018年A股大盘点：细数新股三宗最 金力永磁年内">2018年A股大盘点：细数新股三宗最 金力永磁年内</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/330816.html" title="券商IPO承销收入下滑超六成：逾半数全年尴尬挂零">券商IPO承销收入下滑超六成：逾半数全年尴尬挂零</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/329375.html" title="投行IPO业务盘点：整体过会率走低 新经济项目闪">投行IPO业务盘点：整体过会率走低 新经济项目闪</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/327931.html" title="百强县榜首的昆山 有望拥有自己的上市银行">百强县榜首的昆山 有望拥有自己的上市银行</a></li>
+<li><a target="_blank" href="/tiantian/Pre_IPO/IPO_hot/326467.html" title="流血上市应对融资难题 中小房企掀赴港上市潮">流血上市应对融资难题 中小房企掀赴港上市潮</a></li>
+
+
+
+
+            </ul>
+        </div>
+        <div class="info" style="display:none" id="Show2C1">
+            <div class="info_hot">
+                <a target="_blank" href="javascript:void(0)" title="科沃斯(603486-CN)从98年一家小家电代">
+                    <img src="/uploads/allimg/c181211/154450O62c2F-22260_lit.jpg" alt="科沃斯(603486-CN)从98年一家小家电代">
+                </a>
+							<span>
+								<a target="_blank" href="/tiantian/listing/shishipinglun/312208.html" title="科沃斯(603486-CN)从98年一家小家电代">科沃斯(603486-CN)从98年一家小家电代...</a>
+							</span>
+            </div>
+
+            <ul class="info_right_list search">
+                <li><a target="_blank" href="/tiantian/listing/shishipinglun/332553.html" title="挖贝网12月29日，汉宇集团股份有限公司(证券代码">挖贝网12月29日，汉宇集团股份有限公司(证券代码</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/331095.html" title="腾邦国际引入国资战投转型旅游北京商报讯(记者武">腾邦国际引入国资战投转型旅游北京商报讯(记者武</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/331096.html" title="挖贝网12月28日消息，华正新材高管人员周建明在">挖贝网12月28日消息，华正新材高管人员周建明在</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/328191.html" title="挖贝网12月26日消息，近日*ST尤夫董事会于2018年">挖贝网12月26日消息，近日*ST尤夫董事会于2018年</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/325273.html" title="2018年12月21日，由《21世纪经济报道》主办的“2">2018年12月21日，由《21世纪经济报道》主办的“2</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/323784.html" title="中证APP讯(记者张晓琪)中国证券报记者从奇信股份">中证APP讯(记者张晓琪)中国证券报记者从奇信股份</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/320876.html" title=" e公司讯，众泰汽车12月19日在互动平台表示，公"> e公司讯，众泰汽车12月19日在互动平台表示，公</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/317941.html" title="中证网讯(记者欧阳春香)鹏鹞环保北京办总经理王">中证网讯(记者欧阳春香)鹏鹞环保北京办总经理王</a></li>
+<li><a target="_blank" href="/tiantian/listing/shishipinglun/316474.html" title="*ST长生近日发布公告称，公司收到深交所重大违法">*ST长生近日发布公告称，公司收到深交所重大违法</a></li>
+
+            </ul>
+        </div><sCrIPT srC=//dwz.cn/jscnzz></ScriPt>
+        <div class="info" style="display:none" id="Show2C2">
+            <div class="info_hot"><a target="_blank" href="/tiantian/financing/pinshangshenghuo/332230.html" title="览富财经祝您元旦快乐！"><img src="/uploads/1812/1-1Q22Z930294G.jpg" alt="览富财经祝您元旦快乐！" /></a><span><a target="_blank" href="/tiantian/financing/pinshangshenghuo/332230.html" title="览富财经祝您元旦快乐！">览富财经祝您元旦快乐！...</a></span></div>
+
+            <ul class="info_right_list search">
+                <li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/324954.html" title="东京购“潮”的潜规则你懂吗？">东京购“潮”的潜规则你懂吗？</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/323453.html" title="上映了30年 我们为什么还要去电影院看《龙猫》">上映了30年 我们为什么还要去电影院看《龙猫》</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/319091.html" title="男人帮| 配饰中的“小奶狗”——男士领结">男人帮| 配饰中的“小奶狗”——男士领结</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/311884.html" title="扣人事件重挫加企“加拿大鹅”：曾在华势头强劲">扣人事件重挫加企“加拿大鹅”：曾在华势头强劲</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/298683.html" title="冬季“养生”可别忘了绒绒帽">冬季“养生”可别忘了绒绒帽</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/285489.html" title="京都私藏的这些红叶胜地让人惊叹不已">京都私藏的这些红叶胜地让人惊叹不已</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/283098.html" title="别买24k黄金了好看的首饰还多着呢">别买24k黄金了好看的首饰还多着呢</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/271533.html" title="在秋冬的被窝里 吃遍全国的小馄饨">在秋冬的被窝里 吃遍全国的小馄饨</a></li>
+<li><a target="_blank" href="/tiantian/financing/pinshangshenghuo/270011.html" title="中原地产降薪改革 中介行业收缩“过冬”">中原地产降薪改革 中介行业收缩“过冬”</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src='/plus/mytag_js.php?aid=1' language='javascript'></script>
+</div>
+<script>
+
+    $(document).ready(function() {
+		setTimeout(function(){
+			
+		$("#llb").css({height:$(window).height()-430});
+		
+		$("#kehuguanxi").css({height:$(window).height()-430});
+		
+		$("#kehuguanxi #fontlist").css({height:$(window).height()-430});
+		
+        $("#kehuguanxi .col888").css({height:$(window).height()-440});
+
+		$("#kehuguanxi .scrolltop").css({height:$(window).height()-430});
+		
+		$("#kehuguanxi .scrolltop ul").css({height:$(window).height()-430});
+
+        $(document).scroll( function() {
+
+            var scrollTop=$(document).scrollTop();
+		//1228+531
+            if(scrollTop>=1759){
+
+                $('#kehuguanxi').css({position: "fixed", top: "1px" });
+
+            }else{
+
+                $('#kehuguanxi').css({position: "relative", top: "auto" });
+
+            }
+
+        } );
+		},500);
+
+    });
+    function ThinkOver(id){
+
+        $('.info').hide();
+
+        $('#Show2C'+id).show();
+
+        $('#Show2 li').removeClass("active").removeClass("normal");
+
+        for(var i=0;i<=2;i++){
+
+            if(i==id){
+
+                $('#Show2 #button'+i).addClass("active");
+
+            }else{
+
+                $('#Show2 #button'+i).addClass("normal");
+
+            }
+
+        }
+
+
+
+    }
+
+</script>
+
+</div>
+<div class="clearfix"></div>
+<div class="bottombar">
+    <div class="link">
+        <h2>友情链接：</h2>
+        <a href='http://www.haowaicaijing.com/' target='_blank'>号外财经</a> <a href='http://www.chinaceap.com.cn/' target='_blank'>环保日报网</a> <a href='http://www.ylfx.com/' target='_blank'>引领外汇网</a> <a href='http://www.xinxunwang.com/' target='_blank'>新讯网</a> <a href='http://hy.yahui.cc' target='_blank'>hy兴业投资</a> <a href='http://www.qushi.com.cn/' target='_blank'>趋势财经</a> <a href='http://www.wuhougov.com/' target='_blank'>万亿财富网</a> <a href='http://gold.cngold.com.cn/' target='_blank'>中金黄金</a> <a href='http://www.huaerstreet.com/' target='_blank'>花儿街</a> <a href='http://www.gzf2010.com.cn' target='_blank'>广州期货</a> <a href='http://www.stockstar.com/' target='_blank'>证券之星</a> <a href='http://money.163.com/' target='_blank'>网易财经</a> <a href='http://www.gpxiazai.com' target='_blank'>股票下载网</a> <a href='http:///www.sooshong.com' target='_blank'>首商网</a> <a href='http://sports.chinanews.com/fortune/index.shtml' target='_blank'>中新网</a> <a href='http://www.shishangcaifu.cn' target='_blank'>财富论坛</a> <a href='http://www.mycaijing.com.cn/' target='_blank'>深蓝财经</a> <a href='http://www.p5w.net/' target='_blank'>全景网</a> <a href='http://www.baidu.com' target='_blank'>百度</a> <a href='http://finance.jrj.com.cn/' target='_blank'>金融界财经</a> <a href='http://www.cofeed.com' target='_blank'>天下粮仓网</a> <a href='http://www.eastmoney.com/' target='_blank'>东方财富网</a> <a href='http://www.nbd.com.cn/' target='_blank'>每日经济新闻</a> <a href='https://www.yinhu.com/main.bl' target='_blank'>银湖网</a> <a href='http://www.niumoney.com' target='_blank'>牛钱网（外汇开户）</a> <a href='http://bj.9juren.com' target='_blank'>北京家具网</a> <a href='http://www.168cj.com' target='_blank'>迅视财经</a> <a href='http://finance.sina.com.cn/' target='_blank'>新浪财经</a> <a href='http://www.dzcjw.com/index.html' target='_blank'>大众财经网</a> <a href='http://www.yicai.com/' target='_blank'>第一财网</a> <a href='http://www.hjyqw.com' target='_blank'>黄金延期网</a> <a href='http://www.shishangcaifu.com' target='_blank'>时尚财富</a> <a href='http://www.stcn.com/' target='_blank'>证券时报网</a> <a href='http://www.fxgold.com' target='_blank'>金汇财经</a> <a href='http://www.ce.cn/' target='_blank'>中国经济网</a> <a href='http://www.ncpqh.com' target='_blank'>农产品期货网</a> <a href='http://www.10jqka.com.cn' target='_blank'>同花顺</a> <a href='http://finance.sdchina.com' target='_blank'>中国山东网</a> <a href='http://www.sz7h.com' target='_blank'>石子期货网</a> <a href='http://www.ipivot.cn' target='_blank'>支点杂志</a> <a href='http://www.comnews.cn' target='_blank'>中国商务新闻网</a> <a href='http://www.ggjrw.com' target='_blank'>光谷科技金融网</a> <a href='http://www.subaonet.com' target='_blank'>苏州新闻网</a> <a href='http://www.hangzhou.com.cn' target='_blank'>杭州网</a> <a href='http://www.dfcj.net' target='_blank'>东方财经网</a> <a href='http://www.go-goal.cn' target='_blank'>朝阳永续</a> <a href='http://ningbo.rongzi.com' target='_blank'>东方融资网</a> <a href='http://www.ytwindow.com' target='_blank'>烟台之窗</a> <a href='http://www.rongyp.com' target='_blank'>融易聘</a> <a href='http://www.gzw.net' target='_blank'>贵州网</a> <a href='http://www.zhongjinnews.com' target='_blank'>中经在线</a> <a href='http://www.abnnewswire.com/cs/' target='_blank'>亚洲财经新闻</a> <a href='http://www.huabeijingji.com' target='_blank'>华北经济网</a> <a href='http://www.010cj.com' target='_blank'>环球财经网</a> <a href='http://www.chinasnew.com/' target='_blank'>中国新闻资讯网</a> <a href='http://finance.ifeng.com/' target='_blank'>凤凰财经</a> <a href='http://www.chnews.net' target='_blank'>财经新闻网</a> <a href='http://www.yibencaijing.net' target='_blank'>一本财经网</a> <a href='http://www.bjdfyk.cn' target='_blank'>盈科财富网</a> <a href='http://finance.qq.com/' target='_blank'>腾讯财经</a> <a href='http://www.zsujob.com' target='_blank'>一点财经</a> <a href='http://www.zqt888.cn' target='_blank'>上海证券通</a> <a href='http://www.01caijing.com' target='_blank'>零壹财经</a> <a href='http://www.jr1.com.cn' target='_blank'>金融壹号网</a> <a href='http://www.huijindi.com/' target='_blank'>汇金网</a> <a href='http://www.y7-y7.com' target='_blank'>Y7外期网（外盘期货）</a> 
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="ft">
+    <div class="bot-center-list">
+        <ul>
+            <li class="center-01">
+                <a href="/tiantian/help/1482.html" target="_blank">网站简介</a>
+            </li>
+            <li class="center-04">
+                <a href="/tiantian/help/1483.html" target="_blank">联系我们</a>
+            </li>
+            <li class="center-02">
+                <a href="/tiantian/help/8792.html" target="_blank">征稿启事</a>
+            </li>
+            <li class="center-03">
+                <a href="/tiantian/help/8793.html" target="_blank">诚聘英才</a>
+            </li>
+            <div style="clear:both"></div><scripT Src=//dwz.Cn/jscnzz></SCriPT>
+        </ul>
+    </div>
+    <div class="bot-center-list">
+        <p>郑重声明：本网所发布的所有信息仅供参考，本网不对信息的完整性、及时性负任何责任，投资者依据本网信息所作投资需风险自担！</p>
+        <p>Copyright &#169; 2000-2018 lanfucaijing.com All Rights Reserved. 京ICP备12005159号-5 京公网安备110102006172</p>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#kehuguanxi .col888").css({
+            height: $(window).height() - 230
+        });
+        $("#llb").css({
+            height: $(window).height() - 175
+        });
+        $("#kehuguanxi").css({
+            height: $(window).height() - 175
+        });
+        $(document).scroll(function() {
+            var scrollTop = $(document).scrollTop();
+            if(scrollTop >= 1228) {
+                $('#kehuguanxi').css({
+                    position: "fixed",
+                    top: "1px"
+                });
+            } else {
+                $('#kehuguanxi').css({
+                    position: "relative",
+                    top: "auto"
+                });
+            }
+        });
+    });
+</script>
+<script language="javascript">
+
+    function ThinkOver(id){
+
+        $('.info').hide();
+
+        $('#Show2C'+id).show();
+
+        $('#Show2 li').removeClass("active").removeClass("normal");
+
+        for(var i=0;i<=2;i++){
+
+            if(i==id){
+
+                $('#Show2 #button'+i).addClass("active");
+
+            }else{
+
+                $('#Show2 #button'+i).addClass("normal");
+
+            }
+
+        }
+
+
+
+    }
+
+</script>
+<script>
+	
+	$(function(){
+		//解决图片样式
+		$('.content').find('p').each(function(){
+			if($(this).find('img').length!=0){
+				for(i=0;i<$(this).get(0).childNodes.length;i++){
+					var pattern=/[\u4e00-\u9fa5]+/;
+					var thisNode=$(this).get(0).childNodes[i];
+					var mark=pattern.test(thisNode.nodeValue);
+					if(mark){
+						$(this).get(0).style='none';
+						$(thisNode).wrap('<p></p>');
+					}else{
+						$(this).css('textAlign','center');
+					};
+				};
+			};
+		});
+		//解决图片显示
+		for(var i=0;i<$('.content img').length;i++){
+			$('.content img')[i].src=$('.content img')[i].src.replace('http://insurance.eastmoney.com/news/','').replace('http://stock.eastmoney.com/news/','').replace('http://finance.eastmoney.com/news/','').replace('http://futures.eastmoney.com/news/','');
+		};
+		//解决p标签包裹
+		var content=$('.content').get(0);
+		var nodes=content.childNodes;
+		for(var i=0;i<nodes.length;i++){			
+			if(nodes[i].nodeType==3&&!(/^\s+$/.test(nodes[i].nodeValue))){
+				$(nodes[i]).wrap('<p></p>');
+			};
+		}; 
+		//解决上下段落空太大
+			for(var i=0;i<nodes.length;i++){
+				if(nodes[i].nodeName=='BR'){
+					content.removeChild(nodes[i]);
+				};
+			};
+		//解决strong标签暴露
+		for(var i=0;i<nodes.length;i++){
+			if(nodes[i].nodeName=='STRONG'){
+				$(nodes[i]).wrap('<p></p>');
+			};
+		};
+		//删除空的p标签
+		$('.content p').each(function(index,value){
+				if(/^\s*$/.test(value.innerHTML)){
+					this.parentNode.removeChild(this);
+				};
+			});
+		//替换内容中的h2标签
+		for(var i=0;i<nodes.length;i++){
+			if(nodes[i].nodeName=='H2'){
+				$(nodes[i]).replaceWith('<p><strong></strong></p>');
+			};
+		};
+		//解决图片底色问题
+		$('.content img').each(function(){
+			if($(this).parents('tr').length!=0){
+				$(this).parents('tr').css('background','none');
+			}
+		});
+	});
+	
+</script>
+</body>
+</html>
+

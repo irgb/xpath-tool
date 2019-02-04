@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>
+        百城绝对夜计划2.0超燃上线，与年轻潮人拥抱100种跨年夜_葡萄酒_糖酒快讯</title>
+    
+    <meta name="keywords" content="葡萄酒,葡萄酒,糖酒快讯">
+    <meta name="Description" content="“如果有一万元给你办跨年派对，你想怎么玩？”11月开始，ABSOLUT绝对伏特加品牌推出的#百城绝对夜计划#2.0升级版再次燃爆年轻人的社交圈。假若你自认为自己乖戾难驯，够另类够玩闹，且拥有异于常人的脑洞，并想在…">
+    <link href="http://theme.tjkximg.com/www/pagev9/hf3.css?aac" rel="stylesheet" type="text/css" />
+<link href="http://theme.tjkximg.com/favicon.ico" rel="SHORTCUT ICON" />
+<script src="http://libs.baidu.com/jquery/1.7.0/jquery.min.js?v=20160917"></script>
+<script type="text/javascript" src="http://theme.tjkximg.com/v9/js/my.js?2018"></script>
+
+<script src="http://theme.tjkximg.com/js/baidu_ds.js"></script>
+
+<script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <link href="http://theme.tjkximg.com/www/winev9/list.css?aAA" rel="stylesheet" type="text/css" />
+    <link href="http://theme.tjkximg.com/v9/my/favorite.css?A" rel="stylesheet" type="text/css" />
+    <script src="http://theme.tjkximg.com/v9/js/comment.js" type="text/javascript"></script>
+    <style type="text/css">
+        .color { width: 150px; float: left; }
+        .c0, .c1, .c2, .c3 { border: 1px solid #ddd; cursor: pointer; float: left; font-size: 0; height: 15px; line-height: 0; margin-right: 10px; width: 15px; }
+        .listbox { height: 72px; overflow: hidden; }
+        .xk { margin-left: 2px; font-size: 12px; }
+        .tagslist { clear: both; padding-left: 18px; }
+        .tagslist ul li { width: auto; padding-left: 8px; float: left; }
+        .tagslist ul li h2 { color: #3e3e3e; font-size: 12px; border-bottom: none; font-family: "宋体"; }
+        .tagslist ul li h2 a { color: #3e3e3e; font-weight: normal; }
+        .tagslist ul li h2 a:hover { color: #CD0200; text-decoration: underline; }
+    </style>
+</head>
+<body class="ondd">
+    <script type="text/javascript">
+    var userId;
+    var idx = 0;
+    var loginUrl = "http://passport.tjkx.com/signin.aspx?ReturnUrl=" + encodeURIComponent(location.href);
+    function __chk_state() {
+        
+        $("a[data-site='login']").attr("href", loginUrl);
+        my.user.state(function (d) {
+            $("li[data-site='loading']").remove();
+		userId = d.id;
+            $("img[data-site='face']").attr("src", (d.face != "") ? d.face : "http://theme.tjkximg.com/v9/my/images/face.gif");
+            $("[data-site='nick']").text(d.nick);
+            $("img[data-site='corplogo']").attr("src", (d.corp.logo != "") ? d.corp.logo : "http://theme.tjkximg.com/www/pagev9/images/nologo.jpg");
+            if (d.corp.name != "") $("[data-site='corpname']").text(d.corp.name); else $("[data-site='nocorpname']").text("[未开通企业展厅]");
+            $("a[data-site='logout']").unbind().click(function () {
+                my.user.logout(function (r) { __chk_state(); });
+                return false;
+            });
+            if (d.id > 0) {
+                $("li[data-site='login']").hide();
+                $("li[data-site='reg']").hide();
+                $("div[data-site='member']").hide();
+                $("div[data-site='corp']").hide();
+
+                $("li[data-site='user']").show();
+                $("li[data-site='sms']").find("[data-site='total']").text((d.sms.sys + d.sms.personal) > 0 ? "(" + (d.sms.sys + d.sms.personal) + ")" : "")
+                    .end().find("[data-site='sys']").text("您有" + d.sms.sys + "条系统消息")
+                    .end().find("[data-site='personal']").text("您有" + d.sms.personal + "条新的私信")
+                    .end().show();
+                $("div[data-site='member21']").html((d.vip.m4000) ?
+                    "您目前是<span class='orange'>VIP会员</span>" :
+                    "您目前是<span class='orange' style='padding-right: 12px;'>普通会员</span>您可以升级到<span class='orange'>VIP会员</span>").show();
+                $("div[data-site='member22']").show();
+                $("div[data-site='corp21']").html((d.vip.c5500) ?
+                    "您目前是<span class='orange'>钻石会员</span>" : (d.vip.c5000) ?
+                    "您目前是<span class='orange' style='padding-right: 10px;'>铂金会员</span>您可以升级到<span class='orange'>钻石会员</span>" :
+                    "您目前是<span class='orange' style='padding-right: 10px;'>普通会员</span>您可以升级到<span class='orange'>铂金会员</span>").show();
+                $("div[data-site='corp22']").show();
+            } else {
+                $("li[data-site='user'],li[data-site='sms'],div[data-site='member21'],div[data-site='member22'],div[data-site='corp21'],div[data-site='corp22']").hide();
+
+                $("li[data-site='login'],li[data-site='reg'],div[data-site='member'],div[data-site='corp']").show();
+            }
+        });
+        $("#site-nav div.menu").hover(function () { $(this).addClass("hover") }, function () { $(this).removeClass("hover") });
+    }
+    $(function () { __chk_state(); });
+</script>
+<div id="site-nav">
+    <div id="site-nav-bd">
+        <ul class="quick-menu" style="height: auto;">
+            <li class="service" style="background: none; padding-right: 0px; font-weight:bold;">我的资讯通</li>
+
+            <li class="service" data-site="loading" style="background:url('http://theme.tjkximg.com/images/loading16.gif') no-repeat 5px 4px; padding: 0px 0px 0px 25px;">获取登录状态...</li>
+
+            <li class="service" data-site="login" style="background: none; display:none; padding: 0px 0px 0px 10px;"><a 
+                class="login_icon" data-site="login" href="#" target="_blank">请登录</a></li>
+            <li class="service" data-site="reg" style="background: none; display:none; padding-left: 6px;">[<a href="http://my.tjkx.com/reg/reg.aspx"
+                target="_blank" class="orange">免费注册</a>]</li>
+
+            <li class="service" data-site="user" style="background: none; display:none; padding: 0px 0px 0px 5px;">
+                <a data-site="nick" class="user_icon orange" href="http://my.tjkx.com" target="_blank">昵称</a></li>
+
+            <li class="info menu-item" data-site="sms" style="display:none;">
+                <div class="menu">
+                    <a href="http://my.tjkx.com/?widget=sms/index" target="_top" class="menu-hd" 
+                        style="padding-right: 8px; width:auto;">消息<span data-site="total" class="orange"></span></a>
+                    <div class="menu-bd" style="height: auto; width: 170px" id="menu-3">
+                        <div class="row_clear2">
+                        </div>
+                        <div class="t2">
+                            【系统】 <a href="http://my.tjkx.com/?widget=sms/index#sys" target="_top" data-site="sys"></a></div>
+                        <div class="t2">
+                            【私信】 <a href="http://my.tjkx.com/?widget=sms/index#personal" target="_top" data-site="personal"></a></div>
+                        <div class="row_clear2">
+                        </div>
+                        <div class="t3">
+                            <a href="http://my.tjkx.com/?widget=sms/index" target="_top">查看全部>></a></div>
+                    </div>
+                </div>
+            </li>
+            <li class="info menu-item">
+                <div class="menu">
+                    <a class="menu-hd">资讯服务<b></b></a>
+                    <div class="menu-bd" style="height: auto; width: 250px">
+
+                        <div class="t1" data-site="member" style="display:none;">
+                            资讯会员分为<span class="orange" style="padding-left: 12px;">普通会员</span>和<span class="orange">VIP会员</span></div>
+                        <div class="ren_cona" data-site="member" style="display:none;">
+                            <div class="pic"><img src="http://theme.tjkximg.com/v9/my/images/face.gif" width="50" height="50" /></div>
+                            <div class="pictitle">
+                                您还未登录，请<a data-site="login" class="orange" href="#" target="_blank">登录</a>或<a class="orange"
+                                    href="http://my.tjkx.com/reg/reg.aspx" target="_blank">注册</a></div>
+                        </div>
+
+                        <div class="t1" data-site="member21" style="display:none;"></div>
+                        <div class="ren_cona" data-site="member22" style="display:none;">
+                            <div class="pic">
+                                <a href="http://my.tjkx.com/?widget=member/uploadface" target="_blank"><img data-site="face" src="" width="50" height="50" /></a></div>
+                            <div class="pictitle2">
+                                欢迎您，<span class="orange" data-site="nick" style="padding-right: 20px;">昵称</span>[<a data-site="logout" class="orange"
+                                    href="#">退出</a>]</div>
+                            <div class="pictext">
+                                <a href="http://my.tjkx.com/?widget=member/uploadface" target="_blank">修改头像</a>｜<a 
+                                href="http://my.tjkx.com/?widget=member/MemberInfo" target="_blank">修改资料</a>｜<a
+                                href="http://my.tjkx.com" target="_blank">个人中心</a></div>
+                        </div>
+
+                        <div class="info_link">
+                            <a href="http://my.tjkx.com/?widget=subscribe/dingyue" target="_blank">新闻订阅</a>｜<a
+                                href="http://my.tjkx.com/?widget=paper/index" target="_blank">杂志订阅</a>｜<a
+                                href="http://my.tjkx.com/?widget=ebook/index" target="_blank">电子杂志</a>｜<a 
+                                href="http://my.tjkx.com/?widget=mobilepaper/index" target="_blank">手机报</a><br />
+                                <a href="http://my.tjkx.com/?widget=report/grouplist" target="_blank">研究报告</a>｜<a 
+                                href="http://my.tjkx.com/?widget=report/index" target="_blank">综合月报</a>｜<a
+                                href="http://my.tjkx.com/?widget=resume/index" target="_blank">个人求职</a>｜<a 
+                                href="http://my.tjkx.com/?widget=school/index" target="_blank">商学院</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style=" background:none;">&emsp;<a href="http://b2b.tjkx.com/uc/" target="_blank">我的商讯通</a></li>
+            <li class="service" style="padding: 0px 10px 0px 10px;"><a href="http://my.tjkx.com/?widget=columnist/addedit" target="_blank">投稿</a></li>
+            <li class="service" style="background: none; padding: 0px 10px 0px 10px;"><a href="http://bbs.tjkx.com" target="_blank">论坛</a></li>
+            <li class="service" style="background: none; padding: 0px 10px 0px 10px;"><a href="http://www.tjkx.com/baijiu/" target="_blank" title="白酒大全">白酒大全</a></li>
+        </ul>
+        <div class="head_rbox">
+            <ul>
+                <li><a class="head_home" href="http://www.tjkx.com/" target="_blank">网站首页</a></li>
+                <li><a class="shoub" href="http://info.tjkx.com/mobilepaper/" target="_blank">手机报</a></li>
+                <li style="width:100px;background:url(http://theme.tjkximg.com/www/news/mobilepaper/images/new.png) no-repeat right top;"><a class="app_icon" href="http://m.tjkx.com/" target="_blank">手机客户端</a></li>
+                <li><a class="wstjh" href="http://www.tjkx.com/p/map.aspx" target="_blank">网站地图</a></li>
+                <li>|</li>
+                <li><a class="ray" href="#" onclick="if (document.all){this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.tjkx.com');}return false;">设为首页</a></li>
+                <li>|</li>
+                <li><a class="ray" href="http://serv.tjkx.com/" target="_blank">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</div><div class="head_hot">
+    	<ul>
+        	<li style="padding-left:4px;"><a href="http://info.tjkx.com/" title="资讯" >资讯</a></li>
+            <li><a href="http://info.tjkx.com/columnist/" target="_blank" title="专栏">专栏</a></li>
+            <li><a href="http://v.tjkx.com/" target="_blank" title="视频">视频</a></li>
+            <li><a href="http://info.tjkx.com/shenduzt/" target="_blank" title="专题">专题</a></li>
+            <li><a href="http://spirit.tjkx.com/" target="_blank" title="白酒">白酒</a></li>
+            <li><a href="http://wine.tjkx.com/" target="_blank" title="葡萄酒">葡萄酒</a></li>
+            <li><a href="http://info.tjkx.com/food/" target="_blank" title="食品">食品</a></li>
+            <li><a href="http://info.tjkx.com/shichanghq/" target="_blank" title="市场">市场</a></li>
+            <li><a href="http://info.tjkx.com/jingxiaoshang/" target="_blank" title="经销商">经销商</a></li>
+            <li><a href="http://report.tjkx.com/" target="_blank" title="研究">研究</a></li>
+            <li><a href="http://pt.tjkx.com/" target="_blank" title="产业链">供应链</a></li>            
+            <li ><a  style="color:#FF0000;" href="http://b2b.tjkx.com" target="_blank" title="糖酒商讯">糖酒商讯</a></li>
+            <li><a href="http://hr.tjkx.com/" target="_blank" title="人才">人才</a></li>
+            <li><a href="http://info.tjkx.com/zhanhuixx/" target="_blank" title="展会">展会</a></li>
+            <li><a href="http://tjh.tjkx.com/" target="_blank" title="糖酒会">糖酒会</a></li>
+            <li style="border-right:none; padding-right:0px;"><a href="http://90.tjkx.com" target="_blank" title="90天使会">90天使会</a></li>
+        </ul>
+    </div>
+    <!-- 通栏广告-->
+    <div class="row_clear5">
+    </div>
+    <div class="adv950">
+        <script type="text/javascript">            BAIDU_CLB_fillSlot("469417");</script>
+    </div>
+
+
+    <div class="pind_box">
+        <div class="pind_logo"><a href="/" target="_blank">
+            <img src="http://theme.tjkximg.com/www/winev9/images/wine_logo.jpg" /></a></div>
+        <span class="pind_logo" style="padding-left: 14px; padding-top: 16px; background: url(http://theme.tjkximg.com/images/rss_logo.png) left 16px no-repeat; margin-left: 10px;">
+            <a href="http://rss.tjkx.com/?type=wine" target="_blank" style="font-size: 12px; color: #666;">Rss新闻订阅</a></span>
+        <div class="pind_weiz"><a href="http://www.tjkx.com" title="糖酒快讯首页" target="_blank">糖酒快讯</a> > <a href="/" title="经销商" target="_blank">葡萄酒</a> > 正文</div>
+        <div  class="miansearch">
+        	<form action="http://info.tjkx.com/so/tohtm.aspx" method="get">
+            		<input name="key" id="key" type="text" class="inputWarp  inp_text" x-webkit-speech/>
+	  				<input type="submit"  id="button" class="button " value="搜索"  border="0"  />	
+            </form>
+        </div>
+    </div>
+    <div class="row_clear2">
+    </div>
+    <div class="row1">
+        <div class="left">
+            <div class="left_con">
+                <h1 style="padding: 25px 0px 15px 0px;">百城绝对夜计划2.0超燃上线，与年轻潮人拥抱100种跨年夜</h1>
+
+                
+
+                <div class="show_fb">
+                    <div class="info" style="width: 270px;">
+                        <span class="where"><a href="http://www.tjkx.com">糖酒快讯</a> - <a href="http://wine.tjkx.com/">葡萄酒</a></span>
+                        <span class="infoCol">2018年11月28日</span>
+                    </div>
+                    <div class="favorite_con" style="display: none; text-align: left;"><a href="javascript:addFav();">收藏到资讯通</a></div>
+                    <script src="http://theme.tjkximg.com/www/wwwv9/favorite.js" type="text/javascript"></script>
+                    <div class="pop_up" style="display: none;">
+                        <div class="row_clear2" style="height: 20px;">
+                            <input type="hidden" value="" class="txtV9FavoriteId" />
+                            <input type="hidden" value="1051330" class="txtInfoId" />
+                            <input type="hidden" value="百城绝对夜计划2.0超燃上线，与年轻潮人拥抱100种跨年夜" class="txtInfoTitle" />
+                        </div>
+                        <div class="pop_up_box">
+                            <!--[if !IE]> 收藏成功 <![endif]-->
+                            <div style="clear: both; height: auto;" class="pop_up_box_cnt">
+                                <div style="clear: both; width: 95%; margin: 0 auto; height: 40px;">
+                                    <span class="pop_up_t">&nbsp;</span>
+                                    <span class="pop_up_close"><a href="javascript:;" onclick="favHide();" title="关闭"></a></span>
+                                </div>
+                                <div style="clear: both; width: 95%; margin: 0 auto; height: auto">
+                                    <span class="pop_up_cnt">
+                                        <span class="pop_up_text">标签：<input name="" type="text" class="pop_up_k" data="aaa"></span>
+                                        <span class="pop_up_text2" style="width: 98px; margin: 6px 0px 12px 5px;">最多3个标签，单个限12个字符内，用','或空格分隔</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="pop_up_but">
+                                <input type="button" value="确 定" class="pop_up_b1 bnt_ok_del">
+                                <input type="reset" value="取 消" class="pop_up_b2" onclick="favHide();">
+                            </span>
+                            <div style="display: none;" class="Hide_pop_up_box_cnt">
+                                <div style="clear: both; width: 95%; margin: 0 auto; height: 40px;">
+                                    <span class="pop_up_t">&nbsp;</span>
+                                    <span class="pop_up_close"><a href="javascript:;" onclick="favHide();"></a></span>
+                                </div>
+                                <div style="clear: both; width: 95%; margin: 0 auto; height: auto">
+                                    <span class="pop_up_cnt">
+                                        <span class="pop_up_text">标签：<input name="" type="text" class="pop_up_k" data="aaa"></span>
+                                        <span class="pop_up_text2" style="width: 98%; margin: 6px 0px 12px 5px;">最多3个标签，单个限12个字符内，用','或空格分隔</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_up_d"></div>
+                    </div>
+                    <div class="color">
+                        <span id="comment_num"></span>
+                        
+                    </div>
+                    <div class="fontSize">
+                        字号： <span class="small" title="切换到小字体" onclick="$('#txt').css('font-size', $(this).css('font-size'));"
+                            style="cursor: pointer;">T</span> | <span class="big" title="切换到大字体" onclick="$('#txt').css('font-size', $(this).css('font-size'));"
+                                style="cursor: pointer;">T</span>
+                    </div>
+                </div>
+
+                
+                <div class="newtext_con">
+                    <div id="txt" style="clear: both; width: 97%; padding: 6px 10px;">
+                        <p style="text-indent:2em;"><span style="text-indent:2em;">“如果有一万元给你办跨年派对，你想怎么玩？”11月开始，ABSOLUT绝对伏特加品牌推出的#</span><span style="text-indent:2em;">百城</span><span style="text-indent:2em;">绝</span><span style="text-indent:2em;">对夜计划#2.0升级版再次燃爆年轻人的社交圈</span><a name="_GoBack" style="text-indent:2em;"></a><span style="text-indent:2em;">。</span><div style='float:left; width:260px; height:250px; margin:5px;'><script type='text/javascript'>BAIDU_CLB_fillSlot('469456');</script></div></p><p style="text-indent:2em;">假若你自认为自己乖戾难驯，够另类够玩闹，且拥有异于常人的脑洞，并想在跨年夜“搞场大事情”，这一次就绝不能错过！一年一度绝对伏特加的“百城夜计划”，100个城市，100场跨年派对，只要你敢玩敢嗨敢闹，就有机会被选中，获得1万元现金赞助及派对大礼包！</p><p style="text-align:center"><img src="http://a.tjkximg.com/2018-11/28/14/08755541017.jpg" width="400" height="265" border="0" hspace="0" vspace="0" style="width:400px;height:265px;" /></p><p style="text-indent:2em;"> &nbsp;拒绝平庸沉闷，誓要用最不走寻常路的打开方式，张扬表达独一无二的自我个性，今年，绝对伏特加再度发起跨年夜计划悬赏——＃百城绝对®夜计划＃，结集全国各地富有创造力与天赋的夜间造物者们，号召大家造出不循规蹈矩的跨年玩法。</p><p style="text-indent:2em;"> &nbsp; &nbsp;绝对伏特加在去年的百城夜计划中，征集到全国超过1000个绝对跨年计划，而今年期待得到更多参与者，更创新更好玩的夜计划！而绝对伏特加将会从中选出100位城市赢家，获得绝对伏特加提供的 10000 元夜计划执行奖金，打造出百场跨年活动同时在12月31日晚进行！</p><p style="text-align:center"><img src="http://a.tjkximg.com/2018-11/28/14/09001165883.jpg" width="400" height="268" border="0" hspace="0" vspace="0" style="width:400px;height:268px;" /></p><p style="text-indent:2em;">在去年的“绝对夜计划”中，Absolut绝对伏特加将来自五湖四海的100位头部赢家的创意思潮进行到底，从创意性不断迸发，再回归到每个城市的特色本身，这些夜计划从城市特色、脑动创意性、多元素集合、街头文化和音乐派对等多维度分类，在新旧交替之时，绝对伏特加造出了别样精彩的狂欢跨年夜！</p><p style="text-align:center"><img src="http://a.tjkximg.com/2018-11/28/14/09208665785.jpg" width="400" height="200" border="0" hspace="0" vspace="0" style="width:400px;height:200px;" /></p><p style="text-indent:2em;"> &nbsp; &nbsp;今年上线的2.0 版本除了设计更出乎想像之外，还增添了几个符合年轻人社交夜生活爱好的“逆天”功能：在[活动日历]中，消费者可以通过选择自己所在或想去的城市，了解到本周在该城市的最燃派对和绝顶够“闹”玩法，发现更多潮人聚集地。</p><p style="text-align:center"><img src="http://a.tjkximg.com/2018-11/28/14/09410696873.jpg" width="400" height="276" border="0" hspace="0" vspace="0" style="width:400px;height:276px;" /></p><p style="text-indent:2em;"> &nbsp; &nbsp;同期上线的还有100个绝对限量城市瓶，大胆有趣的设计赚足眼球，势要和百城夜计划一起燃爆跨年夜！拒绝平庸沉闷，绝对伏特加誓要用绝对怪诞另类的方式，张扬表达独一无二的绝对个性——＃百城绝对®夜计划＃已经开启，赶快召集你的“同类&quot;一起头脑风暴，参加这场充满创造力的超级活动！</p><p style="text-align:center"><img src="http://a.tjkximg.com/2018-11/28/14/09618353285.jpg" width="400" height="223" border="0" hspace="0" vspace="0" style="width:400px;height:223px;" /></p><p style="text-indent:2em;"> &nbsp; &nbsp;绝对伏特加始终致力于探索和创造最多元最潮流的青年夜生活文化和社会价值观，为青年们的创意灵感提供最真挚与实际的支持，以此激发出只属于这个时代最特立独行的人群的够赞、够不寻常的创意并体现当代年轻人无与伦比的执行力。</p><p style="text-indent:2em;">自11月15日至12月12日，潮酷达人们可以开始申请并提交跨年夜计划，品牌将通过短信形式告知上传成功。同时大家可在社交媒体分享跨年夜寻找支持，每人每天能对每个夜计划投3票。</p><p style="text-indent:2em;"> &nbsp; 12月17日，品牌将正式公布获胜的100个计划和城市，除了10000元现金，获胜者还将获得绝对伏特加“派对道具套装”x1，让夜计划燃爆跨年！</p><p style="text-indent:2em;">新玩法新纪元，伏特加百城夜计划等你来引爆坐C位。拒绝平庸，用自己够独特的方式迎接2019，赶快跟你的伙伴头脑风暴，参加这场充满创造力的超级活动吧！</p>
+
+                        
+                        <div style="height: 10px; clear: both;"></div>
+                    </div>
+                </div>
+
+                <style type="text/css">
+                    .praise_con { margin: auto; padding: 10px 0px 30px 240px; }
+                    .praise { float: left; cursor: pointer; }
+                    .praise .icon { float: left; width: 50px; height: 50px; background: url(http://theme.tjkximg.com/www/images/praise.png) no-repeat center #43a4ef; }
+                    .praise .number { float: left; width: auto; padding: 0px 15px; background-color: #ebf5fd; height: 50px; line-height: 50px; font-size: 30px; font-family: "Microsoft YaHei"; color: #294d9d; }
+
+                    .praise .icon2 { float: left; width: 50px; height: 50px; background: url(http://theme.tjkximg.com/www/images/praise.png) no-repeat center #c2c2c2; }
+                    .praise .number2 { float: left; width: auto; padding: 0px 15px; background-color: #e5e5e5; height: 50px; line-height: 50px; font-size: 30px; font-family: "Microsoft YaHei"; color: #959595; }
+                </style>
+                
+                        <div class="praise" style="height: 50px; margin-left: 250px; _display: inline; _margin-left: 250px; margin-bottom: 10px;" onclick="upDown(1051330, true, this)">
+                            <span class="icon"></span>
+                            <span class="number"><span class="good">0</span></span>
+                        </div>
+                    
+                <script type="text/javascript">
+                    function upDown(sid, up, container) {
+                        var obj = $(container);
+                        var p = { stype: 1, sid: sid, up: up, action: "updown" };
+                        $.getJSON("http://gate.tjkx.com/updown/index.ashx?callback=?", p, function (ret) {
+                            if (ret.error == 0) {
+                                obj.attr("onclick", '').find(".icon").attr("class", "icon2").end().find(".number").attr("class", "number2");
+                                obj.find(".good").text(parseInt(obj.find(".good").text()) + 1);
+                            }
+                        });
+                    }
+                </script>
+
+                
+                <div class="row_clear2"></div>
+                
+
+                <div class="row_clear2"></div>
+                
+                <div class="row_clear2"></div>
+                <div class="pgnav" style="border: none;">
+
+                    <script type="text/javascript">
+                        var bds_config = {
+                            'bdText': '【百城绝对夜计划2.0超燃上线，与年轻潮人拥抱100种跨年夜】“如果有一万元给你办跨年派对，你想怎么玩？”11月开始，ABSOLUT绝对伏特加品牌推出的#百城绝对夜计划#2.0升级版再次燃爆年轻…',
+                                     'wbUid': '1668899380',
+                                     'snsKey': {
+                                         'tsina': '4134085953',
+                                         'tqq': '96a665da7d884174a9a09681db7ce281'
+                                     }
+                                 };
+                    </script>
+                    <div class="fenx" style="width: 200px; float: left;">
+                        <script type="text/javascript">                                                                      v8.shareTo(3);</script>
+                    </div>
+                    <div class="zzname" style="width: auto; float: right;">[来源：糖酒快讯]&nbsp;&nbsp;作者：佚名&nbsp;&nbsp;编辑：叶嘉倩</div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div style="clear: both; height: 8px;"></div>
+                
+                <div class="tagslist">
+                    <ul>
+                        <li style="color: #008000;">文章关键词：</li>
+                        
+                        <li>
+                            <h2><a href="http://info.tjkx.com/so/1-葡萄酒-0-0-1-1.htm" target="_blank">葡萄酒</a></h2>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="row_clear2"></div>
+            </div>
+
+            <div class="row_clear2" style="height: 20px;"></div>
+                <!--[if !IE]> 网友评论 <![endif]-->
+                <script type="text/javascript">
+                    comment.init(1051330, 1);
+                    comment.iframe( 5, { 'width': '100%', 'proxy': 'http://wine.tjkx.com/proxy.htm' });
+                </script>
+
+            <div style="float:left;border: 1px solid #DCDCDC;">
+                <!--[if !IE]> 二维码 <![endif]-->
+                <div style="margin: auto;">
+                    <img src="http://theme.tjkximg.com/www/images/tjkx_ewm.png" />
+                </div>
+
+                
+                <div class="row_clear2"></div>
+                <div style="width: 100%; clear: both;">
+                    <div class="xg_news">
+                        <div class="lanmu">
+                            <h2>相关阅读</h2>
+                            <div class="red" style="float: right; padding-right: 8px; font-weight: normal; font-size: 12px;">
+                                <a href="http://info.tjkx.com/so/tohtm.aspx?key=%e8%91%a1%e8%90%84%e9%85%92" target="_blank" title="查看更多">更多>></a>
+                            </div>
+                        </div>
+                        <ul>
+                            
+                                    <h3><a href="http://wine.tjkx.com/detail/1051752.htm" title="绽放第十五届葡届论坛，携手粤港澳大湾区葡萄酒联盟社群，澳洲三洋酒业大湾区上市品鉴会成功举办" target="_blank">绽放第十五届葡届论坛，携手粤港澳大湾区葡萄酒联盟社群，澳洲三洋酒业大湾区上市品鉴会成功举办</a></h3>
+                                
+                                    <h3><a href="http://wine.tjkx.com/detail/1051724.htm" title="京东葡萄酒Big day圆满收官 无界模式开创中国葡萄酒市场" target="_blank">京东葡萄酒Big day圆满收官 无界模式开创中国葡萄酒市场</a></h3>
+                                
+                                    <h3><a href="http://wine.tjkx.com/detail/1051700.htm" title="茅台葡萄酒高端巡回品鉴会成都站完美落幕" target="_blank">茅台葡萄酒高端巡回品鉴会成都站完美落幕</a></h3>
+                                
+                                    <h3><a href="http://wine.tjkx.com/detail/1051653.htm" title="风土特色，产区自信，中国距离世界葡萄酒第三极还有多远？" target="_blank">风土特色，产区自信，中国距离世界葡萄酒第三极还有多远？</a></h3>
+                                
+                                    <h3><a href="http://wine.tjkx.com/detail/1051635.htm" title="致敬改革开放40年长城葡萄酒千商大会圆满召开，明年打造“文化长城”" target="_blank">致敬改革开放40年长城葡萄酒千商大会圆满召开，明年打造“文化长城”</a></h3>
+                                
+                                    <h3><a href="http://wine.tjkx.com/detail/1051619.htm" title="长城荣耀四十年 首次葡萄酒千商大会开启中国葡萄酒事业新蓝图" target="_blank">长城荣耀四十年 首次葡萄酒千商大会开启中国葡萄酒事业新蓝图</a></h3>
+                                
+                        </ul>
+                    </div>
+
+                    <div class="xg_news">
+                        <div class="lanmu">
+                            <h2>相关产品</h2>
+                            <div class="red" style="float: right; padding-right: 8px; font-weight: normal; font-size: 12px;"><a href="http://b2b.tjkx.com/" title="相关产品">更多&gt;&gt;</a></div>
+                        </div>
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <div style="height: 1px; clear: both;"></div>
+                </div>
+                
+                <div class="row_clear2"></div>
+            </div>
+            <!--[if !IE]> 广告 <![endif]-->
+            <div class="row_clear2"></div>
+            <div class="adv650">
+                <script type="text/javascript">                    BAIDU_CLB_fillSlot("469451");</script>
+            </div>
+            <div class="row_clear2"></div>
+
+            <!--cnzz tui-->
+            <script type="text/javascript" charset="utf-8" src="http://tui.cnzz.net/cs.php?id=1000038309"></script>
+            <!--cnzz tui-->
+
+            <!--[if !IE]> 商机直通车 <![endif]-->
+            <div class="row_clear2"></div>
+            <div class="show_leftbox">
+                <div class="swztc">商<br />
+                    机<br />
+                    直<br />
+                    通<br />
+                    车</div>
+                <span id="loadcontainer">
+                    <div class="listbox" style="height: 70px; overflow: hidden;"> <div class="h3"> <a href="http://b2b.tjkx.com/product-122399.htm" target="_blank" title="威龙金版橡木桶杭州代理商批发蛇龙珠红酒"> 威龙金版橡木桶杭州代理商批发蛇龙珠红酒</a> </div> <div class="text" style="height: 38px; overflow: hidden;"> 杭州威龙干红葡萄酒金版橡木桶团购批发 该酒是选用威龙庄园21年树龄的优… </div> </div> <div class="listbox" style="height: 70px; overflow: hidden;"> <div class="h3"> <a href="http://b2b.tjkx.com/product-122490.htm" target="_blank" title="杭州张裕爱斐堡特选级葡萄酒代理商批发"> 杭州张裕爱斐堡特选级葡萄酒代理商批发</a> </div> <div class="text" style="height: 38px; overflow: hidden;"> 杭州团购爱斐堡国际酒庄赤霞珠红酒送货 城堡主楼是经典的欧洲城堡式建筑… </div> </div> <div class="listbox" style="height: 70px; overflow: hidden;"> <div class="h3"> <a href="http://b2b.tjkx.com/product-122398.htm" target="_blank" title="楼兰有机红酒批发团购杭州"> 楼兰有机红酒批发团购杭州</a> </div> <div class="text" style="height: 38px; overflow: hidden;"> 杭州 楼兰有机葡萄酒批发商团购 新疆吐鲁番楼兰戈壁葡萄园，精选27年赤霞… </div> </div> <div class="listbox" style="height: 70px; overflow: hidden;"> <div class="h3"> <a href="http://b2b.tjkx.com/product-122405.htm" target="_blank" title="杭州长城橡木桶葡萄酒批发商经销商团购"> 杭州长城橡木桶葡萄酒批发商经销商团购</a> </div> <div class="text" style="height: 38px; overflow: hidden;"> 杭州长城解百纳葡萄酒批发商团购 长城葡萄酒从建厂伊始，公司就按照 标准… </div> </div>
+                </span>
+            </div>
+
+
+            <div class="row_clear2"></div>
+
+            <!--[if !IE]> 免责声明 <![endif]-->
+            <div class="sm_wenzi">
+                <div class="text">
+                    <span class="wenzi_c">免责声明：</span>凡本站注明“文章来源：糖酒快讯”的所有作品，其版权属于糖酒快讯网站所有。其他媒体、网站或个人转载使用时必须注明：“文章来源：糖酒快讯”。
+								<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;本站转载、编译或摘编自其它媒体的文章，转载、编译或摘编的目的在于传递更多信息，不代表本站及其子站赞同其
+观点和对其真实性负责。其他媒体、网站或个人转载使用时必须保留本站注明的文章来源，并自负法律责任。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;欢迎各类型媒体积极与本站联络，互相签订转载协议。 
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;如著作人对本网刊载内容、版权有异议，请于知道该作品发表之日起30日内联系本网，否则视为自动放弃相关权利。
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;投稿邮箱：tjkxinfo@126.com，欢迎赐稿。
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <!--[if !IE]> 广告 <![endif]--> <div class="adv280"><script type="text/javascript">BAIDU_CLB_fillSlot("469448");</script></div> <div class="row_clear2"></div> <div class="adv280"><script type="text/javascript">BAIDU_CLB_fillSlot("1045600");</script></div> <div class="row_clear2"></div> <div class="right_box tab" style=" border-top:none; border-bottom:none; "> <div class="titlebg1"> <div class="title_f"></div> <div class="title_box"> <div class="up1">ocus</div> <h2>焦 点</h2> </div> </div> <div class="xk_box"> <div class="xk xk_on">酒商动态</div> <div class="xk xk_noon">国内动态</div> <div class="xk xk_noon">国际动态</div> </div> <div class="newlist3 conlist" > <ul> <li><a href="http://info.tjkx.com/detail/983669.htm" target="_blank" title="思考：红酒的渠道之困">思考：红酒的渠道之困</a></li><li><a href="http://info.tjkx.com/detail/948211.htm" target="_blank" title="华致酒行：葡萄酒市场分析报告">华致酒行：葡萄酒市场分析报告</a></li><li><a href="http://wine.tjkx.com/detail/1001110.htm" target="_blank" title="露黛尼2011干红揽获波尔多?阿基坦葡萄酒竞赛金奖">露黛尼2011干红揽获波尔多?阿基坦葡萄酒竞赛金奖</a></li><li><a href="http://wine.tjkx.com/detail/948086.htm" target="_blank" title="酒仙网：20亿元销售额有压力">酒仙网：20亿元销售额有压力</a></li><li><a href="http://wine.tjkx.com/detail/969043.htm" target="_blank" title="嘉里一酒香获富利来酒庄大中华区独家代理权">嘉里一酒香获富利来酒庄大中华区独家代理权</a></li><li><a href="http://info.tjkx.com/detail/1005398.htm" target="_blank" title="店商的未来：重拾烟酒店价值">店商的未来：重拾烟酒店价值</a></li><li><a href="http://wine.tjkx.com/detail/952517.htm" target="_blank" title="打破宿命，葡萄酒经销商的转型策略">打破宿命，葡萄酒经销商的转型策略</a></li><li><a href="http://wine.tjkx.com/detail/950562.htm" target="_blank" title="首家玛茜专营店落户柳州 进口葡萄酒市场乱局或变">首家玛茜专营店落户柳州 进口葡萄酒市场乱局或变</a></li><li><a href="http://wine.tjkx.com/detail/982395.htm" target="_blank" title="意大利第一品牌利口酒阿玛罗&#183;蒙特内罗举行鸡尾酒派对">意大利第一品牌利口酒阿玛罗&#183;蒙特内罗举行鸡尾酒派对</a></li><li><a href="http://wine.tjkx.com/detail/978488.htm" target="_blank" title="酒美网退出白酒市场专注做红酒">酒美网退出白酒市场专注做红酒</a></li> </ul> <ul style="display:none;"> <li><a href="http://wine.tjkx.com/detail/1013398.htm" target="_blank" title="冰锐凭什么打不过锐澳？">冰锐凭什么打不过锐澳？</a></li><li><a href="http://wine.tjkx.com/detail/1030787.htm" target="_blank" title="G20峰会为什么选择了长城五星葡萄酒">G20峰会为什么选择了长城五星葡萄酒</a></li><li><a href="http://wine.tjkx.com/detail/994095.htm" target="_blank" title="波尔多新酒庄主中国富豪生死未卜">波尔多新酒庄主中国富豪生死未卜</a></li><li><a href="http://wine.tjkx.com/detail/1013805.htm" target="_blank" title="吃小龙虾，千万别暴饮啤酒！【附小龙虾葡萄酒搭配攻略">吃小龙虾，千万别暴饮啤酒！【附小龙虾葡萄酒搭配攻略</a></li><li><a href="http://wine.tjkx.com/detail/847208.htm" target="_blank" title="2012春季全国糖酒会展位供不应求">2012春季全国糖酒会展位供不应求</a></li><li><a href="http://wine.tjkx.com/detail/1034801.htm" target="_blank" title="走进民权九鼎葡萄酒 看58年风雨变迁涅槃重生">走进民权九鼎葡萄酒 看58年风雨变迁涅槃重生</a></li><li><a href="http://wine.tjkx.com/detail/1016097.htm" target="_blank" title="【妙招】红酒溅到衣服上怎么办">【妙招】红酒溅到衣服上怎么办</a></li><li><a href="http://info.tjkx.com/detail/979325.htm" target="_blank" title="为你揭开勾兑葡萄酒的真面目">为你揭开勾兑葡萄酒的真面目</a></li><li><a href="http://spirit.tjkx.com/detail/1020468.htm" target="_blank" title="老子养身酒：当下是养生酒市场发展的最好时机">老子养身酒：当下是养生酒市场发展的最好时机</a></li><li><a href="http://info.tjkx.com/detail/912839.htm" target="_blank" title="厦门首个顶级法式会所格兰会GRAND CLUB将盛大开幕">厦门首个顶级法式会所格兰会GRAND CLUB将盛大开幕</a></li> </ul> <ul style="display:none;"> <li><a href="http://wine.tjkx.com/detail/1043846.htm" target="_blank" title="张裕“双十一”电商销售额2580万元 葡萄酒行业排第一">张裕“双十一”电商销售额2580万元 葡萄酒行业排第一</a></li><li><a href="http://wine.tjkx.com/detail/1041437.htm" target="_blank" title="法国原酒巨头涉嫌仿冒知名产区酒被起诉">法国原酒巨头涉嫌仿冒知名产区酒被起诉</a></li><li><a href="http://wine.tjkx.com/detail/1041433.htm" target="_blank" title="第二列运送法国葡萄酒的铁路专列启程">第二列运送法国葡萄酒的铁路专列启程</a></li><li><a href="http://wine.tjkx.com/detail/1036921.htm" target="_blank" title="澳大利亚葡萄酒对中国大陆出口额再创历史新高">澳大利亚葡萄酒对中国大陆出口额再创历史新高</a></li><li><a href="http://wine.tjkx.com/detail/1034437.htm" target="_blank" title="今年首批法国博若莱新酒在日本上市">今年首批法国博若莱新酒在日本上市</a></li><li><a href="http://wine.tjkx.com/detail/1033790.htm" target="_blank" title="罗马尼亚葡萄酒获得丰收 中国为主要出口市场之一">罗马尼亚葡萄酒获得丰收 中国为主要出口市场之一</a></li><li><a href="http://wine.tjkx.com/detail/1031903.htm" target="_blank" title="7个关键词，把握2016年葡萄酒行业趋势">7个关键词，把握2016年葡萄酒行业趋势</a></li><li><a href="http://wine.tjkx.com/detail/1031743.htm" target="_blank" title="蓬莱产葡萄酒出口法国">蓬莱产葡萄酒出口法国</a></li><li><a href="http://wine.tjkx.com/detail/1029350.htm" target="_blank" title="新疆首届丝绸之路葡萄酒节开幕">新疆首届丝绸之路葡萄酒节开幕</a></li><li><a href="http://wine.tjkx.com/detail/1024772.htm" target="_blank" title="意大利国内葡萄酒消费下降">意大利国内葡萄酒消费下降</a></li> </ul> </div> <div class="row_clear2" style="height:20px;"></div> </div> <script type="text/javascript"> $(function () { $(".xk_box div").hover(function () { var obj = $(this); var index = obj.parents(".tab").find(".xk").index(obj); obj.parents(".tab").find(".xk_box div").attr("class", "xk xk_noon").eq(index).attr("class", "xk xk_on"); obj.parents(".tab").find(".conlist").find("ul").hide(); obj.parents(".tab").find(".conlist").find("ul").eq(index).show(); }, null); }); </script> <div class="right_box" style=" border-top:none; "> <div class="titlebg1"> <div class="title_p"></div> <div class="title_box"> <div class="up1">roject</div> <h2>专题</h2> </div> <div class="more"><a href="http://info.tjkx.com/shenduzt/" target="_blank" title="查看更多">more</a></div> </div> <div class="pic_con"> <h3> <a href="http://info.tjkx.com/shenduzt/2018/gjmj/" title="第二届中国国际名酒文化节" target="_blank">第二届中国国际名酒文化节</a> </h3> <div class="pic"> <a href="http://info.tjkx.com/shenduzt/2018/gjmj/" title="第二届中国国际名酒文化节" target="_blank"> <img src="http://img.tjkximg.com/default/nopic.jpg?x-oss-process=image/resize,m_fill,w_100,h_75,limit_0/auto-orient,1/format,jpg" /></a></div> <div class="pictext"> 第二届中国国际名酒文化节</div> </div> <div class="pic_con"> <h3> <a href="http://info.tjkx.com/shenduzt/2018/ZdBm/" title="正道福利报名" target="_blank">正道福利报名</a> </h3> <div class="pic"> <a href="http://info.tjkx.com/shenduzt/2018/ZdBm/" title="正道福利报名" target="_blank"> <img src="http://img.tjkximg.com/default/nopic.jpg?x-oss-process=image/resize,m_fill,w_100,h_75,limit_0/auto-orient,1/format,jpg" /></a></div> <div class="pictext"> </div> </div> <div class="row_clear2" style="height:20px;"></div> </div> <!--[if !IE]> 热品招商 <![endif]--> <div class="right_box" style=" border-top:none; "> <div class="titlebg1"> <div class="title_m"></div> <div class="title_box"> <div class="up1">erchants</div> <h2>热品招商</h2> </div> </div> <div class="pic_con"> <h3> <a href="http://www.vogaitalia.cn/" title="VOGA意大利葡萄酒" target="_blank">VOGA意大利葡萄酒</a> </h3> <div class="pic"> <a href="http://www.vogaitalia.cn/" title="VOGA意大利葡萄酒" target="_blank"> <img src="http://img.tjkximg.com/image/2013-07/19/670115640345.jpg?x-oss-process=image/resize,m_fill,w_100,h_75,limit_0/auto-orient,1/format,jpg" /></a></div> <div class="pictext"> 源自意大利/动人心魄的葡萄酒/VOGA意大利葡萄酒/时尚/性感/迷人/炫…[<a href="http://www.vogaitalia.cn/" target="_blank">详情</a>]</div> </div> <div class="row_clear2" style="height:20px;"></div> </div> <div class="right_box tab" style=" border-top:none; border-bottom:none; "> <div class="titlebg1"> <div class="title_e"></div> <div class="title_box"> <div class="up1">cl uslve report</div> <h2>独 家</h2> </div> </div> <div class="xk_box"> <div class="xk xk_on">名流</div> <div class="xk xk_noon">Liv-ex指数</div> <div class="xk xk_noon">市场快评</div> <div class="xk xk_noon">实战问答</div> </div> <div class="conlist"> <ul> <li class="detail1"><a href="http://wine.tjkx.com/detail/1043097.htm" title="2017澳大利亚葡萄酒管理局中国区年度奖项暨澳大利亚美酒美食嘉年华即将开幕" target="_blank"> <img src="http://img.tjkximg.com/image/2017-10/13/334013919713.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>2017澳大利亚葡萄酒管理局中国区年度奖项暨澳大利亚美酒美食嘉年华即将开幕</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1039537.htm" title="James Halliday：更甜的酒喜欢的人更多,但酿酒师不会降到那" target="_blank"> <img src="http://img.tjkximg.com/image/2017-05/23/399730494664.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>James Halliday：更甜的酒喜欢的人更多,但酿酒师不会降到那</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1039408.htm" title="智利古老的卡乐门酒庄引入年轻女酿酒师" target="_blank"> <img src="http://img.tjkximg.com/image/2017-05/17/546462666237.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>智利古老的卡乐门酒庄引入年轻女酿酒师</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1034018.htm" title="他曾经怒毁两个货柜，损失上百万，10年间这位80后老板都经历了什么？" target="_blank"> <img src="http://img.tjkximg.com/image/2016-11/10/380552593986.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>他曾经怒毁两个货柜，损失上百万，10年间这位80后老板都经历了什么？</div></a> </li> </ul> <ul style=" display:none;"> <li class="detail1"><a href="http://wine.tjkx.com/detail/1003131.htm" title="香槟价格增长趋势暂时停止" target="_blank"> <img src="http://img.tjkximg.com/image/2014-07/17/335274579576.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>香槟价格增长趋势暂时停止</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1001995.htm" title="拉菲价格回归同级庄园水平" target="_blank"> <img src="http://img.tjkximg.com/image/2014-06/17/382177121984.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>拉菲价格回归同级庄园水平</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1001694.htm" title="1-5月格鲁吉亚葡萄酒出口增长147%" target="_blank"> <img src="http://img.tjkximg.com/image/2014-06/10/385225810546.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>1-5月格鲁吉亚葡萄酒出口增长147%</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1000957.htm" title="数据解析：全球重要葡萄酒消费国的人均消量" target="_blank"> <img src="http://img.tjkximg.com/image/2014-05/22/344620727943.png?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>数据解析：全球重要葡萄酒消费国的人均消量</div></a> </li> </ul> <ul style=" display:none;"> <li class="detail1"><a href="http://wine.tjkx.com/detail/1041208.htm" title="亓闻：搬回先进的设备，解决不了国产葡萄酒的系统问题" target="_blank"> <img src="http://img.tjkximg.com/image/2017-07/24/600180993840.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>亓闻：搬回先进的设备，解决不了国产葡萄酒的系统问题</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1040251.htm" title="TWE的法国品牌迈颂庄园登场，欲重新定义法国葡萄酒传统" target="_blank"> <img src="http://img.tjkximg.com/image/2017-06/19/352006269992.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>TWE的法国品牌迈颂庄园登场，欲重新定义法国葡萄酒传统</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1040091.htm" title="2017/18 年度澳大利亚葡萄酒管理局业内专家项目开始报名" target="_blank"> <img src="http://img.tjkximg.com/image/2017-06/12/598405840710.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>2017/18 年度澳大利亚葡萄酒管理局业内专家项目开始报名</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/1039724.htm" title="比利时布鲁塞尔国际葡萄酒大奖赛落户海淀 助力海淀品牌时尚和消费升级" target="_blank"> <img src="http://img.tjkximg.com/image/2017-05/28/530869985280.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>比利时布鲁塞尔国际葡萄酒大奖赛落户海淀 助力海淀品牌时尚和消费升级</div></a> </li> </ul> <ul style=" display:none;"> <li class="detail1"><a href="http://wine.tjkx.com/detail/1003813.htm" title="如何攻占农村市场？" target="_blank"> <img src="http://img.tjkximg.com/image/2014-08/07/595990011985.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>如何攻占农村市场？</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/983168.htm" title="如何从酒标初步辨别澳大利亚葡萄酒的各种信息？" target="_blank"> <img src="http://img.tjkximg.com/image/2013-07/17/373027631937.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>如何从酒标初步辨别澳大利亚葡萄酒的各种信息？</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/949354.htm" title="葡萄酒会所是否需要配餐？" target="_blank"> <img src="http://img.tjkximg.com/image/2012-10/09/480099755630.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>葡萄酒会所是否需要配餐？</div></a> </li> <li class="detail1"><a href="http://wine.tjkx.com/detail/948501.htm" title="制度允许波尔多葡萄酒AOC和AOP同时存在" target="_blank"> <img src="http://img.tjkximg.com/image/2012-09/26/626029812884.jpg?x-oss-process=image/resize,m_fill,w_120,h_90,limit_0/auto-orient,1/format,jpg" /> <div>制度允许波尔多葡萄酒AOC和AOP同时存在</div></a> </li> </ul> </div> <div class="row_clear2" style="height:20px;"></div> </div> <div class="right_box" style=" border-top:none; border-bottom:none; "> <div class="titlebg1"> <div class="title_c"></div> <div class="title_box"> <div class="up1">onnoisseur</div> <h2>尚品流·鉴评</h2> </div> <div class="more"><a href="http://busi.tjkx.com/zhuanti/wine.html" target="_blank" title="查看更多">more</a></div> </div> <div class="pic_con2"> <div class="pictitle" style=" font-size:12px;"> <a href="http://busi.tjkx.com/zhuanti/detail/2010-putaojiou-66.htm" target="_blank">本期：情迷拉曼恰</a> </div> <div class="pic" ><a href="http://busi.tjkx.com/zhuanti/wine.html" target="_blank"><img src='http://img.tjkximg.com/image/2013-07/05/498885870695.jpg?x-oss-process=image/resize,m_fill,w_110,h_110,limit_0/auto-orient,1/format,jpg' /></a></div> <div class="pictext">产地：拉曼恰 </div> <div class="pictext">规格：750ml </div> <div class="pictext">年份：2008 </div> <div class="pictext"> </div> <div class="pictext2"><strong>描 述：</strong></div> </div> <div class="row_clear2" style="height:20px;"></div> </div> <div class="right_box" style=" border-top:none; "> <div class="titlebg1"> <div class="title_e"></div> <div class="title_box"> <div class="up1">nterprise</div> <h2>推荐厂商</h2> </div> <div class="more"><a href="/list/1840402.htm" target="_blank" title="查看更多">more</a></div> </div> <ul> </ul> <div class="newlist3" > <ul> </ul> </div> <div class="row_clear2" ></div> </div>
+        </div>
+        <div style="height: 1px; clear: both;"></div>
+    </div>
+    <div class="row_clear5"></div>
+    <div class="row_clear" style="height:5px;"></div>
+<div class="v9footer">
+    <div class="links">
+         <a href="http://about.tjkx.com/about/index.aspx" target="_blank">关于糖酒快讯</a>　-　
+        <a href="http://about.tjkx.com/link/index.aspx" target="_blank"> 联系方式</a>　-　
+        <a href="http://about.tjkx.com/job/index.aspx" target="_blank">招聘信息</a>　-　
+        <a href="http://about.tjkx.com/service/spt.aspx" target="_blank">服务项目</a>　-　
+        <a href="http://www.tjkx.com/p/map.aspx" target="_blank">网站地图</a>　-　
+        <a href="http://m.tjkx.com" target="_blank">手机客户端</a>　-　
+        <a href="http://www.tjkx.com/baijiu/" target="_blank" title="白酒大全">白酒大全</a>  
+    </div>
+    <div class="banqan"> 
+<table width="880" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="51" rowspan="3"><div align="center"><a href="http://www.cdnet110.com" target="_blank" title="成都市公安机关110报警求助举报服务平台">
+        <img src="http://theme.tjkx.com/www/images/baojgt.gif" width="50" height="50" border="0" /></a></div></td>
+      <td width="829" height="24"><div align="center">新闻报料热线：028-66000120&nbsp;&nbsp;&nbsp;广告服务热线：028-86062288&nbsp;&nbsp;&nbsp;90天使会会员热线：028-86062266&nbsp;&nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+    <td height="28" >   
+      
+      <div align="center">                    
+      投搞邮箱：<a href="mailto:xinshipin2015@163.com">xinshipin2015@163.com</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    投诉咨询热线：028-86061166&nbsp;&nbsp;&nbsp;&nbsp;
+                    投诉邮箱：<a href="mailto:tangjkx@sina.com">tangjkx@sina.com</a></div></td>
+    </tr>
+    
+    <tr>
+    <td height="24">成都九石电子商务有限公司 版权所有    &nbsp;&nbsp;中华人民共和国增值电信业务经营许可证 川B2-20050271  　<a href="http://www.miibeian.gov.cn" target="_blank">蜀ICP备09003944号</a>
+
+<span style="display:none;"><script type="text/javascript">v8.baiduTongji();</script></span></td>
+  </tr>
+  <tr>
+    <td height="8" colspan="2"></td>
+    </tr>
+</table>
+
+</div>
+ <span style="display:none;">
+    <script src="https://s13.cnzz.com/z_stat.php?id=1273371983&web_id=1273371983" language="JavaScript"></script>
+    </span>
+    
+    <script type="text/javascript">
+        v8.showVote({ms: 1, w: 650, h: 170, stid: 1, sid: 1051330 });
+    </script>
+    <script type="text/javascript">
+        v8.stat({ type: "hit", p1: "info", p2: "1051330" });
+    </script>
+
+</body>
+</html>

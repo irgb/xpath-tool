@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>民企上市获政策提速，当当谴责创始人李国庆 | 财经日日评_齐鲁壹点网</title>
+        <meta name="description" content='民企上市获政策提速，当当谴责创始人李国庆 | 财经日日评。
+  
+   
+    
+     
+      
+     
+    
+   
+   
+    
+     
+      
+       张裕白兰地×吴晓波频道
+      
+     
+    
+   
+   
+    
+     张裕' />
+        <meta name="keywords" content="" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9660674";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">民企上市获政策提速，当当谴责创始人李国庆 | 财经日日评</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9660674.html' class='sh_9660674'>民企上市获政策提速，当当谴责创始人李国庆 | 财经日日评</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">08:12</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">吴晓波频道</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9660674' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9660674' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9660674'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        
+  <div class="rich_media_content " id="js_content">
+   <p data-mpa-powered-by="yiban.io" style="white-space: normal;text-align: center;">
+    <a>
+     <span class="js_jump_icon h5_image_link" data-positionback="static" style="top: auto;left: auto;right: auto;bottom: auto;">
+      <img data-height="300" data-width="600" src="https://wscdn.ql1d.com/20181230jHJKpwBkA8cFIWO4Lze5.jpeg"/>
+     </span>
+    </a>
+   </p>
+   <p style="white-space: normal;text-align: center;letter-spacing: 1.5px;">
+    <span style="font-size: 14px;">
+     <strong>
+      <span style="font-family: SimSun;text-align: justify;color: rgb(0, 122, 170);">
+       张裕白兰地×吴晓波频道
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="white-space: normal;text-align: center;letter-spacing: 1.5px;">
+    <span style="font-family: SimSun;text-align: justify;color: rgb(96, 96, 96);font-size: 14px;">
+     张裕珍藏版五星白兰地激荡礼盒
+    </span>
+   </p>
+   <p style="white-space: normal;text-align: center;letter-spacing: 1.5px;">
+    <span style="font-family: SimSun;text-align: justify;color: rgb(96, 96, 96);font-size: 14px;">
+     致敬改革开放四十周年
+    </span>
+   </p>
+   <p>
+    <img data-height="31" data-width="600" src="https://wscdn.ql1d.com/20181230xZfXHnva8YPCNblI7c56.png"/>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <strong>
+             <span>
+              国常会决定加快民企上市和再融资审核
+             </span>
+            </strong>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，国务院常务会议决定，要更大力度减税降费，改进融资服务。完善普惠金融定向降准政策。将支小（即小微企业）再贷款政策扩大到符合条件的中小银行和新型互联网银行。出台小微企业授信尽职免责的指导性文件。加快民企上市和再融资审核。
+            </span>
+           </p>
+           <p>
+            <span>
+             此外，国常会还将部署加大对民营经济和中小企业支持，要打造公平便捷营商环境，对民间投资进入资源开发、交通、市政等领域，除另有规定外一律取消最低注册资本、股比结构等限制。（中国政府网）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+     昨天召开的国常会上，有一系列利好市场的规定发布。其实，目前民间资本的活跃度并不差，根据今年前11个月的数据，民间投资规模增长8.7%，比整体投资快了2.8%。但是民营企业眼下遭遇许多困难，也是不争的事实。
+    </span>
+   </p>
+   <p style="margin-right: 1em;margin-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <span style="font-family: 宋体;font-size: 15px;color: rgb(96, 96, 96);">
+     支持民营企业的一个抓手，莫过于支持民企上市和再融资，立足于资本市场缓解民营企业的资金困境。民企上市一直以来都比较难，别说监管部门偏好有国资的企业，就是排队等上市也不知要到猴年马月。国常会这寥寥数语，可谓切中了民企的痛点。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <strong>
+             <span>
+              中国非农建设用地将不再必须国有
+             </span>
+            </strong>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月23日，土地管理法、城市房地产管理法修正案草案提请十三届全国人大常委会审议，此次草案主要修改完善了土地征收、集体经营性建设用地入市等内容。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             其中，草案删去了关于从事非农业建设使用土地的，必须使用国有土地或者征为国有的原集体土地的规定；对土地利用总体规划确定为工业、商业等经营性用途，并经依法登记的集体建设用地，允许土地所有权人通过出让、出租等方式交由单位或者个人使用。这也意味着中国非农建设用地将不再必须国有。（澎湃新闻）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     由于涉及面广，且利益关系复杂，历来关于土地的改革都被外界视为焦点中的焦点。本次草案所提出的“非农建设用地将不再必须国有”，简单地说，就是把土地带来的增值收益，更多地交给农民自己，而以往则是先将土地征收再转为建设用地。这预示农村的土地改革正朝着具有实质性突破的目标前进。
+    </span>
+   </p>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <span style="color: rgb(96, 96, 96);font-family: 宋体;font-size: 15px;">
+     不过，本次修正草案中明确确定，非农建设用地必须是规划中明确为工业、商业等经营性用途，和住宅基本没有关系。也就是说，外界传闻的“小产权房转正”仍将遥遥无期。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <span>
+             明年对港澳进口货物部分实施零关税
+            </span>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，经国务院关税税则委员会审议通过，并报国务院批准，自2019年1月1日起，调整部分商品的进出口关税。
+            </span>
+           </p>
+           <p>
+            <span>
+             据悉，中国将对700余项商品实施进口暂定税率，包括新增对杂粕和部分药品生产原料实施零关税，取消新能源汽车用锂离子电池单体的进口暂定税率，恢复执行最惠国税率等；同时对化肥、磷灰石等94项商品不再征收出口关税。此外，根据内地与香港、澳门签署的货物贸易协议，对原产于香港、澳门的进口货物将全面实施零关税。（人民日报）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     调整后的关税中，最吸人眼球的自然还是零关税的部分，此次包括部分药品原料和港澳的进出口货物能实现零关税，实际上也多在意料之中，毕竟此前已有消息预示出了目前的结果。综合来看，国务院能做出上述调整，说明了未来中国仍将朝着同时扩大进出口力度的方向前进，这对进一步缓解中美之间的贸易冲突也有一定的利好。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <strong>
+             <span>
+              城镇居民买房意愿持续下滑
+             </span>
+            </strong>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，央行公布的四季度城镇储户问卷调查报告显示：未来3个月内准备出手购买住房的居民占比为21.9%，较三季度的22.5%和二季度的23%进一步下滑。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             对下一季度房价，最新的调查显示，27.4%的居民预期“上涨”，而三季度的调查中这一比例为33.7%，四季度49.6%的居民预期下季度房价“基本不变”，较上季度这一比例为45.9%。（央行官方网站）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     从央行的调查结果来看，目前城镇居民对中国楼市的主要态度是，未来一段时间，房价上涨的可能性不大，但下跌也很难，在这种时候，越来越多的人选择握紧手上的资金，继续观望。这或许对房地产市场有一定的预警效果，即排除宏观调控可能出现变化的背景下，楼市的温度依然会继续降下去。不过，最近菏泽、广州等地相继出现的松绑政策，为楼市政策走向增添了变量。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <strong>
+             <span>
+              去年中国城镇住房空置率达21.5%
+             </span>
+            </strong>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             近日，据西南财经大学的最新报告显示，中国城镇家庭住房拥有率为90.2%，其中，城镇家庭多套房住房拥有率为22.1%，而城镇地区住房空置为21.4%。据估算，2017年，中国空置的住房数量总数为6500万套。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             数据显示，2017年二线城市、三线城市空置率分别高达22.2%和21.8%，远高于一线城市的16.8%。从变化趋势来看，2015~2017年间二线城市空置率大幅上升，三线城市空置率略有上涨，一线城市住房空置持续下降。（券商中国）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     按每套房子住2~3人的需求来计算，如果中国所有空置的房屋都被利用起来，那么差不多可以解决1.3亿~2亿人的住房问题。这么算虽然不准确，但也能大致反映出当前中国楼市高空置率所带来的问题，而这种情况，在二三线城市尤为严重。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <span>
+             特斯拉两个月降价三次
+            </span>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，根据特斯拉中国官方网站的消息，部分特斯拉 Model 3汽车的价格下降了7.6%。这是特斯拉在过去两个月第三次调整在华价格。目前，Model 3在中国的起价为人民币49.9万元（合7.2万美元）。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             今年11月，该公司将Model X和ModelS的价格下调了12%到26%。本月早些时候，在中国财政部宣布将暂停对美国市场征收额外关税后，特斯拉下调了从明年1月起的Model S和Model X的价格。（新浪财经）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     今年以来，出于中美关税和公司销售政策的关系，特斯拉已经对旗下产品进行过多次调价，总体来看，降价的次数比涨价多。而降价也确实有好处，比如上次降价后，就带动了不少门店的销量大涨。
+    </span>
+   </p>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <span style="color: rgb(96, 96, 96);font-family: 宋体;font-size: 15px;background-color: rgb(255, 255, 255);">
+     在当前中国汽车市场遭遇28年首次负增长，消费者购买汽车意愿不高的情况下，特斯拉虽然不停降价，奈何平均价格还是过高，阻碍了销量的进一步提升。或许只有等到国产化了，特斯拉在中国才算是真正具备了完全竞争力。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <span>
+             当当网谴责创始人李国庆不当言论
+            </span>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，当当网发表声明称，李国庆日前发表微博点评刘强东明尼苏达事件，对此当当网强烈谴责其言论。李国庆是当当网联合创始人，他离开当当网管理层、决策层已有一段时间，李国庆的言论是他的个人观点，当当网已经要求李国庆将当当logo，从他个人微博号等处删掉。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             目前李国庆在微博上的自我介绍为“当当创始人、CRYSTO战略投资人、北京和日天创科技（教育）公司董事长”。（新京报）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     表面上看，当当网发文正面怼自己的创始人，搞得李国庆有种被自家孩子抛弃的感觉。不过，这样做本身没有错。当当网主要还是从自身的利益出发，在外界的主观印象里，李国庆的一言一行仍会被打上当当的烙印，所以当当自然要赶紧发声明谴责，撇清二者关系。
+    </span>
+   </p>
+   <p style="padding-right: 1em;padding-left: 1em;white-space: normal;letter-spacing: 1.5px;line-height: 2em;">
+    <span style="color: rgb(96, 96, 96);font-family: 宋体;font-size: 15px;">
+     去逛了下李国庆的微博，发现他已经把头像等含有当当logo的内容删除了，至于当当创始人的身份，这是李国庆自创立当当之日起就注定了的，没法改变。
+    </span>
+   </p>
+   <p style="white-space: normal;">
+    <span style="font-size: 15px;font-family: SimSun;">
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <span>
+             新款苹果在中国变相降价
+            </span>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             近日，苹果中国官网上线了折抵换购的活动，用户可以用手中的旧iPhone折价换新，以更优惠的价格购买iPhone XR或iPhone XS两款新机。据悉，消费者凭手中的旧iPhone最高可抵2100元。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             此外，一位苹果直营店的店员表示，所有iPhone产品均可参加上述活动，但推荐iPhone 6以上型号的产品参与，原因是“折抵价格较高”。“在以前的以旧换新活动中，iPhone 6只能折600块钱，现在折抵换购能抵1200块钱。”（中新经纬客户端）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p class="mpa-highlight" style='margin-right: 1em;margin-left: 1em;white-space: normal;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;background-color: rgb(255, 255, 255);letter-spacing: 1.5px;line-height: 2em;'>
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     以旧换新的活动，苹果以前也不是没有弄过，但这次的差别在于活动力度特别大。而且除了苹果的产品外，其他品牌的手机也可以参与折旧活动，只不过价值上相对小很多。
+    </span>
+   </p>
+   <p class="mpa-highlight" style='margin-right: 1em;margin-left: 1em;white-space: normal;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;background-color: rgb(255, 255, 255);letter-spacing: 1.5px;line-height: 2em;'>
+    <span style="color: rgb(96, 96, 96);font-family: 宋体;font-size: 15px;">
+     此次苹果在中国市场重启该活动，并且优惠力度超过以往，这或许和高通的专利侵权案有一定关联。在早前颁布的禁售令中，所有老款iPhone都名列其中，但却不包括新款。而苹果也许是想通过这种手段，加大新产品的进场速度，并及时淘汰旧款。
+    </span>
+   </p>
+   <section style="white-space: normal;color: rgb(0, 0, 0);font-family: -webkit-standard;text-align: start;text-size-adjust: auto;box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <p>
+          <span>
+           <strong>
+            <strong>
+             <span>
+              A股缩量反弹沪指涨0.43%
+             </span>
+            </strong>
+           </strong>
+          </span>
+         </p>
+        </section>
+        <section>
+        </section>
+       </section>
+       <section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+             12月24日，沪深两市股指低开高走。午后，金融股、地产股止跌企稳，白马股、汽车股尾盘快速上涨，沪指震荡走高；5G、芯片等题材股持续强势表现，创业板指高位震荡。不过，两市成交量明显萎缩，沪市成交额不足千亿。
+            </span>
+           </p>
+           <p>
+            <span>
+            </span>
+           </p>
+           <p>
+            <span>
+             截至收盘，沪指报2527.01点，涨幅0.43%，深成指报7392.56点，涨幅0.75%；创指报1284.33点，涨幅1.10%。（第一财经）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p class="mpa-highlight" style='margin-right: 1em;margin-left: 1em;white-space: normal;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;background-color: rgb(255, 255, 255);letter-spacing: 1.5px;line-height: 2em;'>
+    <strong>
+     <span style="font-size: 15px;font-family: SimSun;background-color: rgb(0, 122, 170);color: rgb(255, 255, 255);">
+      ｜点评｜
+     </span>
+    </strong>
+    <span style="font-size: 15px;font-family: SimSun;color: rgb(96, 96, 96);">
+    </span>
+    <span style="font-family: SimSun;font-size: 15px;color: rgb(96, 96, 96);">
+     这两天，有关部门出台多个宏观利好政策，而A股也还算给面子，最终震荡收涨。不过，目前A股的成交量依然不见起色，说起来，这也是近期的老问题了，说明市场资金做多的意愿并不强烈，这会影响后续A股的走势。而本周已经是2018年的最后一周了，不知道昨天的开门红，能否给接下来几天带来士气上的些许提振，至少让投资者能开心点收官吧。
+    </span>
+   </p>
+   <p style="margin-right: 0em;margin-left: 0em;white-space: normal;letter-spacing: 1.5px;">
+    <span style="font-family: 宋体;font-size: 15px;">
+     <img data-height="48" data-width="424" src="https://wscdn.ql1d.com/20181230RHWGO9pxQmoh2N7tXjCi.jpeg"/>
+    </span>
+   </p>
+   <p style="margin-right: 0em;margin-left: 0em;white-space: normal;letter-spacing: 1.5px;">
+    <span class="vote_area">
+     <iframe allowfullscreen="" class="vote_iframe js_editor_vote_card" data-display-src="https://mp.weixin.qq.com/cgi-bin/readtemplate?t=vote/vote-new_tmpl&amp;__biz=MzA3OTM5NTkxNA==&amp;supervoteid=451887291&amp;token=638826901&amp;lang=zh_CN" data-display-style="width: 556px; height: 226px;" data-src="/mp/newappmsgvote?action=show&amp;__biz=MzA3OTM5NTkxNA==&amp;supervoteid=451887291#wechat_redirect" data-supervoteid="451887291" frameborder="0" scrolling="no">
+     </iframe>
+     <span class="vote_box skin_help po_left">
+     </span>
+     <span class="vote_box skin_help po_right">
+     </span>
+    </span>
+   </p>
+   <p>
+    <strong style="white-space: normal;letter-spacing: 0.5px;font-family: 宋体;font-size: 15px;line-height: 25.6px;">
+     <img data-height="278" data-width="600" src="https://wscdn.ql1d.com/20181230zi3UJPQBhHgZMLnG1tuE.jpeg"/>
+    </strong>
+   </p>
+   <p style="margin-right: 0em;margin-left: 0em;white-space: normal;line-height: 28.4444px;text-align: center;letter-spacing: 1.5px;">
+    <span style="color: rgb(136, 136, 136);font-size: 15px;">
+     文中股市、期货内容仅供参考
+    </span>
+   </p>
+   <p style="margin-right: 0em;margin-left: 0em;white-space: normal;line-height: 28.4444px;text-align: center;letter-spacing: 1.5px;">
+    <span style="font-size: 15px;color: rgb(136, 136, 136);">
+     不构成投资建议
+    </span>
+   </p>
+   <section style="padding-right: 12px;padding-left: 12px;white-space: normal;letter-spacing: 1.5px;">
+    <section>
+     <section>
+      <section>
+      </section>
+     </section>
+    </section>
+    <section>
+     <section>
+      <section>
+      </section>
+     </section>
+    </section>
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <section>
+         </section>
+        </section>
+       </section>
+       <section>
+        <section>
+         <section>
+         </section>
+        </section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <p>
+           <a>
+            <span>
+             《
+            </span>
+           </a>
+           <a>
+            <span>
+             买了一份24小时的爱情
+            </span>
+           </a>
+           <span>
+            》
+           </span>
+          </p>
+          <p>
+           <a>
+            <span>
+             《在美国，更容易看到群星璀璨》
+            </span>
+           </a>
+          </p>
+         </section>
+        </section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <section>
+            <section>
+             <img data-height="184" data-width="184" src="https://wscdn.ql1d.com/201812300qVPJvHEigsSu5nI7wMe.jpeg"/>
+            </section>
+           </section>
+          </section>
+         </section>
+        </section>
+       </section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <section>
+            <section>
+             <p>
+              <strong>
+               长按扫码进入“吴晓波频道”公众号
+              </strong>
+             </p>
+             <p>
+              获取今日所有内容
+             </p>
+            </section>
+           </section>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="white-space: normal;text-align: center;">
+    <img data-height="31" data-width="600" src="https://wscdn.ql1d.com/20181230mDMs3nIvNPUaBiEqWfVe.png"/>
+   </p>
+   <p style="white-space: normal;text-align: center;">
+    <span style="color: rgb(96, 96, 96);font-size: 14px;">
+     12.25-12.27参与圣诞活动
+    </span>
+   </p>
+   <p style="white-space: normal;text-align: center;">
+    <span style="font-size: 14px;color: rgb(96, 96, 96);">
+     前200名领取定制红茶、猫王音箱
+    </span>
+   </p>
+   <p style="white-space: normal;text-align: center;">
+    <strong>
+     <span style="font-size: 14px;color: rgb(0, 122, 170);">
+      点击下图▼立即抢购
+     </span>
+    </strong>
+   </p>
+   <p style="white-space: normal;text-align: center;">
+    <a>
+     <span class="js_jump_icon h5_image_link" data-positionback="static" style="top: auto;left: auto;margin: 0px;right: auto;bottom: auto;">
+      <img data-height="300" data-width="600" src="https://wscdn.ql1d.com/20181230SmrQaLW4jTE6UNeVcfnp.png"/>
+     </span>
+    </a>
+   </p>
+  </div>
+                     </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                                        -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">0</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9564618.html">
+                            <div data-background="http://recn.nosdn.127.net/icovr-20181210-65589bc9bfdb316f0153d8d79630bbc8.jpg" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="http://recn.nosdn.127.net/icovr-20181210-65589bc9bfdb316f0153d8d79630bbc8.jpg" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>全新唐EV下线 广州车主对特斯拉评价最高</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9582444.html">
+                            <div data-background="http://recc.nosdn.127.net/icovr-20181211-4e5815b229dd1ad15c7a6bd0d5d8251c.jpg" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="http://recc.nosdn.127.net/icovr-20181211-4e5815b229dd1ad15c7a6bd0d5d8251c.jpg" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>IL&FS计划出售可再生能源组合</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9584880.html">
+                            <div data-background="http://recc.nosdn.127.net/icovr-20181211-cb0e790728edddacadda531d0f5a77b8.jpg" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="http://recc.nosdn.127.net/icovr-20181211-cb0e790728edddacadda531d0f5a77b8.jpg" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>趣店斗鱼深陷裁员风波，程序员寒冬何去何从？｜畅言</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">0</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9660674";
+    var all_page_comment = "0";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

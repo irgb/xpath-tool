@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>“美国金庸”斯坦·李：漫威宇宙的缔造者 : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">“美国金庸”斯坦·李：漫威宇宙的缔造者</h1>
+			<input type="hidden" value="608129" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/gengshi3/" class="post-author">耿师</a>&nbsp;
+				<span class="post-date">01月22日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15480421089725.jpg?imageView2/2/w/760" alt="“美国金庸”斯坦·李：漫威宇宙的缔造者">
+				</div>
+								<p>金梅&nbsp;|&nbsp;作者</p><p>世红 |&nbsp;编辑</p><p>95年的时间，斯坦·李联手多位漫画家创造出神奇四侠、钢铁侠、蜘蛛侠、绿巨人、雷神、奇异博士、超胆侠等人气角色，将漫威漫画公司带到了行业巨头的位置，他是好莱坞超龙套王，他甚至改写了好莱坞……</p><p>在失去与自己相恋70年的爱人后的一年时间，95岁的斯坦·李举日为艰。</p><p>除了疾病缠身，还被诬陷性骚扰护士、和前经纪人翻脸、被两名男子入室抢劫……甚至连自己的亲生女儿为了争夺财产，也一再的虐待、打骂、胁迫他。&nbsp;</p><p>他多次辟谣，说女儿对自己很好，但几乎所有人都知道他说的是假话。</p><p>甚至有公司伙同护士，偷了斯坦·李的血液拿去卖。95岁老人的血液被稀释后制成墨水签名，印在漫画上，一本五百美元。</p><p>谁能想到，如此落魄、受尽欺凌的斯坦·李，竟然是钢铁侠、蜘蛛侠、绿巨人等等超级英雄的缔造者。塑造了这么多英雄，救人于水火、甚至挽救整个星球的斯坦·李，在生死边缘却无人救他逃出这被凌辱的境地。</p><p>2018年11月12日，武侠泰斗金庸的葬礼在香港殡仪馆举行。同时在地球的另一端，斯坦·李闭上了他的眼睛。两位大师带着几代人的成长记忆，离开这个纷繁的尘世，到另一个星球去续写传奇了。</p><p>斯坦·李微笑着说，“别为我哭泣，我要去见我爱了70年的完美女孩了。”</p><p>1</p><p>最苦的杂役和他心里的大英雄</p><p>身处困境，但依然可以保持微笑，这也许是英雄之为英雄的最根本原因。</p><p>斯坦·李（原名斯坦利·马丁·利博）出生在一个非常贫困的犹太家庭。&nbsp;</p><p>“印象里母亲大多数时间都呆在厨房或者打扫简陋的房间，父亲经常失业，家里没有钱买足够的食物，有时候甚至没钱交房租而不得不频繁地搬家，父母经常在家中争吵。”</p><p>为了补贴家用，幼小的斯坦·李早早就开始出来干活，好在当年没有童工惩治措施。给报纸写讣告、给结核病中心写通稿、给参观团送三明治、做百老汇剧院的引座员……他真是什么苦都吃过。经常跳级的他一直是班上最小的学生。</p><p>面对艰难的生活，他开始在那些幻想故事中寻得安慰。这些天马行空的幻想，成了应对困苦生活、应对他人欺辱的最佳“精神食粮”。一颗英雄的种子在困顿、无助的斯坦·李心里生根、发芽。</p><p>他上高中的时候有家报社办征文，关键是会发奖金，为了赚钱，斯坦·李就每次都参加。当然，每次都能获奖。结果报社为了阻止他再参赛就把规则给改了……</p><p>1939年，出版商马丁·古德曼创办了《漫威》杂志。这本最初定价只有10美分的漫画杂志见证了整个美国漫画行业的兴衰。16岁的斯坦·李也不能再靠送披萨赚钱了，他依靠裙带关系进入了马丁·古德曼的漫画公司做助理，周薪8美金。</p><p>不过这位小助理学得很快。从最开始主要负责给墨水瓶灌水，到作为见习编辑校对、再到开始给漫画人物写对白，直到他开始自己创作漫画，中间只用了2年。</p><p>为什么斯坦·李一个毛头小子升这么快？还真不是因为马丁偏心，而是当时在Timely（漫威曾用名，61年更名漫威）漫画挑大梁的两位主笔乔·西蒙和杰克·科比离职了。</p><p>有一天上班，马丁·古德曼来找斯坦·李，大意是说，小子，乔和杰克跑得太快我还没找到人接他们班，你这边克服一下困难先顶两天啊？于是，斯坦·李担起了重任，而且做得还不错。</p><p>2</p><p>牵手一生70年</p><p>工作尽管有了点起色，但斯坦·李依然是个穷小子。这时候有人给他介绍对象，一穷二白的屌丝男，本来是没有信心的。可转念一想，毕竟自己还生的一副好皮囊，就决定去试试看。</p><p>按照介绍人的指引，斯坦·李来到约会地点，迎面走来一位姑娘，就这样不经意间落入他的生活，并与他携手同行一生。可其实，此人并不是斯坦·李的相亲对象。</p><p>“你好，我是乔安，是这家店的模特。有什么能帮您的？”斯坦·李脱口而出：“我爱上你了。”两人一见钟情，午餐时，斯坦·李就向乔安求婚了。</p><p>1947年12月5日，两人结婚。相濡以沫的两人一起度过着甜蜜的婚姻生活。在最艰难、斯坦·李撑不下去想要放弃的时候，妻子一次次的给他信念。</p><p>如同幼小孱弱的斯坦·李需要英雄的庇佑，二战期间，人们在战乱中渴望救世主的出现，所以漫威的漫画卖的非常好。</p><p>但随着二战的结束，加之20世纪50年代初期，为了迎合观众谋求利润最大化，大量与色情、恐怖、暴力沾边的漫画涌现，很多漫画被焚烧、禁止出版，很多公司面临着濒临破产的命运。</p><p>斯坦·李一度想放弃画漫画，但乔安告诉他，“你为什么不创作一部让自己骄傲的漫画再放弃？”。于是斯坦·李调整心态再度投入创作。时光不负有心人，何况他又如此的有天赋，机会在慢慢靠近他。</p><p>有一回DC的老板和马丁·古德曼一起参加酒会，两个大老板慨叹“生意不好做”，然后DC老板说，他准备把手里的几个人物全放在一起，起名叫《正义联盟》。</p><p>鬼精的马丁·古德曼应付了几句就跑了，他把这一信息告诉斯坦·李，并跟他说“给我画超英团体！”于是就有了1961年大红大紫的《四侠》，被称为“世界上最伟大的漫画”。</p><p>如果说《神奇四侠》让斯坦·李一战成名，“蜘蛛侠”诞生之后他就是行业大佬了。据说当时斯坦·李就是看见小虫子趴在墙上，就想画一个能爬墙的英雄，起了一大堆名字之后灵光一闪定下来的“蜘蛛侠”。&nbsp;</p><p>许多人都觉得，蜘蛛侠这个角色是斯坦·李自己在漫画中的“化身”，老爷子本人也表示过自己最爱蜘蛛侠。他们都是人群中一个不起眼的小人物，都有白发美人儿的伴侣。</p><p>然而，就在斯坦·李休假之时，他的同事趁机画出了美漫史上最凄美的一幕之一，“格温之死”。《超凡蜘蛛侠2》在大荧幕中重现了这经典一幕。好在现实生活中的斯坦·李和爱人还是非常恩爱的。</p><p>口碑、金钱双丰收的斯坦·李成了亿万富翁，和乔安过着快乐的生活。可他没有变花心，两人整天腻在一起，每晚都会喝杯马提尼。记者问他要如何处置亿万家产，他说：“当然是存在银行里，给老婆花!”</p><p>3</p><p>对英雄的革命性改变</p><p>20世纪30年代，美国经济大萧条，社会动荡不安，“超人”诞生了。“超人”是拥有自然能力的英雄，被公认为超级英雄人物的始祖，创造该角色的DC漫画，逐渐成为市场占有率第一的漫画出版公司。而漫威漫画的出现打破了DC漫画的垄断。</p><p>斯坦·李笔下的英雄受到了大家的广泛追捧，一个很重要的原因是他放弃了高大全的“绿茶”超人，而将英雄变成了有缺点的、逗逼的鲜活的人。&nbsp;</p><p>与超人、蝙蝠侠为代表的DC漫画人物不同，钢铁侠、美国队长、雷神、绿巨人浩克、鹰眼，还有黑寡妇等等，多少暗藏了黑暗的过去、童年的阴影，成年后最大的主题就是——复仇，用复仇挣脱包围自己的黑暗。</p><p>从造型怪异、报复社会的人物到英雄形象、正义之师，最后到多样形象，性格缺陷。漫威漫画的超级英雄角色逐渐找到了自己的立足点。</p><p>其实中国也有这个过程，前段时间火霸影评的李云龙、许三多式的英雄就是这个倾向。一方面，人们已经对传统英雄产生厌倦感、甚至是颠覆感。另一方面，每一个小人物在看英雄叱咤风云的时候，自然希望自己也能神气一把，于是毛边英雄就出现了。</p><p>斯坦·李的朋友有一天问他：你的人物都有点缺点这很好，但人物性格缺陷不能太大，这样所有人都会讨厌他。</p><p>斯坦·李的反叛劲头上来了：“我就给你画一个浑身毛病的超级英雄来，赌什么？”然后他就开始想，什么样的人大家都讨厌？嗯，富二代吧……结果这个人物居然还火了，斯坦·李表示我也不知道上哪说理去。</p><p>斯坦·李作为早期参与者，不但为漫威打下了一个日后看来极为重要的基础，还创造了“宇宙体系”。他凭空创造一个宇宙，并将不同的超级英雄放入宇宙的不同坐标轴之中，既相互联系、又彼此独立，继而，制造了一个存在无限可能的IP宇宙。</p><p>“1963年，神奇四侠以客串的形式在《不可思议的蜘蛛侠》第一期中出场，这是漫威旗下的英雄角色第一次在各自独立漫画外的合作，漫威的超级英雄角色通过跨界产生关联，在完全不同的漫画世界中互动，形成了一个系统化的漫威宇宙。”</p><p>或许很难相信，斯坦·李其实并不会画画，他主要负责提出概念和故事框架，最多写一下对白，绘画部分是由别人代笔的。蜘蛛侠的画家史蒂夫·迪特科因此愤愤不平，两个老搭档为此还闹翻过，但斯坦·李还是坚信自己才是作者。</p><p>时至今日，斯坦·李创作的漫画形象超过漫威人物储备的90%，创造的人物包括钢铁侠、绿巨人、雷神、超胆侠等20多个大获成功的人物。这些人物成了漫威挖掘不尽的宝库。</p><p>漫威在真人电影制作中的去卡通化上一直得心应手，这和斯坦·李打下的基础是分不开的。斯坦·李让漫画从幼稚的儿童读物，升级为有内涵的成人童话。</p><p>4</p><p>漫威人物的屌丝逆袭</p><p>斯坦·李笔下的人物和他一样，正在发生着质变。</p><p>从低俗到流行，漫威的人物也正在亲身演绎着一个人们并不熟悉的屌丝逆袭的过程。</p><p>流行在漫威的发展史中是一个复杂的存在。斯坦·李这些漫威的超级英雄之父，曾经一度受到流行的牵制，为了迎合流行不得不绘制怪、猎奇的低俗版本。</p><p>20世纪80年代，正是DC和华纳统治漫改电影市场的黄金时代。《蝙蝠侠》《超人》的续集出了一部又一部。而漫威却只能眼睁睁地看着DC跟着华纳吃香的喝辣的，自己手里的一大堆版权，却没有下家。</p><p>好不容易将版权卖出去了，却迟迟没有人愿意接拍。</p><p>1978年的《奇异博士》、1990年的《绿巨人》都被拍成了电视电影，1979年的《美国队长》直接走向了家庭录像带市场。1986年的《天降神兵》由《银河护卫队》彩蛋中的“霍华德鸭”主演，该片是漫威从1944年版的《美国队长》上映以来第二部获得公映的片子。但漫威的坏运气还没有走到尽头。</p><p>1989年，漫威漫画公司被美国富豪罗恩·佩雷曼收购了，借助融资机制的运作，漫威公司的经济状态有所回缓。但命途多舛的漫威漫画公司在运作当中遇到了巨大的问题，随着资金链的断裂，投资商的撤资，漫威引以为傲的业绩泡沫最终被无情的商业模式所戳破，漫威漫画公司于1996年申请破产保护。</p><p>可谁知，新生却在危机中诞生了。华纳因为《蝙蝠侠与罗宾》和DC友尽了。华纳离席，漫威在1996年自立门户，成立了漫威影业，进军好莱坞。抱着自己当老板的决心，在1998年推出了第一部超级英雄电影《刀锋战士》，大获全胜。此后的《X战警》《蜘蛛侠》开启了漫改电影的黄金时代，被DC虐了半个世纪的漫威终于扬眉吐气了。</p><p>但靠IP授权的漫威却并没有想象的开心。对漫画游戏的改编强调“去原作化”的好莱坞，对此类亚文化没有留下多少资助余地。漫威的作品在好莱坞的改编中变得面目全非，《X战警》《蜘蛛侠》的世界观偏离自己的设想越来越远，漫威决定反手一击。</p><p>2008年，漫威将自己旗下的四部漫画角色抵押，赌下身家将《钢铁侠》搬上了银幕。年底，迪士尼收购漫威，随后建立了漫威电影工作室，“漫威电影宇宙”计划正式启动。它在随后的十年里，漫威成为了“新世纪赚钱机器”，建立了好莱坞商业电影范式。</p><p>作为“漫威电影宇宙”十年布局的阶段性高潮，《复仇者联盟3：无限战争》以破20亿美元的全球票房暂列影史第四，并连续刷新了多个国家的影视票房纪录。漫威在十年间已经生产了19部电影，获得了总计超150亿美元的总票房，并仍在稳步增长。</p><p>虽然斯坦·李不是MCU（漫威电影宇宙）的操控者，但MCU电影正是因为继承了他的“非完美”角色创作特质而大获成功。漫威公司早期订价为10美分的漫画早被炒到35万美元的天价，也可看出人们对斯坦·李们创造的早期漫画的热情。&nbsp;</p><p>漫威开始拍摄电影，斯坦·李可不愿意闲着，开始疯狂客串，成为了名副其实的好莱坞龙套王。不但自己客串，他还带着太太一起来，玩票秀恩爱：“不得不说，片场的女演员，真的没有我太太好看！”</p><p>截止至今年，他是全美全角色历史最高票房演员。平生参演电影39部，共创造总票房约510亿人民币。观众在各种电影里找到斯坦·李的影子，已经成了津津乐道的大彩蛋。“观众为什么要来看漫威的电影？就是为了来看我啊！”斯坦·李笑着说。</p><p>5</p><p>此处有彩蛋</p><p>斯坦·李构建的宇宙体系，使《复仇者联盟》把雷神、钢铁侠、绿巨人所有可以独立成系列片的人物又统统归纳其中，继而又发散出去，织成一张大大的网。跟《指环王》的独立世界相比，这可是个大大的脑洞。</p><p>手握同样资源的华纳及其DC没能取得这样的成功，福克斯尽管也在利用X战警、金刚狼打相同的算盘，成效也远不如漫威。但这种将电影连载化或电视剧化的拍法，或许会改变整个好莱坞的策略。</p><p>好莱坞的编剧教父罗伯特·麦基曾预言，随着大银幕的衰退，电影的未来在于电视剧化，其间，人物有更多的成长性，让观众得以“移情”。而漫威正在朝着“超长待机电视电影”的方向大步向前。</p><p>漫威影业将“片尾彩蛋”这种引介形式发挥得淋漓尽致，每次新作品的结尾，都给观众以更多期待。希望通过影片之间剧情和人物的串联，形成一个整体，从而促使粉丝们一部不落地看下去。</p><p>斯坦·李永远的离开我们了。但是我们还是有希望在未来的几部电影里寻找他的“彩蛋”。</p><p>最近，迪士尼乐园宣布将在加利福尼亚、巴黎与香港的3座园区内扩建全新漫威超级英雄主题景区。全部超级英雄景区计划于2020年正式向游客开放。</p><p>斯坦·李这个“美国金庸”在遥远的世界，拥着自己相恋70年的爱人，看到他所创造的IP给人们带来欢乐，看见人们在英雄的宇宙自由遨游，一定会倍感欣慰吧。</p><p>对比之下，不知道金庸老爷子对自己的IP开发会有什么期待呢？</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：金梅<br>
+								来源：<a href="https://mp.weixin.qq.com/s/q3KsGoTFPgTdFgO0accq6Q" target="_blank">砺石商业评论（ID：libusiness）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/想象" title="想象">想象</a>
+								<a href="/wiki/流行" title="流行">流行</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608451?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/a633a_HKUej4ca4R0YjJnG.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>地主家没有余粮了？今日头条母公司普惠红包大缩水 ！</span>
+				</a>
+								<a href="/post/608422?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/1329c_MiLAZ4Liyw841ivH.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>继小米做电视之后，荣耀也将推出电视！你会买吗？</span>
+				</a>
+								<a href="/post/608285?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/28ab7_s28ujmIdGJYikvPK.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>苹果裁员200人！究竟怎么回事？跟手机销量下降有关系吗？</span>
+				</a>
+								<a href="/post/608284?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/b03d3_9OIYB1W3LKcwYxsD.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>华为推出业界首款5G芯片——天罡芯片！国外还能继续封杀？</span>
+				</a>
+								<a href="/post/608188?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/2a595_p50McgkqL1wnREWb.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠摊上大事了！泄漏未公开重大信息，面临双重处罚</span>
+				</a>
+								<a href="/post/608187?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/22071_WxF0Y1r58lkuvCYO.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>顺丰发公告称过年不休息，但是收费高了多少？</span>
+				</a>
+								<a href="/post/608186?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/beee8_EvJszfz8DZk5AdIj.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>程序员突然跑路？游戏公司创始人600万元打水漂！</span>
+				</a>
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/608070?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+					</a>
+										<a href="/post/608069?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+					</a>
+										<a href="/post/608034?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+					</a>
+										<a href="/post/608033?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米股价腰斩，市值蒸发近3000亿！</span>
+					</a>
+										<a href="/post/608001?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+					</a>
+										<a href="/post/607963?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+					</a>
+										<a href="/post/607962?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+					</a>
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/gengshi3/" class="user-avatar">
+															<img src="/uploads/avatar/000/14/64/small_34.jpg">
+													</a>
+						<a class="user-name" href="/author/gengshi3/">耿师</a>
+						<a class="follow-btn " href="javascript:;" data-uid="146434">+&nbsp;关注</a>
+					</div>
+					<p>日光之下，苍穹之间，人生之路</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

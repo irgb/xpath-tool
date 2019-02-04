@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>2018，互联网消费下沉的一年 : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">2018，互联网消费下沉的一年</h1>
+			<input type="hidden" value="603628" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/dersad/" class="post-author">鲵柯</a>&nbsp;
+				<span class="post-date">2018年12月29日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2018/12/15460554635242.jpg?imageView2/2/w/760" alt="2018，互联网消费下沉的一年">
+				</div>
+								<p>从刷墙到刷手机屏幕，中国科技公司攻占乡镇市场只用了四年时间。</p><p>2014年前后城市互联网人口红利逐渐消失，广袤的乡镇市场成为了互联网巨头们角逐的新战场。但受困于触达渠道匮乏以及低端智能手机功能较低（此时的低端智能手机大多数仍以能访问wap互联网为主要卖点）等诸多原因，第一批向农村市场进军的互联网巨头们往往选择此前已经被网络游戏、运营商等验证过的刷墙模式。</p><p>不过随着智能手机进一步普及、微信支付的下沉，以及围绕四五线城市移动互联网创业的新型公司出现，越来越多的网络服务内容从墙上转移到了手机屏幕上。</p><p>快手、抖音、趣头条、拼多多为代表的一批创业公司，更是从这个区域以火箭般的速度蹿升，成为2018年互联网行业内的明星创业公司。</p><h3>手机急先锋</h3><p>据CNNIC在2013年时发布的报告显示，截至2012年12月底，中国网民中农村网民占比达27.6%，半年后该数字升为27.9%，规模达到1.65 亿。</p><p>当城市互联网人口红利逐渐消失，乡镇村领域庞大的人群数量就像是一块未曾开发的宝地，几乎所有公司都对这个市场垂涎三尺。</p><p>但此时中国互联网正处于一个非常复杂的业态之中：在一二线城市，2009年进入中国市场的iPhone和2011年发布的小米手机分别代表了当时海外和国产智能手机的巅峰，移动互联网伴随智能手机销量增加正在迅猛崛起，而随着电脑的普及，互联网用户的增长几近停滞；在三四线城市，个人电脑数量仍在增长中，但远远比不上智能手机的增长速度；在乡镇村级领域，个人电脑正在小规模普及，但更多的用户选择仅能简单上网、打电话、发信息的山寨手机。</p><p>在从互联网到移动互联网迁移的过程中，以微信、小米为代表的软硬件迅速收购了第一波人口红利，当这个过程结束时，小米撞上了第一次低潮期。此时开始有质疑智能手机是否已经到了发展顶端，这是因为中国城市的移动网民数量增长已经基本到达顶点。</p><p>第二波移动互联网人口红利开始出现，它的标志就是OPPO、vivo为代表的传统手机，通过线下渠道走进了三四线以下广大市场，通过城乡大卖场和更下沉的夫妻老婆店，把智能手机卖给了厂工厂妹、小镇青年和一波年龄更大的城市人群。同时小米推出红米，开始收割千元以下智能手机市场。</p><p>数据显示，2016年OPPO、华为和vivo成为中国智能手机全年出货量的前三名，其中OPPO的增长率达到122%，而OPPO的出货量90%在线下。</p><p>这些手机巨头彻底将过去的山寨机赶出市场，时至今日，在四五线城市和乡镇村市场，除了一些专门定制的老年机和功能机以外，千元左右的智能机已经完全普及。和过去的山寨机相比，新的智能手机屏幕更大、功能更完善、网络传输速度更快。</p><p>一些嗅到味道的创业者抓住了这稍纵即逝的黄金机会。</p><p>2015年，刚刚结束上一次创业的趣头条创始人谭思亮正在考虑他新的方向，“三线以下城市的人群已经有很大的价值，也正好赶上了移动互联网爆发的时间节点。”趣头条选择专注在下沉市场，借助微信爆发的红利，更多的用户开始接触智能手机和移动互联网，这也成为了趣头条最初的核心用户。</p><p>同年，黄峥旗下的拼好货和拼多多先后上线，并在2016年整合为新的拼多多。在这个平台上，大量乡镇村用户踊跃购买，黄峥甚至公开表示：五环以内不懂拼多多。</p><p>2018年，拼多多和趣头条先后赴美上市，成为中国互联网领域上市速度最快的几家公司之二。</p><p>另一家拥有大量乡镇村用户的快手也在2015年前后找到了自己的节奏：2013年，刚刚转型做短视频的快手日活跃用户跌至1万；2015年春节，快手的日活跃用户已经超过千万；2018年，快手总用户数量更是超过7亿。在快手上，不难发现大量短视频、播主来自乡镇村领域，背后手机功能的提升扮演了非常重要的角色。同样，2018年春节后开始发力的抖音，成长速度也超出很多人预判。</p><h3>微信+小程序 爆发双翼</h3><p>今年年中，资深电商从业者、有赞创始人白鸦曾表示，如果五年以后复盘近几年的互联网，有两件大事是一定要提的：“第一个是 vivo和OPPO的销量超过了小米；第二个是微信红包，让拿到vivo和OPPO的人手机里都有钱了。”</p><p>这正是乡镇村领域移动互联网在今年爆发的两个重要原因。数据显示，中国移动互联网网民和微信月活跃用户数量大致相等。除此以外，手机QQ月活跃用户有 7.8 亿，手机淘宝月活跃用户有 5.5亿，覆盖范围都没法和微信相比。</p><p>在2015年以前，由于手机功能的不完善，一些乡镇村手机并不能完全使用微信功能，支付场景的匮乏也让微信里的红包缺少购物渠道。以拼多多为例，这家在2018年迅速蹿红的社交电商正是借助微信下沉的社交链条，将乡镇村用户手机里沉淀的红包通过值得信任的社交方式变成购物行为，这些用户正是那些传统零售、传统电商没有调动起来、边缘化的零售者。</p><p>2017年腾讯发布的小程序更是在今年帮助微信生态创业者再次爆发，“去年小程序披露的投资是 7 亿元，而到今年 4 月份，投资金额差不多是 70 亿元人民币，基本翻了 10 倍，照这个速度下去， 2018 年至少有几百亿投资在小程序上。”金沙江创投董事总经理朱啸虎曾判断。</p><p>此前，拼多多的模式实际上可以称为全民零售，在消费场景中，消费者不仅仅是消费者，还有可能是通过“拼团”行为的零售者，而在零售行为中的收益就是拼团之后获得的价格优惠。在小程序飞速发展后，以小程序为入口，拼多多依靠用户拉好友拼团来快速获取新用户，新用户再拉好友（比如利用小程序的“社交立减金”功能），不断裂变。</p><p>这种炸裂式的用户增长速度带来的当然是获客成本的降低。此前受限于乡镇村经济的发展情况和消费观念，尽管市场整体消费潜能很高，但平均到个人的消费潜力非常有限，整体算下来，单个用户的新客成本不低。比获客成本更高的是物流边际成本，由于农村电商物流极为分散，不仅成本高，而且没有效益。以家家都需要的家电为例，那些家电连锁巨头们仍然只能下沉到四线城市，真正涉及农村市场者寥寥无几。</p><p>但采用“拼团”模式的拼多多，在降低了相对高昂的营销成本的同时，也由于购买者大致来自于同一地区，让物流边际成本也可以得到有效降低。尽管上市时拼多多的获客成本已经达到49元，与此前一年的11元相比大幅提升，但和成熟电商平台获得新客的成本早已超过140元、一些O2O的获客成本超过200元相比，这个数字仍然非常低廉。</p><p>另一个直接给用户“发钱”获客的趣头条，在上市后获客成本增加至6元，和手机预装App的8元安装、10元以上激活，应用商店的近20元获客成本相比，也相对较低。</p><p>创新工场合伙人郎春晖对下沉市场曾公开表示，“下沉人群崛起的消费意愿和能力与次等供给不匹配而催生出新的商业模式。” 郎春晖认为，消费市场的下沉是整个赛道的机会，供需不平衡就会产生新的机遇，一是下沉的赛道，可以为所投的公司挣到钱；二是，作为这种高科技公司赋能下沉能提供更多的就业机会。”</p><h3>下行是主要趋势</h3><p>2018年是移动互联网在乡镇村领域的爆发之年，无数创业者试图在这里复制他们的前辈们在城市里、互联网里取得的成功。</p><p>一位专注于这个领域的天使投资人对《深网》表示，只要在城市里出现过的机会，在乡镇村领域里都有有一个类似的机会。</p><p>以在资讯分发领域的趣头条为例，这是典型的资讯下行案例。</p><p>谭思亮对《深网》表示，趣头条是标准的移动内容产品，关键还是满足用户对内容的需求。在他看来，趣头条之所以能够崛起，核心原因是抓准了三线以下有强烈资讯内容需求的人群，而这部分人群在此前并没有被充分满足和服务，趣头条填补了这一块的市场空白。</p><p>在获得新融资后，有评论认为三四线资讯市场的竞争已经结束，趣头条应该向一二线城市反向进军。但趣头条方面认为三四线等下沉市场的空间还非常大，这部分用户的存量市场足够大，现阶段趣头条还是会把主要注意力放在三线城市以下的下沉市场，因为在这个市场里，TOP级别的平台渗透率不高，趣头条还有很多机会。</p><p>随着三四线城市继续消费升级，随着城市建设速度加快，对生活、教育、文化需求的支出将逐步升高，满足这部分需求，是非常好的互联网创业机会。趣头条瞄准的就是这个领域的资讯服务，以及由此带来的广告市场。</p><p>根据趣头条的分析，和一二线城市相比，三四线城市用户的选择面其实更少，所以这些用户就有更多跟随广告的冲动，随着更多的商品下行，这个领域的广告市场空间将非常庞大。</p><p>事实上，随着“内容创业”在近年来不断被提起，一二线城市用户群体获取信息的渠道越来越广，然而三线以下城市获取信息的渠道仍然比较传统，与一二线城市的用户群体之间有了断层。</p><p>趣头条正视图弥补这个断层。</p><p>快手也不例外，在接受《深网》专访时，快手创始人宿华曾表示，快手基本的商业逻辑就是：“我们没有刻意针对任何城市做推广，快手就是为身边普通人做的设置，快手是整个社会人口分布的正常状态。”</p><p>正是由于这个逻辑，快手更受到三四线城市以下用户欢迎，大量宿华口中的“普通人”通过这个简单易用的平台向外界展示自我，也让短视频“下行”到乡镇村范围。</p><p>发展更迅猛的是农村电商。本来2015年被称为中国农村电商元年，这是因为当年中央一号文件明确提出，创新农产品流通方式，支持电商、物流、商贸、金融等企业参与涉农电子商务平台建设，开展电子商务进农村综合示范。国务院、商务部、农业部、发改委、邮政局等多部委先后发布13个关于农村和电子商务发展的重要文件，其中国务院发布的直接关于促进农村电商发展的文件就有4个，支持涉农电商发展的政策体系由此基本形成。</p><p>阿里巴巴、京东、苏宁等电商平台也相继发力农村电商，这并不出人意料，要知道电商在城市竞争激烈，大多数电商平台都处于赔本赢市场的状态，顺应政策，抢占新用户，农村市场当然是不可放弃的重要助推器。</p><p>但根据《深网》对多个农村走访调查显示，尽管阿里巴巴以及京东在农村品牌知名度已经建立得非常完善——这得益于这些平台在主流卫视频道的广告投放力度以及下乡刷墙、地推。但在这些广告攻势之外，大型电商平台们在农村的口碑并不算好，一个小便利店店主对腾讯科技如此形容京东：“贵。”而形容村淘的词则是：“假货多。”唏嘘的是，就在这个便利店的货架上，却摆着“下好佳”、“咏动”等多个山寨品牌。</p><p>这些以城市快速推广位核心建立起来的团队并不了解农村现状，也不清楚如何在农村建立自己的电商渠道，都是在复制开拓城市渠道的做法。另外，电商已经习惯了价格战的打法，而目前农村群体对电商的价格却过于敏感，多家店铺和销售渠道就一毛两毛的价格进行博弈。农村在线下购物的渠道主要有二：一是最近兴起的村村通超市工程，二是传统的集市。两种渠道的共同特点是价格便宜，普遍低于城市超市价格，甚至部分低于电商价格。</p><p>这种现状直到拼多多的横空出世，社交裂变+反向定制让生产成本大大降低，拼多多才成功吃下这个庞大的市场。黄峥曾对《深网》表示，“在上海这样一个全球顶级大都市，已经拥有了非常高的物质商业环境。但不是每个人的家里都需要把香皂换成法国普罗旺斯手工皂。”“贫穷的地方，可能东西反而更贵。决定消费价格的高低，主要是因为资源分布的不均，拼多多对扩大消费的普适性做了很大的贡献。”</p><p>在黄峥看来：国内有很多发达地区的消费升级更多应该是精神层面的而不是物质层面的，这个不是拼多多目前最关注的用户；拼多多努力是在拉平更广大地区的价格，让生活水平更均衡上。</p><p>另一个正在从城市下沉到乡镇村的巨头企业是58同城，在2017年58同城推出了58同镇项目，收集发布当地政策公告、农产品销售、求职招聘、商业推广、乡村出行、乡村旅游等民生信息，在58同镇App和各类社交平台进行传播，打破“信息孤岛”，以“授人以渔”的方式推动产业扶贫。截至2018年7月，58同镇已在全国开设10000多个乡镇信息站点，日均发布信息近21余万条，影响超过2400万人次，其中在832个贫困县中开设站点超过2800个。</p><h3>上行仍在尝试</h3><p>瑕不掩瑜，尽管乡镇村市场在2018年异常活跃，但上行通道乏力仍是从业者面临的巨大挑战。</p><p>一位农村电商资深从业者对《深网》表示：“最简单的道理是，帮助农民赚到更多的钱，他们才有更多的消费能力和意愿，才能产生产业闭环。遗憾的是，在2018年，绝大多数的创业者想的还是如何从农民身上赚钱。”</p><p>这并不奇怪，也有电商从业者对《深网》表示，“当农民通过高效的移动互联网感受到了‘买买买’的力量，他们自然也能体会到移动互联网‘卖卖卖’的实力。”</p><p>以上行通道中最核心的农村电商为例。在中国，随着经济下行以及供给侧改革的需要，传统农业也正在向现代农业进行跃进，构建农产品市场流通新格局也是其中无法绕过的障碍，电商渠道成为构建流通新格局的重要手段。但在农产品上行方面，据《深网》了解，电商平台仍大多数维系其固有思维，重视流量和爆款。但一位农业专家却对《深网》表示，农产品一直有比较固定的收购体系和产量，本身利润就不高，没有办法做电商“赔本赚吆喝”的促销活动，一些粮食类的产品还要做相关的储备工作，并不符合电商销量为王的销售方式。</p><p>拼多多正在农产品上行中作出一些有趣的尝试。</p><p>在2018年第三季度财报发布后，黄峥解读了拼多多对农产品上行的布局：与美国的标准化农业不同，中国的农业生产是分散的小规模耕作，农民缺乏市场信息，在整个农业周期中，都面临着不确定性。在这种传统结构下，农民经常被迫提早收获农产品，或用化学品处理以延长保质期。消费者不仅要支付高价，还只能获得较差的产品。拼多多的解决方案，就是通过拼团模式聚集消费者需求，并传递给上游农民。凭借更多市场信息，农民可与全国同行比较价格，以合适价格和包装销售产品。双赢的结果，对改变农业和扶贫都有很大意义。</p><p>黄峥11月8日参加乌镇世界互联网大会时公布了一组数字：“过去三年，拼多多平台已累计帮扶139600户建档立卡扶贫家庭，产生超过21亿笔扶贫助农订单，累计销售109亿斤农产品，相关交易总额达510亿元。”但相对于中国11.47万亿的农业总产值相比，移动互联网对农产品上行的帮助仍处于加速中。</p><p>不过好消息是，以快手、趣头条为代表的移动互联网平台正帮助农民将自己其他的能力上行变现，如拍摄短视频、成为趣头条注册作者等。</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：薛芳<br>
+								来源：<a href="" target="_blank">微信公众号“腾讯深网”（ID：qqshenwang）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/成本" title="成本">成本</a>
+								<a href="/wiki/互联网" title="互联网">互联网</a>
+								<a href="/wiki/消费" title="消费">消费</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+								<a href="/post/608070?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+				</a>
+								<a href="/post/608069?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+				</a>
+								<a href="/post/608034?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+				</a>
+								<a href="/post/608033?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米股价腰斩，市值蒸发近3000亿！</span>
+				</a>
+								<a href="/post/608001?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+				</a>
+								<a href="/post/607963?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+				</a>
+								<a href="/post/607962?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+										<a href="/post/607815?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/b2f0f_4wly0J0wYJ8uvQQg.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>新款iPhone两个月内二次减产，苹果股价跌到谷底？</span>
+					</a>
+										<a href="/post/607814?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c3c03_6p28n3cJ5VYFr5Lj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>支付宝改名换法人了！网友：花呗不用还了？</span>
+					</a>
+										<a href="/post/607810?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4764f_nKHMu2Kt5Mw3sdGd.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>资本寒冬？这家企业却逆势给员工加薪，人均每月1000元！</span>
+					</a>
+										<a href="/post/607809?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/2b35d_Y8CnjCei97EZVKmL.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>是有信心还是卖不出去？雷军承诺未来一年不出售小米股票</span>
+					</a>
+										<a href="/post/607808?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1469d_z86dBvRhvYEfW5mX.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>面包三明治过期了还在卖？全家坚决否认！</span>
+					</a>
+										<a href="/post/607807?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/0ce54_mizyxh1ns1MrJ5gI.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>22亿票据月底到期，华谊兄弟“债务压顶”如何解决？</span>
+					</a>
+										<a href="/post/607436?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/d238f_SB0Z92JKIIkgtoGg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>新年即收5张判决书！ofo与凤凰自行车达成和解</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/dersad/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/30/small_16.jpg">
+													</a>
+						<a class="user-name" href="/author/dersad/">鲵柯</a>
+						<a class="follow-btn " href="javascript:;" data-uid="163016">+&nbsp;关注</a>
+					</div>
+					<p>简介能让你清晰的了解一个人吗？如果不行…</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

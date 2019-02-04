@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>浅谈油田开发中的废水处理技术-中国水网</title>
+    <meta name="keywords" content="工业废水 油田废水 油田开发 处理技术"/>
+    <meta name="description" content="近年来，随着油田建设事业的不断发展，油田开发中国的废水排放量也在日益增多，对生态环境造成了严重的影响。本文将对油田开发中的废水处理问题进行分析，并在此基础上重点介绍几种..."/>
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/txteditor.css" rel="stylesheet" type="text/css">
+<link href="/css/footer.css" rel="stylesheet" type="text/css">
+
+    <link href="/css/news.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery/1.11.1/jquery.min.js" ></script>    <link href="/css/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/js/artdialogv602/ui-dialog.css">
+<script src="/js/artdialogv602/dialog-plus.js"></script>    <script src="/js/jquery.form.js" type="text/javascript"></script>
+    <script src="/js/news.comment.js" type="text/javascript"></script>
+</head>
+
+<body>
+<header id="header2">
+    <!-- 通用头部开始 333-->
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+<div id="topNav">
+    <div class="topBar">
+        <ul class="topColumn">
+            <li><a href="/">水网首页</a></li>
+            <li><a href="/news/">新闻</a></li>
+            <li><a href="/column/index">专栏</a></li>
+            <li><a href="/topic/">专题</a></li>
+            <li><a href="/video/">视频</a></li>
+            <li><a href="/research/">研究院</a></li>
+            <li><a href="/ipo/">上市公司</a></li>
+            <li><a href="/policy/">政策</a></li>
+            <li><a href="/law/">法规</a></li>
+            <li><a href="/paper/">论文</a></li>
+            <li><a href="/standard/">标准</a></li>
+            <li><a href="/expert/">专家</a></li>
+            <li><a href="/show/">会展</a></li>
+            <li><a href="/price/">水价</a></li>
+            <li><a href="http://bbs.h2o-china.com" target="_blank">BBS</a></li>
+            <li><a href="http://shui.tsinghuan.com/shop" target="_blank">企业</a></li>
+            <li><a href="http://shui.tsinghuan.com/wiki" target="_blank">案例</a></li>
+        </ul>
+        <div class="moreColumn"><span>更多</span>
+            <ul>
+                <li><a href="http://shui.tsinghuan.com/product" target="_blank">设备</a></li>
+                <li><a href="http://shui.tsinghuan.com/technology" target="_blank">技术</a></li>
+                <li><a href="http://shui.tsinghuan.com/zbinfo" target="_blank">招标</a></li>
+                <li><a href="http://www.qinghuan.com/job//" target="_blank">人才</a></li>
+                <li><a href="http://wn.h2o-china.com/" target="_blank">污泥联盟</a></li>
+                <li><a href="http://gs.h2o-china.com/" target="_blank">供水联盟</a></li>
+            </ul>
+        </div>
+        <div class="login">
+
+            <script type="text/javascript">
+document.write('<a href="http://www.qinghuan.com/member/login.php" >登录</a><a href="http://www.qinghuan.com/member/register.php" >注册</a><a href="http://www.qinghuan.com/member/" >会员中心</a>');
+
+
+                $(document).ready(function () {
+                    var model = 'news';
+                    var stype = '';
+                    var model_text = '';
+
+                    if (model == 'news')
+                        model_text = '新闻';
+                    else if (model == 'topic')
+                        model_text = '专题';
+                    else if (model == 'policy')
+                        model_text = '政策';
+                    else if (model == 'law')
+                        model_text = '法规';
+                    else if (model == 'standard')
+                        model_text = '标准';
+                    else if (model == 'paper')
+                        model_text = '论文';
+                    else if (model == 'expert')
+                        model_text = '专家';
+                    else if (model == 'research')
+                        model_text = '研究';
+                    else if (model == 'show')
+                        model_text = '会展';
+                    else if (model == 'bbs')
+                        model_text = 'BBS';
+                    else if (model == 'video')
+                        model_text = '视频';
+                    else  model_text = '新闻';
+
+                    if (stype == 'author') {
+                        model_text = '作者';
+                    }
+
+                    $('#fancyshow').text(model_text);
+
+                    $('#fancy').find('a').bind('click', function () {
+
+                        var text = $(this).text();
+                        $('#fancyshow').text(text);
+
+                        $('#searchform').attr('action', $(this).attr('title'));
+
+                    });
+
+                    $('#fancy>li>a').each(function (i) {
+                        if ($(this).text() == model_text) {
+                            $('#searchform').attr('action', $(this).attr('title'));
+                        }
+                    });
+
+
+                    $('#submitBtn').bind('click', function () {
+                        //
+                        if ($('#fancyshow').text() == 'BBS') {
+                            var schv = $('#schv').val();
+                            var schv = encodeURIComponent(schv);
+                            location.href = "http://www.baidu.com/s?ie=gbk&site=1&wd=site%3Abbs.h2o-china.com+" + schv + "&q=" + schv + "&sa=true";
+
+                            return false;
+                        }
+
+                        $('#searchform').submit();
+
+                    });
+
+
+                });
+
+            </script>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 这里怎么没法注释 -->
+
+<style>
+    #topADExt {
+        margin: 10px auto;
+        width: 1000px;
+    }
+
+</style>
+<!--  banner广告start -->
+<div id="topADExt">
+    <script language="javascript" src="/ggclick?id=62"></script>
+</div>
+
+
+<div id="branding">
+    <div class="logo">
+                <a href="/"><img src="/images/header/logo2.jpg" alt="中国水网" title="返回水网首页"></a>
+                        <a href="/news/"><img src="/news/images/channel_logo.jpg"></a>
+        
+    </div>
+    <form id="searchform" name="searchform" method="get" action="#" class="ssForm mt20">
+        <div class="ss_nav_boxa"><a id="fancyshow" href="javascript:void(0);" class="a1">新闻</a>
+            <ul id="fancy" class="ss_nav_ul">
+                <li><a href="javascript:void(0);" title="/news/search">新闻</a></li>
+                <li><a href="javascript:void(0);" title="/video/search">视频</a></li>
+                <li><a href="javascript:void(0);" title="/policy/search">政策</a></li>
+                <li><a href="javascript:void(0);" title="/law/search">法规</a></li>
+                <li><a href="javascript:void(0);" title="/standard/search">标准</a></li>
+                <li><a href="javascript:void(0);" title="/paper/search">论文</a></li>
+                <li><a href="javascript:void(0);" title="/expert/search">专家</a></li>
+                <li><a href="javascript:void(0);" title="/research">研究</a></li>
+                <li><a href="javascript:void(0);" title="/show/search">会展</a></li>
+                <li><a href="javascript:void(0);" title="/topic/list">专题</a></li>
+                <li><a href="javascript:void(0);" title="bbs">BBS</a></li>
+                <li><a href="javascript:void(0);" title="/news/search" data-type="author">作者</a></li>
+            </ul>
+            <input id="schtype" name="stype" value="title" type="hidden">
+        </div>
+        <p class="fl">
+            <input id="schv" name="schv" class="ss_nav_text w180" type="text" value="">
+        </p>
+        <p class="fr">
+            <input id="submitBtn" name="submitBtn" class="ss_nav_btn" type="button">
+        </p>
+    </form>
+</div>
+    <!-- 通用头部结束 -->
+
+    <!-- 频道导航开始   -->
+    <div id="navb" class="zcNav">
+	<ul>
+				<li   style="width:9.09%"%><a href="/news">新闻首页</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=1">综合</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=2">政策</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=3">市场</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=10">项目</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=5">技术</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=6">社会</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=7">国际</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=8">上市公司</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=9">访谈</a></li>
+				<li   style="width:9.09%"%><a href="/topic">专题</a></li>
+			</ul>
+</div>  
+
+    <!-- 频道导航结束  -->
+    <div id="location"><a href="/"><i class="fa fa-home"></i>首页</a> <span>&gt;</span> <a href="/news">新闻</a>
+        <span>&gt;</span> 正文
+    </div>
+</header>
+
+<div class="news_main w1000 bc zoom mt5">
+    <div class="w690 fl">
+        <div class="news_boxa">
+            <div class="newscontent_press">
+                <h1 class="tc">浅谈油田开发中的废水处理技术</h1>
+                <div class="mt25 newscontent_press_con">
+                    <p class="fl">时间：2018-12-29 09:07</p>
+                    <p class="fl ml40 newscontent_press_p1">
+                        来源：<span>环保零距离</span>                    </p>
+                    <p class="fl ml40">
+                                            </p>
+
+                    <!-- wzz new -->
+                    <p class="fl ml90"><a href="#joinNum">评论（<em>0</em>）</a></p>
+                    <!-- wzz new -->
+
+                    <div class="share_btn"><span class="fl">分享</span><em class="icons1 fr"></em>
+                        <div class="clear"></div>
+                        <div class="share" url="http://wx.h2o-china.com/news/285584.html"
+                             title="浅谈油田开发中的废水处理技术"></div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="f14 l24 news_content mt25 zoom" id="txtedit"><!--内容部门画中画-->
+                                <div class="fl ad_hzh mr15">
+                    <script language="javascript" src="/ggclick?id=132"></script>
+                </div>
+                                <p style="text-indent: 2em;">近年来，随着油田建设事业的不断发展，油田开发中国的废水排放量也在日益增多，对<a href="http://www.h2o-china.com/news/field?fid=83" target="_blank" title="生态环境" class="keylink">生态环境</a>造成了严重的影响。本文将对油田开发中的废水处理问题进行分析，并在此基础上重点介绍几种有效的废水处理技术，以供参考。<p style="text-indent: 2em;">油田开发过程中经常会伴随着大量废水的排出，如果不及时采取有效的技术和措施进行处理，就会对生态环境造成非常严重的环境污染。在构建环境友好型社会的今天，加强对油田废水处理技术和方法研究，具有一定的现实意义。<p style="text-indent: 2em;"><strong>1油田开发过程中的废水处理</strong><p style="text-indent: 2em;">据调查显示，当前我国很多的石油企业对油田开采中产生的废水处理技术仍然是传统的方式，即隔油过滤、隔油浮选、过滤等处理工艺，俗称老三套。通过这些处理工艺，可以从一定程度上去除水所含有的石油类或悬浮物杂质，之后再用于油田的注水。从实践效果来看，由于化学需氧量污染指标不会对油田注水造成影响，因此油田的开采过程中废水处理工艺，并没有真正的去除化学需氧量这一环节。近年来，随着油田的综合含水率不断的提高，油田开采中的废水产量也在不断的增加，实际上其已经难以全部用于油田的回注或者回灌过程中，因此部分油田废水只能排放到生态环境中去，造成了严重的生态污染。<p style="text-indent: 2em;">隔油过滤、隔油浮选或旋流除油过滤等老三套废水处理工艺，对石油类的处理能力还是比较强的，而且油田开采中的废水处理之后石油类指标是基本合格的，但处理效果依然不够明显。当油田废水，尤其是稠油污水、 高含氯废水或者注聚合物污水外排时，其达标的难度就会增大。由于稠油污水与油水的密度相差不是很大， 而且注聚合物污水中所含有的有机物成分比较复杂， 尤其是油水的乳化非常严重，高含氯废水微生物的生存环境比较差，再加上氯离子对会对其产生正向的干扰，因此达标排放成为石油企业的开采废水达标排放解决较困难的问题之一。<p style="text-indent: 2em;"><strong>2如何去除油田开发过程中产生的废水</strong><p style="text-indent: 2em;">基于以上对目前我国油田开发废水处理中存在的问题分析，笔者建议可利用以下技术来处理油田开发废水。<p style="text-indent: 2em;">第一，利用物理方法除污。利用固体物质自身存在的多孔性，将油田开发中的废<a href="http://www.h2o-china.com/news/search?stype=title&schv=水污染" target="_blank" title="水污染" class="keylink">水污染</a>物吸附在上面，从而对废水进行净化。目前最常用到的吸附剂一般是活性炭，其功效比较强，可以有效的去除化学需氧量、臭味以及废水的色度等，但是利用该方法的处理成本相对比较高，并且很容易产生二次污染。在油田开采中的废水处理过程中，最常用的就是吸附与臭氧氧化同时使用。<p style="text-indent: 2em;">从实践来看，<a href="http://www.h2o-china.com/news/field?fid=12" target="_blank" title="膜" class="keylink">膜</a>分离可以分为超滤、微滤以及反渗透等方法，但无论哪一种过滤方法，都可以有效的去除废水中臭味和色度，同时还可以去除废水中的有机物、离子以及微生物等，以保证出水水质的稳定性和可靠性。<p style="text-indent: 2em;">利用处于高度分散状态的大量微小气泡作为载体，粘附油田开发废水中的一些悬浮颗粒，并使之随着气泡逐渐上浮至水面，从而起到分离的效果。该方法的分离对象，一般是具有一定疏水性的细微悬浮颗粒或者石化油等。在油田废水处理过程中，气浮工艺常常被搁置在隔油和絮凝后面。例如，将涡凹的气浮系统置于隔油池之后来处理含油油田废水，进水的含油量大约为200毫克每升，而出水的含油来那个则可低于十毫克每升，因此可见其去除率可达百分之九十五以上。<p style="text-indent: 2em;">第二，利用化学方法除污。油田废水处理中的一项重要工艺就是絮凝，它主要是通过向废水中加入絮凝剂，来破坏废水中的胶体颗粒稳定性，从而是胶粒之间相互发生碰撞与聚集，最终形成一些很容易从水中有效分离出来的絮状物质。该种工艺可用于炼油废水中浊度、有机污染物、色度以及浮游生物及藻类的处理。在实际操作过程中，絮凝一般会与气浮、沉淀等工艺相互联用，并将其作为生化处理之前的预处理。目前来看，主要采用的是微生物絮凝剂，它是一种利用生物技术研发的一种新型石化废水处理剂，与其他絮凝剂相比，其具有很多的优点，即易于实现生物降解、热稳定性强、使用范围广、高效并且无二次污染。从实践来看，氧化法可以分为湿式氧化法、光催化氧化法和臭氧氧化法。实践中我们可以针对油田废水的实际情况，来选择其中的一种或几种方法，从而可以以最经济、最有效和最安全的方法，去处理油田开发过程中所产生的大量废水。<p style="text-indent: 2em;">在油田开发废水处理过程中，好氧处理方法的使用范围比较广，例如，序批式的间歇活性<a href="http://www.h2o-china.com/news/field?fid=5" target="_blank" title="污泥" class="keylink">污泥</a>法、生物接触氧化、高效的好氧生物反应器以及膜生物反应器等处理法，通常单独利用好氧生物法来处理废水的时候比较少，实践中主要是将其与厌氧处理法结合使用。<p style="text-indent: 2em;">一般而言，油田废水中的化学需氧量含量比较高，而且其可生化性相对比较差一些，实践中总是先厌氧预处理，使其具备一定的可生化性。厌氧污泥床：一般而言，UASB反应器中的污泥浓度相对比较高，污泥的平均质量浓度也可达到30至40克每升;据监测，废水中的有机负荷比较高，停留时间比较短。反应区中一般会设置一个三相的分离器，经沉淀区进行分离的污泥可以自动的回流至反应区中，且不需要任何混合搅拌装置。污泥床中不填任何的载体，因此可降低造价低。厌氧固定膜反应器：该器械中一般都会装有固定的填料，可以截留或附着大量的厌氧微生物杂质，在其作用下，废水中的有机物可以有效的转化为二氧化碳或者甲烷，进而去除。该方法具有一定的抗冲击负荷能力，而且微生物的停留时间比较长，方便运行管理。<p style="text-indent: 2em;">油田废水中所含有的污染物种类比较繁多，其水质情况必然非常的复杂，若只是采用单一的厌氧或好氧处理法，则很难实现除污目的。将厌氧和好氧处理方法，有效的结合在一起，可组合成一个非常有效的除污工艺。比如，可采用A/O工艺来处理油田废水，系统由膜法厌氧、泥法好氧和膜法好氧三种方法组成，实践效果非常的明显。<p style="text-indent: 2em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">结语：油田开发过程中会伴随着大量废水的排出，可能会对生态环境造成严重的后果，因此应当加强思想重视和技术创新，以保证我国油田开发和建设事业的可持续发展。</span>
+
+
+                <div class="content_fany  fany  mt20">
+                    
+                    <div class="fanye"></div>
+                    
+
+                </div>
+
+                <p class="tr editorPeople">编辑：王媛媛</p>
+            </div>
+
+            <!-- wzz new -->
+            <div>
+                <div class="lmpraise ml270" id="newsPraise" onclick="praise(285584)">
+                    <div class="lmpraise_nub">
+                        <span>0</span>赞
+                    </div>
+                </div>
+            </div>
+
+            <div class="mshare mt25" url="http://www.h2o-china.com/news/285584.html" title="分享"
+                 desc="浅谈油田开发中的废水处理技术">
+                <ul class="lmshare fr">
+                    <li><a href="javascript:void(0)" tag="weixin" title="微信"><img src="images/lmshare_wx.png" alt="微信"></a>
+                    </li>
+                    <li><a href="javascript:void(0)" tag="qq" title="QQ"><img src="images/lmshare_qq.png" alt="QQ"></a>
+                    </li>
+                    <li><a href="javascript:void(0)" tag="txwb" title="腾讯微博"><img src="images/lmshare_tw.png"
+                                                                                  alt="腾讯微博"></a></li>
+                    <li><a href="javascript:void(0)" tag="weibo" title="新浪微博"><img src="images/lmshare_sina.png"
+                                                                                   alt="新浪微博"></a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <div class="relatednews_title">
+                    <h4>相关新闻</h4>
+                </div>
+                <ul class="f14 l30 relatednews_ul mt22">
+                                        <li>
+                        <a href="/news/285526.html" target="_blank">常见工业废水处理工艺技术汇总</a>
+                    </li>
+                                        <li>
+                        <a href="/news/284113.html" target="_blank">谁来抢占工业废水处理市场这片蓝海？</a>
+                    </li>
+                                        <li>
+                        <a href="/news/283707.html" target="_blank">工业集聚区废水处理，离普及只差217万吨/日规模？</a>
+                    </li>
+                                        <li>
+                        <a href="/news/283681.html" target="_blank">14种工业废水特点及处理方法简述</a>
+                    </li>
+                                        <li>
+                        <a href="/news/282935.html" target="_blank">10种工业废水处理技术详解</a>
+                    </li>
+                                    </ul>
+            </div>
+
+            <!-- wzz new 这原来是一张图片-->
+          <!--   <p class="mt20">
+                <img src="images/adderweima.jpg">
+            </p> -->
+
+            <div class="newsreview mt25">
+                <div class="newsreviewlist mt50">
+                    
+                    <div id="quoteDemo" class="newsreview_tit" style="display:none;">
+                        <form id="quoteForm" action="/news/comment" method="post">
+                            <div class="inbox">
+                                <textarea class="textarea" name="q_replybody" id="q_replybody"></textarea>
+                                <span class="bluetopicon"></span>
+                            </div>
+                            <div class="author">
+                                        <span class="authortit">
+                                                                                    </span>
+                                <input type="hidden" id="cid" name="cid" value="0"/>
+                                <input type="hidden" id="q_newsid" name="q_newsid" value="285584"/>
+                                <input type="hidden" name="q_posturl" id="q_postUrl" value="http://www.h2o-china.com/news/285584.html"/>
+                                <input type="button" name="quoteBtn" id="quoteBtn" class="botton fr mt5 mr10"
+                                       value="发布"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="newsreview_top">
+                    <b>网友评论</b>
+                    <span class="fr">
+                                <em id="joinNum">0</em>人参与
+                                <em>|</em>
+                                <em>0</em>条评论
+                            </span>
+                </div>
+                <div class="newsreview_tit">
+                    <form id="replyForm" action="/news/comment" method="post">
+                        <div class="inbox">
+                            <textarea class="textarea" name="replybody" id="replybody"></textarea>
+                        </div>
+                        <div class="author">
+                                    <span class="authortit">
+                                                                                <label class="pl20">
+                                            <input type="text" name="vcode" id="vcode" size="6"
+                                                   style="vertical-align:middle;"/>
+                                            <img id="vcodeimg" src="/mb/verifycode" style="vertical-align:middle;"
+                                                 title="点击刷新"/>
+                                            <a id="chgcode" href="javascript:void(0)">看不清，换一张</a>
+                                        </label>
+                                    </span>
+                            <input type="hidden" name="posturl" id="postUrl" value="http://www.h2o-china.com/news/285584.html"/>
+                            <input type="hidden" id="newsid" name="newsid" value="285584"/>
+                            <input type="button" name="replyBtn" id="replyBtn" value="发布" class="botton fr mt5 mr10"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <p class="copyrightnotice f12 l22 mt50"><span>版权声明：</span>
+                本网注明"来源：E20环境平台"、"来源：中国水网"、"中国水网讯"等字样的文字、图片内容，版权均属中国水网所有，如若转载，请注明来源。同时本网转载内容不代表本网观点。
+                 <br><span>商务合作请联系：李女士  010-88480519</span>
+            </p>
+        </div>
+    </div>
+    <div class="w280 fr">
+        <div class="rBlock syzl pb10 b-2-g">
+            <div class="title">
+                <h2><a href="/column"><img src="/images/r_title_img1.jpg" class="mt10"></a></h2>
+                <span class="more"><a href="/column">更多</a></span>
+                <div class="clear"></div>
+            </div>
+            <div class="con">
+                <ul>
+                                        <li class="txtPic mt15">
+                        <div class="fl w80 pic">
+                            <a href="/column/writer?uid=27" target="_blank">
+                                <img src="http://imgs.h2o-china.com/column/2015/06/34_1433831743.jpg">
+                                <div class="zlName">王凯军</div>
+                            </a>
+                        </div>
+                        <div class="fr w180">
+                            <em><a href="/column/987.html" target="_blank" title="城市水环境管理与考核方式变化下的新型排水系统构建">城市水环境管理与考核方式变化下...</a></em>
+                            <p>1我国城市水环境管理与考核方式的变化...</p>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                                        <li class="txtPic mt15">
+                        <div class="fl w80 pic">
+                            <a href="/column/writer?uid=72" target="_blank">
+                                <img src="http://imgs.h2o-china.com/column/2016/08/33_1470807599.jpg">
+                                <div class="zlName">刘建国</div>
+                            </a>
+                        </div>
+                        <div class="fr w180">
+                            <em><a href="/column/976.html" target="_blank" title="刘建国：坚持焚烧重要位置，求真务实构建垃圾分类中国模式">刘建国：坚持焚烧重要位置，求真...</a></em>
+                            <p>清华大学环境学院教授刘建国认为环保理...</p>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+
+        <!-- 锵锵三人行 -->
+        <div class="news_boxa r_news_boxa pb10 mt20">
+            <div class="zoom mt10">
+    <p class="fl ml5"><img src="/news/images/r_title_img2.jpg"></p>
+    <span class="more fr mr15 mt5"><a href="/topic/list?cid=14">更多</a></span>
+</div>
+<p class="mt10">
+    <a href="/topic/856.html" title="第十五期铿锵三人行 环保税法对环境产业的影响" target="_blank">
+        <img src="http://imgs.h2o-china.com/topic/2018/08/113_1535339979.jpg" width="280" height="120">
+    </a>
+</p>
+<div class="news_r_con1 f12 l18 mt15 pl7 pr7">
+    <h4><a href="/topic/856.html" target="_blank">第十五期铿锵三人行 环保税法对环境产业的影响</a></h4>
+    <p class="mt10">
+        <a href="/topic/856.html" target="_blank">2016年12月25日，全国人大常委会通过《环境保护税法》，并将于2018年1月1日起施行。这是我国...</a>
+    </p>
+</div>        </div>
+
+        <!-- ad -->
+        <div class="news_boxa r_news_boxa pt20 mt20"><!--画中画侧边栏-->
+            <script language="javascript" src="/ggclick?id=129"></script>
+        </div>
+
+        <!-- 热点排行 -->
+        <div class="mt30 hot_news">
+<div class="zoom" id="hitsort_tab">
+  <h3 class="fl">热点</h3>
+  <ul class="zoom fl hot_news_tab f14">
+    <!-- <li><a href="javascript:void(0);">一日</a></li> -->
+    <li><a href="javascript:void(0);">一周</a></li>
+    <li><a href="javascript:void(0);">一月</a></li>
+    <!-- <li><a href="#">热评</a></li> -->
+  </ul>
+</div>
+<div>
+<!-- 每日 -->
+<!-- <ul class="f14 l28 hot_news_ul mt15">
+  </ul> -->
+
+<ul class="f14 l28 hot_news_ul mt15">
+            
+  <li>
+    <p><a href="/news/285093.html" target="_blank" title="第90期100秒扫描环保行业大势（2018年12月10日~12月16日）">第90期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285261.html" target="_blank" title="具体到点！山东省级环保督察反馈意见问题清单公布">具体到点！山东省级环保督察反馈意...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285148.html" target="_blank" title="上海：《污水综合排放标准》实施">上海：《污水综合排放标准》实施</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285096.html" target="_blank" title="一图读懂：《改革开放以来，中国生态环境保护走过的这40年》">一图读懂：《改革开放以来，中国生...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285157.html" target="_blank" title="改革开放40年与中国生态环境规划发展历程">改革开放40年与中国生态环境规划...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285069.html" target="_blank" title="内蒙古自治区水污染防治三年攻坚计划 （征求意见稿）">内蒙古自治区水污染防治三年攻坚计...</a></p>
+  </li>
+  </ul>
+<ul class="f14 l28 hot_news_ul mt15">
+            
+  <li>
+    <p><a href="/news/284344.html" target="_blank" title="第88期100秒扫描环保行业大势（2018年11月26日~12月2日）">第88期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284036.html" target="_blank" title="第87期100秒扫描环保行业大势（2018年11月19日~11月25日）">第87期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284779.html" target="_blank" title="第89期100秒扫描环保行业大势（2018年12月3日~12月9日）">第89期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285093.html" target="_blank" title="第90期100秒扫描环保行业大势（2018年12月10日~12月16日）">第90期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284155.html" target="_blank" title="100名改革开放杰出贡献拟表彰对象公示，你熟悉哪些环保人？">100名改革开放杰出贡献拟表彰对...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284147.html" target="_blank" title="图文实录｜生态环境部2018年11月例行新闻发布会">图文实录｜生态环境部2018年1...</a></p>
+  </li>
+  </ul>
+</div>
+</div>
+
+        <!-- 热点排行 -->
+
+        <div class="submission mt15 f14">
+            <p>010-88480317 </p>
+            <p class="submission_email"><a href="mailto:news@e20.com.cn">news@e20.com.cn</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="backtop_btn bc"><div class="backtop"><a href="javascript:void(0);"></a></div></div>
+<!-- <div class="QRcode_left"><img src="/images/QR_code_left.jpg"></div> -->
+<div class="QRcode"><img src="/images/QR_code.jpg"></div>
+<div class="footer mt40">
+  <div class="w1000 bc zoom">
+    <div class="fl w360 ml10">
+      <p class="tc"><a href="http://www.e20.net.cn/"><img src="/images/footer/footer_e20.png" alt="E20环境平台"></a></p>
+      <p class=" mt35 footer_logo">
+        <a href="http://www.h2o-china.com"><img src="/images/footer/footer_logo1.png" alt="中国水网"></a>
+        <a href="http://www.solidwaste.com.cn"><img src="/images/footer/footer_logo2.png" alt="中国固废网"></a>
+        <a href="http://www.chndaqi.com"><img src="/images/footer/footer_logo3.png" alt="中国大气网"></a></p>
+    </div>
+    <div class="fr w620 l24 f12 zoom">
+      <p class="footer_p2"><img src="/images/footer/footer_bg1.jpg"></p>
+      <p class="footer_p1"><a href="http://www.e20.net.cn/contact.html" target="_blank">联系我们</a>|<a href="http://about.h2o-china.com/history.php" target="_blank">大事记</a>|<a href="http://file.h2o-china.com/200810/20081009-175029-1.shtml" target="_blank">联盟单位</a>|<a href="http://www.h2o-china.com/link/?sid=1" target="_blank">友情链接</a>|<a href="http://www.h2o-china.com/single?id=6" target="_blank">版权声明</a>|<a href="http://zt.h2o-china.com/meeting/ad_services/" target="_blank">广告服务</a></p>
+      <p class="mt10">Copyright © 2000-<script> var myDate=new Date();document.write(myDate.getFullYear());</script> http://www.h2o-china.com All rights reserved. 中国水网 版权所有 </p>
+      <p>客服热线：4000240005 商务热线：010-88480403 传真：010-88480301</p>
+      <p>E-mail：<a href="mailto:webmaster@e20.com.cn">webmaster@e20.com.cn</a> </p>
+      <p>本站常年法律顾问：北京市康达律师事务所刘文义律师 京ICP备10040015号-7  京公网安备：11010802011375</p>
+    </div>
+  </div>
+</div>
+<script src="/click" ></script>
+<script src="/js/jquery.gotop.js" type="text/javascript"></script>
+<div style="display:none">
+	<script src="http://v1.cnzz.com/stat.php?id=1253501153&web_id=1253501153" language="JavaScript"></script>
+</div>
+<script src="/js/jquery.newsshare.js" type="text/javascript"></script>
+<script src="/js/jquery.tabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () 
+{
+    $(".share").info_share();
+	$(".mshare").mshare();
+    $("#hitsort_tab").newstabs({"switchingMode":"mouseover"});
+});
+</script>
+<div style="display:none">
+ <script src="http://s4.cnzz.com/stat.php?id=1253507297&web_id=1253507297" language="JavaScript"></script>
+</div>
+
+<!-- footer -->
+</body>
+</html>

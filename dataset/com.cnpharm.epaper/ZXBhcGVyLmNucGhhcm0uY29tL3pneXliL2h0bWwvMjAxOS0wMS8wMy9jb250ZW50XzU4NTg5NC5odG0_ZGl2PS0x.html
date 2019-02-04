@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="233,43,379,43,379,140,233,140" shape="polygon" href="./content_585894.htm?div=0"><Area coords="1,153,284,153,284,322,1,322" shape="polygon" href="./content_585894.htm?div=1"><Area coords="291,169,397,169,397,258,291,258" shape="polygon" href="./content_585894.htm?div=2"><Area coords="3,333,142,333,142,432,3,432" shape="polygon" href="./content_585894.htm?div=3"><Area coords="143,333,285,333,285,432,143,432" shape="polygon" href="./content_585894.htm?div=4"><Area coords="3,442,99,442,99,556,3,556" shape="polygon" href="./content_585894.htm?div=5"><Area coords="100,442,285,442,285,558,100,558" shape="polygon" href="./content_585894.htm?div=6"><Area coords="1,43,397,43,397,140,284,140,284,333,291,333,291,169,397,169,397,558,1,558,1,153,233,153,233,122,1,122" shape="polygon" href="./content_585894.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/03/02/zgyyb2019010302_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            02版:综合新闻·镜像
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/03/02/zgyyb2019010302.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_21.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_81.htm">下一版 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_83.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>“科科联合”生机勃勃 “科所联动”落地生根</h1>
+<h2>—北京市海淀区医疗器械监管人员的日常“镜像”</h2>
+<h4></h4>
+        
+        <div class="c_c">
+          <TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124113_dingl_1545988507451_b.jpg"></TD></TR>
+    <TR><TD><p></p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124130_dingl_1545989606915_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;迎着朝阳，监管人员踏上监督检查的道路。</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124227_dingl_1546064979097_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;监管人员在慧影医疗科技（北京）有限公司了解医用软件开发经营情况。</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124111_dingl_1545988506733_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;在北京天智航医疗科技股份有限公司库房，监管人员仔细查看温湿度表。</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124110_dingl_1545988506390_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;监管人员检查北京天智航医疗科技股份有限公司医疗器械出厂票据。</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124108_dingl_1545988505719_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;在北京全式金生物技术有限公司，监管人员按照洁净控制标准，“全副武装”接受风淋。</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/02/124107_dingl_1545988505345_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;监管人员在北京全式金生物技术有限公司洁净车间查看操作流程记录。</p></TD></TR></TBODY></TABLE>
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年12月25日一大早，北京市北五环外的中关村东升科技园，寒风追逐着落叶打转儿。这是一座集孵化器、加速器、高科技产业研发等为一体的高科技园区，吸引了生物医药、医疗器械、电子信息等领域的近百家企业入驻。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;这里距北京市海淀区食品药品监管局有1个小时的车程。还不到8∶30，海淀区食品药品监管局医疗器械监管科科长高飞和同事谢立伟就冒着寒风从单位向这里进发了。这是2018年的最后一次检查，也将为2019年的检查做个良好的铺垫。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高飞从事医疗器械监管已经10多年了，她说：“我从来到药监部门就没有换过专业，医疗器械监管专业性很强，10多年来不断学习提升。”多年的监管经验炼就高飞的一双“火眼金睛”。她不仅要负责辖区医疗器械企业的生产监管，还要指导辖区街道食品药品监管所的工作人员开展医疗器械监管工作。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;海淀区监管人员人均监管医疗器械生产企业的数量为55家，超出全市平均值3倍多。建立适合海淀区区情的医疗器械监管模式，是海淀区食药监局的重要课题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2013年，海淀区食药监局提出将一级及以下医疗机构监管工作交由街道食药监所；到2015年，又将二类器械经营监管划归到街道食药监所。为培养所里的专业监管力量，5年来，海淀区食药监局一直大力推行科所联动二级监管机制，医疗器械监管力量日渐增强，涌现出一批业务熟练、对法规理解到位的能手标兵，全局GMP检查员扩充至12名，食药监所器械专兼职检查员发展到29名，“两下放”措施成效日渐显著。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9∶10，高飞、谢立伟和东升镇食药监所的马佳怡等人汇合，来到第一家企业——北京天智航医疗科技股份有限公司检查。这是生产我国自主研发的世界首台创伤及脊柱骨科手术机器人“天玑”的企业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高飞介绍说，在对这类高新技术企业日常检查时，会多听取企业介绍最新技术进展情况，针对企业执行《医疗器械生产质量管理规范》过程中存在的问题及困惑“现场磋商”，以降低产品上市后的风险。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;温湿度是此次检查的重要项目之一。在企业库房，谢立伟仔细查看温湿度表：“环境控制关系产品质量安全，如果储存条件不当，可能导致产品失效。”</p><p>&nbsp;&nbsp;&nbsp;&nbsp;库房货架高低错落，监管人员不断蹲下、站起，多的时候一天要“蹲起”数十次、攀爬近百次、行走上万步。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;14∶00，监管人员来到北京全式金生物技术有限公司检查诊断试剂。进入洁净区前，他们严格按照程序接受健康检查并登记，此外，更衣、换鞋、洗手、风淋一样都不少。有时监管人员一天要检查四五个车间，脱脱穿穿十多次，但这些程序丝毫不打折扣。“做好洁净防护直接关乎产品质量安全，‘正人先正己’，我们要给企业做表率。”马佳怡说。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;16∶10，海淀区食药监局药械市场科监管人员马欣等人也来到园区和大家汇合，“科科联合”“科所联动”，落实全链条、全环节监管。大家来到慧影医疗科技（北京）有限公司了解医用软件开发及经营情况。马欣表示，海淀区现有医疗器械企业219家、医疗机构1024家，互联网的发展使数据传输便捷高效，进销存数据管理信息化是实现药械全过程可追溯的重要环节。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;17∶15，监管人员结束了一天的检查。华灯初上，他们还要冒着寒风赶回单位，完成检查资料整理工作。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;这是北京基层监管人员最平常的一天。2019年，他们将和全国基层监管人员一道，继续为保安全、提质量、强基础而努力。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（本版图片、文字由本报记者王宣淞提供）</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_83.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+</div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年12月25日一大早，北京市北五环外的中关村东升科技园，寒风追逐着落叶打转儿。这是一座集孵化器、加速器、高科技产业研发等为一体的高科技园区，吸引了生物医药、医疗器械、电子信息等领域的近百家企业入驻。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;这里距北京市海淀区食品药品监管局有1个小时的车程。还不到8∶30，海淀区食品药品监管局医疗器械监管科科长高飞和同事谢立伟就冒着寒风从单位向这里进发了。这是2018年的最后一次检查，也将为2019年的检查做个良好的铺垫。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高飞从事医疗器械监管已经10多年了，她说：“我从来到药监部门就没有换过专业，医疗器械监管专业性很强，10多年来不断学习提升。”多年的监管经验炼就高飞的一双“火眼金睛”。她不仅要负责辖区医疗器械企业的生产监管，还要指导辖区街道食品药品监管所的工作人员开展医疗器械监管工作。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;海淀区监管人员人均监管医疗器械生产企业的数量为55家，超出全市平均值3倍多。建立适合海淀区区情的医疗器械监管模式，是海淀区食药监局的重要课题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2013年，海淀区食药监局提出将一级及以下医疗机构监管工作交由街道食药监所；到2015年，又将二类器械经营监管划归到街道食药监所。为培养所里的专业监管力量，5年来，海淀区食药监局一直大力推行科所联动二级监管机制，医疗器械监管力量日渐增强，涌现出一批业务熟练、对法规理解到位的能手标兵，全局GMP检查员扩充至12名，食药监所器械专兼职检查员发展到29名，“两下放”措施成效日渐显著。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;9∶10，高飞、谢立伟和东升镇食药监所的马佳怡等人汇合，来到第一家企业——北京天智航医疗科技股份有限公司检查。这是生产我国自主研发的世界首台创伤及脊柱骨科手术机器人“天玑”的企业。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;高飞介绍说，在对这类高新技术企业日常检查时，会多听取企业介绍最新技术进展情况，针对企业执行《医疗器械生产质量管理规范》过程中存在的问题及困惑“现场磋商”，以降低产品上市后的风险。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;温湿度是此次检查的重要项目之一。在企业库房，谢立伟仔细查看温湿度表：“环境控制关系产品质量安全，如果储存条件不当，可能导致产品失效。”</p><p>&nbsp;&nbsp;&nbsp;&nbsp;库房货架高低错落，监管人员不断蹲下、站起，多的时候一天要“蹲起”数十次、攀爬近百次、行走上万步。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;14∶00，监管人员来到北京全式金生物技术有限公司检查诊断试剂。进入洁净区前，他们严格按照程序接受健康检查并登记，此外，更衣、换鞋、洗手、风淋一样都不少。有时监管人员一天要检查四五个车间，脱脱穿穿十多次，但这些程序丝毫不打折扣。“做好洁净防护直接关乎产品质量安全，‘正人先正己’，我们要给企业做表率。”马佳怡说。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;16∶10，海淀区食药监局药械市场科监管人员马欣等人也来到园区和大家汇合，“科科联合”“科所联动”，落实全链条、全环节监管。大家来到慧影医疗科技（北京）有限公司了解医用软件开发及经营情况。马欣表示，海淀区现有医疗器械企业219家、医疗机构1024家，互联网的发展使数据传输便捷高效，进销存数据管理信息化是实现药械全过程可追溯的重要环节。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;17∶15，监管人员结束了一天的检查。华灯初上，他们还要冒着寒风赶回单位，完成检查资料整理工作。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;这是北京基层监管人员最平常的一天。2019年，他们将和全国基层监管人员一道，继续为保安全、提质量、强基础而努力。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（本版图片、文字由本报记者王宣淞提供）</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585894.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190103_1-02>“科科联合”生机勃勃 “科所联动”落地生根</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-03
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>“科科联合”生机勃勃 “科所联动”落地生根
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle>—北京市海淀区医疗器械监管人员的日常“镜像”</founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/03/02/zgyyb2019010302_b.jpg</founder-pagepicurl>
+<founder-pagenum>02</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>83</founder-nodeid> /mpproperty-->
+
+

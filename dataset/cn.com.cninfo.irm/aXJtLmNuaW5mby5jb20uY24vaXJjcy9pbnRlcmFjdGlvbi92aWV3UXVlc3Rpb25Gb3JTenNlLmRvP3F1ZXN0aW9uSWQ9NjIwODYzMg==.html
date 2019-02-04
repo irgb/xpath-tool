@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>深交所互动易</title>
+<meta name="keywords" content="深交所互动易、深交所互动平台、互动易、互动平台、深交所、互动、上市公司、投资者" />
+<meta name="description" content="深交所互动易、深交所互动平台、互动易、互动平台、深交所、互动、上市公司、投资者" />
+
+<link type="text/css" rel="stylesheet" href="../css/common.css" />
+<link href="css/common1.css" rel="stylesheet" type="text/css" /> 
+<link type="text/css" rel="stylesheet" href="css/comcss.css"/>
+<link type="text/css" rel="stylesheet" href="css/comcss3.css"/>
+<link type="text/css" rel="stylesheet" href="css/footer.css"/>
+<link type="text/css" rel="stylesheet" href="../css/jquery-ui-start.css" />
+<script type="text/javascript" src="../js/weibo.js"></script>
+<script type="text/javascript" src="../js/irms.core.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" language="javascript" src="../js/jquery/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="../js/jquery/extension/jquery.tip.js"></script>
+<script src="../js/jquery/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
+<script src="../js/jquery/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+	
+<script type="text/javascript">
+	var loginName = "";
+	
+	function addCookie(name,value){
+		var argv = arguments;  
+		var argc = arguments.length;  
+		var expires = (argc > 2) ? argv[2] : null; 
+		var path = (argc > 3) ? argv[3] : '/';  
+		var domain = (argc > 4) ? argv[4] : null;  
+		var secure = (argc > 5) ? argv[5] : false;  
+		document.cookie = name + "=" + escape (value) +  
+		((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +  
+		((path == null)    ? "" : ("; path=" + path)) +  
+		((domain == null)  ? "" : ("; domain=" + domain)) +  
+		((secure == true)  ? "; secure" : "");  
+	}
+	
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+		initTip('popDiv');
+		
+		
+		var language = queryLanguageForLogin();
+		if(language=="zh"){
+			document.getElementById('englishlang').innerHTML = "English";
+		}else if(language=="en"){
+			document.getElementById('englishlang').innerHTML = "中文";
+		}else{
+			document.getElementById('englishlang').innerHTML = "English";
+		}
+		
+		//添加Cookie标识，格式：用户账号 + “_” + 问题ID
+		if("" != loginName){
+			var cookieName = encodeURIComponent(loginName) + "_" + 6208632;
+			var curDate = new Date();
+			curDate.setTime(curDate.getTime() + 30*24*60*60*1000);
+			//addCookie(cookieName, "1", curDate);//没有用途，屏蔽
+		}
+	});
+	
+</script>	
+</head>
+<body>
+<div class='zw_banner' style="position:relative;">
+  <p class="ad_photo"><a href="http://irm.cninfo.com.cn/szse/"><img src="../sse/images/logo_szse.jpg"  /></a></p>
+   <p class="ad_trans">
+		<a  onclick = "changeLang('englishlang','002664')" href="#"><span style="color:#FFEB6D; font-family: arial; font-size:12px;" id="englishlang">中文</span></a>
+  </p>	
+  <div class="zw_banner_box">
+    <dl>
+      <dt>
+      	<a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">
+				<img width="74" height="57" src="http://irm.cninfo.com.cn/ssgs/S002664/images/002664.gif" onerror="this.src='images/none.jpg'">
+		</a>
+      </dt>
+      <dd>
+        <span>Changying Xinzhi</span><br/>
+        <span>长鹰信质</span><br/>
+        <span>002664</span></dd>
+    </dl>
+  </div>
+</div> 
+<div class="zw_wrap">
+   <!--c-->
+  <div class="gshd_middle gshd_middle_com2 mt10">
+    
+    <div class="yg_box yg_box_com2">
+   
+            <div>
+                <ul class="Tl talkList2">
+                  <li>  
+						<div class="askBoxOuter">
+							<div class="userPic"   onmouseover="processTriggerMouseoverEvent(this, 10, 0, '../zczq/queryAttentionInvestor.do?targetAccount=A994A638A707FDBC5516AC83F887F3AE');" onmouseout="processTriggerMouseoutEvent();" onclick="window.open('allQuestionsForLoginId.do?condition.loginId=A994A638A707FDBC5516AC83F887F3AE');"  >
+								<a>
+    			 						<img width="49" height="50" src="http://irm.cninfo.com.cn/szse/images/zczq/default/common.jpg" onerror="this.src='http://irm.cninfo.com.cn/szse/images/zczq/default/common.jpg'"/>
+                              	<span class="userName">2013元</span></a> 
+							</div> 
+                             
+							<div class="q_icon"><a><img src='images/q_icon.jpg' title="" /></a>  </div> 
+                             
+                          	<div class="msgBox">
+                                <div class="msgCnt cntcolor">
+                                	<div style="width:850px;word-break: break-all; white-space: normal; word-wrap: break-word;">
+	                                	<a href="allQuestionsForQuestioner.do?condition.questioner=irm466544" target="_blank" class="blue1">irm466544</a>
+	                                	<span class="red1">问</span>
+	                            		<a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank" class="blue2">长鹰信质(002664)</a>
+	                            		请问;1,国务院提出大力进行科技创新,公司的控股子公司原北航无人机研究所科技成果多吗？对科技成果的转化贵公司将会有行动计划安排吗？2，国家将推出科创版，贵公司会不会抓住这一机会，推动旗下的无人机研究所和无人机公司上科创版，相信对公司，对北航，对台都是多赢的局面。3，公司的定增在互动易说暂停下了，为什么不发公告？定增公告公司可是发过的。4.公司在互动易是很长时间都不互动，是公司不重视吗？
+                            		</div>
+                            	</div>
+                            	
+                            	<div class="pubInfoask2">
+                            		<a class="date">2018年12月08日 15:24</a>
+                            	</div>
+                          	</div> 
+                          	<div class="clear"></div>
+						</div>
+						
+						<!-- 英文翻译开始 -->
+						<!--英文翻译结束 -->
+						
+								<div class="clear answerBoxOuter" style="position:relative; margin-top:5px;">
+									<span style="position:absolute; width:21px; height:10px; left:20px; top:-10px; "><img src="images/raw9.jpg"title="" /></span>
+	                                <div class="userPic" onmouseover="processTriggerMouseoverEvent(this, 10, -10, '../zczq/queryAttentionCompany.do?stockcode=002664&stocktype=S');" onmouseout="processTriggerMouseoutEvent();">
+                                		<a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">
+        			 							<img width="49" height="50" src="http://irm.cninfo.com.cn/ssgs/S002664/images/002664.gif" onerror="this.src='images/none.jpg'">
+                                		</a>
+                                		<span class="comCode"><a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">002664</a></span>
+                                    	<span class="comName"><a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">长鹰信质</a></span>
+	                          	 	</div>
+									<div class="a_icon"><a><img src='images/a_icon.jpg' title="" /></a>  </div>    
+	                         
+	                                <div class="answerBox">
+										<div class="msgCnt cntcolor"><a class="blue1">长鹰信质</a><span class="red1">答</span>
+										<a href="allQuestionsForQuestioner.do?condition.questioner=irm466544" target="_blank" class="blue2">irm466544</a>:
+	                                    	投资者您好，感谢对公司的关注。1.长鹰信质的控股子公司天宇长鹰无人机是由原北航无人机所改制而来，是北航科技创新成果转化（特别是无人机相关科技创新成果转化）的重要平台。北航在无人系统方面有相当多的科技成果，其中BZK-005无人机就是北航科技创新成果转化为产品的一个成功案例。从行动上，第一，天宇长鹰无人机公司正在依据自己公司的核心技术和关键技术体系，在根据客户需求进行新型号无人机的研发的同时，转化应用更多北航的科技创新成果，也充实自己的核心技术和关键技术体系。第二，天宇长鹰无人机公司也采用产品合作、产业合作的模式，将北航的科技成果进行转化；2.国家推出科创板，我们也将密切关注；3.公司再融资计划因受市场环境等各方面影响，目前暂停，同时请留意公司后续相关公告；4.公司领导在每年年初、年底都比较忙，回复稍显滞后，请投资者见谅。谢谢！
+		                                    <font color=red>
+									             	[更新后]
+											</font>	
+	                                    </div>
+	                              
+										<div class="pubInfo2">     
+											<div class="pubInfoin"> <span class="time"> <a class="date">2018年12月30日 16:51</a> </span>
+	                                        	<span class="btn_share"><a><img src='images/btn_share.jpg'  title="" /></a>  </span>
+	                                        	<span><img src="images/weibo_s.jpg"  title="分享到新浪微博" style="cursor:pointer" onclick="toWeiBo('sina','002664','长鹰信质','请问;1,国务院提出大力进行科技创新,公司的控股子公司原北航无人机研究所科技成果多吗？对科技成果的转化贵公司将会有行动计划安排吗？2，国家将推出科创版，贵公司会不会抓住这一机会，推动旗下的无人机研究所和无人机公司上科创版，相信对公司，对北航，对台都是多赢的局面。3，公司的定增在互动易说暂停下了，为什么不发公告？定增公告公司可是发过的。4.公司在互动易是很长时间都不互动，是公司不重视吗？','viewQuestionForSzse.do?questionId=6208632');" />  </span>
+	                                      		<span><img src="images/weibo_q.jpg"  title="分享到腾讯微博" style="cursor:pointer" onclick="toWeiBo('tencent','002664','长鹰信质','请问;1,国务院提出大力进行科技创新,公司的控股子公司原北航无人机研究所科技成果多吗？对科技成果的转化贵公司将会有行动计划安排吗？2，国家将推出科创版，贵公司会不会抓住这一机会，推动旗下的无人机研究所和无人机公司上科创版，相信对公司，对北航，对台都是多赢的局面。3，公司的定增在互动易说暂停下了，为什么不发公告？定增公告公司可是发过的。4.公司在互动易是很长时间都不互动，是公司不重视吗？','viewQuestionForSzse.do?questionId=6208632');" /> </span>
+											</div>
+	                                        
+											<div class="xunzhang3">
+												<span class="Score"><a href="javascript:void(0);" id="scorenum_4221750">0</a></span>
+		                                        <span class="points"><a href="javascript:void(0);" onclick="addScoreForSzseSsgs(4221750)">+加分</a></span>
+		                                        <span class="xz_pan"><img src="images/xz.gif"/></span>
+											</div>
+										</div>
+                                	</div>
+                                
+                                	<div class="clear"></div>
+                             	</div>
+                             	
+                             	<!--回复翻译开始 -->
+                             	<!--回复翻译结束 -->
+                             	
+                             
+                             
+                             
+                             
+                             
+								<div class="clear answerBoxOuter" style="position:relative; margin-top:5px;">
+									<span style="position:absolute; width:21px; height:10px; left:20px; top:-10px; "><img src="images/raw9.jpg"title="" /></span>
+	                                <div class="userPic" onmouseover="processTriggerMouseoverEvent(this, 10, -10, '../zczq/queryAttentionCompany.do?stockcode=002664&stocktype=S');" onmouseout="processTriggerMouseoutEvent();">
+                                		<a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">
+        			 							<img width="49" height="50" src="http://irm.cninfo.com.cn/ssgs/S002664/images/002664.gif" onerror="this.src='images/none.jpg'">
+                                		</a>
+                                		<span class="comCode"><a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">002664</a></span>
+                                    	<span class="comName"><a href="http://irm.cninfo.com.cn/ssessgs/S002664" target="_blank">长鹰信质</a></span>
+	                          	 	</div>
+									<div class="a_icon"><a><img src='images/a_icon.jpg' title="" /></a>  </div>    
+	                         
+	                                <div class="answerBox">
+										<div class="msgCnt cntcolor"><a class="blue1">长鹰信质</a><span class="red1">答</span>
+										<a href="allQuestionsForQuestioner.do?condition.questioner=irm466544" target="_blank" class="blue2">irm466544</a>:
+	                                    	投资者您好，感谢对公司的关注。1.北航无人机公司为长鹰信质的控股子公司，从北航无人机所改制为公司的重要任务，就是要作为北航科技创新成果转化的平台，把北航的科技创新成果特别是无人系统方面的成果进行转化。北航在无人系统方面有相当多的科技成果，北航无人机公司的BZK-005无人机就是北航科技创新成果转化为产品的一个成功案例。从行动上，第一，北航无人机公司正在依据自己公司的核心技术和关键技术体系，在根据客户需求进行新型号无人机的研发的同时，转化应用更多北航的科技创新成果，也充实自己的核心技术和关键技术体系。第二，北航无人机公司也采用产品合作、产业合作的模式，将北航的科技成果进行转化；2.国家推出科创板，我们也将密切关注；3.公司再融资计划因受市场环境等各方面影响，目前暂停，同时请留意公司后续相关公告；4.公司领导在每年年初、年底都比较忙，回复稍显滞后，请投资者见谅。谢谢！
+		                                    <font color=red>
+									             	[已取消]
+											</font>	
+	                                    </div>
+	                              
+										<div class="pubInfo2">     
+											<div class="pubInfoin"> <span class="time"> <a class="date">2018年12月30日 15:14</a> </span>
+	                                        	<span class="btn_share"><a><img src='images/btn_share.jpg'  title="" /></a>  </span>
+	                                        	<span><img src="images/weibo_s.jpg"  title="分享到新浪微博" style="cursor:pointer" onclick="toWeiBo('sina','002664','长鹰信质','请问;1,国务院提出大力进行科技创新,公司的控股子公司原北航无人机研究所科技成果多吗？对科技成果的转化贵公司将会有行动计划安排吗？2，国家将推出科创版，贵公司会不会抓住这一机会，推动旗下的无人机研究所和无人机公司上科创版，相信对公司，对北航，对台都是多赢的局面。3，公司的定增在互动易说暂停下了，为什么不发公告？定增公告公司可是发过的。4.公司在互动易是很长时间都不互动，是公司不重视吗？','viewQuestionForSzse.do?questionId=6208632');" />  </span>
+	                                      		<span><img src="images/weibo_q.jpg"  title="分享到腾讯微博" style="cursor:pointer" onclick="toWeiBo('tencent','002664','长鹰信质','请问;1,国务院提出大力进行科技创新,公司的控股子公司原北航无人机研究所科技成果多吗？对科技成果的转化贵公司将会有行动计划安排吗？2，国家将推出科创版，贵公司会不会抓住这一机会，推动旗下的无人机研究所和无人机公司上科创版，相信对公司，对北航，对台都是多赢的局面。3，公司的定增在互动易说暂停下了，为什么不发公告？定增公告公司可是发过的。4.公司在互动易是很长时间都不互动，是公司不重视吗？','viewQuestionForSzse.do?questionId=6208632');" /> </span>
+											</div>
+										</div>
+                                	</div>
+                                
+                                	<div class="clear"></div>
+                             	</div>
+                             
+                        </li>
+                </ul>
+            </div>
+    </div>
+    
+   
+  </div>
+  <!--r-->
+  <div class="clear"> </div>
+</div>
+
+<div class="law clear" style="width:970px;"><p><strong>免责声明：</strong>本网站仅作为投资者与上市公司互动交流的平台，深圳证券交易所力求本平台信息准确可靠，但并不对其准确性、完整性和及时性做出任何保证，若使用本网站信息造成用户损失或引致其他法律纠纷，深圳证券交易所不承担任何责任。本网站任何信息均不构成投资建议，投资者据此操作，风险自担。</p></div>
+	
+<div class="foot_box clear">
+		<dl class="xm_box">
+
+			<dt class="zj_cx">配号、中签查询 400-808-9999</dt>
+			<dt class="zj_cx">短信服务 0755-82083000</dt>
+			<dt class="zj_cx">微信服务 微信号 szse1990</dt>
+			<dt class="zj_cx1">工作建议与投诉 cis@szse.cn</dt>
+			<dt class="clears"></dt>
+		</dl>
+		
+		<p>深圳证券交易所&nbsp;版权所有  &copy; 2009 Shenzhen Stock Exchange. All Rights Reserved <br>
+
+技术支持：深圳证券信息有限公司<br>
+[粤ICP备05012689(粤ICP备05012689(建议使用IE9.0以上浏览器，1024x768以上分辨率))]</p>
+</div>
+
+<div id="popDiv" style="position: absolute;display:none;">
+	<iframe width="205"  height="103" frameborder="0" src="" frameborder="1px" />
+</div>
+</body>
+</html>

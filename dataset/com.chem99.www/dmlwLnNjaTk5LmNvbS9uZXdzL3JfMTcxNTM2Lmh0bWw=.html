@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	12月28日卓创资讯化工收盘价_卓创资讯_数据及报告中心_详情页
+</title><meta name="Keywords" content="能源报告,能源行情报告,能源定制报告,能源分析报告,能源数据,能源行情数据,能源数据分析" /><meta name="Description" content="卓创资讯能源网提供能源报告,能源行情报告,能源定制报告,能源分析报告,能源数据,能源行情数据,能源数据分析等行业分析报告。" /><link href="/styles/base.css" rel="stylesheet" type="text/css" /><link href="/styles/common.css" rel="stylesheet" type="text/css" /><link href="/styles/pop_zh.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/jquery-1.12.4.min.js"></script>
+    <script src="/scripts/knockout-3.4.2.js"></script>
+    <script src="/scripts/jquery.mousewheel.min.js"></script>
+    <script src="/scripts/scrollbar.js"></script>
+</head>
+<body>
+    <form method="post" action="./r_171536.html?id=171536" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MzUwNjI5NzJkZAPueHwZUaUNpNeD1ZUh78gG7LGycUHYHLPRkLzVGSAt" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D9260202" />
+</div>
+        <div class="ny_top_out">
+            <div class="ny_top_t">
+                
+<iframe src="/include/login.aspx" frameborder="0" scrolling="No" allowtransparency="true" style="height: 170px;width:100%;margin:auto;left:0;right:0;" name="iframe_login" id="iframe_login"></iframe>
+
+            </div>
+        </div>
+        <div class="div_main">
+            <div class="ny_posit">
+                当前位置： <a data-bind="text: (topcolumnid() == '87' ? '周报' : (topcolumnid() == '88' ? '月报' : '产业研究报告')), attr: { href: (topcolumnid() == '87' ? '/news/?type=2' : (topcolumnid() == '88' ? '/news/?type=3' : '/news/?type=1')) }" target="_blank"></a>> <a data-bind="    text: hyn, attr: { href: ('/news/?type=' + type() + '&hy=' + hys()) }" target="_blank"></a>> <a data-bind="    text: classname, attr: { href: '/news/?type=' + type() + '&siteid=' + siteid() + '&classid=' + classid() }" target="_blank"></a>>
+                <!-- ko text:toptitle-->
+                <!-- /ko -->
+            </div>
+            <div class="report_details">
+                <div class="report_cover">
+                    <span id="div_buy_pic"></span>
+                    <p data-bind="text: toptitle"></p>
+                </div>
+                <div class="report_info">
+                    <dl>
+                        <dt data-bind="text: toptitle"></dt>
+                        <dd class="hide" data-bind="html: '报告价格：<span > ' + ((topversion() == '基础版' ? topprice() : (topversion() == '标准版' ? topuprice() : topvprice()))) + '</span>元', css: { 'show': (toppower() == 1 || (toppower() == 0 && typename() == 0)) }"></dd>
+
+                        <dd class="hide" data-bind="css: { 'show': ((toppower() == 0 && typename() == 1) && isshowcustomer()) }">报告价格： <em>????</em>元<label>您的客服经理  <b id="lbl_adminphone"></b>，随后会与您取得联系</label></dd>
+
+                        <dd class="hide" data-bind="css: { 'show': toppower() == -1 }">报告价格： <em>????</em>元<label>请 <a data-bind="    click: openregin">注册</a> / <a data-bind="    click: login">登录</a> 后，查看价格</label></dd>
+
+                        <dd class="hide" data-bind="css: { 'show': ((toppower() == 0 && typename() == 1) && !isshowcustomer()) }">报告价格： <em>????</em>元<label><a data-bind="    click: showcustomer">了解价格</a></label></dd>
+                        <dd data-bind="text: '包含报告： ' + ((topcolumnid() == 87 || topcolumnid() == 120) ? 50 : (topcolumnid() == 88 ? 12 : 1)) + '份'"></dd>
+                        <dd data-bind="text: ('销       量： ' + salecount())"></dd>
+                        <dd>产品属性：
+                            <a data-bind="click: chooseversion.bind($data, '基础版'), css: { 'current': topversion() == '基础版' }">基础版</a>
+                            <a data-bind="click: chooseversion.bind($data, '标准版'), css: { 'current': topversion() == '标准版', 'hide': !((topcolumnid() == 119 || topcolumnid() == 120) && $('#hidversion').val() != '基础版') }">标准版</a>
+                            <a data-bind="click: chooseversion.bind($data, '尊享版'), css: { 'current': topversion() == '尊享版', 'hide': !(topcolumnid() == 119 && $('#hidversion').val() == '尊享版') }">尊享版</a>
+                            <i><a data-bind="    text: topversion() + '：'"></a><!-- ko text:topversion() == '基础版'?'仅包含整份报告':(topversion() == '标准版'?'包含整份报告以及该份报告中图形所用的原始数据':'包含整份报告,该份报告中图形所用的原始数据,该份报告的可视化汇报文件')--><!-- /ko --></i>
+                        </dd>
+                        
+                        <div class="clear"></div>
+                    </dl>
+                    <div class="btn_buy">
+                        <input type="button" value="加入购物车" data-bind="click: addtopcart.bind($data, false)" />
+                        <input type="button" value="立即购买" class="buy" data-bind="style: { display: (toppower() == 1 || (toppower() == 0 && typename() == 0)) ? '' : 'none' }, click: addtopcart.bind($data, true)" />
+                    </div>
+                    <div class="btn_download">
+                        <a data-bind="css: { 'nolink': toppower() == -1 }, click: reportcount">下载样报</a>
+                        <a data-bind="click:downloadnewreport,attr: { title: newdate }">下载最新报告</a>
+                        <span class="warn">更多报告下载，请到<em class="toorder" data-bind="click:toorder">我的订单</em>中下载</span>
+                    </div>
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+            <div class="report_details1 mt20 hide" data-bind="css: { 'show': (topcolumnid() == 87 || topcolumnid() == 88 || topcolumnid() == 120) }">
+                <h2>详情<i data-bind="style: {display:isbuy()=='True'?'':'none'}">您已购买
+                    <b><!-- ko text:(topstartdate()+' —— '+topenddate())-->
+                    <!-- /ko --></b>
+                    的报告，您可以去 <a href="/news/myorder.aspx">我的订单</a> 页面进行下载或浏览。</i></h2>
+                <span>报告类型：<a data-bind="text: (topcolumnid() == '87' ? '周报' : (topcolumnid() == '88' ? '月报' : '产业研究报告'))"></a></span><span>报告周期：<a data-bind="    text: (topcolumnid() == 88 ? $('#hidyeardate').val() + '年01月 —— ' + $('#hidyeardate').val() + '年12月' : $('#hidyeardate').val() + '年01月01日 —— ' + $('#hidyeardate').val() + '年12月31日')"></a></span><span>报告总量：<a data-bind="    text: ((topcolumnid() == 87 || topcolumnid() == 120) ? 50 : (topcolumnid() == 88 ? 12 : 1)) + '份'"></a></span><span>已出报告：<a data-bind="    text: lastcount() + '份'"></a></span><span class="hide2"  data-bind=" css: { 'showinline': $('#hidyeardate').val() == $('#hidnowyear').val()}">当前报告期：<a data-bind="    text: lastdate()"></a></span>
+            </div>
+
+            <div class="report_details1 mt20 hide" data-bind="css: { 'show': topcolumnid() == 119 }">
+                <h2>详情<i data-bind="style: {display:isbuy()=='True'?'':'none'}">您已购买
+                    <!-- ko text:toptitle-->
+                    <!-- /ko -->
+                    的报告，您可以去 <a href="/news/myorder.aspx">我的订单</a> 页面进行下载或浏览。</i></h2>
+                <span>报告类型：<a>产业研究报告</a></span><span>报告日期：<a data-bind="text: toppubtime()"></a></span><span>报告总量：<a>1份</a></span>
+            </div>
+
+
+            <div class="div_title mbn hide" data-bind="css: { 'show': toppower() == 1 && (annualreport().length > 1 || industrialreport().length > 1) }">
+                <a>推荐组合</a>
+            </div>
+            <div class="ny_combination hide" data-bind="css: { 'show': toppower() == 1 && (annualreport().length > 1 || industrialreport().length > 1) }">
+                <div class="ny_combination1 hide" data-bind="css: { 'show': annualreport().length > 1 }">
+                    <!-- ko foreach:annualreport-->
+                    <span data-bind="css: { 'tit1': $index() == 0, 'tit2': $index() == 1 }">
+                        <!-- ko text:typename-->
+                        <!-- /ko -->
+                        <a data-bind="text: title"></a>
+                        <i data-bind="    text: '￥' + price"></i>
+                    </span>
+                    <!-- /ko -->
+
+                    <div class="price">
+                        <!-- ko text:'￥' + annualjsprice()-->
+                        <!-- /ko -->
+                        <em data-bind="    text: '￥' + annualtotalprice(), css: { 'hide': annualtotalprice() == annualjsprice() }"></em>
+                    </div>
+                    <input type="button" value="加入购物车" data-bind="click: addshopcart_annual" />
+                </div>
+
+
+
+                <div class="ny_combination1 hide" data-bind="css: { 'show': industrialreport().length > 1 }">
+                    <!-- ko foreach:industrialreport-->
+                    <span data-bind="css: { 'tit1': $index() == 0, 'tit2': $index() == 1 }">
+                        <!-- ko text:typename-->
+                        <!-- /ko -->
+                        <a data-bind="text: title"></a><i data-bind="    text: '￥' + price"></i></span>
+                    <!-- /ko -->
+                    <div class="price">
+                        <!-- ko text:'￥' + industrialjsprice()-->
+                        <!-- /ko -->
+                        <em data-bind="    text: '￥' + industrialtotalprice(), css: { 'hide': industrialtotalprice() == industrialjsprice() }"></em>
+                    </div>
+                    <input type="button" value="加入购物车" data-bind="click: addshopcart_industrial" />
+                </div>
+            </div>
+            
+            <div class="fl contain mt20">
+                <div class="div_title mbn">
+                    <a>报告简介</a>
+                </div>
+                <div class="contain_text">
+                    <p style="line-height: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <p><p>
+	本报告格式为电子出版物工业标准格式-PDF格式，如果您的电脑无法打开，请安装Adobe Reader阅读器。</p></p>
+                </div>
+                <div class="statement mt20">
+                    卓创资讯所提供的数据和信息仅供参考，未经许可，不得转载。任何依据卓创资讯数据和信息而进行的投资、买卖、运营等行为所造成的任何直接或间接损失及法律后果均应当自行承担，与卓创资讯无关。<a href="http://www.sci99.com/about/copyright.aspx">版权声明</a>
+                </div>
+            </div>
+            
+            <div class="fr recommend mt20">
+
+                <div class="div_title1" data-bind="css: { hide: relatedreports().length == 0 }">
+                    <span><a>相关推荐</a></span>
+                    <i data-bind="click: changerelated">换一换</i>
+                </div>
+                <ul data-bind="foreach: relatedreports">
+                    <li><a data-bind="text: title, click: $parent.opendetail" style="cursor:pointer;"></a>
+                        <i data-bind="text: price != '' ? ('￥' + price) : '&nbsp;'"></i>
+                        <input type="button" value="加入购物车" data-bind="click: $parent.addtopresearchcart.bind($data, '', 6)" />
+                    </li>
+                </ul>
+
+
+                <div class="div_title1" data-bind="css: { hide: hotreports().length == 0 }">
+                    <span><a>热门推荐</a></span>
+                    <i data-bind="click: changehot">换一换</i>
+                </div>
+                <ul data-bind="foreach: hotreports">
+                    <li><a data-bind="text: title, click: $parent.opendetail" style="cursor:pointer;"></a>
+                        <i data-bind="text: price != '' ? ('￥' + price) : '&nbsp;'"></i>
+                        <input type="button" value="加入购物车" data-bind="click: $parent.addtopresearchcart.bind($data, '', 7)" />
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        
+<!--side menu start-->
+<div class="side-menu">
+    <a class="side-menu-1" onclick="myChart()">购物车<span id="span_cartcount"></span></a>
+    <a class="side-menu-2" onclick="myOrder()">我的订单</a>
+    <a class="side-menu-3" onclick="openiframe()">提交需求</a>
+    <a href="#top" class="side-menu-4" style="margin-top: 30px;">返回顶部</a>
+</div>
+<!--side menu end-->
+
+<script>
+    function openiframe() {
+        parent.document.getElementById('iframe_right').style.display = 'block';
+        $("#iframe_right", window.parent.parent.document).contents().find("#div_bg").show();
+        $("#iframe_right", window.parent.parent.document).contents().find("#div_demand").show();
+    }
+    function myChart() {
+        var loginWindow = document.getElementById("iframe_login").contentWindow;
+        if (loginWindow.document.getElementById('hiduserinfoid').value) {
+            location.href = "/shoppingcart/mycart.aspx";
+        }
+        else {
+            location.href = 'http://my.sci99.com/sso/login.aspx?backurl=' + decodeURIComponent(location.origin+"/shoppingcart/mycart.aspx");
+        }
+    }
+    function myOrder() {
+        //添加埋点
+        $.get('/api/shop/BuryingDemand', { reportid: '', version: '', type: '39', keyword:'' }, function (resp) {
+
+        })
+        var loginWindow = document.getElementById("iframe_login").contentWindow;
+        if (loginWindow.document.getElementById('hiduserinfoid').value) {
+            location.href = "/news/myorder.aspx";
+        }
+        else {
+            location.href = 'http://my.sci99.com/sso/login.aspx?backurl=' + decodeURIComponent(location.origin+"/news/myorder.aspx");
+        }
+    }
+</script>
+
+
+
+        
+<div class="clear"></div>
+<div class="div_main">
+    <div class="rooter">
+        <div class="r_c">
+            <div class="r_c_l">卓创资讯 </div>
+            <div class="r_c_r">为中国争夺大宗商品定价话语权 </div>
+        </div>
+    </div>
+    <div class="rooter">
+        <div id="footer" style="margin-top: -10px; display: block;">
+            <ul>
+            </ul>
+            <div class="r_b">
+                <a href="http://www.sci99.com/about/">关于卓创</a>|<a href="http://www.sci99.com/about/service.aspx">服务体系</a>|<a href="http://www.sci99.com/about/chemnews.aspx">今日卓创</a>|<a href="http://www.chem99.com/hr/">人才招聘</a>|<a href="http://www.sci99.com/about/contact.aspx">联系我们</a>|<a href="http://www.sci99.com/about/media.aspx">媒体合作</a>|<a href="http://www.sci99.com/about/lawannounce.aspx">法律声明</a>|<a href="http://www.sci99.com/about/copyright.aspx">版权声明</a>|<a href="http://www.sci99.com/about/partners.aspx">合作伙伴</a><br>
+                增值电信业务经营许可证：鲁B2-20050017号 鲁ICP备09068464号 传真：0533-6090800 Email：Master@sci99.com<br>
+                Copyright © 2004-2017 SCI99 Inc. All rights reserved. <a href="http://www.sci99.com/about/copyright.aspx">版权所有</a> 卓创资讯 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37030302000040">
+                    <img src="http://www.sci99.com/images/beian.gif" style="vertical-align: middle; display: inline-block; margin-right: 5px">鲁公网安备 37030302000040号</a>
+            </div>
+            <div class="r_a">
+                <a>
+                    <img src="http://www.sci99.com/Images/footimgs/p9.jpg"></a><a><img src="http://www.sci99.com/Images/footimgs/p14.gif"></a><a><img src="http://www.sci99.com/Images/footimgs/p10.jpg"></a> <a>
+                        <img src="http://www.sci99.com/Images/footimgs/p11.jpg"></a><a><img src="http://www.sci99.com/Images/footimgs/p8.jpg"></a>
+            </div>
+            <div class="r_a">
+                <a>
+                    <img src="http://www.sci99.com/Images/footimgs/p8.gif"></a><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1761884832">
+                        <img src="http://www.sci99.com/Images/footimgs/p3.gif"></a><a href="http://www.sci99.com/cctv/"><img src="http://www.sci99.com/Images/footimgs/p4.gif"></a> <a href="http://www.sci99.com/about/licence.htm">
+                            <img src="http://www.sci99.com/Images/footimgs/p6.gif"></a><a><img src="http://www.sci99.com/Images/footimgs/p5.gif"></a>
+            </div>
+        </div>
+    </div>
+    
+     <div class="bottomalert"><a href="/news/myorder.aspx" target="_blank"><img src="/images/bottomalert.png" alt=""/></a><button  type="button">&nbsp;</button></div>
+    
+    <script type="text/javascript" src="http://img.sciimg.com/static/public/scripts/component/public/footer/getfooter.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d1dc458e2e77b5d3e68a3b9c184db0aa";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+         $('.bottomalert button').click(function(){
+                $('.bottomalert').hide();
+        })
+    </script>
+    <script type='text/javascript' src='http://my.sci99.com/sso/userlginfo.aspx?sid=93&t='></script>
+    <!-- 点击量统计 start -->
+    <script type='text/javascript' src='http://services.sci99.com/userclick/Home/index?userid=0&UserType=64'></script>
+    <!-- 点击量统计 end -->
+</div>
+
+        <div style="background: #666262; position: fixed; top: 0; left: 0; right: 0; bottom: 0; filter: alpha(opacity=80); -moz-opacity: 0.8; opacity: 0.8; z-index: 1000; display: none;" id="div_bg"></div>
+        
+        <div class="pop_box hide2" id="div_annualtj">
+            <div class="pop_close" data-bind="click: closeannualtj"></div>
+            <div class="pop_head">
+                <ul>
+                    <li><a data-bind="css: { 'hover': annualtjindex() == 1 }, click: changeannualtj.bind($data, 1)">报告一</a></li>
+                    <li><a data-bind="css: { 'hover': annualtjindex() == 2 }, click: changeannualtj.bind($data, 2)">报告二</a></li>
+                </ul>
+            </div>
+            <!--周报，月报，多客户单次，多客户时段annual0-->
+            <div class="hide" data-bind="css: { 'show': annualtjindex() == 1 }, foreach: annual0">
+                <div class="pop_height">
+                    <div class="pop_title" data-bind="text: title"></div>
+                    <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: $parent.changeversion_tj.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': (itemversion == '标准版' || itemversion == '尊享版') }, click: $parent.changeversion_tj.bind($data, '标准版')">标准版</a> <a class="hide" data-bind="    css: { 'hover': version() == '尊享版', 'show': itemversion == '尊享版' }, click: $parent.changeversion_tj.bind($data, '尊享版')">尊享版</a> </div>
+
+
+                    <div class="pop_list period" data-bind="css: { 'hide': (columnid == 119) }">
+                        <span>选择周期:</span>
+                        <a data-bind="css: { 'hover': cycle() == 1 }, click: $parent.changecycle_tj.bind($data, 1)">一年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 2 }, click: $parent.changecycle_tj.bind($data, 2)">两年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 3 }, click: $parent.changecycle_tj.bind($data, 3)">三年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 4 }, click: $parent.changecycle_tj.bind($data, 4)">三年以上</a>
+                    </div>
+                    <div class="pop_list" data-bind="css: { 'hide': (columnid == 119) }">
+                        <!--下拉只有一列在pop_date 后加year，下拉只有年月在pop_date后加month，下拉有年月日在pop_date后加day-->
+
+                        <div class="pop_date day">
+                            <span data-bind="text: startdate, click: $parent.showdateselect_a0.bind($data, 1)"></span><i data-bind="    click: $parent.showdateselect_a0.bind($data, 1)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow1 }">
+                                <div class="pop_date_year" id="div_startyearsa0">
+                                    <ul data-bind="foreach: startyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selstartyear() == data }, click: $root.choosestartyear_tj.bind($data, data, $parent), clickBubble: false"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_month" id="div_startmonthesa0">
+                                    <ul data-bind="foreach: startmonthes">
+                                        <li><a data-bind="text: (data + '月'), css: { 'hover': $parent.selstartmonth() == data }, click: $root.choosestartmonth_tj.bind($data, data, $parent), clickBubble: false"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_day" id="div_startdaysa0">
+                                    <ul data-bind="foreach: startdays">
+                                        <li><a data-bind="text: (data + '日'), css: { 'hover': $parent.selstartday() == data }, click: $root.choosestartday_tj.bind($data, data, $parent), clickBubble: false"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_date_relation">—</div>
+                        <div class="pop_date year">
+                            <span data-bind="text: enddate().substr(0, 4) + '年', click: $parent.showdateselect_a0.bind($data, 2)"></span><i data-bind="    click: $parent.showdateselect_a0.bind($data, 2)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow2 }">
+                                <div class="pop_date_year" id="div_endyearsa0">
+                                    <ul data-bind="foreach: endyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selendyear() == data }, click: $root.chooseendyear_tj.bind($data, data, $parent), clickBubble: false"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pop_day" data-bind="text: enddate().substr(5, 6)"></div>
+                        <p data-bind="text: spantime, css: { 'hide': !isspantime() }"></p>
+                    </div>
+                </div>
+                <div class="pop_statistics">
+                    <div class="pop_statistics_l">包含报告：<a data-bind="text: count() + '份'"></a></div>
+                    <div class="pop_statistics_r">价格：<a><i data-bind="text: price"></i>元</a></div>
+                </div>
+                <div class="pop_button">
+                    <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                    <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: $parent.closeannualtj" />
+                    <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: $parent.okannualtj" />
+                </div>
+            </div>
+            <!-- 年报annual1 -->
+            <div class="hide" data-bind="css: { 'show': annualtjindex() == 2 }, foreach: annual1">
+                <div class="pop_height">
+                    <div class="pop_title" data-bind="text: title"></div>
+                    <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: $parent.changeversion_tj.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': (itemversion == '标准版' || itemversion == '尊享版') }, click: $parent.changeversion_tj.bind($data, '标准版')">标准版</a></div>
+                </div>
+                <div class="pop_statistics">
+                    <div class="pop_statistics_l">包含报告：<a>1份</a></div>
+                    <div class="pop_statistics_r">价格：<a><i data-bind="text: price"></i>元</a></div>
+                </div>
+                <div class="pop_button">
+                    <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                    <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: $parent.closeannualtj" />
+                    <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: $parent.okannualtj" />
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="pop_box hide2" id="div_industrialtj">
+            <div class="pop_close" data-bind="click: closeindustrialtj"></div>
+            <div class="pop_head">
+                <ul>
+                    <li><a data-bind="css: { 'hover': industrialtjindex() == 1 }, click: changeindustrialtj.bind($data, 1)">报告一</a></li>
+                    <li><a data-bind="css: { 'hover': industrialtjindex() == 2 }, click: changeindustrialtj.bind($data, 2)">报告二</a></li>
+                </ul>
+            </div>
+            <!-- industrial0-->
+            <div class="hide" data-bind="css: { 'show': industrialtjindex() == 1 }, foreach: industrial0">
+                <div class="pop_height">
+                    <div class="pop_title" data-bind="text: title"></div>
+                    <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: $parent.changeversion_tj.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': (itemversion == '标准版' || itemversion == '尊享版') }, click: $parent.changeversion_tj.bind($data, '标准版')">标准版</a> <a class="hide" data-bind="    css: { 'hover': version() == '尊享版', 'show': itemversion == '尊享版' }, click: $parent.changeversion_tj.bind($data, '尊享版')">尊享版</a> </div>
+                    <div class="pop_list period" data-bind="css: { 'hide': (columnid == 119) }">
+                        <span>选择周期:</span>
+                        <a data-bind="css: { 'hover': cycle() == 1 }, click: $parent.changecycle_tj.bind($data, 1)">一年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 2 }, click: $parent.changecycle_tj.bind($data, 2)">两年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 3 }, click: $parent.changecycle_tj.bind($data, 3)">三年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 4 }, click: $parent.changecycle_tj.bind($data, 4)">三年以上</a>
+                    </div>
+                    <div class="pop_list" data-bind="css: { 'hide': (columnid == 119) }">
+                        <!--下拉只有一列在pop_date 后加year，下拉只有年月在pop_date后加month，下拉有年月日在pop_date后加day-->
+                        <div class="pop_date day">
+                            <span data-bind="text: startdate, click: $parent.showdateselect_i0.bind($data, 1)"></span><i data-bind="    click: $parent.showdateselect_i0.bind($data, 1)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow1 }">
+                                <div class="pop_date_year" id="div_startyearsi0">
+                                    <ul data-bind="foreach: startyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selstartyear() == data }, click: $root.choosestartyear_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_month" id="div_startmonthesi0">
+                                    <ul data-bind="foreach: startmonthes">
+                                        <li><a data-bind="text: (data + '月'), css: { 'hover': $parent.selstartmonth() == data }, click: $root.choosestartmonth_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_day" id="div_startdaysi0">
+                                    <ul data-bind="foreach: startdays">
+                                        <li><a data-bind="text: (data + '日'), css: { 'hover': $parent.selstartday() == data }, click: $root.choosestartday_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_date_relation">—</div>
+                        <div class="pop_date year">
+                            <span data-bind="text: enddate().substr(0, 4) + '年', click: $parent.showdateselect_i0.bind($data, 2)"></span><i data-bind="    click: $parent.showdateselect_i0.bind($data, 2)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow2 }">
+                                <div class="pop_date_year" id="div_endyearsi0">
+                                    <ul data-bind="foreach: endyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selendyear() == data }, click: $root.chooseendyear_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pop_day" data-bind="text: enddate().substr(5, 6)"></div>
+                        <p data-bind="text: spantime, css: { 'hide': !isspantime() }"></p>
+                    </div>
+                </div>
+                <div class="pop_statistics">
+                    <div class="pop_statistics_l">包含报告：<a data-bind="text: count() + '份'"></a></div>
+                    <div class="pop_statistics_r">价格：<a><i data-bind="text: price"></i>元</a></div>
+                </div>
+                <div class="pop_button">
+                    <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                    <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: $parent.closeindustrialtj" />
+                    <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: $parent.okindustrialtj" />
+                </div>
+            </div>
+            <!-- industrial1-->
+            <div class="hide" data-bind="css: { 'show': industrialtjindex() == 2 }, foreach: industrial1">
+                <div class="pop_height">
+                    <div class="pop_title" data-bind="text: title"></div>
+                    <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: $parent.changeversion_tj.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': (itemversion == '标准版' || itemversion == '尊享版') }, click: $parent.changeversion_tj.bind($data, '标准版')">标准版</a> <a class="hide" data-bind="    css: { 'hover': version() == '尊享版', 'show': itemversion == '尊享版' }, click: $parent.changeversion_tj.bind($data, '尊享版')">尊享版</a> </div>
+                    <div class="pop_list period" data-bind="css: { 'hide': (columnid == 119) }">
+                        <span>选择周期:</span>
+                        <a data-bind="css: { 'hover': cycle() == 1 }, click: $parent.changecycle_tj.bind($data, 1)">一年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 2 }, click: $parent.changecycle_tj.bind($data, 2)">两年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 3 }, click: $parent.changecycle_tj.bind($data, 3)">三年</a>
+                        <a data-bind="    css: { 'hover': cycle() == 4 }, click: $parent.changecycle_tj.bind($data, 4)">三年以上</a>
+                    </div>
+                    <div class="pop_list" data-bind="css: { 'hide': (columnid == 119) }">
+                        <!--下拉只有一列在pop_date 后加year，下拉只有年月在pop_date后加month，下拉有年月日在pop_date后加day-->
+
+                        <div class="pop_date day">
+                            <span data-bind="text: startdate, click: $parent.showdateselect_i1.bind($data, 1)"></span><i data-bind="    click: $parent.showdateselect_i1.bind($data, 1)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow1 }">
+                                <div class="pop_date_year" id="div_startyearsi1">
+                                    <ul data-bind="foreach: startyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selstartyear() == data }, click: $root.choosestartyear_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_month" id="div_startmonthesi1">
+                                    <ul data-bind="foreach: startmonthes">
+                                        <li><a data-bind="text: (data + '月'), css: { 'hover': $parent.selstartmonth() == data }, click: $root.choosestartmonth_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="pop_date_day" id="div_startdaysi1">
+                                    <ul data-bind="foreach: startdays">
+                                        <li><a data-bind="text: (data + '日'), css: { 'hover': $parent.selstartday() == data }, click: $root.choosestartday_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_date_relation">—</div>
+                        <div class="pop_date year">
+                            <span data-bind="text: enddate().substr(0, 4) + '年', click: $parent.showdateselect_i1.bind($data, 2)"></span><i data-bind="    click: $parent.showdateselect_i1.bind($data, 2)"></i>
+                            <div class="pop_date_select" data-bind="css: { 'show': isshow2 }">
+                                <div class="pop_date_year" id="div_endyearsi1">
+                                    <ul data-bind="foreach: endyears">
+                                        <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selendyear() == data }, click: $root.chooseendyear_tj.bind($data, data, $parent)"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_day" data-bind="text: enddate().substr(5, 6)"></div>
+                        <p data-bind="text: spantime, css: { 'hide': !isspantime() }"></p>
+                    </div>
+                </div>
+                <div class="pop_statistics">
+                    <div class="pop_statistics_l">包含报告：<a data-bind="text: count() + '份'"></a></div>
+                    <div class="pop_statistics_r">价格：<a><i data-bind="text: price"></i>元</a></div>
+                </div>
+                <div class="pop_button">
+                    <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                    <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: $parent.closeindustrialtj" />
+                    <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: $parent.okindustrialtj" />
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+        <div class="pop_box hide2" id="div_dc">
+            <div class="pop_close" data-bind="click: closedc"></div>
+
+            <div class="pop_title" data-bind="text: title"></div>
+            <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: changeversion.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': (itemversion() == '标准版' || itemversion() == '尊享版') }, click: changeversion.bind($data, '标准版')">标准版</a> <a class="hide" data-bind="    css: { 'hover': version() == '尊享版', 'show': itemversion() == '尊享版' }, click: changeversion.bind($data, '尊享版')">尊享版</a> </div>
+            <div class="pop_statistics">
+                <div class="pop_statistics_l">包含报告：<a data-bind="text: count() + '份'"></a></div>
+                <div class="pop_statistics_r">价格：<a><i data-bind="text: price()"></i>元</a></div>
+            </div>
+
+            <div class="pop_button">
+                <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: closedc" />
+                <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: okdc" />
+            </div>
+        </div>
+        
+        <div class="pop_box hide2" id="div_sd">
+            <div class="pop_close" data-bind="click: closesd"></div>
+            <div class="pop_title" data-bind="text: title"></div>
+
+            <div class="pop_list property"><span>产品属性:</span> <a data-bind="css: { 'hover': version() == '基础版' }, click: changeversion.bind($data, '基础版')">基础版</a> <a class="hide" data-bind="    css: { 'hover': version() == '标准版', 'show': itemversion() == '标准版' }, click: changeversion.bind($data, '标准版')">标准版</a> </div>
+
+            <div class="pop_list period"><span>选择周期:</span> <a data-bind="css: { 'hover': cycle() == 1 }, click: changecycle.bind($data, 1)">一年</a> <a data-bind="    css: { 'hover': cycle() == 2 }, click: changecycle.bind($data, 2)">两年</a> <a data-bind="    css: { 'hover': cycle() == 3 }, click: changecycle.bind($data, 3)">三年</a> <a data-bind="    css: { 'hover': cycle() == 4 }, click: changecycle.bind($data, 4)">三年以上</a> </div>
+            <div class="pop_list">
+                <!--下拉只有一列在pop_date 后加year，下拉只有年月在pop_date后加month，下拉有年月日在pop_date后加day-->
+                <div class="pop_date day">
+                    <span data-bind="text: startdate, click: showdateselect.bind($data, 1)"></span><i data-bind="    click: showdateselect.bind($data, 1)"></i>
+                    <div class="pop_date_select" id="div_startdate_select" data-bind="css: { 'show': isshow1 }">
+                        <div class="pop_date_year" id="div_startyears">
+                            <ul data-bind="foreach: startyears">
+                                <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selstartyear() == data }, click: $parent.choosestartyear.bind($data, data)"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pop_date_month" id="div_startmonthes">
+                            <ul data-bind="foreach: startmonthes">
+                                <li><a data-bind="text: (data + '月'), css: { 'hover': $parent.selstartmonth() == data }, click: $parent.choosestartmonth.bind($data, data)"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pop_date_day" id="div_startdays">
+                            <ul data-bind="foreach: startdays">
+                                <li><a data-bind="text: (data + '日'), css: { 'hover': $parent.selstartday() == data }, click: $parent.choosestartday.bind($data, data)"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_date_relation">—</div>
+                <div class="pop_date year">
+                    <span data-bind="text: enddate().substr(0, 4) + '年', click: showdateselect.bind($data, 2)"></span><i data-bind="    click: showdateselect.bind($data, 2)"></i>
+                    <div class="pop_date_select" id="div_enddate_select" data-bind="css: { 'show': isshow2 }">
+                        <div class="pop_date_year" id="div_endyears">
+                            <ul data-bind="foreach: endyears">
+                                <li><a data-bind="text: (data + '年'), css: { 'hover': $parent.selendyear() == data }, click: $parent.chooseendyear.bind($data, data)"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_day" data-bind="text: enddate().substr(5, 6)"></div>
+                <p id="p_spantime"></p>
+            </div>
+            <div class="pop_statistics">
+                <div class="pop_statistics_l">包含报告：<a data-bind="text: count() + '份'"></a></div>
+                <div class="pop_statistics_r">价格：<a><i data-bind="text: price()"></i>元</a></div>
+            </div>
+            <div class="pop_button">
+                <!--hover为我也不知道啥情况下的一种，去掉hover是另一种颜色-->
+                <input type="button" value="取消" class="button_pop_cancel hover" data-bind="click: closesd" />
+                <input type="button" value="确定" class="button_pop_confirm hover" data-bind="click: oksd" />
+            </div>
+        </div>
+        
+        <div class="pop_box1 hide2" id="div_sydq">
+            <div class="pop_close" data-bind="click: closesydq"></div>
+            <div class="pop_hint_shop">
+                <h2>成功加入购物车</h2>
+                <p>
+                    您的专属客服 <strong id="strong_admin"></strong>随后会与您取得联系，<br />
+                    或拨打电话<strong>400-811-5599</strong>进行咨询。
+                </p>
+                <div class="pop_button">
+                    <input type="button" value="我的购物车" class="button_pop_shop" data-bind="click: openmycart" />
+                    <input type="button" value="继续选购" class="button_pop_go" data-bind="click: closesydq" />
+                </div>
+            </div>
+        </div>
+        
+
+        <iframe src="/include/right.aspx" frameborder="0" scrolling="No" allowtransparency="true" name="iframe_right" id="iframe_right" style="position: fixed; top: 0; right: 0; height: 100%; width: 100%; display: none;"></iframe>
+        <input type="hidden" value="171536" id="hidreportid" />
+        <input type="hidden" value="" id="hidname" />
+        <input type="hidden" value="" id="hidid" />
+        <input type="hidden" value="0" id="hidtypename" />
+        <input type="hidden" value="化工" id="hidclassname" />
+        <input type="hidden" value="12月28日卓创资讯化工收盘价" id="hidtitle" />
+        <input type="hidden" value="-1" id="hidpower" />
+        <input type="hidden" value="" id="hidprice" />
+        <input type="hidden" value="" id="hiduprice" />
+        <input type="hidden" value="" id="hidvprice" />
+        <input type="hidden" value="化工" id="hidhyn" />
+        <input type="hidden" value="chem" id="hidhys" />
+        <input type="hidden" value="2" id="hidclassid" />
+        <input type="hidden" value="85" id="hidcolumnid" />
+        <input type="hidden" value="1" id="hidtype" />
+        <input type="hidden" value="2" id="hidsiteid" />
+        <input type="hidden" value="0" id="hidpid" />
+        <input type="hidden" value="0" id="hidupid" />
+        <input type="hidden" value="0" id="hidvpid" />
+        <input type="hidden" value="" id="hidversion" />
+        <input type="hidden" value="2018/12/28 16:35:12" id="hidpubtime" />
+        <input type="hidden" value="False" id="hidisbuy" />
+        <input type="hidden" value="" id="hidstartdate" />
+        <input type="hidden" value="" id="hidenddate" />
+        <input type="hidden" value="1" id="hidlastcount" />
+        <input type="hidden" value="2018年12月" id="hidlastdate" />
+        <input type="hidden" value="2018" id="hidyeardate" />
+        <input type="hidden" value="0" id="hidforeyear" />
+        <input type="hidden" value="2018" id="hidnowyear" />
+    </form>
+    <script src="/scripts/news_shownews.js"></script>
+</body>
+</html>

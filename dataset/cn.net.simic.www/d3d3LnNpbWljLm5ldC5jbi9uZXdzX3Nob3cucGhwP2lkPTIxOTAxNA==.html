@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>注意丨美国港口拥堵继续恶化，货物延误及高额堆场费困扰外贸货代企业！_国际海事信息网</title>
+<meta name="keywords" content="美国港口拥堵" />
+<meta name="description" content="注意丨美国港口拥堵继续恶化，货物延误及高额堆场费困扰外贸货代企业！" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">注意丨美国港口拥堵继续恶化，货物延误及高额堆场费困扰外贸货代企业！</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-03 &nbsp;&nbsp;
+					浏览量：274&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="padding-bottom: 0px; font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">2018，<strong style="padding-bottom: 0px; font-style: normal; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">美国</strong>的港口经历了可谓非比寻常的一年。</span></p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">由于新关税的影响，美国东海岸的<strong style="padding-bottom: 0px; font-style: normal; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">港口</strong>正经历着一段不寻常的拥堵时期，在洛杉矶-长滩港(Los Angeles-Long Beach port complex)，由于无法提箱和返还空箱，货主的不满情绪正在上升，同时数千美元的滞留费和滞期费正在累积。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">为避开更高的关税，再加上12月24日至25日的圣诞节假期，美国最大的进口门户面临着巨大的压力。由于集装箱停留时间达到两年来的最高水平且卡车周转时间正在上升，12月18日每个港口的负责人承诺在六个月内减免。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><img alt="中国海事服务网" src="https://sofreight-app.yemet.com/upload/feed_img/ec184cfb042f40bf562f48727da4d9f0dcee8071.gif" data-filename="" style="border-bottom: medium none; border-left: medium none; padding-bottom: 0px; font-style: normal; margin: 0px auto; outline-style: none; outline-color: invert; padding-left: 0px; outline-width: medium; padding-right: 0px; display: block; max-width: 100%; border-top: medium none; border-right: medium none; padding-top: 0px; text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0)" /></p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">▲在洛杉矶-长滩港货运公司疏散进口货物时遇麻烦</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="padding-bottom: 0px; font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px"><strong style="padding-bottom: 0px; font-style: normal; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">美国</strong>进口商已经将大部分货物赶到了1月1日的最后期限，虽然关税的提升现在已经推迟到3月1日，而中国工厂的产量在短时间内扩大规模有限，目前还不清楚有多少货物。尽管去往美国东海岸的运价下跌，但有三家集装箱运输公司的高管警告称1月船舶和码头供应紧张，原因是亚洲工厂在2月5日开始的农历新年庆祝活动结束前，货运量激增。</span></p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">&ldquo;洛杉矶和长滩的<strong style="padding-bottom: 0px; font-style: normal; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">拥堵</strong>现在正处于高峰期，通常是发生在11月。&rdquo;一位服装托运人表示，&ldquo;预约满了，几乎所有集装箱都在LFD（最后一天免费）。另一种趋势是，越来越多的汽车司机会自动将至少五天的货运租金存入他们的运价单，以弥补空车返回时的拥堵。&rdquo;</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">托运人在疏散进口货物方面遇到困难，主要是由于缺乏可用的预约，这使他们面临支付滞期费的风险。托运人和承运人通常会在特定数量的所谓空闲时间内而相互签订合同。当进口货柜在货柜码头存放超过商定的免费天数时，或当商定的空货柜交还码头前的天数已过时，将计算滞期费罚款。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">集装箱码头可视性软件供应商Crux Systems首席执行官埃里克&middot;克莱因（Eric Klein）在最近的推文中表示，他看到<strong style="padding-bottom: 0px; font-style: normal; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">港口</strong>即将出现&ldquo;灾难&rdquo;。大量积压的货物没有从码头出来。免费时间会延长吗？我现在看到的是正在发生的灾难。我看到每个集装箱的平均滞期费账单超过<strong style="padding-bottom: 0px; font-style: normal; margin: 0px; outline-style: none; outline-color: invert; padding-left: 0px; outline-width: 0px; padding-right: 0px; padding-top: 0px; text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0)">3,000美元</strong>。这一切都是可以避免的。&ldquo;</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><img class="img_loading" alt="中国海事服务网" src="https://sofreight-app.yemet.com/upload/feed_img/f410d7f58afcfdd6d66edbc75384b0b9e809ee2f.gif" data-w="700" data-type="jpeg" data-s="300,640" data-ratio="0.5628571428571428" data-copyright="0" crossorigin="anonymous" _width="677px" style="border-bottom: medium none; border-left: medium none; padding-bottom: 0px; font-style: normal; margin: 0px auto; outline-style: none; outline-color: invert; padding-left: 0px; outline-width: medium; padding-right: 0px; display: block; max-width: 100%; border-top: medium none; border-right: medium none; padding-top: 0px; text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0)" /></p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">在交通拥堵加剧的情况下，人们往往会想找一个替罪羊。问题在于个人托运人应该预见到集体货量的飙升，这在很大程度上是由于特朗普政府威胁要在1月份将各种中国制造商品的关税从10％提高到25％。这种威胁已被推到3月初，这可能预示着中国农历新年期间的数量将会出现另一次增长。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">一位鞋类进口商对媒体表示，他的货物不属于关税前激增的一部分，但他仍然受到南加州拥堵的影响。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">&ldquo;我们正在进行正常运输，&rdquo;他说。&ldquo;似乎班轮公司/港口没有为货量激增做好准备。问题始于船公司的无效航行，中国的天气状况，工人填补空缺以及货运不能按时到达。我不知道该责备谁，但正如我多次询问而没有得到回应的那样，BCO(受益货主)做错了什么，我们应该因滞期费或拘留费而受到惩罚？每一项拘留费都有额外的拖车费。&rdquo;</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">一位货运代理人告诉媒体说：&ldquo;为了赶在12月31日的最后期限之前完成交易，很多人都推高了成交量。目前，一些仓库无法承受这一切。许多卡车司机无法足够快地把货从码头卸下来。我在度假的时候接到一个客户的电话，要求帮助寻找100个集装箱的仓库，这已经超出了正常的周运量。我认为这真的是因为运输计划的改变，以赶在1月1日实施日期之前。&ldquo;</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">与此同时，这家服装进口商表示，去年12月的异常拥堵甚至蔓延到了纽约/新泽西港口，影响到了该公司的内陆港联运集装箱。&ldquo;一些集装箱在离开纽瓦克港口集装箱码头(Port Newark Container Terminal)去往火车之前，要等上两周。&rdquo;</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">南加利福尼亚州港口的管理人员承认，码头拥堵和设备短缺正困扰着港口，并提出了大约12项行动计划，以缓解港口拥堵。南加利福尼亚州港口今年的总吞吐量将超过1,600万标箱。</p>
+<p style="text-align: justify; padding-bottom: 8px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 2em; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 宋体, Arial, Helvetica; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(43,43,43); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 8px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">由于一些码头运营商囤积设备导致的拖车短缺，以及BCO越来越多地使用进口集装箱和作为仓库延伸的拖车，是造成港口拥堵的最大因素之一。</p>
+					<p align="center"></p>
+					<p align="right">来源：搜航网</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219015">[下一篇] APL：亚洲红海及中东市场二月停航计划</a>
+					   
+					 
+						<a href="news_show.php?id=219013">[上一篇] 希腊船东：油船市场已经复苏</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219053" title="中国船配业加速“弯道超车”">中国船配业加速“弯道超车”</a></li>
+							<li><a href="news_show.php?id=219047" title="2018年油轮交易数量上升">2018年油轮交易数量上升</a></li>
+							<li><a href="news_show.php?id=219032" title="全国首次!24个LNG储罐江海联运直抵南京">全国首次!24个LNG储罐江海联运直抵南京</a></li>
+							<li><a href="news_show.php?id=219028" title="复兴号将首次实现时速350公里自动驾驶">复兴号将首次实现时速350公里自动驾驶</a></li>
+							<li><a href="news_show.php?id=219050" title="2019年灵便型和超灵便型散货船前景可观">2019年灵便型和超灵便型散货船前景可观</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219053" title="中国船配业加速“弯道超车”">
+				<img src="../../imgs/nimg/smallimg/1546565340_thumb.jpg" />
+				<p>中国船配业加速“弯道超车”</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219027" title="全球班轮公司运力排名TOP-20（截至2019年1月2日）">
+				<img src="../../imgs/nimg/smallimg/1546502796_thumb.jpg" />
+				<p>全球班轮公司运力排名TOP-20...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">
+				<img src="../../imgs/nimg/smallimg/1546447149_thumb.jpg" />
+				<p>SwissMarine与戴安娜航...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=218925" title=" 2018国内船舶海工行业十大新闻">
+				<img src="../../imgs/nimg/smallimg/1546248928_thumb.jpg" />
+				<p> 2018国内船舶海工行业十大新...</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">SwissMarine与戴安娜航运签约，租下好望角型船舶</a></li>
+						<li><a href="news_show.php?id=218753" title="苏伊士运河延长原油船通行费优惠">苏伊士运河延长原油船通行费优惠</a></li>
+						<li><a href="news_show.php?id=218704" title="中航鼎衡获德国GEFO4艘LNG-Ready化学品船订单">中航鼎衡获德国GEFO4艘LNG-Ready化学品船订单</a></li>
+						<li><a href="news_show.php?id=218474" title="SFL：3艘船集资2.7亿美元">SFL：3艘船集资2.7亿美元</a></li>
+						<li><a href="news_show.php?id=218371" title="最新通知：大宇造船签新LNG船订单">最新通知：大宇造船签新LNG船订单</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

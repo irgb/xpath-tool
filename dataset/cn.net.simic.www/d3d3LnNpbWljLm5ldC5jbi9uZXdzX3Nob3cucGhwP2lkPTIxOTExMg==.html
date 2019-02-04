@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>跨太平洋市场基本面对航运公司有利_国际海事信息网</title>
+<meta name="keywords" content="跨太平洋市场基本面对航运公司有利" />
+<meta name="description" content="跨太平洋市场基本面对航运公司有利" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">跨太平洋市场基本面对航运公司有利</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-07 &nbsp;&nbsp;
+					浏览量：1451&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p>航运分析师认为，鉴于当前市场基本面相比去年有了一定改善，航运公司能够在今年第二季度与托运商进行合同签约之前保持跨太平洋东向航线的运价繁荣景象。对于航运公司和托运商而言，最出乎意料的是美国对中国出口商品加征税引起的提前出货现象，尽管后来中美决定暂缓加征新关税，但是大量货物已经运出。关于贸易摩擦会如何演变存在很多不确定因素，这也使得局势更为复杂。不过分析师认为市场基本面仍然对航运公司有利。<br />
+航运咨询机构德路里的集装箱研究高级经理Simon Heaney表示，即使2018年底提前出货导致了2019年初期需求下降，航运公司也比2018/19合同季占据了更有利的地位。东向航线目前的即期费率相比去年同期几乎翻了一番，而且应该会在合同签约开始之前保持高于前一年的水平。如果贸易摩擦加剧，新一轮提前出货又将推动运费上涨。<br />
+由于中国农历新年会对需求量造成影响，大多数分析师都预测这会相应地促进接下来几周的中美市场贸易。不过中国春节之后预计会出现季节性需求下跌。物流公司Freightos指出尽管跨太平洋海运运价近期有所下降，但仍然比去年同期水平高了一倍多，而且一月份仍将继续保持。<br />
+BIMCO首席航运分析师Peter Sand表示，接下来几周跨太平洋东向市场很可能由于美国进口商提前出货而受到打击，不过市场基本面平衡一直是运价和合同的决定因素，因此航运公司面临的处境仍然比去年好很多。</p>
+					<p align="center"></p>
+					<p align="right">来源：中国船检  </p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219113">[下一篇] 干散货市场发展步伐加快</a>
+					   
+					 
+						<a href="news_show.php?id=219111">[上一篇] 克拉克森:2019年航运股票迎来“新的曙光”</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219794" title="2018年物流大盘点：绿色物流引关注 发生“大革命”">2018年物流大盘点：绿色物流引关注 发生“大革命”</a></li>
+							<li><a href="news_show.php?id=219795" title="全国多地出台利好政策 支持邮政与物流快递业发展">全国多地出台利好政策 支持邮政与物流快递业发展</a></li>
+							<li><a href="news_show.php?id=219799" title="德国超市集团麦德龙与getnow.de拓展杂货寄递合作">德国超市集团麦德龙与getnow.de拓展杂货寄递合作</a></li>
+							<li><a href="news_show.php?id=219796" title="智能物流成行业大势 末端配送短板今年有望解决">智能物流成行业大势 末端配送短板今年有望解决</a></li>
+							<li><a href="news_show.php?id=219797" title="京东公布2019春节送货通知：全年无休 保证时效">京东公布2019春节送货通知：全年无休 保证时效</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">
+				<img src="../../imgs/nimg/smallimg/1548079262_thumb.jpg" />
+				<p>德鲁里：船公司推迟交付以缓和UL...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547802697_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">德鲁里：船公司推迟交付以缓和ULCV影响</a></li>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

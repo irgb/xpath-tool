@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>
+        建筑新网：中铁二十四局:打造鹏城“高颜值”轨交项目部                         
+   
+    </title>
+    
+    <script type="text/javascript">
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        window.location.href = "/index.php/Home/Mobile/detail.html?id=11318";
+    }
+</script>
+
+    <!-- <script type="text/javascript">
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            window.location.href = "/index.php/Home/Mobile/index.html";
+        }
+    </script> -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/Public/layui/css/layui.css">
+    <script src="/Public/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/jz.css">
+    <script type="text/javascript" src="/Public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+    $('#type1 option[value=]').attr('selected', 'selected');
+    </script>
+
+    <script type="text/javascript">
+    var CalendarData = new Array(100);   
+    var madd = new Array(12);   
+    var tgString = "甲乙丙丁戊己庚辛壬癸";   
+    var dzString = "子丑寅卯辰巳午未申酉戌亥";   
+    var numString = "一二三四五六七八九十";   
+    var monString = "正二三四五六七八九十冬腊";   
+    var weekString = "日一二三四五六";   
+    var sx = "鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+    var cYear, cMonth, cDay, TheDate;   
+    CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6, 0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD, 0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55, 0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA, 0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95, 0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26, 0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D, 0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497, 0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F, 0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D, 0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);   
+    madd[0] = 0;   
+    madd[1] = 31;   
+    madd[2] = 59;   
+    madd[3] = 90;   
+    madd[4] = 120;   
+    madd[5] = 151;   
+    madd[6] = 181;   
+    madd[7] = 212;   
+    madd[8] = 243;   
+    madd[9] = 273;   
+    madd[10] = 304;   
+    madd[11] = 334;   
+    function GetBit(m, n) {        return (m >> n) & 1;    }   
+    function e2c() {       
+        TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0], arguments[1], arguments[2]);       
+        var total, m, n, k;       
+        var isEnd = false;       
+        var tmp = TheDate.getYear();       
+        if (tmp < 1900) {            tmp += 1900;        }        total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4) + madd[TheDate.getMonth()] + TheDate.getDate() - 38;       
+        if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {            total++;        }       
+        for (m = 0;; m++) {            k = (CalendarData[m] < 0xfff) ? 11 : 12;            for (n = k; n >= 0; n--) {                if (total <= 29 + GetBit(CalendarData[m], n)) {                    isEnd = true; break;                }                total = total - 29 - GetBit(CalendarData[m], n);            }            if (isEnd) break;        }        cYear = 1921 + m;       
+        cMonth = k - n + 1;       
+        cDay = total;       
+        if (k == 12) {            if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth = 1 - cMonth;            }            if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth--;            }        }   
+    }   
+    function GetcDateString() {       
+        var tmp = "";       
+        tmp += tgString.charAt((cYear - 4) % 10);       
+        tmp += dzString.charAt((cYear - 4) % 12);       
+        tmp += "年 ";       
+        if (cMonth < 1) {           
+            tmp += "(闰)";           
+            tmp += monString.charAt(-cMonth - 1);       
+        } else {            tmp += monString.charAt(cMonth - 1);        }        tmp += "月";       
+        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿" : "三十"));       
+        if (cDay % 10 != 0 || cDay == 10) {            tmp += numString.charAt((cDay - 1) % 10);        }       
+        return tmp;   
+    }   
+    function GetLunarDay(solarYear, solarMonth, solarDay) {        //solarYear = solarYear<1900?(1900+solarYear):solarYear;
+               
+        if (solarYear < 1921 || solarYear > 2020) {            return "";        } else {           
+            solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;           
+            e2c(solarYear, solarMonth, solarDay);           
+            return GetcDateString();       
+        }   
+    }    //调用
+       
+    var D = new Date();   
+    var yy = D.getFullYear();   
+    var mm = D.getMonth() + 1;   
+    var dd = D.getDate();   
+    var ww = D.getDay();   
+    var ss = parseInt(D.getTime() / 1000);   
+    if (yy < 100) yy = "19" + yy;   
+    function GetCNDate() {        return GetLunarDay(yy, mm, dd);    }    $(document).ready(function() {       
+        var d = GetCNDate();       
+        var nongli = document.getElementById('nongli');
+        //         alert(d);
+        nongli.innerHTML = d;
+
+           
+    });
+    </script>
+    <style type="text/css">
+        
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px); 
+        }
+
+    </style>
+    <script type="text/javascript">
+    //设为首页 www.jb51.net
+    function SetHome(obj, url) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(url);
+        } catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch (e) {
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                }
+            } else {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+            }
+        }
+    }
+
+    //收藏本站 www.jb51.net
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+            }
+        }
+    }
+    </script>
+    <style type="text/css">
+        ::-webkit-input-placeholder {
+          color: #aaa;
+        }
+        :-moz-placeholder {
+          color: #aaa;
+        }
+        ::-moz-placeholder{
+        color: #aaa;
+        }
+        :-ms-input-placeholder {
+          color: #aaa;
+        }
+
+    </style>
+</head>
+<!--右侧浮窗开始-->
+<link rel="stylesheet" href="/Public/css/homepage.css" />
+<link rel="stylesheet" href="/Public/css/fireman109.css" />
+
+<body>
+    <header class="am-topbar header " style="width:100%;z-index: 101;height:;background: #fff;">
+        <div class="top_nav" style="width:100%;padding-left:50px;">
+            <span>中国建筑业门户网站</span>
+            <div style="height: 30px;float: right;margin-right:150px;">
+                <!-- <a  href="#" style="color: #F58400;">设为首页</a> |
+                <a  href=#">收藏</a> -->
+                <a href="javascript:void(0);" style="color: #F58400;" onclick=" SetHome(this,'http://www.jzsbs.com')">设为首页</a> |
+                <a href="javascript:void(0);" onclick="AddFavorite('建筑新网','http://www.jzsbs.com')">收藏</a>
+            </div>
+        </div>
+    </header>
+    <!--logo-->
+    <div class="bannerDiv content " style=" margin-bottom: 5px; margin-top: 50px; height: 100px; ">
+        <div class="logo " style="float: left;margin-left:-10px">
+            <a href="/">
+                    <img src="/Public/picture/logo.png" />
+                </a>
+        </div>
+        <div class="main-right" style="height: 100px;padding-top: 30px;margin-right:-45px">
+            <span style="font-size: 12px;">
+                2018年12月28日&nbsp;&nbsp;星期五 <span id="nongli"></span></审判
+          >
+          <style type="text/css">
+            .h_search select {  
+                      /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
+                          border: solid 1px #000;  
+                          
+                          /*很关键：将默认的select选择框样式清除*/  
+                          appearance:none;  
+                          -moz-appearance:none;  
+                          -webkit-appearance:none;  
+                          
+                          /*在选择框的最右侧中间显示小箭头图片*/  
+                  
+                  /*在选择框的最右侧中间显示小箭头图片*/  
+                  background: url("/Public/images/red.png") no-repeat  45px 5px;    
+                  
+                  
+                    /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
+                  padding-right: 14px;  
+                }   
+          </style>
+            <form action="/index.php/Home/Index/searchList.html">
+                <div class="h_search">
+                    <ul>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <select id="type1" name="type" style="width: ;height: 30px;border: none;display: block;width: 67px;padding: 5px; font-size: 15px;color: #333;appearance:none;padding-left:10px">
+                            <option value="1">标题</option>
+                            <option value="2">作者</option>
+                        </select>
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd;margin-left: 1px solid #ddd">
+                        <input style="display: block;" class="head_search" value="" id="num" name="search"  type="text" placeholder="请输入关键字" onKeyUp="showLen(this);" style="width: 151px" />
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <input class="head_search" style="float: left;display:block;margin-left: -5px;width:80px;background: #eee;line-height:30.3px;color: #000;font-size: 16px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;text-align: center;" type="submit" value="搜 索" />
+                    </li>
+                </ul>
+                    <script type="text/javascript">
+                    showLen(document.getElementById("num"));
+                    function showLen(obj){
+                        // document.getElementById('span').innerHTML = '&nbsp;&nbsp;还可输入'+ (200-obj.value.length) +'位';
+                        if(obj.value.length>10){
+                            var objValue = obj.value;
+                            objValue=objValue.substr(0,10);
+                            document.getElementById('num').value=objValue;
+                        }
+                    }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="clear "></div>
+    </div>
+    <!--导航-->
+    <div class="titleDiv ">
+        <div class="content " style="margin: 0 auto">
+            <ul style="margin: 0px;padding:0px">
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=1">新闻</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=6">市场</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=4">基建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=8">创优</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=10">聚焦</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=2">地方</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=19">海外</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=9">市政</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=11">安全</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=72">访谈</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=27">人物</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=39">规划</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=42">钢结构</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=21">咨询</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=30">绿建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=65">工地</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=20">设计</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=74">信息化</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=73">房产</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=31">园林</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=29">建材</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=32">机械</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=22">协会</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=5">法苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=75">数据</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=28">装饰</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=3">科技</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=23">企业</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=76">文苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/videoList.html">视频</a>
+                        </li>
+                    </ul>
+                </li>
+                <div class="clear "></div>
+            </ul>
+        </div>
+    </div>
+    
+
+    <style type="text/css">
+    img {
+        max-width: 740px;
+        max-height: 1500px;
+    }
+
+    p {
+        margin: 0 !important;
+        padding: 0!important;
+        font-family: '微软雅黑'!important;
+        padding: 15px!important;
+        text-indent: 2em!important;
+        line-height: 2em!important;
+        font-size: 16px!important;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+    <!--内容-->
+    <div class="content">
+        <!--left-->
+        <div class="content-left" style="padding: 0px 75px 0px 7px">
+            <div class="content-title fengeline">
+                <a href="/">建筑新网</a> >
+                <a href="/index.php/Home/Index/newsList.html?id=23">企业 >
+                <a href="javascript:void(0)">正文</a>
+            </div>
+                        <h1 style=" text-align: center; margin: 10px 0; ">中铁二十四局:打造鹏城“高颜值”轨交项目部 </h1>
+                        <p class="content-left-wenzhang-time">时间：2018年12月28日&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：<span class="content-source">建筑时报</span> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 作者：顾今 徐敏</p>
+	                <!-- <p>立足深圳、筑牢广东、开辟珠三角、圆梦深港澳</p> -->
+	                <p><p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>城市的发展，交通扮演着不可或缺的角色。深圳，这座不断加速着的城市，正在进入一个史上最大的轨交建设狂潮。据统计，目前深圳在建地铁线路共有14条，成为全国之最；从2019年起，每年将会有不少于两条的地铁线路开通。在这场声势浩大的地铁建设浪潮中，中铁二十四局轨道交通分公司这支拥有悠久历史的基建主力军首次挺进深圳轨交领域，为加快推进深圳交通基础设施建设积极贡献力量。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;></span></p><p style=text-align: center><img  id=/attach/2018-12-284ccc2392-c95f-44d0-be91-7a6cd2090092.jpg src=/attach/2018-12-284ccc2392-c95f-44d0-be91-7a6cd2090092.jpg type=image width=500 height=410 border=0 vspace=0 title= alt= style=width: 500px; height: 410px;/></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>中铁二十四局轨道交通分公司党委书记朱亮来提出“立足深圳、筑牢广东、开辟珠三角、圆梦深港澳”的区域经营理念，他们在2018年初承建深圳市城市轨道交通16号线工程施工总承包九工区龙城公园停车场项目。记者走进该项目，试着解读项目部以人为本、和谐自然，独具匠心地打造“高颜值”的花园式项目部的建设密码。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;><strong>“星级”项目部</strong></span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>“这个项目部驻地太高大上了！”几乎每位来到中铁二十四局深圳轨交16号线龙城公园停车场项目部的人，都会发出这样的感叹。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>谁说建筑人只能住工棚？规划合理的场地利用、美观大气的办公楼、平整干净的透水砖路面、整洁明亮的生活区，郁郁葱葱的景观绿化……在龙城公园停车场项目部，“高大上”的景象令人目不暇接，由衷点赞！</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>该项目部驻地距离建设工地约2公里，位于龙岗区清晖路与飞扬路交叉口西北侧，占地面积5000平方米。自2018年4月初投入建设以来，项目部始终遵循深圳市合法合规要求、谋划在先、施工在后的原则，在施工前运用BIM技术，提前建模规划，然后组织施工，于当年6月21日正式投入使用。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>在整体布局上，项目部方位坐北朝南，保证了充足光线。驻地还充分考虑交通环境、地势高差及车辆转弯半径等，采取从侧部拉坡建通道，同时与隔壁消防中队的场地相结合，保证了原有人行道通畅并避免了开设路口。值得一提的是，驻地所处的原本是个小山坡，项目部没有常规性地进行大拆大挖，而是为了不破坏生态，更富有创造性地在利用原来地形地貌的基础上，将办公区、生活区和监理区依地势有序分布，既减少了土方挖运成本，又错落有致地布置了不同分区。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>沿入口坡道走近项目部，首先映入眼帘的是由大门立柱及门卫岗亭组合成的数字“16”，寓意深圳地铁16号线。再往里看，一幢两层钢结构玻璃幕墙建筑坐落在院中，和传统的工地项目部相比“豪华”了不少。项目书记倪峰说，“虽然这只是个临时工程，但绝不能搞成‘城中村’，所以我们的临设也要与周边环境相协调。”为此，办公区的灰色屋顶白色墙面，以及浅黄色仿石涂料的围墙，都与周边建筑的颜色保持了一致。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>此外，对比传统意义上的工地活动板房，龙城公园停车场项目部还增添了在以往工地无法遇见的高端配置——宽敞明亮的会议室、干净整洁的员工餐厅、高端大气的会客厅、标准尺寸的篮球场以及其他设备配套齐全的生活休闲区……因而，被大家称为“五星级”项目部。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;><strong>白鸽不“搬家”</strong></span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>项目部里有位特殊的“原住民”——一只白鸽，白天你能在篮球场、花坛边看到它悠闲信步的身影，夜晚它则入住在办公区的2层楼梯间内，就像项目部的员工一般，把这里当成了自己的“家”。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>项目副书记黄平介绍说，这只鸽子原来就在这安家，后来建造了办公区，它也毫不生疏。为什么鸽子能继续安心住在这里？黄平说，因为我们把“花园”搬进了项目部。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;></span></p><p style=text-align: center><img  id=/attach/2018-12-281d48d3bc-1eda-4ddc-b815-4b3255072d14.jpg src=/attach/2018-12-281d48d3bc-1eda-4ddc-b815-4b3255072d14.jpg type=image width=500 height=410 border=0 vspace=0 title= alt= style=width: 500px; height: 410px;/></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>由中铁二十四局承建的龙城公园停车场项目是深圳地铁16号线的重要组成部分，项目位于龙城公园内，场地内现状为公园绿地，东侧、北侧、南侧均为山体，西侧为道路。根据规划，停车场用地面积约为13.4万平方米，总建筑面积约为7.2万平方米，用于地铁16号线列车的停放、列检、清洗、维修工作等，主要建设项目包括：运用库（由周月检库、停车列检库、洗车库辅助用房组成）、综合楼（含办公、食堂、宿舍）、混合变电所，为半地下建筑物，停车场上盖还将建公园绿化等。“就是说，之前这是个公园，建成后地下是停车场，地上依旧是个公园，”倪峰解释说。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>对此，项目部萌发出一个共同的想法——既然建的就是一个公园，那不如也建一座花园式的项目部。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>位于办公区正前方的“蝴蝶泉”是花园式项目部的点睛之笔。这是一个蝴蝶型的喷泉水池，充分利用自然资源将屋面及地面雨水通过有序排水收集于“蝴蝶泉”中，待水池达到一定高度后，就会自然排出至排水网，形成一个临时蓄水池，蓄水能力可达30立方米。池中水可用来为花坛草木浇水，以及作为洗车用水，也可形成一个美丽的景观，“同时也寓意着通过此工程，中铁二十四局在深圳市场能产生蝴蝶效应，立足深港澳。”倪峰说。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>“蝴蝶泉”旁的花坛中还有一块刻着“龍”字的景观石。据介绍它原先坐落于龙城公园内，因施工无处安置，项目部便把它“请”来，成为办公区前的一处好风景。倪峰告诉记者，“待项目建成后，它还将回到公园。”</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>此外，在项目部围墙的一处生长着一棵“歪脖子”树，根在围墙内，身子却长在了围墙外。为了尽量减少临建周边的树木砍伐，项目部在建造围墙时特意为这棵树定制了专门的围栏，确保它可以自由生长，也使绿化与临建融为一体。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><strong><span style=font-family: 宋体, SimSun;>和谐“一家亲”</span></strong></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>花园式项目部不仅与建设中的城市公园相吻合，让项目部建设更好地融入当地环境，还可以让常年辗转漂泊的建设者感受到“家”的温暖和舒适。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>项目驻地宿舍区共有22间宿舍，可同时容纳66人。宿舍可“提包入住”，标配1.2米单人床、床头柜、衣柜、晾衣架、空调等，基本就是宾馆标准，保证大家能有个整洁舒适的住宿环境。同时还设立“职工驿站”，为前来探亲的家属提供住宿，节省开支，也让员工更安心地在项目上工作。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;></span></p><p style=text-align: center><img  id=/attach/2018-12-284403fd19-3678-4e6c-93cc-d5b11d9f0a03.jpg src=/attach/2018-12-284403fd19-3678-4e6c-93cc-d5b11d9f0a03.jpg type=image width=500 height=377 border=0 vspace=0 title= alt= style=width: 500px; height: 377px;/></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>驻地还充分利用空间，设置了健身器材区、桌球室和篮球场等娱乐设施；为了减轻员工的家务负担，项目部还在生活区设立了洗衣房，为男女员工各配置了相应的全自动洗衣机，省时省力；专门设置了两处晾衣棚，避免晾晒衣物被雨淋；还在办公区和生活区内配置了直饮水设备，配备了空气能热水器，能够24小时进行热水提供。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>除了内部员工“一家亲”，项目部还注重处理好与周边社区、相关单位的和谐共处。项目部专门发出了一份“告市民书”，其中写道：在建设过程中将倾听市民意见，共创良好周边环境，努力打造“平安、绿色、和谐”的文明施工标准化工地，建设深圳美好家园!</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>在办公区二楼有两块玻璃窗上贴着“警惕光污染，8:00-14:30请勿打开此窗”标识。原来住在对面的居民反映，这两扇窗在该时间段打开会形成光线反射，直接照到他们家中。为此项目部贴心地将这两扇窗定时“戒严”，解除居民的后顾之忧。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>为了让周边居民更清楚地了解整个项目的建设情况，项目部还主动发放了一大批公益扇，上面不仅印着16号线平面示意图与龙城公园停车场建成后的景观恢复效果图，还印着详细的联系方式，方便居民及时与项目部保持沟通。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>项目部还积极参与周边社区的各项公益活动，如与街道合作成立道路交通安全劝导站，通过信息报送、安全宣传、文明劝导、隐患排查等方式积极参与文明交通服务活动。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>干一方工程，交一方朋友。近日，本着“以球会友，运动，快乐”的宗旨，项目部还利用场地内的标准篮球场举办了“篮球架起友谊桥梁&nbsp;携手共建魅力龙城”系列联赛，与北京城建设计院（深圳分院）、深圳地铁咨询有限公司、深圳龙岗检察院切磋球技，巩固友谊。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;><strong>劳模“传帮带”</strong></span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>项目部还着力强化以人为本的管理理念，发挥企业文化的育人功能，努力营造积极向上、和谐健康的文化氛围。带领团队增强凝聚力的领路人正是该项目的党支部书记倪峰。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>2018年5月，云南省总工会授予倪峰“五一劳动奖章”。为了向身边楷模学习，全面培养职工的工匠精神，在集团公司的指导下，项目部成立了倪峰劳模创新工作室，并确立了三大攻关课题：高大基坑边坡施工技术；盾构过岩溶断裂带施工技术；施工管理创新。倪峰表示，他将带领工作室成员开展技术攻关，不断提高大家的技术水平，并在5年内完成所列各项课题研究，同时还将积极开展导师带徒和学习交流活动，为项目部和企业培养学习型、知识型、技能型、创新型职工。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;></span></p><p style=text-align: center><img  id=/attach/2018-12-28f42aa172-788f-4048-b074-4d79d0a3bfd6.jpg src=/attach/2018-12-28f42aa172-788f-4048-b074-4d79d0a3bfd6.jpg type=image width=500 height=286 border=0 vspace=0 title= alt= style=width: 500px; height: 286px;/></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>除了发挥劳模的“传帮带”作用，项目部还开设党员活动室和党员活动日，进一步加强工地党支部的团结协作作用，进一步提高项目部党员的综合能力。党员活动室不仅能发挥桥梁和纽带作用，还能组织开展形式多样的活动，密切联系党群关系，使党组织的凝聚力不断增强，促进党建工作的深入开展。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>采访结束时，中铁二十四局轨道交通分公司总经理刘长春打来电话说，“这是一个有温度的项目部，传递着暖暖的幸福感，以此项目为新起点，在珠三角开辟更大的市场……”这个“高颜值”的项目部实现了人、建筑物、环境的和谐统一，最大程度地为建设者的工作和生活提供人性化服务，既增强了员工的归属感，也有力地促进了项目建设的文明施工和安全生产，必将为后续在珠三角的经营承揽打下坚实基础。</span></p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; line-height: 1.75em; text-indent: 0em; outline: none !important;><span style=font-family: 宋体, SimSun;>&nbsp; &nbsp;&nbsp;</span></p><p><br/></p></p></p>
+            <p class="wenzhang-fenxiang">
+                <div id="share">
+                    <div class="bdsharebuttonbox">
+                        <span>分享:</span>
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+                    </div>
+                </div>
+            </p>
+            <div class="wenzhangpian">
+                <div class="wenzhangshang" >
+                    <a class="wenzhangshang-pic" href="javascript:void(0)"><img src="/Public/picture/arrowl.png" /></a>
+                    <span style="margin-top: 15px;margin-left: 40px;">
+                        <span style="margin-bottom: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11317" >上一篇</a></span>
+                        <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11317" >
+                                “苏河之眼”合龙...</a>
+                            </span>
+                    </span>
+                                    </div>
+                <div class="wenzhangtitle">
+                </div>
+                <div class="wenzhangxia">
+                    <a class="wenzhangxia-pic" href="javascript:void(0)"><img src="/Public/picture/arrowr.png" /></a>
+                    <span style="margin-top: 15px;margin-right: 40px;">
+                            <span style="margin-bottom: 5px;"><a href="/index.php/Home/Index/detail.html?id=11319">下一篇</a></span>
+                            <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11319" >我国全面实施市场准入负面清单制...</a>
+                            </span>
+                        </span>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+            <script>
+            function sendSg() {
+                var saytext = document.getElementById('saytext1').value;
+                // alert(saytext);
+                if (saytext == "") {
+                    alert("您没什么话要说吗？");
+                } else {
+                    document.getElementById("saypl").submit();
+                }
+
+            }
+            </script>
+            <div class="wenzhang-pinglun">
+                <form action="/index.php/Home/Index/addComment.html" method="post" name="saytext" id="saypl">
+                    <input type="hidden" name="id" value="11318">
+                    <input type="hidden" name="classid" value="23">
+                    <textarea name="saytext" id="saytext1"></textarea>
+                    <!-- </td> -->
+                    <a class="send arrow" onclick="javascript:sendSg();">我要评论</a>
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="wenzhang-pinglun-detail">
+                <div class="pinglun-title" style="width: 762px">
+                    <span class="pinglun-title-1">最新评论</span>
+                    <span class="pinglun-title-2">0条评论</span>
+                </div>
+                <div class="clear"></div>
+                <ul class="pinglun-list">
+                                    </ul>
+                <div class="xianshi-more" style="display:none;">
+                    <a><img src="/Public/picture/sanji_05.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        <!-- <link rel="stylesheet" type="text/css" href="layui/css/layui.css"> -->
+        <div class="content-right ">
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />建筑新网</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                <ul>
+                                    <li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11033">1.习近平宣布：港珠澳大桥正式开通</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11004">2.海南自贸区允许设立外资建企承揽区内建筑工程项目</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10830">3.国务院常务会议要求聚焦补短板扩大有效投资</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10738">4.铁路建设补短板加速 中西部占近七成</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10368">5.习近平主席向萨勒总统移交中国援助塞内加尔规模最大项目“金钥匙”</a>
+                                        </li>                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />推荐视频</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                 <video style="width:360px;margin-left: -10px"  controls="controls " src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video.
+                        <!--    <source src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video. -->
+                    </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <!-- <div class="main-right-paiming-title ">行业排名</div> -->
+                <div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/b6c209df99caa8ab9db84d986244c561.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/483db82c084eb5f69dac4c4c4cc9e9d2.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/2a974835fdc21eecb7444a115094ba45.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div>            </div>
+        </div>
+    </div>
+    <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "中铁二十四局:打造鹏城“高颜值”轨交项目部",
+            "bdDesc": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "http://"+"www.jzsbs.com"+"//Public/picture/jzsb.jpg",
+            "bdStyle": "1",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <!-- <script src="——js/c2a583e6cfae410e9fb8cdab9062b261.js"></script> -->
+    <div class="clear"></div>
+
+    <!-- FOOTER -->
+    <div class="main-bottom ">
+        <div class="content ">
+            <div class="main-bottom-friend ">
+                <span>友情链接：</span>
+                <a target="blank" href="http://www.mohurd.gov.cn">中华人民共和国住房和城乡建设部</a><a target="blank" href="http://www.zgjzy.org">中国建筑业协会</a><a target="blank" href="http://www.bjjs.gov.cn/publish/portal0/tab3939/">北京市住房和城乡建设委员会</a><a target="blank" href="http://www.bjjl.org.cn/">北京市建筑业联合会</a><a target="blank" href="http://www.shjx.org.cn/">上海市建筑施工行业协会</a><a target="blank" href="http://www.scca.sh.cn/">上海市建设工程咨询行业协会　</a><a target="blank" href="http://www.jsconi.com/">江苏省建筑行业协会</a><a target="blank" href="http://www.ahjst.gov.cn/ahzjt_Front/">安徽省住房和城乡建设厅</a><a target="blank" href="http://www.ahjzy.com.cn/">安徽省建筑业协会</a><a target="blank" href="http://www.gdcia.org/">广东省建筑业协会</a>            </div>
+            <div style="text-align: center ;line-height: 2em!important;color:#666">
+                
+                <span style="margin-bottom:10px;">版权所有:建筑新网社Copyright@2014,Construction All rights reserved</span><br>
+                <span style="margin-bottom:10px;">地址:上海杨浦区营口路588号 18楼 邮编:200433 电话:021-63216799</span><br>
+                <span >沪ICP备14023239号</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+
+        //…
+    });
+    </script>
+
+</body>
+
+</html>

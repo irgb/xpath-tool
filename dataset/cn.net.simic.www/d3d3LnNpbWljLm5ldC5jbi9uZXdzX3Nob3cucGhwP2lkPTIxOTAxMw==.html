@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>希腊船东：油船市场已经复苏_国际海事信息网</title>
+<meta name="keywords" content="油船市场" />
+<meta name="description" content="希腊船东：油船市场已经复苏" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">希腊船东：油船市场已经复苏</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-03 &nbsp;&nbsp;
+					浏览量：1439&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">希腊油船船东Tsakos Energy Navigation（TEN）称，历史上最长的油船市场周期性低迷终于结束，市场复苏&ldquo;已经在我们身上反映出来&rdquo;。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">由于市场逆势，加上7艘船定期坞修而停租，导致公司今年前9个月净亏损3610万美元。而2017年同期，公司盈利1880万美元。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">TEN首席执行官Nikolas Tsakos表示，由于新建船舶数量少、旧船拆解量增加，市场上的自然船队数量十年来首次出现下降，供需逐渐趋于平衡。TEN在第四季度表现乐观，因为运费大幅回升。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">在2018年前9个月，VLCC运费平均每天约12615美元，而现在每天超过56000美元；苏伊士型油船每天为8000美元，目前为44000美元；阿芙拉型油船从每天9000美元回升至28000美元。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">&ldquo;随着我们接近2018年年底，越来越多明显的迹象显示，最糟糕的时期已经过去。全球石油需求继续保持上升趋势，美国原油出口飙升、在中国和印度找到了新的目的地，而全球油船船队也在紧缩。由于老龄船舶拆解量超过了新船交付量，而且国际海事组织2020年硫排放上限新规将会带来供给扭曲，油船前景比过去三个季度更加积极。&rdquo;该公司报告业绩时表示。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">TEN近期敲定了今年至今为止的第24份租船合同，称大多数合同都有向上费率的选择。租船合同平均租期为两年，TEN预计将从中兑现2.5亿美元，使合同收入金额最低达到11.5亿美元。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">在市场环境改善的背景下，TEN的管理层就10艘租船合同即将到期的船舶进行新的租船合同协商，重点关注上行潜力。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">由于市场反弹有望推动资产价格复苏，该公司表示将考虑剥离部分老龄油船，同时寻找替代船舶。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">TEN正在调查LNG船和穿梭油船的机会，以扩张增加其船队，而不危及公司健康的资产负债表。</p>
+<p style="padding-bottom: 5px; line-height: 26px; widows: 2; text-transform: none; background-color: rgb(255,255,255); list-style-type: none; font-style: normal; text-indent: 2em; margin: 0px 0px 15px; padding-left: 0px; padding-right: 0px; font-family: arial, 宋体; word-wrap: break-word; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 14px; font-weight: 400; word-spacing: 0px; padding-top: 5px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">&ldquo;由于2018年前三个季度亏损，TEN正在利用第四季度运费强势回升的机会。随着石油需求增加、运力供应减少以及石油供应充足，目前的市场好转是可持续的，&rdquo;TEN首席运营官George Saroglou表示。</p>
+					<p align="center"></p>
+					<p align="right">来源：国际船舶网</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219014">[下一篇] 注意丨美国港口拥堵继续恶化，货物延误及高额堆场费困扰外贸货代企业！</a>
+					   
+					 
+						<a href="news_show.php?id=219012">[上一篇] 悲剧，新年刚过就沉船，1死10失踪</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+									<li><a href="news_show.php?id=7944" title="2006年10月油船市场分析">2006年10月油船市场分析</a></li>
+									<li><a href="news_show.php?id=60684" title="油船市场逐步摆脱积弱状态">油船市场逐步摆脱积弱状态</a></li>
+									<li><a href="news_show.php?id=96828" title="油船市场料将承压原油需求增长乏力">油船市场料将承压原油需求增长乏力</a></li>
+									<li><a href="news_show.php?id=98139" title="MR型成品油船市场略有抬头">MR型成品油船市场略有抬头</a></li>
+									<li><a href="news_show.php?id=130644" title="大型油船市场不存在环保船">大型油船市场不存在环保船</a></li>
+									<li><a href="news_show.php?id=134622" title="J Lauritzen计划退出成品油船市场">J Lauritzen计划退出成品油船市场</a></li>
+									<li><a href="news_show.php?id=135611" title="Torm看好成品油船市场">Torm看好成品油船市场</a></li>
+									<li><a href="news_show.php?id=135837" title="苏伊士型油船市场有望逐渐好转">苏伊士型油船市场有望逐渐好转</a></li>
+									<li><a href="news_show.php?id=137574" title="Fram Shipping退出油船市场">Fram Shipping退出油船市场</a></li>
+									<li><a href="news_show.php?id=137766" title="船东不抱团油船市场难复苏">船东不抱团油船市场难复苏</a></li>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219664" title="我国首个石墨烯国家标准出炉">我国首个石墨烯国家标准出炉</a></li>
+							<li><a href="news_show.php?id=219672" title="中远海运集团有意接手韩进苏比克？">中远海运集团有意接手韩进苏比克？</a></li>
+							<li><a href="news_show.php?id=219674" title="权威报告：自动化时代来临！海员、码头工人要失业？！？">权威报告：自动化时代来临！海员、码头工人要失业？！？</a></li>
+							<li><a href="news_show.php?id=219665" title="新技术实现常温常压制备高纯度氢气">新技术实现常温常压制备高纯度氢气</a></li>
+							<li><a href="news_show.php?id=219667" title="红星造船厂将获14艘冰级LNG船大单">红星造船厂将获14艘冰级LNG船大单</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547743717_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">
+				<img src="../../imgs/nimg/smallimg/1547356668_thumb.jpg" />
+				<p>Cosco售后回租四艘1万TEU...</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+						<li><a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">SwissMarine与戴安娜航运签约，租下好望角型船舶</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

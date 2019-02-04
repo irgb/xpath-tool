@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>创业板市场总貌（12.28）</title>
+<base href="http://chinext.zqrb.cn/" />
+<link href="/css/chaungyeban-content.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+pre{
+	white-space:pre-wrap;/*css-3*/
+    white-space:-moz-pre-wrap;/*Mozilla,since1999*/
+    white-space:-pre-wrap;/*Opera4-6*/
+    white-space:-o-pre-wrap;/*Opera7*/
+    word-wrap:break-word;/*InternetExplorer5.5+*/　　
+}
+.middle{
+    text-indent: 2em;
+    font: 18px "宋体";
+    color: #000;
+    width: 890px;
+    margin-top: 20px;
+}
+.big{
+    text-indent: 2em;
+    font: 20px "宋体";
+    color: #000;
+    width: 890px;
+    margin-top: 20px;
+}
+.small{
+    text-indent: 2em;
+    font: 16px "宋体";
+    color: #000;
+    width: 890px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="http://www.zqrb.cn/skin/js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link href="css/head.css" rel="stylesheet" type="text/css" />
+<base target="_blank" />
+<script type="text/javascript">
+function switLabel(IDWord,IDNum,LNum,styleName) {
+	for(i=1;i<=LNum;i++) {
+		if(i==IDNum) {
+			$("#"+IDWord+i).attr("className",styleName);
+			$("#con_"+IDWord+"_"+i).css("display","");
+		} else {
+			/*if(IDWord=="index"){
+				$("#"+IDWord+i).attr("className","f-tab");
+			}else if(IDWord=="fourq"){
+				$("#"+IDWord+i).attr("className","sz");
+			}else if(IDWord=="flow"){*/
+				$("#"+IDWord+i).attr("className","");//jlc
+			//}
+			$("#con_"+IDWord+"_"+i).css("display","none");
+		}
+	}
+}
+function search() {
+	var searchtype = document.getElementById('select').value;
+	var keyword = document.getElementById('securitieNum').value;
+	if(searchtype == "notice") {
+		var searchurl = "newsList.html?securitieNum="+keyword;
+	} else if (searchtype == "company"){
+		var searchurl = "other.php?type=gsgk&content="+keyword;
+	}
+	window.open(searchurl);
+}
+
+$( function(){	
+$("#securitieNum").focus(function() {
+	if($("#securitieNum").val()=='代码/简称/公司名'){
+		$("#securitieNum").val('');
+	}
+});
+
+$("#securitieNum").click(function() {
+	if($("#securitieNum").val()=='代码/简称/公司名'){
+		$("#securitieNum").val('');
+	}
+});
+
+$("#securitieNum").blur(function() {
+	if($("#securitieNum").val()=='' || $("#securitieNum").val().length==0){
+		$("#securitieNum").val('代码/简称/公司名');
+	}
+	
+});
+
+$("#securitieNum").keyup(function() {
+ var h = GetKeyCode();
+ //alert(h);
+ if(h>64)
+ {
+	if($("#securitieNum").val().length!=0 && $("#securitieNum").val()!='代码/简称/公司名'){
+		$.get("./soso.php", { seNum: $("#securitieNum").val()},
+  			function(data){
+  				//alert(data);
+  				if(data!=''){
+  					var aResult = new Array();
+    				aResult = data.split(",");
+					setColors(aResult);
+  				}
+  				else{
+  					 clearColors();
+  				}
+  		}); 
+	}
+	else{
+		 clearColors();
+	}
+	}
+});
+
+});
+function clearColors(){
+	var oPopDiv = document.getElementById("popup");
+	var oColorsUl = document.getElementById("colors_ul");
+	//清除提示内容
+	if(oColorsUl){
+		for(var i=oColorsUl.childNodes.length-1;i>=0;i--)
+			oColorsUl.removeChild(oColorsUl.childNodes[i]);
+		oPopDiv.className = "hide";
+	}
+}
+function setColors(the_colors){
+	var oPopDiv = document.getElementById("popup");
+	var oColorsUl = document.getElementById("colors_ul");
+	//显示提示框，传入的参数即为匹配出来的结果组成的数组
+	clearColors();	//每输入一个字母就先清除原先的提示，再继续
+	oPopDiv.className = "show";
+//	oPopDiv.style="display:block";
+	var oLi;
+	for(var i=0;i<the_colors.length;i++){
+		//将匹配的提示结果逐一显示给用户
+		oLi = document.createElement("li");
+		oColorsUl.appendChild(oLi);
+		oLi.appendChild(document.createTextNode(the_colors[i]));
+ 
+		oLi.onmouseover = function(){
+			this.className = "mouseOver";	//鼠标经过时高亮
+		}
+		oLi.onmouseout = function(){
+			this.className = "mouseOut";	//离开时恢复原样
+		}
+		oLi.onclick = function(){
+			//用户点击某个匹配项时，设置输入框为该项的值
+			var n_v = this.firstChild.nodeValue.split("  ");
+			$("#securitieNum").val(n_v[0]);
+			clearColors();	//同时清除提示框
+		}
+	}
+}
+function GetKeyCode() {//取得不同浏览器下的键盘事件值 
+var even = getEvent();
+return even.keyCode;
+} 
+function mpsinit() { 
+    document.onkeydown = mpsshowKeyDown
+	//document.onkeyup = mpsshowKeyDown
+}
+function getEvent(){   
+    if(document.all)    return window.event;
+         func=getEvent.caller;    
+     while(func!=null){  
+        var arg0=func.arguments[0];
+       if(arg0){
+         if((arg0.constructor==Event || arg0.constructor ==MouseEvent)
+           || (typeof(arg0)=='object' && arg0.preventDefault && arg0.stopPropagation)){  
+            return arg0;
+      }
+      }
+       func=func.caller;
+   }
+   return null;
+  }
+function mpsshowKeyDown()
+{
+   var h = GetKeyCode();
+   switch(h)
+   {
+      case 40:
+	  var i = $("#colors_ul li").length;
+	  //$("#colors_ul li")[0].className = "mouseOver";
+	  var a = -1;
+	  for(j=0;j<i;j++)
+	  {
+	     if($("#colors_ul li")[j].className == "mouseOver")
+		 a = j;
+	  }
+	   for(j=0;j<i;j++)
+	  {
+	     $("#colors_ul li")[j].className = "mouseOut";
+	     //$("#colors_ul li")[j].className = "mouseOut"; 
+	  }
+	  if(a<i-1)
+	  {
+	  $("#colors_ul li")[a+1].className = "mouseOver";
+	  }
+	  else{
+	  $("#colors_ul li")[0].className = "mouseOver";
+	  }
+	  break;
+	  case 38:
+	  var i = $("#colors_ul li").length;
+	  //$("#colors_ul li")[0].className = "mouseOver";
+	  for(j=0;j<i;j++)
+	  {
+	     if($("#colors_ul li")[j].className == "mouseOver")
+		 a = j;
+	  }
+	   for(j=0;j<i;j++)
+	  {
+	     $("#colors_ul li")[j].className = "mouseOut";
+	     //$("#colors_ul li")[j].className = "mouseOut"; 
+	  }
+	  if(a>0)
+	  {
+	  $("#colors_ul li")[a-1].className = "mouseOver";
+	  }
+	  else{
+	  $("#colors_ul li")[i-1].className = "mouseOver";
+	  }
+	  break;
+	  case 13:
+       var i = $("#colors_ul li").length;
+	  //$("#colors_ul li")[0].className = "mouseOver";
+	  var a = 0;
+	  for(j=0;j<i;j++)
+	  {
+	     if($("#colors_ul li")[j].className == "mouseOver")
+		 a = j;
+	  }
+	  //alert(a);
+	 var n_v = $("#colors_ul li")[a].firstChild.nodeValue.split("  ");
+	  $("#securitieNum").val(n_v[0]);
+	  clearColors();	//同时清除提示框
+	  return false;
+	  break;
+   }
+}
+
+</script>
+ <div class="yetou">
+ <div class="miao">
+ <select name="searchtype" id="select">
+                                 		
+<option selected="selected" value="notice">公告查询</option>
+<option value="company">公司档案</option>                                        
+</select>
+  <div class="seaachbox">
+        <input class="searchbut" value="" type="submit" onclick="search()" />
+
+       <input name="keywords" value="简称/代码/拼音" type="text" class="searchinpunt" id="securitieNum" onfocus="this.value='';" onblur="if(this.value==''){this.value='简称/代码/拼音'}" />&nbsp;<div id="popup"><ul id="colors_ul"></ul></div>
+
+      </div>
+ </div>
+</div>
+<div class="banner">
+<div class="bgimg">
+<div class="wzlogo"><a href="http://www.zqrb.cn/"><img src="images/logoing_03_03.png" alt="网站logo" width="95" height="77"></a>
+
+
+</div>
+
+
+</div>
+
+</div>
+<div class="daohang">
+ <div class="xpdh">
+ <div class="dhl">
+  <ul>
+    <li id="banner1" class="" onmouseover="switLabel('banner',1,6,'good')"><a target="_blank" href="index.html">首页</a></li>
+    <li id="banner2" class="" onmouseover="switLabel('banner',2,6,'good')"><a target="_blank" href="newsList.html">信息披露</a></li>
+    <li id="banner3" class="" onmouseover="switLabel('banner',3,6,'good')"><a target="_blank" href="company.php">公司档案</a></li>
+    <li id="banner4" class="" onmouseover="switLabel('banner',4,6,'good')"><a target="_blank" href="newsList.html?ct=classdata&classId=178">投资者教育</a></li>
+    <li id="banner5" class="" onmouseover="switLabel('banner',5,6,'good')"><a target="_blank" href="newsList.html?ct=classdata&classId=175">市场数据 </a></li>
+    <li id="banner6" class="" onmouseover="switLabel('banner',6,6,'good')"><a target="_blank" href="newsList.html?ct=classdata&classId=177">市场指引</a>   </li>
+  </ul>
+ </div>
+ </div>
+</div>
+
+<div class="white">
+<div id="con_banner_1" class="yincang" style="display:block"></div>
+ <div class="yincang1" id="con_banner_2" style="display:none">
+ <div class='nav2_1' id='nav2_1'><a href='newsList.html?ct=classdata&classId=173'>交易所公告</a>&nbsp;<a href='newsList.html?ct=classdata&classId=176'>上市公司公告</a>&nbsp;<a href='newsList.html?ct=classdata&classId=197'>证监会公告</a>&nbsp;<a href='newsList.html?ct=classdata&classId=320'>创业板预披露</a>&nbsp;</div>
+ </div>
+ <!--<!--信息披露下拉结束-->
+ <!--公司档案下拉开始-->
+ <div class="yincang2" id="con_banner_3" style="display:none">
+ <a target="_blank" href="http://chinext.zqrb.cn/other.php?type=gsgk&content=300001">公司概况</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=fxrz&content=300001">发行融资</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=lnfh&content=300001">历年分红</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=ggry&content=300001">高管人员</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=gbjg&content=300001">股本结构</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=sdgd&content=300001">十大股东</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=ltgd&content=300001"> 流通股东</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=cwzb&content=300001"> 财务指标</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=zyzb&content=300001"> 重要经营指标</a>︳<a target="_blank" href="http://chinext.zqrb.cn/other.php?type=ggzy&content=300001">公告摘要</a>
+ 
+ </div>
+
+ <!--公司档案下拉结束-->
+ 
+<!--市场数据下拉开始-->
+ <div class="yincang3" id="con_banner_5" style="display:none">
+ <div class='nav2_1' id='nav2_4'><a href='newsList.html?ct=classdata&classId=187'>交易公开信息</a>&nbsp;<a href='newsList.html?ct=classdata&classId=188'>市场总貌</a>&nbsp;<a href='newsList.html?ct=classdata&classId=190'>行情统计表</a>&nbsp;</div>
+ </div>
+ <!--市场数据下拉结束--> 
+ 
+ <!--市场指引下拉开始-->
+ <div class="yincang4" id="con_banner_6" style="display:none">
+ <div class='nav2_1' id='nav2_5'><a href='newsList.html?ct=classdata&classId=179'>基础知识</a>&nbsp;<a href='newsList.html?ct=classdata&classId=180'>法律法规</a>&nbsp;<a href='newsList.html?ct=classdata&classId=321'>政策解读</a>&nbsp;</div>
+ </div>
+
+ <!--市场数据下拉结束--> 
+ 
+</div>
+<!--头部结束--> <div id="box">
+	<!--头部开始-->
+    <script type="text/javascript">
+    function changefont(classname)
+    {
+        var curclass=$("#content").attr('class');
+        $("#content").removeClass(curclass);
+        $("#content").addClass(classname);
+    }
+    </script>
+    <!--头部结束-->
+    <!--内容开始-->
+    <div id="hot" class="nry">
+
+<div class="content">
+  <div class="dqy">
+   <div class="dqwz">
+   <div class="wz">
+  <a target="_blank" href="http://www.zqrb.cn">证券日报网 </a> 
+  <span class="jt"> > </span>
+    <a target="_blank" href="index.html">创业板</a>
+    <span class="jt"> > </span> &nbsp;信息披露  
+    </div>
+
+    <div class="gb"><img src="/images/dy.jpg" alt="创业板走势图" width="79" height="15" onclick="print();"></div>
+    <div class="dy"><img src="/images/gb.jpg" alt="创业板走势图" width="79" height="15" onclick="window.close();"></div>
+  </div>
+            	<p class="ggbt">创业板市场总貌（12.28）</p>
+                <div class="ft"><span class="time">时间：2018/12/29 00:00:00</span><span>字体：[<input type="button" class="fontbtn" value="大" onclick="changefont('big')"> <input type="button" class="fontbtn" value="中" onclick="changefont('middle')"> <input type="button" class="fontbtn" value="小" onclick="changefont('small')">] </span></div>
+            </div>
+            <div class="hot_article1">
+										<br/>
+            	<div id="content" class="wenzahng" style="width:840px;"><p>&nbsp;</p>
+<table class="table table-responsive table-tab1" style="box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; font-size: 14px; width: 869px; max-width: 100%; margin-bottom: 0px; min-height: 0.01%; overflow-x: auto; table-layout: fixed; color: rgb(51, 51, 51); font-family: &quot;microsoft yahei&quot;, 宋体, Arial;">
+    <thead style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">指标名称</th>
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">本日数值</th>
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">比上日增减</th>
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">幅度%</th>
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">本年最高</th>
+            <th class="text-center" style="box-sizing: border-box; padding: 8px 4px; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); background-color: rgb(246, 246, 246); font-weight: 400;">最高值日期</th>
+        </tr>
+    </thead>
+    <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">深证成指</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">7,239.79</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">24.45</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.33</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">11,607.57</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">深证综指</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1,267.87</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">3.63</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.28</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1,960.93</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">中小板指</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">4,703.03</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">13.26</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.28</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">7,781.58</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-03-12</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">创业板指</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1,250.53</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2.44</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.19</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1,900.48</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-03-30</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">上市公司数</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2,134</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.00</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">&nbsp;</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">&nbsp;</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">上市证券数</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">7,972</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">9</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.11</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">&nbsp;</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">&nbsp;</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">市场总成交金额（亿元）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2,239.72</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-333.83</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-12.97</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">4,577.86</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-04-02</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票总股本（亿）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">19,872.06</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-76.63</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-0.38</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">19,948.70</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-12-27</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票流通股本（亿）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">15,550.32</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-80.32</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-0.51</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">15,630.64</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-12-27</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票总市值（亿元）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">165,409.01</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">563.64</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.34</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">244,416.68</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票流通市值（亿元）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">121,095.44</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">407.43</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.33</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">176,681.56</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票成交金额（亿元）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1,347.91</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-181.26</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-11.85</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">3,608.24</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-03-12</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">平均股票价格（元）</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">8.32</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.06</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.73</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">13.22</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票平均市盈率</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">20.00</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.07</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">0.35</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">37.53</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-01-24</td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td class="text-left" style="box-sizing: border-box; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">股票平均换手率</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">1.02</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-0.14</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">-12.35</td>
+            <td class="text-right" style="box-sizing: border-box; text-align: right; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2.37</td>
+            <td class="text-center" style="box-sizing: border-box; text-align: center; line-height: 1.42857; vertical-align: middle; border-style: solid; border-color: rgb(238, 238, 238); padding: 8px 5px !important;">2018-11-13</td>
+        </tr>
+    </tbody>
+</table></div>
+			            </div>
+            <div class="indes2_footer">          </div>
+        </div>
+        <div class="hot3"></div>
+   <div class="foot">
+	<div class="footline"> </div>
+	<div class="footul">
+	<!--<ul> 
+		<li><a href="http://www.zqrb.cn/aboutus/jieshao.html" target="_blank">网站介绍</a> | </li>
+		<li style="display:none;"><a href="http://www.zqrb.cn/aboutus/jieshao.html" target="_blank">网站介绍</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/links.html" target="_blank">合作伙伴</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/lx.html" target="_blank">联系我们</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/zp.html" target="_blank">招聘信息</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/gg.html" target="_blank">广告合作</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/sitemap.html" target="_blank">网站地图</a> | </li>
+		<li><a href="http://www.zqrb.cn/aboutus/shengming.html" target="_blank">版权声明</a> | </li>
+		<li><a onClick="window.external.AddFavorite(location.href,document.title)" style="cursor:pointer;">收藏本网</a></li> 
+		</ul>-->
+		</div> 
+		
+		<div class="footlogo"><a href="http://www.zqrb.cn/" target="_blank"><img src="http://www.zqrb.cn/skin/images/foot-logo.gif" alt="证券日报网" width="167" height="43" /></a></div> 
+   <div class="footxt">
+  <p>版权所有 证券日报网    京ICP备17054264号　</p> 
+  <p>证券日报网所载文章、数据仅供参考，使用前务请仔细阅读法律申明，风险自负。</p> <p>证券日报社联系电话：82031700 网站联系电话：84372599 网站传真：84372566 电子邮件：xmtzx@zqrb.net</p></div></div>
+</div>
+    </div>
+        </div>
+</body>
+</html>

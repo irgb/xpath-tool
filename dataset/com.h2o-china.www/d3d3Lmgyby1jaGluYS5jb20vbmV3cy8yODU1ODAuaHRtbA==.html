@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>深入探讨迪诺拉的CECHLO®现场制氯消毒技术-中国水网</title>
+    <meta name="keywords" content="迪诺拉 制氯消毒技术"/>
+    <meta name="description" content="2018年迪诺拉签订为中国香港特别行政区10家饮用水处理厂提供水消毒以及氧化、过滤和电解制氯解决方案的合同，充分展现了其为全球客户提供创新解决方案的实力。《亚洲给水排水..."/>
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/txteditor.css" rel="stylesheet" type="text/css">
+<link href="/css/footer.css" rel="stylesheet" type="text/css">
+
+    <link href="/css/news.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery/1.11.1/jquery.min.js" ></script>    <link href="/css/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/js/artdialogv602/ui-dialog.css">
+<script src="/js/artdialogv602/dialog-plus.js"></script>    <script src="/js/jquery.form.js" type="text/javascript"></script>
+    <script src="/js/news.comment.js" type="text/javascript"></script>
+</head>
+
+<body>
+<header id="header2">
+    <!-- 通用头部开始 333-->
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+<div id="topNav">
+    <div class="topBar">
+        <ul class="topColumn">
+            <li><a href="/">水网首页</a></li>
+            <li><a href="/news/">新闻</a></li>
+            <li><a href="/column/index">专栏</a></li>
+            <li><a href="/topic/">专题</a></li>
+            <li><a href="/video/">视频</a></li>
+            <li><a href="/research/">研究院</a></li>
+            <li><a href="/ipo/">上市公司</a></li>
+            <li><a href="/policy/">政策</a></li>
+            <li><a href="/law/">法规</a></li>
+            <li><a href="/paper/">论文</a></li>
+            <li><a href="/standard/">标准</a></li>
+            <li><a href="/expert/">专家</a></li>
+            <li><a href="/show/">会展</a></li>
+            <li><a href="/price/">水价</a></li>
+            <li><a href="http://bbs.h2o-china.com" target="_blank">BBS</a></li>
+            <li><a href="http://shui.tsinghuan.com/shop" target="_blank">企业</a></li>
+            <li><a href="http://shui.tsinghuan.com/wiki" target="_blank">案例</a></li>
+        </ul>
+        <div class="moreColumn"><span>更多</span>
+            <ul>
+                <li><a href="http://shui.tsinghuan.com/product" target="_blank">设备</a></li>
+                <li><a href="http://shui.tsinghuan.com/technology" target="_blank">技术</a></li>
+                <li><a href="http://shui.tsinghuan.com/zbinfo" target="_blank">招标</a></li>
+                <li><a href="http://www.qinghuan.com/job//" target="_blank">人才</a></li>
+                <li><a href="http://wn.h2o-china.com/" target="_blank">污泥联盟</a></li>
+                <li><a href="http://gs.h2o-china.com/" target="_blank">供水联盟</a></li>
+            </ul>
+        </div>
+        <div class="login">
+
+            <script type="text/javascript">
+document.write('<a href="http://www.qinghuan.com/member/login.php" >登录</a><a href="http://www.qinghuan.com/member/register.php" >注册</a><a href="http://www.qinghuan.com/member/" >会员中心</a>');
+
+
+                $(document).ready(function () {
+                    var model = 'news';
+                    var stype = '';
+                    var model_text = '';
+
+                    if (model == 'news')
+                        model_text = '新闻';
+                    else if (model == 'topic')
+                        model_text = '专题';
+                    else if (model == 'policy')
+                        model_text = '政策';
+                    else if (model == 'law')
+                        model_text = '法规';
+                    else if (model == 'standard')
+                        model_text = '标准';
+                    else if (model == 'paper')
+                        model_text = '论文';
+                    else if (model == 'expert')
+                        model_text = '专家';
+                    else if (model == 'research')
+                        model_text = '研究';
+                    else if (model == 'show')
+                        model_text = '会展';
+                    else if (model == 'bbs')
+                        model_text = 'BBS';
+                    else if (model == 'video')
+                        model_text = '视频';
+                    else  model_text = '新闻';
+
+                    if (stype == 'author') {
+                        model_text = '作者';
+                    }
+
+                    $('#fancyshow').text(model_text);
+
+                    $('#fancy').find('a').bind('click', function () {
+
+                        var text = $(this).text();
+                        $('#fancyshow').text(text);
+
+                        $('#searchform').attr('action', $(this).attr('title'));
+
+                    });
+
+                    $('#fancy>li>a').each(function (i) {
+                        if ($(this).text() == model_text) {
+                            $('#searchform').attr('action', $(this).attr('title'));
+                        }
+                    });
+
+
+                    $('#submitBtn').bind('click', function () {
+                        //
+                        if ($('#fancyshow').text() == 'BBS') {
+                            var schv = $('#schv').val();
+                            var schv = encodeURIComponent(schv);
+                            location.href = "http://www.baidu.com/s?ie=gbk&site=1&wd=site%3Abbs.h2o-china.com+" + schv + "&q=" + schv + "&sa=true";
+
+                            return false;
+                        }
+
+                        $('#searchform').submit();
+
+                    });
+
+
+                });
+
+            </script>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 这里怎么没法注释 -->
+
+<style>
+    #topADExt {
+        margin: 10px auto;
+        width: 1000px;
+    }
+
+</style>
+<!--  banner广告start -->
+<div id="topADExt">
+    <script language="javascript" src="/ggclick?id=62"></script>
+</div>
+
+
+<div id="branding">
+    <div class="logo">
+                <a href="/"><img src="/images/header/logo2.jpg" alt="中国水网" title="返回水网首页"></a>
+                        <a href="/news/"><img src="/news/images/channel_logo.jpg"></a>
+        
+    </div>
+    <form id="searchform" name="searchform" method="get" action="#" class="ssForm mt20">
+        <div class="ss_nav_boxa"><a id="fancyshow" href="javascript:void(0);" class="a1">新闻</a>
+            <ul id="fancy" class="ss_nav_ul">
+                <li><a href="javascript:void(0);" title="/news/search">新闻</a></li>
+                <li><a href="javascript:void(0);" title="/video/search">视频</a></li>
+                <li><a href="javascript:void(0);" title="/policy/search">政策</a></li>
+                <li><a href="javascript:void(0);" title="/law/search">法规</a></li>
+                <li><a href="javascript:void(0);" title="/standard/search">标准</a></li>
+                <li><a href="javascript:void(0);" title="/paper/search">论文</a></li>
+                <li><a href="javascript:void(0);" title="/expert/search">专家</a></li>
+                <li><a href="javascript:void(0);" title="/research">研究</a></li>
+                <li><a href="javascript:void(0);" title="/show/search">会展</a></li>
+                <li><a href="javascript:void(0);" title="/topic/list">专题</a></li>
+                <li><a href="javascript:void(0);" title="bbs">BBS</a></li>
+                <li><a href="javascript:void(0);" title="/news/search" data-type="author">作者</a></li>
+            </ul>
+            <input id="schtype" name="stype" value="title" type="hidden">
+        </div>
+        <p class="fl">
+            <input id="schv" name="schv" class="ss_nav_text w180" type="text" value="">
+        </p>
+        <p class="fr">
+            <input id="submitBtn" name="submitBtn" class="ss_nav_btn" type="button">
+        </p>
+    </form>
+</div>
+    <!-- 通用头部结束 -->
+
+    <!-- 频道导航开始   -->
+    <div id="navb" class="zcNav">
+	<ul>
+				<li   style="width:9.09%"%><a href="/news">新闻首页</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=1">综合</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=2">政策</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=3">市场</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=10">项目</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=5">技术</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=6">社会</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=7">国际</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=8">上市公司</a></li>
+				<li   style="width:9.09%"%><a href="/news/list?cid=9">访谈</a></li>
+				<li   style="width:9.09%"%><a href="/topic">专题</a></li>
+			</ul>
+</div>  
+
+    <!-- 频道导航结束  -->
+    <div id="location"><a href="/"><i class="fa fa-home"></i>首页</a> <span>&gt;</span> <a href="/news">新闻</a>
+        <span>&gt;</span> 正文
+    </div>
+</header>
+
+<div class="news_main w1000 bc zoom mt5">
+    <div class="w690 fl">
+        <div class="news_boxa">
+            <div class="newscontent_press">
+                <h1 class="tc">深入探讨迪诺拉的CECHLO®现场制氯消毒技术</h1>
+                <div class="mt25 newscontent_press_con">
+                    <p class="fl">时间：2018-12-28 17:11</p>
+                    <p class="fl ml40 newscontent_press_p1">
+                        来源：<span>《亚洲给水排水》</span>                    </p>
+                    <p class="fl ml40">
+                                            </p>
+
+                    <!-- wzz new -->
+                    <p class="fl ml90"><a href="#joinNum">评论（<em>0</em>）</a></p>
+                    <!-- wzz new -->
+
+                    <div class="share_btn"><span class="fl">分享</span><em class="icons1 fr"></em>
+                        <div class="clear"></div>
+                        <div class="share" url="http://wx.h2o-china.com/news/285580.html"
+                             title="深入探讨迪诺拉的CECHLO®现场制氯消毒技术"></div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="f14 l24 news_content mt25 zoom" id="txtedit"><!--内容部门画中画-->
+                                <div class="fl ad_hzh mr15">
+                    <script language="javascript" src="/ggclick?id=132"></script>
+                </div>
+                                <p style="text-indent: 2em;">2018年迪诺拉签订为中国香港特别行政区10家饮用水处理厂提供水消毒以及氧化、过滤和电解制氯解决方案的合同，充分展现了其为全球客户提供创新解决方案的实力。<p style="text-indent: 2em;">《亚洲给水排水》杂志特邀迪诺拉电极技术业务董事总经理MakotoOkura先生，深入探讨迪诺拉的CECHLO®现场制氯(OSCG)技术以及企业的未来发展计划。<p style="text-indent: 2em;">问：这是香港首次采用迪诺拉的现场制氯技术进行水消毒吗?<p style="text-indent: 2em;">MO：迪诺拉已经在香港扎根30年之久，提供各类解决方案，但就CECHLO®现场制氯(OSCG)技术而言，确实是第一次。从上世纪80年代起，我们一直在香港推广自有电化学技术，应用方面不仅包括发电站，还有饮用水、泵站、废水和公共游泳池。<p style="text-indent: 2em;">问：还有哪些国家采用了这项技术?<p style="text-indent: 2em;">MO：日本有4处应用，还有北美和尼日利亚。非洲的一些国家因为没有制氯厂基础设施，所以也采用这项技术。对于尼日利亚的项目，我们与GEWater Process Technologies共同作为EPC承包商合作完成此项目。位于尼日利亚卡杜纳的终端用户WATTCCON，他们建造了一座新厂，凭借GEWater &amp; Process Technologies USA和迪诺拉的技术优势，每天可生产40,000公升浓度为15%的次氯酸钠溶液。<p style="text-indent: 2em;">他们表示，该项目对于西非地区的次氯酸钠制备厂具有开创性意义，所采用的工艺更健康，更安全而且更环保。这家CECHLO 现场制氯厂证明，即使在非洲，消除氯气运输及储存过程中的潜在危险也是典型的趋势。<p style="text-indent: 2em;">问：CECHLO®系统相比10年前，在功率效率、制氯产能和成本方面有哪些改善?<p style="text-indent: 2em;">MO：我们潜心数十年开发CECHLO®技术，(功耗方面)取得了长足进步。跟问世之初相比，功耗已降低到50%以下，而产能则达到原来的两倍。<p style="text-indent: 2em;">问：相比水处理行业对氯的传统使用，全球和亚洲对替代性消毒技术的认可情况如何?<p style="text-indent: 2em;">MO：从整个地区来看，需求一直在增长。但在大部分亚洲国家，如印度尼西亚和其他发展中国家，业内面临的废水回收法规不太严格，因此行业参与者缺乏足够的动力去追求先进解决方案，包括在新技术采纳时加入环境考量。<p style="text-indent: 2em;">不过，近年来随着亚洲环保行动主义的发展和法规的日益严格，各家公司越来越注重提高工业流程的标准，支持甚至鼓励创新。<p style="text-indent: 2em;">我们相信，该地区客户对环保产品的需求将持续增长，我们将通过减少水的消耗，以及通过中水回用缓解清洁可用水的短缺，以帮助企业实现环保目标。<p style="text-indent: 2em;">为此，迪诺拉推出一系列不同成本和复杂程度各异的解决方案-针对不同的市场需求提供多样化的选择。<p style="text-indent: 2em;">问：使用替代性消毒技术有哪些好处?客户应当从哪些角度考虑是否采用该技术?<p style="text-indent: 2em;">MO：多年来，使用氯气消毒一直是发展中国家最常见的水处理选择，尽管价格便宜，但也存在一定的健康风险。随着法规对维持低余氯量的要求越来越严格，更多的国家开始倾向于在<a href="http://www.h2o-china.com/news/field?fid=3" target="_blank" title="市政供水" class="keylink">市政供水</a>流程中采用现场制氯和次氯酸钠技术(OSCG)。<p style="text-indent: 2em;">问：替代性消毒技术的未来发展趋势如何?<p style="text-indent: 2em;">MO：我们预测：随着有限水资源带来的压力不断增加，人们对于替代水源(如中水回用)的关注也将不断增加。可饮用和不可饮用水的再利用最终对于满足全球需求至关重要，尤其是在水使用效率和减少消耗等方法达到极致之后。<p style="text-indent: 2em;">但是，为确保<a href="http://www.h2o-china.com/news/field?fid=6" target="_blank" title="再生水" class="keylink">再生水</a>安全可用，该应用领域需要考虑去除新兴污染物(Contaminantsof Emerging Concern，或CEC)，也称微量污染物。这也为曝气生物滤池(BAF)等解决方案带来了机遇，这项技术可以和臭氧结合，去除废水中的微量微生物，解决相关问题，从而实现中水回用。<p style="text-indent: 2em;">为什么香港选择迪诺拉的CECHLO®现场制氯消毒技术<p style="text-indent: 2em;">香港水务署(WSD)决定展开全港范围改建工程，以解决在高人口密度水厂周边地区运输和存放液氯的安全问题。<p style="text-indent: 2em;">选择的迪诺拉CECHLO®系统是一种离子交换<a href="http://www.h2o-china.com/news/field?fid=12" target="_blank" title="膜" class="keylink">膜</a>电解技术，用于现场生产氯气和12.5%的高浓度次氯酸钠。<p style="text-indent: 2em;">每个饮用水处理厂的现场制氯系统每天的混合产氯量约为16.9吨氯。所有现场制氯系统预计到2020年投入使用。<p style="text-indent: 2em;">水务署首席机电工程师/维护工程师CHOPing-ho先生向WWA说明了选择水消毒系统的理由。<p style="text-indent: 2em;">问：为什么香港水务署选择迪诺拉?<p style="text-indent: 2em;">PH：水务署最近对香港水处理厂的当地制氯可行性进行了内部审议。<p style="text-indent: 2em;">结果表明，小规模制氯厂在市场上更为普遍，这使得现场制氯在技术上具有可行性。由于加氯在水处理消毒的应用技术层面得到认可，并且更经济，审议过程中并没有考虑其他消毒解决方案。由于迪诺拉很好的满足合同中水务署的技术规格要求及安全要求，承包商向水务署提议迪诺拉。<p style="text-indent: 2em;">问：香港每个水处理厂每天需要多少氯，香港又从哪里购得?<p style="text-indent: 2em;">PH：香港的水处理厂目前每天平均使用6吨氯。由于香港没有制氯厂，通常是从大陆进口瓶装和桶装的液氯。<p style="text-indent: 2em;">问：为什么水务署决定改为现场制氯?<p style="text-indent: 2em;">PH：安全性一直是我们最大的顾虑。现场制氯将实现减少，甚至彻底消除对外购液氯的需求，及其其相关的运输及储存需求。我们的定量风险评估表明，液氯运输和储存过程中存在一定的风险，主要涉及氯气泄漏，由于这些可能性着实不可避免，我们决定通过现场制氯以解决安全问题。<p style="text-indent: 2em;">同时，我们一直在寻找更加可靠的供货来源，大陆供应商的问题在于供应上会有波动。随着制氯技术逐代改进和提高，现在我们可以选择大小合适的制氯系统，直接安装于我们的水厂内。
+
+
+                <div class="content_fany  fany  mt20">
+                    
+                    <div class="fanye"></div>
+                    
+
+                </div>
+
+                <p class="tr editorPeople">编辑：赵凡</p>
+            </div>
+
+            <!-- wzz new -->
+            <div>
+                <div class="lmpraise ml270" id="newsPraise" onclick="praise(285580)">
+                    <div class="lmpraise_nub">
+                        <span>0</span>赞
+                    </div>
+                </div>
+            </div>
+
+            <div class="mshare mt25" url="http://www.h2o-china.com/news/285580.html" title="分享"
+                 desc="深入探讨迪诺拉的CECHLO®现场制氯消毒技术">
+                <ul class="lmshare fr">
+                    <li><a href="javascript:void(0)" tag="weixin" title="微信"><img src="images/lmshare_wx.png" alt="微信"></a>
+                    </li>
+                    <li><a href="javascript:void(0)" tag="qq" title="QQ"><img src="images/lmshare_qq.png" alt="QQ"></a>
+                    </li>
+                    <li><a href="javascript:void(0)" tag="txwb" title="腾讯微博"><img src="images/lmshare_tw.png"
+                                                                                  alt="腾讯微博"></a></li>
+                    <li><a href="javascript:void(0)" tag="weibo" title="新浪微博"><img src="images/lmshare_sina.png"
+                                                                                   alt="新浪微博"></a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <div class="relatednews_title">
+                    <h4>相关新闻</h4>
+                </div>
+                <ul class="f14 l30 relatednews_ul mt22">
+                                        <li>
+                        <a href="/news/275048.html" target="_blank">迪诺拉水务技术：水体消毒从“世家”到“专家”</a>
+                    </li>
+                                        <li>
+                        <a href="/news/274192.html" target="_blank"> DeNora迪诺拉亮相上海环博会 精彩活动等你来</a>
+                    </li>
+                                        <li>
+                        <a href="/news/267357.html" target="_blank">迪诺拉（中国）为提高产量耗资千万美元进行新工厂扩建和升级</a>
+                    </li>
+                                        <li>
+                        <a href="/news/259246.html" target="_blank">迪诺拉为兰州群众饮水安全保驾护航</a>
+                    </li>
+                                        <li>
+                        <a href="/news/258570.html" target="_blank">拥有NSF的迪诺拉ClorTec®再获涉水证  加速深耕中国脚步</a>
+                    </li>
+                                    </ul>
+            </div>
+
+            <!-- wzz new 这原来是一张图片-->
+          <!--   <p class="mt20">
+                <img src="images/adderweima.jpg">
+            </p> -->
+
+            <div class="newsreview mt25">
+                <div class="newsreviewlist mt50">
+                    
+                    <div id="quoteDemo" class="newsreview_tit" style="display:none;">
+                        <form id="quoteForm" action="/news/comment" method="post">
+                            <div class="inbox">
+                                <textarea class="textarea" name="q_replybody" id="q_replybody"></textarea>
+                                <span class="bluetopicon"></span>
+                            </div>
+                            <div class="author">
+                                        <span class="authortit">
+                                                                                    </span>
+                                <input type="hidden" id="cid" name="cid" value="0"/>
+                                <input type="hidden" id="q_newsid" name="q_newsid" value="285580"/>
+                                <input type="hidden" name="q_posturl" id="q_postUrl" value="http://www.h2o-china.com/news/285580.html"/>
+                                <input type="button" name="quoteBtn" id="quoteBtn" class="botton fr mt5 mr10"
+                                       value="发布"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="newsreview_top">
+                    <b>网友评论</b>
+                    <span class="fr">
+                                <em id="joinNum">0</em>人参与
+                                <em>|</em>
+                                <em>0</em>条评论
+                            </span>
+                </div>
+                <div class="newsreview_tit">
+                    <form id="replyForm" action="/news/comment" method="post">
+                        <div class="inbox">
+                            <textarea class="textarea" name="replybody" id="replybody"></textarea>
+                        </div>
+                        <div class="author">
+                                    <span class="authortit">
+                                                                                <label class="pl20">
+                                            <input type="text" name="vcode" id="vcode" size="6"
+                                                   style="vertical-align:middle;"/>
+                                            <img id="vcodeimg" src="/mb/verifycode" style="vertical-align:middle;"
+                                                 title="点击刷新"/>
+                                            <a id="chgcode" href="javascript:void(0)">看不清，换一张</a>
+                                        </label>
+                                    </span>
+                            <input type="hidden" name="posturl" id="postUrl" value="http://www.h2o-china.com/news/285580.html"/>
+                            <input type="hidden" id="newsid" name="newsid" value="285580"/>
+                            <input type="button" name="replyBtn" id="replyBtn" value="发布" class="botton fr mt5 mr10"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <p class="copyrightnotice f12 l22 mt50"><span>版权声明：</span>
+                本网注明"来源：E20环境平台"、"来源：中国水网"、"中国水网讯"等字样的文字、图片内容，版权均属中国水网所有，如若转载，请注明来源。同时本网转载内容不代表本网观点。
+                 <br><span>商务合作请联系：李女士  010-88480519</span>
+            </p>
+        </div>
+    </div>
+    <div class="w280 fr">
+        <div class="rBlock syzl pb10 b-2-g">
+            <div class="title">
+                <h2><a href="/column"><img src="/images/r_title_img1.jpg" class="mt10"></a></h2>
+                <span class="more"><a href="/column">更多</a></span>
+                <div class="clear"></div>
+            </div>
+            <div class="con">
+                <ul>
+                                        <li class="txtPic mt15">
+                        <div class="fl w80 pic">
+                            <a href="/column/writer?uid=27" target="_blank">
+                                <img src="http://imgs.h2o-china.com/column/2015/06/34_1433831743.jpg">
+                                <div class="zlName">王凯军</div>
+                            </a>
+                        </div>
+                        <div class="fr w180">
+                            <em><a href="/column/987.html" target="_blank" title="城市水环境管理与考核方式变化下的新型排水系统构建">城市水环境管理与考核方式变化下...</a></em>
+                            <p>1我国城市水环境管理与考核方式的变化...</p>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                                        <li class="txtPic mt15">
+                        <div class="fl w80 pic">
+                            <a href="/column/writer?uid=72" target="_blank">
+                                <img src="http://imgs.h2o-china.com/column/2016/08/33_1470807599.jpg">
+                                <div class="zlName">刘建国</div>
+                            </a>
+                        </div>
+                        <div class="fr w180">
+                            <em><a href="/column/976.html" target="_blank" title="刘建国：坚持焚烧重要位置，求真务实构建垃圾分类中国模式">刘建国：坚持焚烧重要位置，求真...</a></em>
+                            <p>清华大学环境学院教授刘建国认为环保理...</p>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+
+        <!-- 锵锵三人行 -->
+        <div class="news_boxa r_news_boxa pb10 mt20">
+            <div class="zoom mt10">
+    <p class="fl ml5"><img src="/news/images/r_title_img2.jpg"></p>
+    <span class="more fr mr15 mt5"><a href="/topic/list?cid=14">更多</a></span>
+</div>
+<p class="mt10">
+    <a href="/topic/856.html" title="第十五期铿锵三人行 环保税法对环境产业的影响" target="_blank">
+        <img src="http://imgs.h2o-china.com/topic/2018/08/113_1535339979.jpg" width="280" height="120">
+    </a>
+</p>
+<div class="news_r_con1 f12 l18 mt15 pl7 pr7">
+    <h4><a href="/topic/856.html" target="_blank">第十五期铿锵三人行 环保税法对环境产业的影响</a></h4>
+    <p class="mt10">
+        <a href="/topic/856.html" target="_blank">2016年12月25日，全国人大常委会通过《环境保护税法》，并将于2018年1月1日起施行。这是我国...</a>
+    </p>
+</div>        </div>
+
+        <!-- ad -->
+        <div class="news_boxa r_news_boxa pt20 mt20"><!--画中画侧边栏-->
+            <script language="javascript" src="/ggclick?id=129"></script>
+        </div>
+
+        <!-- 热点排行 -->
+        <div class="mt30 hot_news">
+<div class="zoom" id="hitsort_tab">
+  <h3 class="fl">热点</h3>
+  <ul class="zoom fl hot_news_tab f14">
+    <!-- <li><a href="javascript:void(0);">一日</a></li> -->
+    <li><a href="javascript:void(0);">一周</a></li>
+    <li><a href="javascript:void(0);">一月</a></li>
+    <!-- <li><a href="#">热评</a></li> -->
+  </ul>
+</div>
+<div>
+<!-- 每日 -->
+<!-- <ul class="f14 l28 hot_news_ul mt15">
+  </ul> -->
+
+<ul class="f14 l28 hot_news_ul mt15">
+            
+  <li>
+    <p><a href="/news/285093.html" target="_blank" title="第90期100秒扫描环保行业大势（2018年12月10日~12月16日）">第90期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285261.html" target="_blank" title="具体到点！山东省级环保督察反馈意见问题清单公布">具体到点！山东省级环保督察反馈意...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285148.html" target="_blank" title="上海：《污水综合排放标准》实施">上海：《污水综合排放标准》实施</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285096.html" target="_blank" title="一图读懂：《改革开放以来，中国生态环境保护走过的这40年》">一图读懂：《改革开放以来，中国生...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285157.html" target="_blank" title="改革开放40年与中国生态环境规划发展历程">改革开放40年与中国生态环境规划...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285069.html" target="_blank" title="内蒙古自治区水污染防治三年攻坚计划 （征求意见稿）">内蒙古自治区水污染防治三年攻坚计...</a></p>
+  </li>
+  </ul>
+<ul class="f14 l28 hot_news_ul mt15">
+            
+  <li>
+    <p><a href="/news/284344.html" target="_blank" title="第88期100秒扫描环保行业大势（2018年11月26日~12月2日）">第88期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284036.html" target="_blank" title="第87期100秒扫描环保行业大势（2018年11月19日~11月25日）">第87期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284779.html" target="_blank" title="第89期100秒扫描环保行业大势（2018年12月3日~12月9日）">第89期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/285093.html" target="_blank" title="第90期100秒扫描环保行业大势（2018年12月10日~12月16日）">第90期100秒扫描环保行业大势...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284155.html" target="_blank" title="100名改革开放杰出贡献拟表彰对象公示，你熟悉哪些环保人？">100名改革开放杰出贡献拟表彰对...</a></p>
+  </li>
+            
+  <li>
+    <p><a href="/news/284147.html" target="_blank" title="图文实录｜生态环境部2018年11月例行新闻发布会">图文实录｜生态环境部2018年1...</a></p>
+  </li>
+  </ul>
+</div>
+</div>
+
+        <!-- 热点排行 -->
+
+        <div class="submission mt15 f14">
+            <p>010-88480317 </p>
+            <p class="submission_email"><a href="mailto:news@e20.com.cn">news@e20.com.cn</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="backtop_btn bc"><div class="backtop"><a href="javascript:void(0);"></a></div></div>
+<!-- <div class="QRcode_left"><img src="/images/QR_code_left.jpg"></div> -->
+<div class="QRcode"><img src="/images/QR_code.jpg"></div>
+<div class="footer mt40">
+  <div class="w1000 bc zoom">
+    <div class="fl w360 ml10">
+      <p class="tc"><a href="http://www.e20.net.cn/"><img src="/images/footer/footer_e20.png" alt="E20环境平台"></a></p>
+      <p class=" mt35 footer_logo">
+        <a href="http://www.h2o-china.com"><img src="/images/footer/footer_logo1.png" alt="中国水网"></a>
+        <a href="http://www.solidwaste.com.cn"><img src="/images/footer/footer_logo2.png" alt="中国固废网"></a>
+        <a href="http://www.chndaqi.com"><img src="/images/footer/footer_logo3.png" alt="中国大气网"></a></p>
+    </div>
+    <div class="fr w620 l24 f12 zoom">
+      <p class="footer_p2"><img src="/images/footer/footer_bg1.jpg"></p>
+      <p class="footer_p1"><a href="http://www.e20.net.cn/contact.html" target="_blank">联系我们</a>|<a href="http://about.h2o-china.com/history.php" target="_blank">大事记</a>|<a href="http://file.h2o-china.com/200810/20081009-175029-1.shtml" target="_blank">联盟单位</a>|<a href="http://www.h2o-china.com/link/?sid=1" target="_blank">友情链接</a>|<a href="http://www.h2o-china.com/single?id=6" target="_blank">版权声明</a>|<a href="http://zt.h2o-china.com/meeting/ad_services/" target="_blank">广告服务</a></p>
+      <p class="mt10">Copyright © 2000-<script> var myDate=new Date();document.write(myDate.getFullYear());</script> http://www.h2o-china.com All rights reserved. 中国水网 版权所有 </p>
+      <p>客服热线：4000240005 商务热线：010-88480403 传真：010-88480301</p>
+      <p>E-mail：<a href="mailto:webmaster@e20.com.cn">webmaster@e20.com.cn</a> </p>
+      <p>本站常年法律顾问：北京市康达律师事务所刘文义律师 京ICP备10040015号-7  京公网安备：11010802011375</p>
+    </div>
+  </div>
+</div>
+<script src="/click" ></script>
+<script src="/js/jquery.gotop.js" type="text/javascript"></script>
+<div style="display:none">
+	<script src="http://v1.cnzz.com/stat.php?id=1253501153&web_id=1253501153" language="JavaScript"></script>
+</div>
+<script src="/js/jquery.newsshare.js" type="text/javascript"></script>
+<script src="/js/jquery.tabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () 
+{
+    $(".share").info_share();
+	$(".mshare").mshare();
+    $("#hitsort_tab").newstabs({"switchingMode":"mouseover"});
+});
+</script>
+<div style="display:none">
+ <script src="http://s4.cnzz.com/stat.php?id=1253507297&web_id=1253507297" language="JavaScript"></script>
+</div>
+
+<!-- footer -->
+</body>
+</html>

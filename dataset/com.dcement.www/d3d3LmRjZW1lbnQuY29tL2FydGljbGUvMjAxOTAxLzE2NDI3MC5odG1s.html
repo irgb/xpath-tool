@@ -1,0 +1,771 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="高长明,32.5" name="Keywords" />
+    <meta content="我国32.5水泥存废之争已延续了两年多，双方都很坚决，很自信，都认为自己正确无误。为什么就不能商讨，共谋妥善解决之道呢? 我们冥思苦想好久，近来突感有所悟。现叙述如下，请广大公众和业界同仁看看是否可以这样解释或解决。" name="Description"/>
+    <title>32.5水泥： 完全取消“这种” 生产研发“那种” - 数字水泥网 中国水泥行业大型水泥信息平台</title>
+    <link href="/Template/Default/Skin/module.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/default.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/page.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/commentary.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    var siteSetup = { sitePath: '/', ajaxPath: '/ajax.aspx', skinPath: '/Template/Default/Skin/' };
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Template/Default/Skin/js/jquery.SuperSlide.js"></script>
+<script>
+$(function(){
+    $(".J_tabBox").slide({mainCell:".J_tabContent", titCell:".J_tabHandler>*"});
+})
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/Template/Default/Skin/js/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngfix');
+</script>
+<![endif]-->
+
+
+    <style>
+    .side .adArea { padding-bottom: 5px; }
+    .side .adArea .ad { margin-bottom: 5px; float: none; }
+    .side .adArea .ad div { margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+    <div class="header" id="header">
+<style>
+a:after{ display:none!important;}
+</style>
+        <div class="topbar">
+            <div class="userWrap">
+                <div class="userLogin">
+    <div class="loginForm">
+        <div class="field"><label>用户名：</label><input type="text" class="input input-username"/></div>
+        <div class="field"><label>密　码：</label><input type="password" class="input input-password"/></div>
+        <div class="field field-validate" style="display:none">
+            <label>验证码：</label><input type="text" class="input input-validate"/>
+            <img title="换一个" />
+        </div>
+        <div class="field">
+            <label><input type="checkbox" class="input-saveinfo"/>永久登录</label>
+        </div>
+        <div class="btn">
+            <button class="submit">登录</button>
+            <a href="/User/GetPassword.aspx" class="findpass">找回密码</a>
+            <a href="/User/Register.aspx" class="reg">注册</a>
+            <a href="/Item/19139.aspx" target="_blank" class="vip">成为高级会员</a>
+            <a href="/UploadFiles/Article/2015/4/201604230931227461.doc" target="_blank" class="vipform">登记表</a>
+        </div>
+    </div>
+    <div class="userInfo" style="display:none">
+        <p class="info"><strong class="username"></strong>，您好！欢迎你的回来。<span class="usergroup"></span><span class="spe">|</span>剩余天数:<span class="enddays"></span>天<span class="spe">|</span><a href="javascript:LoadUnReadMsg();">未读消息:<span class="msg"></span>条</a><span class="spe">|</span></p>
+        <p class="act">
+            <a href="/User/Default.aspx" target="_blank">会员中心</a>
+            <span class="spe">|</span>
+            <a href="/User/Logout.aspx">退出登录</a>
+            <span class="setvip">
+                <span class="spe">|</span>
+                <a href="/Item/19139.aspx" target="_blank" class="vip">成为收费会员</a>
+                <a href="/UploadFiles/Article_UploadFiles/200803/20080328141027108.doc" target="_blank" class="vipform">登记表</a>
+            </span>
+        </p>
+    </div>
+</div>
+<div id="DivUnReadMessage"></div>
+<script type="text/javascript">
+function LoadUnReadMsg(){
+	var url = "/User/Message/MessageList.aspx?Type=-1";
+	jQuery("#DivUnReadMessage").overlay({ api: true, expose: true, render: true, loadUrl: url, width: 600, height: 400, title: "未读短消息" }).load();
+}
+
+(function($){   
+    function SetUserInfo(res){
+	$(".userLogin .loginForm").hide();
+	$(".userInfo .username").html(res.find("username").text());
+	$(".userInfo .usergroup").html(res.find("usergroup").text());
+	$(".userInfo .enddays").html(res.find("enddays").text());
+	$(".userInfo .msg").html(res.find("msg").text());
+	$(".userInfo").show();
+	var groupId = parseInt(res.find("usergroupid").text());
+	var enddays = parseInt(res.find("enddays").text());
+	if((groupId == 3 || groupId== 11) && enddays > 0){
+		$('.setvip').hide();
+	}
+	//显示未读消息
+	var unreadMsg = parseInt(res.find("msg").text());
+	if(unreadMsg > 0 && jQuery.pe.cookie("ShowUnReadMsg") != "false"){
+	    LoadUnReadMsg();
+	}
+    }
+
+
+    $.pe.ajax('checkUserLogin', {
+        success: function(res) {
+            res = $(res);
+            if (res.find('status').text() == 'ok') {
+                SetUserInfo(res);
+
+            } else {
+                //验证码
+                $.pe.ajax('checkLoginValidate', {
+                    success: function(res){
+                        res = $(res);
+                        if (res.find('status').text() == 'yes') {
+                            $('.field-validate img').click(function(){
+                                $.pe.refreshValidateCode(this);
+                            }).click();
+                            $('.field-validate').show();
+                        }
+                    }
+                });
+                //登录提交
+                $(".userLogin .submit").click(function(){
+                    var username = $(".userLogin .input-username"),
+                        password = $(".userLogin .input-password"),
+                        validate = $(".userLogin .input-validate"),
+                        saveinfo = $(".userLogin .input-saveinfo");
+
+                    if (username.val() === "") {
+                        alert('请填写用户名！');
+                        username.focus();
+                        return false;
+                    }
+                    if (password.val() === '') {
+                        alert('请填写密码！');
+                        password.focus();
+                        return false;
+                    }
+                    if (validate.val() === '' && $('.field-validate').is("visible")) {
+                        alert("请填写验证码！");
+                        validate.focus();
+                        return false;
+                    }
+                    $.pe.ajax('userLogin', {
+                        params: {
+                            username: username.val(),
+                            password: password.val(),
+                            checkcode: validate.val(),
+                            expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+                        },
+                        success: function(res) {
+                            res = $(res);
+                            switch (res.find('status').text()) {
+                                case "ok":
+                                    //SetUserInfo(res);
+                                    window.location.reload();
+                                    break;
+                                case "err":
+                                    alert(res.find('body').text());
+                                    $('.field-validate img').click()
+                                    break;
+                            }
+                        }
+                    })
+                })
+            }
+        }
+    });
+
+    $('.userLogin').keypress(function(e) {
+        if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+            $(".userLogin .submit").click();
+            return false;
+        }
+    })
+})(jQuery);
+</script>
+
+            </div>
+        </div>
+        <h1 class="logo"><a href="http://www.dcement.com" title="数字水泥网 中国水泥行业大型水泥信息平台"><img src="/Template/Default/Skin/images/logo.gif" /></a></h1>
+        <div class="topNav">
+            <div class="adArea"><script src='/IAA/200903/103.js'></script></div>
+            <div class="clearfix row">
+                <a title="数字水泥网首页" href="/">网站首页</a><span class="spe">|</span>
+                <a title="资讯新闻中心" href="/Article/">资讯中心</a><span class="spe">|</span>
+                <a title="行业分析" href="/Category_3661/Index.aspx">行业分析</a><span class="spe">|</span>
+                <a title="展会信息" href="/zhanhuixx/" target="_blank">展会信息</a><span class="spe">|</span>
+                <a title="政策法规" href="/zcfagui/">政策法规</a><span class="spe">|</span>
+                <a title="企业文化" href="/Category_3910/Index.aspx">企业文化</a><span class="spe">|</span>
+                <a title="CSI" href="http://www.dcement.com/Category_3726/Index.aspx">CSI</a>
+                
+            </div>
+            <div class="clearfix row">
+                <a title="采购索引" href="/Category_3665/Index.aspx">采购索引</a><span class="spe">|</span>
+                <a title="书刊推荐" href="/Category_3925/Index.aspx">错峰生产</a><span class="spe">|</span>
+                <a title="水泥价格" href="/Category_3713/Index.aspx">水泥价格</a><span class="spe">|</span>
+                <a title="人才招聘" href="http://www.dcement.com/Category_3662/Index.aspx" target="_blank">上市公司</a><span class="spe">|</span>
+                <a title="水泥协会" href="http://www.chinacca.org/" target="_blank">协会动态</a><span class="spe">|</span>  
+                <a title="行业并购" href="/Category_3714/Index.aspx">行业并购</a><span class="spe">|</span>
+                <a title="项目信息" href="http://www.dcement.com/Category_3765/Index.aspx">《中国水泥》 </a>           
+            </div>
+        </div>
+        <!-- topNav e -->
+    </div>
+    <!-- header e -->
+
+    <div class="adArea mb10">
+        <script src='/IAA/200803/47.js'></script>
+    </div>
+
+    <div id="channelWrap" class="clearfix">
+        <h3 class="cateName">资讯中心</h3>
+        <div class="channel">
+            <div class="clearfix row">
+                <a title="全国水泥" href="/Category_3710/Index.aspx">全国</a><span class="spe">|</span>
+                <a title="北京水泥" href="/Category_3670/Index.aspx">北京</a><span class="spe">|</span>
+                <a title="天津水泥" href="/Category_3671/Index.aspx">天津</a><span class="spe">|</span>
+                <a title="河北水泥" href="/Category_3672/Index.aspx">河北</a><span class="spe">|</span>
+                <a title="山西水泥" href="/Category_3677/Index.aspx">山西</a><span class="spe">|</span>
+                <a title="内蒙古水泥" href="/Category_3676/Index.aspx">内蒙</a><span class="spe">|</span>
+                <a title="辽宁水泥" href="/Category_3673/Index.aspx">辽宁</a><span class="spe">|</span>
+                <a title="吉林水泥" href="/Category_3674/Index.aspx">吉林</a><span class="spe">|</span>
+                <a title="黑龙江水泥" href="/Category_3675/Index.aspx">黑龙江</a><span class="spe">|</span>
+                <a title="上海水泥" href="/Category_3682/Index.aspx">上海</a><span class="spe">|</span>
+                <a title="江苏水泥" href="/Category_3680/Index.aspx">江苏</a><span class="spe">|</span>
+                <a title="浙江水泥" href="/Category_3683/Index.aspx">浙江</a><span class="spe">|</span>
+                <a title="安徽水泥" href="/Category_3681/Index.aspx">安徽</a><span class="spe">|</span>
+                <a title="福建水泥" href="/Category_3684/Index.aspx">福建</a><span class="spe">|</span>
+                <a title="江西水泥" href="/Category_3685/Index.aspx">江西</a><span class="spe">|</span>
+                <a title="山东水泥" href="/Category_3678/Index.aspx">山东</a>
+            </div>
+            <div class="clearfix row">
+                <a title="河南水泥" href="/Category_3679/Index.aspx">河南</a><span class="spe">|</span>
+                <a title="湖北水泥" href="/Category_3686/Index.aspx">湖北</a><span class="spe">|</span>
+                <a title="湖南水泥" href="/Category_3691/Index.aspx">湖南</a><span class="spe">|</span>
+                <a title="广东水泥" href="/Category_3692/Index.aspx">广东</a><span class="spe">|</span>
+                <a title="广西水泥" href="/Category_3694/Index.aspx">广西</a><span class="spe">|</span>
+                <a title="海南水泥" href="/Category_3693/Index.aspx">海南</a><span class="spe">|</span>
+                <a title="重庆水泥" href="/Category_3690/Index.aspx">重庆</a><span class="spe">|</span>
+                <a title="四川水泥" href="/Category_3696/Index.aspx">四川</a><span class="spe">|</span>
+                <a title="贵州水泥" href="/Category_3695/Index.aspx">贵　州</a><span class="spe">|</span>
+                <a title="云南水泥" href="/Category_3700/Index.aspx">云南</a><span class="spe">|</span>
+                <a title="西藏水泥" href="/Category_3699/Index.aspx">西藏</a></span><span class="spe">|</span>
+                <a title="陕西水泥" href="/Category_3687/Index.aspx">陕西</a><span class="spe">|</span>
+                <a title="甘肃水泥" href="/Category_3689/Index.aspx">甘肃</a><span class="spe">|</span>
+                <a title="青海水泥" href="/Category_3697/Index.aspx">青海</a><span class="spe">|</span>
+                <a title="宁夏水泥" href="/Category_3688/Index.aspx">宁夏</a><span class="spe">|</span>
+                <a title="新疆水泥" href="/Category_3698/Index.aspx">新疆</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pathBar">
+        <div class="path"><em>您现在的位置：</em><a class="home" href="/">首页</a>&gt;<a href="/Article/" target="_self">资讯中心</a>&gt;<a href="/Article/zxhangye/" target="_blank">行业</a></div>
+        <div class="ann">
+            <ul class="infoList infoListA">
+                <li class="noData">暂无资料</li>
+              </ul>
+        </div>
+    </div>
+    <script>
+    $(".pathBar .ann").slide({mainCell:"ul",effect:"topLoop",autoPlay:true});
+    </script>
+    <!-- pathBar e -->
+    
+
+
+    <div id="content" class="clearfix">
+        <div class="mainContent">
+            <div class="showContent">
+                <!-- 正文内容 S -->
+                <div class="articleCon">
+                    <!-- 标题 -->
+                    <h2 class="title" style="
+    color:">32.5水泥： 完全取消“这种” 生产研发“那种”</h2>
+                    <h4 class="subTitle"></h4>
+                    <div class="property">
+                        <span>更新日期: 2019年01月02日</span>
+                        <span></span>
+                        <span>来源: 数字水泥网</span>
+                        <span class="fontSizeSet">【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                        <span><span id="content_AdminEdit"></span>
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $.pe.ajax('admineditcheck',{params:{itemId:164270},success:function(s) {
+        if ($(s).find('status').text() == 'OK') {
+            var managedir = "/Common/GetContentEdit.aspx?itemId=164270";
+           $("#content_AdminEdit").html("【<a href='" + managedir + "' target='_blank'>进入后台编辑</a>】")
+        }
+    }});
+});
+</script></span>
+                    </div>
+
+                    <div class="description">摘要：<span>我国32.5水泥存废之争已延续了两年多，双方都很坚决，很自信，都认为自己正确无误。为什么就不能商讨，共谋妥善解决之道呢? 我们冥思苦想好久，近来突感有所悟。现叙述如下，请广大公众和业界同仁看看是否可以这样解释或解决。</span></div>
+
+                    <div class="conTxt">
+                        <div id="fontzoom">
+                            
+      
+     <div> </div><div>    我国32.5水泥存废之争已延续了两年多，双方都很坚决，很自信，都认为自己正确无误。为什么就不能商讨，共谋妥善解决之道呢? 我们冥思苦想好久，近来突感有所悟。现叙述如下，请广大公众和业界同仁看看是否可以这样解释或解决。</div><div> </div><div>    笔者认为，存废双方呈僵持状态，其主要根源恐怕在于双方对32.5水泥的认知与界定相去甚远而造成的。</div><div> </div><div>    大家知道，我国大多数国人普遍以为，低标号（32.5）水泥就是低质量水泥、小水泥或立窑水泥。按照这样的认知，确实“这种”32.5水泥早该取消，犹如糟粕。这是我国水泥工业半个多世纪以来种种不良表现打在公众心目中的深刻烙印。人们几十年实际生活经验的积累，把这些糟粕沉淀而组成了广阔深厚的社会基础。除了占人口比例极少数的水泥科技人员以外，其余的绝大多数公众都是这种认知的信众，而且思想上根深蒂固。但是，从世界和长远的视野来观察和思考，我国却又应该继续跟踪世界先进水平，不断生产使用研发以低熟料含量、新型混合材深加工方式和新型混凝土外加剂技术为特征的类似德国、法国、英国、瑞士和北欧诸国那样的“那种”32.5水泥，犹如精华。我国大多数水泥科技人员持有这样的认知和观点。</div><div> </div><div>    实际上，现在我国确实存在着由上述两种截然不同认知出发，而在每个人的心目中分别界定的两种32.5水泥。其实这所谓的两种水泥原本就是同种同源，约100年以前早已被世界公认为OPC（普通硅酸盐水泥）范畴内的一个品种，即32.5水泥，所以同名也是理所当然的。只是在中国的特殊条件下被国人的两种认知无形中“一分为二”罷了。所以，对32.5水泥的这两种认知也只能是局限于中国大陆而已。因为别的国家和地区从来就没有过像我国这样的小水泥或立窑水泥，所以也不可能发生什么要取消32.5水泥的事情。</div><div> </div><div>    单独的看，我国这两种界定32.5水泥的思维方法，在历史和现实的条件下，似乎都是有其道理的。一个有长久和广泛的群众基础，另一个则具有科技进步和发展意义。这样就迫使我们不得不同时都要接受它们，并充分考虑到两者的影响力不可。显然两种认知和界定，针对32.5水泥所应采取的行动是大相径庭的（存或废）。所以我们必须明确地把它们区别标注出来。建议暂且分别冠以“这种”和“那种”来区别，今后再也不要把它们两者混为一谈了。否则没有统一的界定，又何谈统一的认识和对待策略呢。希望对32.5水泥的界定大家都讲清楚以后，双方的分歧就便于商讨解决了。</div><div> </div><div>    自本世纪初以来，国际上经过十多年的试验研究，正值32.5水泥的研发取得重要进展和创新成果，显示了32.5水泥在各方面的优势和潜力，有可能成为今后水泥发展的一个主要品种之际。恰巧就在这个当口，我国出现了一个主张全部取消32.5水泥的倡议，代表了多数企业家的认知和诉求。这个倡议在我国两种对32.5水泥不同认知的基础上，掀起了两种天壤之别的反响，形成了双方对32.5水泥存废问题似乎“无可妥协商讨”的僵持或两难局面。期望国家标委会和协会对此有所作为。</div><div> </div><div>    所以现在笔者的观点应修正为，坚决赞同完全取消“这种32.5水泥”，同时也应继续生产使用研发“那种32.5水泥”，可谓是去其糟粕，留其精华。</div><div> </div><div>    回想起来，前两年我们总是想说服废方人士，32.5水泥是世界普通硅酸盐水泥（OPC）标准系列中不可或缺的一个品种，是市场需求量很大，应用面很广的一种水泥，所以不能全部都取消掉。这与我国现在应逐步削减32.5水泥用量占比(从~70%降到~30%)是毫不相干的两回事。同时也强调了国际上（和我国）已有的32.5水泥的研发成果及其发展前景。我国不能因取消了全部32.5水泥而自动退出这一研究（竞争）领域，否则后果堪忧。所谓的去产能、打假、提高集中度等种种附带“作用”，应该采取针对性的断然举措来逐个解决这些问题，无需绕这么大的圈子，实效甚小，得不偿失。然而存方这些理由和观点的传播不太顺畅，收效并不理想。另一方面，废方的舆论声势很大，但实际进展却不尽如人意，十分缓慢。这两个现象都发人深思。</div><div> </div><div>    本人在国内外从事水泥工业科研、设计、工程、生产、技术工作已逾64载，一贯创导技术创新，积极淘汰落后。1995年底，我国共有水泥企业8500多家，水泥窑约9200台，其中立窑占90%以上，小水泥磨有20000台左右，预分解窑仅有86台。想当初，1997年前后，笔者大声疾呼我国应淘汰小水泥时，是主张彻底拆除整个立窑水泥厂（立窑+小磨机）的十分积极的一员，发表过不少文章和意见。同样也曾有个别老领导因此而对我有看法。 到2005年，立窑终于大都（约8000台）被淘汰了，但绝大部分小水泥磨机（约13600台）却保留下来，变身为5300多家小水泥粉磨站，其粉磨产能占当年全国的85%以上。之后这些小粉磨站虽然逐年都不断的关停了一些，但多数仍然假借各种形式得以留存，其中有相当一部分则蜕变成制造勾兑假冒伪劣水泥的专业作坊，其祸患流毒一直延续至今。</div><div> </div><div>    现在本人更益感觉到有必要明确表态，自己原先对32.5水泥存废问题不太周全的观点应该修正（如上所述），必须尊重并兼顾到废方的认知和诉求。半个多世纪以来，水泥工业烙在人们心目的深刻印记，我们必须充分地尊重它，正视它。本人坚信，本着求大同存小异，去糟粕留精华的信条，双方应该可以找到最重要的共同根基，因为我们至少都是具有家国情怀的中国水泥工作者。这里再次向废方人士呼吁，为了我国水泥工业的健康发展，避免走弯（错）路，是否须要适当考虑一下存方的理由和观点，至少应该交換见解，提供一个双方各表的机会吧。</div><div> </div><div>    总之，我们应该尊重科学，正视历史和现实，实事求是，坚持技术进步，反对倒退，为我国早日跻身世界水泥混凝土产业的一流强国齐心合力共同奋斗。</div><div> </div><div>    后记：本文请几位挚友同好过目后，他/她们完全理解我的心声，但觉得有点绕脑。确实，文中所谓的“这种”和“那种”32.5水泥是虚拟的概念，是随着每人每时的认知而改变的。它们并非实物的水泥，更没有什么具体的标准。只是为了引导双方正确理解对方的思想实质，便于共同商讨而虚拟的概念。这是本人匠心良苦的“新发现”，但愿能促成共同商讨的实现。我真的已经倾尽全力了！路漫漫其修远兮！本人坚信我国继续砥砺奋进10~15年，必将成！我的水泥混凝土工业，我的国！</div><div> </div>
+    
+   
+                            
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <span id="pe100_page_contentpage" class="pagecss"></span>
+                    </div>
+
+                    <div class="userControl clearfix">
+                        <div class="fl">
+                            <a class="print" target="_balnk" href="/Print.aspx?id=164270" title="打印文章">[打印文章]</a>
+                            <a class="fav" title="添加收藏" href="/User/Content/Favorite.aspx?Action=add&Id=164270">[添加收藏]</a>
+                        </div>
+                        <div class="fr">
+                            <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_tieba"></a>
+        <a class="bds_tsohu"></a>
+        <span class="bds_more">更多</span>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+                        </div>
+                    </div>
+
+                    <div class="adArea mb10"><script src="/IAA/200806/52.js"></script></div>
+                </div>
+                <!-- 正文内容 E -->
+
+                <script type="text/javascript">
+                (function(){
+                    var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=auto&brandline=y&appkey=1817769610&dpc=1";
+                    url = url.replace("url=auto", "url=" + document.URL); 
+                    document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
+                })();
+                </script> 
+                <script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script> 
+                <script type="text/javascript">
+                window.WBComment.init({
+                    "id": "WBCommentFrame"
+                });
+                </script>
+
+                <div id="commentform"></div>
+                
+    <script language="javascript" type="text/javascript">
+        //初始化评论
+        function commentInit() {
+          $.pe.ajax('accessLabel',{labelName:'内容评论标签',currentPage:1,params:{itemId:164270,nodeId:43},success:function(response){
+             $('#commentform').html($(response).find('body').text());
+             changepage(1, '评论列表', 'JS_基本风格');
+             setCurrentUserInfo();
+          }})
+        }
+
+        //添加评论
+        function addComment() {
+            if ($('#commentTitle').val == '') {
+                alert("请输入标题！");
+                $('#commentTitle').focus();
+                return;
+            }
+
+            if ($('#commentIsAnonymous').val() == 'false') {
+                if ($('#commentUsername').val() == '') {
+                    alert("请输入用户名！");
+                    $('#commentUsername').focus();
+                    return;
+                }
+
+                if ($('#commentEmail').val() == '') {
+                    alert('请输入Email地址！');
+                    $('#commentEmail').focus();
+                    return;
+                }
+
+                var regEmail = /^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if ($('#commentEmail').val().match(regEmail) == null) {
+                    alert('请输入正确的Email格式！');
+                    $('#commentEmail').focus();
+                    return;
+                }
+            }
+
+            if ($('#commentContnet').val == '') {
+                alert("请输入评论内容！");
+                $('#commentContnet').focus();
+                return false;
+            }
+
+            var commentValidCode = "";
+            var checkValidCode = false;
+            if (document.getElementById('commentValidCode') != null) {
+                if ($('#commentValidCode').val() == '') {
+                    alert("请输入验证码！");
+                    $('#commentValidCode').focus();
+                    return;
+                }
+                commentValidCode = $('#commentValidCode').val();
+                checkValidCode = true;
+            }
+            
+            $.pe.ajax('addcomment',{params:{
+              username:$("#commentUsername").val(),
+              commenttitle:$("#commentTitle").val(),
+              content:$("#commentContnet").val(),
+              email:$("#commentEmail").val(),
+              gid:164270,
+              nid:43,
+              private:$("#commentIsPrivate").val(),
+              position:$("#commentViewpoint").val(),
+              score:$("#commentRanking").val(),
+              TxtValidCode:commentValidCode,
+              isguest:$('#commentIsAnonymous').val()
+            },
+            success:function(response){
+              var data = $(response);
+              var status = data.find('status').text();
+                switch (status) {
+                    case "ok":
+                        changepage(1, '评论列表', 'JS_基本风格');
+                        alert("发表评论成功！");
+                        window.location.href = '#commentTarget';
+                        $("#commentContnet").val('');
+                        break;
+                    case "check":
+                        alert("发表评论成功，请等待管理员审核。");
+                        break;
+                    case "err":
+                        alert("发表评论失败！");
+                        break;
+                    case "nopurview":
+                        alert("此栏目已禁止发表评论！");
+                        break;
+                    case "noTourists":
+                        alert("此栏目已禁止游客发表评论！");
+                        break;
+                    case "checkCodeError":
+                        $("#commentValidCode").val('');
+                        refreshValidCode($("#commentValidCodeImg")[0]);
+                        alert("您输入的验证码和系统产生的不一致，请重新输入！");
+                        break;
+                    default:
+                        alert("发表评论失败！");
+                        break;
+                }
+                if (checkValidCode) {
+                    refreshValidCode($("#commentValidCodeImg")[0]);
+                    $("#commentValidCode").val('');
+                    checkValidCode = false;
+                }
+            }})
+        }
+
+        function addPkZone(commentid, position, content) {
+              $.pe.ajax('addpkzone',{params:{
+                commentid:commentid,
+                position:position,
+                content:content
+              },
+              success:function(response){
+                 switch ($(response).find('status').text()) {
+                    case "ok":
+                        changepage(1, '评论列表', 'JS_基本风格');
+                        break;
+                    default:
+                        alert("辩论失败！");
+                        break;
+                }
+              }}
+            )
+        }
+
+        //更新列表
+        function changepage(pagenum, sourcename, spanname) {
+              $.pe.ajax('accessLabel',{labelName:sourcename,currentPage:pagenum,params:{
+                itemId:164270,
+                page:'true',
+                pagesize:10,
+                currentpage:pagenum
+              },
+              success:function(response){
+                $('#pe100_'+sourcename).html($(response).find('body').text());
+                $('#commentCount').html($(response).find("total").text());
+                updatepage(spanname, sourcename, response);
+              }}
+            )
+        }
+
+        //更新分页
+        function updatepage(spanname, sourcename, xml) {
+        $.pe.ajax('accessPage',{labelName:spanname,pageName:sourcename,recordCount:$(xml).find('total').text(),currentPage:$(xml).find('currentpage').text(),pageSize:$(xml).find('pagesize').text(),success:function(s){
+        if ($('#pe100_page_' + sourcename) != null) {
+                        if ( $(xml).find('total').text()<=0 ){ $("#commentform .comListBox").hide() }else{ $("#commentform .comListBox").show() }
+                        $('#pe100_page_' + sourcename).html($(s).find('body').text());
+                    }
+        }})
+        }
+
+        //设置默用户信息
+        function setCurrentUserInfo() {
+            try {
+            $.pe.ajax('checkUserLogin',{success:function(response){
+            if($(response).find('status').text() == 'ok'){
+              if ($('#commentUsername') != null) {
+                            $('#commentUsername').val($(response).find("username").text());
+                            $('#commentEmail').val($(response).find("email").text());
+                            $('#commentUsername').disabled = true;
+                            $('#commentEmail').disabled = true;
+                        }
+            }
+            }})
+            }
+            catch (e) {
+            }
+        }
+
+        //刷新验证码
+        function refreshValidCode(obj) {
+            obj.src = obj.src + '?code=' + randomNumber(10);
+        }
+
+        function randomNumber(n) {
+            var rnd = '';
+            for (var i = 0; i < n; i++)
+                rnd += Math.floor(Math.random() * 10);
+            return rnd;
+        }
+
+        //设置匿名
+        function setAnonymous(obj) {
+            if (obj.checked) {
+                $('#commentUsernameBlock').hide();
+                $('#commentEmailBlock').hide();
+                $('#commentIsAnonymous').val('true');
+            }
+            else {
+                $('#commentUsernameBlock').show();
+                $('#commentEmailBlock').show();
+                $('#commentIsAnonymous').val('false');
+            }
+        }
+
+        //设置私有
+        function setPrivate(obj) {
+            if (obj.checked) {
+                $('#commentIsPrivate').val(1);
+            }
+            else {
+                $('#commentIsPrivate').val(0);
+            }
+        }
+
+        //设置观点
+        function setViewpoint(value) {
+            for (i = -1; i < 2; i++) {
+                if (i == value) {
+                    $('#commentViewpointTab' + i)[0].className = "current";
+                }
+                else {
+                    $('#commentViewpointTab' + i)[0].className = "";
+                }
+            }
+            $('#commentViewpoint').val(value);
+        }
+
+        //设置按钮
+        function changeBtnStyle(obj, className) {
+            obj.className = className;
+        }
+
+        //设置评分
+        function changeRanking(index, isfixed) {
+            var colStars = $("#commentRankingBlock input");
+            var k = isfixed ? parseInt($("#commentRanking").val()) : index;
+            for (var i = 0; i < colStars.length; i++) {
+                colStars[i].src = (i < k ? "/Images/fstar.gif" : "/Images/estar.gif");
+            }
+        }
+
+        function rankingClick(index) {
+            $("#commentRanking").val(index);
+        }
+
+        function rankingMouseOver(index) {
+            changeRanking(index, false);
+        }
+
+        function rankingMouseOut() {
+            changeRanking(0, true);
+        }
+
+        //初始化评论
+        commentInit();
+
+    </script>
+
+                <div class="box copyrightInfo">
+                    <div class="hd">数字水泥网版权与免责声明：</div>
+                    <div class="bd">
+                        <p>凡本网注明“来源：数字水泥网”的所有文字、图片和音视频稿件，版权均为“数字水泥网”独家所有，任何媒体、网站或个人在转载使用时必须注明“来源：数字水泥网”。违反者本网将依法追究责任。</p>
+                        <p>本网转载并注明其他来源的稿件，是本着为读者传递更多信息之目的，并不意味着赞同其观点或证实其内容的真实性。其他媒体、网站或个人从本网转载使用时，必须保留本网注明的稿件来源，禁止擅自篡改稿件来源，并自负版权等法律责任。违反者本网也将依法追究责任。</p>
+                        <p>如本网转载稿涉及版权等问题，请作者在两周内尽快来电或来函联系。</p>
+                    </div>
+                </div>
+
+                <div class="box boxRelate">
+                    <div class="hd">相关文章</div>
+                    <div class="bd">
+                        <ul class="infoList infoListA clearfix">
+
+        
+                <li class="first"><a href="/article/201812/164168.html" target="_blank" title="标题：高长明： 谨防超低排放“冲击”错峰生产&#xD;发表时间：18年12月19日">高长明： 谨防超低排放“冲击”错峰生产</a></li><li><a href="/article/201812/164142.html" target="_blank" title="标题：成都水泥结构调整方案：淘汰PC32.5MP及以下水泥&#xD;发表时间：18年12月13日">成都水泥结构调整方案：淘汰PC32.5MP及以…</a></li><li><a href="/article/201812/164052.html" target="_blank" title="标题：尽快建立“暂停生产和销售32.5等级水泥”试点机制&#xD;发表时间：18年12月03日">尽快建立“暂停生产和销售32.5等级水泥”…</a></li><li><a href="/article/201811/164034.html" target="_blank" title="标题：尽快建立“暂停生产和销售32.5等级水泥”试点机制&#xD;发表时间：18年11月30日">尽快建立“暂停生产和销售32.5等级水泥”…</a></li><li><a href="/article/201811/164004.html" target="_blank" title="标题：低标水泥逐步退出 行业集中度有望提升&#xD;发表时间：18年11月28日">低标水泥逐步退出 行业集中度有望提升</a></li><li><a href="/article/201811/163997.html" target="_blank" title="标题：新疆将继续坚持全面取消32.5等级水泥&#xD;发表时间：18年11月28日">新疆将继续坚持全面取消32.5等级水泥</a></li><li><a href="/article/201811/163972.html" target="_blank" title="标题：水泥制造业：过剩行业缩减产能是必然趋势&#xD;发表时间：18年11月23日">水泥制造业：过剩行业缩减产能是必然趋势</a></li><li class="last"><a href="/article/201811/163958.html" target="_blank" title="标题：水泥标委会刘晨副秘书长解读水泥标准修改&#xD;发表时间：18年11月22日">水泥标委会刘晨副秘书长解读水泥标准修改</a></li>
+              
+    </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- mainContent e -->
+
+        <div class="side">
+            <div class="siteSearch">
+  <form action="/search.aspx" class="searchform" target="_blank"><input type="hidden" name="searchType" class="searchType" value="fulltext"><input type="text" class="keyword" autocomplete="off" name="keyword" placeholder="请输入搜索关键字"><input type="submit" class="submit" value="搜索"></form>
+</div><script type="text/javascript">
+    (function($){
+        $(".searchform").submit(function(){
+          var holder     = $(this).find(".keyword").attr("placeholder"),
+              keyword    = $.trim($(this).find(".keyword").val()),
+              searchType = $(this).find(".searchType").val();
+          if (keyword == "" || keyword == holder) {
+              alert(holder);
+              $(this).find(".keyword").focus();
+              return false;
+          }
+          if (searchType == "fulltext") {
+              window.open("/search/s.aspx?f=0&wd=" + encodeURI(keyword));
+              return false;
+          }
+        });
+        if ($.browser.msie) {
+            $(".searchform .keyword").each(function(){
+                var holder = $(this).attr("placeholder");
+                if ($(this).val()=="")$(this).val(holder);
+                $(this).focus(function(){
+                    if ($.trim($(this).val()) == holder)
+                        $(this).val("");
+                });
+                $(this).blur(function(){
+                    if ($.trim($(this).val()) == "") $(this).val(holder);
+                });
+            })
+        }
+    })(jQuery);
+    </script>
+            <div class="adArea">
+                <div class="ad"><script src="/IAA/201105/141.js"></script></div>
+                
+                <div class="ad"><script src="/IAA/200902/91.js"></script></div>
+                
+                <div class="ad"><script src="/IAA/201105/145.js"></script></div>
+                <div class="ad"><script src="/IAA/201112/148.js"></script></div>
+                <div class="ad"><script src="/IAA/200905/111.js"></script></div>
+                <div class="ad"><script src="/IAA/201105/142.js"></script></div>
+<div class="ad"><script src="/IAA/201802/157.js"></script></div>
+            </div>
+            <div class="sideBox" id="side_hot">
+  <div class="hd">
+    <h3 class="title">热门排行</h3>
+  </div>
+  <div class="bd">
+    <ul class="infoList infoListA">
+            
+            <li class="first"><a href="/article/201901/164260.html" target="_blank" title="标题：工信部正式公布《产业发展与转移指导目录（2018年本）》（水泥篇）&#xD;发表时间：19年01月02日">工信部正式公布《产业发展与转移指…</a></li><li><a href="/article/201812/164257.html" target="_blank" title="标题：2018年中国水泥行业十大新闻事件&#xD;发表时间：18年12月31日"><font style="color:#e52a0b;">2018年中国水泥行业十大新闻事件</font></a></li><li><a href="/article/201812/164163.html" target="_blank" title="标题：孔祥忠：水泥行业供给侧结构性改革的关键词&#xD;发表时间：18年12月18日">孔祥忠：水泥行业供给侧结构性改革…</a></li><li><a href="/article/201812/164114.html" target="_blank" title="标题：孔祥忠：行业结构调整和企业创新发展比经济效益更重要&#xD;发表时间：18年12月10日">孔祥忠：行业结构调整和企业创新发…</a></li><li><a href="/article/201810/163778.html" target="_blank" title="标题：错峰停窑5个月！辽宁今冬水泥错峰生产安排文件下发&#xD;发表时间：18年10月29日">错峰停窑5个月！辽宁今冬水泥错峰…</a></li><li><a href="/article/201809/163528.html" target="_blank" title="标题：中国水泥协会致徐德龙院士唁电&#xD;发表时间：18年09月23日"><font style="color:#000200;">中国水泥协会致徐德龙院士唁电</font></a></li><li><a href="/article/201809/163527.html" target="_blank" title="标题：讣告-徐德龙院士逝世&#xD;发表时间：18年09月22日"><font style="color:#000200;">讣告-徐德龙院士逝世</font></a></li><li><a href="/article/201808/163276.html" target="_blank" title="标题：旺季即将来临，各地水泥价格陆续反弹&#xD;发表时间：18年08月22日">旺季即将来临，各地水泥价格陆续反弹</a></li><li><a href="/article/201807/162922.html" target="_blank" title="标题：国务院关于印发打赢蓝天保卫战三年行动计划的通知&#xD;发表时间：18年07月04日">国务院关于印发打赢蓝天保卫战三年…</a></li><li><a href="/article/201806/162903.html" target="_blank" title="标题：中国水泥协会致唁电对陈全德教授逝世表示深切哀悼&#xD;发表时间：18年06月29日"><font style="color:#000200;">中国水泥协会致唁电对陈全德教授逝…</font></a></li><li><a href="/article/201806/162888.html" target="_blank" title="标题：2018年1-5月份水泥行业经济运行报告&#xD;发表时间：18年06月27日">2018年1-5月份水泥行业经济运行报告</a></li><li><a href="/article/201806/162873.html" target="_blank" title="标题：国务院：严禁水泥等行业新增产能&#xD;发表时间：18年06月26日">国务院：严禁水泥等行业新增产能</a></li><li><a href="/article/201806/162825.html" target="_blank" title="标题：两部门联合公布水泥行业2017年能效“领跑者”名单（附企业名单）&#xD;发表时间：18年06月21日">两部门联合公布水泥行业2017年能效…</a></li><li><a href="/article/201801/160609.html" target="_blank" title="标题：宁夏经信委关于水泥产能置换方案的公告&#xD;发表时间：18年01月05日">宁夏经信委关于水泥产能置换方案的…</a></li><li><a href="/article/201712/160482.html" target="_blank" title="标题：水泥企业大气污染物排放当量换算解读&#xD;发表时间：17年12月28日">水泥企业大气污染物排放当量换算解读</a></li><li><a href="/article/201712/160479.html" target="_blank" title="标题：高长明：我国水泥窑协同处置废弃物（生活垃圾）工程实践的回顾、反思与展望（全文）&#xD;发表时间：17年12月27日">高长明：我国水泥窑协同处置废弃物…</a></li><li><a href="/article/201711/159557.html" target="_blank" title="标题：乔龙德：不忘初心，牢记使命，把一切工作统一到贯彻落实党的十九大精神上来&#xD;发表时间：17年11月01日">乔龙德：不忘初心，牢记使命，把一…</a></li><li><a href="/article/201709/158922.html" target="_blank" title="标题：警惕：仅取消了PC32.5R水泥，易造成规范企业吃亏&#xD;发表时间：17年09月26日">警惕：仅取消了PC32.5R水泥，易造…</a></li><li><a href="/article/201708/158131.html" target="_blank" title="标题：山东省水泥行业协会成立暨会员大会第一次会议在济南召开&#xD;发表时间：17年08月17日">山东省水泥行业协会成立暨会员大会…</a></li><li><a href="/article/201707/157699.html" target="_blank" title="标题：《中国水泥企业社会责任指南》等三项团体标准审议会召开&#xD;发表时间：17年07月25日">《中国水泥企业社会责任指南》等三…</a></li><li><a href="/article/201706/156967.html" target="_blank" title="标题：环保部将加强水泥行业无组织排放的控制&#xD;发表时间：17年06月16日">环保部将加强水泥行业无组织排放的…</a></li><li><a href="/article/201706/156786.html" target="_blank" title="标题：孔祥忠：评产能置换政策对水泥行业去产能的影响&#xD;发表时间：17年06月09日">孔祥忠：评产能置换政策对水泥行业…</a></li><li><a href="/article/201704/155575.html" target="_blank" title="标题：安监局发文推动水泥行业淘汰落后产能&#xD;发表时间：17年04月25日">安监局发文推动水泥行业淘汰落后产能</a></li><li><a href="/article/201704/154938.html" target="_blank" title="标题：孔祥忠谈雄安新区建设对水泥市场的影响&#xD;发表时间：17年04月06日">孔祥忠谈雄安新区建设对水泥市场的…</a></li><li><a href="/article/201703/154480.html" target="_blank" title="标题：泛东北地区C8+4第一次工作会议纪实&#xD;发表时间：17年03月21日">泛东北地区C8+4第一次工作会议纪实</a></li><li><a href="/article/201703/154237.html" target="_blank" title="标题：河南召开重点水泥企业错峰生产工作座谈会&#xD;发表时间：17年03月14日">河南召开重点水泥企业错峰生产工作…</a></li><li><a href="/article/201702/153860.html" target="_blank" title="标题：青海省水泥企业错峰生产情况的通报&#xD;发表时间：17年02月25日">青海省水泥企业错峰生产情况的通报</a></li><li><a href="/article/201701/152708.html" target="_blank" title="标题：财政部难以设立水泥行业去产能专项资金，行业谋求自救良策&#xD;发表时间：17年01月07日">财政部难以设立水泥行业去产能专项…</a></li><li><a href="/article/201612/152544.html" target="_blank" title="标题：孔祥忠：2017年新年寄语&#xD;发表时间：16年12月31日">孔祥忠：2017年新年寄语</a></li><li class="last"><a href="/article/201612/152435.html" target="_blank" title="标题：2016年水泥价格上涨的前“因”后“果”&#xD;发表时间：16年12月27日">2016年水泥价格上涨的前“因”后“…</a></li>
+          
+        </ul>
+  </div>
+</div>
+        </div>
+        <!-- side e -->
+    </div>
+    <!-- content e -->
+
+        <div id="footer">
+        <div class="footLink">
+            <a href="/">首页</a><span class="spe">|</span><a href="/shtml/about.html" target="_blank">关于我们</a><span class="spe">|</span><a href="/shtml/lxwm.html" target="_blank"><span style="color:#c00">联系方式</span></a><span class="spe">|</span><a href="/shtml/AD.html" target="_blank"><span style="color:#c00">宣传服务</span></a><span class="spe">|</span><a href="/shtml/declare.htm" target="_blank">本网声明</a><span class="spe">|</span><a href="http://www.chinacca.org/" target="_blank">协会园地</a>
+        </div>
+        <div class="copyright">
+            主办单位：北京中水协网信息咨询有限公司<br />
+本网站版权由北京中水协网信息咨询有限公司所有<br />
+<span style="color:#c00">京ICP证 050317号</span> 京ICP备09079614号 <br />
+
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802024218" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.dcement.com/UploadFiles/2018nzt/2018/11/201811150844267999.jpg" style="float:left;"/></a>京公网安备11010802024218号<br />
+
+地址：北京市海淀区三里河路11号（100831）E-mail：<a href="mailto:dc@dcement.com">dc@dcement.com</a><br />
+<a href="http://wpa.qq.com/msgrd?v=3&uin=75500327&site=qq&menu=yes" target="_blank"><img title=服务咨询 border=0 alt=服务咨询 src="http://wpa.qq.com/pa?p=2:75500327:45 &r=0.48649648444965093"/> 服务咨询</a>
+        </div>
+        <div class="img">
+            <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202005112300002" target="_blank"><img src="/Template/Default/Skin/images/biaoshi.gif"/></a><br />
+            <!--<a href="http://sealinfo.trustutn.org/info?sn=L003001201304279910172" target="_blank"><img src="http://p8.qhimg.com/d/webscan/pingan_logo.jpg"/></a>-->
+        </div>
+    </div>
+    <!-- footer e -->
+
+</div>
+<!-- wrap e -->
+<!--<script src="/JS/tongji.js"></script> -->
+<script src='/Analytics/CounterLink.aspx?Style=none'></script>
+<script>
+if ($.pe.cookie('MobileCookie') === '1') {
+  $('<div style="display:block;position:fixed;left:0;bottom:0; width:100%; margin:0px auto; height:50px; line-height:50px; font-size:30px; text-align:center; color:#fff;background:#3AB6D2">返回手机版&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;返回手机版&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;返回手机版</div>').click(function(){
+    $.pe.cookie('MobileCookie', 0, {path: '/'});
+    window.location.reload();
+  }).appendTo($('body'));
+}
+</script>
+<div style="display:none">
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=164270"></script>
+   </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+    var img=jQuery(this);
+        img.hide();
+    var imgInt=setInterval( function(){
+        if(img.width()>0){
+            clearInterval(imgInt);
+            if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+            img.show();
+        }
+    },50 );
+});
+jQuery("img").parents("p").css("text-indent",0);
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+    document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+    document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>

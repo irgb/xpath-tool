@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>
+        建筑新网：济南轨道交通1号线全线贯通                         
+   
+    </title>
+    
+    <script type="text/javascript">
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        window.location.href = "/index.php/Home/Mobile/detail.html?id=11389";
+    }
+</script>
+
+    <!-- <script type="text/javascript">
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            window.location.href = "/index.php/Home/Mobile/index.html";
+        }
+    </script> -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/Public/layui/css/layui.css">
+    <script src="/Public/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/jz.css">
+    <script type="text/javascript" src="/Public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+    $('#type1 option[value=]').attr('selected', 'selected');
+    </script>
+
+    <script type="text/javascript">
+    var CalendarData = new Array(100);   
+    var madd = new Array(12);   
+    var tgString = "甲乙丙丁戊己庚辛壬癸";   
+    var dzString = "子丑寅卯辰巳午未申酉戌亥";   
+    var numString = "一二三四五六七八九十";   
+    var monString = "正二三四五六七八九十冬腊";   
+    var weekString = "日一二三四五六";   
+    var sx = "鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+    var cYear, cMonth, cDay, TheDate;   
+    CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6, 0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD, 0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55, 0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA, 0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95, 0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26, 0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D, 0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497, 0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F, 0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D, 0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);   
+    madd[0] = 0;   
+    madd[1] = 31;   
+    madd[2] = 59;   
+    madd[3] = 90;   
+    madd[4] = 120;   
+    madd[5] = 151;   
+    madd[6] = 181;   
+    madd[7] = 212;   
+    madd[8] = 243;   
+    madd[9] = 273;   
+    madd[10] = 304;   
+    madd[11] = 334;   
+    function GetBit(m, n) {        return (m >> n) & 1;    }   
+    function e2c() {       
+        TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0], arguments[1], arguments[2]);       
+        var total, m, n, k;       
+        var isEnd = false;       
+        var tmp = TheDate.getYear();       
+        if (tmp < 1900) {            tmp += 1900;        }        total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4) + madd[TheDate.getMonth()] + TheDate.getDate() - 38;       
+        if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {            total++;        }       
+        for (m = 0;; m++) {            k = (CalendarData[m] < 0xfff) ? 11 : 12;            for (n = k; n >= 0; n--) {                if (total <= 29 + GetBit(CalendarData[m], n)) {                    isEnd = true; break;                }                total = total - 29 - GetBit(CalendarData[m], n);            }            if (isEnd) break;        }        cYear = 1921 + m;       
+        cMonth = k - n + 1;       
+        cDay = total;       
+        if (k == 12) {            if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth = 1 - cMonth;            }            if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth--;            }        }   
+    }   
+    function GetcDateString() {       
+        var tmp = "";       
+        tmp += tgString.charAt((cYear - 4) % 10);       
+        tmp += dzString.charAt((cYear - 4) % 12);       
+        tmp += "年 ";       
+        if (cMonth < 1) {           
+            tmp += "(闰)";           
+            tmp += monString.charAt(-cMonth - 1);       
+        } else {            tmp += monString.charAt(cMonth - 1);        }        tmp += "月";       
+        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿" : "三十"));       
+        if (cDay % 10 != 0 || cDay == 10) {            tmp += numString.charAt((cDay - 1) % 10);        }       
+        return tmp;   
+    }   
+    function GetLunarDay(solarYear, solarMonth, solarDay) {        //solarYear = solarYear<1900?(1900+solarYear):solarYear;
+               
+        if (solarYear < 1921 || solarYear > 2020) {            return "";        } else {           
+            solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;           
+            e2c(solarYear, solarMonth, solarDay);           
+            return GetcDateString();       
+        }   
+    }    //调用
+       
+    var D = new Date();   
+    var yy = D.getFullYear();   
+    var mm = D.getMonth() + 1;   
+    var dd = D.getDate();   
+    var ww = D.getDay();   
+    var ss = parseInt(D.getTime() / 1000);   
+    if (yy < 100) yy = "19" + yy;   
+    function GetCNDate() {        return GetLunarDay(yy, mm, dd);    }    $(document).ready(function() {       
+        var d = GetCNDate();       
+        var nongli = document.getElementById('nongli');
+        //         alert(d);
+        nongli.innerHTML = d;
+
+           
+    });
+    </script>
+    <style type="text/css">
+        
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px); 
+        }
+
+    </style>
+    <script type="text/javascript">
+    //设为首页 www.jb51.net
+    function SetHome(obj, url) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(url);
+        } catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch (e) {
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                }
+            } else {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+            }
+        }
+    }
+
+    //收藏本站 www.jb51.net
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+            }
+        }
+    }
+    </script>
+    <style type="text/css">
+        ::-webkit-input-placeholder {
+          color: #aaa;
+        }
+        :-moz-placeholder {
+          color: #aaa;
+        }
+        ::-moz-placeholder{
+        color: #aaa;
+        }
+        :-ms-input-placeholder {
+          color: #aaa;
+        }
+
+    </style>
+</head>
+<!--右侧浮窗开始-->
+<link rel="stylesheet" href="/Public/css/homepage.css" />
+<link rel="stylesheet" href="/Public/css/fireman109.css" />
+
+<body>
+    <header class="am-topbar header " style="width:100%;z-index: 101;height:;background: #fff;">
+        <div class="top_nav" style="width:100%;padding-left:50px;">
+            <span>中国建筑业门户网站</span>
+            <div style="height: 30px;float: right;margin-right:150px;">
+                <!-- <a  href="#" style="color: #F58400;">设为首页</a> |
+                <a  href=#">收藏</a> -->
+                <a href="javascript:void(0);" style="color: #F58400;" onclick=" SetHome(this,'http://www.jzsbs.com')">设为首页</a> |
+                <a href="javascript:void(0);" onclick="AddFavorite('建筑新网','http://www.jzsbs.com')">收藏</a>
+            </div>
+        </div>
+    </header>
+    <!--logo-->
+    <div class="bannerDiv content " style=" margin-bottom: 5px; margin-top: 50px; height: 100px; ">
+        <div class="logo " style="float: left;margin-left:-10px">
+            <a href="/">
+                    <img src="/Public/picture/logo.png" />
+                </a>
+        </div>
+        <div class="main-right" style="height: 100px;padding-top: 30px;margin-right:-45px">
+            <span style="font-size: 12px;">
+                2019年01月09日&nbsp;&nbsp;星期三 <span id="nongli"></span></审判
+          >
+          <style type="text/css">
+            .h_search select {  
+                      /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
+                          border: solid 1px #000;  
+                          
+                          /*很关键：将默认的select选择框样式清除*/  
+                          appearance:none;  
+                          -moz-appearance:none;  
+                          -webkit-appearance:none;  
+                          
+                          /*在选择框的最右侧中间显示小箭头图片*/  
+                  
+                  /*在选择框的最右侧中间显示小箭头图片*/  
+                  background: url("/Public/images/red.png") no-repeat  45px 5px;    
+                  
+                  
+                    /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
+                  padding-right: 14px;  
+                }   
+          </style>
+            <form action="/index.php/Home/Index/searchList.html">
+                <div class="h_search">
+                    <ul>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <select id="type1" name="type" style="width: ;height: 30px;border: none;display: block;width: 67px;padding: 5px; font-size: 15px;color: #333;appearance:none;padding-left:10px">
+                            <option value="1">标题</option>
+                            <option value="2">作者</option>
+                        </select>
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd;margin-left: 1px solid #ddd">
+                        <input style="display: block;" class="head_search" value="" id="num" name="search"  type="text" placeholder="请输入关键字" onKeyUp="showLen(this);" style="width: 151px" />
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <input class="head_search" style="float: left;display:block;margin-left: -5px;width:80px;background: #eee;line-height:30.3px;color: #000;font-size: 16px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;text-align: center;" type="submit" value="搜 索" />
+                    </li>
+                </ul>
+                    <script type="text/javascript">
+                    showLen(document.getElementById("num"));
+                    function showLen(obj){
+                        // document.getElementById('span').innerHTML = '&nbsp;&nbsp;还可输入'+ (200-obj.value.length) +'位';
+                        if(obj.value.length>10){
+                            var objValue = obj.value;
+                            objValue=objValue.substr(0,10);
+                            document.getElementById('num').value=objValue;
+                        }
+                    }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="clear "></div>
+    </div>
+    <!--导航-->
+    <div class="titleDiv ">
+        <div class="content " style="margin: 0 auto">
+            <ul style="margin: 0px;padding:0px">
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=1">新闻</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=6">市场</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=4">基建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=8">创优</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=10">聚焦</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=2">地方</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=19">海外</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=9">市政</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=11">安全</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=72">访谈</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=27">人物</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=39">规划</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=42">钢结构</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=21">咨询</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=30">绿建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=65">工地</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=20">设计</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=74">信息化</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=73">房产</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=31">园林</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=29">建材</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=32">机械</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=22">协会</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=5">法苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=75">数据</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=28">装饰</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=3">科技</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=23">企业</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=76">文苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/videoList.html">视频</a>
+                        </li>
+                    </ul>
+                </li>
+                <div class="clear "></div>
+            </ul>
+        </div>
+    </div>
+    
+
+    <style type="text/css">
+    img {
+        max-width: 740px;
+        max-height: 1500px;
+    }
+
+    p {
+        margin: 0 !important;
+        padding: 0!important;
+        font-family: '微软雅黑'!important;
+        padding: 15px!important;
+        text-indent: 2em!important;
+        line-height: 2em!important;
+        font-size: 16px!important;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+    <!--内容-->
+    <div class="content">
+        <!--left-->
+        <div class="content-left" style="padding: 0px 75px 0px 7px">
+            <div class="content-title fengeline">
+                <a href="/">建筑新网</a> >
+                <a href="/index.php/Home/Index/newsList.html?id=2">地方 >
+                <a href="javascript:void(0)">正文</a>
+            </div>
+                        <h1 style=" text-align: center; margin: 10px 0; ">济南轨道交通1号线全线贯通 </h1>
+                        <p class="content-left-wenzhang-time">时间：2019年01月02日&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：<span class="content-source">建筑新网</span> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 作者：周峰 刘敏</p>
+	                <!-- <p>摘要：济南轨道交通1号线作为泉城的首条地铁，从开始建设就备受世人瞩目，在建设工艺和施工方法上创造了多项之最。</p> -->
+	                <p><p>1月1日，济南轨道交通1号线迎来全线通车的历史时刻，泉城人民多年的地铁梦终于实现。中建八局第二建设有限公司（以下简称“中建八局二公司”）作为重要的参建单位之一，承担了轨道交通1号线高架段共计17.01公里的土建施工，占全线长约65%；地下站及区间风水电安装工程；以及全部11座车站总建筑面积约6.1万平方米的装饰装修工程。<br/></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:=""></span></p><p style="text-align: center;" font-size:=""><img id="/attach/xumin20191214492063664.jpg" src="/attach/xumin20191214492063664.jpg" type="image" style="max-width:" title="1实景01_副本.jpg/"/></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">济南轨道交通1号线从2015年7月16日正式开工，到2019年元旦全线通车，中建八局二公司的建设者们奋斗了1000多个日夜，他们以“安全地铁、绿色地铁、智慧地铁、品质地铁”演绎了泉城的地铁建设历程，讲述了泉城地铁圆梦的辉煌篇章，彰显了中建八局二公司建设者的铁军风采。</span></p><p style="font-size:" line-height:="" text-indent:=""><strong><span style="font-family:" font-size:="">工艺创新，多项之最领衔工程建设</span></strong></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">济南轨道交通1号线作为泉城的首条地铁，从开始建设就备受世人瞩目，在建设工艺和施工方法上创造了多项之最。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">其中，最让济南人骄傲的，是济南轨道交通1号线定义为全国首条清水混凝土干线。其高架段7个车站均为岛式清水混凝土车站，且外侧梁、柱向外倾斜10度，在国内同类工程施工中尚属首例。面对施工经验和技术指标的空白，工艺创新势在必行。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">为保证清水混凝土的施工效果，项目团队先后经过98次混凝土配比试验和4次样板试验，历时三个月，经过多次专家论证，才最终敲定施工方案。整条线路混凝土构件一次浇筑成型，无需任何外装饰，保证轨道交通1号线“素颜”亮相。同时，项目还采用了中建八局二公司自主生产的新型铝木模板，施工速度快、成型质量好、周转率高，保证了清水混凝土的一次浇筑成型。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:=""></span></p><p style="text-align: center;" font-size:=""><img id="/attach/xumin20191214492063665.jpg" src="/attach/xumin20191214492063665.jpg" type="image" style="max-width:" title="3航拍_副本.jpg/"/></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">在工研院站—创新谷站区间高架段AY16—AY38的施工中，中建八局二公司还刷新了国内架桥机架设U型梁小半径记录。该段曲线段半径仅为310米，现有的运梁车和架桥机因转弯半径不足无法进行架设，使用龙门吊或汽车吊又面临很高的安全风险。为此，中建八局二公司项目团队利用BIM软件，建立了架桥机的三维模型，通过现场对比、建模分析，对工序和架桥机、梁上运梁车进行优化改造，直接使用架桥机完成该部分U型梁的架设，刷新了国内架桥机架设U型梁小半径的记录。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">在高架段玉符河站和地下段王府庄站间，中建八局二公司在高架与地下隧道的连接处，建设了355米的山东省内最长的雨棚，雨棚按照轨道的坡度设计安装，由聚碳酸酯板、白色百叶窗和铝板装饰，铝板与采光板相结合，综合考虑列车时速和空气动力，既能满足自然采光，又能减轻建筑结构负担。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">除了多项之最，中建八局二公司项目部还遇到了业内少见的跨双层交通施工。在紫薇路站—赵营站区间段，轨道交通1号线与济菏高速公路相互重叠，需要跨地面道路和高架桥进行施工，三层施工高度约有25米，两桥重叠部分跨度70米，斜交角为24度，工程桥体采用挂篮悬浇的施工方法，130米的梁体主跨共分为37段，采用托架、挂篮等方式在空中进行悬臂浇筑，整个施工过程，采用了全封闭挂篮，既保证了工程的进展，又不妨碍地面道路和济菏高速公路的正常通行。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">预制U型梁吊装是建设过程中的另一个难点。轨道交通1号线高架桥体预制U型梁有966片之多，一片长度为18-34米，重达200吨，且为薄壁开口结构。一般的龙门吊四点提梁方法极易使U型梁受损，从而造成安全隐患，如何安全精准地吊装U型梁，成为中建八局二公司面对的另一挑战。&nbsp; &nbsp;</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">结合现场施工环境，中建八局二公司项目团队创新采用了大型门式起重机吊装技术。工人在施工中，利用两台跨度为38米的门式起重机协同开展吊装工作，采用“地面驳运、定点上梁、跨外起吊、行走安装”的施工方法，避免梁体受到碰撞。为避免梁体被扭，项目团队在其中一辆天车的吊具上架设了平衡梁，通过销轴与吊具梁单销、双销连接，实现了四点起吊，三点平衡，使U型梁始终处于静定支撑状态。最终，他们高质量地完成了架设工作，没有一片U型梁因吊装过程中扭动、碰撞而受损。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">中建八局二公司高超的施工工艺也带动了创优工作，轨道交通1号线项目获得省部级以上科技进步奖1项，省级工法4项，授权专利12项，参编地方标准3部，国家级项目管理成果2项，在施工刊物发表论文12篇。&nbsp;</span></p><p style="font-size:" line-height:="" text-indent:=""><strong><span style="font-family:" font-size:="">儒风素语，细节彰显高贵品质</span></strong></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">济南轨道交通1号线还肩负着传承齐鲁文化的重任，它的整体设计采用“儒风素语”的主题。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:=""></span></p><p style="text-align: center;" font-size:=""><img id="/attach/xumin20191214492063662.jpg" src="/attach/xumin20191214492063662.jpg" type="image" style="max-width:" title="2清水混凝土车站2_副本.jpg/"/></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">结合清水混凝土的工艺，中建八局二公司项目团队在装饰设计上充分利用了原生混凝土面的效果，秉持“清水出芙蓉、天然去雕饰”的理念，利用清水混凝土素雅庄重的效果，形成颜色均匀、柔和稳重的风格，着重表现“素语”。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">轨道交通1号线的11座车站从设计主题到装饰工艺都别具一格、各显风华，尽显“和而不同”的思想理念。巧用施工挖出废石奠基的工研院站，利用经典繁方篆为元素的创新谷站，以深色金属与背漆玻璃将传统花格窗进行现代演绎的园博园站，以陶制活字印刷模块为元素的大学城站，以陶瓷彩绘为元素的紫薇路站，以非物质文化遗产手龙绣球灯为元素的赵营站，以泉涌荷韵为主体的济南西站……处处彰显“儒风”特色。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">在装修过程中吸收了中国传统文化的精髓，园博园站墙面装饰采用回纹图案，线条无交合之点，寓意福寿吉祥深远绵长、安全回归，层次丰富，内涵美好；创新谷站则将“经典繁方篆”镌刻在细节装饰、地面提示语之上，因形立意，体正势圆，圆弧形覆铜窗，如高铁列车车窗形状，流线型的外观充满了意动的美感。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">轨道交通1号线的车站景观墙更是形色各异，除陶板景观墙外，还有三色石材景观墙、三色铝板景观墙等，其中，三色石材景观墙的施工难度最大。在设计中，石材被分为深、中、浅三色，上下鱼鳞式叠砌布置，错落有致，每站的石材比例一样但排版又各不相同，在增加施工难度的同时，也对工期形成了严峻挑战。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">为“讲”好齐鲁文化，项目团队首先通过BIM技术建立了全线的装饰景观三维模型，并根据设计要求及模型效果图确定每个车站装饰安装所需材料的数量、造型和安装位置；再利用犀牛软件进行景观墙节点三维展示，确定鱼鳞式叠砌石材等材料的构造情况，严控现场施工质量，精细管理车站装饰景观。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">绿色环保是轨道交通1号线施工中的另一大亮点。中建八局二公司项目部结合海绵城市建设，从小处着手，利用太阳能光伏板、地下水回灌、雨水收集等措施，每年节电400余万度，雨水回收可达2万立方米。项目团队还设计了获评4项国家专利、2项国家级技术成果奖的围挡清洗车，用来替代人工作业，节水3000余立方米。</span></p><p style="font-size:" line-height:="" text-indent:=""><strong><span style="font-family:" font-size:="">联合作战，加快地铁建设进程</span></strong></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">作为唯一一家参与了土建、安装、装饰施工的承建方，中建八局二公司还发挥了特色的专业优势，实现共同发力、重拳出击，多部门联合作战，全力推进工程建设。在建设者的共同努力下，自2015年7月16日济南轨道交通1号线试验段正式开工建设，到2017年12月19日高架段全线贯通，再到2019年元旦实现全线通车，中建八局二公司用精细管理、高效团队实现了济南地铁建设的“奇迹”。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">轨道交通1号线体量大且涉及专业多，必须按严格的工序进行建设。针对工程的特殊性，中建八局二公司项目团队转变观念，主动出击。一方面，精细管理工程进度。项目团队每天召开施工协调会议，按照“事前控制（工期控制）、事中控制（施工阶段的关键节点）和事后控制”的三控制度和“定时间、定任务、定责任人”的三定原则，严格把关各个节点的完成时间；另一方面全员齐抓共管，增强各级管理人员的执行力和履职意识。工作面一旦形成，立即按工序调集劳动力，材料设备第一时间配足配齐，保证施工进度。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">1000多个日夜，中建八局二公司的建设者牢固树立团队精神，土建、安装、装饰三支项目团队通力合作，众志成城，齐心协力推进建设任务，携手攻克了设备一体化系统复杂、场地狭小、交叉施工严重、工期紧、体量大等难题。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:=""></span></p><p style="text-align: center;" font-size:=""><img id="/attach/xumin20191214492063666.jpg" src="/attach/xumin20191214492063666.jpg" type="image" style="max-width:" title="4地下站运行实景图_副本.jpg/"/></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">60天完成约1.5万平方米双层铝镁锰金属屋面；90天内完成约9.8万平方米室内墙地顶的装饰施工；100天完成约6万平方米的外玻璃幕墙、出入口铝板顶棚及石材景观墙施工；120天内完成约4千立方米的二次砌筑；120天完成地下站内6万平方米风管安装和34000米管道安装；40天完成站内24万米电缆敷设；60天完成隧道内13万米电缆敷设和26000米消防管安装。6个月圆满完成11个系统的BIM深化、设备管线安装、单系统调试等任务，缩短近10个月的工期……中建八局二公司的“地铁圆梦人”用工程实际进度诠释了铁军效率。</span></p><p style="font-size:" line-height:="" text-indent:=""><strong><span style="font-family:" font-size:="">强劲发展，全力推进基建业务</span></strong></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">近年来，中建八局二公司顺应国家基础设施建设的发展大潮，进一步解放思想，加快转型升级，相继成立了基础设施公司、基础设施管理部，在基础设施领域取得了快速发展，先后承接了济南市首条地铁——济南轨道交通1号线项目、宁梁高速项目、京沪高速改扩建项目、潍莱高铁项目等一批重要基础设施工程，重点培育出了轨道交通、高速铁路、市政工程、高速公路等四大优势业务板块，经营区域遍布山东、河北、重庆、广西，并远涉海外。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">2018年，中建八局二公司新承接了18个基础设施项目，目前正在施工32个路类工程，总里程达到268.7公里。其中平赞高速工程的建成将有效推动京津冀交通一体化建设；董家口至梁山（鲁豫界）公路宁阳至梁山施工一标段全长共88公里，是山东省单标段体量最大的基础设施项目，建成后对加强山东与中原地区的联系、拓展港口腹地、改善沿线投资环境、促进革命老区和山（湖）区脱贫、带动旅游业发展具有重要意义。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">在市政工程领域，中建八局二公司承建了济南市重点工程——中央商务区市政工程项目，实现了与多个地块同时施工建设的无缝对接，打造出了“零退界同步施工”的精细管理模式，并荣获省级安全文明工地称号。</span></p><p style="font-size:" line-height:="" text-indent:=""><span style="font-family:" font-size:="">目前，中建八局二公司已筹建起一支高素质的基础设施专业化管理团队，拥有基础设施专业人才近千余人，国家级注册类证书持证人100余位。</span></p><p line-height:="" text-indent:=""><span style="font-family:" font-size:="">济南轨道交通1号线连接长清区、大学城和济南西站等重点区域，支撑起济南西部城区的发展。作为重要的参建者，中建八局二公司以打造经得起历史和人民检验的“百年工程”，拓展泉城人民的“幸福空间”为己任，全力以赴为济南建设“大强美富通”现代化国际大都市做出新的更大贡献。</span></p></p>
+            <p class="wenzhang-fenxiang">
+                <div id="share">
+                    <div class="bdsharebuttonbox">
+                        <span>分享:</span>
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+                    </div>
+                </div>
+            </p>
+            <div class="wenzhangpian">
+                <div class="wenzhangshang" >
+                    <a class="wenzhangshang-pic" href="javascript:void(0)"><img src="/Public/picture/arrowl.png" /></a>
+                    <span style="margin-top: 15px;margin-left: 40px;">
+                        <span style="margin-bottom: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11388" >上一篇</a></span>
+                        <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11388" >
+                                中建三局一公司举行纪...</a>
+                            </span>
+                    </span>
+                                    </div>
+                <div class="wenzhangtitle">
+                </div>
+                <div class="wenzhangxia">
+                    <a class="wenzhangxia-pic" href="javascript:void(0)"><img src="/Public/picture/arrowr.png" /></a>
+                    <span style="margin-top: 15px;margin-right: 40px;">
+                            <span style="margin-bottom: 5px;"><a href="/index.php/Home/Index/detail.html?id=11390">下一篇</a></span>
+                            <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11390" >中建四局六公司关爱农民工...</a>
+                            </span>
+                        </span>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+            <script>
+            function sendSg() {
+                var saytext = document.getElementById('saytext1').value;
+                // alert(saytext);
+                if (saytext == "") {
+                    alert("您没什么话要说吗？");
+                } else {
+                    document.getElementById("saypl").submit();
+                }
+
+            }
+            </script>
+            <div class="wenzhang-pinglun">
+                <form action="/index.php/Home/Index/addComment.html" method="post" name="saytext" id="saypl">
+                    <input type="hidden" name="id" value="11389">
+                    <input type="hidden" name="classid" value="2">
+                    <textarea name="saytext" id="saytext1"></textarea>
+                    <!-- </td> -->
+                    <a class="send arrow" onclick="javascript:sendSg();">我要评论</a>
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="wenzhang-pinglun-detail">
+                <div class="pinglun-title" style="width: 762px">
+                    <span class="pinglun-title-1">最新评论</span>
+                    <span class="pinglun-title-2">0条评论</span>
+                </div>
+                <div class="clear"></div>
+                <ul class="pinglun-list">
+                                    </ul>
+                <div class="xianshi-more" style="display:none;">
+                    <a><img src="/Public/picture/sanji_05.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        <!-- <link rel="stylesheet" type="text/css" href="layui/css/layui.css"> -->
+        <div class="content-right ">
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />建筑新网</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                <ul>
+                                    <li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11033">1.习近平宣布：港珠澳大桥正式开通</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11004">2.海南自贸区允许设立外资建企承揽区内建筑工程项目</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10830">3.国务院常务会议要求聚焦补短板扩大有效投资</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10738">4.铁路建设补短板加速 中西部占近七成</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10368">5.习近平主席向萨勒总统移交中国援助塞内加尔规模最大项目“金钥匙”</a>
+                                        </li>                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />推荐视频</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                 <video style="width:360px;margin-left: -10px"  controls="controls " src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video.
+                        <!--    <source src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video. -->
+                    </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <!-- <div class="main-right-paiming-title ">行业排名</div> -->
+                <div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/b6c209df99caa8ab9db84d986244c561.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/483db82c084eb5f69dac4c4c4cc9e9d2.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/2a974835fdc21eecb7444a115094ba45.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div>            </div>
+        </div>
+    </div>
+    <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "济南轨道交通1号线全线贯通",
+            "bdDesc": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "http://"+"www.jzsbs.com"+"//Public/picture/jzsb.jpg",
+            "bdStyle": "1",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <!-- <script src="——js/c2a583e6cfae410e9fb8cdab9062b261.js"></script> -->
+    <div class="clear"></div>
+
+    <!-- FOOTER -->
+    <div class="main-bottom ">
+        <div class="content ">
+            <div class="main-bottom-friend ">
+                <span>友情链接：</span>
+                <a target="blank" href="http://www.mohurd.gov.cn">中华人民共和国住房和城乡建设部</a><a target="blank" href="http://www.zgjzy.org">中国建筑业协会</a><a target="blank" href="http://www.bjjs.gov.cn/publish/portal0/tab3939/">北京市住房和城乡建设委员会</a><a target="blank" href="http://www.bjjl.org.cn/">北京市建筑业联合会</a><a target="blank" href="http://www.shjx.org.cn/">上海市建筑施工行业协会</a><a target="blank" href="http://www.scca.sh.cn/">上海市建设工程咨询行业协会　</a><a target="blank" href="http://www.jsconi.com/">江苏省建筑行业协会</a><a target="blank" href="http://www.ahjst.gov.cn/ahzjt_Front/">安徽省住房和城乡建设厅</a><a target="blank" href="http://www.ahjzy.com.cn/">安徽省建筑业协会</a><a target="blank" href="http://www.gdcia.org/">广东省建筑业协会</a>            </div>
+            <div style="text-align: center ;line-height: 2em!important;color:#666">
+                
+                <span style="margin-bottom:10px;">版权所有:建筑新网社Copyright@2014,Construction All rights reserved</span><br>
+                <span style="margin-bottom:10px;">地址:上海杨浦区营口路588号 18楼 邮编:200433 电话:021-63216799</span><br>
+                <span >沪ICP备14023239号</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+
+        //…
+    });
+    </script>
+
+</body>
+
+</html>

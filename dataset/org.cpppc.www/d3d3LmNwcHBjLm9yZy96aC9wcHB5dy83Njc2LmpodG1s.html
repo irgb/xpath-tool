@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7676","0","attach");
+Cms.viewCount("","7676");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml" target="_blank">新闻动态</a> > <a href="http://www.cpppc.org/zh/pppyw/index.jhtml" target="_blank">PPP要闻</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>前瞻2019：国资国企改革发展如何布新局</h2>
+			<span class="msg"><b>2019-01-17</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">国资国企改革已走过千山万水，还需继续跋山涉水。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">今年是实现2020年国企改革目标的关键之年，全国国资系统与中央企业在改革、发展以及党的建设方面有何新部署、新要求？14至15日举行的“中央企业、地方国资委负责人会议”释放了新信号。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;"><strong style="margin: 0px; padding: 0px;">开好局起好步，确保完成全年目标</strong></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">在稳中有变、变中有忧的经济大环境中，2018年中央企业亮出不俗的成绩单：实现营业收入29.1万亿元、利润1.7万亿元，创历史最好水平。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">这一态势今年能否延续？会议释放的信号显示，既面临挑战，也有不少有利条件。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">一方面，今年内外经济环境更加复杂严峻，中央企业可持续增长基础还不牢固；另一方面，国资国企改革加快探索突破，应对挑战、紧抓机遇的能力与信心都在提升。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">经济效益实现稳定增长，流动资产周转率提高，资产负债率继续下降——综合各方面因素，会议明确了2019年中央企业生产经营的主要目标任务。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“开好局、起好步，对提振信心、稳定预期十分关键。”国务院国资委主任肖亚庆在会议上表示，要抓紧对一季度工作进行周密谋划与安排，努力实现高开稳走、高开高走，为完成全年目标夯实基础。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">据业内人士分析，目前我国中央企业资产布局较广，无论是欧美等经济体发展前景，还是原油、大宗商品价格波动与国际汇率走势变化，都可能对企业的运营带来影响，因此要更加注重形势研判，以预案的前瞻性、精准性对冲外部环境的复杂性、不确定性。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">严控风险是企业持续健康发展的重要前提。“防范化解重大风险要在健全国有企业资产负债约束机制，完善投资、资金管理和金融业务监管制度，构筑各类风险制度防线上持续用力。”国资委党委书记郝鹏说。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">会议强调，严控债务风险，强化负债规模和资产负债率双重管控；高度重视资金链安全，保持现金流充裕，提升企业偿债能力；严格PPP项目管控，强化投资管控；严控金融业务，强化金融与产业间以及各金融子企业间的风险隔离。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;"><strong style="margin: 0px; padding: 0px;">坚持市场化改革和高水平开放</strong></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">国资国企改革，是经济体制改革的重要环节，事关中国经济未来。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“坚持政企分开、政资分开和公平竞争原则”“加快实现从管企业向管资本转变”“改组成立一批国有资本投资公司，组建一批国有资本运营公司”……中央经济工作会议就深化国资国企改革着墨颇多。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">为促使这些部署切实落地，此次会议提出了更为具体的工作安排。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">——积极推进混合所有制改革和股权多元化，切实转换企业经营机制。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">去年，央企集团层面股权多元化探索迈出新步伐：国药集团引入国投和中国国新2家战略投资者；南航集团、中国航信集团层面股权多元化改革已形成初步方案。同时，以国家电网特高压直流工程等核心业务向社会资本开放为代表，重点领域混改试点扎实推进。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">从会议释放的信号看，今年这项改革预计重点在国有资本投资、运营公司出资的国企，以及主业处于竞争领域的商业类国企开展，同时工作重心将向“转换经营机制”切换，特别是要在法人治理、选人用人、强化激励等方面取得实质性进展。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">——深入推进整合融合，不断优化国有资本布局结构。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">推进资源整合、减少同质化竞争，是做强做优做大国有资本的“必选项”。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">据介绍，今年国资委将积极稳妥推进装备制造、船舶、化工等领域企业战略性重组；持续推动电力、有色金属、钢铁、海工装备、环保、免税品等领域专业化整合。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">值得关注的是，随着中国开放的大门越开越大，中央企业也面临国际合作与竞争的新形势。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">会议提出，央企需要在新一轮高水平开放中把握机遇，既要在“一带一路”建设中走深走实、在提升全球竞争力上持续用力，也要通过强化内控体系、完善风险防控与合规管理等措施来强化海外风险防控。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;"><strong style="margin: 0px; padding: 0px;">加快实现从管企业向管资本转变</strong></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">促进国资监管职能转变，加大“放管服”改革力度，对深化国企改革、激发企业活力，具有重大牵引作用。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">以国有资本授权经营体制改革为例，目前各级国资委已经选择了21家中央企业和122家地方国有企业开展国有资本投资、运营公司试点，在试体制、试机制、试模式等方面积累了不少经验。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“今年要进一步加大授权力度，建立授权调整机制，探索将部分出资人权利授予试点企业。推动国有资本投资、运营公司进行组织架构调整、管控模式改革，进一步打造市场化运作专业平台，在国有经济战略性重组和布局结构优化中发挥更大作用。”肖亚庆说。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">此外，通过完善出资人的权责清单，加大简政放权力度，促进信息化与监管业务融合，监管部门在管好国资布局、规范资本运作、提高资本回报、维护资本安全的基础上，将把更多精力放在增强企业活力上来。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“加快实现从管企业向管资本转变，需要上下联动、同向发力。无论怎样改，实现国有资产保值增值、防止流失，都是底线。”郝鹏表示，今年国资委党委将开展“中央企业基层党建推进年”专项行动，以高质量党建引领高质量发展。</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 新华社</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7676");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","498");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

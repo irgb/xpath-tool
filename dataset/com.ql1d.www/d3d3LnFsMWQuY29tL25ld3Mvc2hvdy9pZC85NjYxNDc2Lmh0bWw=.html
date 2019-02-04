@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>中石化炒原油巨亏，事情没那么简单，还有更大黑洞？_齐鲁壹点网</title>
+        <meta name="description" content='中石化炒原油巨亏，事情没那么简单，还有更大黑洞？。
+  
+   
+    
+   
+   
+    
+     见闻VIP最高688会员券，
+    
+   
+   
+    
+     长按图片开抢，手慢无！
+    
+   
+   
+    
+     
+      本文于首发于
+  ' />
+        <meta name="keywords" content="" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9661476";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">中石化炒原油巨亏，事情没那么简单，还有更大黑洞？</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9661476.html' class='sh_9661476'>中石化炒原油巨亏，事情没那么简单，还有更大黑洞？</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">29分钟前</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">华尔街见闻</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9661476' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9661476' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9661476'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        
+  <div class="rich_media_content " id="js_content">
+   <p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);text-align: center;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <img data-height="279" data-width="600" src="https://wscdn.ql1d.com/20181230nA4Bj89KOmu0RWQDf2rS.png"/>
+   </p>
+   <p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);text-align: center;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <span style="max-width: 100%;font-size: 15px;color: rgb(171, 25, 66);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+     见闻VIP最高688会员券，
+    </span>
+   </p>
+   <p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);text-align: center;margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <span style="max-width: 100%;font-size: 15px;color: rgb(171, 25, 66);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+     长按图片开抢，手慢无！
+    </span>
+   </p>
+   <p style="max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);margin-left: 8px;margin-right: 8px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <strong style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+     <span style="max-width: 100%;font-size: 14px;color: rgb(0, 122, 170);box-sizing: border-box !important;overflow-wrap: break-word !important;">
+      本文于首发于
+      <span style="max-width: 100%;letter-spacing: 0.544px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+       华尔街见闻
+      </span>
+     </span>
+    </strong>
+    <span style="max-width: 100%;letter-spacing: 0.544px;color: rgb(0, 122, 170);font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+     （ID：wallstreetcn）
+    </span>
+    <span style="max-width: 100%;letter-spacing: 0.544px;color: rgb(0, 122, 170);font-size: 14px;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+     ，文中观点不构成投资建议。
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    这两天中石化子公司炒原油亏损一事很热，中国石化股价昨日突然闪崩也震动了市场，广大股民大吃一惊。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    那么，这事和十几年前的“陈久霖事件”一样吗？中石化为啥要做原油期权？亏了那么多，中石化到底有没有错？期货之外还有更大的黑洞？
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      01
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      发生了什么？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    受“子公司总经理和党委书记被停职”消息影响，昨日下午开盘后，中国石化A股股价突然闪崩，最终收盘大跌6.75%。
+   </p>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <img data-height="501" data-width="600" src="https://wscdn.ql1d.com/20181230KGBROiYPmT4ru0IqHpay.png"/>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    昨日晚间，中国石化公告称，公司了解到联合石化在某些原油交易过程中因油价下跌产生部分损失，正在评估具体情况。联合石化总经理陈波先生和党委书记詹麒因工作原因停职，由副总经理陈岗主持行政工作。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    此外，中国证券报提到，有网络消息称，陈波被中国石化解职的具体原因是“他在70多美元的时候做多原油期货，据说买了3000-7000万桶，给公司亏了数十亿美金。“陈波被高盛忽悠了，后者一路看涨原油。”
+   </p>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <img data-height="408" data-width="600" src="https://wscdn.ql1d.com/20181230NhDRjTtzwO8pKVqC3YZ5.jpeg"/>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      02
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      联合石化是个什么公司？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    据中国石化官网，联合石化是1993年2月成立的大型国际石油贸易公司，目前是中国石油化工股份有限公司的全资子公司，是中国最大的国际贸易公司。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    联合石化的经营范围包括四大板块，即原油贸易、成品油贸易、LNG贸易及仓储物流等国际石油贸易业务。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    根据国家统计局数据，2017年我国原油进口41957万吨，约30亿桶（1吨原油≈7.35桶）；中石化2017年进口原油约2.1亿吨，约16亿桶，平均每个月进口1.3亿桶。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    据中国石化报11月15日刊发的题为《打造国际一流贸易公司服务能源安全》报道显示，联合石化目前是全球最大的原油贸易公司，2017年进口原油1.85亿吨，占中国原油进口总量的44%。
+   </p>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <img data-height="267" data-width="400" src="https://wscdn.ql1d.com/201812307QVab6Fq0tBY5MK1gIuA.jpeg"/>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      03
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      中石化为啥要做原油期权？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    经常看到上市公司不务正业去炒股的新闻，那么上市公司炒期货算不算不务正业呢？
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    从上面数据来看，中石化这么巨大的原油进口量，在当前原油行情大幅波动的市场环境下，进行套期保值交易是十分必要的。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    其实，上市公司从事期货业务并不罕见，比如格力电器。由于格力的空调主要原材料是铜，为了对冲风险，格力电器每年都会进行大宗材料期货套期保值业务并发布公告。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    和格力电器类似，中国石化的原材料是原油，绝大部分原油也是靠进口，因此原油期货的价格变动，对公司的成本影响非常大。这是中国石化从事原油期货业务的必要性所在。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    从某种意义上讲，期货就是公司的账外库存，可以在价格变动较大的情况下，和实物库存对冲风险。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    也就是说，套保的主要意义是保障成本变动的风险，而不一定是为了获利。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    回归本次zerohedge的交易。从方向上看，中石化买入了看涨期权，卖出了看跌期权（买call，卖put），本质都是做多，没问题；从数量上看，据传做了约7000-8000万桶期权，跟中石化每个月1.3亿桶的进口量相比，也不多挺正常。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    也有人问，那中石化做套保，为啥不直接买期货，而是做zero hedge期权呢？
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    业内人士张新认为，主要原因是外汇。央企套期保值中，为了节省外汇，往往做一些期权交易。
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      zero hedge本质就是期权交易，买入看涨期权，只用付权利金，不用付保证金；卖出看跌期权，收到权利金，且虚值期权只收一半的期货保证金，两者同时操作，相当于只付半手的期货保证金，就可以做2手的看多套期保值，多节省期货保证金的外汇啊！
+     </span>
+    </p>
+    <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      <img data-height="148" data-width="497" src="https://wscdn.ql1d.com/20181230MaNK1LSpzkrsZYXJbO2n.png"/>
+     </span>
+    </p>
+   </blockquote>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <img data-height="450" data-width="600" src="https://wscdn.ql1d.com/20181230cyCuYJnvVZDdmWOTA5EX.jpeg"/>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      04
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      陈波听信高盛建议，看走眼了油价？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    据说，联合石化的这次操盘失误源于在70美元的时候听信了高盛的建议看多原油，从而做出了错误的投资决定。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    许多人说，这是一个愚蠢的决策。但是，我们查一下联合石化董事长陈波先生的履历：
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      1986年毕业于华东化工学院（现华东理工大），1993年加入联合石化公司工作至今，曾先后任联合石化公司原油部业务经理，联合石化亚洲有限公司业务经理、副经理，联合石化公司原油部副经理、经理，联合石化公司总经理助理、副总经理等职务。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      陈先生多年在国际原油、天然气贸易和运输、国际仓储物流领域中工作，拥有丰富经验，并与世界主要产油商、大石油公司、大贸易公司保持良好关系。
+     </span>
+    </p>
+   </blockquote>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    可以说是科班出身的行业精英，应该比绝大多数人更了解市场，所以这个错恐怕不像大众理解的那么简单。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    2018年9月底，陈波在年度亚太石油会议（APPEC）上称，鉴于全球市场当前的供需态势，原油价格在每桶60-80美元是正常的。他还表示，还表示，能效提高和技术变革意味着未来数年全球石油需求增长将减慢，之后会在2035年触及顶峰，这反过来也会拖累全球炼油产能增长放缓，预期到2035年将会达到56亿吨/年。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    作为业内专家，他的预测是有一定道理的，而且很显然，这些言论并不仅仅代表他个人，同时也可能代表着中国石化这家企业的官方观点。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      05
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      亏了那么多，中石化到底有没有错？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    传闻联合石化交易的原油数量是3000万-7000万桶，预计损失可能50-150亿人民币。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    在业内人士张新看来，任何只讨论期货盈亏而不讨论现货贸易情况的套期保值行为都是在“耍流氓”：
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <strong>
+      <span style="font-size: 15px;">
+       1）中石化做套期保值没有错
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      网传中石化在9月份原油70美元的时候进行套期保值，按照目前的市场价格，期权存在较大亏损，但进口原油现货只需要40美元，进口价格更便宜了。期权、现货相加，中石化在生产经营上可能并未出现过多损失。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      反过来假设，如果现在原油现货涨到100美元，那么中石化虽然会在原油期权上大赚一笔，但是在原油现货进口中会增加进口成本，因此在生产经营上可能并未体现出过多盈利。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      我们返回到今年9月，回顾当时原油市场，外部环境错综复杂，甚至出现了沙特记者被杀等事件，很难判断后续原油价格走势。连特朗普都无法预测原油涨跌、无法引导股市走势，更别说中石化的交易员们了，中石化在当时进行的原油期权套期保值交易，只是锁定经营成本，并不是为了投机赚钱，直观上并无过错。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <strong>
+      <span style="font-size: 15px;">
+       2）中石化做卖出看跌期权也没错
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      部分舆论文章说中石化错在卖出了看跌期权（卖put），收益有限、风险无限，导致其巨额亏损。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      但我认为这么说是不妥当的。一是因为外汇原因，上文已经说了。二是因为核算套期保值效果，卖put比直接买期货多单总体亏损更小（如下图）。
+     </span>
+    </p>
+    <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+     <img data-height="269" data-width="479" src="https://wscdn.ql1d.com/20181230d7HmZbzItgvXGOh0BlF1.png"/>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      如果中石化直接在原油70美元时购买原油期货，到现在来看其损失每桶25美元。但如果按照卖出虚职看跌期权的话，其损失远小于直接购买期货多单。
+     </span>
+    </p>
+   </blockquote>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    总之，张新认为，中石化的交易的确可能存在过错，但过错不在做套期保值、卖出看跌期权这两方面。而是可能错在开仓时间、交易数量、止损设置，甚至是行政命令是否执行、是否汇报等方面。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      06
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      跟2004年陈久霖的中航油亏损一样吗？
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    这一事件，也被市场视作“陈久霖事件”的翻版。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    2003年起，陈久霖执掌的中国航油开始从事石油衍生品期权交易，2003年上半年一度盈利。但2003年第四季度，交易员做出错误判断，在国际油价上升的趋势中，出售大量看涨期权，给中国航油带来了巨额亏损。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    但在张新看来，此事件和2004年陈久霖的中航油事件不一样：
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      中航油当年在市场上进行卖出看涨期权，即看跌交易。你一个原油采购方，手上没有原油，你还卖出原油，这不是玩投机么！适逢当年原油期货大涨，因此中航油严重亏损直至破产。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      中航油的期权交易是严重违背了期货套期保值原则，是投机！而中石化的确是在期货套期保值，这不一样！
+     </span>
+    </p>
+   </blockquote>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      07
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      真正的黑洞，中石化的天量库存
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    交易亏损可能仅仅是冰山一角，因为期货只是账外的存货，真正的黑洞在账内的存货。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    在最新发布的报告中，中金分析师Nelson Wang等人认为，中石化2018财年业绩将不及预期，这不仅因为子公司联合石化的交易损失，还因为库存上出现的巨额账面减值，中金预计2018年10月到2019年1月库存减值可能约150亿元。
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    而从见闻专栏作者路过银河的计算来看，这个数字可能更大：
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      据中国石化2018年三季报数据，公司的存货达到了2014年以来的最高值，金额超过2100亿元，距离2014年的2300亿存货只有一步之遥。要知道，2014年时的国际油价超过120美元。
+     </span>
+    </p>
+    <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+     <img data-height="326" data-width="600" src="https://wscdn.ql1d.com/20181230x2k8ad7WoSGvuDVAUbJm.png"/>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      三季报的出具时间点是9月30日，当时WTI原油价格超过70美元，中国石化的存货金额也在非常高的位置。其中有一半是原材料，根据中石化的主营业务，我们可以推测这些原材料绝大多数是原油。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      据公司历年财报，存货周转率大约在30天左右。
+     </span>
+    </p>
+    <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+     <img data-height="359" data-width="600" src="https://wscdn.ql1d.com/20181230ZfQdmtYxWpRsj4bhHzG8.png"/>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      可以等效的认为，公司的存货从采购到加工成最终产品卖出，大约需要一个月的时间。整个四季度，平均每月下跌的金额差不多是10美元，降幅大约15%左右。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      粗略计算，这2000亿的存货，光价格就跌掉了300亿。体现在2018年的年报上，就是300亿的存货跌价准备。
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="font-size: 15px;">
+      据公司2018年三季报披露，公司前三季度净利润758亿。而四季度的原油交易损失和存货跌价损失，可能就要吃掉公司前三季度一半以上的盈利。
+     </span>
+    </p>
+   </blockquote>
+   <p style="margin-left: 8px;margin-right: 8px;">
+    在他看来，实际情况或许还要更差，由于公司对油价的误判，炼油板块和销售板块都大量购进原材料，囤积存货，四季度的存货跌价情况只会更加惨烈。
+   </p>
+   <blockquote>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="color: rgb(136, 136, 136);font-size: 14px;">
+      主要参考内容来源：
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="color: rgb(136, 136, 136);font-size: 14px;">
+      1、《中石化炒原油炒亏了？事情可能没那么简单》，作者路过银河
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="color: rgb(136, 136, 136);font-size: 14px;">
+      2、《业内人士看不下去了：中石化真的不应该做原油期权么？》，作者张新
+     </span>
+    </p>
+    <p style="margin-left: 8px;margin-right: 8px;">
+     <span style="color: rgb(136, 136, 136);font-size: 14px;">
+      3、《中金：除交易亏损外，中石化可能还面临150亿元库存减值》，作者张家伟
+     </span>
+    </p>
+   </blockquote>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <img data-height="908" data-width="600" src="https://wscdn.ql1d.com/20181230Gq6ogjlKuJ0D8YLdFXpz.png"/>
+   </p>
+   <p style="text-align: center;margin-left: 8px;margin-right: 8px;">
+    <span style="font-size: 15px;color: rgb(136, 136, 136);">
+     长按图片开始学习
+    </span>
+   </p>
+  </div>
+                     </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                                        -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">0</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9638806.html">
+                            <div data-background="https://wscdn.ql1d.com/20181224t0pdfGMWHK4auvYznUCI.jpeg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/20181224t0pdfGMWHK4auvYznUCI.jpeg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>叫价2亿的徐悲鸿《愚公移山》不卖了! 电广传媒：从根本上避免曲解</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9613035.html">
+                            <div data-background="http://img8.iqilu.com/ksdimgs/2018/12/18/35f9bb207be2e7e456e5d14d7c534a87.jpg" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="http://img8.iqilu.com/ksdimgs/2018/12/18/35f9bb207be2e7e456e5d14d7c534a87.jpg" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>鲁故日报联泓新材料启动IPO上市辅导 曾获国科控股战略直投</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9661508.html">
+                            <div data-background="https://wscdn.ql1d.com/20181230ZYkaPNu3r1J05V8iFDds.jpeg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/20181230ZYkaPNu3r1J05V8iFDds.jpeg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>资本圈 | 融创增持金科至29.255% 深深房重组协议有效期延长</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">0</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9661476";
+    var all_page_comment = "0";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019，巨头抢滩刷脸支付！ - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="技术搭台，支付唱戏，2019的刷脸大战谁是赢家？">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/123-2.jpg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="季瑜生" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/liurui" title="由季瑜生发布" rel="author">季瑜生</a></div>
+                <div class="author-posts">共发表59篇文章</div>
+                <div class="author-desc">半径增加的圆</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag1">无人机</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag2">苹果</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e8%8b%b1%e7%89%b9%e5%b0%94" class="tag3">英特尔</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag2">特斯拉</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag2">谷歌</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                2019，巨头抢滩刷脸支付！            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" rel="category tag">人工智能</a>  <a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a></span><span class="time">2019/01/03 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2019/01/今日头图-1.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/今日头图-1.jpg 850w, http://oss.zhidx.com/uploads/2019/01/今日头图-1.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/今日头图-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong><b>智东西智东西（公众号：zhidxcom）</b></strong><strong><b><br />
+</b></strong><strong><b>文 | 季瑜生</b></strong></p>
+<p>2017年9月1日，杭州万象城肯德基KPro餐厅上线了一台崭新的设备。它的外形看起来和普通的自助点餐机没有任何区别，白色的边框，超大的显示。</p>
+<p>到了支付环节，玄机陡现，用户无需手机，对着屏幕输入手机的后四位号码，然后对着镜头嫣然一笑，支付便宣告完成。</p>
+<p>这台设备的悄然商用就像那只在亚马逊河热带雨林中扇动了翅膀的蝴蝶，瞬间就在整个移动支付行业掀起了滔天巨浪。</p>
+<p>一场由刷脸技术引发的线下支付大变革序幕就此拉开，在变革中，效率、成本、科技含量都被成倍提升。而仅仅一年后，支付宝、微信支付、银联、京东等为代表的玩家都已悉数上场，全国数千家门店、机构则随着这场浪潮上线了刷脸支付设备，以奥比、华捷艾米为代表的一众技术厂商也随之被卷入浪潮。</p>
+<p>2019，一场关于刷脸付的抢滩战役一触即发。</p>
+
+<h2>一、十年回顾，从出门刷卡到微信支付宝扫码</h2>
+<p>如果回望近十年的中国支付市场变化，你会发现变革总是来得剧烈而又自然。</p>
+<p>2010年10月，支付宝推出国内首个二维码支付技术。仅仅三年过后，中国移动支付市场就进入了爆发式增长，总体交易规模突破1.3万亿元，其中，支付宝一家独大占据了70%的市场份额。</p>
+<p>然而，2014春节张小龙的微信团队推出的微信红包创意让市场陡然变天，微信支付从3.3%的市场份额占比一跃而起，支付宝在这一年的除夕度过了最难熬的一天，就连马云也不得不在感慨这场微信红包的胜利简直是“珍珠港偷袭”。</p>
+<p><img class="alignnone size-full wp-image-139577" src="http://oss.zhidx.com/uploads/2019/01/马云不用.png" alt="2019，巨头抢滩刷脸支付！" width="800" height="453" srcset="http://oss.zhidx.com/uploads/2019/01/马云不用.png 800w, http://oss.zhidx.com/uploads/2019/01/马云不用.png?x-oss-process=image/resize,m_fill,w_530,h_300 530w, http://oss.zhidx.com/uploads/2019/01/马云不用.png?x-oss-process=image/resize,m_fill,w_768,h_435 768w" sizes="(max-width: 800px) 100vw, 800px" /> <img class="alignnone size-full wp-image-139578" src="http://oss.zhidx.com/uploads/2019/01/做的不错.png" alt="2019，巨头抢滩刷脸支付！" width="800" height="456" srcset="http://oss.zhidx.com/uploads/2019/01/做的不错.png 800w, http://oss.zhidx.com/uploads/2019/01/做的不错.png?x-oss-process=image/resize,m_fill,w_526,h_300 526w, http://oss.zhidx.com/uploads/2019/01/做的不错.png?x-oss-process=image/resize,m_fill,w_768,h_438 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>接着，一场滴滴、快的补贴大战又开启了微信支付与支付宝的正面PK。</p>
+<p>在这场大战中，快的、滴滴各自背靠阿里与腾讯。在巨头的支持下，最高峰的两个月里，滴滴曾创下单日烧钱一亿的疯狂举措。</p>
+<p>暗流涌动的市场上，明面是快的、滴滴抢人、抢司机，拼补贴大战，水面之下则是腾讯、阿里两大集团想借在线打车的线上交易闭环对自身移动支付市场的严防死守。</p>
+<p>曾有记载，由于订单量暴增，滴滴服务器全面溃败，“程维连夜致电马化腾，腾讯调集一支精锐技术团队，一夜间准备了1000台服务器，并重写服务端架构，程序员连续加班工作七天七夜，到最后，有的人隐形眼镜摘不下了，有的人直接昏迷倒地。”</p>
+<p>如果说这两场战役是微信支付与支付宝之间的突袭站与抢滩战，那么在一举培养起了用户习惯之后，双方则开启了一场以高频打击低频，以多维回击低维的迂回战。</p>
+<p>对微信来说，优势在于用户的高频度打开，而对支付宝的优势则在与花呗、余额宝、保险等一系列金融支付功能的完善，以及从水电、燃气购买，学费、物业缴费，地铁、公交乘坐多个方面对于用户交易的全面覆盖。</p>
+<p>此后数年间，二者基于各自的优势一直保持着微妙的制衡与攻守。这一期间，以二维码为主要线下收款方式，以最后一百米小店的地推为战略中心，两大巨头的战况陷入胶着阶段。</p>
+<p><img class="alignnone size-full wp-image-139533" src="http://oss.zhidx.com/uploads/2019/01/支付宝大事记shuiyin.png" alt="2019，巨头抢滩刷脸支付！" width="800" height="1944" srcset="http://oss.zhidx.com/uploads/2019/01/支付宝大事记shuiyin.png 800w, http://oss.zhidx.com/uploads/2019/01/支付宝大事记shuiyin.png?x-oss-process=image/resize,m_fill,w_123,h_300 123w, http://oss.zhidx.com/uploads/2019/01/支付宝大事记shuiyin.png?x-oss-process=image/resize,m_fill,w_768,h_1866 768w, http://oss.zhidx.com/uploads/2019/01/支付宝大事记shuiyin.png?x-oss-process=image/resize,m_fill,w_421,h_1024 421w" sizes="(max-width: 800px) 100vw, 800px" /> <img class="alignnone size-full wp-image-139531" src="http://oss.zhidx.com/uploads/2019/01/微信支付大事记水印版.png" alt="2019，巨头抢滩刷脸支付！" width="800" height="1600" srcset="http://oss.zhidx.com/uploads/2019/01/微信支付大事记水印版.png 800w, http://oss.zhidx.com/uploads/2019/01/微信支付大事记水印版.png?x-oss-process=image/resize,m_fill,w_150,h_300 150w, http://oss.zhidx.com/uploads/2019/01/微信支付大事记水印版.png?x-oss-process=image/resize,m_fill,w_768,h_1536 768w, http://oss.zhidx.com/uploads/2019/01/微信支付大事记水印版.png?x-oss-process=image/resize,m_fill,w_512,h_1024 512w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>到了2018年甚至还出现了多家线下零售商二选一的尴尬，其中，新华都多家门店于2017年开始停用微信支付，腾讯系的步步高与沃尔玛则几乎在同一时间被曝禁用支付宝。最夸张时，与阿里员工打交道，对方都会别扭的表示我们还是加钉钉联系吧。</p>
+<p><img class="alignnone size-full wp-image-139536" src="http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="800" srcset="http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg 800w, http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg?x-oss-process=image/resize,m_fill,w_150,h_150 150w, http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg?x-oss-process=image/resize,m_fill,w_300,h_300 300w, http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_768 768w, http://oss.zhidx.com/uploads/2019/01/沃尔玛-1.jpg?x-oss-process=image/resize,m_fill,w_65,h_65 65w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>到了2018年的下半年，市场基本保持了两巨头平分秋色的稳定状态。2018年11月28日，支付宝发表官微显示，全球用户数已经超过9亿。微信则在2018年12月7日新发布的《2018微信支付智慧生活行业手册中》中表示微信支付绑卡用户已突破8亿，覆盖线下门店数超百万，日交易笔数超6亿。</p>
+<p>至此，无论是地推还是红包减免，都难以对大的形势造成变动。</p>
+<p>陷入僵局的市场正在等待一场从支付形式到技术手段上的突破，来对当前的市场带来一次颠覆式的改革。正如二维码重新书写银行卡的历史。</p>
+<h2>二、巨头全数入局，2019开启刷脸元年</h2>
+<p>战局的一端是微信支付、支付宝两方在技术在市场上打的火热，另一端则是老大哥银联商务不复往日银行卡时期近乎垄断的辉煌。</p>
+<p><img class="alignnone wp-image-139579" src="http://oss.zhidx.com/uploads/2019/01/一退再退.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="648" srcset="http://oss.zhidx.com/uploads/2019/01/一退再退.jpg 557w, http://oss.zhidx.com/uploads/2019/01/一退再退.jpg?x-oss-process=image/resize,m_fill,w_371,h_300 371w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>2017年3月26日，银联成立十五周年之际，总裁时文朝发表内部邮件，浩浩荡荡的万言长文中，他诚恳的承认了在银联在移动支付时期的最后100米地推争夺战中落败。但随后，他又表示银联计划在当年的５月底前实现在两百万家商户，17家全国性商业银行上线扫码功能。</p>
+<p>至此，错过了二维码以及最后一百米线下支付长达七年之久的银联终于痛下决心要在这一领域发力。</p>
+<p>而在银联全力追赶的同时，一个隐秘的角落里，将刷卡支付拉下神坛的支付宝与微信支付们却正在酝酿着一场比二维码革命更大的风暴，它的到来甚至比二维码颠覆银行卡来的来要猛烈与迅速。</p>
+<p>就在半年后的2017年9月1日，杭州万象城，一家肯德基的KPro餐厅上线了一台崭新的设备。它的外形看起来和普通的自主点餐机没有任何区别，白色的边框，超大的显示。</p>
+<p>到了交易支付环节，用户陡然发现其中玄机——这是一台不需要手机与二维码的设备，在付款阶段，只要输入手机的后四位数字，抬头看一眼屏幕上方的摄像头，支付便宣告完成。</p>
+<p><img class="alignnone size-full wp-image-139525" src="http://oss.zhidx.com/uploads/2019/01/肯德基.gif" alt="2019，巨头抢滩刷脸支付！" width="294" height="233" /></p>
+<p>由于前些年支付宝已经在系统内部完成了全部用户的实名身份证\人脸认证，以及个人信息与手机号码、支付宝账号的一对一绑定，因此用户只需输入手机号码后四位与人脸交互认证就能完成购物。从而省去了手机的存在以及扫码、输入金额、输入密码、确认等一系列繁琐的流程，支付环节时长则被急速压缩到了十秒之内。</p>
+<p>肯德基这台设备的悄然商用就像那只在巴西扇动了翅膀的蝴蝶，瞬间就在整个移动支付行业掀起了滔天巨浪。</p>
+<p>几乎同一时期，在上海宝地、深圳沃尔玛，北京昌平永旺，北京通州万达四处的京东之家内部开启了“刷脸支付”的测试工作，时间不早不晚，就在支付宝刷脸付正式商用四天前的8月28日。</p>
+<p><img class="alignnone wp-image-139540" src="http://oss.zhidx.com/uploads/2019/01/京东内侧.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="1061" srcset="http://oss.zhidx.com/uploads/2019/01/京东内侧.jpg 600w, http://oss.zhidx.com/uploads/2019/01/京东内侧.jpg?x-oss-process=image/resize,m_fill,w_226,h_300 226w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>京东盟友腾讯的动作同样迅速，两个月后的2017年11月，腾讯在全球合作伙伴大会上，推出了“智慧零售解决方案”，正式宣布进军线下零售。在当年的圣诞节，微信支付、腾讯社交广告与绫致时装集团达成合作，推出了腾讯的首个刷脸支付门店。</p>
+<p>到了今年的8月，腾讯将这一技术的使用范围进一步扩大，联合王健林的白衣天使深圳地铁以及广电运通直接将刷脸付直接应用在了地铁进站购票之中。进站时，乘客甚至不用在屏幕前等待系统识别，只要路过就能开闸，然后出站后就能扣款。</p>
+<p><img class="alignnone size-full wp-image-139527" src="http://oss.zhidx.com/uploads/2019/01/深圳地铁.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/深圳地铁.jpg 800w, http://oss.zhidx.com/uploads/2019/01/深圳地铁.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/深圳地铁.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/深圳地铁.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>与移动支付时代支付宝与微信支付两强争霸不同，老大哥银联在这一次浪潮中也选择了低调而克制的入局。</p>
+<p>早在2016年招商银行就已经在全国106个城市中落地了近千台刷脸取款机。到了2018年的6月，招行的刷脸支付在华为深圳总部的两家实体店上线。</p>
+<p>2018年年底，银联正式宣布用户在云闪付APP上注册并开通“刷脸支付”服务后，即可在北京、上海多家商超体验刷脸支付服务。</p>
+<p><img class="alignnone wp-image-139541" src="http://oss.zhidx.com/uploads/2019/01/云闪付.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/云闪付.jpg 1080w, http://oss.zhidx.com/uploads/2019/01/云闪付.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/云闪付.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/云闪付.jpg?x-oss-process=image/resize,m_fill,w_1024,h_768 1024w, http://oss.zhidx.com/uploads/2019/01/云闪付.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>在银联开启小范围使用的同一时期，2018年12月13日上海，一只“蜻蜓”的悄然落地，宣告了支付宝的刷脸技术进入了大规模商用阶段。</p>
+<p><img class="alignnone size-full wp-image-139526" src="http://oss.zhidx.com/uploads/2019/01/蜻蜓现场图片.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="533" srcset="http://oss.zhidx.com/uploads/2019/01/蜻蜓现场图片.jpg 800w, http://oss.zhidx.com/uploads/2019/01/蜻蜓现场图片.jpg?x-oss-process=image/resize,m_fill,w_450,h_300 450w, http://oss.zhidx.com/uploads/2019/01/蜻蜓现场图片.jpg?x-oss-process=image/resize,m_fill,w_768,h_512 768w, http://oss.zhidx.com/uploads/2019/01/蜻蜓现场图片.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>这款支付宝的最新款刷脸支付设备“蜻蜓”，体积仅有一盏台灯大小，售价两千元。与此前的自助人脸结算设备相比，它的适用范围也进一步扩大，从传统的连锁商超渗透到了遍布城市毛细血管的夫妻老婆店。</p>
+<p>至此，刷脸正式从一项小规模测试用的技术，飞入了寻常百姓衣食住行都离不开的面包店、菜市场。</p>
+<h2>三、刷脸登台背后，技术搭台支付唱戏</h2>
+<p>在一次刷脸付的推广活动中，腾讯优图实验室总经理吴运声这样向外界表示：</p>
+<p>“优图创新的人脸识别祖母模型，目前可实现十亿分之一的错误接受率。此外，优图还融合3D成像、近红外成像和RGB成像，实现了高安全的活体检测技术，在前端设备和后台都进行活体检测，有效拦截照片、屏幕、面具的攻击。”</p>
+<p>事实上，在腾讯的刷脸付推广又是一次联合大作战，优图团队（腾讯旗下的机器学习研发团队）幕后搭台，微信支付前台唱戏，合力将技术一同推向市场。</p>
+<p><img class="alignnone size-full wp-image-139528" src="http://oss.zhidx.com/uploads/2019/01/腾讯优图.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="390" srcset="http://oss.zhidx.com/uploads/2019/01/腾讯优图.jpg 800w, http://oss.zhidx.com/uploads/2019/01/腾讯优图.jpg?x-oss-process=image/resize,m_fill,w_600,h_293 600w, http://oss.zhidx.com/uploads/2019/01/腾讯优图.jpg?x-oss-process=image/resize,m_fill,w_768,h_374 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>而吴运声在采访中所透露出的几处看点，也一度是公众对刷脸支付应用存疑的关注点。</p>
+<p>首先是技术是否足够成熟。为了回答这一问题，阿里、腾讯先后将国内的AI独角兽以投资的方式收入囊中，通过自身研发加外部联动构建起庞大的AI帝国。曾有媒体对此进行盘点，发现以BATJ\TMD为代表的超级军团几乎以各种方式覆盖了中国AI的半壁江山。</p>
+<p><img class="alignnone size-full wp-image-139523" src="http://oss.zhidx.com/uploads/2019/01/阿里收割独角兽.png" alt="2019，巨头抢滩刷脸支付！" width="1020" height="1419" srcset="http://oss.zhidx.com/uploads/2019/01/阿里收割独角兽.png 1020w, http://oss.zhidx.com/uploads/2019/01/阿里收割独角兽.png?x-oss-process=image/resize,m_fill,w_216,h_300 216w, http://oss.zhidx.com/uploads/2019/01/阿里收割独角兽.png?x-oss-process=image/resize,m_fill,w_768,h_1068 768w, http://oss.zhidx.com/uploads/2019/01/阿里收割独角兽.png?x-oss-process=image/resize,m_fill,w_736,h_1024 736w" sizes="(max-width: 1020px) 100vw, 1020px" /> <img class="alignnone size-full wp-image-139529" src="http://oss.zhidx.com/uploads/2019/01/微信收割独角兽.png" alt="2019，巨头抢滩刷脸支付！" width="800" height="1491" srcset="http://oss.zhidx.com/uploads/2019/01/微信收割独角兽.png 800w, http://oss.zhidx.com/uploads/2019/01/微信收割独角兽.png?x-oss-process=image/resize,m_fill,w_161,h_300 161w, http://oss.zhidx.com/uploads/2019/01/微信收割独角兽.png?x-oss-process=image/resize,m_fill,w_768,h_1431 768w, http://oss.zhidx.com/uploads/2019/01/微信收割独角兽.png?x-oss-process=image/resize,m_fill,w_549,h_1024 549w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>其次，是否足够安全，微信支付与支付宝方面都表示已经采用了3D成像、活体检测以及大数据风控技术将盗刷的风险降到最低。</p>
+<p>在一次市场宣传活动中，支付宝请来了一位以仿妆而知名的网红，让她数次“易容”，但最终无论如何变化还是没能瞒过机器的法眼。在这背后，以奥比、华捷艾米、图漾等为代表的3D结构光厂商随之浮出水面，在刷脸支付的零售行业与手机硬件制造行业中狠狠的刷了一把存在感。</p>
+<p><img class="alignnone size-full wp-image-139544" src="http://oss.zhidx.com/uploads/2019/01/仿妆.gif" alt="2019，巨头抢滩刷脸支付！" width="193" height="333" /></p>
+<p>解决了消费者所关注的安全与便捷后，刷脸付还需解决的一大难题在于如何攻克商家，让他们成为抢滩战中的重要助力。</p>
+<p>商家们关注的则是刷脸付的硬件是否能与已有收银系统对接，以及刷脸付是否能为门店带来真正的效益。</p>
+<p>根据智东西的走访，当前的刷脸付已经实现通过与大商家原有的POS收银对接，从而做到对原有的POS进行快速的升级改造。而对于个体商家来说，则只要将设备设置为个人收银模式然后绑定支付宝收银码，就可以取代原先的纸质收银码直接升级刷脸购。</p>
+<h2>四、刷脸时代，谁的机会，又是谁的变革</h2>
+<p>与技术和量产一同成熟的是市场以及消费者接受新事物的能力。让人觉得暖心的是，作为一项新兴技术，刷脸支付超乎意外的老年人也十分友好。在智东西此前的走访中，甚至遇到了一些两鬓斑白的老年人带着孙子前来体验的情况。</p>
+<p>效益方面，智东西曾经走访味多美并对其CIO胡博进行采访，他表示：通过接入刷脸支付设备，其单店收银效率提升了60%以上，“目前，每天店内有超过30%的顾客选择了刷脸、自助收银等支付方式。”这不仅避免了高峰期排队，同时还为其带来了50%-60%的年轻用户增幅。</p>
+<p><img class="alignnone size-full wp-image-139532" src="http://oss.zhidx.com/uploads/2019/01/味多美.jpg" alt="2019，巨头抢滩刷脸支付！" width="850" height="400" srcset="http://oss.zhidx.com/uploads/2019/01/味多美.jpg 850w, http://oss.zhidx.com/uploads/2019/01/味多美.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/味多美.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" /></p>
+<p>2018年的“双11”的数据显示，刷脸和指纹完成的支付高达6成，这意味着生物支付时代已经到来。</p>
+<p>而在此之前，央行在2018年1月发表的相关文件则直接为这一技术带来了官方的肯定。</p>
+<p>2018年1月，央行官方发布《中国人民银行关于优化企业开户服务的指导意见》，文件中提到：鼓励银行将人脸识别、光学字符识别(OCR)、二维码等技术手段嵌入开户业务流程，作为读取、收集以及核验客户身份信息和开户业务处理的辅助手段。</p>
+<p><img class="alignnone wp-image-139545" src="http://oss.zhidx.com/uploads/2019/01/意见.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="882" srcset="http://oss.zhidx.com/uploads/2019/01/意见.jpg 538w, http://oss.zhidx.com/uploads/2019/01/意见.jpg?x-oss-process=image/resize,m_fill,w_272,h_300 272w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>不过与那场2014年战火燃烧至今的二维码支付大战不同，刷脸支付不仅意味着更高的成本投入，同时也意味着更高的排他性合作，这既是一众商超对巨头的主动投靠，也是他们刷脸支付性质给他们带来的无奈之选。</p>
+<p>一般来说，一家店铺如果想要接入二维码收款，简陋一点的只需将自己的支付宝、微信、银联收银二维码打印出来，贴在收银台的位置，用户自行扫码即可完成支付，成本不过十元。</p>
+<p><img class="alignnone wp-image-139546" src="http://oss.zhidx.com/uploads/2019/01/打印.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="665" srcset="http://oss.zhidx.com/uploads/2019/01/打印.jpg 2728w, http://oss.zhidx.com/uploads/2019/01/打印.jpg?x-oss-process=image/resize,m_fill,w_361,h_300 361w, http://oss.zhidx.com/uploads/2019/01/打印.jpg?x-oss-process=image/resize,m_fill,w_768,h_638 768w, http://oss.zhidx.com/uploads/2019/01/打印.jpg?x-oss-process=image/resize,m_fill,w_1024,h_851 1024w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>如果是连锁店铺或者大型商超，那么就会涉及到店铺的营收总额汇集、财务核算的问题，一般会在每家店的收银位置配备专门的扫码收银设备，这台设备一般可以兼容多种收银模式。</p>
+<p>但是到了刷脸时代，硬件的入口变成了支付宝，变成了微信支付，变成了银联，各个商铺只能被动的采购巨头的硬件作为支付入口。而微信支付、支付宝们的硬件由于接入了自身体系内的免密支付，从诞生之日起就带上了排他属性。</p>
+<p>在这样的情况下，先入者为强就成了恒定的真理，除非店铺愿意一次性将几位巨头的设备全部接入，然后任用户选择。</p>
+<p><img class="alignnone wp-image-139548" src="http://oss.zhidx.com/uploads/2019/01/设备.jpg" alt="2019，巨头抢滩刷脸支付！" width="800" height="449" srcset="http://oss.zhidx.com/uploads/2019/01/设备.jpg 600w, http://oss.zhidx.com/uploads/2019/01/设备.jpg?x-oss-process=image/resize,m_fill,w_534,h_300 534w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>同时，新的变革为二维码大战中落后的玩家提供了翻身的机会。但线下刷脸的前提却是用户在线上的专门软件中完成免密支付开通以及人脸信息录入。在这一大前提之下，硬件设备的使用可以成为软件下载的导流，但软件的普及率也相应会成为商家选择硬件时的重要考量。</p>
+<p>这一场即将出现的风暴中，真正受益的则是产业链上的一众玩家，最典型的莫过于近年来在手机产业中也风光无限的3D摄像头厂家。</p>
+<p>普通的2D摄像头是通过二维平面成像，无法对三维信息进行有效捕捉，因此也常常会受到视频、化妆、面具等方式的干扰，从而干扰系统对于人物身份的判断，而一旦遇到夜晚或者光线不足的情况，普通2D摄像头则彻底失效，3D摄像头则完全不会受此影响。</p>
+<p>根据智东西了解，当前支付宝的3D视觉方案来自奥比，而微信支付的3D视觉方案则来自华捷艾米。</p>
+<p>根据报道，自去年七月到八月，短短一个月期间，华捷艾米就跟随腾讯的3D刷脸支付正式就在全国数千家商超落地。奥比与支付宝方面虽然没有公布最新的数据，但是随着“蜻蜓”面世以及大规模商用，3D视觉方案商们在零售行业的春天在不久后也即将到来。</p>
+<h2>结语：大战一触即发，速度决定生死</h2>
+<p>如果说2017年只是巨头们的牛刀小试，那么刚刚过去的2018则已经将战役全面打响，无论是线下的连锁商超站队还是线上的支付巨头角力，都已经将刷脸支付这一趋势明明白白的显现。</p>
+<p>而在这一场由巨头引领，以技术为驱动，联合了线上线下，将战火点燃到金融、科技、商业多个行业的刷脸大战中，技术与安全之外，速度则无疑是一定乾坤的关键性落子。</p>
+<p>而未来，微信、阿里究竟谁会胜出，银联、京东到底谁能赶上，后事且待时间揭晓。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139522'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139522">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="2019，巨头抢滩刷脸支付！" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139522">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139522">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/static/default/css/public.css">
+<link rel="stylesheet" type="text/css" href="/static/default/css/style.css">
+<script type="text/javascript" src="/static/default/js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript" src="/static/default/js/jquery.form.js"></script>
+<title>博亚助手——会员登录</title>
+</head>
+
+<body style="background:#f6f6f6;">
+<div class="ml100 pt50"><a href="/"><img src="/static/default/img/logo.png" /></a></div>
+<div class="w mt50">
+    <div class="denglu pt70 pb50 m0a">
+        <div class="zhuce_tit c007 fs20 fwb tac mb55"><span>会员登录</span></div>
+        <form id="login" action="/api/user/login" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="tac"><input name="account" class="dl_inp_1" type="text" placeholder="用户名"/></div>
+        <div class="tac"><input name="password" class="dl_inp_2" type="password" placeholder="密码" value=""/>
+        </div>
+        <!--
+        <div class="dl_inp_3 mt30 m0a">
+            <div class="fl"><input name="remember" type="checkbox" value="" />下次自动登录</div>
+            <div class="fr"><a href="#" class="c007">忘记密码</a></div>
+            <div class="clear"></div>
+        </div>
+        -->
+        <div class="mt45"><input name="" class="zhuce_c_7 m0a" type="submit" value="登录" /></div>
+        <div class="tac mt10">没有账号？<a href="/register?redirect_uri=%2Farticle%2F1012133.html" class="c007">立即注册></a></div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        var options = {
+            target: '#login',
+            beforeSubmit: checkForm,
+            success: complete,
+            dataType: 'json'
+        };
+        $('#login').submit(function() {
+            $(this).ajaxSubmit(options);
+            return false;
+        });
+
+        function checkForm() {
+            if ($('#login input[name=account]').val() == '') {
+                alert('用户名不能为空');
+                return false;
+            }
+            if ($('#login input[name=password]').val() == '') {
+                alert('密码不能为空');
+                return false;
+            }
+        }
+
+        function complete(result) {
+            if (2004 === result.errno) {
+                alert('用户[' + $('#login input[name=account]').val() + ']不存在');
+            } else if (result.errno !== 0) {
+                alert('登录失败');
+            } else {
+                window.location  = "/article/1012133.html";
+            }
+        }
+    });
+</script>
+</body>
+</html>

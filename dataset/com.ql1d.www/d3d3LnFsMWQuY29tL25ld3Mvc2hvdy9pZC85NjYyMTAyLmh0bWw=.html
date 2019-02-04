@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>烧掉200亿后，我终于明白了一件事…_齐鲁壹点网</title>
+        <meta name="description" content='烧掉200亿后，我终于明白了一件事…。
+  
+   
+   
+   
+    
+     作 者：周航 顺为资本合伙人、易到创始人
+    
+   
+   
+    
+     来 源：华夏基石e洞察（ID：chnstonewx）
+    
+   
+   
+   
+   
+  ' />
+        <meta name="keywords" content="" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9662102";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">烧掉200亿后，我终于明白了一件事…</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9662102.html' class='sh_9662102'>烧掉200亿后，我终于明白了一件事…</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">13:12</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">正和岛</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9662102' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9662102' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9662102'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        
+  <div class="rich_media_content " id="js_content">
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 15px;color: rgb(165, 165, 165);">
+     作 者：周航 顺为资本合伙人、易到创始人
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(165, 165, 165);font-size: 15px;">
+     来 源：华夏基石e洞察（ID：chnstonewx）
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     从九十年代开始创业到现在，二十多年，可以说我生命中一半以上的时间都在创业。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230LBQCw324ZOjafFTWrHXR.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       一个创业者从南到北的故事
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     1994年，乘着时代的潮头，我和哥哥在广东一起创办了一家做专业音响的公司，后来它成长为天创数码集团。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     在这个非常传统的行业，我做了近 10 年，算小有成绩，可这终究是一个很狭窄的行业，又偏居一隅。
+     <strong>
+      2003 年我的内心开始躁动，就想要新的突破。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     那时，我大概不到 30 岁，去了长江商学院学习。上学虽然没有解决选择难题，也不能消除焦虑，但能看到新的世界，也带给我一次很重要的人生实习机会。曾经在长江商学院任教的曾鸣教授去了阿里巴巴，随后就任雅虎中国 CEO，他就把我叫过去做兼职顾问。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     这一段经历对我非常有价值，就像开了一扇窗。过去我虽然知道互联网，知道阿里巴巴，知道雅虎，但只是从一个网络用户的角度，这一次真正从内部了解到一个互联网公司是怎么回事。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     人心就这样，被视野一点点撑大。作为一个传统行业的从业者，在深入接触互联网后，我有了很多很多的想法，我想过做移动支付，想过做电子阅读、移动洗车、基于通讯录的实名社交等等。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      任何事情，光想是不会有结论的，因为没压力。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     今天想得很兴奋，明天想不下去便不想了。那段时间，正如我在《创业家》的专栏里提到过的一个画面：在加拿大深秋的下午，我坐在院子里，盯着一片落叶，从它开始飘下来到真正落到地上，大概有一分钟的时间，我就一直盯着。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     设想一下，这是一种多么无聊的心情。那一刻我告诉自己，再也不要过这样的日子了，必须要给自己一个时间表，不能再无限制地想下去，因为人不可能等到一件完美的事情出现再去做，更需要做出一个决定。于是我开始做减法，把不想做的、不能做的，一项项划掉，我要在想干、能干和可干之间选出一件有交集的事情。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我想过很多事情，2007年我就想做移动支付，2009年想做电子阅读，2010年想做基于通讯录的社交……但什么是我能干的？
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     对我来讲，我懂一点互联网，也懂一点传统行业的做法。什么是可做的？一定是符合未来发展的趋势，且巨头不会介入的行业。想来想去，只有易到这件事情。“车”虽然不是我最热爱的，但可能是适合我的。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/201812302MFq38QZu5EpzHrK49JU.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       我与易到的上半场
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      2010年我回到北京，5月易到成立。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     这一年，后来被称为中国互联网元年，也是这一年，几乎在与易到成立的同期，优步于旧金山上线。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     彼时，我们都不知道对方的存在，所以易到是完全的原创。做一件从未出现过的事情，也许挺光荣的，但当时真的没几个人觉得这事儿靠谱。
+     <strong>
+      如果仅仅因为别人说不行，我就轻易动摇，可能就没办法创业了，我必须倾尽全力一试。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     创业，首先要解决“人”的问题。在一切都是0的时候，说服别人加入是个大难题，这时创业者只能从身边的人开始找起，我也一样。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     有商业规划书还不够，最难的是说服家属， 让家属知道我是一个靠谱的人。后来，我就让合伙人家属面试我。就这样，我的两个创始合伙人汤鹏和杨芸相继加入，再后来有了COO（首席运营官）、CFO（首席财务官）、CMO（市场总监），然后他们带着各自的团队加入，易到的“骨架”算是搭起来了。
+     <strong>
+      回过头来看，那时候别人对你的信任，都应该报以感恩之情。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     易到有了团队，有了App，一步步从0走到0.1、0.2……直到2011年8月易到拿到第一笔融资，有了第一次起步，我们在市场上做了全面推广。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     易到要做高端的专车服务，让商务人士随时随地能打到专车。我曾经描绘过一种理想情况，不管是在北京的CBD（中央商务区），还是在新疆，在西藏，只要用户叫车，易到就能做到接单。只是，
+     <strong>
+      理想很丰满，现实很骨感，不仅没有做到100%接单，易到的订单量也远远没有达到预期。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     那个时候，我甚至怀疑过做这件事情的靠谱性。2012年春节，我和好友连长（航班管家创始人王江）喝酒。我问他：“你说我做的这叫什么事儿？”他说：“我也不知道。”我又问他：“要不换个方向试试？”他说：“那就试试呗。”
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      那就试试吧！
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     2012年痛定思痛后，易到调整了方向，重新起步，抛弃了早期的POS（销售点）机，采用App绑定信用卡，从时间计费改为时间/路程计费直接面向C端。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     这次变革让易到形成了完整的交易闭环。不久，易到又有了第二次突破：2013年，战略投资方携程入股易到。所以，从2012年到2013年年底，易到过了一段好日子，有了稳定的获客来源，还一直保持着80%的市场份额。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     《创业维艰》的作者本·霍洛维茨曾用这样一句话总结他的创业时光：“在担任CEO 的8年多时间里，只有3天是顺境，剩下的8年几乎全是举步维艰。”好日子不长，行业就出现了新的变局，DD和KD相继从打车业务切入。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     即便这样，我们依然认为自己把握得最准，觉得网约车是一个小众市场，易到提供的就应该是一个高品质、差异化的服务，而且在中国挑战出租车行业政府管制的体系是不可行的，所以一直以来易到做打车业务是三上三下。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     2014年，移动支付把打车当作前沿阵地，巨头的加入让打车市场迅猛加速。即便这样，公司C轮融资的时候，我们本有机会拿到非上市融资里面最大的钱，但我们没要。没过几个月，那笔钱就到了竞争对手手中，这导致易到在之后的补贴大战中过得很悲惨。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     一年后， O2O（线上到线下）行业迎来史无前例的补贴大战，早期我们的做法是决不参战。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     那时候，我们不喜抄袭，不好价格战，对手做我们就不做，觉得政策不会允许这样打下去，结果教训很惨痛。完美的轮子，就是没有带缺口的轮子跑得快。竞争对手巨额补贴背后的窟窿，不仅被一轮接一轮的融资填补，还收获了大量用户和庞大数据。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     等到加入后，易到已经缺失了一大块市场份额，而资本已经不允许我们继续打下去，彼时已经跌落到DD之后。回过头来看，在互联网的世界里，差异化服务、会员体系、强有力的资源，这些都不如流量和价格战。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     仗已经打不下去了，那会儿我还带着团队坐火车去了延安，寻找精神的力量。但精神无法在短期内转化为物质。在这场200亿的烧钱大战中，形势急转直下，这才有了LS与易到的结盟。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     2015年10月起，LS启动了对易到的并购式投资。那个时候我的心情很复杂， 一方面觉得公司终于有救了；另一方面，作为创始人，签字交割的那一刻，心里知道公司从此不是自己的，但还需要继续为它的前途和命运担心，继续守护着它。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     有很多人都问过我，为什么要在那个时候选择LS？放在那个节点上，我没的选。但当时的我一定是做了我认为可能是最好的选择。只是回望过去，有很多地方值得反思。
+    </span>
+    <span style="color: rgb(89, 89, 89);">
+     某种程度上，LS的入局确实让易到有了一丝喘息之机。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     其实，
+     <strong>
+      并购没多久，LS团队就入主易到，对易到董事会和管理团队进行了相应改组，公司控制权逐步落入他人之手，我和原始合伙人相继退出管理层。
+     </strong>
+     后来又因为众所周知的原因，易到受到牵连，再之后，我和合伙人正式辞职离开。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我曾经写过一篇文章《一个创始人眼里的〈师父〉》。这两段从南到北的创业经历，就像电影《师父》中南派宗师陈识想要立足天津开武馆，在各种规矩和复杂情势面前，他也许认为时不我待，也许急于求成，但在离开北方的火车上，他依然怀抱着希望。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     于我自己而言，从传统行业到互联网创业，有别人口中少年得志的时刻，也有行业开拓者的标签；有安然挺过竞争的时刻，也有竞争对手从小蚂蚁长成大象让自己无法喘息的时刻……
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     总之，
+     <strong>
+      不管是民企野蛮生长的灰色时期，还是残酷的互联网创业屡屡打破规矩之时，创业的20多年，我都经历过
+     </strong>
+     ，因此认为自己创业经验还算丰富。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     但是，易到这一段让我严重受挫，我产生了极大的自我怀疑，甚至认为自己很失败，觉得自己做什么都不对，什么也没做好，尤其是以前觉得自己至少在战略方面还是不错的，可是易到的经历甚至让我怀疑自己的战略能力是不是最差的。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     也许易到这件事让我表面看起来没什么问题，实际上内伤特别严重。那种失败和过度否定自我的情绪始终笼罩着我，这促使我停下来，想好好地想一想创业到底是怎么一回事，领导力是怎么一回事儿……突然有一天我开悟了，觉得自己接受了失败，我一下明白，
+     <strong>
+      要想重新创业，首先要从学习失败开始。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我既不满足于自己过往创业经验中的认知，也不迷信权威，不是赶紧找书看创业到底是怎么回事，而是从自我的经历中进行了一个很深度的向内的自我反思，试图走出20多年创业认知的局限，然后形成自我的充分思考，这也是我写这本书的起源。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/201812305cOMmnQAIYGCgiphT20v.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       我们如此恐惧失败
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      重新理解创业，首先是从如何理解失败开始。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     还记得湖畔大学创办时，他们找我沟通，说湖畔大学专门研究失败，这句话非常打动我。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我一直认为，成功其实没什么好学习的，因为成功者所具备的天时、地利、人和，这一切都难以复制。相反，我隐隐约约觉得，学习失败才是真正有意义的事情。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     但是，我们到底为什么要学习失败，怎么学习失败，从中学习什么？对此我似乎一直没有找到清晰的答案，即便在湖畔学习的这几年，我们也从来没有完全真正系统地学习失败。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     中国人总是忌讳谈论生死，一说起死亡就避而不谈，觉得晦气。同样，一个人或者一家企业的失败，也一样避而不谈，大家认为只有loser（失败者）才会天天把失败挂在嘴边，大多数人只会谈论成功，学习如何才能成功或者更成功。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     在中国，就是这样一种成功动机过剩的氛围，我们特别崇尚和追捧成功，追随一切当下最红的公司、模式、热词，我们的眼中只会聚焦那些成功者。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     和成功的待遇截然不同，这个社会又如此厌恶失败、鄙视失败。我们耻于谈论失败，甚至会讥讽一切失败的现象、失败的人。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们经常冷眼看着一家面临崩盘的公司走向灭亡，然后说：
+     <strong>
+      “我早就知道如此，你看，应验了吧？”眼见他起高楼，眼见他楼塌了，大家对待失败大抵都是这般吃瓜群众的心态。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们如此鄙视失败，却唯成功马首是瞻，追随到底。成功者走在前面，证明了自己的模式和方向是对的。于是一些人开始抄袭他们的商业模式，模仿他们演讲的风格，甚至开始模仿他们的生活方式，幻想着做同样的事情也能成功。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     但是夜深人静的时候，我们可以想一下这种“唯成功至上、厌恶失败”的环境最后让我们变得怎么样了。它让我们放弃了独立思考，放弃了真正的创新和探索，只敢去追求成绩，没多少人敢尝试，成功了还好，一旦失败就会被别人看不起，然后就陷入自我否定、内心无比焦虑的状态。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们不妨跳出这个环境，换个角度重新思考，从中你会发现
+     <strong>
+      美国创业文化中很重要的一部分是对失败的宽容。而且这种宽容，不仅没有影响到他们的创新，反而鼓励了创业者尝试和冒险，极大激发了创新。
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230GCgFhM14vexply0XPQoE.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       中美对待失败的差异
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我在中国创业二十多年，也去过美国很多次。近十年来，中国的互联网行业从经济总量上来计算，已经快速接近美国，在不远的将来甚至会将其超越。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     这两个国家给我印象最深刻的地方不是经济上先进和落后的差异，不是开放和混沌的差异，而是中美创业创新文化上的差异，这种差异最核心的表现是对待失败的态度。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     没有人会乐于失败，但是我们会看到，在美国人们会以平常心态谈论和面对失败。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     埃隆·马斯克固然把创业形容为“一边嚼着碎玻璃一边凝视深渊”的残酷过程，因为确实需要付出极大代价，然而，在三次发射火箭失败之后，他仍然获得了第四次发射的机会。这一次，他成功了。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     也许大家是因为他成功了，才对他前三次的失败正眼相看，但很多时候，失败就是一种常态。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我看过一部美国电影《醉乡民谣》，记录美国20世纪60年代民谣浪潮中的一位民谣歌手。导演科恩兄弟没有刻意地讲述一个励志的故事，就是从开头到结尾一直在“折磨”主人公，总是让他经历“演出—收工—挨揍”的循环场景。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     主人公身边围绕着各种在他眼中低俗得不可理喻的表演者，却一个接一个地获得成功，但是他自己因为性格上的不谙世事和艺术上的不肯妥协，最终也没有出名。可是他放弃了那样的追逐，坚持做自己心中的艺术，因为那是真实存在的。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     即便他没有世俗意义上的成功，导演还是给出了这样的关怀：“你是谁不重要，重要的是，你是浪潮的一分子。”因为在民谣浪潮中，他的存在必不可少。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们再去看历史好了。在硅谷博物馆大厅的某个角落，摆着一台硕大的机器。因为外形古旧，甚至看不出来是干什么用的。看机器旁边当年的广告画和简介说明才知道，这台像商用复印机那么大的机器，竟然是最早的家用计算机，放在厨房里，供家庭主妇们记录菜谱之用。可想而知，这么不实用的家伙的确很难风靡，很快便销声匿迹。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     再拐一个弯，就看到施乐实验室开发的家用电脑，也是因为成本过高，功能过于简单，失败了。再拐两个弯，是第一代上市售卖的苹果电脑。在乔布斯手里，它开启了一个时代。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们看到在大厅里展示的许多硬件和机器，在当年根本就不是什么成功的发明，更不用说赚大钱了，但就是这些发明，打开了一扇窗，启发了后人的智慧和热情。这中间，你不过拐了两个弯，将近20年的时间就已经过去了，而前人“失败”的点子终于在后人手中“成功”。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     硅谷的商业文明正是在这一代代人的努力探索中向前。而现在，我们又开始谈论，苹果公司是否已经丧失了创新的活力，那下一个数字英雄会是谁？历史就是这样循环往复。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     回溯科技史，我们发现推动行业发展的产品，并不全部都是成功的，失败在其中的作用举足轻重。正是那些失败的产品成为革新的养料——失败的尝试也是历史中群星闪耀的时刻。
+    </span>
+    <span style="color: rgb(89, 89, 89);">
+     这样一看，所谓的失败是多么美好的事情，这是失败对于我们全社会的价值。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     如果一个社会还在耻于谈论失败、害怕失败、排斥失败，只崇尚成功的话，我们不太可能有探索意义上的创新。所以，
+     <strong>
+      如果你希望这是一个创新的国度，一个创新的社会，那么我们必然需要重新定义失败，重新理解失败。
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230hlDYzXEjaok9I07iyRfb.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       失败是一种宿命
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     有很多人问，学习失败，是为了避免失败吗？我觉得恰恰不是。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     创业就像跳高比赛，如果以探索和挑战为终极目标，那么失败就是一种必然的宿命。当你知道失败是创业的宿命的时候，就会全然地接受失败，才会有一个要从失败中去学习的心态。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     你可以成功地攀上一个高峰，让所有人为你欢呼；你也可以就此谢幕，自此离场——但如果你想不断攀越更高的山峰，跨过人生的极限，从终极意义上讲，你的宿命就是失败。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     在20多岁第一次创业的时候，我犯了很多很多的错误。当时我聊以自慰地说：“这太好了！在年轻的时候，付出这么小的代价，能犯这么多的错误，学到这么多的东西，以后我就可以避免犯这些错误了。”
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     可是在后来不断创业的过程中，我还是不断在犯错，有新的错误，也有老的错误。后来我才发现，
+     <strong>
+      错误和失败几乎是无法避免的。
+     </strong>
+     <strong>
+      我们学习失败的真正目的在于，面对它，接受它，解决它，放下它，然后从中成长，让自己以后生活得更好。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     于是我总结，学习失败的真正意义在于，我们可以坦然面对失败、接受失败、解决失败、放下失败，而不是避免失败，因为任何人都避免不了。
+     <strong>
+      失败几乎就是生命的一部分。拒绝失败，就是拒绝生命本身。这也是失败对我个人的意义所在。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     那么，到底什么是失败？我问过很多所谓的成功人士，在你过去的生涯里，有没有什么失败的时刻或者失败的感觉？
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我发现每个人或者每家公司都有自己的“至暗时刻”，奇怪的是当我们在谈论一家已经消亡的公司时，会认为它是一家失败的公司，会像智者一样去点评，大说特说它曾经犯过怎样怎样的错误。但是，假如回到10年前，回到它所处的那个辉煌的时代，我们还会想到它的失败吗？好像很难。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     最近一次，我又跟朋友们一起讨论失败这件事。某个手机公司，它推出了一个低端系列，被认为是一个败笔，因为这个系列极大地伤害了品牌本身。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     但反过来想，如果不做低端系列，它会有这么大的用户量吗？它的商业模式能成立吗？世界上没有绝对的正确和错误，也没有绝对的成功和失败，更没有绝对的强大和脆弱——无论从得失的角度还是时间的维度，都是如此。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     村上春树在《挪威的森林》里，开篇就借渡边之口讲，死不是生之对立，而是作为生的一部分永存。我想，失败和死亡一样，失败也不是成功之对立，而是生命的一部分，失败甚至是成功的一部分。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     人性中对死亡就是恐惧的，尤其是权力集中的统治者，所以才经常会有长命百岁的妄念，可我们知道生命的常态是死亡，所谓的生不过是瞬间。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     某种程度上期待长生不老是对生命没有敬畏之心，结果是既没有享受当下，也失去了未来。我们对于生命和失败恰恰需要怀有敬畏之心，要意识到，
+     <strong>
+      失败是一种常态，没有企业可以长命百岁，企业的终极宿命跟人的生命一样，会经历出生、成长、青壮年的强壮、中年的瓶颈、衰老直至死亡，关键是你怎么看待这件事情。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     世事无绝对，成功无绝对，失败无绝对，活法无绝对。这个时代，我们尤其应该重新理解失败，重新定义失败，重新谈论失败，把失败当作重启我们生命观的引子。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     倘若把这件事情解决，哪怕只是部分解决，都是我们这些创业者对社会莫大的贡献，也希望我们这样的角色，我们的重新理解，如一种陪伴，对正在创业的你有所帮助。
+    </span>
+   </p>
+   <p style="margin: 0em 16px;white-space: normal;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);font-size: 16px;">
+    </span>
+   </p>
+   <p style="white-space: normal;text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="10" data-width="22" src="https://wscdn.ql1d.com/20181230lMwfRbng1T6uLWkmzOV9.jpeg"/>
+   </p>
+   <p style="white-space: normal;text-align: center;margin-left: 16px;margin-right: 16px;">
+    <span style="color: rgb(165, 165, 165);font-size: 13px;letter-spacing: 0.544px;text-align: center;widows: 1;background-color: rgb(255, 255, 255);">
+     编辑：姍姍  编审：夏昆
+    </span>
+   </p>
+   <section style="box-sizing: border-box;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <section>
+            <p>
+             <span>
+              《本质》——正和岛年度巨作。
+             </span>
+            </p>
+            <p>
+             <span>
+              刘东华与陈春花教授首次跨界联袂出品，
+              <strong>
+               一本书浓缩40年的商业本质！
+              </strong>
+             </span>
+            </p>
+            <p>
+             <span>
+              汇集40年来马云、马化腾、周其仁、陈春花等40位代表企业家与学者的40篇经典文章，力邀国内十大商学院院长独家点评导读。
+             </span>
+            </p>
+            <p>
+             <span>
+              助您探求中国商业的本质，把握决胜下一个四十年的心法！
+             </span>
+            </p>
+            <p>
+             <span>
+              <strong>
+               <span>
+                按图片二维码，抢鲜阅读，快来了解吧！
+               </span>
+              </strong>
+             </span>
+            </p>
+           </section>
+          </section>
+         </section>
+         <section>
+          <section>
+           <section>
+            <img data-height="337" data-width="600" src="https://wscdn.ql1d.com/20181230OpT0UAaCz2P6YrJWQslw.jpeg"/>
+           </section>
+          </section>
+         </section>
+        </section>
+       </section>
+       <section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+  </div>
+                     </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                                        -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">0</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9635637.html">
+                            <div data-background="http://img.ithome.com/images/v2.3/ithome.logo.png" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="http://img.ithome.com/images/v2.3/ithome.logo.png" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>乐信荣获凤凰WEMONEY“普惠金融实践年度杰出机构”</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9645936.html">
+                            <div data-background="https://wscdn.ql1d.com/20181226vnzhDOPZIsFgGLxjACbm.jpeg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/20181226vnzhDOPZIsFgGLxjACbm.jpeg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>5G已来 中国首个全城免费WiFi项目年亏1000万难以为继</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9642462.html">
+                            <div data-background="https://image.qiluyidian.mobi/zhongguoxinwenwang.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://image.qiluyidian.mobi/zhongguoxinwenwang.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>王文天大使：在柬中资企业要守法经营</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">0</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9662102";
+    var all_page_comment = "0";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

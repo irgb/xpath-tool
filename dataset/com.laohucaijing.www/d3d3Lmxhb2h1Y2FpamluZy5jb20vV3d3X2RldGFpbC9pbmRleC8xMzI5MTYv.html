@@ -1,0 +1,651 @@
+<!-- 作者排名标签 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="Cache-Control" content="no-transform"> -->
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="老虎财经,资产管理公司,价值投资,股票分析师,阳光私募基金,互联网证券,理财知识,财经自媒体,财经新媒体,互联网金融媒体,金融知识问答,资产配置,投资,基本面分析,投资知识,股事,白小生,财经短视频,股事小课堂" >
+	<meta name="description" content="环球老虎财经，是一个原创金融投资分析平台，关注A股的价值投资趋势、金融机构交易行为以及金融市场的波动要素等。网站汇聚众多金融行业精英，共同构建最有价值的投资分析体系，旨在助力用户战胜市场。" >
+	<title>环球老虎财经 | 首页</title>
+	<link rel="shortcut icon" type="http://images.laohucaijing.com/new_www/image/x-icon" href="http://images.laohucaijing.com/images/favicon-1.ico" media="screen" />
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/swiper.min.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/base.css">
+	<link rel="stylesheet" href="http://images.laohucaijing.com/new_www/css/index.css?v=2018086">
+	<script src="http://images.laohucaijing.com/new_www/js/jquery-2.2.3.min.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72690f86452e67e2d55534f3bc1cd4a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+
+	</head>
+<body>
+<header>
+	<div class="down">
+		<img src="http://images.laohucaijing.com/new_www/images/down.png" id="wexin" alt="下拉">
+		<a class="wexin_code"><img src="http://images.laohucaijing.com/new_www/images/ewm.jpg"  alt="二维码"><br>环球老虎财经</a>
+	</div>
+	<div class="wrap">
+		<nav>
+			<a href="http://www.laohucaijing.com/" class="logo"></a>
+			<ul>
+				<li>
+					<a class="index" href="http://www.laohucaijing.com/">首页</a>
+				</li>
+				<li>
+					<a href="/live">快讯</a>
+				</li>
+				<li>
+					<a href="/original_index">文章</a>
+				</li>
+				<li>
+					<a href="/author_index">热门作者</a>
+				</li>
+
+				<!--<li>
+					<a href="/video_index">股事视频</a>
+				</li>-->
+				<!--<li>
+					<a href="/Www_partner">联系我们</a>
+				</li>-->
+			</ul>
+		</nav>
+		<div class="navRight">
+			<ul>
+				<li>
+					<div class="searBox">
+						<label><i></i><input type="text" class="searInput" placeholder="关键字/证券代码" id="searchKeywords" onfocus="this.placeholder=''" onblur="this.placeholder='关键字/证券代码 '"></label>
+						<span id="searId" onclick="search()"></span>
+					</div>
+				</li>
+				<li>
+					<a href="/Www_about">关于我们</a>
+				</li>
+				<li>
+					<a class="work">合作</a>
+				</li>
+				<li>
+					<a class="report">寻求报道</a>
+				</li>
+				<li>
+					<a class="comp">举报或投诉</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="shadow"></div>
+<div class="partner animated" style="height: 310px;margin-top: -180px">
+	<div>
+		<p>
+			<span>商务合作   请您联系</span>
+			<span>胡坤云（15538185779）</span>
+			<span>WX：hukunyun335</span>
+			<span>huky@laohucaijing.com</span>
+		</p>
+		<!-- <p>
+			<span>媒体合作 请您联系</span>
+			<span>Wilbur (15988172629)</span>
+			<span>WX:281177407</span>
+			<span>yangwb@laohucaijing.com</span>
+		</p> -->
+		<button class="know">我知道了</button>
+	</div>
+</div>
+<div class="reWarp animated" style="height: 365px">
+	<div class="reportDiv">
+		<!-- <p>扫描二维码，添加环球老虎「寻求报道小编」为好友</p>
+		<img src="http://images.laohucaijing.com/new_www/images/bd.jpg" alt="" /> -->
+		<p class="rep">满足以下条件，获得更高通过率：</p>
+		<span>1、贵公司为A股、港股、美股上市公司</span>
+		<span>2、贵公司正在进行并购重组或战略调整</span>
+		<span>3、贵公司正在发生重大融资</span>
+		<span>4、贵公司的产品具有行业性的重大意义</span>
+		<span>联系电话：13681646214（同微信）</span>
+		<button>我知道了</button>
+	</div>
+</div>
+<div class="Complaint animated">
+	<div>
+		<span>信息举报或投诉可联系:</span> <br/>
+		<span>tousu@laohucaijing.com </span>
+		<button>我知道了</button>
+	</div>
+</div>
+<script>
+
+var urlstr = location.href;
+var urlstatus = false;
+console.log(urlstr)
+$("header ul li a").each(function() {
+	if(urlstr=="http://www.laohucaijing.com/"){
+		$(".index").addClass('active');
+	}else{
+		$(".index").removeClass('active');
+	}
+    if((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+		$(this).addClass('active');
+		urlstatus = true;
+	} else {
+		$(this).removeClass('active');
+	}
+});
+$("input").focus(function(){
+
+})
+$('#searchKeywords').bind('keypress', function(event) {
+	if(event.keyCode == "13") {
+		search();
+		return false;
+	}
+})
+$('.work').click(function(){
+	$('.partner').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.know').click(function(){
+	$('.partner,.shadow').hide();
+})
+$('.report').click(function(){
+	$('.reWarp').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.reWarp button').click(function(){
+	$('.reWarp,.shadow').hide();
+})
+$('.comp').click(function(){
+	$('.Complaint').fadeIn().addClass('fadeInDown');
+	$('.shadow').show();
+})
+$('.Complaint button').click(function(){
+	$('.Complaint,.shadow').hide();
+})
+function search() {
+	var key = $('.searInput').val();
+	location.href = "/www_search/index/?keyword=" + key;
+}
+</script>
+<style type="text/css">
+	iframe{
+		width: 100%;
+    	height: 490px;
+	}
+	.articalRight p{
+		color: #555;
+	}
+	blockquote{
+		padding:16px 20px;
+		font-size: 12px;
+		background: #eee;
+		line-height: 1.8;
+		border-left: 9px solid #05a6f2;
+		margin-bottom: 20px; 
+	}
+	blockquote strong{
+		font-style: italic;
+	}
+	.articalRight blockquote p{
+		font-size: 14px;
+		line-height: 1.8; 
+		font-style: italic;
+		color: #333;
+	}
+	.jiathis_style_32x32 .jtico_qzone{
+		background-position: 0;
+	}	
+	.jiathis_style_32x32 .jtico {
+	    padding-left: 0!important;
+	    background: none!important;
+	    cursor: pointer;
+	    padding-bottom: 6px;
+	}
+	
+	.jiathis_style_32x32 a {
+		height: 38px!important;
+	    display: inline-block;
+	    text-indent: 34px;
+	    width: 100%;
+	    color: #4a4a4a;
+	    font-size: 14px;
+	    float: left;
+	    margin: 0;
+	    margin-top: 20px;
+	    background: none;
+	    padding-left: 0;
+	}
+	.jiathis_button_tsina .jtico_tsina {
+	    background: url(http://images.laohucaijing.com/new_www/images/wb.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	.jiathis_button_qzone .jtico_qzone {
+	    background: url(http://images.laohucaijing.com/new_www/images/qq.png) no-repeat!important;
+	    padding-left: 0;
+	}
+	#test table td span[style],#test p span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span[style],#test span[style]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+    #test table td span span[style],#test span span[style]{ font-style: normal;font-size:16px!important;font-family: 'Microsoft YaHei' !important; }
+    #test span font[size],#test font[size]{ font-style: normal;font-size:16px;font-family: 'Microsoft YaHei' !important; }
+</style>
+<div class="wrap clearfix" style="position: relative;padding-bottom: 50px;">
+	<div class="main fl mt20 clearfix bgwhite boxSizing">
+		<div class="fl articalLeft">
+            <div class="bdsharebuttonbox">
+            	<div class="fiex">
+            		<div class="jiathis_style_32x32">
+	            		<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_qzone"></a>
+					</div>
+					<span class="sp3 mt20"><a class="wechat" data-cmd="weixin"></a></span>
+				</div>
+            </div>
+		</div>
+		<div class="fr articalRight">
+			<h1>一只乐观而又脆弱的猪</h1>
+			<div class="clearfix mt20 title">
+				<div class="fl artInfo1">
+					<a href="/www_author_detail/index/12730">  阿尔法工场</a><span><i style="margin-right:10px"><img src="http://images.laohucaijing.com/new_www/images/d_hot.png" alt="">41117</i>01/02 17:09</span>
+				</div>	
+			</div>
+			<div class="artDeta">
+				<img class="tip1" src="http://images.laohucaijing.com/new_www/images/yh_01.jpg" alt=""/>
+			 	<!--<img src="http://oss.laohucaijing.com//upload/images/201901/20190102111621940.jpg" width="680"  class="mt20" alt="比特币为什么会“现象级”暴涨？">-->
+			 	<p>一只乐观而又脆弱的猪场长生活不只是眼前的苟且，还有以后的苟且。           </p>
+				<img class="tip2" src="http://images.laohucaijing.com/new_www/images/yh_02.jpg" alt=""/>
+			</div>
+			<p class="Label"><a>标签：</a>
+				<span>
+							<em><i class="act"></i><i class="test" title="中国经济"><a href="/www_search/index/?keyword=中国经济">中国经济</a></i></em>
+							<em><i class="act"></i><i class="test" title="金融市场"><a href="/www_search/index/?keyword=金融市场">金融市场</a></i></em>
+							<em><i class="act"></i><i class="test" title="市场经济"><a href="/www_search/index/?keyword=市场经济">市场经济</a></i></em>
+						</span>	
+			</p>
+			<!-- 文章引用 -->
+			<!-- 文章正文 -->
+			<div class="text mt20" id="test">
+				<p style="text-align: justify;">来源：阿尔法工场（ID：alpworks）</p></br>
+
+<p style="text-align: justify;">一只乐观而又脆弱的猪场长生活不只是眼前的苟且，还有以后的苟且。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></br>
+
+<p style="text-align: justify;">18年的最后两天，投资圈剩下的仅有的乐观都与风水有关。</p></br>
+
+<p style="text-align: justify;">一个流传甚广的说法是，A股有逢8必跌逢9必涨的历史，1998年、2008年、2018年，指数都是下跌的，分别下跌3.97%、65.39%、24.59%。逢9的年份，1999年、2009年，股市都是上涨的，分别上涨19.18%和79.98%。</p></br>
+
+<p style="text-align: justify;">另一个引起短暂躁动的，是香港一位叫李居明的大师认为，&ldquo;逢九必变，逢猪必动&rdquo;。这位网红大师还预言，2019-2021特朗普行3年大运，连任、获诺贝尔和平奖。</p></br>
+
+<p style="text-align: justify;">我其实想说的是，既然跌的只剩风水了，那么我们理应对19年保持一点乐观。</p></br>
+
+<p style="text-align: justify;">这种乐观应该不是前几年那种&ldquo;战狼&rdquo;式的、爆发的乐观，应该是修复式的、谨慎的乐观。</p></br>
+
+<p style="text-align: justify;">谨慎的原因？一位朋友在中国一共考察了10个经济指标，其中60%已经处于负增长。这意味着中国的先行指数还有进一步下行空间。因为从历史上看，当增长率周期见底时，超过85%的指标都应该是负增长。</p></br>
+
+<p style="text-align: justify;">所以，当处于下行周期时，乐观也会变得脆弱。当你把上证20年走势的低点连接起来，会发现2370附近是一个支撑点。脆弱的时候，指数就会去考验这个点。</p></br>
+
+<p style="text-align: justify;">我在11月2日的文章中曾提到，下一轮A股牛市大概率要等到2022-2023年，赚钱效应可能在2020年就开始逐渐显现。而18年底的&ldquo;吃饭行情&rdquo;结束后会有一次探底。</p></br>
+
+<p style="text-align: justify;">所以，乐观点看，19年即使有个低点，又可能是之后几年行情的启动点。</p></br>
+
+<p style="text-align: justify;">嗯，乐观而又脆弱。</p></br>
+
+<p style="text-align: justify;">考虑到各种投资姿势在18年都被炸成了碎片，再大谈价值投资或者趋势投资恐怕都不太合适。所以，关于2019的投资策略，我也只分享几个碎片化的思考片段。</p></br>
+
+<p style="text-align: justify;">不确定中的确定</p></br>
+
+<p style="text-align: justify;">《中国的指数投资时代提前到来》是阿尔法工场18年提出的一个概念。在一个&ldquo;人为管理痕迹&rdquo;很重，天天黑天鹅的市场里，想要最大程度的规避突发风险，追求更有确定性的收益，投资指数是几乎是大资金的首选。</p></br>
+
+<p style="text-align: justify;">这一点，从之前创业板阶段见底时就可看出，机构不约而同的选择了指数投资。</p></br>
+
+<p style="text-align: justify;">因为个股你不知道什么时候会突然遇到一只黑天鹅，股价下跌还不是最可怕的，最可怕的是没有流动性，你根本出不来。买指数至少你没有这种焦虑感。</p></br>
+
+<p style="text-align: justify;">有券商的朋友说，某大型公募基金19年将停发主动产品，重点发指数产品。更为重要的是，外资还在以购买指数的方式不停的买入A股。</p></br>
+
+<p style="text-align: justify;">下一轮牛市的大赢家，大概率出自指数。有观点认为，相关的期权产品也机会巨大，有兴趣的朋友可以重点看看。</p></br>
+
+<p style="text-align: justify;">此外，A股上市公司数量现在超过了三千六百家，19年还要推科创板，未来上市公司数量达到7000家也不是没有可能。这么大体量的市场中，想要每家上市公司都保持像以前一样充沛的流动性可能性不是很大。</p></br>
+
+<p style="text-align: justify;">未来，只有进入重点指数的个股才配拥有好的流动性，其余的上市公司将被边缘化。对此体会不深的，可以去看看港股。所以，想要在未来的牛市中获得好的收益，尽量在低位布局进入重点指数的公司，规避指数之外的公司。</p></br>
+
+<p style="text-align: justify;">M型行业</p></br>
+
+<p style="text-align: justify;">这两年，投资圈谈的最多的词就是头部，也就是说只投一个行业的龙头公司。但你有没有想过，如果经济长期低迷会出现什么情况？</p></br>
+
+<p style="text-align: justify;">龙头公司因为各方面的压倒性优势，市场占有率还会进一步提升，小微企业因为船小好掉头活得也不至于太差，而中间规模的公司恐怕面临大的麻烦。</p></br>
+
+<p style="text-align: justify;">最典型的莫过于美图：抢了美拍未来的抖音赚得盆满钵满，无他相机这种小公司也活得有滋有味，唯独美图又是卖资产又是裁员搞转型。</p></br>
+
+<p style="text-align: justify;">都说M型社会，以后的行业恐怕也是M型：一眼望去，头部的很巨大，底部的很活跃，中间消失了。</p></br>
+
+<p style="text-align: justify;">一句话，这个阶段，投资要规避中间规模的公司。</p></br>
+
+<p style="text-align: justify;">2C熄火，2B风起</p></br>
+
+<p style="text-align: justify;">观察最近一级市场的融资情况，拿到大钱的2B公司明显增多。背后的原因有两点：</p></br>
+
+<p style="text-align: justify;">一是移动互联网用户红利耗尽，在下一个平台（例如VR）大规模启动之前，2C模式主要是存量搏杀，难以再现群体性崛起的造富机遇。拼多多靠裂变营销还能抢到一些三四线的用户，趣头条干脆就只能靠发现金才能攒用户了；</p></br>
+
+<p style="text-align: justify;">二是在人力成本越来越高的情况下，利用技术来提高效率而不是雇佣更多的人成为企业的首选。腾讯转型大力提倡的所谓产业互联网，就是2B模式。</p></br>
+
+<p style="text-align: justify;">19年，2B领域的公司值得高看一眼。</p></br>
+
+<p style="text-align: justify;">长期看好数据资产</p></br>
+
+<p style="text-align: justify;">前不久有部纪录片，讲的是中国古都的兴衰。看完你会发现，几乎所有的古都兴衰都与城市周围的水系息息相关，长安、洛阳、开封。。。在那个年代，水和河流就代表着能量、资源、财富。</p></br>
+
+<p style="text-align: justify;">而今天，网上的&ldquo;河流&rdquo;取代了真实的河流，数据流成为决定公司命运的核心资产。你可以把整个世界看成一个超大的数据流，每个组织不过是其中的一套算法。谁占有的&ldquo;河流&rdquo;最大，谁的算法更先进，谁就会拥有更多的能量与财富。</p></br>
+
+<p style="text-align: justify;">光有数据不行，还得有用数据赚钱的商业场景。18年抢钱速度最快的是谁？今日头条的张一鸣是也。有人说头条系主要是产品凶悍，话只说对了一半，产品只是形式，头条系是国内互联网圈对数据理解最深刻的公司。</p></br>
+
+<p style="text-align: justify;">在头条的王国里，一切皆数据，每个事物都有标签，而算法负责将信息流和广告流塞给每个&ldquo;数字奴隶&rdquo;。</p></br>
+
+<p style="text-align: justify;">数据资产列入企业资产负债表只是时间问题，提前布局者将收获巨大的金矿。</p></br>
+
+<p style="text-align: justify;">科创板</p></br>
+
+<p style="text-align: justify;">科创板是目前投资圈认知分化最严重的板块，一半人看好，一半人认为是下一个新三板。具体哪一半人看对，事前无从判断。</p></br>
+
+<p style="text-align: justify;">还好，对于未知的新事物，盲点套利的办法在A股屡试不爽。所谓盲点套利，就是在拥有巨大潜力、而现阶段又不明晰的地方进行套利或者进行投资，从而获得超额的收益。</p></br>
+
+<p style="text-align: justify;">首批参与、快速获利后退出观望，是处理科创板投资的上上策。个人认为，如果19年想有阿尔法收益，科创板的头一波一定要积极参与。但要记得见好就收。</p></br>
+
+<p style="text-align: justify;">晚上啰啰嗦嗦写了这么多，不知不觉已经进入2019年了。今年也是中国的猪年，猪在12生肖中属于比较不错的属相，快乐的躺着就有吃有喝。</p></br>
+			</div>
+			
+			
+										
+			<div class="related-articles">
+				<h4>您可能感兴趣的文章</h4>
+				<ul>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132912" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229195845472.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼...</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132925" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102140148133.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132910" style="background:url(http://oss.laohucaijing.com//upload/images/201812/20181229182744196.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132922" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102135046173.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132916" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102111621940.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+						</p>
+					</li>
+										<li>
+						<div class="img-box">
+							<a href="/www_detail/index/132914" style="background:url(http://oss.laohucaijing.com//upload/images/201901/20190102110216897.jpg) no-repeat;background-size: cover;"></a>
+						</div>
+						<p>
+							<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+						</p>
+					</li>
+									</ul>
+			</div>
+		</div>
+		<div class="sTop" style="position: fixed;width: 59px;left: auto; bottom:200px;margin-left: -10px; display: none;">
+			<img src="http://test.image.laohucaijing.com/new_www/images/top.png" alt="">
+		</div>
+	</div>
+	<div class="aside fr">
+		<div class="hot_recom">
+			<p class="type"><span>热门推荐</span></p>
+			<a href="/www_detail/index/132912"><img src="http://oss.laohucaijing.com/upload/images/201812/20181229195845472.jpg" alt=""></a>
+			<h2><a href="/www_detail/index/132912">谁敢砸我盘，以后别来调研！万达电影“王总”不谈经营却怒怼减持</a></h2>
+			<p class="name"><a href="/www_author_detail/index/13594">环球老虎财经 韩理</a><span>01/02 17:09</span></p>
+		</div>
+		<!---->
+		<div class="edit_recom">
+			<p class="type"><span>编辑推荐</span></p>
+			<ul>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132925">坏蛋被绳之以法，国民技术依然没看到乐观的迹象</a>
+					<p>01/02 17:10</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132910">三安光电两天蒸发86亿，“厦门最有钱富二代”如何应对？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132922">PMI超预期下行，蕴含哪些信号？</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132916">一只乐观而又脆弱的猪</a>
+					<p>01/02 17:09</p>
+					</li>
+									<li>
+					<i class="triangle"></i>
+					<a href="/www_detail/index/132914">渐行渐近的人口危机——中国生育报告2019</a>
+					<p>01/02 17:09</p>
+					</li>
+							</ul>
+		</div>
+	</div>
+</div>
+<!-- JiaThis Button BEGIN -->
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8">
+</script>
+<!-- JiaThis Button END -->
+<script type="text/javascript" >
+function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                 window.location.href =  "http://m.laohucaijing.com"+'/home/detail/'+"132916"  ;
+            }
+        }
+
+        browserRedirect();
+
+
+var jiathis_config={
+	pic:"http://oss.laohucaijing.com//upload/images/201901/20190102111621940.jpg"
+}
+</script>
+<!-- JiaThis Button END -->
+
+<script>
+	$(function(){
+
+		$("#test p font").removeAttr("face");
+		$("#test p span").removeAttr("style");
+		$("#test p font").css({"font-size:":'16px',"font-family":'Microsoft YaHei'});
+		$('blockquote').find('br:last').remove();
+        var Test1 = $('.artDeta p').text();
+        var test = $('.Label .test').text();
+        	test = $.trim(test)
+       var Img = $('.artImg img').attr('src');
+        if (Test1=='') {
+            $('.artDeta').hide();
+        }
+        if (test=='') {
+            $('.Label').hide();
+        }
+		$(".text img").css({
+            "height":"auto",
+            "float":"none",
+        })
+        $(".text img").each(function(){ 
+        var Width = $(this).attr("style").indexOf("width"); 
+        if(Width != (-1)){
+             $(this).wrapAll("<div style='text-align:center'></div>");
+        }else{$(this).css({"width":"100%"});} 
+        }); 
+	})
+
+	$(".sTop").click(function () {
+	    var speed=300;
+	    $('body,html').animate({ scrollTop: 0 }, speed);
+	    return false;
+	});
+	var aHeight=$(".bdsharebuttonbox").offset().top;
+	var bHeight=$(".edit_recom").offset().top;
+	var cHeight=$(".related-articles").offset().top;
+	$(window).scroll(function(){
+	  	
+		var scroH = $(this).scrollTop();
+	
+	    if(scroH>=aHeight){
+	   		$(".bdsharebuttonbox .fiex").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<aHeight){
+    		$(".bdsharebuttonbox .fiex").css({'position':'relative'});
+    	}
+    	if(scroH>=bHeight+10){
+	   		$(".edit_recom").css({'position':'fixed','top':'0','left':'auto'})
+	   	}else if(scroH<bHeight){
+    		$(".edit_recom").css({'position':'relative'});
+    	}
+    	if (cHeight >= $(window).scrollTop() && cHeight < ($(window).scrollTop()+$(window).height())) {
+			$(".related-articles .img-box a").addClass('fadeIn')
+    	}
+    	
+	})
+	
+	var video_url = $("iframe").attr('src');
+	if(video_url!= undefined){
+		var urlId=(video_url.split('page/')[1]).split('.html')[0];
+		var Url="https://v.qq.com/iframe/player.html?vid="+urlId+"&tiny=0&auto=0"
+		$('iframe').attr('src',Url);
+	}
+	
+
+	$(window).scroll(function(){
+		var wHeight=$(window).height();
+		var top = $(document).scrollTop();
+		if(top>wHeight){
+			$(".sTop").show();
+		}
+		else{
+			$(".sTop").hide();
+		}
+
+	})
+
+
+</script>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : "一只乐观而又脆弱的猪",	
+			bdDesc : "一只乐观而又脆弱的猪场长生活不只是眼前的苟且，还有以后的苟且。           ",	
+			bdUrl : "http://m.laohucaijing.com"+'/home/detail/'+"132916"	
+		},
+		share : [{
+			"bdSize" : 16
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<footer style="background-size:cover">
+    <div class="wrap">
+        <img alt="老虎财经" src="http://images.laohucaijing.com/new_www/images/ewm.jpg" class="fl code" width="92" height="92" style="float: right;margin-left:0;margin-right:51px">
+        <div class="fl footRight" style="width:1040px">
+            <div class="fl aboutLink" style="margin-top: 70px">
+                <span class="fl">友情链接：</span>
+                <ul class="clearfix" style="float: left;">
+                
+                                    
+                    <li><a rel="" href="http://www.pedaily.cn" target="_blank">投资界</a></li>
+                                    
+                    <li><a rel="" href="http://finance.ifeng.com" target="_blank">凤凰网财经</a></li>
+                                    
+                    <li><a rel="" href="http://news.cnfol.com/" target="_blank">中金在线</a></li>
+                                    
+                    <li><a rel="" href="http://money.stockstar.com/" target="_blank">证券之星</a></li>
+                                    
+                    <li><a rel="" href="http://www.gupiao8.com/" target="_blank">股票吧</a></li>
+                                    
+                    <li><a rel="" href="http://www.cir.cn/" target="_blank">中国产业调研网</a></li>
+                                    
+                    <li><a rel="" href="http://www.jpm.cn" target="_blank">金评媒</a></li>
+                                    
+                    <li><a rel="" href="http://www.wangdaidongfang.com" target="_blank">网贷东方</a></li>
+                                    
+                    <li><a rel="" href="http://www.pedata.cn/" target="_blank">私募通</a></li>
+                    
+                </ul>
+                <span style="float: left;">信息举报或投诉可联系: 021-80316509</span>
+            </div>
+            <div class="copyright">
+              Copyright © 2012 - 2015 Laohucaijing.com <i>环球老虎财经</i>版权所有 沪ICP备12011498号
+              <span style="margin-left: 15px;"><img style="margin-right:5px;" src="http://images.laohucaijing.com/newimages/hao.png">沪公网安备 31011002001247号 </span>
+              <a style="color: #fff;margin-left: 22px" href="/Www_protocol">免责声明</a>
+              <a href="http://www.shjbzx.cn/ " target="_blank"><img style="width: 140px;margin-top: -37px;margin-left: 111px;" src="http://images.laohucaijing.com/new_www/images/jb.png" alt=""></a>
+             </div>
+        </div>
+    </div>
+</footer>
+<script>
+    //头部微信
+    var timerc;
+    //鼠标移入微信，微信二维码显示
+    $("#wexin").mouseenter(function(){
+        clearTimeout(timerc);
+        $(".wexin_code").animate({"width":'150px',"opacity":'1'},500);
+    })
+    //鼠标移出微信，
+    $("#wexin").mouseleave(function(){
+        timerc=setTimeout(function(){
+            //半秒钟延迟看鼠标是否在悬浮框中
+            if(!$(".wexin_code").hasClass("hover")){//不在悬浮框
+                $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+            }
+            else{
+                $(".wexin_code").fadeIn();
+            }
+        },500);
+    })
+    // 鼠标移入微信二维码
+    $(".wexin_code").mouseenter(function(){
+        $(".wexin_code").addClass("hover");
+    })
+    // 鼠标移出微信二维码
+    $(".wexin_code").mouseleave(function(){
+        $(".wexin_code").animate({"width":'0',"opacity":'0'},500);
+        $(".wexin_code").removeClass("hover");
+    })
+</script>
+</body>

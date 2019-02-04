@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7700","0","attach");
+Cms.viewCount("","7700");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml" target="_blank">新闻动态</a> > <a href="http://www.cpppc.org/zh/pppdfdt/index.jhtml" target="_blank">地方动态</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>陕西：PPP模式为城市公共服务“加油”</h2>
+			<span class="msg"><b>2019-01-22</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">城市要发展，公共服务短板如何补齐？&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">地方政府财力有限，社会资本如何发力？&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em;"><br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">如今PPP（政府和社会资本合作）模式，正成为铜川市加快城市公共基础设施建设、优化营商环境的重要抓手。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">从西安市向北沿着包茂高速开车1个小时，就抵达铜川市新区。在这里，铜川市博物馆、体育馆、工人文化宫和大剧院正在同时建设。要是单靠财政资金，这4个城市文体场馆全部建成可能得10年以后了。而如今，通过PPP模式撬动社会资本，一系列城市公共基础设施建设时间提前，区域产业导入和人口集聚也正在加快进行。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">19个PPP项目落地 激发城市建设新活力&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“铜川市在2016年将这4个城市文体场馆打包成一个PPP项目，总投资7.26亿元。政府方出资2905万元、社会资本方陕建集团出资1.16亿元组成项目公司，其余资金缺口由项目公司通过银行贷款解决。”2018年12月19日，面对已经封顶的铜川市体育馆，该项目公司副总经理朱锁权说，“借助PPP模式，这4个场馆在2017年5月至9月间陆续开工，有效提升了场馆的整体建设进度。其中，铜川市体育馆将在2019年9月底竣工，并将作为十四运会的篮球场馆。”&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">产业园区开发也是铜川市探索PPP模式的重要领域。“要把加工制造类企业吸引进来，就要为企业提供完善的产业园区配套体系。”铜川市王益区王家河工业园区管委会副主任郭志峰说，“这既是政府要给企业提供的公共服务，又有一定的物业服务收入，很适合采用PPP模式。”为此，铜川市推出了王家河工业园区“双创”基地建设PPP项目，项目总投资2.2亿元，由中标社会资本方陕西润丰建设有限公司负责该项目的融资、建设和后期运营。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">文旅产业也是铜川市包装PPP项目的重点。“建设中的铜川照金干部学院PPP项目，将成为开展革命传统教育的重要基地。同时，该项目也将与周边的薛家寨景区、香山景区、照金小镇等构成有机整体，共同提升铜川市红色旅游发展的综合承载能力。”铜川市照金景区管委会主任闫新民说。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">从2014年起步，到2015年推广铺开，到2016年签约落地，再到2017年以后规范创新，铜川市PPP模式经过5年的发展，正逐渐成熟。如今铜川市纳入财政部PPP综合信息平台管理库的PPP项目有21个，其中落地项目19个，入库项目落地数量位居全省第二；入库项目落地率90.5%，落地率位居全省第一；铜川市入选国家级PPP示范项目8个，示范项目数量位居全省第一。已落地的19个PPP项目总投资62.69亿元，其中地方财政投入11.75亿元，撬动社会资本及银行融资50.94亿元。PPP模式对当地完善城市公共基础设施和提升公共服务水平起到越来越重要的作用。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">社会资本发力 弥补城市公共服务短板&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">2018年12月19日，铜川市王益区水务局副局长王刚带着记者来到王家河，讲述王家河流域的今昔变化。“以前要么是简单清理河道，要么是单独巩固河堤，工程往往是‘小打小闹、单一治理’，未对流域进行整体改造提升。”王刚说。现在，当地利用PPP模式实施王益区王家河流域综合整治项目，由社会资本方发达控股集团负责项目的融资、建设、运营维护。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">在这个PPP项目中，社会资本方发达控股集团充分发挥其专业优势和市场主动性，让这个项目除了实现河道治理目标外，还提升了整个城市的公共服务水平。“我们对整个项目投资1.7亿元，并充分利用自身的专业技术、管理和后期运营优势，实现水安全、水环境、水生态的融合。”发达控股集团相关项目负责人左福安说，“相比以前融资代建模式下的两年质保期，如今企业要连续运营维护15年。因此，企业进行流域治理的责任心会更强，服务效果也更好。”&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“在PPP项目中，社会资本的投融资功能只是手段，借助其市场化、专业化优势来提升政府公共服务的效能和水平才是目的。”铜川市PPP项目管理办公室副主任刘鲁宁说。<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">在王家河工业园区“双创”基地建设PPP项目中，当地政府将项目投融资、设计、施工、运营等全生命周期各环节统一交给陕西润丰建设有限公司完成，从而充分调动社会资本方的主动性，实现项目实施全流程效能提升。“从2018年5月到现在，我们用了半年多时间招商，10家企业就已将11座新建厂房全部租完。未来这些企业投产后，将实现年产值7.5亿元，可解决就业500余人。”陕西润丰建设有限公司项目负责人李钊说。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">规范发展PPP模式 持续优化区域营商环境&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">“铜川市在发展PPP模式中，严格遵循PPP项目操作所涉及的项目识别、准备、采购、执行、移交等5个阶段、19个具体环节，并根据具体的PPP项目实践不断研究新问题、解决新问题。”刘鲁宁说，“我们完善了PPP项目全生命周期监管制度，对各个阶段实现动态有效监管；成立铜川市基础设施和PPP融资基金，对相关PPP项目提供资金支持；通过将公益性项目和可经营性资产打包，降低财政支付压力；探索将可用性服务费与考核结果挂钩，来解决支出责任‘固化’问题。”&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">PPP项目实施过程中，融资是其中的关键环节。“我们充分发挥自身支持地方基建的业务优势，主动参与到铜川市PPP项目建设中。截至目前，我行为铜川市文体场馆等3个PPP项目提供授信13.55亿元，并已根据项目实施进度放款2亿元。”建设银行铜川市分行行长雷亚东说。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">如何对社会资本方进行绩效考核，这也是铜川市为更好发挥PPP作用、提升政府公共服务水平所探索的重要方面。“在产业园区、现代农业产业园和田园综合体等类型的PPP项目中，我们设置了产业落地投资率、产业招商成功率等绩效考核指标，以更好地促进社会资本方提升这些项目的运营效率和水平。”刘鲁宁说。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">据陕西省财政厅相关统计，截至2018年12月10日，我省进入财政部PPP综合信息平台管理库的项目有261个，投资额3523.78亿元，其中已落地项目153个，投资额2696.21亿元。在已落地的153个项目中，市政工程类、交通运输类、生态建设和环境保护类项目分别为57个、27个、15个，合计占已落地项目总数的64.71%。&nbsp;<br/></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">省财政厅相关业务负责人表示，这些城市基础设施及公共服务类项目的落地实施，将有力助推我省投资营商环境的优化提升，为全省高质量发展提供基础性支撑平台。（作者：高振博）</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 陕西日报</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7700");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","518");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

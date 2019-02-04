@@ -1,0 +1,1019 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <!--[if IE]><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwcGWF9ACwUEXVRXDwA="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="shortcut icon" href="http://beltandroad.zaobao.com/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="amphtml" href="http://beltandroad.zaobao.com/beltandroad/news/story20181230-919664?amp" />
+  <link rel="shortcut icon" href="/sites/all/themes/BELTANDROAD/assets/imgs/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>贸易战两败俱伤 美中料各损失数十亿美元</title>
+  <!--<link href="//assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+  <link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__BJ6Ou6QsBRtnFTmxaakamOIS8n4QswDP2XnnZ1sxtaM__NBuvkP6eInGIkb1aJvUHx5PX79XApuxBDkk_77W5tYk__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__hXPCKTjyzBatNf8Te5Ax5-2fSFyHJYf9A5WLfzcUBRE__1KxyiU0xgQssZto77wWOnwppy4v7RRJCL5P0vSXa1p4__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__lWboBogHV8Ur0Q4dI4Y0hoIwuZdyUmQV0FIYUQaoNtk__YhOebZbvKyq-d3bSjpOm3ayYgVEmUdqLDpk2De4tBOI__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.css" media="all" />
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(h,o,t,j,a,r){
+  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+  h._hjSettings={hjid:"952486",hjsv:5};
+  a=o.getElementsByTagName('head')[0];
+  r=o.createElement('script');r.async=1;
+  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+  a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__1j-vOQz2u-6IZr2tsn2u1_aUcYO8guUPfPdEygTX7mo__gc8gXZsmvbm10HO8S4RCO5iA8DupyrvJcDGIX5aw0LU__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.slots = googletag.slots || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__9ici6QMeDS-cROq8R0RhuICsMGMP2wcJZNQQFsqQi44__M5E7I01PszZ2LwewR4eXuDHDdqMR5fSsHcNl2s6Yr8A__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__UW4URQsON5h-xjwepC-HoW32RCC10thhh4f0DQ1P8z4__hNpiQ4nPo69uauziSxx_dfii_n10L8lTtOKkhk3rixQ__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+  googletag.pubads().collapseEmptyDivs();
+  googletag.pubads().setTargeting("zbarticleid", "919664");
+/* Custom campaign targeting tags */
+var zbTagsConfig = [
+  { "path": "/special/report/others/legendofbeauty", "tags": [{"zbtags": ["西施", "Legend of Beauty"]}] },
+  { "path": "/special/report/singapore/chinese-new-year-2017", "tags": [{"zbtags": ["gscny2017"]}]  },
+  { "path": "/special/report/others/huayi", "tags": [{"zbtags": ["华艺节"]}]  },
+  { "path": "/keywords/hua-yi-2018", "tags": [{"zbtags": ["hua-yi-2018"]}]  },
+  { "path": "/special/report/supplement/active-ageing", "tags": [{"zbtags": ["全国乐龄学苑", "幸福老龄化行动计划"]}]  },
+  { "path": "/special/report/supplement/ssgkc-knowledge-forum", "tags": [{"zbtags": ["中新知识论坛"]}]  },
+  { "path": "/special/report/supplement/gulangyu", "tags": [{"zbtags": ["鼓浪屿"]}]  },
+  { "path": "/keywords/te-jin-hui", "tags": [{"zbtags": ["te-jin-hui","特金会"]}]  },
+  { "path": "/keywords/lin-li-qi-ye-zhi-xing-2018", "tags": [{"zbtags": ["邻里企业之星2018","lin-li-qi-ye-zhi-xing-2018"]}]  },
+];
+
+try{ 
+  var GTagExt = new GptExt();
+  /* ### Set Custom Targeting ### */
+  try{
+    GTagExt.setCustomTargeting( zbTagsConfig );
+  } catch(err) {
+    console.log( err );
+  }
+
+  /* ### DFP Preview control ### */
+  try{
+    var dfp_preview_key ='dfp_preview';
+    var dfp_preview_keycode = GTagExt.getQueryStringByKey(dfp_preview_key);
+    googletag.pubads().setTargeting(dfp_preview_key, dfp_preview_keycode);
+  } catch(err) {
+    console.log( err );
+  }
+
+  /* ### Set Referrer Targeting ### */
+  try{
+    var dfp_referrer = GTagExt.getReferrer();
+    googletag.pubads().setTargeting( "referrer", dfp_referrer);
+  } catch(err) {
+    console.log( err );
+  }
+
+  if( !GTagExt.isPublicDomain() && googletag.slots.hasOwnProperty( "topoverlay" ) ) {
+    googletag.destroySlots( [googletag.slots.topoverlay] );
+  }
+
+  /* ### Native bi1 & bi2 homepage control ### */
+  try{
+    GTagExt.toggleHomepageNativeAds();
+  } catch(err) {
+    console.log( err );
+  }
+} catch(err) {
+  console.log( err );
+}
+
+googletag.enableServices();});
+
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__bIOmO-N3BTNorXOvbjpFahHVk3E__rbfI25BRdxwqI0__dchJ78oY4v2BtLu1d2kC-5H3JCY6f2VI2Fz-F5WxJpE__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"BELTANDROAD","theme_token":"RGqjeiN3SxRzS6DDmAQWuC04Z4M7G9a10N5okiKxRKk","jquery_version":"1.10","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/custom\/zb_flood_unblock\/zb_flood_unblock.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/oembed\/oembed.base.css":1,"sites\/all\/modules\/oembed\/oembed.theme.css":1,"sites\/all\/modules\/pollanon\/pollanon.css":1,"sites\/all\/modules\/hide_submit\/css\/hide_submit.css":1},"js":{"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"http:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/pollanon\/js\/jquery.cookie.min.js":1,"sites\/all\/modules\/pollanon\/js\/pollanon.pack.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"misc\/autocomplete.js":1,"sites\/all\/modules\/views_load_more\/views_load_more.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/hide_submit\/js\/hide_submit.js":1}},"hide_submit":{"hide_submit_status":true,"hide_submit_method":"disable","hide_submit_css":"hide-submit-disable","hide_submit_abtext":"","hide_submit_atext":"","hide_submit_hide_css":"hide-submit-processing","hide_submit_hide_text":"Processing...","hide_submit_indicator_style":"expand-left","hide_submit_spinner_color":"#000","hide_submit_spinner_lines":12,"hide_submit_hide_fx":1,"hide_submit_reset_time":15000},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:c0c46023f7e09a5ecf2740565af019a9":{"view_name":"belt_and_road","view_display_id":"beltandroad_advertisement","view_args":"19059\/ads--leaderboard01","view_path":"node\/919664","view_base_path":null,"view_dom_id":"c0c46023f7e09a5ecf2740565af019a9","pager_element":0},"views_dom_id:b515170365e73e97a77cbe2c4de2b999":{"view_name":"belt_and_road","view_display_id":"bnr_related_article","view_args":"all","view_path":"node\/919664","view_base_path":null,"view_dom_id":"b515170365e73e97a77cbe2c4de2b999","pager_element":0},"views_dom_id:5f38dbea9dcf88fa2271295ac2cb9709":{"view_name":"belt_and_road","view_display_id":"beltandroad_advertisement","view_args":"19059\/ads--imu01","view_path":"node\/919664","view_base_path":null,"view_dom_id":"5f38dbea9dcf88fa2271295ac2cb9709","pager_element":0}}},"urlIsAjaxTrusted":{"\/views\/ajax":true,"\/":true}});
+//--><!]]>
+</script>
+
+
+
+
+<meta property="og:site_name" content="一带一路 Belt and Road"/>
+<meta property="fb:admins" content="100000128787376" />
+
+<meta name="twitter:title" content="一带一路 Belt and Road" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://beltandroad.zaobao.com" />
+<meta name="twitter:site" content="@一带一路" />
+<meta name="twitter:image" content="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/zaobao_logo_1200x630.png" />
+<meta name="twitter:domain" content="beltandroad.zaobao.com" />
+
+		<!-- Start Facebook Basic Tags -->
+	<meta name="title" content="贸易战两败俱伤 美中料各损失数十亿美元" />
+	<meta name="description" content="美国普渡大学农业经济学家泰纳说，单是中国对美国大豆、玉米、小麦和高粱征收关税的举措，就可能造成两国经济一年各损失约29亿美元。"  />
+	<meta name="t" content="贸易战两败俱伤 美中料各损失数十亿美元" />
+	<meta name="d" content="美国普渡大学农业经济学家泰纳说，单是中国对美国大豆、玉米、小麦和高粱征收关税的举措，就可能造成两国经济一年各损失约29亿美元。"  />
+	<!-- Start Facebook (Open Graph) Tags -->
+	<meta property="og:title" content="贸易战两败俱伤 美中料各损失数十亿美元"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="美国普渡大学农业经济学家泰纳说，单是中国对美国大豆、玉米、小麦和高粱征收关税的举措，就可能造成两国经济一年各损失约29亿美元。"/>
+	<meta property="og:url" content="http://beltandroad.zaobao.com/beltandroad/news/story20181230-919664"/>
+	<!-- End Facebook (Open Graph) Tags -->
+	<meta property="og:image" content="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_full/public/images/201812/20181230/20181230_news_agriculture.jpg"/>
+	<!-- <meta property="fb:admins" content="160823460655497,1445356680,100000128787376" /> -->
+	<link rel="image_src" href="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_full/public/images/201812/20181230/20181230_news_agriculture.jpg" />
+	<!-- End Facebook Basic Tags -->
+	
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73322630-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+ /*   var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-73322630-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+*/
+</script>
+
+
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/inc/js/smarttag.js"></script>
+
+
+
+<!-- START DPM Tag -->
+	<meta name="ldapw" content="" />
+	<script src="http://adtag.sphdigital.com/tag/zaobao/js/zb_gpt_header.js"></script>
+<!-- END DPM Tag -->
+
+
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/fonts/font-awesome.v4.4.0.css" />
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/css/bootstrap.3.3.0.min.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/css/tooltipster.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/css/animate.css">
+
+
+<!--<link rel="stylesheet" type="text/css" href="//lib/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.min.css">-->
+<!--<link rel="stylesheet" type="text/css" href="//lib/owl.carousel.2.0.0-beta.2.4/assets/owl.theme.default.min.css">-->
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/owl-carousel/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/owl-carousel/owl.transitions.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/css/style-rev2.css?v=20180720a">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/BELTANDROAD/assets/css/style-ext.css?v=0170314">
+
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/bootstrap.3.3.0.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/html5.js"></script>
+<!--[if IE]>
+	<script src="/sites/all/themes/BELTANDROAD/assets/js/html5shiv.js"></script>
+<![endif]-->
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://beltandroad.zaobao.com/sites/all/themes/BELTANDROAD/assets/imgs/apple-icon-144x144-precomposed.png" />
+</head>
+
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-919664 node-type-article article-page article-page" >
+    
+
+<div class="container">
+  <!-- ### Header - START ### -->
+  <section id="brand">
+  <header>
+    <a id="obor-brand" href="/beltandroad"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/logo.svg" border="0" /></a>
+    <aside>
+      <div id="bilingual" class="view-desktop">
+        <div class="language-toggle">
+          <a href="/beltandroaden" class="en" target="_blank">English</a>
+          <a href="/beltandroad" class="ch active">中文</a>
+        </div>
+      </div>
+      
+      <ul id="social-channels">
+        <li class="first"><a href="//www.facebook.com/zaobaosg" target="_blank" class="fa fa-facebook"></a></li>
+        <li><a href="//twitter.com/zaobaosg" target="_blank" class="fa fa-twitter"></a></li>
+        <li><a href="//www.weibo.com/zaobaocom" target="_blank" class="fa fa-weibo"></a></li>
+        <li><a href="//www.zaobao.com/promo/zbguide" target="_blank" class="fa fa-wechat"></a></li>
+        <li class="last"><a href="mailto:zaobaobeltandroad@gmail.com" target="_blank" class="fa fa-envelope"></a></li>
+      </ul>
+      <a href="#search" class="fa fa-search"></a>
+    </aside>
+    <div class="credit">
+      <span>呈献</span> <a href="//www.zaobao.com/" target="_blank" class="credit-zaobao"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/logo-zaobao.svg" border="0" /></a><a href="//www.sbf.org.sg/" target="_blank" class="credit-sbf-2018"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/logo-sbf-2018.svg" border="0" /></a>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="more-nav">...</span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div id="bilingual" class="view-mobile">
+        <div class="language-toggle">
+          <a href="/beltandroaden" class="en" target="_blank">English</a>
+          <a href="/beltandroad" class="ch active">中文</a>
+        </div>
+      </div>      
+      <ul class="nav navbar-nav" id="nav-main">
+        <li><a href="/beltandroad/news">新闻与分析</a></li>
+        <li><a href="/beltandroad/analysis">视角</a></li>
+        <li><a href="/beltandroad/cultural-travel">文化旅游</a></li>
+        <li><a href="/beltandroad/corporate">企业家见证</a></li>
+        <li><a href="/beltandroad/business">相关商机</a></li>
+        <li><a href="/beltandroad/events">活动看板</a></li>
+        <li><a href="/beltandroad/document">文件</a></li>
+      </ul>
+      <ul class="nav navbar-nav" id="nav-misc">
+        <li><a href="/beltandroad/concept">概念</a></li>
+        <li><a href="/beltandroad/route/story20160302-587490">沿线概况</a></li>
+        <li><a href="/beltandroad/sponsor">支持机构</a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
+  <!-- ### Header - END ### -->
+
+  <!-- ### Ads - Leaderboard - START ### -->
+  <div id="leaderboard">
+    						<!-- Start of Ad Type initialization -->
+						 <!-- adtag_tid:19059 | page_type:Index | ad_type:ads--leaderboard01 -->						<!-- End of Ad Type initialization -->	
+		
+	    											<script src="//adtag.sphdigital.com/tag/zaobaosg/js/zbsg_beltandroad_lb1.js" type="text/javascript"></script>							
+		
+	</div>
+  <!-- ### Ads - Leaderboard - END ### -->
+
+
+	<div id="content" class="news-article">
+
+		<div class="row" id="lobby">
+			<div class="col-md-8 col-sm-7" id="content-plate">
+				<section id="breadcrumbs">
+					<a id="zb_breadcrumb_main" href="/beltandroad">首页</a> <span class="fa fa-angle-right"></span> <a class="active" href="/beltandroad/news">新闻与分析</a>
+				</section>
+
+				
+				<!-- ### Content - START ### -->
+				<article>
+					<div class="body-content">
+						<h1>贸易战两败俱伤 美中料各损失数十亿美元</h1>
+						<aside class="trackme">
+							<span class="datestamp">2018年12月30日 星期日</span>
+							<span class="contributor"></span>
+						</aside>
+
+						<!-- ### Social network sharing - START ### -->
+						<style>
+.tooltipster-shadow {
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+	color: #2c2c2c;
+}
+.tooltipster-shadow .tooltipster-content {
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+}
+.tooltipster-text-bold{
+	font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 16px;
+    height: 16px;
+    position: relative;
+    color: #000;
+}
+.tooltipster-text{
+	font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    color: #666;
+}
+</style>
+<script type="text/javascript">
+
+	$(function() {
+
+		var qrcode = new QRCode("qrcode", {
+				    text: 'http://beltandroad.zaobao.com/beltandroad/news/story20181230-919664',
+				    width: 200,
+				    height: 200,
+				    colorDark : "#000000",
+				    colorLight : "#ffffff",
+				    correctLevel : QRCode.CorrectLevel.H
+				});
+
+
+
+		$('.btn-wechat').tooltipster({
+			content: 'Loading...',
+			updateAnimation: false,
+			trigger: 'click',
+			contentAsHTML: true,
+			theme: 'tooltipster-shadow',
+			functionBefore: function(origin, continueTooltip) {
+				continueTooltip();
+				
+				
+				var newContent = $('#qrcode img').attr('src');
+				
+
+				origin.tooltipster('content', '<p class="tooltipster-text-bold">分享到微信朋友圈</p><img src="' + newContent + '"><p class="tooltipster-text">打开微信，点击底部的“发现”，<br/>使用“扫一扫”即可将网页分享至朋友圈。</p>');
+			}
+		});
+	});
+
+
+
+</script>
+<aside class="social-btns">
+  <div class="addtoany a2a_kit a2a_kit_size_32 a2a_default_style"  ng-controller="SharingController"
+  title='' image='http://beltandroad.zaobao.com/sites/default/files/styles/politics_large/public/images/201812/20181230/20181230_news_agriculture.jpg?itok=D2kIcR5L' description='' url='http://beltandroad.zaobao.com/beltandroad/news/story20181230-919664' >  
+    <a class="a2a_button_facebook"></a>
+	<a class="a2a_button_twitter"></a>
+	 <a class="a2a_button_sina_weibo"></a>
+	<a class="a2a_button_email"></a>
+	<a class="a2a_button_whatsapp"></a>
+  </div>
+  <a class="fa fa-weixin btn-wechat"></a>
+  <a href="#disqus-comments" class="fa fa-comment btn-comment page-scroll"></a>
+</aside>
+<div id="qrcode" style="display:none !important;"></div>
+
+
+						<!-- ### Social network sharing - START ### -->
+
+												
+												<!-- ### Photo Gallery - START ### -->
+						<div class="media-holder">
+							<div id="photo-gallery" class="owl-carousel">
+																<div class="item col-md-12">
+									<img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_full/public/images/201812/20181230/20181230_news_agriculture.jpg?itok=903L6GM9" src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_full/public/images/201812/20181230/20181230_news_agriculture.jpg?itok=903L6GM9" />
+									<figcaption>美中贸易战导致两败俱伤，经济学家指贸易战今年让美中都受损，不仅汽车和科技等行业受打击，农业更是首当其冲。（网络照）</figcaption>								</div>
+															</div>
+						</div>
+						<!-- ### Photo Gallery - END ### -->
+						
+						<!-- Article body - START ## -->
+						<div id="article-body">
+						<p>（芝加哥综合电）美中贸易战导致两败俱伤，经济学家指贸易战今年让美中都受损，不仅汽车和科技等行业受打击，农业更是首当其冲。</p>
+
+<p>美国普渡大学农业经济学家泰纳说，单是中国对美国大豆、玉米、小麦和高粱征收关税的举措，就可能造成两国经济一年各损失约29亿美元（约39.6亿新元）。</p>
+
+<p>这些损失可能促使美国总统特朗普和中国国家主席习近平争取在3月2日的最后期限前解决贸易争端，但两国的谈判还是有破裂的可能性。</p>
+
+<p>中国是世界上最大的大豆进口国。自今年7月贸易战开打后，中国所需大豆大多改从巴西进口，而这造成巴西大豆期货价格在芝加哥期货交易所创新高。这一例子显示贸易战不仅令美国出口商的销售业绩下跌，也导致中国进口商成本上涨。泰纳说：&ldquo;这对美国和中国而言是双输局面。&rdquo;</p>
+
+<p>根据美国农业部数据，今年前十个月，美国对华农产品出口总额同比下降42%，至83亿美元左右。</p>
+
+<p>在北达科他，农民工会会长瓦特内指出，中国加征关税导致当地大豆种植户损失至少2.8亿美元。</p>
+
+<p>他说：&ldquo;损失金额还可再加上近1亿美元，因为所有的大宗商品价格都下跌了，而这间接影响了北达科他农民。&rdquo;</p>
+
+<p>为了补偿农民的损失，美国政府拨款110亿美元，直接补贴农民或向农民购买农产品。</p>
+
+<p>另一方面，中国的大豆加工厂赶在关税上调前购买大豆，他们的供应因此过多，降低了加工利润率。这也使豆粕制造商今年夏季减少生产作为牲畜饲料的豆粕，减幅是多年来最大的。</p>
+
+<p>除了农业之外，美中其他经济领域也受影响。中国的手机电池等产品受到美国关税的打击，其原有的美国顾客改而从其他国家进口这类产品。</p>
+
+<p>美国消费技术协会委托进行的一项研究显示，美国对中国进口货征收的关税，每月给科技行业造成额外10亿美元的损失。</p>
+
+<p>贸易战还挤压了美国零售业、制造业和建筑业的利润率，因为这些行业内的公司不得不以更高的价格购买金属和其他商品。</p>
+
+<p>美国底特律三大汽车制造商&mdash;&mdash;通用汽车、福特汽车以及菲亚特克莱斯勒汽车分别表示，更高的关税成本将导致他们今年的利润减少约10亿美元。福特和菲亚特预计2019年车商的受创程度大致上与今年不相上下。</p>
+						</div>
+						<!-- Article body - END ## -->
+
+						
+					</div>
+				</article>
+				<!-- ### Content - END ### -->
+
+				<!-- ### Comments - START ### -->
+								<!-- ### Comments - END ### -->
+
+				<!-- ### Prev/Next article - START ### -->
+				<section class="row" id="page-toggle"></section>
+<script>
+var nid = "919664";var date = "20181230";var path = "/beltandroad/news/story20181230-919664";  jQuery(document).ready(function () {
+    jQuery.ajax({
+      dataType: "json",
+      async: false,
+      type: "GET",
+      url: "/story/next/?nid="+nid+"&date="+date+"&path="+path,
+      cache: true,
+      data: { },
+      success: function(data) {
+        if (data) {
+          //jQuery("body").append("<div class=\"leftRightNav\" id=\"leftRightNav\"></div>");
+          //jQuery("#home-main .content-wrapper").append("<div class=\"row\" id=\"page-toggle\"></div>");
+          if(data.previous){ 
+            jQuery("#page-toggle").append(data.previous.bottom);
+          }
+          if(data.next){ 
+           jQuery("#page-toggle").append(data.next.bottom);
+            
+             
+            }
+        }
+      }
+    });
+  })
+</script>
+
+
+
+				<!-- ### Prev/Next article - END ### -->
+
+				<!-- ### Related article - START ### -->
+								<section class="row" id="watch-me">
+					<h3>相关文章</h3>
+					<div id="relatedNews" class="owl-carousel list-thumbs">
+	<!--<div class="">-->
+	    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181225/92304970.jpg?itok=PjcETf4e" /></span>
+			<span class="title">财政部明年起降低700余种商品进口关税</span>
+		</a>
+	</div>
+    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181220/file6uebdcrbtq11mgps04ek.jpg?itok=_S_AwXfc" /></span>
+			<span class="title">双方“战停”后 中国第二轮采购美国大豆</span>
+		</a>
+	</div>
+    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181218/caijin_1712_new.pdf_.jpg?itok=rjlskHeF" /></span>
+			<span class="title">经济师：中美贸易谈判若失败 新加坡香港受影响最大</span>
+		</a>
+	</div>
+    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181218/zb_1218_cj_doc738cz9k7anb12aljxedc_17201649_loohh.jpg?itok=UbyfvLPu" /></span>
+			<span class="title">大坝长6500米 中国为柬埔寨建最大水电站竣工投产</span>
+		</a>
+	</div>
+    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181215/v2-a2037d955d46130902a5fdb5549131c1_1200x500.jpg?itok=8bHqEyjh" /></span>
+			<span class="title">两地签署《协议》：明年1月起 港产货物进口大陆享零关税</span>
+		</a>
+	</div>
+    	<div class="item">
+		<a href="/" target="_blank">
+						<span class="tn"><img data-src="http://beltandroad.zaobao.com/sites/default/files/styles/bnr_article_related/public/images/201812/20181214/6p0a8675_0.jpg?itok=3nXkkEaa" /></span>
+			<span class="title">野村预测 新加坡明年经济增长将放缓至2.5％</span>
+		</a>
+	</div>
+	
+	<!--</div>-->
+						</div>
+				</section>
+				<!-- ### Related news - END ### -->
+			</div>
+
+			<!-- ### Sidebar - START ### -->
+			<div class="col-md-4 col-sm-5" id="sidebar">
+        		
+
+<div class="freeform">
+<div class="row" id="event-list">
+<h2>活动看板</h2>
+
+<div class="collapse-group">
+<ul class="event-items">
+	<li>2019年4月<br />
+	<span class="desc">&ldquo;一带一路&rdquo;国际合作高峰论坛</span></li>
+</ul>
+<a class="btn" href="http://beltandroad.zaobao.com/beltandroad/events"><span class="btn-text">更多活动</span></a></div>
+</div>
+</div>
+        <style>#success-newsletter, #error-newsletter, #reset-btn, .loader{display:none;} #reset-btn{color:#fff;cursor: pointer;}
+.loader{font-size:20px;text-indent:-9999em;overflow:hidden;width:1em;height:1em;border-radius:50%;margin:72px auto;position:relative;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load6 1.7s infinite ease;animation:load6 1.7s infinite ease}@-webkit-keyframes load6{0%{-webkit-transform:rotate(0);transform:rotate(0);box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}5%,95%{box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}10%,59%{box-shadow:0 -.83em 0 -.4em #fff,-.087em -.825em 0 -.42em #fff,-.173em -.812em 0 -.44em #fff,-.256em -.789em 0 -.46em #fff,-.297em -.775em 0 -.477em #fff}20%{box-shadow:0 -.83em 0 -.4em #fff,-.338em -.758em 0 -.42em #fff,-.555em -.617em 0 -.44em #fff,-.671em -.488em 0 -.46em #fff,-.749em -.34em 0 -.477em #fff}38%{box-shadow:0 -.83em 0 -.4em #fff,-.377em -.74em 0 -.42em #fff,-.645em -.522em 0 -.44em #fff,-.775em -.297em 0 -.46em #fff,-.82em -.09em 0 -.477em #fff}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}}@keyframes load6{0%{-webkit-transform:rotate(0);transform:rotate(0);box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}5%,95%{box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}10%,59%{box-shadow:0 -.83em 0 -.4em #fff,-.087em -.825em 0 -.42em #fff,-.173em -.812em 0 -.44em #fff,-.256em -.789em 0 -.46em #fff,-.297em -.775em 0 -.477em #fff}20%{box-shadow:0 -.83em 0 -.4em #fff,-.338em -.758em 0 -.42em #fff,-.555em -.617em 0 -.44em #fff,-.671em -.488em 0 -.46em #fff,-.749em -.34em 0 -.477em #fff}38%{box-shadow:0 -.83em 0 -.4em #fff,-.377em -.74em 0 -.42em #fff,-.645em -.522em 0 -.44em #fff,-.775em -.297em 0 -.46em #fff,-.82em -.09em 0 -.477em #fff}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);box-shadow:0 -.83em 0 -.4em #fff,0 -.83em 0 -.42em #fff,0 -.83em 0 -.44em #fff,0 -.83em 0 -.46em #fff,0 -.83em 0 -.477em #fff}}
+</style>
+<script type="text/javascript" src="/sites/all/themes/ZB2013/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/ZB2013/js/jquery.form.js"></script>
+<div class="freeform">
+	<div id="newsletter">
+		<h3>加入订阅名单<!--em>Get Daily Updates</em--></h3>
+		<div id="success-newsletter" class="tap-html"><p>Thank you for signing up!</p></div>
+		<div id="error-newsletter" class="tap-html"><p>Opps something went wrong, Please refresh the form!</p></div>
+		<div class="loader">Loading...</div>
+		<a id="reset-btn" href="javascript:;" onclick="javascript: formreset();"><i class="fa fa-refresh"></i></a>
+		<form class="fancy-form" id="subscribe" name="subscribe" method="post">
+			<div class="tap-html" title="姓名"><input type="text" required="required" placeholder="姓名" id="name" name="name" title="姓名" /></div>
+			<div class="tap-html" title="电邮"><input type="text" required="required" class="inline" placeholder="电邮" id="email" name="email"></div>
+			<button class="btn inline submit-btn" type="submit"><i class="fa fa-check"></i></button>
+			<input type="hidden" name="promo_code" id="promo_code" value=""/>
+ 			<input type="hidden" name="csrf_token" id="csrf_token" value="I9kIw+EFyYHRLS5mpeUvYehKTHErQP2tnp5WdwtETxk="/>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	function formreset(){
+
+	 	$('#subscribe').find("input[type=text], textarea").val("");
+	 	$('#subscribe').show();
+	 	$('#success-newsletter, #reset-btn').hide();
+
+	 }
+
+	$(function() {
+
+	  $('#subscribe').validate({
+	    rules: {
+	      name: {
+	          required: true },
+	      email: {
+	          required: true,
+	          email: true }
+	    },
+	    messages: {
+	      name: {
+	      required: "名字是必需的"
+	      },
+	      email: {
+	      required: "电子邮件是必需的",
+	      email : "请输入一个有效的电子邮件."
+	      }
+	    },
+	    submitHandler: function(form) {
+	     	$(".loader").show();
+	      	 $('#subscribe').hide();
+	      $(form).ajaxSubmit({
+	        type:"POST",
+	        data: $(form).serialize(),
+	        url:"/zbnewsletter/subscribe_simple/beltandroad",
+	        success: function(data) {
+	          $('#success-newsletter, #reset-btn').fadeIn();
+	          $(".loader").hide();
+	        },
+	        error: function() {
+	          $('#error-newsletter, #reset-btn').fadeIn();
+	          $(".loader").hide();
+	        }
+	      });
+	    }
+	  });
+	});
+</script>
+        <div class="freeform">
+	<div id="imu">
+	    						<!-- Start of Ad Type initialization -->
+						 <!-- adtag_tid:19059 | page_type:Index | ad_type:ads--imu01 -->						<!-- End of Ad Type initialization -->	
+		
+	    											<script src="//adtag.sphdigital.com/tag/zaobaosg/js/zbsg_beltandroad_imu1.js" type="text/javascript"></script>							
+		
+	   </div>
+</div>
+        <div id="ajax_ati_mostread_bnr" ></div>
+<script>
+jQuery(document).ready(function($) {	
+	$.ajax({
+        type: 'GET',
+		url: document.location.protocol + "//beltandroad.zaobao.com/ajax-call/ati-mostread/beltandroad",
+        dataType:'html',
+        cache:true,
+		async: true,
+        beforeSend:function(){},
+        success:function(data){
+			if(data != "")
+			{	
+				toBeAppendded = data;
+				$('#ajax_ati_mostread_bnr').html(toBeAppendded);
+				
+				/* Show/Hide admin controls */
+					$('.admin_title_tooltip').on('mouseover', function(){
+						$('.admin_title_controls').hide();
+						$(this).find('.admin_title_controls').show();
+					});
+
+					$('.admin_title_tooltip').on('mouseleave', function(){
+						$(this).find('.admin_title_controls').hide();
+					});
+					
+					$('.admin_block_tooltip').on('mouseover', function(){
+						$('.admin_block_controls').hide();
+						$(this).find('.admin_block_controls').show();
+					});
+
+					$('.admin_block_tooltip').on('mouseleave', function(){
+						$(this).find('.admin_block_controls').hide();
+					});
+					
+					$('.admin_float_tooltip').on('mouseover', function(){
+						$('.admin_float_controls').hide();
+						$(this).find('.admin_float_controls').show();
+					});
+
+					$('.admin_float_tooltip').on('mouseleave', function(){
+						$(this).find('.admin_float_controls').hide();
+					});
+			}
+        },
+        complete:function(){
+        	
+		},
+		error:function(xhr, status, error){
+		}
+	});	
+});
+</script>			</div>
+			<!-- ### Sidebar - END ### -->
+		</div>
+	</div>
+</div>
+
+<!-- ### Footer - START ### -->
+
+<footer><div class="container">
+	<div class="row" id="partner">
+		<div class="col-md-12">
+			<span><b>联合早报</b>   <b>新加坡工商联合总会</b><br />联合呈献</span><a href="//zaobao.com/" target="_blank" class="credit-zaobao"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/logo-zaobao.svg" border="0" /></a><a href="//www.sbf.org.sg/" target="_blank" class="credit-sbf-2018"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/logo-sbf-2018.svg" border="0"/></a>
+		</div>
+	</div>
+	
+<style>
+footer #sponsor2017 .box-me img.logo-perennial,footer #sponsor2017 .box-me img.logo-abc{width:70%;}
+</style>
+	
+  <div class="row" id="sponsor2017">
+    <h4>赞助商家</h4>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.sg.abchina.com/cn/default.htm" target="_blank"><img class="logo-abc" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-agricultural-bank-of-china.png" title="Agricultural Bank of China"></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.bankofchina.com/en/index.html" target="_blank"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-bank-of-china-2017.png" title="Bank of China" class="logo-bank-of-china-2017" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.sg.cntaiping.com/" target="_blank"><img class="logo-china-taiping-2017" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-china-taiping-2017.png" title="China Taiping Insurance" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.dbs.com.sg/corporate/default.page" target="_blank"><img class="logo-dbs" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-dbs.png" title="DBS" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.icbc.com.sg/" target="_blank"><img class="logo-icbc" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-icbc.png" title="Industrial and Commercial Bank of China" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.lionhub.com.au/" target="_blank"><img class="logo-lion-hub" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-lion-hub.png" title="Lian Huat (LionHub)" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.perennialrealestate.com.sg/cn/home.html" target="_blank"><img class="logo-perennial" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-perennial.svg" title="Perennial" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.pilship.com/en-pil-pacific-international-lines/1.html" target="_blank"><img class="logo-pil" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-pil-2017.png" title="Pacific International Lines" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.globalpsa.com/" target="_blank"><img class="logo-psa" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-psa.png" title="PSA" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.spdb.com.cn/" target="_blank"><img src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-spd-bank.png" title="SPD Bank" class="logo-spd-bank" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.uob.com.sg/corporate/FDI/zh/index.html?ms=zaobao&mt=button&s_cid=cn-button-main_uob_logo-zaobao--not+paid+search-fdi+advisory&utm_source=zaobao&utm_medium=button&utm_campaign=&utm_content=FDI+Advisory%3Ecn%3Emain_uob_logo&utm_term=not+paid+search " target="_blank"><img class="logo-uob" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-uob.png" title="United Overseas Bank" /></a></div>
+    <div class="col-md-3 col-sm-4 col-xs-6 box-me"><a href="//www.yanlordland.com/" target="_blank"><img class="logo-yanlord" src="/sites/all/themes/BELTANDROAD/assets/imgs/sponsor/logo-yanlord.png" title="Yanlord Land Group Limited" /></a></div>
+
+  </div>
+
+	<div class="row" id="zb-contact">
+		<div class="col-md-3 col-sm-6 contact-list">
+			<b>新加坡报业控股总机</b>63196319
+		</div>
+		<div class="col-md-2 col-sm-6 contact-list">
+			<b>订阅热线</b>63883838
+		</div>
+		<div class="col-md-2 col-sm-6 contact-list">
+			<b>早报网广告联系</b>63192036
+		</div>
+		<div class="col-md-2 col-sm-6 contact-list">
+			<b>早报新闻热线</b>1800-7418383
+		</div>
+		<div class="col-md-3 col-sm-6 contact-list">
+			<b>一带一路”专网电邮</b><a href="mailto:zaobaobeltandroad@gmail.com" target="_blank">zaobaobeltandroad@gmail.com</a>
+		</div>
+	</div>
+	<div class="row" id="copyright">
+		<div class="col-md-12">
+			<span class="copyright">新加坡报业控股版权所有<br />（公司登记号：198402868E）</span>
+		</div>
+	</div>
+
+</div></footer>
+
+
+<div id="search">
+	<div class="container">
+		<button type="button" class="close">&#9587;</button>
+		<form id="bnr_search" action="/search/beltandroad" method="post" accept-charset="utf-8">
+			<input type="search" id="searchTextBox" name="keys" placeholder="想找些什么?" /><button type="submit" class="btn fa fa-search"></button>
+		</form>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/wow.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/owl-carousel/owl.carousel.js"></script>
+<!--<script type="text/javascript" src="//lib/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>-->
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/tooltipster/tooltip-viewport.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/tooltipster/scripts.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/tooltipster/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/wow-script.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/scrolling-nav.js"></script>
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/main.js?v=1.2.4"></script>
+
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/qrcode.min.js"></script>
+
+<!-- MOVIDEO -->
+<script type="text/javascript" src="/sites/all/themes/BELTANDROAD/assets/js/jqueryui/1.8.2/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="//static.movideo.com/js/movideo.min.latest.js"></script> -->
+<!-- <script type="text/javascript" src="//static.movideo.com/js-ui/movideo.ui.min.latest.js"></script> -->
+
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- ### Footer - END ### -->
+
+  <script type="text/javascript" src="/sites/default/files/advagg_js/js__MzdM-QUxs_Pcf1ZqqG5-9G-GqoiQ24m9Q6izNsfL4EM__beUvrOdY2kWhqWCKD19Az7Ze6WoKIErtF59-w35O_cM__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js" async="async"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__bViWhUebjeLEtZHLFlNw2VCoGL3DRdULWZ79AYKUZMI__O4A57Sv5pz88_XnltO_gB5wHXvKWgKesy_ZA-iNCclg__BAS08Q7OBoKTmk34GWiesKveqVW25Fs-OFiObNJT4wk.js" async="async"></script>
+  <div id="ati_dataset_xparams"
+    data-x1="贸易战两败俱伤 美中料各损失数十亿美元"
+	data-x2="http://beltandroad.zaobao.com/beltandroad/news/story20181230-919664"
+	data-x3="1"
+	data-x4="1"
+	data-x5=""
+	data-x6="1"
+	data-x7="1"
+></div>
+<div id="ati_dataset"
+    data-xtn2="36"
+    data-xtpage=""
+    data-multc="&x1=%E8%B4%B8%E6%98%93%E6%88%98%E4%B8%A4%E8%B4%A5%E4%BF%B1%E4%BC%A4+%E7%BE%8E%E4%B8%AD%E6%96%99%E5%90%84%E6%8D%9F%E5%A4%B1%E6%95%B0%E5%8D%81%E4%BA%BF%E7%BE%8E%E5%85%83&x2=http%3A%2F%2Fbeltandroad.zaobao.com%2Fbeltandroad%2Fnews%2Fstory20181230-919664&x3=1&x4=1&x5=&x6=1&x7=1"
+	data-lvl2name="beltandroad"
+    data-xt_at=""
+	data-mtcl=""
+	data-npg="1"
+	data-chapter="新闻与分析"
+    data-pagetitle="贸易战两败俱伤 美中料各损失数十亿美元"
+></div>
+
+<script>
+	$("#bnr_search").submit(function( event ) {
+		//get the search term
+		//$search_term = $('#searchTextBox').attr('placeholder');
+		$search_term = $("#searchTextBox").val();
+		console.log('search term:' + $("#searchTextBox").val());
+		$('#bnr_search')[0].setAttribute('action', '/search/beltandroad/' + $search_term);
+	});
+</script>
+
+<script type="text/javascript">
+var ati = document.getElementById('ati_dataset');
+var atix = document.getElementById('ati_dataset_xparams');
+var userID = "";
+var atiSmartTag = new ATInternet.Tracker.Tag();
+
+atiSmartTag.page.set({
+    name: ati.getAttribute('data-pagetitle'),
+    level2: ati.getAttribute('data-xtn2')
+});
+if( ati.getAttribute('data-chapter') != "" ) {
+  atiSmartTag.page.set({
+    chapter1: ati.getAttribute('data-chapter')
+  });
+}
+
+atiSmartTag.customVars.set({
+  site: {
+    1: atix.getAttribute('data-x1'),
+    2: atix.getAttribute('data-x2'),
+    3: atix.getAttribute('data-x3'),
+    4: atix.getAttribute('data-x4'),
+    5: atix.getAttribute('data-x5'),
+    6: atix.getAttribute('data-x6'),
+    7: atix.getAttribute('data-x7'),
+  }
+});
+
+
+atiSmartTag.dispatch();
+</script>
+
+<script type="text/javascript">
+// LOAD MORE PAGINATION
+var currentURL = window.location.href;
+(function($) {
+  Drupal.behaviors.loadMore = {
+    attach: function(context, settings) {
+      $('li.pager-next a').on('click', function() {
+        var href = $(this).attr('href');
+        var pageNo = href.split("=");
+		//console.log(context);
+        atiSmartTag.click.send({elem:$('li.pager-next a'), name:ati.getAttribute('data-pagetitle')+"::page::"+pageNo, level2:ati.getAttribute('data-xtn2'), type:'action'});			
+	});
+    }
+  };
+})(jQuery);
+</script>
+
+<script type="text/javascript">
+/*
+$(document).ready(function() {
+var owl = $("#splash");
+$("#splash").owlCarousel({
+  items:3,
+  loop:true,
+  lazyLoad:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:1
+    },
+    1000:{
+      items:1
+    }
+}
+
+});
+
+$("#CarouselVideo").owlCarousel({
+  loop:false,
+  lazyLoad:false,
+  responsive:{
+  0:{
+    items:1
+  },
+  600:{
+    items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+
+});
+
+$("#relatedNews").owlCarousel({
+  loop:false,
+  lazyLoad:false,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:2
+    },
+    1000:{
+      items:3
+    }
+  },
+
+});
+
+
+
+$("#relatedNews").on("refreshed.owl.carousel", function(event) {
+ var items = event.item.count;
+console.log(items);
+    var $owlControls = $('div.owl-controls');
+    items <= 3 ? $owlControls.hide() : $owlControls.show();
+
+});
+
+
+
+$("#photo-gallery").owlCarousel({
+  items:1,
+  loop:false,
+  lazyLoad:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:1
+    },
+    1000:{
+      items:1
+    }
+  }
+});
+
+
+$("#photo-gallery").find(".owl-controls").prependTo("#photo-gallery");
+
+if( ($("#splash").find(".owl-stage-outer").find(".owl-item").length) <= 1 ) {
+    $("#splash").find(".owl-controls").hide();
+}
+
+if( ($("#photo-gallery").find(".owl-stage-outer").find(".owl-item").length) <= 1 ) {
+    $("#photo-gallery").find(".owl-controls").hide();
+}
+
+if( ($("#relatedNews").find(".owl-stage-outer").find(".owl-item").length) <= 3 ) {
+    $("#relatedNews").find(".owl-controls").hide();
+}
+
+if( ($("#CarouselVideo").find(".owl-stage-outer").find(".owl-item").length) <= 2 ) {
+    $("#CarouselVideo").find(".owl-controls").hide();
+}
+
+
+
+$("#CarouselVideo").on("translated.owl.carousel", function(event) {
+    var owl_label_active = $(this).find('.owl-stage-outer').find('.active').find('.title').text();
+    atiSmartTag.click.send({elem:this, chapter1:ati.getAttribute('data-chapter'), name:owl_label_active, level2:ati.getAttribute('data-xtn2'), type:'action'});
+});
+
+$("#splash").on("translated.owl.carousel", function(event) {
+    atiSmartTag.click.send({elem:this, chapter1:ati.getAttribute('data-chapter'), name:$(this).find('.active').find('figcaption').text(), level2:ati.getAttribute('data-xtn2'), type:'action'});
+});
+
+$("#photo-gallery").on("translated.owl.carousel", function(event) {
+    atiSmartTag.click.send({elem:this, chapter1:ati.getAttribute('data-chapter'), name:$(this).find('.active').find('figcaption').text(), level2:ati.getAttribute('data-xtn2'), type:'action'});
+});
+
+$("#relatedNews").on("translated.owl.carousel", function(event) {
+    var owl_label_active = $(this).find('.owl-stage-outer').find('.active').find('.title').text();
+    atiSmartTag.click.send({elem:this, chapter1:ati.getAttribute('data-chapter'), name:owl_label_active, level2:ati.getAttribute('data-xtn2'), type:'action'});
+});
+
+
+
+$("ul#social-channels li").click(function(event){
+    atiSmartTag.click.send({elem:this, chapter1:ati.getAttribute('data-chapter'), name:"socialmediaheader-"+$(this).find("a").attr("href"), level2:ati.getAttribute('data-xtn2'), type:'exit'});
+});
+
+});
+
+function htmlEscape(str) {
+    return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
+// social media sharing 
+// code is here
+
+*/
+$(document).ready(function() {
+	$("ul#social-channels li").click(function(event){
+		atiSmartTag.click.send({elem:this, name:ati.getAttribute('data-pagetitle')+"::socialmediaheader-"+$(this).find("a").attr("href"), level2:ati.getAttribute('data-xtn2'), type:'exit'});
+	});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f768372e0","applicationID":"36495581","transactionName":"NFRQMEZXDBBVAkZYWg0ecwdAXw0NGwVBblAbRUAFR2kMDFAEbUFUBFRtEl1TFQ==","queueTime":0,"applicationTime":584,"atts":"GBNTRg5NHx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

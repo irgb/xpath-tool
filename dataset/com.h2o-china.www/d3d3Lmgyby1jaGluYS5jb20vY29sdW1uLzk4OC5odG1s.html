@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>一条河的故事-专栏-中国水网</title>
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<link href="/css/public.css" rel="stylesheet" type="text/css">
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/txteditor.css" rel="stylesheet" type="text/css">
+<link href="/css/footer.css" rel="stylesheet" type="text/css">
+
+<link href="/css/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet" />
+<link href="css/column.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery/1.11.1/jquery.min.js" ></script><link rel="stylesheet" href="/js/artdialogv602/ui-dialog.css">
+<script src="/js/artdialogv602/dialog-plus.js"></script><script type="text/javascript" src="/js/jquery.newsshare.js"></script>
+<script src="/js/jquery.form.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/news.comment.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+    $('.share').info_share();
+    $(".mshare").mshare();
+});
+</script>
+</head>
+
+<body>
+<header id="header2">
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+<div id="topNav">
+    <div class="topBar">
+        <ul class="topColumn">
+            <li><a href="/">水网首页</a></li>
+            <li><a href="/news/">新闻</a></li>
+            <li><a href="/column/index">专栏</a></li>
+            <li><a href="/topic/">专题</a></li>
+            <li><a href="/video/">视频</a></li>
+            <li><a href="/research/">研究院</a></li>
+            <li><a href="/ipo/">上市公司</a></li>
+            <li><a href="/policy/">政策</a></li>
+            <li><a href="/law/">法规</a></li>
+            <li><a href="/paper/">论文</a></li>
+            <li><a href="/standard/">标准</a></li>
+            <li><a href="/expert/">专家</a></li>
+            <li><a href="/show/">会展</a></li>
+            <li><a href="/price/">水价</a></li>
+            <li><a href="http://bbs.h2o-china.com" target="_blank">BBS</a></li>
+            <li><a href="http://shui.tsinghuan.com/shop" target="_blank">企业</a></li>
+            <li><a href="http://shui.tsinghuan.com/wiki" target="_blank">案例</a></li>
+        </ul>
+        <div class="moreColumn"><span>更多</span>
+            <ul>
+                <li><a href="http://shui.tsinghuan.com/product" target="_blank">设备</a></li>
+                <li><a href="http://shui.tsinghuan.com/technology" target="_blank">技术</a></li>
+                <li><a href="http://shui.tsinghuan.com/zbinfo" target="_blank">招标</a></li>
+                <li><a href="http://www.qinghuan.com/job//" target="_blank">人才</a></li>
+                <li><a href="http://wn.h2o-china.com/" target="_blank">污泥联盟</a></li>
+                <li><a href="http://gs.h2o-china.com/" target="_blank">供水联盟</a></li>
+            </ul>
+        </div>
+        <div class="login">
+
+            <script type="text/javascript">
+document.write('<a href="http://www.qinghuan.com/member/login.php" >登录</a><a href="http://www.qinghuan.com/member/register.php" >注册</a><a href="http://www.qinghuan.com/member/" >会员中心</a>');
+
+
+                $(document).ready(function () {
+                    var model = 'column';
+                    var stype = '';
+                    var model_text = '';
+
+                    if (model == 'news')
+                        model_text = '新闻';
+                    else if (model == 'topic')
+                        model_text = '专题';
+                    else if (model == 'policy')
+                        model_text = '政策';
+                    else if (model == 'law')
+                        model_text = '法规';
+                    else if (model == 'standard')
+                        model_text = '标准';
+                    else if (model == 'paper')
+                        model_text = '论文';
+                    else if (model == 'expert')
+                        model_text = '专家';
+                    else if (model == 'research')
+                        model_text = '研究';
+                    else if (model == 'show')
+                        model_text = '会展';
+                    else if (model == 'bbs')
+                        model_text = 'BBS';
+                    else if (model == 'video')
+                        model_text = '视频';
+                    else  model_text = '新闻';
+
+                    if (stype == 'author') {
+                        model_text = '作者';
+                    }
+
+                    $('#fancyshow').text(model_text);
+
+                    $('#fancy').find('a').bind('click', function () {
+
+                        var text = $(this).text();
+                        $('#fancyshow').text(text);
+
+                        $('#searchform').attr('action', $(this).attr('title'));
+
+                    });
+
+                    $('#fancy>li>a').each(function (i) {
+                        if ($(this).text() == model_text) {
+                            $('#searchform').attr('action', $(this).attr('title'));
+                        }
+                    });
+
+
+                    $('#submitBtn').bind('click', function () {
+                        //
+                        if ($('#fancyshow').text() == 'BBS') {
+                            var schv = $('#schv').val();
+                            var schv = encodeURIComponent(schv);
+                            location.href = "http://www.baidu.com/s?ie=gbk&site=1&wd=site%3Abbs.h2o-china.com+" + schv + "&q=" + schv + "&sa=true";
+
+                            return false;
+                        }
+
+                        $('#searchform').submit();
+
+                    });
+
+
+                });
+
+            </script>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 这里怎么没法注释 -->
+
+<style>
+    #topADExt {
+        margin: 10px auto;
+        width: 1000px;
+    }
+
+</style>
+<!--  banner广告start -->
+<div id="topADExt">
+    <script language="javascript" src="/ggclick?id=62"></script>
+</div>
+
+
+<div id="branding">
+    <div class="logo">
+                <a href="/"><img src="/images/header/logo2.jpg" alt="中国水网" title="返回水网首页"></a>
+                        <a href="/column/"><img src="/column/images/channel_logo.jpg"></a>
+        
+    </div>
+    <form id="searchform" name="searchform" method="get" action="#" class="ssForm mt20">
+        <div class="ss_nav_boxa"><a id="fancyshow" href="javascript:void(0);" class="a1">新闻</a>
+            <ul id="fancy" class="ss_nav_ul">
+                <li><a href="javascript:void(0);" title="/news/search">新闻</a></li>
+                <li><a href="javascript:void(0);" title="/video/search">视频</a></li>
+                <li><a href="javascript:void(0);" title="/policy/search">政策</a></li>
+                <li><a href="javascript:void(0);" title="/law/search">法规</a></li>
+                <li><a href="javascript:void(0);" title="/standard/search">标准</a></li>
+                <li><a href="javascript:void(0);" title="/paper/search">论文</a></li>
+                <li><a href="javascript:void(0);" title="/expert/search">专家</a></li>
+                <li><a href="javascript:void(0);" title="/research">研究</a></li>
+                <li><a href="javascript:void(0);" title="/show/search">会展</a></li>
+                <li><a href="javascript:void(0);" title="/topic/list">专题</a></li>
+                <li><a href="javascript:void(0);" title="bbs">BBS</a></li>
+                <li><a href="javascript:void(0);" title="/news/search" data-type="author">作者</a></li>
+            </ul>
+            <input id="schtype" name="stype" value="title" type="hidden">
+        </div>
+        <p class="fl">
+            <input id="schv" name="schv" class="ss_nav_text w180" type="text" value="">
+        </p>
+        <p class="fr">
+            <input id="submitBtn" name="submitBtn" class="ss_nav_btn" type="button">
+        </p>
+    </form>
+</div>
+    <div id="location" class="zoom">
+        <div class="fl"><a href="/"><i class="fa fa-home"></i>首页</a> <span>&gt;</span> <a href="/column/index">专栏</a> <span>&gt;</span> 正文</div>
+    </div>
+</header>
+
+
+<div class="news_main w1000 bc zoom mt20">
+    <div class="w690 fl">
+        <div class="newscontent_press">
+            <h1 class="tc">一条河的故事</h1>
+            <div class="mt25 newscontent_press_con">
+                <p class="fl">时间：2018-12-28 15:11</p>
+                                <p class="fl ml40">作者：全新丽</p>
+                <div class="share_btn"><span class="fl">分享</span><em class="icons1 fr"></em>
+                    <div class="clear"></div>
+                    <div class="share" url="http://www.h2o-china.com/column/988.html" title="一条河的故事">
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="f14 l24 news_content mt25 zoom" id="txtedit">
+            <p style="text-indent: 2em;">每个人的故乡大概都有一条河吧，这条河是一个村子、一个乡镇、一个街区、一个县城、一座城市的母亲河。这条河不是长江、黄河、淮河这样的大江大河，更可能是一条算不上雄伟壮阔的普通河流。</p><p style="text-indent: 2em;">与我们生活的城市相比较而言，如果城市像一个人，那么，这条河则像是一条静脉血管。</p><p style="text-indent: 2em;">这条河里有我们的童年记忆。它曾经很美。</p><p style="text-indent: 2em;">春天，两岸花开，解冻的河流哗哗东去。春江水暖鸭先知，河最先把春的消息告诉了小鸭们。</p><p style="text-indent: 2em;">夏天，河水清澈，鱼游虾戏，大人们或者捞鱼捕虾，或者在河边洗衣服，放学的孩子们则会到河里游泳嬉戏。明月的夜晚，人们一边在岸边纳凉，一边听着蛙鸣声声。</p><p style="text-indent: 2em;">秋天，水边岸上的果实成熟了，或者能吃或者能入药，还有美丽的芦苇和菖蒲，在风中飘摇。</p><p style="text-indent: 2em;">冬天，大地一片白茫茫，我们的小小河流也结冰了，大人孩子在冻得结实的冰面上滑冰，还有人凿开一个冰洞钓鱼。</p><p style="text-indent: 2em;">这是河流在我们眼里的模样。</p><p style="text-indent: 2em;">在大人眼里，可能没那么多诗情画意，但是有了它：夏天来了洪水不怕，它可以泄洪;远处的村庄里，干旱了不怕，种植的庄稼有了灌溉之水。</p><p style="text-indent: 2em;">一年一年过去，城市的面貌发生了很大改变。一座座高楼拔地而起，道路开始变得平坦宽阔。</p><p style="text-indent: 2em;">因为城市建设，我们的这条河，它的河道被改道了，从前的河道已成健身广场。</p><p style="text-indent: 2em;">城市继续飞速发展，一些工厂建起来了。一开始，大家都没注意到，这些工厂将污水排到河里。我们的河流变成了沿岸纳污接垢的河流。</p><p style="text-indent: 2em;">在稍远一些的地方，有一个湖泊，它曾经和我们的河流一脉相承。但是，随着城市的大力开发，这个湖泊截断了外排之水。河，成了无源之水，彻底沦落为城市下水道。</p><p style="text-indent: 2em;">河流逐渐变得身体弱小，遍体鳞伤，最可怕的是还飘满了垃圾，散发着恶臭。以前大家叫它母亲河，现在，<a href="http://www.h2o-china.com/news/field?fid=72" target="_blank" title="黑臭水体" class="keylink">黑臭水体</a>是它的名。</p><p style="text-indent: 2em;">河边的欢笑没有了，小孩被勒令禁止下水，大人们也无法在这里洗衣、捞鱼了。</p><p style="text-indent: 2em;">以前的一切仿佛是梦，仿佛是河的前世：</p><p style="text-indent: 2em;">河里有很多的小鱼，如小鲤鱼，小鲫鱼等，夏秋季节，小孩子们也学着大人下河捉鱼，每当捉到一条，大家都欢呼雀跃。偶尔，见有捉鳖人，手拿铁叉，边走边扎，沿河而下，也是一道风景。</p><p style="text-indent: 2em;">夏天，孩童们到河里洗澡，在河里躺一会儿，游一会儿，扎个猛子，再站到岸上，又拍屁股，又喊儿歌。大人叫回家吃饭，依然恋恋不舍。</p><p style="text-indent: 2em;">母亲河啊母亲河，你这是怎么了?你怎么就变成黑臭水体了?</p><p style="text-indent: 2em;">污染严重的河流，不但给市民，还给下游地区人民的生活带来了严重影响。</p><p style="text-indent: 2em;">政府开始对河进行治理：通过控源截污，两岸<a href="http://www.h2o-china.com/news/field?fid=5" target="_blank" title="工业废水" class="keylink">工业废水</a>的排放量从80%降到10%以下;在河周边建成一座<a href="http://www.h2o-china.com/news/search?stype=title&schv=%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86" target="_blank" title="污水处理" class="keylink">污水处理</a>厂，每天有3万吨中水用于回冲;同时在河底铺设生态防护网，这些防护网由竹子沙石及透气网等组成，将河底的淤泥和水阻隔开来，以达到淤泥不上翻的目的。</p><p style="text-indent: 2em;">这些措施的实施，河在整治后的一段时间内逐步恢复了原貌：河水变清了，鱼虾也能看见了，人们也能在河边休闲散步。</p><p style="text-indent: 2em;">可惜好景不长，由于沿岸排污管并没有完全截止，中水作为回冲水的水量也不够，我们的河又开始恢复了脏臭的面目。</p><p style="text-indent: 2em;">2015年，国务院发布了《<a href="http://www.h2o-china.com/news/search?stype=title&schv=水污染" target="_blank" title="水污染" class="keylink">水污染</a>防治行动计划》(简称“水十条”)提出，到2020年，我国地级及以上城市建成区黑臭水体均控制在10%以内;到2030年，城市建成区黑臭水体总体得到消除。该如何吸取前车之鉴，为城市留下更多的河流?维系好每一条河，成为新一轮城镇化过程中必须正视的挑战。</p><p style="text-indent: 2em;">“水十条”第一次明确将城市黑臭水体治理纳入国家水治理体系范畴。</p><p style="text-indent: 2em;">政府加大了河沿岸的截污力度，并引入黄河的清流冲入。这样，在污水处理厂、控源截污、综合治理、引来外水等系统模式治理、修复下，母亲河终于起死回生。大家又开始聚集到它的周围嬉戏，河岸上还修建了凉亭，堤坝上种植了能处理污水的水草。</p><p style="text-indent: 2em;">这条河的故事，是我家乡的河的命运，也是我们国家40年来许多许多的河的缩影。不专门指出它的名字了，因为大家心里都有这样一条河、一个湖。</p><p style="text-indent: 2em;">面对河的前世今生，愿我们社会在飞速前进时，也能有一腔柔情给河流：水流哗哗，河清见底，与蓝天相映;鱼戏浅沙，蟹游虾跳，与芷兰共趣，愿黑臭水体都恢复原有的生机勃勃。</p>
+            <div class="content_fany  fany  mt20">
+                                <div class="fanye"></div>
+                            </div>
+        </div>
+
+        <!-- wzz new -->
+                    <div>
+                        <div class="lmpraise ml270" id="newsPraise" onclick="praise(988)">
+                            <div class="lmpraise_nub">
+                                <span>0</span>赞
+                            </div> 
+                        </div>     
+                    </div>
+
+                    <div class="mshare mt25" url="http://www.h2o-china.com/column/988.html" title="分享" desc="一条河的故事">
+                        <ul class="lmshare fr">
+                            <li><a href="javascript:void(0)" tag="weixin" title="微信"><img src="images/lmshare_wx.png" alt="微信"></a></li>
+                            <li><a href="javascript:void(0)" tag="qq" title="QQ"><img src="images/lmshare_qq.png" alt="QQ"></a></li>
+                            <li><a href="javascript:void(0)" tag="txwb" title="腾讯微博"><img src="images/lmshare_tw.png" alt="腾讯微博"></a></li>
+                            <li><a href="javascript:void(0)" tag="weibo" title="新浪微博"><img src="images/lmshare_sina.png" alt="新浪微博"></a></li>
+                        </ul>
+                    </div>
+        <!-- wzz new -->
+
+                    <div class="newsreview mt25">
+
+                        <div class="newsreviewlist mt50">
+                            
+                            <div id="quoteDemo" class="newsreview_tit" style="display:none;">
+                                <form id="quoteForm" action="/column/comment" method="post">
+                                    <div class="inbox">
+                                        <textarea class="textarea" name="q_replybody" id="q_replybody"></textarea>
+                                        <span class="bluetopicon"></span>
+                                    </div>
+                                    <div class="author">
+                                        <span class="authortit">
+                                                                                    </span>
+                                        <input type="hidden" id="cid" name="cid" value="0" />
+                                        <input type="hidden" id="q_newsid" name="q_newsid" value="988" />
+                                        <input type="hidden" name="q_posturl" id="q_postUrl" value="http://www.h2o-china.com/column/988.html" />
+                                        <input type="button" name="quoteBtn" id="quoteBtn" class="botton fr mt5 mr10" value="发布" />
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                        <div class="newsreview_top">
+                            <b>网友评论</b>
+                            <span class="fr">
+                                <em id="joinNum">0</em>人参与
+                                <em>|</em>
+                                <em>0</em>条评论
+                            </span>
+                        </div>
+
+                        <div class="newsreview_tit">
+                            <form id="replyForm" action="/column/comment" method="post">
+                                <div class="inbox">
+                                    <textarea class="textarea" name="replybody" id="replybody"></textarea>
+                                </div>
+                                <div class="author">
+                                    <span class="authortit">
+                                                                                <label class="pl20">
+                                            <input type="text" name="vcode" id="vcode" size="6" style="vertical-align:middle;" />
+                                            <img id="vcodeimg" src="/mb/verifycode" style="vertical-align:middle;" title="点击刷新" />
+                                            <a id="chgcode" href="javascript:void(0)">看不清，换一张</a>
+                                        </label>
+                                    </span>
+                                    <input type="hidden" name="posturl" id="postUrl" value="http://www.h2o-china.com/column/988.html" />
+                                    <input type="hidden" id="newsid" name="newsid" value="988" />
+                                    <input type="button" name="replyBtn" id="replyBtn" value="发布" class="botton fr mt5 mr10" />
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                    </div>
+
+    </div>
+    
+    <div class="w280 fr">
+        <div class="column_r_boxa f14 l20">
+            <div class="column_r_con1 zoom">
+                                <img src="http://imgs.h2o-china.com/column/2016/07/37_1468573749.jpg" width="80" />
+                                <h4>                
+                                            全新丽
+                                    </h4>
+                <p>E20环境平台合伙人 营销传播中心总监</p>
+            </div>
+            <div class="clear"></div>
+            <h4 class="ml4 mt15">作者新文章</h4>
+                        <ul class="f14 news_r_ul1 mt14 l26">
+                                <li><a href="/column/988.html" title="一条河的故事">一条河的故事</a></li>
+                                <li><a href="/column/983.html" title="张勇：慧眼识环境">张勇：慧眼识环境</a></li>
+                                <li><a href="/column/977.html" title="笔记分享：水厂也有了数字双胞胎">笔记分享：水厂也有了数字...</a></li>
+                                <li><a href="/column/975.html" title="创业朋友圈之陈家轲：创业是为了自由，这个过程却教会了我责任和担当">创业朋友圈之陈家轲：创业...</a></li>
+                                <li><a href="/column/965.html" title="中持股份：用信念和执着诠释中小城市环境梦">中持股份：用信念和执着诠...</a></li>
+                                <li><a href="/column/966.html" title="悼念何寿平先生">悼念何寿平先生</a></li>
+                            </ul>
+                        
+            <h4 class="ml4 mt25">作者热文排行</h4>
+                        <ul class="f14 l26 hot_news_ul hot_news_ul1 mt15 zoom ">
+                                <li>
+                    <span>1</span>
+                    <p><a href="/column/444.html" title="发现丨美国破烂王，垃圾处理界的Uber">发现丨美国破烂王，垃圾处...</a></p>
+                </li>
+                                <li>
+                    <span>2</span>
+                    <p><a href="/column/883.html" title="笔记分享：从地产到水，一家外国公司的中国路">笔记分享：从地产到水，一...</a></p>
+                </li>
+                                <li>
+                    <span>3</span>
+                    <p><a href="/column/896.html" title="污水处理概念厂在路上">污水处理概念厂在路上</a></p>
+                </li>
+                                <li>
+                    <span>4</span>
+                    <p><a href="/column/477.html" title="敢问英雄出处？环保创业者多来自五大领域">敢问英雄出处？环保创业者...</a></p>
+                </li>
+                                <li>
+                    <span>5</span>
+                    <p><a href="/column/436.html" title="环境企业营销自己的“套路”">环境企业营销自己的“套路...</a></p>
+                </li>
+                                <li>
+                    <span>6</span>
+                    <p><a href="/column/478.html" title="又有一位老师成为环保创业者">又有一位老师成为环保创业...</a></p>
+                </li>
+                            </ul>
+                    </div>
+    
+    </div>
+
+</div>
+
+<div class="backtop_btn bc"><div class="backtop"><a href="javascript:void(0);"></a></div></div>
+<!-- <div class="QRcode_left"><img src="/images/QR_code_left.jpg"></div> -->
+<div class="QRcode"><img src="/images/QR_code.jpg"></div>
+<div class="footer mt40">
+  <div class="w1000 bc zoom">
+    <div class="fl w360 ml10">
+      <p class="tc"><a href="http://www.e20.net.cn/"><img src="/images/footer/footer_e20.png" alt="E20环境平台"></a></p>
+      <p class=" mt35 footer_logo">
+        <a href="http://www.h2o-china.com"><img src="/images/footer/footer_logo1.png" alt="中国水网"></a>
+        <a href="http://www.solidwaste.com.cn"><img src="/images/footer/footer_logo2.png" alt="中国固废网"></a>
+        <a href="http://www.chndaqi.com"><img src="/images/footer/footer_logo3.png" alt="中国大气网"></a></p>
+    </div>
+    <div class="fr w620 l24 f12 zoom">
+      <p class="footer_p2"><img src="/images/footer/footer_bg1.jpg"></p>
+      <p class="footer_p1"><a href="http://www.e20.net.cn/contact.html" target="_blank">联系我们</a>|<a href="http://about.h2o-china.com/history.php" target="_blank">大事记</a>|<a href="http://file.h2o-china.com/200810/20081009-175029-1.shtml" target="_blank">联盟单位</a>|<a href="http://www.h2o-china.com/link/?sid=1" target="_blank">友情链接</a>|<a href="http://www.h2o-china.com/single?id=6" target="_blank">版权声明</a>|<a href="http://zt.h2o-china.com/meeting/ad_services/" target="_blank">广告服务</a></p>
+      <p class="mt10">Copyright © 2000-<script> var myDate=new Date();document.write(myDate.getFullYear());</script> http://www.h2o-china.com All rights reserved. 中国水网 版权所有 </p>
+      <p>客服热线：4000240005 商务热线：010-88480403 传真：010-88480301</p>
+      <p>E-mail：<a href="mailto:webmaster@e20.com.cn">webmaster@e20.com.cn</a> </p>
+      <p>本站常年法律顾问：北京市康达律师事务所刘文义律师 京ICP备10040015号-7  京公网安备：11010802011375</p>
+    </div>
+  </div>
+</div>
+<script src="/click" ></script>
+<script src="/js/jquery.gotop.js" type="text/javascript"></script>
+<div style="display:none">
+	<script src="http://v1.cnzz.com/stat.php?id=1253501153&web_id=1253501153" language="JavaScript"></script>
+</div>
+
+
+<div style="display:none">
+    <script src="http://v1.cnzz.com/stat.php?id=1253514434&web_id=1253514434" language="JavaScript"></script>
+        <script src="http://s4.cnzz.com/stat.php?id=1254170255&web_id=1254170255" language="JavaScript"></script>
+</div>
+
+</body>
+</html>

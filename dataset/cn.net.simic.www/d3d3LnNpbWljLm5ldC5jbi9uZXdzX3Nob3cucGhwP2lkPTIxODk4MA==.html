@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>长油重回A股，开盘首日不设跌涨幅限制_国际海事信息网</title>
+<meta name="keywords" content="长油重回A股，开盘首日不设跌涨幅限制" />
+<meta name="description" content="长油重回A股，开盘首日不设跌涨幅限制" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">长油重回A股，开盘首日不设跌涨幅限制</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-02 &nbsp;&nbsp;
+					浏览量：1509&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<p>
+<table cellspacing="0" cellpadding="0" width="100%" style="word-wrap: break-word; font-size: 14px; font-family: Tahoma, Simsun; width: 667px; white-space: normal; word-spacing: 0px; border-collapse: collapse; table-layout: fixed; text-transform: none; font-weight: normal; color: rgb(0,0,0); font-style: normal; empty-cells: show; orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px">
+    <tbody style="word-wrap: break-word">
+        <tr style="word-wrap: break-word">
+            <td style="word-wrap: break-word">
+            <div class="pcb" style="word-wrap: break-word; clear: left; margin-right: 0px">
+            <div class="t_fsz" style="word-wrap: break-word; min-height: 30px">
+            <table cellspacing="0" cellpadding="0" style="overflow: hidden; word-wrap: break-word; width: 667px; border-collapse: collapse; table-layout: fixed; empty-cells: show">
+                <tbody style="word-wrap: break-word">
+                    <tr style="word-wrap: break-word">
+                        <td id="postmessage_3408317" class="t_f" style="word-wrap: break-word; font-size: 14px">长航油运似乎注定了要载入A股资本市场史，这家公司在4年前成为第一个退市的央企，又即将成为第一个&ldquo;死而复活&rdquo;的上市公司。即便是一直坚守不放弃的股东，可能也没有想到这么巧合的情节。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        ST长油发布的公告称，公司将于2019年1月8日在上海证券交易所重新上市交易，公司股票简称ST长油，股票代码为601975。此次重新上市的保荐机构为中信证券和招商证券。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        根据公告，ST长油重新上市的首日将不设跌涨幅限制，开盘参考价为公司重新上市前在全国中小企业股份转让系统最后交易日(2017年2月27日)的收盘价，即4.31元/股。由于不设跌涨幅限制，当天股价或许会变动巨大，在A股交易市场上也是难得一见。重新上市次日起，ST长油的日涨跌幅度限制即变成5%。<br style="word-wrap: break-word" />
+                        <div style="word-wrap: break-word" align="center"><ignore_js_op style="word-wrap: break-word"></ignore_js_op><img id="aimg_354156" class="zoom" src="http://www.imarine.cn/data/attachment/forum/201901/02/103129jz3edpyyysqbaamz.jpeg" width="600" initialized="true" _load="1" lazyloaded="true" inpost="1" file="data/attachment/forum/201901/02/103129jz3edpyyysqbaamz.jpeg" zoomfile="data/attachment/forum/201901/02/103129jz3edpyyysqbaamz.jpeg" aid="354156" style="word-wrap: break-word; cursor: pointer; max-width: 620px" alt="" /></div>
+                        <br style="word-wrap: break-word" />
+                        早在11月2日，老三板公司&ldquo;长油5&rdquo;（即退市前的长航油运）发布公告称，上海证券交易所根据上市委员会的审议意见，决定同意中国长江航运集团南京油运股份有限公司（以下简称公司或长航油运）股票重新上市申请。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        从&ldquo;仙股&rdquo;到连续三年盈利并且复活成功，长航油运使那些想要重新上市的企业看到了希望。与此同时，那些坚持几年还未转出的股东们也终于&ldquo;熬出头&rdquo;。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        4年复活之路<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        长航油运是一家主营业务为沿海和国际航线石油运输业务的公司，2010-2012年，长航油运分别亏损2460万元、7.49亿元、12.38亿元，于2013年5月被上交所暂停上市。公司没有能在2013年力挽狂澜，而是再度亏损59.19亿元。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        在重新上市有关事项的提示性公告中，长航油运认为连续亏损的原因是由于航运市场周期性波动以及自身资本、 资产结构方面存在问题。因连续四年亏损，2014年6月5日长航油运被终止上市。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        在长航油运退市前的最后一个交易日，这只股票已经跌到0.83元，市值为41.69亿元，成为一只仙股。退市后其被转入股转系统老三板，名称改为&ldquo;长油5&rdquo;。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        上交所表示，长油退市后在当年实施了破产重整，剥离了最大亏损源VLCC船舶（超大型油轮），减少了巨额债务负担。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        转入老三板交易市场后，长油5的股价却开始上涨。截至2017年2月27日，长油5的股价为4.31元每股，市值达216.49亿元。也是在这一天，公司发布公告称拟筹划重大事项，鉴于该事项无先例需要向有关部门进行政策咨询，为了避免股价异常波动，于是从28日起停牌。<br style="word-wrap: break-word" />
+                        <div style="word-wrap: break-word" align="center"><ignore_js_op style="word-wrap: break-word"></ignore_js_op><img id="aimg_354157" class="zoom" src="http://www.imarine.cn/data/attachment/forum/201901/02/103206xhekixnhxnr919cw.jpeg" width="600" initialized="true" _load="1" lazyloaded="true" inpost="1" file="data/attachment/forum/201901/02/103206xhekixnhxnr919cw.jpeg" zoomfile="data/attachment/forum/201901/02/103206xhekixnhxnr919cw.jpeg" aid="354157" style="word-wrap: break-word; cursor: pointer; max-width: 620px" alt="" /></div>
+                        <br style="word-wrap: break-word" />
+                        当时便有人猜测，这个无先例的事项指的是不是恢复上市。长油预计股票恢复转让日期不晚于2017年5月26日，但一直到现在还暂时未复牌，先等来的是重新上市的消息。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        根据长油披露的财务数据，其2015-2017年净利润分别为6.28亿元、5.60亿元和4.11亿元。2018年前三季度，&ldquo;长油5&rdquo;净利润分别为0.90亿元，1.18亿元和0.15亿元，总计2.23亿元。公司预计2018年全年净利润为2.94亿元，2019、2020、2021三年的净利润预计分别为2.25 亿元、2.46 亿元和 2.51 亿元。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        公司的实控人也发生了变化。2015年12月，国资委出具批复，将长油原来的实控人中国外运长航集团有限公司整体划入招商局集团有限公司。重组完成后，招商局集团将成为长油的实际控制人，但最终控制人仍为国资委。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        股东迎来春天，徐翔家族浮盈超400%<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        长油于2018年6月向上交所提交了公司股票重新上市的申请材料，最兴奋的当属一直在坚守的股东。长油2018年的三季度报显示，公司股东合计11.93万户，这其中就有著名的&ldquo;股神&rdquo;徐翔。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        徐翔家族在长油退市前的30个整理期交易日中抄底买入，在2014年半年报中，徐翔、郑素贞（徐翔母亲）、徐柏良（徐翔父亲）及其妻子应莹各持550万股，分列第六至第九位股东。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        数据显示，长油退市时的股价为0.83元每股，而退市整理期的成交均价为0.82元每股。长油重新上市的股价为4.31元每股，如果徐翔家族没有售出所持股票，那么其账面盈利最高可翻5倍，净赚7678万元。这再次证明了徐翔高超的操盘技术，但似乎也没有什么实质性意义了。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        据中国经营报报道，徐翔妻子应莹2018年11月回应称2200万股数量并未改变，买入时的价格在1元以下。谈及此，应莹显得很平静。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        实际上，2018年10月初应莹就曾对媒体表示她们家庭和徐翔父母名下所有的银行账户和资产，包括股权和房产等已被查封和冻结。因此，即便长油的股价暴涨近5倍，也无法给她带来收益了。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        徐翔作为市场上最受关注的私募人士，曾经创造了许多个资本市场上的奇迹。他成立的上海泽熙投资以擅长&ldquo;抄底&rdquo;，投资风格&ldquo;快准狠&rdquo;闻名，长油就是他们的抄底作品之一。2017年1月，徐翔因犯操纵证券市场罪，被青岛市中级人民法院判处5年6个月。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        徐翔家族目前已经不再是长油的前十大股东。长油破产重整完成后，其股东出现了重大变动。公司2018年三季报显示，前十大股东中的9席中为银行等金融机构。这些金融机构或许比徐翔家族收益更大，第十大股东为交通银行，持股数目为7500万股。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        退市企业想要重回A股需要符合两个基本指标，即最近3个会计年度扣非净利润为正且累计超过3000万元。此外，在具体制度安排上参照首次公开发行股票上市的程序和标准。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        就在长油发布重回市场信息的当天，中弘恰好结束了其退市整理期，于2018年12月28日被深交所摘除。作为第一支因连续二十个交易日股价均低于1元被终止上市的股票，中弘在资本市场上也是格外引人注目。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        截止12月27日收盘，中弘报收0.22元，较前一个交易日上涨4.76%，与被深交所作出终止上市当天0.74元的价格相比，股价跌去71%。与高值相比跌去95%。<br style="word-wrap: break-word" />
+                        <br style="word-wrap: break-word" />
+                        而这个价格比长油退市时的0.83元还要低不少，中弘坚守的20多万股民们不知道能否等到重新上市的一天。</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+					<p align="center"></p>
+					<p align="right">来源：龙de船人</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=218981">[下一篇] 西媒：这家中国企业令世界航运巨头“不得安宁”</a>
+					   
+					 
+						<a href="news_show.php?id=218979">[上一篇] 2019年干散货海运贸易将小幅增长</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219664" title="我国首个石墨烯国家标准出炉">我国首个石墨烯国家标准出炉</a></li>
+							<li><a href="news_show.php?id=219672" title="中远海运集团有意接手韩进苏比克？">中远海运集团有意接手韩进苏比克？</a></li>
+							<li><a href="news_show.php?id=219674" title="权威报告：自动化时代来临！海员、码头工人要失业？！？">权威报告：自动化时代来临！海员、码头工人要失业？！？</a></li>
+							<li><a href="news_show.php?id=219665" title="新技术实现常温常压制备高纯度氢气">新技术实现常温常压制备高纯度氢气</a></li>
+							<li><a href="news_show.php?id=219667" title="红星造船厂将获14艘冰级LNG船大单">红星造船厂将获14艘冰级LNG船大单</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547743717_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">
+				<img src="../../imgs/nimg/smallimg/1547356668_thumb.jpg" />
+				<p>Cosco售后回租四艘1万TEU...</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+						<li><a href="news_show.php?id=218983" title="SwissMarine与戴安娜航运签约，租下好望角型船舶">SwissMarine与戴安娜航运签约，租下好望角型船舶</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

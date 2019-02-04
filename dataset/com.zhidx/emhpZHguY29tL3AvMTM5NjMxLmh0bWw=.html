@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参 - 智东西</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="全面分析在集成领域以及其他形式的电池解决方案的开发和部署方面所取得的进展。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://1.gravatar.com/avatar/df1407f0ab5f30518055ad5bd5528f8f?s=96&#038;d=retro&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/chenzhen" title="由三点一四发布" rel="author">三点一四</a></div>
+                <div class="author-posts">共发表29篇文章</div>
+                <div class="author-desc"></div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag2">高通</a><a href="http://zhidx.com/p/tag/me" class="tag1">me</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag1">华为</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag2">无人机</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag2">通用</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/report" rel="category tag">智能内参</a></span><span class="time">2019/01/06 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="399" src="http://oss.zhidx.com/uploads/2019/01/9.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/9.jpg 850w, http://oss.zhidx.com/uploads/2019/01/9.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/9.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong><br />
+智东西（公众号： zhidxcom）</strong><br />
+<strong>编 | 智东西内参</strong></p>
+<p><span class="fontstyle0">电池储能是非常灵活的</span><span class="fontstyle1">，</span><span class="fontstyle0">它可以进行快速部署</span><span class="fontstyle1">， </span><span class="fontstyle0">且具有多种应用</span><span class="fontstyle1">。 </span><span class="fontstyle0">同时它能够产生大量价值流</span><span class="fontstyle1">——</span><span class="fontstyle0">更不用说电池价格比预期中下降得还要快这一点</span><span class="fontstyle1">。<span class="fontstyle0">根据一项预测</span>， <span class="fontstyle0">到</span><span class="fontstyle3">2022</span><span class="fontstyle0">年</span>，<span class="fontstyle0">储能市场的年销售量可达到</span><span class="fontstyle3">260</span><span class="fontstyle0">亿美元以上</span>， <span class="fontstyle0">年复合增长率</span>（<span class="fontstyle3">CAGR</span>） <span class="fontstyle0">则达</span><span class="fontstyle3">46.5%</span>。 </span><span class="fontstyle0">然而</span><span class="fontstyle1">，</span><span class="fontstyle0">该部门的活力并不完全归因于这些因素</span><span class="fontstyle1">。</span><span class="fontstyle0">诸如人工智能</span><span class="fontstyle1">、 </span><span class="fontstyle0">区块链和预测分析等相邻数字技术的进步正在促发综合解决方案和创新商业模式</span><span class="fontstyle1">， </span><span class="fontstyle0">而几年之前</span><span class="fontstyle1">， </span><span class="fontstyle0">这些方案和模式几乎是不可想象的</span><span class="fontstyle1">。 </span><span class="fontstyle0">世界各地的创业公司正迅速将智能网络</span><span class="fontstyle1">“</span><span class="fontstyle0">电表后端</span><span class="fontstyle1">” </span><span class="fontstyle0">电池商业化</span><span class="fontstyle1">， </span><span class="fontstyle0">以造福于电力用户</span><span class="fontstyle1">、 </span><span class="fontstyle0">公用事业公司以及电网运营商</span><span class="fontstyle1">。</span></p>
+<p>本期的智能内参，我们推荐来自德勤的报告《 <span class="fontstyle0">全球电池储能市场面临的挑战与机遇</span> 》， 全面<span class="fontstyle0">分析在集成领域以及其他形式的电池解决方案的开发和部署方面所取得的进展</span> <span class="fontstyle0">。</span><strong>如果想收藏本文的报告全文（ <span class="fontstyle0">全球电池储能市场面临的挑战与机遇</span> ），可以在智东西公众号：（zhidxcom）回复关键词“<span style="color: #0000ff;">nc315</span>”获取。</strong></p>
+<p><img class="alignnone size-full wp-image-139638" src="http://oss.zhidx.com/uploads/2019/01/捕获_副本-1.jpg" alt="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" width="800" height="1154" srcset="http://oss.zhidx.com/uploads/2019/01/捕获_副本-1.jpg 800w, http://oss.zhidx.com/uploads/2019/01/捕获_副本-1.jpg?x-oss-process=image/resize,m_fill,w_208,h_300 208w, http://oss.zhidx.com/uploads/2019/01/捕获_副本-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_1108 768w, http://oss.zhidx.com/uploads/2019/01/捕获_副本-1.jpg?x-oss-process=image/resize,m_fill,w_710,h_1024 710w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<h1><span class="fontstyle0">一、市场驱动因素</span></h1>
+<h2><strong><span class="fontstyle0">1、成本和性能改进</span> </strong></h2>
+<p>各种储能形式已存在有数十年<span class="fontstyle1" style="font-size: 16px;">。 </span><span class="fontstyle0" style="font-size: 16px;">所以这让人不禁发问</span><span class="fontstyle1" style="font-size: 16px;">： </span><span class="fontstyle0" style="font-size: 16px;">为何偏偏电池储能独占鳌头</span><span class="fontstyle1" style="font-size: 16px;">？ </span><span class="fontstyle0" style="font-size: 16px;">又为何非现在不可</span><span class="fontstyle1" style="font-size: 16px;">？ </span><span class="fontstyle0" style="font-size: 16px;">也许最显而易见的答案是其成本的下降以及性能的改善</span><span class="fontstyle1" style="font-size: 16px;">， </span><span class="fontstyle0" style="font-size: 16px;">尤其是在锂离子电池方面</span><span class="fontstyle1" style="font-size: 16px;">。 </span><span class="fontstyle0" style="font-size: 16px;">同时也正是由于不断扩大的电动汽车市场</span><span class="fontstyle1" style="font-size: 16px;">， </span><span class="fontstyle0" style="font-size: 16px;">制造业的经济规模得以促进</span><span class="fontstyle1" style="font-size: 16px;">。 </span><span class="fontstyle0" style="font-size: 16px;">如下图</span><span class="fontstyle0" style="font-size: 16px;">所示</span><span class="fontstyle1" style="font-size: 16px;">，</span><span class="fontstyle0" style="font-size: 16px;">锂离子电池的成本正在急剧下降</span><span class="fontstyle1" style="font-size: 16px;">。 </span><span class="fontstyle0" style="font-size: 16px;">然而</span><span class="fontstyle1" style="font-size: 16px;">， </span><span class="fontstyle0" style="font-size: 16px;">根据我们所分析的九个国家的情况</span><span class="fontstyle1" style="font-size: 16px;">，</span><span class="fontstyle0" style="font-size: 16px;">可以明确的一点是</span><span class="fontstyle1" style="font-size: 16px;">： </span><span class="fontstyle0" style="font-size: 16px;">成本下降仅仅是一部分原因</span><span class="fontstyle1" style="font-size: 16px;">。</span></p>
+<p><img class="alignnone size-full wp-image-139634" src="http://oss.zhidx.com/uploads/2019/01/1_副本-1.jpg" alt="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" width="800" height="374" srcset="http://oss.zhidx.com/uploads/2019/01/1_副本-1.jpg 800w, http://oss.zhidx.com/uploads/2019/01/1_副本-1.jpg?x-oss-process=image/resize,m_fill,w_600,h_281 600w, http://oss.zhidx.com/uploads/2019/01/1_副本-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_359 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲<span class="fontstyle0">2010</span><span class="fontstyle1">年至</span><span class="fontstyle0">2017</span><span class="fontstyle1">年锂离子电池价格下降</span><span class="fontstyle0">80% </span><span class="fontstyle1">（</span><span class="fontstyle1">美元</span><span class="fontstyle0">/kWh</span><span class="fontstyle1">）</span></p>
+<h2><strong><span class="fontstyle0">2、电网现代化</span> </strong></h2>
+<p><strong> </strong><span class="fontstyle0">许多国家正在实施电网现代化计划</span><span class="fontstyle1">， </span><span class="fontstyle0">以提高应对恶劣天气事件的复原能力</span><span class="fontstyle1">， </span><span class="fontstyle0">减少与老化基础设施相关的系统中断</span><span class="fontstyle1">， </span><span class="fontstyle0">并提高系统的整体效率</span><span class="fontstyle1">。 </span><span class="fontstyle0">这些计划通常涉及在已建立的电网内部署智能技术</span><span class="fontstyle1">， </span><span class="fontstyle0">以实现双向通信和先进的数字控制系统</span><span class="fontstyle1">， </span><span class="fontstyle0">以及整合分布式能源</span><span class="fontstyle1">（</span><span class="fontstyle0">即可再生能源</span><span class="fontstyle1">、 </span><span class="fontstyle0">燃料电池</span><span class="fontstyle1">、 </span><span class="fontstyle0">柴油或天然气发电厂</span><span class="fontstyle1">、 </span><span class="fontstyle0">储能资产和微电网</span><span class="fontstyle1">）。</span></p>
+<p><span class="fontstyle0">总之</span><span class="fontstyle1">， </span><span class="fontstyle0">我们发现电池储能的发展与为实现电网现代化</span><span class="fontstyle1">（</span><span class="fontstyle0">包括向智能电网的过渡</span><span class="fontstyle1">） </span><span class="fontstyle0">所做出的努力密不可分</span><span class="fontstyle1">。</span><span class="fontstyle0">数字化电网支持生产消费者参与</span><span class="fontstyle0">智能系统配置</span><span class="fontstyle1">、 </span><span class="fontstyle0">预测性维护和自我修复</span><span class="fontstyle1">， </span><span class="fontstyle0">这为实施阶梯式费率结构铺平了道路</span><span class="fontstyle1">—</span><span class="fontstyle0">这一切为电池储能开辟了空间</span><span class="fontstyle1">， </span><span class="fontstyle0">促使其通过增加容量</span><span class="fontstyle1">、 </span><span class="fontstyle0">调峰运行和</span><span class="fontstyle3">/</span><span class="fontstyle0">或改善电能质量创造价值</span><span class="fontstyle1">。</span><span class="fontstyle0">虽然智能技术已存在了一段时间</span><span class="fontstyle1">， </span><span class="fontstyle0">但电池储能的出现有助于挖掘它的全部潜能</span><span class="fontstyle1">， </span><span class="fontstyle0">反之亦然</span><span class="fontstyle1">。</span></p>
+<p><img class="alignnone size-full wp-image-139637" src="http://oss.zhidx.com/uploads/2019/01/20_副本.jpg" alt="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" width="800" height="435" srcset="http://oss.zhidx.com/uploads/2019/01/20_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/20_副本.jpg?x-oss-process=image/resize,m_fill,w_552,h_300 552w, http://oss.zhidx.com/uploads/2019/01/20_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_418 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲<span class="fontstyle0">2018-2030</span><span class="fontstyle1">年全球各国累计储能部署</span></p>
+<h2><strong><span class="fontstyle0">3、全球可再生能源运动</span> </strong></h2>
+<p><span class="fontstyle0">广泛的可再生能源和减排扶持政策也在推动全球使用电池储能解决方案</span><span class="fontstyle1">。 </span><span class="fontstyle0">电池在抵消可再生能源间歇性和减少削减方面所发挥的关键作用是有目共睹的</span><span class="fontstyle1">， </span><span class="fontstyle0">但各类电力用户依然追逐清洁能源</span><span class="fontstyle1">， </span><span class="fontstyle0">其程度和普遍度仍在增长</span><span class="fontstyle1">。 </span><span class="fontstyle0">这种情况在企业和公共部门中尤为明显</span><span class="fontstyle1">。 </span><span class="fontstyle0">正如德勤最近的一份报告真正的生意</span><span class="fontstyle1">： </span><span class="fontstyle0">企业采购竞争对手推动可再生能源增长的政策</span><span class="fontstyle0">中所指出的那样</span><span class="fontstyle1">， </span><span class="fontstyle0">大型跨国公司在采购全球可再生能源方面发挥了领导作用</span><span class="fontstyle1">。 </span><span class="fontstyle0">事实上</span><span class="fontstyle1">， </span><span class="fontstyle0">许多人公开承诺在未来二十年或更早即可通过</span><span class="fontstyle3">RE100</span><span class="fontstyle0">和可再生能源买家联盟等计划达成</span><span class="fontstyle3">100%</span><span class="fontstyle0">使用可再生能源的目标</span><span class="fontstyle1">。 </span><span class="fontstyle0">这预示着可再生能源能够持续发展</span><span class="fontstyle1">， </span><span class="fontstyle0">并可能会继续就电池储能作出部署</span><span class="fontstyle1">， </span><span class="fontstyle0">以协助整合更多的分布式能源</span><span class="fontstyle1">。</span></p>
+<h2><strong><span class="fontstyle0">4、参与电力批发市场</span> </strong></h2>
+<p><span class="fontstyle0">虽然经常在一句话中同时提到可再生能源和电池储能</span><span class="fontstyle1">， </span><span class="fontstyle0">但电池储能却能够帮助平衡任何发电源的电网</span><span class="fontstyle1">， </span><span class="fontstyle0">并提高电能质量</span><span class="fontstyle1">。 </span><span class="fontstyle0">这表明电池储能在全球范围内参与电力批发市场的机会越来越大</span><span class="fontstyle1">。 </span><span class="fontstyle0">几乎我们所分析的所有国家都正在改造其批发市场结构</span><span class="fontstyle1">， </span><span class="fontstyle0">争取为电池储能开辟一席之地供其提供容量以及诸如频率调节和电压控制等辅助服务</span><span class="fontstyle1">。 </span><span class="fontstyle0">虽然这些应用程序仍处于初级阶段</span><span class="fontstyle1">， </span><span class="fontstyle0">但是随着决策者努力地消除阻碍储能参与和调整市场的障碍时</span><span class="fontstyle1">， </span><span class="fontstyle0">这些应用程序也还是取得了不同程度的成功</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">以德国的主要控制储备</span><span class="fontstyle1">（</span><span class="fontstyle2">PCR</span><span class="fontstyle1">） </span><span class="fontstyle0">市场为例</span><span class="fontstyle1">。 </span><span class="fontstyle0">这一市场的参与者通过赢得每周一次的竞价创造收入</span><span class="fontstyle1">、 </span><span class="fontstyle0">并通过提供平衡电网所需的接纳能力来获取报酬</span><span class="fontstyle1">。 </span><span class="fontstyle0">尽管</span><span class="fontstyle2">PCR</span><span class="fontstyle0">市场在过去几年里一直向储能供应商开放</span><span class="fontstyle1">， </span><span class="fontstyle0">但是对于电池储能的部署却直到</span><span class="fontstyle2">2016</span><span class="fontstyle0">年才变得重要起来</span><span class="fontstyle1">， </span><span class="fontstyle0">因为那时起</span><span class="fontstyle1">， </span><span class="fontstyle0">系统成本不断下降</span><span class="fontstyle1">， </span><span class="fontstyle0">所以可以获得可行的投资回报</span><span class="fontstyle1">。</span><span class="fontstyle0">与传统发电厂不同的是</span><span class="fontstyle1">， </span><span class="fontstyle0">电池储能几乎可以在瞬间对系统失衡做出反应</span><span class="fontstyle1">， </span><span class="fontstyle0">并在不到</span><span class="fontstyle2">30</span><span class="fontstyle0">秒的时间内完全启动</span><span class="fontstyle1">。 </span></p>
+<p><span class="fontstyle0">然而</span><span class="fontstyle1">， </span><span class="fontstyle0">与美国不同</span><span class="fontstyle1">， </span><span class="fontstyle0">德国针对这种快速响应并不提供报酬</span><span class="fontstyle1">，</span><span class="fontstyle0">所以德国的电池供应商直接与现有公司竞争</span><span class="fontstyle1">， </span><span class="fontstyle0">比如天然气调峰电厂</span><span class="fontstyle1">。 </span><span class="fontstyle0">一方面</span><span class="fontstyle1">， </span><span class="fontstyle0">这种无差别竞争有效地降低了容量成本</span><span class="fontstyle1">， </span><span class="fontstyle0">但另一方面</span><span class="fontstyle1">， </span><span class="fontstyle0">它也导致市场迅速饱和</span><span class="fontstyle1">， </span><span class="fontstyle0">利润微薄</span><span class="fontstyle1">， </span><span class="fontstyle0">电池储能供应商经济状况不稳定</span><span class="fontstyle1">。 </span><span class="fontstyle0">由于在</span><span class="fontstyle2">PCR</span><span class="fontstyle0">市场未能有足够的增长空间</span><span class="fontstyle1">， </span><span class="fontstyle0">德国的电池储能解决方案提供商越来越多地将目光放在二级储备市场以及配电递延上</span><span class="fontstyle1">， </span><span class="fontstyle0">作为其潜在的新价值流</span><span class="fontstyle1">。 </span></p>
+<p><span class="fontstyle0">与德国一样</span><span class="fontstyle1">， </span><span class="fontstyle0">美国的一些电网运营商也将电池储能引入其系统竞争</span><span class="fontstyle1">。 </span><span class="fontstyle0">美国电力批发市场对电池等快速反应资源供应商的开放</span><span class="fontstyle1">， </span><span class="fontstyle0">很大程度上要归功于分</span> <span class="fontstyle0">别于</span><span class="fontstyle1">2011</span><span class="fontstyle0">年和</span><span class="fontstyle1">2013</span><span class="fontstyle0">年发布的第</span><span class="fontstyle1">755</span><span class="fontstyle0">和第</span><span class="fontstyle1">784</span><span class="fontstyle0">号联邦能源管理委员会</span><span class="fontstyle2">（</span><span class="fontstyle1">FERC</span><span class="fontstyle2">） </span><span class="fontstyle0">命令</span><span class="fontstyle2">。 </span><span class="fontstyle0">命令规定</span><span class="fontstyle2">， </span><span class="fontstyle0">对于辅助服务市场上的响应速度以及响应准确性进行奖励</span><span class="fontstyle2">。</span><span class="fontstyle0">由于电池供应商受邀参与频率调节市场</span><span class="fontstyle2">， </span><span class="fontstyle0">电网运营商已经开始遭遇一些前所未有的挑战</span><span class="fontstyle2">， </span><span class="fontstyle0">这些挑战来自于储能快速爬坡和较慢爬坡资源的混合</span><span class="fontstyle2">、</span><span class="fontstyle0">调度参数和信号相关事项</span><span class="fontstyle2">、 </span><span class="fontstyle0">其他技术要求三者之间的失衡</span><span class="fontstyle2">。 </span></p>
+<p><span class="fontstyle0">然而</span><span class="fontstyle2">， </span><span class="fontstyle0">展望未来</span><span class="fontstyle2">， </span><span class="fontstyle0">我们的研究发现表明</span><span class="fontstyle2">，</span><span class="fontstyle0">将电池整合到电力批发市场的好处将超过这些日益增长的痛苦</span><span class="fontstyle2">， </span><span class="fontstyle0">这是因为世界各地的决策者正在越来越多地采取行动来奖励速效电池储能在平衡电网运营方面所做出的贡献</span><span class="fontstyle2">。 </span><span class="fontstyle0">例如</span><span class="fontstyle2">， </span><span class="fontstyle0">智利国家能源委员会起草了一个新的辅助服务监管框架</span><span class="fontstyle2">， </span><span class="fontstyle0">认同了电池储能系统能够做出的贡献</span><span class="fontstyle2">。 </span><span class="fontstyle0">同样的</span><span class="fontstyle2">， </span><span class="fontstyle0">意大利也开放了其辅助服务市场</span><span class="fontstyle2">， </span><span class="fontstyle0">作为可再生能源和储能项目试点</span><span class="fontstyle2">， </span><span class="fontstyle0">将其引入为全面监管改革所做工作的一部分</span><span class="fontstyle2">。 </span><span class="fontstyle0">同时</span><span class="fontstyle2">， </span><span class="fontstyle1">2018</span><span class="fontstyle0">年</span><span class="fontstyle1">2</span><span class="fontstyle0">月</span><span class="fontstyle1">15</span><span class="fontstyle0">日</span><span class="fontstyle2">， </span><span class="fontstyle1">FERC</span><span class="fontstyle0">发布了最终规则</span><span class="fontstyle2">， </span><span class="fontstyle0">采取进一步措施消除其管辖范围内阻碍电力储存资源参与容量</span><span class="fontstyle2">、 </span><span class="fontstyle0">能源和辅助服务市场的障碍</span><span class="fontstyle2">。 </span></p>
+<h2><strong><span class="fontstyle0">5、财政激励</span> </strong></h2>
+<p><span class="fontstyle0">在我们所研究的国家</span><strong><span class="fontstyle1">， </span></strong><span class="fontstyle0">由政府出资进行财政激励，</span><span class="fontstyle0">该措施进一步反映出政策制定者越来越意识到电池储能解决方案为整个电力价值链带来的各种益处</span><span class="fontstyle1">。</span><span class="fontstyle0">在我们的研究中</span><span class="fontstyle1">， </span><span class="fontstyle0">这些激励措施不仅包括通过退税偿还或直接偿还电池系统成本所占百分比</span><span class="fontstyle1">， </span><span class="fontstyle0">还包括通过赠款或者补贴融资来提供资金支持</span><span class="fontstyle1">。 </span><span class="fontstyle0">这些激励措施在能源安全问题上显得尤为慷慨</span><span class="fontstyle1">， </span><span class="fontstyle0">比如</span><span class="fontstyle3">2017</span><span class="fontstyle0">年</span><span class="fontstyle1">， </span><span class="fontstyle0">意大利为住宅储存装置提供了</span><span class="fontstyle3">50%</span><span class="fontstyle0">的税收减免</span><span class="fontstyle1">。 </span><span class="fontstyle0">或者针对那些在电池制造中享有经济利益的国家</span><span class="fontstyle1">， </span><span class="fontstyle0">比如韩国</span><span class="fontstyle1">， </span><span class="fontstyle3">2017</span><span class="fontstyle0">年上半年</span><span class="fontstyle1">， </span><span class="fontstyle0">得到韩国政府支持而投资的储能系统增长了</span><span class="fontstyle3">89</span><span class="fontstyle0">兆瓦时</span><span class="fontstyle1">（</span><span class="fontstyle3">MWh</span><span class="fontstyle1">） </span><span class="fontstyle0">的产能</span><span class="fontstyle1">， </span><span class="fontstyle0">比上一年同期增长了</span><span class="fontstyle3">61.8%</span><span class="fontstyle1">。</span></p>
+<h2><strong><span class="fontstyle0">6、FIT</span><span class="fontstyle1">或净电量结算政策的淘汰</span> </strong></h2>
+<p><span class="fontstyle0">由于消费者和企业试图从其太阳能光伏</span><span class="fontstyle1">（</span><span class="fontstyle2">PV</span><span class="fontstyle1">） </span><span class="fontstyle0">投资中寻求可以获取更高回报的方式</span><span class="fontstyle1">， </span><span class="fontstyle0">太阳能发电上网电价补贴政策</span><span class="fontstyle1">（</span><span class="fontstyle2">FIT</span><span class="fontstyle1">） </span><span class="fontstyle0">或净电量结算政策的低价或热度消退成为进一步配置电表后端系统的驱动因素</span><span class="fontstyle1">。</span><span class="fontstyle0">这种情况发生在澳大利亚</span><span class="fontstyle1">、 </span><span class="fontstyle0">德国</span><span class="fontstyle1">、 </span><span class="fontstyle0">英国</span><span class="fontstyle0">以及美国夏威夷</span><span class="fontstyle1">。 </span><span class="fontstyle0">这些地区拥有最成熟的太阳能市场</span><span class="fontstyle1">，</span><span class="fontstyle0">部分原因是电力价格高到足以使太阳能在经济上可行</span><span class="fontstyle1">。 </span></p>
+<p><span class="fontstyle0">尽管这还不是一种全球性的趋势</span><span class="fontstyle1">， </span><span class="fontstyle0">但我们有理认为</span><span class="fontstyle1">， </span><span class="fontstyle0">随着</span><span class="fontstyle2">FIT</span><span class="fontstyle0">的淘汰</span><span class="fontstyle1">、 </span><span class="fontstyle0">太阳能</span><span class="fontstyle2">PV</span><span class="fontstyle0">设备的所有者会将电池作为一种自行消耗更多电力的手段</span><span class="fontstyle1">， </span><span class="fontstyle0">转移负荷以避免峰值电荷</span><span class="fontstyle1">、 </span><span class="fontstyle0">和</span><span class="fontstyle2">/</span><span class="fontstyle0">或在需要时为公共事业公司或聚合商的电池充电或放电来提供电网稳定服务</span><span class="fontstyle1">。</span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle2">2017</span><span class="fontstyle0">年</span><span class="fontstyle1">， </span><span class="fontstyle0">夏威夷檀香山的住宅储存证增长了</span><span class="fontstyle2">1700%</span><span class="fontstyle1">， </span><span class="fontstyle0">即</span><span class="fontstyle2">18</span><span class="fontstyle0">倍</span><span class="fontstyle1">。 </span><span class="fontstyle0">出现这一激增的部分原因是</span><span class="fontstyle1">， </span><span class="fontstyle0">国家在</span><span class="fontstyle2">2015</span><span class="fontstyle0">年取消了净电量结算政策</span><span class="fontstyle1">， </span><span class="fontstyle0">并限制了参与随后的将电力送回电网的激励计划</span><span class="fontstyle1">。 </span></p>
+<h2><strong><span class="fontstyle0">7、自给自足的愿望</span> </strong></h2>
+<p><strong> </strong><span class="fontstyle0">上文对几个驱动因素作出了详细的描述</span><strong><span class="fontstyle1">，</span></strong><span class="fontstyle0">而实际上住宅和</span><span class="fontstyle3">C&amp;I</span><span class="fontstyle0">消费者对能源自给自足的渴望日益高涨</span><span class="fontstyle1">， </span><span class="fontstyle0">这成为一股惊人的推动电表后端储能部署的力量</span><span class="fontstyle1">。 </span><span class="fontstyle0">这种愿景在某种程度上助长了我们所考察的几乎所有国家的电表后端市场</span><span class="fontstyle1">， </span><span class="fontstyle0">这表明购买储能系统的动机并非纯粹只是金融方面</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">如前所述</span><span class="fontstyle1">， </span><span class="fontstyle3">FIT</span><span class="fontstyle0">的淘汰可能是某些家庭安装储能电池的契机</span><span class="fontstyle1">， </span><span class="fontstyle0">这些家庭中有大约一半是对现有太阳能</span><span class="fontstyle3">PV</span><span class="fontstyle0">装置的改造或作为该装置的附加组件</span><span class="fontstyle1">。</span><span class="fontstyle0">另外一半则采用全新的太阳能</span><span class="fontstyle3">+</span><span class="fontstyle0">储能系统</span><span class="fontstyle1">， </span><span class="fontstyle0">这一部分则可能与淘汰</span><span class="fontstyle3">FIT</span><span class="fontstyle0">没有太大关联</span><span class="fontstyle1">。</span><span class="fontstyle0">由于大型住宅电池储能系统的售价仍在</span><span class="fontstyle3">8,000</span><span class="fontstyle1">—</span><span class="fontstyle3">10,000</span><span class="fontstyle0">澳元</span><span class="fontstyle1">（</span><span class="fontstyle3">6,300</span><span class="fontstyle1">—</span><span class="fontstyle3">8,000</span><span class="fontstyle0">美元</span><span class="fontstyle1">） </span><span class="fontstyle0">之间</span><span class="fontstyle1">， </span><span class="fontstyle0">所以对于这一部分家庭来说</span><span class="fontstyle1">， </span><span class="fontstyle0">最有可能的动机就是对自给自足的向往以及作为一名早期体验者的自豪感</span><span class="fontstyle1">， </span><span class="fontstyle0">而非快速回报和投资回报</span><span class="fontstyle1">。 </span><span class="fontstyle0">尽管电池储能系统必须具有成本竞争力</span><span class="fontstyle1">， </span><span class="fontstyle0">但根据它们在澳大利亚的受欢迎程度以及我们在别处的研究结果表明</span><span class="fontstyle1">， </span><span class="fontstyle0">电池储能无需牺牲价格</span><span class="fontstyle1">，</span><span class="fontstyle0">它不一定非要比从任一电力公司购买的电力和服务便宜得多</span><span class="fontstyle1">， </span><span class="fontstyle0">才能换取其自身的市场增长</span><span class="fontstyle1">。</span></p>
+<h2><strong><span class="fontstyle0">8、国家政策</span> </strong></h2>
+<p><span class="fontstyle0">对于电池储能供应商来说</span><span class="fontstyle1">， </span><span class="fontstyle0">国家所出台的促进各种战略目标的政策为他们提供了更多机会</span><span class="fontstyle1">。 </span><span class="fontstyle0">许多国家认为</span><span class="fontstyle1">， </span><span class="fontstyle0">可再生能源加储能是一种全新的方式</span><span class="fontstyle1">， </span><span class="fontstyle0">可以帮助他们减少对能源进口的依赖</span><span class="fontstyle1">、 </span><span class="fontstyle0">填补其多能源发电的空白</span><span class="fontstyle1">、 </span><span class="fontstyle0">提高其系统的可靠性和复原力</span><span class="fontstyle1">、 </span><span class="fontstyle0">朝着环保目标和去碳化目标迈进</span><span class="fontstyle1">。 </span><span class="fontstyle0">意大利和日本等一些国家正在积极地鼓励能源储能并对其进行补贴</span><span class="fontstyle1">， </span><span class="fontstyle0">并将此作为大范围改组工作的一部分</span><span class="fontstyle1">， </span><span class="fontstyle0">旨在确保储能系统的可靠性</span><span class="fontstyle1">， </span><span class="fontstyle0">并减少其对国际能源公司和外国进口的依赖</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">储能的发展也可能受益于与发展中国家城市化和生活质量目标相关的广泛政策授权</span><span class="fontstyle1">。 </span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle0">印度的智能城市倡议利用竞争挑战模式</span><span class="fontstyle1">， </span><span class="fontstyle0">以支撑在全国</span><span class="fontstyle3">100</span><span class="fontstyle0">个城市部署智能技术</span><span class="fontstyle1">。 </span><span class="fontstyle0">这些部署的目标是确保充足的电力供应</span><span class="fontstyle1">、 </span><span class="fontstyle0">实现环境可持续性</span><span class="fontstyle1">、 </span><span class="fontstyle0">高效移动性和公共交通</span><span class="fontstyle1">。</span><span class="fontstyle0">电动汽车</span><span class="fontstyle1">、 </span><span class="fontstyle0">可再生能源和电池储能对于实现这些目标来说至关重要</span><span class="fontstyle1">—</span><span class="fontstyle0">印度政府所发声明可以证明这一点</span><span class="fontstyle1">， </span><span class="fontstyle0">其计划从</span><span class="fontstyle3">2030</span><span class="fontstyle0">年开始只销售电动汽车</span><span class="fontstyle1">。 </span><span class="fontstyle0">此外</span><span class="fontstyle1">， </span><span class="fontstyle0">印度政府的目标是到</span><span class="fontstyle3">2022</span><span class="fontstyle0">年为止</span><span class="fontstyle1">，</span><span class="fontstyle0">将太阳能发电能力从</span><span class="fontstyle3">2016</span><span class="fontstyle0">年的</span><span class="fontstyle3">10</span><span class="fontstyle0">吉瓦提高到</span><span class="fontstyle3">100</span><span class="fontstyle0">吉瓦</span><span class="fontstyle1">。 </span><span class="fontstyle0">印度最近推出了首个用于峰值负荷管理的电网规模的电池储能系统</span><span class="fontstyle1">， </span><span class="fontstyle0">这表明了储能市场的潜在繁荣</span><span class="fontstyle1">。 </span><span class="fontstyle0">而印度所寻求的激进的政策目标</span><span class="fontstyle1">， </span><span class="fontstyle0">在很大程度上取决于开发一个清洁</span><span class="fontstyle1">、 </span><span class="fontstyle0">可靠的电力系统</span><span class="fontstyle1">。 </span></p>
+<h1><span class="fontstyle0">二、挑战</span></h1>
+<p><span class="fontstyle0">尽管市场驱动力正趋同化</span><span class="fontstyle1">， </span><span class="fontstyle0">并推动储能部署向前发展</span><span class="fontstyle1">， </span><span class="fontstyle0">但却仍然存在挑战</span><span class="fontstyle1">。 </span><span class="fontstyle0">其中较为突出的障碍可以追溯到电池储能技术的发展速度</span><span class="fontstyle1">、 </span><span class="fontstyle0">其应用的演化历程</span><span class="fontstyle1">， </span><span class="fontstyle0">以及电池存储的多样性和灵活性</span><span class="fontstyle1">。</span></p>
+<h2><strong><span class="fontstyle0">1、对高价的看法</span> </strong></h2>
+<p><span class="fontstyle0">与任何技术一样</span><span class="fontstyle1">， </span><span class="fontstyle0">电池储能并不总是经济的</span><span class="fontstyle1">， </span><span class="fontstyle0">而且对于特定应用来说</span><span class="fontstyle1">， </span><span class="fontstyle0">其成本往往过高</span><span class="fontstyle1">。 </span><span class="fontstyle0">但这是意料之中的事</span><span class="fontstyle1">。 </span><span class="fontstyle0">问题就在于</span><span class="fontstyle1">， </span><span class="fontstyle0">若对于高成本的看法不准确</span><span class="fontstyle1">， </span><span class="fontstyle0">则可能会在考虑储能解决方案时将电池储能排除在外</span><span class="fontstyle1">。 </span><span class="fontstyle0">成本飞速地下降</span><span class="fontstyle1">， </span><span class="fontstyle0">以至于决策者对系统价格的看法可能已经过时</span><span class="fontstyle1">， </span><span class="fontstyle0">他们会认为电池的成本仍然和几年前</span><span class="fontstyle1">， </span><span class="fontstyle0">或者甚至六个月前一样</span><span class="fontstyle1">。 </span><span class="fontstyle0">以最近的</span><span class="fontstyle3">Xcel Energy</span><span class="fontstyle0">招标为例</span><span class="fontstyle1">， </span><span class="fontstyle0">它戏剧性地说明了电池价格的下降程度及其对整个系统成本所产生的影响</span><span class="fontstyle1">， </span><span class="fontstyle0">此次招标的最终结果是太阳能</span><span class="fontstyle1">—</span><span class="fontstyle3">PV</span><span class="fontstyle0">加电池的平均价格为</span><span class="fontstyle0">美元</span><span class="fontstyle3">/MWh</span><span class="fontstyle1">， </span><span class="fontstyle0">而风能加电池的平均价格则为</span><span class="fontstyle3">21</span><span class="fontstyle0">美元</span><span class="fontstyle3">/MWh</span><span class="fontstyle1">。 </span><span class="fontstyle0">虽然太阳能</span><span class="fontstyle3">+</span><span class="fontstyle0">电池价格在美国创下了新的记录</span><span class="fontstyle1">， </span><span class="fontstyle0">但这种情况可能并不会持续太久</span><span class="fontstyle1">。 </span></p>
+<p><span class="fontstyle0">据预计</span><span class="fontstyle1">， </span><span class="fontstyle0">无论是电池技术本身的成本</span><span class="fontstyle1">， </span><span class="fontstyle0">还是平衡系统组件的成本</span><span class="fontstyle1">， </span><span class="fontstyle0">其价格都将持续下跌</span><span class="fontstyle1">。 </span><span class="fontstyle0">虽然这些基础技术并不像人们关注的技术那样引人注目</span><span class="fontstyle1">， </span><span class="fontstyle0">但它们却确实与电池本身一样重要</span><span class="fontstyle1">， </span><span class="fontstyle0">它们可能代表着下一波成本大幅度降低的浪潮</span><span class="fontstyle1">。 </span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle0">逆变器是储能项目的</span><span class="fontstyle1">“</span><span class="fontstyle0">大脑</span><span class="fontstyle1">”， </span><span class="fontstyle0">它们对项目绩效和回报的影响作用是显著的</span><span class="fontstyle1">。 </span><span class="fontstyle0">然而</span><span class="fontstyle1">， </span><span class="fontstyle0">根据</span><span class="fontstyle3">GTM Research</span><span class="fontstyle0">的最新报告显示</span><span class="fontstyle1">， </span><span class="fontstyle0">逆变器市场仍然是</span><span class="fontstyle1">“</span><span class="fontstyle0">新生的和零散的</span><span class="fontstyle1">， </span><span class="fontstyle0">同时充满了支持各种应用和功能的新产品</span><span class="fontstyle1">”。 </span><span class="fontstyle0">因此</span><span class="fontstyle1">， </span><span class="fontstyle0">随着市场不断成熟以及市场前景的巩固</span><span class="fontstyle1">， </span><span class="fontstyle0">储能逆变器的价格有望在未来几年内下降</span><span class="fontstyle1">。</span></p>
+<h2><strong><span class="fontstyle0">2、缺乏标准化</span> </strong></h2>
+<p><span class="fontstyle0">早期市场的参与者常常不得不应对各种各样的技术要求</span><strong><span class="fontstyle1">、</span></strong> <span class="fontstyle0">经历各种不同的过程</span><span class="fontstyle1">、 </span><span class="fontstyle0">享受各种不同的政策</span><span class="fontstyle1">。 </span><span class="fontstyle0">电池供应商也不例外</span><span class="fontstyle1">。 </span><span class="fontstyle0">这种差距无疑增加了整个价值链的复杂性和成本</span><span class="fontstyle1">， </span><span class="fontstyle0">使得缺乏标准化成为作出进一步部署的重要障碍</span><span class="fontstyle1">。 </span><span class="fontstyle0">由于存在与电池有关的</span><span class="fontstyle1">“</span><span class="fontstyle0">电量平衡</span><span class="fontstyle1">” </span><span class="fontstyle0">问题</span><span class="fontstyle1">， </span><span class="fontstyle0">所以标准化对于电池储能的扩散来说可能尤为重要</span><span class="fontstyle1">。 </span><span class="fontstyle0">换句话说</span><span class="fontstyle1">， </span><span class="fontstyle0">电池不能过度泄电</span><span class="fontstyle1">， </span><span class="fontstyle0">否则会损坏电池本身</span><span class="fontstyle1">； </span><span class="fontstyle0">网络运营商需要知道电池在给定时间里还剩下多少</span><span class="fontstyle1">“</span><span class="fontstyle0">电量</span><span class="fontstyle1">”； </span><span class="fontstyle0">充电</span><span class="fontstyle3">/</span><span class="fontstyle0">循环时间取决于所使用的电池类型</span><span class="fontstyle1">（</span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle0">液态或固态锂离子电池</span><span class="fontstyle1">）。</span></p>
+<h2><strong><span class="fontstyle0">3、过时的监管政策和市场设计</span> </strong></h2>
+<p><span class="fontstyle0">正如可以预见新兴技术的出现一样</span><span class="fontstyle1">， </span><span class="fontstyle0">同样可以预测到监管政策正在落后于当今存在的储能技术</span><span class="fontstyle1">。 </span><span class="fontstyle0">由爱迪生电气研究所代表美国投资者所拥有的电力公司而发出的声明总结了这种情况</span><span class="fontstyle1">：“</span><span class="fontstyle0">许多公共政策和法规必须加以更新</span><span class="fontstyle1">， </span><span class="fontstyle0">以鼓励作出储能部署</span><span class="fontstyle1">。 </span><span class="fontstyle0">现行政策是在开发新的储能形式之前制定的</span><span class="fontstyle1">， </span><span class="fontstyle0">这些旧政策不承认储能系统的灵活性</span><span class="fontstyle1">， </span><span class="fontstyle0">也不允许它们之间存在一个公平的竞争环境</span><span class="fontstyle1">。” </span><span class="fontstyle0">对于一个可能需要作出变更的监管结构来说</span><span class="fontstyle1">， </span><span class="fontstyle0">其需要将储能定义为发电</span><span class="fontstyle1">、 </span><span class="fontstyle0">负荷</span><span class="fontstyle1">、 </span><span class="fontstyle0">输电或配电基础设施</span><span class="fontstyle1">， </span><span class="fontstyle0">以便优化对于这种</span><span class="fontstyle1">“</span><span class="fontstyle0">唯一灵活的资源</span><span class="fontstyle1">” </span><span class="fontstyle0">的使用</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">对于监管机构和系统运营商来说</span><span class="fontstyle1">， </span><span class="fontstyle0">滞后政策并不新鲜</span><span class="fontstyle1">。 </span><span class="fontstyle0">如前所述</span><span class="fontstyle1">， </span><span class="fontstyle0">许多政策都正在更新辅助服务市场规则</span><span class="fontstyle1">， </span><span class="fontstyle0">以支持储能部署</span><span class="fontstyle1">。 </span><span class="fontstyle0">电池储能系统增强电网灵活性和可靠性的能力得到了充分的证明</span><span class="fontstyle1">， </span><span class="fontstyle0">这也许就是监管机构倾向于首先关注批发市场的原因</span><span class="fontstyle1">。 </span><span class="fontstyle0">同时需要更新的还有零售规则</span><span class="fontstyle1">， </span><span class="fontstyle0">并以此引起住宅和</span><span class="fontstyle3">C&amp;I</span><span class="fontstyle0">消费者对储能系统的兴趣</span><span class="fontstyle1">。 </span></p>
+<p><span class="fontstyle0">迄今为止</span><span class="fontstyle1">， </span><span class="fontstyle0">在这一领域的讨论主要是关于针对智能电表实施的阶梯式或结构化分时费率</span><span class="fontstyle1">。 </span><span class="fontstyle0">不实施阶梯式费率</span><span class="fontstyle1">， </span><span class="fontstyle0">电池储能就失去了它最吸引人的特性之一</span><span class="fontstyle1">： </span><span class="fontstyle0">即在价格便宜的时候储存电能来促进利率套利</span><span class="fontstyle1">， </span><span class="fontstyle0">然后在价格昂贵时售出</span><span class="fontstyle1">。 </span><span class="fontstyle0">虽然分时费率还未成为全球潮流</span><span class="fontstyle1">， </span><span class="fontstyle0">但随着智能电表在许多国家首推完成</span><span class="fontstyle1">， </span><span class="fontstyle0">这种情况可能会迅速改</span><span class="fontstyle0">变</span><span class="fontstyle1">。 </span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle0">英国的政策制定者已经制定了一些基本分时电价</span><span class="fontstyle1">， </span><span class="fontstyle0">基于七到十个非高峰时间进行设计</span><span class="fontstyle1">， </span><span class="fontstyle0">且主要是在夜间</span><span class="fontstyle1">。 </span><span class="fontstyle3">62</span><span class="fontstyle0">随着</span><span class="fontstyle3">2020</span><span class="fontstyle0">年全国范围内智能电表的全面推出</span><span class="fontstyle1">， </span><span class="fontstyle0">这些电价政策会愈加完善</span><span class="fontstyle1">， </span><span class="fontstyle0">并在未来得到更广泛的使用</span><span class="fontstyle1">。 </span></p>
+<h2><strong><span class="fontstyle0">4、</span></strong><strong><span class="fontstyle0">储能的不完全定义</span> </strong></h2>
+<p><span class="fontstyle0">储能的应用过程中有一个挥之不去的障碍</span><span class="fontstyle1">， </span><span class="fontstyle0">即对电池储能解决方案的各种应用</span><span class="fontstyle1">、 </span><span class="fontstyle0">如何分配价值</span><span class="fontstyle1">、 </span><span class="fontstyle0">如何补偿供应商并不完全了解</span><span class="fontstyle1">。 </span><span class="fontstyle0">换句话说</span><span class="fontstyle1">， </span><span class="fontstyle0">储能正面临身份危机</span><span class="fontstyle1">， </span><span class="fontstyle0">所以世界各地的利益相关者和政策制定者都在努力研究如何定义速效电池储能</span><span class="fontstyle1">。 </span><span class="fontstyle0">显然</span><span class="fontstyle1">， </span><span class="fontstyle0">这并不容易</span><span class="fontstyle1">。 </span><span class="fontstyle0">例如</span><span class="fontstyle1">， </span><span class="fontstyle0">落基山研究所</span><span class="fontstyle1">（</span><span class="fontstyle3">RMI</span><span class="fontstyle1">） </span><span class="fontstyle0">仅仅是针对三个客户细分的储能就识别出了</span><span class="fontstyle3">13</span><span class="fontstyle0">种价值流</span><span class="fontstyle1">—</span><span class="fontstyle0">然而这还只是众多客户细分中的一种</span><span class="fontstyle1">（</span><span class="fontstyle0">见下图</span><span class="fontstyle1">）。</span></p>
+<p><img class="alignnone size-full wp-image-139635" src="http://oss.zhidx.com/uploads/2019/01/2_副本-1.jpg" alt="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" width="800" height="681" srcset="http://oss.zhidx.com/uploads/2019/01/2_副本-1.jpg 800w, http://oss.zhidx.com/uploads/2019/01/2_副本-1.jpg?x-oss-process=image/resize,m_fill,w_352,h_300 352w, http://oss.zhidx.com/uploads/2019/01/2_副本-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_654 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲<span class="fontstyle0">储能价值流</span></p>
+<p><span class="fontstyle0">在全球范围内</span><span class="fontstyle1">，</span><span class="fontstyle0">电池储能最常见的用途是频率调节</span><span class="fontstyle1">， </span><span class="fontstyle0">其次是备用容量</span><span class="fontstyle1">、</span><span class="fontstyle0">电费管理和能源时间迁移</span> 。</p>
+<p><img class="alignnone size-full wp-image-139636" src="http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg" alt="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" width="800" height="748" srcset="http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg 800w, http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg?x-oss-process=image/resize,m_fill,w_321,h_300 321w, http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_718 768w, http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg?x-oss-process=image/resize,m_fill,w_140,h_130 140w, http://oss.zhidx.com/uploads/2019/01/3_副本-1.jpg?x-oss-process=image/resize,m_fill,w_60,h_57 60w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲<span class="fontstyle0">全球电池储能容量主要用途分布</span></p>
+<h1><span class="fontstyle0">三、储能供应商关注的焦点</span></h1>
+<p><span class="fontstyle0">随着赞成收入叠加的呼声越来越大</span><span class="fontstyle1">， </span><span class="fontstyle0">监管机构一般都倾向于更好地定义储能</span><span class="fontstyle1">， </span><span class="fontstyle0">向新参与者开放市场</span><span class="fontstyle1">，</span><span class="fontstyle0">并最终针对多个价值流提供补偿</span><span class="fontstyle1">。 </span><span class="fontstyle0">然而</span><span class="fontstyle1">， </span><span class="fontstyle0">重新设计零售和电力批发市场可能需要数年时间</span><span class="fontstyle1">， </span><span class="fontstyle0">这使得储能供应商不得不寻找能在此期间获得增值和发展的方式</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">一些储能供应商在寻找输配电递延的方法</span><span class="fontstyle1">， </span><span class="fontstyle0">比如亚利桑那州公共服务公司和</span><span class="fontstyle3">AES</span><span class="fontstyle0">储能公司</span><span class="fontstyle1">（</span><span class="fontstyle0">现在的</span><span class="fontstyle3">Fluence</span><span class="fontstyle1">） </span><span class="fontstyle0">最近提出的</span><span class="fontstyle3">8MWh</span><span class="fontstyle0">电池组方案</span><span class="fontstyle1">。 </span><span class="fontstyle0">据预计只需</span><span class="fontstyle3">12</span><span class="fontstyle0">至</span><span class="fontstyle3">15</span><span class="fontstyle0">个月进行规划和实施</span><span class="fontstyle1">， </span><span class="fontstyle0">该系统将部署在凤凰城东北部的一个社区里</span><span class="fontstyle1">， </span><span class="fontstyle0">作为构建一条长</span><span class="fontstyle3">20</span><span class="fontstyle0">英里的输电线路的一种快速且经济有效的替代方案</span><span class="fontstyle1">。 </span><span class="fontstyle0">其他储能供应商则正专注于诸如数据中心这样的利基</span><span class="fontstyle1">、 </span><span class="fontstyle0">高增长领域</span><span class="fontstyle1">， </span><span class="fontstyle0">另有一部分供应商则看到了将储能作为微电网一部分的可能</span><span class="fontstyle1">。 </span><span class="fontstyle0">气候变化和来自相比较而言更加严重的风暴的影响导致了对后者的紧迫诉求</span><span class="fontstyle1">， </span><span class="fontstyle0">储能公司在对遭受飓风蹂躏的加勒比岛的电力基础设施进行重建和升级方面发挥了重要的作用</span><span class="fontstyle1">， </span><span class="fontstyle0">这两个方面都是为了在短期内提供紧急电力</span><span class="fontstyle1">， </span><span class="fontstyle0">以及从长远来看提供更强大的系统复原力</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">在其他地方</span><span class="fontstyle1">， </span><span class="fontstyle0">创业公司则正在把重点放在住宅用储能的电表后端系统</span><span class="fontstyle1">， </span><span class="fontstyle0">但这也适用于同一概念</span><span class="fontstyle1">： </span><span class="fontstyle0">即集成一组电池或太阳能</span><span class="fontstyle3">+</span><span class="fontstyle0">储能系统</span><span class="fontstyle1">， </span><span class="fontstyle0">以此向电网提供服务或参与能源交易</span><span class="fontstyle1">。 </span><span class="fontstyle0">欧洲的几个参与者目前正在探索不同类型的集成模式</span><span class="fontstyle1">， </span><span class="fontstyle0">并可能让住宅储能变得更加可行</span><span class="fontstyle1">。 </span><span class="fontstyle0">在英国</span><span class="fontstyle1">， </span><span class="fontstyle0">当地的参与者</span><span class="fontstyle3">Moixa</span><span class="fontstyle0">提出了一个</span><span class="fontstyle1">“</span><span class="fontstyle0">共享电网</span><span class="fontstyle1">” </span><span class="fontstyle0">计划</span><span class="fontstyle1">， </span><span class="fontstyle0">通过资格审查的电池储能客户可以注册并获得现金</span><span class="fontstyle1">， </span><span class="fontstyle0">据此计划</span><span class="fontstyle1">， </span><span class="fontstyle0">该公司能够智能地管理他们的电池</span><span class="fontstyle1">， </span><span class="fontstyle0">以助其平衡电网</span><span class="fontstyle1">。 </span><span class="fontstyle0">正如该公司的网站所解释的那样</span><span class="fontstyle1">， </span><span class="fontstyle0">共享电网</span><span class="fontstyle1">“</span><span class="fontstyle0">每一个</span><span class="fontstyle3">Moixa</span><span class="fontstyle0">电池都内置有智能大脑用以组合每个用户所储存的能源</span><span class="fontstyle1">（</span><span class="fontstyle0">或备用容量</span><span class="fontstyle1">）”。 </span><span class="fontstyle0">参与者通常通过固定年费或收入总额的一部分获得奖励</span><span class="fontstyle1">。” </span></p>
+<p><span class="fontstyle0">由于每个电动汽车都包含一个电池</span><span class="fontstyle1">， </span><span class="fontstyle0">而且都可能会与其他电池集合以提供电网服务</span><span class="fontstyle1">， </span><span class="fontstyle0">电池集成的潜力与不断扩大的电动汽车市场相互交织</span><span class="fontstyle1">， </span><span class="fontstyle0">因此其发展潜力巨大</span><span class="fontstyle1">。 </span><span class="fontstyle0">主要服务于德国和荷兰的欧洲输电系统运营商</span><span class="fontstyle3">TenneT</span><span class="fontstyle0">正在探索将电动车灵活的容量整合到电网中的方法</span><span class="fontstyle1">。 </span><span class="fontstyle0">在荷兰的一个试点项目中</span><span class="fontstyle1">， </span><span class="fontstyle0">可再生能源公司</span><span class="fontstyle3">Vandebron</span><span class="fontstyle0">将与拥有电动汽车的客户合作</span><span class="fontstyle1">， </span><span class="fontstyle0">通过客户提供的汽车电池容量帮助</span><span class="fontstyle3">TenneT</span><span class="fontstyle0">平衡电网</span><span class="fontstyle1">。 </span><span class="fontstyle0">这一努力被认为是开创性的</span><span class="fontstyle1">， </span><span class="fontstyle0">因为它新颖地使用了区块链技术来创建一个具有高度响应能力的</span><span class="fontstyle1">、 </span><span class="fontstyle0">获许可的网络</span><span class="fontstyle1">。 </span><span class="fontstyle0">该区块链通常与直接交易平台相关联</span><span class="fontstyle1">， </span><span class="fontstyle0">并通常用作虚拟分类账</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">它记录了一份不断增加的交易清单</span><span class="fontstyle1">， </span><span class="fontstyle0">这些交易清单通常会使用加密技术同时进行链接与实施保护</span><span class="fontstyle1">。 </span><span class="fontstyle0">在这种情况下</span><span class="fontstyle1">， </span><span class="fontstyle0">区块链会跟踪每一辆汽车电池的可用性</span><span class="fontstyle1">， </span><span class="fontstyle0">并记录其响应电网运营商信号的行为和反应</span><span class="fontstyle1">。 </span><span class="fontstyle0">这使得电池每一次只需要几秒钟的时间</span><span class="fontstyle1">， </span><span class="fontstyle0">就能在不影响用户为其汽车充电的能力的情况下</span><span class="fontstyle1">， </span><span class="fontstyle0">对电网的变化作出精确的响应</span><span class="fontstyle1">。</span><span class="fontstyle3">TenneT</span><span class="fontstyle0">同时还与德国住宅用电池储能供应商</span><span class="fontstyle3">Sonnen</span><span class="fontstyle0">集团合作</span><span class="fontstyle1">， </span><span class="fontstyle0">对一个类似的住宅用太阳能电池区块链网络进行试验</span><span class="fontstyle1">。 </span><span class="fontstyle0">数字技术的进步也为电力消费者直接参与能源部门打开了大门</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle0">有几家公司正在尝试使用支持区块链对等网络</span><span class="fontstyle1">（</span><span class="fontstyle3">P2P</span><span class="fontstyle1">） </span><span class="fontstyle0">交易平台</span><span class="fontstyle1">， </span><span class="fontstyle0">为房主或企业之间直接共享储能和</span><span class="fontstyle3">/</span><span class="fontstyle0">或自发电力提供了便利</span><span class="fontstyle1">。 </span><span class="fontstyle0">参加纽约</span><span class="fontstyle1">、</span><span class="fontstyle0">澳大利亚</span><span class="fontstyle1">、 </span><span class="fontstyle0">德国和孟加拉国等地试点项目的家庭现在可以通过区块链平台和微电网管理系统</span><span class="fontstyle1">（</span><span class="fontstyle0">大多有存储组件</span><span class="fontstyle1">） </span><span class="fontstyle0">进行少量的绿色电力交易</span><span class="fontstyle1">。 </span><span class="fontstyle3">92</span><span class="fontstyle0">这些技术的发展共同指出了能源</span><span class="fontstyle1">“</span><span class="fontstyle0">云</span><span class="fontstyle1">” </span><span class="fontstyle0">环境出现的潜在可能</span><span class="fontstyle1">， </span><span class="fontstyle0">在这种环境中</span><span class="fontstyle1">， </span><span class="fontstyle0">无需担心有中间商</span><span class="fontstyle1">， </span><span class="fontstyle0">所有用户可以按需获取共享的能源并进行交易</span><span class="fontstyle1">。</span></p>
+<p><strong>智东西</strong>认为，近些年，随着<span class="fontstyle0">人工智能</span><span class="fontstyle1">、 </span><span class="fontstyle0">预测分析和区块链等相邻数字技术的飞跃正在成倍地扩展电池储能部署的用途</span><span class="fontstyle1">、 </span><span class="fontstyle0">增加其效益</span><span class="fontstyle1">。 </span><span class="fontstyle0">这些相辅相成的机制</span><span class="fontstyle1">，</span><span class="fontstyle0">不仅仅改善了电池性能和成本，并使得电池储能这一概念逐渐成为现实。虽然<span class="fontstyle1">“</span>储能<span class="fontstyle1">” </span>和<span class="fontstyle1">“</span>可再生能源<span class="fontstyle1">” </span>经常出现在同一句话中<span class="fontstyle1">， </span>但储能不仅仅是将间歇性风力和太阳能输出结合起来<span class="fontstyle1">： </span>电池储能解决方案可以进行快速部署<span class="fontstyle1">， </span>精确定位<span class="fontstyle1">， </span>它可以提高整个电网的效率和复原力<span class="fontstyle1">， </span>而无论发电源是什么<span class="fontstyle1">。 </span>这使得储能这一概念更加引人入胜<span class="fontstyle1">。</span></span></p>
+<p><strong>下载提醒：如果想收藏本文的报告全文，</strong><strong>可以在智东西（公众号：zhidxcom）回复关键词“nc315”获取。</strong></p>
+<h2 style="text-align: center;"><strong>智能内参</strong></h2>
+<p style="text-align: center;"><strong>权威数据·专业解读 读懂智能行业必看的报告</strong></p>
+<p style="text-align: center;">在智东西回复“智能内参”查看全部报告</p>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139631'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139631">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>10</span>
+                </div>
+                <div class="social-share" data-title="爆发的电池储能市场真相！年销量将超260亿美元【附下载】| 智东西内参" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+                        </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139631">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139631">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>180多岁的宝洁：怎么弄丢了中国消费者？ : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">180多岁的宝洁：怎么弄丢了中国消费者？</h1>
+			<input type="hidden" value="605132" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/shuijinmao/" class="post-author">水晶猫</a>&nbsp;
+				<span class="post-date">01月02日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15463989468884.jpg?imageView2/2/w/760" alt="180多岁的宝洁：怎么弄丢了中国消费者？">
+				</div>
+								<p>金梅&nbsp;|&nbsp;作者</p><p>世红 |&nbsp;编辑</p><p>180岁的宝洁30年前进入中国的第一个部门就是“消费者市场研究部门”，而今宝洁风光不再，其大中华区总裁发文称“赢回中国市场，要从了解消费者开始”，这30年宝洁怎么弄丢了中国消费者？</p><p>宝洁一度是日化行业的代名词，在过去的很长时间里，宝洁公司一直牢牢占据着中国日化市场的头把交椅，然而随着中国日用市场的不断增长，昔日霸主反而江河日下，风光不再。</p><p>最近几年关于宝洁的好消息甚少，反而类似“跌落神坛”“谁杀死了宝洁”的报道随处可见，其产品的市场份额在全球多个国家都有不同程度下滑，200多个品牌死了几乎一半。最糟糕的时刻可能出现在2016财年，宝洁当年的销售额为653亿美元，利润为134亿美元，这一数字甚至不及10年前——2006财年，宝洁全年销售额已达到682亿美元，利润139亿美元。</p><p>宝洁管培生项目培养了中国第一批职业经理人，曾经被称为快消界的“黄埔军校”。而今，宝洁也不再是择业者最期待的offer，对人才的吸引力下降也象征了宝洁的失守。</p><p>今年是宝洁进入中国30年，从了解中国消费者开始的宝洁，历经30年，其大中华区总裁马睿思开始反思，他们不了解中国消费者。作为拥有上百年品牌管理和成功营销经验的宝洁为何会在今天屡屡失误，坐失大片阵地？从神话到跌落神坛，宝洁怎么了？马睿思的“方子”能让宝洁夺回消费者么？</p><p>1</p><p>品牌教父的诞生</p><p>1837年，英格兰移民威廉·波克特和爱尔兰移民詹姆斯·甘保合伙共同生产销售肥皂和蜡烛，两方各出资3596.47美元，在辛辛那提市成立宝洁公司（Procter&amp;Galnble，以两个合伙人的名字命名）。宝洁公司经营的产品品类主要有：洗发护发用品、护肤美容品、个人清洁用品、口腔护理用品、妇女保健用品、婴儿护理用品、织物家居护理用品、食品等8个产品大类。每个产品分类又有多个品牌。&nbsp;</p><p>在创立之初（1837年到1890年），宝洁公司只是一个生产蜡烛和肥皂的小作坊。就在这个时期，宝洁生产出了一个标志性的产品——象牙香皂，这个产品因为其如象牙般纯白的外形颜色和温和的质地以及可以在水面上漂浮的特性在杂志上被广为宣传。象牙香皂的畅销使得宝洁意识到产品研发和品牌建设的重要性，并打开了自己的市场营销途径。1890年，宝洁公司成立了历史上第一个企业研发中心。</p><p>第二阶段（1890年到1945年），在象牙香皂取得成功的基础上，宝洁开始品牌管理。宝洁设立了专门的消费者研究部门，研究不同消费者的喜好，并销售三十多种的香皂和肥皂，形成了多品牌战略的雏形。到1931年，品牌管理在宝洁公司己经成为制度化、正式化的管理模式。1937年，伴随着电视的诞生，保洁开始投放电视广告，“肥皂剧”的名称由此而来。在销售渠道上，宝洁也改变了以往的杂货店运作模式，从批发商季度购买转变成直接向零售商出售商品。</p><p>在第三阶段（1945年到1980年），宝洁开始了大规模的公司收购步伐和向全球进军的计划。宝洁从成立伊始就十分重视技术研发，当时推出的汰渍品牌是宝洁继象牙皂的象牙牌之后最受欢迎的产品。除了肥皂外，保洁还开始涉足婴儿纸尿裤，纸巾类产品，牙膏和织物柔顺剂，并开始生产食品进军咖啡市场，通过不断地向外收购，公司业务范围不断扩大，并且在海外建立了分公司。截止到1980年宝洁的业务范围已经发展到23个国家，这一时期宝洁的品牌家族已经初具规模，佳洁士品牌成为首例得到美国牙防协会认证的牙膏品牌。</p><p>在第四阶段（1980年以后），宝洁继续收购进程，不断扩大业务范围，也开始了对现有的其他公司的品牌收购。在这个时期宝洁不只利用媒体渠道进行传播推广，开始出现品牌宣传活动，运用多元化的品牌传播方式。同时，在产品渠道方面，宝洁与沃尔玛联手建立“宝玛模式”，这种强强联合的营销手段，由分销转变为直销，有力地改善了宝洁传统产品渠道的不足之处。&nbsp;</p><p>宝洁是全球第一个经营多品牌战略的企业，开创了行业内的许多次潮流，因此又被世人奉为“多品牌教父”，最高时期拥有300多个品牌和25个十亿美元品牌（包括帮宝适、吉列、汰渍、碧浪、Downy、潘婷、海飞丝、玉兰油、欧乐B、佳洁士、Dawn、Fairy和护舒宝），宝洁公司的分公司分布在全球一百六十多个国家。</p><p>宝洁首创“品牌管理系统”，成为20世纪最具创造性的营销史诗，它让宝洁在营销界名垂青史，获得了品牌教父的称号。其基本原则是：像管理公司一样来管理品牌。宝洁公司将不同产品分化成各自独立的品牌，形成了一个强大的多品牌战略。品牌在以消费者研究为核心的基础上，通过对消费者、市场渠道、国家和行业的研究，为品牌战略的决策、模式选择、识别、延伸、管理等提供保障。</p><p>宝洁一直采取“最优猜测定价”的定价策略，这种定价策略十分灵活，能够适应市场反应并迅速调整。例如，宝洁公司首次推广“帮宝适”纸尿裤时，定价为10美分，市场反应冷淡，宝洁就迅速调整了生产线，降低成本后将价格定位6美分从而获得了很好的市场效果。180年的完善和发展逐渐造就了繁荣的宝洁。</p><p>2</p><p>进入中国市场的辉煌与折戟</p><p>1988年，宝洁公司以每瓶十九元的海飞丝洗发水叩开了中国市场的大门，在海飞丝大获成功后，宝洁公司又将其旗下同属于美发系列的飘柔和潘婷也引进中国，再之后，宝洁公司率领旗下的美容护肤系列Olay、SK-II等进入中国，很快占领了中国高端消费市场的高地。</p><p>宝洁进入中国之初，正是中国经济快速发展、渴望引进外资的时期，国民对商品的品质和种类的追求正在增加。宝洁公司作为百年跨国公司，拥有成熟的管理体系，先进的研发、生产技术与设备，领先行业的品牌管理系统、消费者研究经验及营销模式，构成了行业的垄断优势。在国家给予外资的优惠政策的帮助下，顺利在广州开办宝洁中国分公司。</p><p>宝洁进驻中国的第一个部门是最核心的消费者市场研究部门，这是宝洁公司的多品牌战略发展“军师”。该部门从消费者行为的历史数据和对商业的深入理解出发，来对行业和公司的未来发展作出预测，为公司取得成功保驾护航。</p><p>宝洁对消费者进行全方位的调查研究后，以准确的品牌定位确立品牌的核心价值，并绝不轻易更改，然后以品牌的核心价值为基点开展一切品牌营销活动。例如，舒肤佳的品牌核心价值是“有效除细菌、保持家人健康”，这也是舒肤佳保持了多年的品牌宣传主题。宝洁公司的广告往往不以别出心裁的创新性取胜，其始终不变的是宣传产品功用和品牌文化，突出品牌核心价值，促销效果显著。不相信品牌周期理论的宝洁，以创造永久性品牌作为自己的品牌理念。&nbsp;</p><p>针对不同的目标市场，宝洁推出不同产品的不同品牌，而且品牌的经营管理和相关活动都具有相对的独立性和自主性。利用品牌之间功能、特性的差别赢得了不同需求和生活品位的消费者，宝洁获得更多的经销商货位以及更大的市场份额。宝洁公司在中国市场先后就洗发水产品推出了海飞丝、飘柔、潘婷、沙宣、伊卡璐等五大品牌。</p><p>发现和制造痛点和需求并去满足他，宝洁通过为产品注入更多的知识含量，增加了品牌好感度，成功实现促销目的。宝洁让消费者认为每一个品牌都具有一种用途，能够满足消费者的一种需求。如：“飘柔”的特性功能是让头发如丝一般柔软顺滑，“海飞丝”的主打功能就是去头屑，而“潘婷”则主打修复受损的头发，“沙宣”是对标欧莱雅的专业沙龙产品，“伊卡璐”则是草本芬芳为卖点。宝洁公司就是在这种理念的指引下，通过多品牌营销战略在日化产业的各个领域中拥有了极高的市场占有率。</p><p>宝洁公司还坚持不同品牌间要形成营销资源和经验的共享，这也是宝洁成功的秘诀之一。飘柔、潘婷、玉兰油、帮宝适这些子品牌的成功，最重要的原因是其背后无比强大的公司品牌宝洁的支撑，使这些品牌具有更为优质的品牌形象。宝洁对其众多子品牌的重点诉求是突出产品特点和品牌健康积极的形象，正是宝洁各个子品牌的成功最终造就了更加成功优质的公司品牌。</p><p>宝洁一度是日化行业的代名词，在过去的很长时间里，宝洁公司一直牢牢占据着中国日化市场的头把交椅。十年前，宝洁公司旗下的玉兰油、飘柔、碧浪和舒肤佳在各大主流榜单中被评为护肤品、护发品、洗衣粉和香皂四种日用化学品中的第一位，然而随着中国日用化学品市场的不断增长，昔日霸主反而面临着核心品牌优势流失，弱势品牌销售低迷，朝不保夕的困境。</p><p>3</p><p>宝洁怎么弄丢了中国消费者？</p><p>关于宝洁的没落，宝洁大中华区总裁马睿思认为要从深入了解消费者开始，对此他做出了几项改革：“我们的第一个改变是要基于消费者变化的创新，也就是带来更多的高端创新，并确保我们所有的研发都是针对消费者的。第二是改变我们与消费者的沟通方式。第三个改变是中国本土市场营销策略的开发。最后，我们还想确保自己追随消费者的脚步，并保证在这方面足够的投入。”</p><p>他说想要保持谦逊，重新认识中国，重新赢回中国消费者。这位总裁真的了解中国么？他给宝洁开的药方是否对症呢？</p><p><strong>宝洁的失败是不够高端么？</strong>&nbsp;</p><p>毋庸置疑在品牌提升的道路上，宝洁走得很吃力。2013年，飘柔推出升级产品，光是前期的市场费用就投入了上亿元，但是第一年的销售数据没能达到预期的一半。2015年，潘婷升级产品PRO-V系列，同样溃败。玉兰油的“妈妈品牌”身份也难以被甩掉。难道宝洁面对的仅仅是“上不去”之痛么？</p><p>中国的日化护肤品类市场中，虽然欧莱雅、资生堂、雅诗兰黛等外资企业仍然占据着行业前列，但一大批本土品牌如珀莱雅、丸美、韩束，以及御泥坊、一叶子等淘品牌微商品牌也在迅速崛起。这些品牌的成功可见宝洁的问题不只是“上不去”，而更严峻的挑战是“下不来”。</p><p>尽管宝洁十余年来一直在喊渠道下沉，但这个“老外”却没有真正找到适合中国农村市场的本土化调整方案。通过数次下乡，再加上大规模的电视广告攻势，宝洁基本上在消费者中树立了品牌形象。然而，宝洁的乡村开拓仍然困难重重，究其原因，症结仍在渠道动力不足和价格偏高两方面。</p><p>飘柔推出的9.9元装尽管已经很优惠了，但跟“蜂花”、“拉芳”等从3.5元到6.5元的价格比就没有优势了，降价还损伤了自己的品牌形象，加剧了品牌提升的困难度。在护肤品市场，宝洁同样没有对应阶层的产品。</p><p>宝洁依靠自己“专有”的三四百家分销网络和广告攻势，成为了“龙头产品”，但宝洁没有想到因此自己成了价格“牺牲品”。为了表明自己商店的产品价格低廉，宝洁成了靶子。国内二三线品牌的崛起，与这种情形也不无关系。</p><p>中国地域的广阔性，发展的多元性是宝洁没有做好准备的。“下沉”上做的不好的宝洁，甚至开始了“收网”。国内大型商超的崛起，让宝洁认为中国会走上美国的路子，零售店面逐渐消失。于是展开“宝洁分销商2005计划”，削减一些处于边缘的小分销商，只留下与宝洁配合最好、最密切的大型分销商。自断根基的宝洁想要“下的去”就很难了，宝洁的销售量也一度大幅萎缩。</p><p><strong>宝洁该怎么改变与消费者的沟通方式？</strong></p><p>在中国，宝洁是电视广告大金主是不争的事实，我们都是看着宝洁的广告长大的。1998年，宝洁在全球的广告投放额就达到30亿美元左右，约占其每年销售额的1/10，并且在逐年提高。2015财年，宝洁公司削减了近七亿美元的营销费用，但其营销费用仍然处于82亿美元，排名全球第一。</p><p>凭借其雄厚的资本和高超的广告运作手法，以总体天文数字般的广告投放额、相对集中投放、高端媒体投放、30秒长广告情节展示式投放，快速占领舆论高地（宝洁虽然在资本实力方面比联合利华稍逊色，但在华竞争中一直处于优势）。</p><p>宝洁在电视广告的路上走得太远，而没能及时掉头。近年来，日化市场的渠道发生了巨大的变革。互联网电子商务等新渠道的兴起，并迅速占领市场，而传统渠道却在无可奈何的萎缩。微商、跨境电商的火爆，宝洁都没有及时跟上。</p><p>在各品牌新的营销玩法大放光彩的时候，宝洁却不知去处。比如，YSL赞助韩剧《来自星星的你》播出后女主角的口红销量大增，甚至出现全球卖断货的奇景，曾经因销量不佳而退出中国市场的YSL，2015年高调回归。《欢乐颂》中香飘飘、宜信财富等的植入效果都远超预期。还有一个啼笑皆非的案例，电视剧提到红星公司将会被溢价收购，导致A股市场中唯一带有红星二字的红星发展在没有任何利好的消息下连续涨停了三个交易日，营销的效果可见一斑。&nbsp;</p><p>宝洁在新媒体上的发力尽管晚了一些，但并不是没有过成功。护舒宝广告短片《Like A Girl》采取纪录片的形式倡导女性勇敢做自己获得了许多广告界的金奖，SK-II大龄剩女的短片同样得到了很好的反响。但要点燃互联网，宝洁还有很长的路要走。</p><p>主动的新媒体参与固然重要，但危机面前的公关能力也是品牌生死存亡的大事。2006年9月，“SK-II”品牌金属门，宝洁舆情处理不及时，专柜退货的危机公关要求苛刻，门槛极高，引起众怒后，即单方面停止退货，宝洁傲慢、被动的危机公关让“SK-II”元气大伤，至今依然有余悸。</p><p><strong>仅仅依靠中国本土市场营销策略可以救宝洁于水火？</strong></p><p>如宝洁所言，玉兰油通过重新的年龄定位换掉了不合适的代言人，去掉了不畅销的品类，实现了销售额上的提升。但仅仅于此，很难让宝洁重生。</p><p>在实施品牌本土化战略的过程中，宝洁局限于已有国外品牌本土化改造的保守模式。联合利华收购中华牙膏和美加净品牌，法国欧莱雅先后收购小护士和羽西品牌，强生收购北京大宝等等，对比之下，宝洁的几次本土品牌并购尝试都失败了。</p><p>同时宝洁自己的品牌研发几次也都失败了，这并不简单是营销策略的原因。宝洁全球的机构非常庞大，各种审批流程也很复杂。由于宝洁中国新产品开发方案要经美国总部研究批准后才能投入实施，一般在审批流程上就要耗费几年时间。20世纪末，中国洗发市场的中草药黑发护理潮流，2007年的中国护肤品市场的草本风都被审批耽误错过时机，最后推出的产品溃败。大公司病让宝洁的创新能力大打折扣。</p><p>欧美从洗衣粉到洗衣液用了30年，中国从洗衣粉到洗衣液，只用了5年。中国的市场变化是深刻的，但近十年来，宝洁公司在中国这场消费升级的浪潮中都显得格外的安静，2012年开始的全球范围进行的瘦身计划同样影响了中国市场，不少消息指出宝洁在中国的广州总部裁撤了上百名人员和部分部门，并且大幅缩减了成本预算。</p><p>但对于中国来说，消费者和零售环境的变化巨大、速度也很快，从初级、传统的小店到世界上最先进的零售商，中国市场的复杂程度之高、变化速度之快、波及范围之广，对宝洁来说是巨大的挑战。马睿思给出的解决方案温和地不具备杀伤力，在日系、韩系日化大举进攻，中国本土品牌迅速崛起之时，宝洁的应对还是不够机警。</p><p>如马睿思所说，“倾向于认为中国是一个发展中国家，并把它看作是亚洲市场的一部分。因此，我们把宝洁为其他亚洲发展中国家开发的技术和产品带到中国，然后再应用到中国市场之中。”</p><p>未来的中国毋庸置疑会是兵家必争之地，它的发展势头之猛，市场复杂程度之高不容小觑。中国市场的复杂性是外来品牌的巨大门槛，也是民族品牌的巨大机会。获得消费者的人，无疑要具备“上天入地”的本领，对于宝洁来说，这是一场道阻且长的战争。</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：金梅<br>
+								来源：<a href="https://mp.weixin.qq.com/s/sFUB1sYZalcntu0qaw5CmA" target="_blank">砺石商业评论（libusiness）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/宝洁公司" title="宝洁公司">宝洁公司</a>
+								<a href="/wiki/消费者" title="消费者">消费者</a>
+								<a href="/wiki/营销" title="营销">营销</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608188?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/2a595_p50McgkqL1wnREWb.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠摊上大事了！泄漏未公开重大信息，面临双重处罚</span>
+				</a>
+								<a href="/post/608187?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/22071_WxF0Y1r58lkuvCYO.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>顺丰发公告称过年不休息，但是收费高了多少？</span>
+				</a>
+								<a href="/post/608186?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/beee8_EvJszfz8DZk5AdIj.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>程序员突然跑路？游戏公司创始人600万元打水漂！</span>
+				</a>
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+								<a href="/post/608070?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+				</a>
+								<a href="/post/608069?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+				</a>
+								<a href="/post/608034?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+				</a>
+								<a href="/post/608033?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>小米股价腰斩，市值蒸发近3000亿！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/608001?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+					</a>
+										<a href="/post/607963?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+					</a>
+										<a href="/post/607962?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+					</a>
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+										<a href="/post/607815?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/b2f0f_4wly0J0wYJ8uvQQg.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>新款iPhone两个月内二次减产，苹果股价跌到谷底？</span>
+					</a>
+										<a href="/post/607814?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c3c03_6p28n3cJ5VYFr5Lj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>支付宝改名换法人了！网友：花呗不用还了？</span>
+					</a>
+										<a href="/post/607810?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4764f_nKHMu2Kt5Mw3sdGd.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>资本寒冬？这家企业却逆势给员工加薪，人均每月1000元！</span>
+					</a>
+										<a href="/post/607809?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/2b35d_Y8CnjCei97EZVKmL.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>是有信心还是卖不出去？雷军承诺未来一年不出售小米股票</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/shuijinmao/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/23/small_33.jpg">
+													</a>
+						<a class="user-name" href="/author/shuijinmao/">水晶猫</a>
+						<a class="follow-btn " href="javascript:;" data-uid="162333">+&nbsp;关注</a>
+					</div>
+					<p>柠檬苏打绿</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

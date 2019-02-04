@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="9,46,390,46,390,562,9,562" shape="polygon" href="./content_585885.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/02/02/zgyyb2019010202_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            02版:综合新闻
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/02/02/zgyyb2019010202.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_21.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_81.htm">下一版 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_83.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>政策红利下 共享获得感</h1>
+<h2>——2018年热点事件回眸</h2>
+<h4></h4>
+        
+        <div class="c_c">
+          
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;回首2018年，审评审批制度改革纵深推进、“放管服”改革跑出“加速度”、智慧监管遍地开花……药监部门一系列改革创新举措彰显出其促进医药行业规范发展、保障百姓用药安全的决心与力量。律回春晖渐，万象始更新。2019年的钟声已经敲响，我们有理由相信，在全系统的共同努力下，药品监管事业将取得更多令人瞩目的成绩。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;行政相对人这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“放管服”改革提升企业获得感</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，各地药品监管部门深入推进“放管服”改革，力求手续更简、时限更短、服务更优，让“网上办”“一窗办”“自助办”“最多跑一次”等成为新常态。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;陈海霞&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年12月10日，当我拿着崭新的药品经营许可证时，想起了网上一句流行的话：“工作让我快乐，我爱我的工作。”这句话很能表达我当时内心的兴奋。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;多次听说“放管服”改革，但我从未深入了解过。通过此次为公司办理药品经营许可证，我真正感受到了“简政放权、放管结合、优化服务”给企业带来的便利。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如今，提交药品经营许可证核发资料及格式要求等都能在网上看到详细的目录及流程说明。按要求准备好资料后，先在网上申请，受理工作人员会打电话告知需要补充修正的资料，企业只需将补充资料再次上交即可；避免了到现场交资料才发现漏缺，再往返的麻烦。真正从解决企业实际问题入手，为企业提供了更好的发展环境。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;同时，制证完成后，电子版证件以邮件的方式发送给企业，企业只需要跑一趟药监部门便可拿纸质证。这样既节省了时间，又节约了人力财力，大大提高了办事效率，要知道，企业很看重时间成本。“放管服”改革让企业有了更多获得感。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“放管服”看似只有三个字，实则需要相关部门放得出权力，管得出水平、放得下身段为企业和百姓服务。它是党和国家构建现代化治理体系的体现，也体现出建设人民满意的服务型政府的决心。相信有了“放管服”和“互联网+”，办事难、办事慢将成为历史，好办事、速办事，将惠及更多企业和百姓。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系新疆万润康药业有限公司质量负责人）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;学者这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;处罚到人细化药品全生命周期责任</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年1月，原国家食品药品监管总局、公安部印发《关于加大食品药品安全执法力度严格落实食品药品违法行为处罚到人的规定》，要求通过明确责任人员范围、完善部门衔接等，确保食品药品违法行为“处罚到人”的各项措施能够落到实处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;杨悦&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;处罚到人的实质是责任落实，前提是依法处罚，责任到人，责任细化。处罚到人的优势可以归纳为：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;第一，将药品全生命周期的关键责任人纳入监管视线。以往的监管对象重点是涉药单位，主要是生产、经营企业。只关注企业监管，可能引发药品全生命周期责任分散效应。责任分散效应是指对某一件事来说，如果是单个个体被要求单独完成任务，责任感就会很强，会作出积极反应；如果是要求一个群体共同完成任务，群体中的每个个体的责任感就会很弱，面对困难往往会退缩。药品企业的管理水平取决于企业管理者营造的质量文化和质量体系，最终体现为企业的质量保证能力和合规水平。处罚到人要达到的目的是让企业的管理者担责，承担起合法合规研发、生产、经营药品的主体责任。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;第二，将药品研发、生产、经营过程中的关键参与者纳入监管视线。以往的药品全生命周期中，参与者众多，但是真正进入药品监管视线的，往往只是申请人和实际生产、经营企业，而企业法定代表人、企业负责人、直接管理部门负责人，以及与企业具有委托合作关系的CRO、临床试验研究者、IRB等未纳入监管视线。在药品上市许可持有人制度下，药品研发、生产、流通、使用不再局限于一个省、一个区域、一个国家，场地分散，全生命周期参与者众多。必须明确在这个复杂的委托合作关系中，谁是关键责任人，通过登记、备案等方式纳入监管视野，监管机构保留检查的权力，为未来开展必要的监督检查提供基础信息，并通过批准前检查和上市后监督检查促进关键责任人员的持续合规，发现违法行为予以行政处罚。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系沈阳药科大学国际食品药品政策与法律研究中心教授）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;监管人员这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;智慧监管增强风险防控能力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年3月，国务院总理李克强在十三届全国人大一次会议开幕会上作政府工作报告时指出，创新食品药品监管方式，注重用互联网、大数据等提升监管效能，加快实现全程留痕、信息可追溯，让问题产品无处藏身、不法制售者难逃法网，让消费者买得放心、吃得安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;陈卫英&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;形成智慧监管能力，是《“十三五”国家食品安全规划》《“十三五”国家药品安全规划》提出的任务目标。下好智慧监管的“先手棋”，对于实施规划，推动食品药品安全治理体系和治理能力现代化具有重要意义。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年以来，甘肃省酒泉市食品药品监管局按照国家关于建立健全药品追溯制度的要求，以落实企业主体责任为基础，以实现“一物一码，物码同追”为方向，加快建立完善药品追溯系统，不断推进药品信息化追溯体系在实际监管过程中的应用，有效弥补了药品监管人员的不足，提升了监管效率。药品追溯系统的应用，一方面，能严格审核企业资质，规范药品交易流程；另一方面，一旦发生药品质量问题，企业可以第一时间溯源召回，有效降低药品质量安全风险。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;日前，酒泉市食药监局执法人员在一家药品生产企业突击检查时，发现留样室存放的批号为180201的石榴健胃片外包装颜色不一致。经核查，是由于企业在生产过程中混用新老包装造成。该企业立即登录药品追溯系统，通过追溯码查询到药品箱码与产品流向，并对包装不一致的该批次药品进行了召回。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;酒泉市现有药品生产、经营、使用单位3000多家，其中药品生产企业生产的制剂品种与药品批发企业经营的特殊药品、药品类易制毒化学品、蛋白同化制剂、肽类激素等高风险品种已全部接入药品追溯系统。通过追溯信息互通共享，实现了药品来源可查、去向可追，切实增强了药品安全风险防控能力。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系甘肃省酒泉市食品药品监管局药品安全监管科科长）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;患者家属这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;进口抗癌药减免税为患者减负</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日，国务院常务会议决定自2018年5月1日起对进口抗癌药实施零关税；4月27日，国家药品监管局等四部门联合发布《关于抗癌药品增值税政策的通知》，明确自2018年5月1日起，对进口抗癌药品减按3%征收进口环节增值税。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;郝宇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年初，家里老人被诊断为晚期非小细胞肺癌。经过基因筛查，我们开始给老人服用进口靶向治疗药物吉非替尼，每盒（0.25g×10片）2358元，每月需要3盒。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日，国家决定自2018年5月1日起对进口抗癌药实施零关税；2018年4月27日，国家药品监管局等四部门联合发布通知，明确自2018年5月1日起，对进口抗癌药品减按3%征收进口环节增值税。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在我看来，减免进口抗癌药税费，将促使进口抗癌药进一步降价，为癌症患者家庭减轻经济负担。以我家为例，每月仅购买进口吉非替尼就要花费7074元，再加上其他治疗、检查费和营养补充费，至少需要10000元；即便吉非替尼进入医保报销范围，我们一年仍需支付五六万元。而许多农村家庭的患者，迫于经济压力不得不放弃疗效好、副作用小的靶向药物治疗。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;事实上，当老人被确诊为晚期非小细胞肺癌时，我们从医生那里得到两个用药选项：进口药或国产药。按照当时的价格，进口药比国产药每盒贵1000多元。进口抗癌药税收减免政策落地后，国产药物的价格优势进一步缩小，倒逼国内药企加快研发，以“质”取胜。同时，我也相信外企会更加看好中国市场，加紧投放新药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;抗癌药是癌症患者生的希望，也关乎患者家庭的幸福。2019年，我们期待相关政策全面落地，同时希望国家有关部门能出台更多利好政策，让癌症患者用上好药、新药、低价药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系患者家属）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;企业这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;审评审批制度改革利企利民</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日和6月20日国务院常务会议决定加快已在境外上市新药审批、强化短缺药供应保障。2018年，国家药品监管部门持续深化药品医疗器械审评审批制度改革。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;周霞萍&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为让公众尽早用上境外上市新药，国家药监部门针对国内临床需求，科学简化审批流程，加快了临床急需的境外上市新药的审评审批工作。诺和诺德对中国药品审评审批制度改革成效有着切身体会，并享受到了这一政策红利。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;公司糖尿病治疗药物新一代超长效基础胰岛素类似物德谷胰岛素，在药品审批过程中，被纳入新药上市优先审评程序，从上报国家药审部门到2017年9月获批，速度明显快于公司内部预期，让公司上下十分振奋。这为我们节省了许多的人力、物力、财力，更加速了公司其他工作的开展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;公司医学部团队对于中国药品审批新政感受最深，尤其感受到中国对临床急需和创新药的高度重视和支持。医药部副总裁张克洲说，列入优先审批的创新药，药审部门会把审评资源和时间进行高度匹配，因此审批时间明显加快。这大大提高了患者用药可及性，让我们觉得非常自豪。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国的医药卫生体制改革至今取得了丰硕成果，诺和诺德为中国政府点赞。我们是改革的亲历者、受益者，也是推动者。持续深化“放管服”改革，加速推进药品审评审批制度改革等一系列举措让我们置身于中国越来越优化的市场营商环境，大大增强了我们为更多中国患者提供最新最优药品的信心和决心。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;不难看出，国家药监部门出台一系列政策的目的是鼓励药品创新，让药企专注药品质量，提高效率。作为原研药创新型企业，我们希望这样的政策越来越多。诺和诺德决定未来把中国纳入公司的全球研发体系，最终实现中国与全球同步开展临床研究、同步申请新药上市、同步获批，让中国患者与全球患者同步受益。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系诺和诺德全球高级副总裁兼大中国区总裁）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;专家这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;执业药师管理工作的一大进步</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月22日，国家药品监督管理局办公室、人力资源和社会保障部办公厅联合发布通知，就《执业药师职业资格制度规定（征求意见稿）》和《执业药师职业资格考试实施办法（征求意见稿）》向社会征求意见，引发多方热议。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;杨世民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月22日，国家药品监管局网站公布《执业药师职业资格制度规定（征求意见稿）》（以下简称《规定》征求意见稿）和《执业药师职业资格考试实施办法（征求意见稿）》（以下简称《办法》征求意见稿）。结合新时期的要求，对参加执业药师资格考试条件、注册条件等内容进行了修改，是我国执业药师管理工作的一大进步。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;具体而言，两份征求意见稿提高了考试准入门槛。对执业药师资格考试准入学历门槛从中专提高到大专。对具有普通高等院校药学类、中药学类大学本科学历人员，由原来的在药学或中药学岗位工作满三年修改为没有工作年限要求；对具有药学类、中药学类相关专业大学本科学历人员的工作年限要求，由原来的在药学或中药学岗位工作满三年降为满一年等，更加突出执业药师的专业性特点。简化了注册手续和频率。申请注册的条件中，不再要求执业药师注册须经所在单位同意；&nbsp;执业药师注册有效期由现行的三年改为五年。方便了申请人，节省了审评成本。严格了管理规定。明确了对出租出借执业药师注册证行为，即“挂证”行为的处理规定：出租出借《执业药师注册证》的，由发证部门宣布证书无效，责令收回或者予以没收，三年内不予执业药师注册，涉及违规执业药师和违规企业，按照相关法律法规给予处罚。有利于基层加强执法，有助于提高药品经营质量管理水平和药学服务水平。细化了表彰和奖励的规定。对工作表现突出的执业药师由县级以上人力资源和社会保障部门与药品监督管理部门按规定给予表彰和奖励，以增强执业药师工作的积极性和荣誉感，鼓励广大执业药师履职尽责。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;综上，两个文件的征求意见稿对提高执业药师队伍的整体素质、突出专业性、保障群众用药安全方面都具有积极作用。相信两者实施后，还能有效解决执业药师不好用、不真用的问题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系西安交通大学药学院教授）</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_83.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+</div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;回首2018年，审评审批制度改革纵深推进、“放管服”改革跑出“加速度”、智慧监管遍地开花……药监部门一系列改革创新举措彰显出其促进医药行业规范发展、保障百姓用药安全的决心与力量。律回春晖渐，万象始更新。2019年的钟声已经敲响，我们有理由相信，在全系统的共同努力下，药品监管事业将取得更多令人瞩目的成绩。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;行政相对人这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“放管服”改革提升企业获得感</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，各地药品监管部门深入推进“放管服”改革，力求手续更简、时限更短、服务更优，让“网上办”“一窗办”“自助办”“最多跑一次”等成为新常态。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;陈海霞&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年12月10日，当我拿着崭新的药品经营许可证时，想起了网上一句流行的话：“工作让我快乐，我爱我的工作。”这句话很能表达我当时内心的兴奋。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;多次听说“放管服”改革，但我从未深入了解过。通过此次为公司办理药品经营许可证，我真正感受到了“简政放权、放管结合、优化服务”给企业带来的便利。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如今，提交药品经营许可证核发资料及格式要求等都能在网上看到详细的目录及流程说明。按要求准备好资料后，先在网上申请，受理工作人员会打电话告知需要补充修正的资料，企业只需将补充资料再次上交即可；避免了到现场交资料才发现漏缺，再往返的麻烦。真正从解决企业实际问题入手，为企业提供了更好的发展环境。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;同时，制证完成后，电子版证件以邮件的方式发送给企业，企业只需要跑一趟药监部门便可拿纸质证。这样既节省了时间，又节约了人力财力，大大提高了办事效率，要知道，企业很看重时间成本。“放管服”改革让企业有了更多获得感。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;“放管服”看似只有三个字，实则需要相关部门放得出权力，管得出水平、放得下身段为企业和百姓服务。它是党和国家构建现代化治理体系的体现，也体现出建设人民满意的服务型政府的决心。相信有了“放管服”和“互联网+”，办事难、办事慢将成为历史，好办事、速办事，将惠及更多企业和百姓。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系新疆万润康药业有限公司质量负责人）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;学者这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;处罚到人细化药品全生命周期责任</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年1月，原国家食品药品监管总局、公安部印发《关于加大食品药品安全执法力度严格落实食品药品违法行为处罚到人的规定》，要求通过明确责任人员范围、完善部门衔接等，确保食品药品违法行为“处罚到人”的各项措施能够落到实处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;杨悦&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;处罚到人的实质是责任落实，前提是依法处罚，责任到人，责任细化。处罚到人的优势可以归纳为：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;第一，将药品全生命周期的关键责任人纳入监管视线。以往的监管对象重点是涉药单位，主要是生产、经营企业。只关注企业监管，可能引发药品全生命周期责任分散效应。责任分散效应是指对某一件事来说，如果是单个个体被要求单独完成任务，责任感就会很强，会作出积极反应；如果是要求一个群体共同完成任务，群体中的每个个体的责任感就会很弱，面对困难往往会退缩。药品企业的管理水平取决于企业管理者营造的质量文化和质量体系，最终体现为企业的质量保证能力和合规水平。处罚到人要达到的目的是让企业的管理者担责，承担起合法合规研发、生产、经营药品的主体责任。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;第二，将药品研发、生产、经营过程中的关键参与者纳入监管视线。以往的药品全生命周期中，参与者众多，但是真正进入药品监管视线的，往往只是申请人和实际生产、经营企业，而企业法定代表人、企业负责人、直接管理部门负责人，以及与企业具有委托合作关系的CRO、临床试验研究者、IRB等未纳入监管视线。在药品上市许可持有人制度下，药品研发、生产、流通、使用不再局限于一个省、一个区域、一个国家，场地分散，全生命周期参与者众多。必须明确在这个复杂的委托合作关系中，谁是关键责任人，通过登记、备案等方式纳入监管视野，监管机构保留检查的权力，为未来开展必要的监督检查提供基础信息，并通过批准前检查和上市后监督检查促进关键责任人员的持续合规，发现违法行为予以行政处罚。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系沈阳药科大学国际食品药品政策与法律研究中心教授）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;监管人员这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;智慧监管增强风险防控能力</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年3月，国务院总理李克强在十三届全国人大一次会议开幕会上作政府工作报告时指出，创新食品药品监管方式，注重用互联网、大数据等提升监管效能，加快实现全程留痕、信息可追溯，让问题产品无处藏身、不法制售者难逃法网，让消费者买得放心、吃得安全。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;陈卫英&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;形成智慧监管能力，是《“十三五”国家食品安全规划》《“十三五”国家药品安全规划》提出的任务目标。下好智慧监管的“先手棋”，对于实施规划，推动食品药品安全治理体系和治理能力现代化具有重要意义。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年以来，甘肃省酒泉市食品药品监管局按照国家关于建立健全药品追溯制度的要求，以落实企业主体责任为基础，以实现“一物一码，物码同追”为方向，加快建立完善药品追溯系统，不断推进药品信息化追溯体系在实际监管过程中的应用，有效弥补了药品监管人员的不足，提升了监管效率。药品追溯系统的应用，一方面，能严格审核企业资质，规范药品交易流程；另一方面，一旦发生药品质量问题，企业可以第一时间溯源召回，有效降低药品质量安全风险。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;日前，酒泉市食药监局执法人员在一家药品生产企业突击检查时，发现留样室存放的批号为180201的石榴健胃片外包装颜色不一致。经核查，是由于企业在生产过程中混用新老包装造成。该企业立即登录药品追溯系统，通过追溯码查询到药品箱码与产品流向，并对包装不一致的该批次药品进行了召回。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;酒泉市现有药品生产、经营、使用单位3000多家，其中药品生产企业生产的制剂品种与药品批发企业经营的特殊药品、药品类易制毒化学品、蛋白同化制剂、肽类激素等高风险品种已全部接入药品追溯系统。通过追溯信息互通共享，实现了药品来源可查、去向可追，切实增强了药品安全风险防控能力。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系甘肃省酒泉市食品药品监管局药品安全监管科科长）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;患者家属这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;进口抗癌药减免税为患者减负</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日，国务院常务会议决定自2018年5月1日起对进口抗癌药实施零关税；4月27日，国家药品监管局等四部门联合发布《关于抗癌药品增值税政策的通知》，明确自2018年5月1日起，对进口抗癌药品减按3%征收进口环节增值税。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;郝宇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年初，家里老人被诊断为晚期非小细胞肺癌。经过基因筛查，我们开始给老人服用进口靶向治疗药物吉非替尼，每盒（0.25g×10片）2358元，每月需要3盒。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日，国家决定自2018年5月1日起对进口抗癌药实施零关税；2018年4月27日，国家药品监管局等四部门联合发布通知，明确自2018年5月1日起，对进口抗癌药品减按3%征收进口环节增值税。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在我看来，减免进口抗癌药税费，将促使进口抗癌药进一步降价，为癌症患者家庭减轻经济负担。以我家为例，每月仅购买进口吉非替尼就要花费7074元，再加上其他治疗、检查费和营养补充费，至少需要10000元；即便吉非替尼进入医保报销范围，我们一年仍需支付五六万元。而许多农村家庭的患者，迫于经济压力不得不放弃疗效好、副作用小的靶向药物治疗。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;事实上，当老人被确诊为晚期非小细胞肺癌时，我们从医生那里得到两个用药选项：进口药或国产药。按照当时的价格，进口药比国产药每盒贵1000多元。进口抗癌药税收减免政策落地后，国产药物的价格优势进一步缩小，倒逼国内药企加快研发，以“质”取胜。同时，我也相信外企会更加看好中国市场，加紧投放新药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;抗癌药是癌症患者生的希望，也关乎患者家庭的幸福。2019年，我们期待相关政策全面落地，同时希望国家有关部门能出台更多利好政策，让癌症患者用上好药、新药、低价药。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系患者家属）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;企业这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;审评审批制度改革利企利民</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年4月12日和6月20日国务院常务会议决定加快已在境外上市新药审批、强化短缺药供应保障。2018年，国家药品监管部门持续深化药品医疗器械审评审批制度改革。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;周霞萍&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为让公众尽早用上境外上市新药，国家药监部门针对国内临床需求，科学简化审批流程，加快了临床急需的境外上市新药的审评审批工作。诺和诺德对中国药品审评审批制度改革成效有着切身体会，并享受到了这一政策红利。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;公司糖尿病治疗药物新一代超长效基础胰岛素类似物德谷胰岛素，在药品审批过程中，被纳入新药上市优先审评程序，从上报国家药审部门到2017年9月获批，速度明显快于公司内部预期，让公司上下十分振奋。这为我们节省了许多的人力、物力、财力，更加速了公司其他工作的开展。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;公司医学部团队对于中国药品审批新政感受最深，尤其感受到中国对临床急需和创新药的高度重视和支持。医药部副总裁张克洲说，列入优先审批的创新药，药审部门会把审评资源和时间进行高度匹配，因此审批时间明显加快。这大大提高了患者用药可及性，让我们觉得非常自豪。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国的医药卫生体制改革至今取得了丰硕成果，诺和诺德为中国政府点赞。我们是改革的亲历者、受益者，也是推动者。持续深化“放管服”改革，加速推进药品审评审批制度改革等一系列举措让我们置身于中国越来越优化的市场营商环境，大大增强了我们为更多中国患者提供最新最优药品的信心和决心。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;不难看出，国家药监部门出台一系列政策的目的是鼓励药品创新，让药企专注药品质量，提高效率。作为原研药创新型企业，我们希望这样的政策越来越多。诺和诺德决定未来把中国纳入公司的全球研发体系，最终实现中国与全球同步开展临床研究、同步申请新药上市、同步获批，让中国患者与全球患者同步受益。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系诺和诺德全球高级副总裁兼大中国区总裁）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;专家这样说</p><p>&nbsp;&nbsp;&nbsp;&nbsp;执业药师管理工作的一大进步</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月22日，国家药品监督管理局办公室、人力资源和社会保障部办公厅联合发布通知，就《执业药师职业资格制度规定（征求意见稿）》和《执业药师职业资格考试实施办法（征求意见稿）》向社会征求意见，引发多方热议。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;□&nbsp;杨世民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年8月22日，国家药品监管局网站公布《执业药师职业资格制度规定（征求意见稿）》（以下简称《规定》征求意见稿）和《执业药师职业资格考试实施办法（征求意见稿）》（以下简称《办法》征求意见稿）。结合新时期的要求，对参加执业药师资格考试条件、注册条件等内容进行了修改，是我国执业药师管理工作的一大进步。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;具体而言，两份征求意见稿提高了考试准入门槛。对执业药师资格考试准入学历门槛从中专提高到大专。对具有普通高等院校药学类、中药学类大学本科学历人员，由原来的在药学或中药学岗位工作满三年修改为没有工作年限要求；对具有药学类、中药学类相关专业大学本科学历人员的工作年限要求，由原来的在药学或中药学岗位工作满三年降为满一年等，更加突出执业药师的专业性特点。简化了注册手续和频率。申请注册的条件中，不再要求执业药师注册须经所在单位同意；&nbsp;执业药师注册有效期由现行的三年改为五年。方便了申请人，节省了审评成本。严格了管理规定。明确了对出租出借执业药师注册证行为，即“挂证”行为的处理规定：出租出借《执业药师注册证》的，由发证部门宣布证书无效，责令收回或者予以没收，三年内不予执业药师注册，涉及违规执业药师和违规企业，按照相关法律法规给予处罚。有利于基层加强执法，有助于提高药品经营质量管理水平和药学服务水平。细化了表彰和奖励的规定。对工作表现突出的执业药师由县级以上人力资源和社会保障部门与药品监督管理部门按规定给予表彰和奖励，以增强执业药师工作的积极性和荣誉感，鼓励广大执业药师履职尽责。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;综上，两个文件的征求意见稿对提高执业药师队伍的整体素质、突出专业性、保障群众用药安全方面都具有积极作用。相信两者实施后，还能有效解决执业药师不好用、不真用的问题。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（作者系西安交通大学药学院教授）</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585885.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190102_1-02>政策红利下 共享获得感</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-02
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>政策红利下 共享获得感
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle>——2018年热点事件回眸</founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/02/02/zgyyb2019010202_b.jpg</founder-pagepicurl>
+<founder-pagenum>02</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>83</founder-nodeid> /mpproperty-->
+
+

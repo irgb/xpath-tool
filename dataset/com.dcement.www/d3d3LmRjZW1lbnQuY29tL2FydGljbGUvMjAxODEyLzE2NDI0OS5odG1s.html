@@ -1,0 +1,771 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="价格,市场" name="Keywords" />
+    <meta content="如果任由当地错峰生产政策形同虚设，势必会造成当地冬储熟料库存居高不下，拉低了对明年市场预期，预计2019年初当地熟料价格将下滑至100元/吨以下，该区域的水泥企业巨亏苗头开始显现。更为可怕的是，蝴蝶效应会在此产生，每吨100元以下的熟料将严重威胁其它省份错峰生产政策和行业自律。" name="Description"/>
+    <title>这一区域水泥熟料价格预期跌至100元/吨以下，或将征战全国？ - 数字水泥网 中国水泥行业大型水泥信息平台</title>
+    <link href="/Template/Default/Skin/module.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/default.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/page.css" rel="stylesheet" type="text/css" />
+    <link href="/Template/Default/Skin/commentary.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    var siteSetup = { sitePath: '/', ajaxPath: '/ajax.aspx', skinPath: '/Template/Default/Skin/' };
+</script>
+<script language="javascript" type="text/javascript" src="/js/jquery.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.peex.js"></script>
+<script language="javascript" type="text/javascript" src="/Template/Default/Skin/js/jquery.SuperSlide.js"></script>
+<script>
+$(function(){
+    $(".J_tabBox").slide({mainCell:".J_tabContent", titCell:".J_tabHandler>*"});
+})
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/Template/Default/Skin/js/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.pngfix');
+</script>
+<![endif]-->
+
+
+    <style>
+    .side .adArea { padding-bottom: 5px; }
+    .side .adArea .ad { margin-bottom: 5px; float: none; }
+    .side .adArea .ad div { margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+    <div class="header" id="header">
+<style>
+a:after{ display:none!important;}
+</style>
+        <div class="topbar">
+            <div class="userWrap">
+                <div class="userLogin">
+    <div class="loginForm">
+        <div class="field"><label>用户名：</label><input type="text" class="input input-username"/></div>
+        <div class="field"><label>密　码：</label><input type="password" class="input input-password"/></div>
+        <div class="field field-validate" style="display:none">
+            <label>验证码：</label><input type="text" class="input input-validate"/>
+            <img title="换一个" />
+        </div>
+        <div class="field">
+            <label><input type="checkbox" class="input-saveinfo"/>永久登录</label>
+        </div>
+        <div class="btn">
+            <button class="submit">登录</button>
+            <a href="/User/GetPassword.aspx" class="findpass">找回密码</a>
+            <a href="/User/Register.aspx" class="reg">注册</a>
+            <a href="/Item/19139.aspx" target="_blank" class="vip">成为高级会员</a>
+            <a href="/UploadFiles/Article/2015/4/201604230931227461.doc" target="_blank" class="vipform">登记表</a>
+        </div>
+    </div>
+    <div class="userInfo" style="display:none">
+        <p class="info"><strong class="username"></strong>，您好！欢迎你的回来。<span class="usergroup"></span><span class="spe">|</span>剩余天数:<span class="enddays"></span>天<span class="spe">|</span><a href="javascript:LoadUnReadMsg();">未读消息:<span class="msg"></span>条</a><span class="spe">|</span></p>
+        <p class="act">
+            <a href="/User/Default.aspx" target="_blank">会员中心</a>
+            <span class="spe">|</span>
+            <a href="/User/Logout.aspx">退出登录</a>
+            <span class="setvip">
+                <span class="spe">|</span>
+                <a href="/Item/19139.aspx" target="_blank" class="vip">成为收费会员</a>
+                <a href="/UploadFiles/Article_UploadFiles/200803/20080328141027108.doc" target="_blank" class="vipform">登记表</a>
+            </span>
+        </p>
+    </div>
+</div>
+<div id="DivUnReadMessage"></div>
+<script type="text/javascript">
+function LoadUnReadMsg(){
+	var url = "/User/Message/MessageList.aspx?Type=-1";
+	jQuery("#DivUnReadMessage").overlay({ api: true, expose: true, render: true, loadUrl: url, width: 600, height: 400, title: "未读短消息" }).load();
+}
+
+(function($){   
+    function SetUserInfo(res){
+	$(".userLogin .loginForm").hide();
+	$(".userInfo .username").html(res.find("username").text());
+	$(".userInfo .usergroup").html(res.find("usergroup").text());
+	$(".userInfo .enddays").html(res.find("enddays").text());
+	$(".userInfo .msg").html(res.find("msg").text());
+	$(".userInfo").show();
+	var groupId = parseInt(res.find("usergroupid").text());
+	var enddays = parseInt(res.find("enddays").text());
+	if((groupId == 3 || groupId== 11) && enddays > 0){
+		$('.setvip').hide();
+	}
+	//显示未读消息
+	var unreadMsg = parseInt(res.find("msg").text());
+	if(unreadMsg > 0 && jQuery.pe.cookie("ShowUnReadMsg") != "false"){
+	    LoadUnReadMsg();
+	}
+    }
+
+
+    $.pe.ajax('checkUserLogin', {
+        success: function(res) {
+            res = $(res);
+            if (res.find('status').text() == 'ok') {
+                SetUserInfo(res);
+
+            } else {
+                //验证码
+                $.pe.ajax('checkLoginValidate', {
+                    success: function(res){
+                        res = $(res);
+                        if (res.find('status').text() == 'yes') {
+                            $('.field-validate img').click(function(){
+                                $.pe.refreshValidateCode(this);
+                            }).click();
+                            $('.field-validate').show();
+                        }
+                    }
+                });
+                //登录提交
+                $(".userLogin .submit").click(function(){
+                    var username = $(".userLogin .input-username"),
+                        password = $(".userLogin .input-password"),
+                        validate = $(".userLogin .input-validate"),
+                        saveinfo = $(".userLogin .input-saveinfo");
+
+                    if (username.val() === "") {
+                        alert('请填写用户名！');
+                        username.focus();
+                        return false;
+                    }
+                    if (password.val() === '') {
+                        alert('请填写密码！');
+                        password.focus();
+                        return false;
+                    }
+                    if (validate.val() === '' && $('.field-validate').is("visible")) {
+                        alert("请填写验证码！");
+                        validate.focus();
+                        return false;
+                    }
+                    $.pe.ajax('userLogin', {
+                        params: {
+                            username: username.val(),
+                            password: password.val(),
+                            checkcode: validate.val(),
+                            expiration: saveinfo.attr("checked") ? 'Month' : 'None'
+                        },
+                        success: function(res) {
+                            res = $(res);
+                            switch (res.find('status').text()) {
+                                case "ok":
+                                    //SetUserInfo(res);
+                                    window.location.reload();
+                                    break;
+                                case "err":
+                                    alert(res.find('body').text());
+                                    $('.field-validate img').click()
+                                    break;
+                            }
+                        }
+                    })
+                })
+            }
+        }
+    });
+
+    $('.userLogin').keypress(function(e) {
+        if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+            $(".userLogin .submit").click();
+            return false;
+        }
+    })
+})(jQuery);
+</script>
+
+            </div>
+        </div>
+        <h1 class="logo"><a href="http://www.dcement.com" title="数字水泥网 中国水泥行业大型水泥信息平台"><img src="/Template/Default/Skin/images/logo.gif" /></a></h1>
+        <div class="topNav">
+            <div class="adArea"><script src='/IAA/200903/103.js'></script></div>
+            <div class="clearfix row">
+                <a title="数字水泥网首页" href="/">网站首页</a><span class="spe">|</span>
+                <a title="资讯新闻中心" href="/Article/">资讯中心</a><span class="spe">|</span>
+                <a title="行业分析" href="/Category_3661/Index.aspx">行业分析</a><span class="spe">|</span>
+                <a title="展会信息" href="/zhanhuixx/" target="_blank">展会信息</a><span class="spe">|</span>
+                <a title="政策法规" href="/zcfagui/">政策法规</a><span class="spe">|</span>
+                <a title="企业文化" href="/Category_3910/Index.aspx">企业文化</a><span class="spe">|</span>
+                <a title="CSI" href="http://www.dcement.com/Category_3726/Index.aspx">CSI</a>
+                
+            </div>
+            <div class="clearfix row">
+                <a title="采购索引" href="/Category_3665/Index.aspx">采购索引</a><span class="spe">|</span>
+                <a title="书刊推荐" href="/Category_3925/Index.aspx">错峰生产</a><span class="spe">|</span>
+                <a title="水泥价格" href="/Category_3713/Index.aspx">水泥价格</a><span class="spe">|</span>
+                <a title="人才招聘" href="http://www.dcement.com/Category_3662/Index.aspx" target="_blank">上市公司</a><span class="spe">|</span>
+                <a title="水泥协会" href="http://www.chinacca.org/" target="_blank">协会动态</a><span class="spe">|</span>  
+                <a title="行业并购" href="/Category_3714/Index.aspx">行业并购</a><span class="spe">|</span>
+                <a title="项目信息" href="http://www.dcement.com/Category_3765/Index.aspx">《中国水泥》 </a>           
+            </div>
+        </div>
+        <!-- topNav e -->
+    </div>
+    <!-- header e -->
+
+    <div class="adArea mb10">
+        <script src='/IAA/200803/47.js'></script>
+    </div>
+
+    <div id="channelWrap" class="clearfix">
+        <h3 class="cateName">资讯中心</h3>
+        <div class="channel">
+            <div class="clearfix row">
+                <a title="全国水泥" href="/Category_3710/Index.aspx">全国</a><span class="spe">|</span>
+                <a title="北京水泥" href="/Category_3670/Index.aspx">北京</a><span class="spe">|</span>
+                <a title="天津水泥" href="/Category_3671/Index.aspx">天津</a><span class="spe">|</span>
+                <a title="河北水泥" href="/Category_3672/Index.aspx">河北</a><span class="spe">|</span>
+                <a title="山西水泥" href="/Category_3677/Index.aspx">山西</a><span class="spe">|</span>
+                <a title="内蒙古水泥" href="/Category_3676/Index.aspx">内蒙</a><span class="spe">|</span>
+                <a title="辽宁水泥" href="/Category_3673/Index.aspx">辽宁</a><span class="spe">|</span>
+                <a title="吉林水泥" href="/Category_3674/Index.aspx">吉林</a><span class="spe">|</span>
+                <a title="黑龙江水泥" href="/Category_3675/Index.aspx">黑龙江</a><span class="spe">|</span>
+                <a title="上海水泥" href="/Category_3682/Index.aspx">上海</a><span class="spe">|</span>
+                <a title="江苏水泥" href="/Category_3680/Index.aspx">江苏</a><span class="spe">|</span>
+                <a title="浙江水泥" href="/Category_3683/Index.aspx">浙江</a><span class="spe">|</span>
+                <a title="安徽水泥" href="/Category_3681/Index.aspx">安徽</a><span class="spe">|</span>
+                <a title="福建水泥" href="/Category_3684/Index.aspx">福建</a><span class="spe">|</span>
+                <a title="江西水泥" href="/Category_3685/Index.aspx">江西</a><span class="spe">|</span>
+                <a title="山东水泥" href="/Category_3678/Index.aspx">山东</a>
+            </div>
+            <div class="clearfix row">
+                <a title="河南水泥" href="/Category_3679/Index.aspx">河南</a><span class="spe">|</span>
+                <a title="湖北水泥" href="/Category_3686/Index.aspx">湖北</a><span class="spe">|</span>
+                <a title="湖南水泥" href="/Category_3691/Index.aspx">湖南</a><span class="spe">|</span>
+                <a title="广东水泥" href="/Category_3692/Index.aspx">广东</a><span class="spe">|</span>
+                <a title="广西水泥" href="/Category_3694/Index.aspx">广西</a><span class="spe">|</span>
+                <a title="海南水泥" href="/Category_3693/Index.aspx">海南</a><span class="spe">|</span>
+                <a title="重庆水泥" href="/Category_3690/Index.aspx">重庆</a><span class="spe">|</span>
+                <a title="四川水泥" href="/Category_3696/Index.aspx">四川</a><span class="spe">|</span>
+                <a title="贵州水泥" href="/Category_3695/Index.aspx">贵　州</a><span class="spe">|</span>
+                <a title="云南水泥" href="/Category_3700/Index.aspx">云南</a><span class="spe">|</span>
+                <a title="西藏水泥" href="/Category_3699/Index.aspx">西藏</a></span><span class="spe">|</span>
+                <a title="陕西水泥" href="/Category_3687/Index.aspx">陕西</a><span class="spe">|</span>
+                <a title="甘肃水泥" href="/Category_3689/Index.aspx">甘肃</a><span class="spe">|</span>
+                <a title="青海水泥" href="/Category_3697/Index.aspx">青海</a><span class="spe">|</span>
+                <a title="宁夏水泥" href="/Category_3688/Index.aspx">宁夏</a><span class="spe">|</span>
+                <a title="新疆水泥" href="/Category_3698/Index.aspx">新疆</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pathBar">
+        <div class="path"><em>您现在的位置：</em><a class="home" href="/">首页</a>&gt;<a href="/Article/" target="_self">资讯中心</a>&gt;<a href="/Article/zxshichang/" target="_blank">市场</a></div>
+        <div class="ann">
+            <ul class="infoList infoListA">
+                <li class="noData">暂无资料</li>
+              </ul>
+        </div>
+    </div>
+    <script>
+    $(".pathBar .ann").slide({mainCell:"ul",effect:"topLoop",autoPlay:true});
+    </script>
+    <!-- pathBar e -->
+    
+
+
+    <div id="content" class="clearfix">
+        <div class="mainContent">
+            <div class="showContent">
+                <!-- 正文内容 S -->
+                <div class="articleCon">
+                    <!-- 标题 -->
+                    <h2 class="title" style="
+    color:">这一区域水泥熟料价格预期跌至100元/吨以下，或将征战全国？</h2>
+                    <h4 class="subTitle"></h4>
+                    <div class="property">
+                        <span>更新日期: 2018年12月29日</span>
+                        <span></span>
+                        <span>来源: 数字水泥网</span>
+                        <span class="fontSizeSet">【字体：<a href="javascript:fontZoomA();">小</a> <a href="javascript:fontZoomB();">大</a>】</span>
+                        <span><span id="content_AdminEdit"></span>
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $.pe.ajax('admineditcheck',{params:{itemId:164249},success:function(s) {
+        if ($(s).find('status').text() == 'OK') {
+            var managedir = "/Common/GetContentEdit.aspx?itemId=164249";
+           $("#content_AdminEdit").html("【<a href='" + managedir + "' target='_blank'>进入后台编辑</a>】")
+        }
+    }});
+});
+</script></span>
+                    </div>
+
+                    <div class="description">摘要：<span>如果任由当地错峰生产政策形同虚设，势必会造成当地冬储熟料库存居高不下，拉低了对明年市场预期，预计2019年初当地熟料价格将下滑至100元/吨以下，该区域的水泥企业巨亏苗头开始显现。更为可怕的是，蝴蝶效应会在此产生，每吨100元以下的熟料将严重威胁其它省份错峰生产政策和行业自律。</span></div>
+
+                    <div class="conTxt">
+                        <div id="fontzoom">
+                            
+      
+     <div> </div><div>    2018年是水泥行业丰收的一年，多数地区价格创出历史高位，但有这么一个地区却长期处于中国水泥的价格洼地——内蒙古西部区域，被业内评价为“乌海现象”。近年来，在行业大环境持续改善下，在内蒙古自治区主管部门引导下，在内蒙古水泥集团成立下，很多业内人士对内蒙古西部区域水泥走出洼地充满了期待，期待有更多的示范效应给行业借鉴。然而，就在这样的期待，内蒙古西部地区行业依然如当下的天气一般——寒流滚滚。</div><div> </div><div>    据了解，内蒙古自治区经济和信息化委员会、内蒙古自治区生态环境厅（原内蒙古自治区环境保护厅）联合印发《关于2018-2019年度采暖季水泥企业错峰生产的通知》，对水泥熟料错峰生产进行了部署。文中明确： 呼伦贝尔市、兴安盟、通辽市、赤峰市东部四盟市的水泥熟料生产企业原则上从2018年11月15日至2019年4月15日全面实行错峰生产,其他地区水泥熟料生产企业原则上自2018年11月15日至2019年3月15日全面实行错峰生产。 自治区境内所有水泥熟料生产线，包括利用电石渣生产水泥熟料的生产线都应进行错峰生产。个别企业因特殊情况可适当延迟或提前错峰的要向所在地盟市经信委报备，但必须确保执行好规定的错峰期限。鉴于利用电石渣生产水泥熟料企业生产的特殊性，错峰生产期间，鼓励其与传统熟料企业合作，通过延长同区域传统水泥企业停窑时间进行等量置换，其合作方式的相关协议向相关盟市经信委和自治区经信委备案。</div><div> </div><div>    可是，目前错峰生产已接近一个半月时间，根据对内蒙古西部区域了解到的信息表明，错峰生产执行情况形势严峻、参差不齐——除了几家传统的大企业按要求错峰生产外，鄂尔多斯市新华水泥有限公司、鄂尔多斯市君正能源化工有限公司、内蒙古君正化工有限责任公司、阿拉善盟吉盐化建材有限公司、内蒙古乌海化工有限公司、内蒙古鄂尔多斯电力冶金股份有限公司5条2500T/D电石渣熟料生产企业和内蒙古万晨能源股份有限公司千峰水泥5000T/D熟料生产线均在继续运转，而且延迟或提前错峰、错峰生产等量置换均未有向经信委备案相关信息。</div><div> </div><div>    内蒙古西部区域水泥行业混乱以久，经过几年的市场惨烈竞争，都有整顿、规范行业秩序的意愿，可当地行业局面复杂，利益纠葛大，为联合电石渣熟料，几家传统企业打破藩篱，经自治区政府批准成立了内蒙古水泥集团和区域子公司，想方设法挽救当地水泥行业，但整合行业效果也不能立竿见影。就在大家奋力脱离泥潭时，该区域冬季错峰生产名存实亡给当地行业带来严重的负面效应，当地熟料企业纷纷动摇，更对政策执行不一充满困惑，甚至对政策的公信力逐渐失去了信心、耐心，有些企业开始酝酿重新启窑生产。可想而知，如果任由当地错峰生产政策形同虚设，势必会造成当地冬储熟料库存居高不下，拉低了对明年市场预期，<span style="color:#ff0000;">预计2019年初当地熟料价格将下滑至100元/吨以下，该区域的水泥企业巨亏苗头开始显现。</span>更为可怕的是，蝴蝶效应会在此产生，<span style="color:#ff0000;">每吨100元以下的熟料将严重威胁其它省份错峰生产政策和行业自律。</span>从2018年10月内蒙古西部区域熟料已经开始南下进入河北、河南、山东等地区，随着这一地区熟料价格的持续走低，预计熟料流入地区范围越来越广，流出数量越来越大，这种无序进入外省市场扰乱了多地区市场秩序，最终可能导致全国北方各地区冬季取暖季错峰生产政策纷纷流产，北方各省市各级政府的努力和水泥企业加强自律取得的成果也将付之东流。</div><div> </div><div>    2018年中央经济工作会议部署2019年经济工作强调，坚持以供给侧结构性改革为主线。错峰生产是水泥行业贯彻落实国办发34号文件精神，推进供给侧结构性改革和化解产能过剩的一项重要举措，被列入国家环保产业政策，同时，这也是目前改善市场供需平衡关系、使行业走出困境和推进行业健康发展的最有效措施。内蒙古西部地区的水泥企业必须正视违反错峰生产政策的严重性，也希望相关主管部门能够予以重视，支持水泥行业将错峰生产执行到位，为打赢蓝天保卫战、维护行业健康的市场环境做出企业应有的贡献，实现经济效益、社会效益和环境效益共赢。</div>
+    
+   
+                            
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <span id="pe100_page_contentpage" class="pagecss"></span>
+                    </div>
+
+                    <div class="userControl clearfix">
+                        <div class="fl">
+                            <a class="print" target="_balnk" href="/Print.aspx?id=164249" title="打印文章">[打印文章]</a>
+                            <a class="fav" title="添加收藏" href="/User/Content/Favorite.aspx?Action=add&Id=164249">[添加收藏]</a>
+                        </div>
+                        <div class="fr">
+                            <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_tieba"></a>
+        <a class="bds_tsohu"></a>
+        <span class="bds_more">更多</span>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+                        </div>
+                    </div>
+
+                    <div class="adArea mb10"><script src="/IAA/200806/52.js"></script></div>
+                </div>
+                <!-- 正文内容 E -->
+
+                <script type="text/javascript">
+                (function(){
+                    var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=auto&brandline=y&appkey=1817769610&dpc=1";
+                    url = url.replace("url=auto", "url=" + document.URL); 
+                    document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
+                })();
+                </script> 
+                <script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script> 
+                <script type="text/javascript">
+                window.WBComment.init({
+                    "id": "WBCommentFrame"
+                });
+                </script>
+
+                <div id="commentform"></div>
+                
+    <script language="javascript" type="text/javascript">
+        //初始化评论
+        function commentInit() {
+          $.pe.ajax('accessLabel',{labelName:'内容评论标签',currentPage:1,params:{itemId:164249,nodeId:49},success:function(response){
+             $('#commentform').html($(response).find('body').text());
+             changepage(1, '评论列表', 'JS_基本风格');
+             setCurrentUserInfo();
+          }})
+        }
+
+        //添加评论
+        function addComment() {
+            if ($('#commentTitle').val == '') {
+                alert("请输入标题！");
+                $('#commentTitle').focus();
+                return;
+            }
+
+            if ($('#commentIsAnonymous').val() == 'false') {
+                if ($('#commentUsername').val() == '') {
+                    alert("请输入用户名！");
+                    $('#commentUsername').focus();
+                    return;
+                }
+
+                if ($('#commentEmail').val() == '') {
+                    alert('请输入Email地址！');
+                    $('#commentEmail').focus();
+                    return;
+                }
+
+                var regEmail = /^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if ($('#commentEmail').val().match(regEmail) == null) {
+                    alert('请输入正确的Email格式！');
+                    $('#commentEmail').focus();
+                    return;
+                }
+            }
+
+            if ($('#commentContnet').val == '') {
+                alert("请输入评论内容！");
+                $('#commentContnet').focus();
+                return false;
+            }
+
+            var commentValidCode = "";
+            var checkValidCode = false;
+            if (document.getElementById('commentValidCode') != null) {
+                if ($('#commentValidCode').val() == '') {
+                    alert("请输入验证码！");
+                    $('#commentValidCode').focus();
+                    return;
+                }
+                commentValidCode = $('#commentValidCode').val();
+                checkValidCode = true;
+            }
+            
+            $.pe.ajax('addcomment',{params:{
+              username:$("#commentUsername").val(),
+              commenttitle:$("#commentTitle").val(),
+              content:$("#commentContnet").val(),
+              email:$("#commentEmail").val(),
+              gid:164249,
+              nid:49,
+              private:$("#commentIsPrivate").val(),
+              position:$("#commentViewpoint").val(),
+              score:$("#commentRanking").val(),
+              TxtValidCode:commentValidCode,
+              isguest:$('#commentIsAnonymous').val()
+            },
+            success:function(response){
+              var data = $(response);
+              var status = data.find('status').text();
+                switch (status) {
+                    case "ok":
+                        changepage(1, '评论列表', 'JS_基本风格');
+                        alert("发表评论成功！");
+                        window.location.href = '#commentTarget';
+                        $("#commentContnet").val('');
+                        break;
+                    case "check":
+                        alert("发表评论成功，请等待管理员审核。");
+                        break;
+                    case "err":
+                        alert("发表评论失败！");
+                        break;
+                    case "nopurview":
+                        alert("此栏目已禁止发表评论！");
+                        break;
+                    case "noTourists":
+                        alert("此栏目已禁止游客发表评论！");
+                        break;
+                    case "checkCodeError":
+                        $("#commentValidCode").val('');
+                        refreshValidCode($("#commentValidCodeImg")[0]);
+                        alert("您输入的验证码和系统产生的不一致，请重新输入！");
+                        break;
+                    default:
+                        alert("发表评论失败！");
+                        break;
+                }
+                if (checkValidCode) {
+                    refreshValidCode($("#commentValidCodeImg")[0]);
+                    $("#commentValidCode").val('');
+                    checkValidCode = false;
+                }
+            }})
+        }
+
+        function addPkZone(commentid, position, content) {
+              $.pe.ajax('addpkzone',{params:{
+                commentid:commentid,
+                position:position,
+                content:content
+              },
+              success:function(response){
+                 switch ($(response).find('status').text()) {
+                    case "ok":
+                        changepage(1, '评论列表', 'JS_基本风格');
+                        break;
+                    default:
+                        alert("辩论失败！");
+                        break;
+                }
+              }}
+            )
+        }
+
+        //更新列表
+        function changepage(pagenum, sourcename, spanname) {
+              $.pe.ajax('accessLabel',{labelName:sourcename,currentPage:pagenum,params:{
+                itemId:164249,
+                page:'true',
+                pagesize:10,
+                currentpage:pagenum
+              },
+              success:function(response){
+                $('#pe100_'+sourcename).html($(response).find('body').text());
+                $('#commentCount').html($(response).find("total").text());
+                updatepage(spanname, sourcename, response);
+              }}
+            )
+        }
+
+        //更新分页
+        function updatepage(spanname, sourcename, xml) {
+        $.pe.ajax('accessPage',{labelName:spanname,pageName:sourcename,recordCount:$(xml).find('total').text(),currentPage:$(xml).find('currentpage').text(),pageSize:$(xml).find('pagesize').text(),success:function(s){
+        if ($('#pe100_page_' + sourcename) != null) {
+                        if ( $(xml).find('total').text()<=0 ){ $("#commentform .comListBox").hide() }else{ $("#commentform .comListBox").show() }
+                        $('#pe100_page_' + sourcename).html($(s).find('body').text());
+                    }
+        }})
+        }
+
+        //设置默用户信息
+        function setCurrentUserInfo() {
+            try {
+            $.pe.ajax('checkUserLogin',{success:function(response){
+            if($(response).find('status').text() == 'ok'){
+              if ($('#commentUsername') != null) {
+                            $('#commentUsername').val($(response).find("username").text());
+                            $('#commentEmail').val($(response).find("email").text());
+                            $('#commentUsername').disabled = true;
+                            $('#commentEmail').disabled = true;
+                        }
+            }
+            }})
+            }
+            catch (e) {
+            }
+        }
+
+        //刷新验证码
+        function refreshValidCode(obj) {
+            obj.src = obj.src + '?code=' + randomNumber(10);
+        }
+
+        function randomNumber(n) {
+            var rnd = '';
+            for (var i = 0; i < n; i++)
+                rnd += Math.floor(Math.random() * 10);
+            return rnd;
+        }
+
+        //设置匿名
+        function setAnonymous(obj) {
+            if (obj.checked) {
+                $('#commentUsernameBlock').hide();
+                $('#commentEmailBlock').hide();
+                $('#commentIsAnonymous').val('true');
+            }
+            else {
+                $('#commentUsernameBlock').show();
+                $('#commentEmailBlock').show();
+                $('#commentIsAnonymous').val('false');
+            }
+        }
+
+        //设置私有
+        function setPrivate(obj) {
+            if (obj.checked) {
+                $('#commentIsPrivate').val(1);
+            }
+            else {
+                $('#commentIsPrivate').val(0);
+            }
+        }
+
+        //设置观点
+        function setViewpoint(value) {
+            for (i = -1; i < 2; i++) {
+                if (i == value) {
+                    $('#commentViewpointTab' + i)[0].className = "current";
+                }
+                else {
+                    $('#commentViewpointTab' + i)[0].className = "";
+                }
+            }
+            $('#commentViewpoint').val(value);
+        }
+
+        //设置按钮
+        function changeBtnStyle(obj, className) {
+            obj.className = className;
+        }
+
+        //设置评分
+        function changeRanking(index, isfixed) {
+            var colStars = $("#commentRankingBlock input");
+            var k = isfixed ? parseInt($("#commentRanking").val()) : index;
+            for (var i = 0; i < colStars.length; i++) {
+                colStars[i].src = (i < k ? "/Images/fstar.gif" : "/Images/estar.gif");
+            }
+        }
+
+        function rankingClick(index) {
+            $("#commentRanking").val(index);
+        }
+
+        function rankingMouseOver(index) {
+            changeRanking(index, false);
+        }
+
+        function rankingMouseOut() {
+            changeRanking(0, true);
+        }
+
+        //初始化评论
+        commentInit();
+
+    </script>
+
+                <div class="box copyrightInfo">
+                    <div class="hd">数字水泥网版权与免责声明：</div>
+                    <div class="bd">
+                        <p>凡本网注明“来源：数字水泥网”的所有文字、图片和音视频稿件，版权均为“数字水泥网”独家所有，任何媒体、网站或个人在转载使用时必须注明“来源：数字水泥网”。违反者本网将依法追究责任。</p>
+                        <p>本网转载并注明其他来源的稿件，是本着为读者传递更多信息之目的，并不意味着赞同其观点或证实其内容的真实性。其他媒体、网站或个人从本网转载使用时，必须保留本网注明的稿件来源，禁止擅自篡改稿件来源，并自负版权等法律责任。违反者本网也将依法追究责任。</p>
+                        <p>如本网转载稿涉及版权等问题，请作者在两周内尽快来电或来函联系。</p>
+                    </div>
+                </div>
+
+                <div class="box boxRelate">
+                    <div class="hd">相关文章</div>
+                    <div class="bd">
+                        <ul class="infoList infoListA clearfix">
+
+        
+                <li class="first"><a href="/article/201812/164133.html" target="_blank" title="标题：水泥行业2019年：坚守行业龙头，把握迷你周期&#xD;发表时间：18年12月12日">水泥行业2019年：坚守行业龙头，把握迷你…</a></li><li><a href="/article/201812/164129.html" target="_blank" title="标题：疯狂的水泥，每吨盈利超过200元！&#xD;发表时间：18年12月11日">疯狂的水泥，每吨盈利超过200元！</a></li><li><a href="/article/201812/164121.html" target="_blank" title="标题：原创|长三角地区水泥市场即将打开降价“闸门”&#xD;发表时间：18年12月11日"><font style="color:#cc0000;">原创|长三角地区水泥市场即将打开降价“…</font></a></li><li><a href="/article/201812/164082.html" target="_blank" title="标题：华东长三角等多个地区水泥价格再次上涨&#xD;发表时间：18年12月06日">华东长三角等多个地区水泥价格再次上涨</a></li><li><a href="/article/201812/164070.html" target="_blank" title="标题：基建已提速 利好2019年水泥行业市场需求&#xD;发表时间：18年12月04日">基建已提速 利好2019年水泥行业市场需求</a></li><li><a href="/article/201812/164064.html" target="_blank" title="标题：2018年最后一个月，水泥价格或将先涨后跌&#xD;发表时间：18年12月04日"><font style="color:#cc0000;">2018年最后一个月，水泥价格或将先涨后跌</font></a></li><li><a href="/article/201812/164058.html" target="_blank" title="标题：枣庄水泥市场行情调查:水泥企业生产经营向好&#xD;发表时间：18年12月03日">枣庄水泥市场行情调查:水泥企业生产经营…</a></li><li class="last"><a href="/article/201811/164031.html" target="_blank" title="标题：数字水泥网总裁陈柏林分析水泥涨价原因&#xD;发表时间：18年11月30日"><font style="color:#cc0000;">数字水泥网总裁陈柏林分析水泥涨价原因</font></a></li>
+              
+    </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- mainContent e -->
+
+        <div class="side">
+            <div class="siteSearch">
+  <form action="/search.aspx" class="searchform" target="_blank"><input type="hidden" name="searchType" class="searchType" value="fulltext"><input type="text" class="keyword" autocomplete="off" name="keyword" placeholder="请输入搜索关键字"><input type="submit" class="submit" value="搜索"></form>
+</div><script type="text/javascript">
+    (function($){
+        $(".searchform").submit(function(){
+          var holder     = $(this).find(".keyword").attr("placeholder"),
+              keyword    = $.trim($(this).find(".keyword").val()),
+              searchType = $(this).find(".searchType").val();
+          if (keyword == "" || keyword == holder) {
+              alert(holder);
+              $(this).find(".keyword").focus();
+              return false;
+          }
+          if (searchType == "fulltext") {
+              window.open("/search/s.aspx?f=0&wd=" + encodeURI(keyword));
+              return false;
+          }
+        });
+        if ($.browser.msie) {
+            $(".searchform .keyword").each(function(){
+                var holder = $(this).attr("placeholder");
+                if ($(this).val()=="")$(this).val(holder);
+                $(this).focus(function(){
+                    if ($.trim($(this).val()) == holder)
+                        $(this).val("");
+                });
+                $(this).blur(function(){
+                    if ($.trim($(this).val()) == "") $(this).val(holder);
+                });
+            })
+        }
+    })(jQuery);
+    </script>
+            <div class="adArea">
+                <div class="ad"><script src="/IAA/201105/141.js"></script></div>
+                
+                <div class="ad"><script src="/IAA/200902/91.js"></script></div>
+                
+                <div class="ad"><script src="/IAA/201105/145.js"></script></div>
+                <div class="ad"><script src="/IAA/201112/148.js"></script></div>
+                <div class="ad"><script src="/IAA/200905/111.js"></script></div>
+                <div class="ad"><script src="/IAA/201105/142.js"></script></div>
+<div class="ad"><script src="/IAA/201802/157.js"></script></div>
+            </div>
+            <div class="sideBox" id="side_hot">
+  <div class="hd">
+    <h3 class="title">热门排行</h3>
+  </div>
+  <div class="bd">
+    <ul class="infoList infoListA">
+            
+            <li class="first"><a href="/article/201812/164249.html" target="_blank" title="标题：这一区域水泥熟料价格预期跌至100元/吨以下，或将征战全国？&#xD;发表时间：18年12月29日">这一区域水泥熟料价格预期跌至100…</a></li><li><a href="/article/201810/163641.html" target="_blank" title="标题：国庆后，需求回暖，多地水泥价格继续上调&#xD;发表时间：18年10月11日">国庆后，需求回暖，多地水泥价格继…</a></li><li><a href="/article/201809/163495.html" target="_blank" title="标题：旺季需求快速恢复，水泥价格持续回升&#xD;发表时间：18年09月18日">旺季需求快速恢复，水泥价格持续回升</a></li><li><a href="/article/201809/163473.html" target="_blank" title="标题：河南地区水泥需求恢复强劲 价格稳中向上&#xD;发表时间：18年09月14日">河南地区水泥需求恢复强劲 价格稳…</a></li><li><a href="/article/201807/162954.html" target="_blank" title="标题：水泥价格季节性回落，受益于停产、低库位，跌幅较小&#xD;发表时间：18年07月10日">水泥价格季节性回落，受益于停产、…</a></li><li><a href="/article/201807/162911.html" target="_blank" title="标题：水泥价格震荡下行，部分地区高位稳定&#xD;发表时间：18年07月02日">水泥价格震荡下行，部分地区高位稳定</a></li><li><a href="/article/201806/162818.html" target="_blank" title="标题：需求淡季仍有部分地区水泥价格上调&#xD;发表时间：18年06月20日">需求淡季仍有部分地区水泥价格上调</a></li><li><a href="/article/201806/162771.html" target="_blank" title="标题：【周评】水泥市场步入淡季，价格回落的幅度和范围较小&#xD;发表时间：18年06月12日">【周评】水泥市场步入淡季，价格回…</a></li><li><a href="/article/201806/162721.html" target="_blank" title="标题：周评：水泥需求表现良好，价格维持震荡上行&#xD;发表时间：18年06月05日">周评：水泥需求表现良好，价格维持…</a></li><li><a href="/article/201801/160550.html" target="_blank" title="标题：地产投资超预期 水泥等建材开启春季行情&#xD;发表时间：18年01月03日">地产投资超预期 水泥等建材开启春…</a></li><li><a href="/article/201711/159677.html" target="_blank" title="标题：[原创]湖北水泥价格涨不停&#xD;发表时间：17年11月08日">[原创]湖北水泥价格涨不停</a></li><li><a href="/article/201710/159087.html" target="_blank" title="标题：[原创]浙江杭绍水泥价格跟随上调&#xD;发表时间：17年10月12日">[原创]浙江杭绍水泥价格跟随上调</a></li><li><a href="/article/201709/158858.html" target="_blank" title="标题：[原创]水泥价格涨100元/吨，能落实吗？&#xD;发表时间：17年09月22日">[原创]水泥价格涨100元/吨，能落实…</a></li><li><a href="/article/201610/150507.html" target="_blank" title="标题：甘肃水泥价格再次飙升 后市将趋稳&#xD;发表时间：16年10月19日"><font style="font-weight:bold;font-style:normal;;">甘肃水泥价格再次飙升 后市将趋稳</font></a></li><li><a href="/article/201609/150050.html" target="_blank" title="标题：甘肃水泥价格受煤价成本上涨影响再次走高&#xD;发表时间：16年09月27日">甘肃水泥价格受煤价成本上涨影响再…</a></li><li><a href="/article/201609/150042.html" target="_blank" title="标题：长三角地区水泥价格迎来第三轮上涨&#xD;发表时间：16年09月27日">长三角地区水泥价格迎来第三轮上涨</a></li><li><a href="/article/201507/137755.html" target="_blank" title="标题：福建:上半年水泥需求逆市增长 发展仍向好&#xD;发表时间：15年07月27日">福建:上半年水泥需求逆市增长 发展…</a></li><li><a href="/article/201507/137169.html" target="_blank" title="标题：【原创】湖北水泥价格持续下行 盈利下降&#xD;发表时间：15年07月08日">【原创】湖北水泥价格持续下行 盈…</a></li><li><a href="/article/201503/132790.html" target="_blank" title="标题：【原创】浅谈2015年广东省水泥市场走向&#xD;发表时间：15年03月03日">【原创】浅谈2015年广东省水泥市场…</a></li><li><a href="/article/201408/123785.html" target="_blank" title="标题：上周全国水泥市场价格环比回落0.95%&#xD;发表时间：14年08月04日">上周全国水泥市场价格环比回落0.95%</a></li><li><a href="/article/201103/95666.html" target="_blank" title="标题：数字水泥李筱：华北市场还未大规模启动&#xD;发表时间：11年03月08日"><font style=";">数字水泥李筱：华北市场还未大规模…</font></a></li><li><a href="/article/201102/95506.html" target="_blank" title="标题：利森大幅下调水泥价格拉开四川降价序幕&#xD;发表时间：11年02月24日"><font style=";">利森大幅下调水泥价格拉开四川降价…</font></a></li><li><a href="/article/201102/95498.html" target="_blank" title="标题：湖南常德曾经水泥价格洼地变成了高地&#xD;发表时间：11年02月24日"><font style="color:#FF0000;;">湖南常德曾经水泥价格洼地变成了高地</font></a></li><li><a href="/article/201101/94566.html" target="_blank" title="标题：从不足到过剩 陕西水泥价格回落&#xD;发表时间：11年01月19日"><font style=";">从不足到过剩 陕西水泥价格回落</font></a></li><li><a href="/article/201101/94361.html" target="_blank" title="标题：2010年11～12月国内水泥价格行情综述&#xD;发表时间：11年01月12日"><font style=";">2010年11～12月国内水泥价格行情综述</font></a></li><li><a href="/article/201012/93589.html" target="_blank" title="标题：数字水泥：空库、欠货促使华东水泥价格再次飙升&#xD;发表时间：10年12月02日"><font style=";">数字水泥：空库、欠货促使华东水泥…</font></a></li><li><a href="/article/201011/93161.html" target="_blank" title="标题：数字水泥：产能直线上升 陕西水泥价格应声而落&#xD;发表时间：10年11月19日"><font style=";">数字水泥：产能直线上升 陕西水泥…</font></a></li><li><a href="/article/201010/91542.html" target="_blank" title="标题：河南水泥价格暴涨有因&#xD;发表时间：10年10月11日">河南水泥价格暴涨有因</a></li><li><a href="/article/201009/90727.html" target="_blank" title="标题：广东水泥：向好趋势难以撼动&#xD;发表时间：10年09月16日">广东水泥：向好趋势难以撼动</a></li><li class="last"><a href="/article/201009/90725.html" target="_blank" title="标题：湖南省水泥价格虽如期上涨 但后期仍有压力&#xD;发表时间：10年09月16日"><font style=";">湖南省水泥价格虽如期上涨 但后期…</font></a></li>
+          
+        </ul>
+  </div>
+</div>
+        </div>
+        <!-- side e -->
+    </div>
+    <!-- content e -->
+
+        <div id="footer">
+        <div class="footLink">
+            <a href="/">首页</a><span class="spe">|</span><a href="/shtml/about.html" target="_blank">关于我们</a><span class="spe">|</span><a href="/shtml/lxwm.html" target="_blank"><span style="color:#c00">联系方式</span></a><span class="spe">|</span><a href="/shtml/AD.html" target="_blank"><span style="color:#c00">宣传服务</span></a><span class="spe">|</span><a href="/shtml/declare.htm" target="_blank">本网声明</a><span class="spe">|</span><a href="http://www.chinacca.org/" target="_blank">协会园地</a>
+        </div>
+        <div class="copyright">
+            主办单位：北京中水协网信息咨询有限公司<br />
+本网站版权由北京中水协网信息咨询有限公司所有<br />
+<span style="color:#c00">京ICP证 050317号</span> 京ICP备09079614号 <br />
+
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802024218" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.dcement.com/UploadFiles/2018nzt/2018/11/201811150844267999.jpg" style="float:left;"/></a>京公网安备11010802024218号<br />
+
+地址：北京市海淀区三里河路11号（100831）E-mail：<a href="mailto:dc@dcement.com">dc@dcement.com</a><br />
+<a href="http://wpa.qq.com/msgrd?v=3&uin=75500327&site=qq&menu=yes" target="_blank"><img title=服务咨询 border=0 alt=服务咨询 src="http://wpa.qq.com/pa?p=2:75500327:45 &r=0.48649648444965093"/> 服务咨询</a>
+        </div>
+        <div class="img">
+            <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202005112300002" target="_blank"><img src="/Template/Default/Skin/images/biaoshi.gif"/></a><br />
+            <!--<a href="http://sealinfo.trustutn.org/info?sn=L003001201304279910172" target="_blank"><img src="http://p8.qhimg.com/d/webscan/pingan_logo.jpg"/></a>-->
+        </div>
+    </div>
+    <!-- footer e -->
+
+</div>
+<!-- wrap e -->
+<!--<script src="/JS/tongji.js"></script> -->
+<script src='/Analytics/CounterLink.aspx?Style=none'></script>
+<script>
+if ($.pe.cookie('MobileCookie') === '1') {
+  $('<div style="display:block;position:fixed;left:0;bottom:0; width:100%; margin:0px auto; height:50px; line-height:50px; font-size:30px; text-align:center; color:#fff;background:#3AB6D2">返回手机版&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;返回手机版&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;返回手机版</div>').click(function(){
+    $.pe.cookie('MobileCookie', 0, {path: '/'});
+    window.location.reload();
+  }).appendTo($('body'));
+}
+</script>
+<div style="display:none">
+    <script language="JavaScript" type="text/JavaScript" src="/Common/GetHits.aspx?id=164249"></script>
+   </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+jQuery("#fontzoom img").each(function(){
+    var img=jQuery(this);
+        img.hide();
+    var imgInt=setInterval( function(){
+        if(img.width()>0){
+            clearInterval(imgInt);
+            if(img.width()>650){ img.width(650).css({cursor:"pointer",height:"auto"}).click(function(){window.open(img.attr('src'), "_blank")});}
+            img.show();
+        }
+    },50 );
+});
+jQuery("img").parents("p").css("text-indent",0);
+
+//更改字体大小
+var status0='';
+var curfontsize=10;
+var curlineheight=18;
+function fontZoomA(){
+  if(curfontsize>8){
+    document.getElementById('fontzoom').style.fontSize=(--curfontsize)+'pt';
+    document.getElementById('fontzoom').style.lineHeight=(--curlineheight)+'pt';
+  }
+}
+function fontZoomB(){
+  if(curfontsize<64){
+    document.getElementById('fontzoom').style.fontSize=(++curfontsize)+'pt';
+    document.getElementById('fontzoom').style.lineHeight=(++curlineheight)+'pt';
+  }
+}
+</script>

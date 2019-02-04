@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="no-transform" />
+<link rel="stylesheet" type="text/css" href="/static/pc_v2/css/style.css?v=2017072503">
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/pc_v2/js/function.js?v=2017072601"></script>
+<!--[if lt IE 9]>  
+    <script src="/static/pc_v2/js/html5.js"></script>  
+<![endif]-->  
+	<title>王兴“消灭”摩拜 : 经理人分享</title>
+	<script type="text/javascript" src="/static/pc_v2/js/jquery.qrcode.min.js"></script>
+</head>
+<body class="page-post-single">
+<header>
+	<div class="logo fn-clear">
+		<a class="logo-img"><img src="/static/pc_v2/img/logo.png"></a>
+		<h1><a href="/">经理人分享</a></h1>
+	</div>
+	<div class="wrapper">
+		<nav>
+			<a href="/" >首页</a>
+			<a href="/column/1" >管理</a>
+			<a href="/column/2" >营销</a>
+			<a href="/column/3" >人力资源</a>
+			<a href="/column/4" >个人修养</a>
+			<a href="/ask" >社区</a>
+			<a href="/wiki" >百科</a>
+		</nav>
+		<a href="http://app.managershare.com" class="app-download-btn"><i class="iconfont icon-phone"></i>APP下载</a>
+		<div class="search fn-clear">
+			<form action="/search" method="get" id="header-search-form">
+				<i class="iconfont icon-search"></i>
+				<input type="text" name="keywords" placeholder="Search.." value="">
+				<a class="header-search-btn" href="javascript:;" onclick="$('#header-search-form').submit();">搜索</a>
+			</form>
+		</div>
+	</div>
+</header>
+<div class="left close">
+			<div class="no-login">
+			<a href="javascript:;" class="no-avatar">
+				<i class="iconfont icon-avatar"></i>
+				<span>登录</span>
+			</a>
+			<div class="login-box">
+				<div class="login-box-inner">
+					<i class="l"></i>
+					<a href="/connect/weibo/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weibo-c"></use>
+	                    </svg>
+	                 	<span>微博账号登录</span>
+	                </a>
+					<a  href="/connect/qq/" target="_blank"  class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-qq-c"></use>
+	                    </svg>
+	                 	<span>QQ账号登录</span>
+	                </a>
+					<a href="javascript:;" class="login-social social-weixin">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-weixin-c"></use>
+	                    </svg>
+	                 	<span>微信扫码登录</span>
+						<div id="weixin_login_container" class="weixin-qrcode"></div>
+	                </a>
+					<a href="/connect/douban/" target="_blank" class="login-social">
+	                    <svg class="icon" aria-hidden="true">
+	                        <use xlink:href="#icon-douban-c"></use>
+	                    </svg>
+	                 	<span>豆瓣账号登录</span>
+	                </a>
+	                <a class="login-account" href="javascript:;">经理人账号登录</a>
+	                <a class="register-account" href="javascript:;">注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript" src="/static/pc_v2/css/iconfont.js"></script>
+		<script>
+		    $(document).ready(function(){
+		    	$('.login-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/login?backurl='+backurl;
+		    	});
+		    	$('.register-account').on('click',function(){
+		    		var backurl = window.location.href;
+		    		window.location.href = '/register?backurl='+backurl;
+		    	});
+		    });
+		    	// 微信登录二维码
+			var winxin_login = new WxLogin({
+				  id:"weixin_login_container", 
+				  appid: "wx23962b9f338340e2", 
+				  scope: "snsapi_login", 
+				  redirect_uri: "http://managershare.com/connect/weixin/",
+				  state: window.location.href,//"managershare"
+				  style: "black",
+				  href: ""//
+				});
+		</script>
+	</div>
+<script>
+    $(document).ready(function(){
+    	$('.toggle-btn').on('click',function(){
+    		if($('.left').hasClass('close')){
+    			$('.left').removeClass('close').addClass('open');
+    			$(this).children('.iconfont').removeClass('icon-arrow-right').addClass('icon-arrow-left');
+    		}else{
+    			$('.left').removeClass('open').addClass('close');
+    			$(this).children('.iconfont').removeClass('icon-arrow-left').addClass('icon-arrow-right');
+    		}
+    	});
+    	$('.logout').on('click',function(){
+    		$(this).html('退出中…');
+			$.post("/ajax/ajax_login.php?action=loginout", function(data){
+				if (data=="loginout") {
+					var w=setTimeout(function(){
+						window.location.reload();
+					},1000);
+				}
+			});
+    	});
+    });
+</script>
+<!-- container Start -->
+	<div class="wrapper">
+		<article class="main">
+			<h1 class="post-title">王兴“消灭”摩拜</h1>
+			<input type="hidden" value="608264" id="post_id">
+			<input type="hidden" value="industry" id="column">
+			<section class="post-meta">
+				<a href="/author/sonic/" class="post-author">唐老诗</a>&nbsp;
+				<span class="post-date">01月24日</span>
+							</section>
+						<article class="post-content">
+								<div class="post-thumbnail">
+					<img class="post-thumbnail" src="http://static.managershare.com/uploads/2019/01/15482979692906.jpg?imageView2/2/w/760" alt="王兴“消灭”摩拜">
+				</div>
+								<p>被美团收购10个月后，摩拜经历了创始人离场，部门整合和大规模裁员。今天，它连名字都改了——“摩拜单车”变成了“美团单车”，摩拜这个品牌将成为历史。<br/></p><p>1月23日，美团联合创始人、高级副总裁王慧文发布内部信，宣布摩拜已全面接入美团APP，摩拜单车将成为美团LBS平台单车事业部，由他本人兼任事业部总经理。</p><p>王慧文在内部信中表示，目前美团APP和摩拜APP均支持扫码骑车，未来摩拜单车品牌将更名为“美团单车”，美团APP将成为其国内唯一入口。</p><p>2018年12月，摩拜创始人、CEO胡玮炜用一封内部邮件与摩拜彻底告别。此后，摩拜曝出开始进行人员优化、进一步降低成本的消息。有员工在社交媒体爆料称，摩拜会对与美团有业务重叠的部门人员进行优化，比如市场、财务、技术等，整体裁员比例在20%-30%之间。</p><p>彼时，全天候科技从摩拜内部管理层人士处获悉，摩拜裁员确有其事，裁员幅度约在30%。据悉，摩拜单车团队规模近千人，这也就意味着有近300人即将面临离职。</p><p>“到现在，该走的都已经走了。”一位留下的摩拜员工提到，他们已经开始适应“美团员工”这个身份。</p><p>然而，相比已经发展成熟的外卖等业务，美团在大出行领域仍然缺乏建树。上市前夕，美团宣布过去投入超过十亿元的打车业务暂停扩张。近期，美团租车业务也因“商业模式无法跑通，很难实现盈利&quot;被关闭。最近，美团打车拿到了京牌，外界猜测它或许又会展开新一轮的烧钱大战。美团也在推进摩拜的精细化运营，但摩拜会在美团版图中担当什么角色、发挥多大价值，还很难有定论。</p><p>王慧文在邮件中也提到，摩拜成员将在2月到底搬至美团总部大厦一起办公。这意味着，摩拜团队将离开2017以来一直常驻的曼宁大厦。这座位于亮马河边的三层小楼，外墙上还刷着专属于摩拜的橘黄色。</p><p>这抹亮丽的橘黄色，将很快被美团统一的绿色取代。一位摩拜员工在微信朋友圈贴出一张“摩拜单车再见”的图片，并感叹说，“这一句再见，却是再也不见”。</p><h3>摩拜被收购的10个月</h3><p>对于大多数普通摩拜员工来说，过去的10个月，如同经历了过山车。</p><p>去年4月，美团对摩拜的收购刚刚完成时，王兴曾现身摩拜的全员大会，并宣布在职员工的位置不会变，摩拜也不会进行裁员。</p><p>王兴还用滴滴和快的合并后曾进行大规模裁员为例，“（滴滴、快的）因为业务重叠率太高所以裁员，而美团和摩拜几乎没有重叠，就算有一小部分重叠，也会妥善安排。”</p><p>卖身美团之前，摩拜已经长时间未能完成新一轮融资，导致资金压力愈发紧张。有媒体称，在美团收购摩拜之前，摩拜挪用用户押金超过60亿元，拖欠供应商贷款10亿元。摩拜也经历了一波离职潮。</p><p>美团的收购，一定程度上为摩拜解决了燃眉之急。对于留下员工来说，反而是好事。</p><p>7月，摩拜被收购后首次召开战略发布会，宣布全面免押金。胡玮炜没有再像过往一样，神采奕奕地站在台上发言，而是选择悄悄坐在一个角落里观望，似乎生怕引起注意。没等主持人说完结束词，她就匆匆离开了现场，没有和媒体做任何交流。</p><p>摩拜是美团招股书上的一个“坑”，美团吞下了十多亿的债务，这一点甚至在美团港股上市时，成为其股价破发的背锅侠。</p><p>根据华尔街见闻见智研究所分析，从美团去年4月份公布的摩拜收入及成本结构看，摩拜获得的骑行收入（1.47亿元）只够弥补运营开支（1.58亿元），固定资产折旧（3.96亿元）则无法获得任何补偿。粗略估计，美团应承担客户押金高达80亿元的负债。而美团因收购支付的总代价高达155亿元，两项相加，美团很有可能在摩拜的交易后实质性亏损200亿元以上。</p><p>尽管王慧文提到，摩拜对于美团布局大出行至关重要，不急于让摩拜独立盈利。但据摩拜内部员工透露，美团在收购后，便开始考虑降低亏损。</p><p>去年12月，胡玮炜在宣布离任前，对媒体提到，摩拜被美团收购之后，几乎没有投入新的单车，但订单量在不断上涨。同时，她也提到，被美团收购的8个月以来，公司大规模地削减了成本。</p><p>摩拜告别了高速扩张的战略，也不再和ofo等同行兵戎相见，打价格战，进入了保守和精细化运营阶段。而这一战略，可能也会导致一些摩拜员工工作不饱和。</p><p>一位前摩拜市场人员对全天候科技提到，“美团没有刻意的提到裁员，但是包括运营、技术在内的很多部分与美团整合后，人员明显过剩。”同时，她提到，美团总部对出差、办活动等日常的操作严格把控，不给发挥的空间，“实际是在变相逼我们离开。”</p><p>11月27日，摩拜运营主体“北京摩拜科技有限公司”正式完成股东工商变更。创始团队中的胡玮炜、王晓峰、夏一平以及投资人李斌全部退出，美团创始人王兴成为大股东，占股95%，美团联合创始人兼CTO穆荣均占股5%。</p><p>胡玮炜被曝在这场为期3年多的“创业之旅”中套现近15亿元，完成了阶层的跃迁，成为人生赢家。</p><p>去年底，摩拜员工担心的事件终于发生——大规模裁员开始。摩拜员工在脉脉等社交平台讲述经历，“周一早上被叫到，排队，HR一个个的对谈，很多都给了最后期限，26日之前必须走人，被裁员工的补偿以n（在职年限）+1为准。”</p><p>这次裁员看起来毫不留情。摩拜官方回应称，人员优化的最终目标是更好地聚焦核心能力，让组织变得更加贴近业务，提升业务的推进效率。“也在同步进行招聘。” 但跟据多名离职员工表示，提供的内部转岗职位非常少。</p><h3>被离开的创始人</h3><p>2015年底，一张大众点评创始人张涛痛哭的照片在社交网络疯传，一度引发了广泛的关注。当时，在正式宣布离开大众点评前，张涛出席了一次与点评员工的聚餐。照片中，他他穿着蓝色衬衫，外面还套了一件橙白相间的大众点评工服，与大众点评的其他几位联合创始人相拥而泣。<br/></p><p>彼时，美团与大众点评完成合并，张涛曾在公司内部传达的邮件中称，“宁可牺牲一部分运营效率，也要确保员工不流失……”</p><p>但事不遂人愿。2015年11月10日，王兴群发内部邮件，宣布“新美大”完成了高层架构调整，几乎所有美团高管占据新公司全部要职，点评系的联合创始人大多退休或者离开新公司管理层，而张涛只象征性地出任董事长职位，不再参与实际管理。</p><p>70后的张涛给外界的印象是一个擅长“长跑”的选手，慢公司的创始人；而70末出生的王兴看起来更加“果决”和适合“打仗”。他带领美团，仅用了5年时间，就成为有12年历史的慢公司——大众点评的劲敌。</p><p>二者合并后，有媒体报道，红杉资本作为双方的重要股东,在推动美团和大众点评的合并上发挥了重要作用，两者的合作更像是一场由资本方驱动的“包办婚姻”。投资人的选择、双方业务的重合，甚至与王兴在年龄、行事风格等方面的不同都让张涛必须接受最后的结果——离开。</p><p>近年来，被收购过后，创始人出局似乎已正成为惯例。但在王兴这里，这个特征更加明显。从点评到摩拜，王兴操盘的两笔大的收购案中，对方创始团队无一例外地全部离开。</p><p>王兴的诉求很明显——谋求绝对控制权。</p><p>2018年初，摩拜创始人王晓峰、夏一平，包括摩拜内部还有不少股东都支持摩拜独立发展。美团曾经提出向摩拜投资6亿美元，支持其进一步的发展。</p><p>但随后，王兴又收回了投资的offer。王兴在《财经》的采访中提到，最后采取收购而不是投资的原因是，“不希望滴滴ofo的教训重演”。</p><p>美团收购摩拜时，华兴资本为摩拜的独家财务顾问。华兴创始人包凡提到，“也许是ofo跟滴滴开战后改变了王兴的想法，他后来变得异常坚决，一定要全面收购。”</p><p>尽管遭遇了很多早期股东反对，但最后这项收购还是在4月初完成。包凡说，摩拜的股东中没有人亏损，收益大约都在20%以上。此外除创始团队外，所有投资人都拿到了一部分美团股票。</p><p>摩拜的中期投资人，启明创投合伙人黄佩华提到，虽然最终价格并不及预期，但启明也是美团的投资人，“我们对摩拜并入美团之后的发展充满期待。”</p><p>胡玮炜在摩拜卖身美团这一决意上投了赞成票。当被并购的大局已定时，她在微信朋友圈表示，“并不存在所谓的“出局”，在我看来一切是新的开始”。</p><p>去年底，胡玮炜通过内部信宣布卸任摩拜CEO时，她称自己完成了“阶段性使命”，现在是放手的最好时机。外人看来，这封信带着淡淡的伤感。<br/></p><p>相比胡玮炜，摩拜联合创始人王晓峰在卖掉摩拜这件事上更加决绝——如果失去它，就选择离开它。王晓峰和点评的张涛看起来有一些相似之处——两人都对行业有极大的热情，这样的热情帮助他们探索出了一条有价值的商业模式。两人也曾坚决维持品牌的独立。</p><p>卖身美团的谈判结束后，王晓峰选择第一个离场，只在微博上留下“时光飞逝，仿佛如昨”感叹。</p><p>2018年4月，王晓峰安静地出现在摩拜，宣布了离职的消息。</p><p>当天，正赶上一名员工结婚，这名员工拉上另外两位名同事一起以“跳河”的方式庆祝。河边站满了围观的同事，不时有人拍手称赞。胡玮炜也拍下这个场景，发在了朋友圈。</p><p>王晓峰没有参与到这场热闹的场景。当晚，他处理完所有的事宜，走出摩拜的大门，身上没有背包。他伸手同身边的同事告别，之后快步离开。</p><p>“王晓峰是真得把共享单车看作了一份事业”。光速中国创始合伙人韩彦至今还记得王晓峰第一次对他谈起共享单车时的样子——两眼放光。当时王晓峰刚从Uber离职，“以前做Uber是把车连起来，现在我要做一件大事，我要把自行车连起来。”王晓峰告诉韩彦。</p><p>2015年底，韩彦第一次见到摩拜单车，王晓峰把它骑到上海新天地的一座办公楼下，骑了20多分钟一直喘气。二人见面第一句话就是，“看，我真得把单车连起来了。”</p><p>王晓峰最初是反对卖掉摩拜的，但最后在股东们的驱动下，他还是在最后并购书上签了字。</p><p>“他懂得创始人和CEO两个角色分开。这哥们是条汉子，值得敬佩。”包凡提到。</p><h3>王兴不回头</h3><p>在业内，王兴以雷厉风行和杀伐果断闻名，他认定的事情，很难再有回转余地。</p><p>2016年之后，美团要做成一个超级生活方式平台的野心更加明确——横向2C围绕吃和玩，为消费者提供更多的场景和更高品质的服务，满足消费者所有关于吃和玩的需求；纵向2B做深，通过对产业的改造提升效率，实现真正的消费升级。</p><p>为了这一目标，王兴先后上线美团打车，与滴滴开始正面交锋；发布住宿分享平台榛果民宿app，与传统在线旅游网站（OTA）互抢客源。一度有人开玩笑，半壁互联网江山都是美团的敌人。</p><p>没有人可以阻挡美团的步伐。整合摩拜也是美团大生态链的必要部分。然而，王兴却低估了布局出行领域的难度。</p><p>去年9月，美团在上市前期暂停了打车业务。此前，打车业务投入已经超过十亿元，但收效甚微。</p><p>美团发布的第三季度财报中，外卖和到店酒旅延续成为美团的盈利支柱，但包括摩拜、美团打车在内的新业务毛利亏损额达到 13 亿元，是美团三大板块中唯一利润为负的业务。</p><p>对于上线某个新业务，王兴或王慧文经常说的一句话是，“我就试试”。但上市后，留给美团的试错机会不多，盈利的压力，也许会让美团放弃一部分亏损业务，而出行事业部将是下步考验的重点。</p><p>去年11月，陈一舟卖掉人人网，引发了很多网友对王兴掌舵时的校内网的追忆，也有不少人提议王兴把人人网买回来。</p><p>但王兴没有回头。不论是当年卖掉饭否和校内，还是在千团大战中坚持到底，再到与大众点评合并，以及站队腾讯，公然与阿里对峙等问题上，他都表现的态度鲜明，执行的坚决。而在当下的互联网界，一家公司的性格几乎等同于其创始人的性格。</p>
+				<div class="fn-clear post-bottom">
+					<div class="original-area">
+						<p style="font-size:12px;color:#999;">（下载iPhone或Android应用“经理人分享”，一个只为职业精英人群提供优质知识服务的分享平台。不做单纯的资讯推送，致力于成为你的私人智库。）</p>
+												<p class="original">
+							<em>
+															作者：马程<br>
+								来源：<a href="" target="_blank">“全天候科技”（ID： iawtmt）</a>																												</em>
+						</p>
+											</div>
+					<div class="gag-post-bottom">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:150px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="7196111122"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+					</div>
+				</div>
+			</article>
+			<div class="node-title"><i class="block"></i>文章相关知识点</div>
+			<section class="post-words">
+								<a href="/wiki/收购" title="收购">收购</a>
+								<a href="/wiki/商业模式" title="商业模式">商业模式</a>
+								<a href="/wiki/员工" title="员工">员工</a>
+							</section>
+						<div class="gag-post-wiki">
+				<script type="text/javascript" src="http://yx1.managershare.com/zb3a1ece90ffcbf239db0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+			</div>
+						<div class="node-title"><i class="block"></i>评论&nbsp;&nbsp;|&nbsp;&nbsp; <span><i class="comment-count comment-num">0</i>条评论</span></div>
+			<section class="pub-comment fn-clear">
+									<a class="user-avatar no-login">
+						<i class="iconfont icon-avatar"></i>
+					</a>
+								<div class="comment-form">
+					<textarea placeholder="发表我的伟大言论.." class="comment-textarea"></textarea>
+					<a href="javascript:;" class="comment-btn comment-submit">评论</a>
+				</div>
+			</section>
+			<section class="comment-list">
+				
+			</section>
+			<div class="node-title" style="margin-top:50px;"><i class="block"></i>畅阅·猜你喜欢</div>
+			<section class="feed-post-list">
+								<a href="/post/608451?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/a633a_HKUej4ca4R0YjJnG.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>地主家没有余粮了？今日头条母公司普惠红包大缩水 ！</span>
+				</a>
+								<a href="/post/608422?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/1329c_MiLAZ4Liyw841ivH.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>继小米做电视之后，荣耀也将推出电视！你会买吗？</span>
+				</a>
+								<a href="/post/608285?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/28ab7_s28ujmIdGJYikvPK.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>苹果裁员200人！究竟怎么回事？跟手机销量下降有关系吗？</span>
+				</a>
+								<a href="/post/608284?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/b03d3_9OIYB1W3LKcwYxsD.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>华为推出业界首款5G芯片——天罡芯片！国外还能继续封杀？</span>
+				</a>
+								<a href="/post/608188?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/2a595_p50McgkqL1wnREWb.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠摊上大事了！泄漏未公开重大信息，面临双重处罚</span>
+				</a>
+								<a href="/post/608187?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/22071_WxF0Y1r58lkuvCYO.png!thumbnail?imageView2/1/w/190/h/124">
+					<span>顺丰发公告称过年不休息，但是收费高了多少？</span>
+				</a>
+								<a href="/post/608186?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/beee8_EvJszfz8DZk5AdIj.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>程序员突然跑路？游戏公司创始人600万元打水漂！</span>
+				</a>
+								<a href="/post/608085?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/cda87_hFAnvLVavssFjF4E.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>无印良品频陷“质量门”，“良品”地位不保？</span>
+				</a>
+								<a href="/post/608072?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/3f413_S9Orm3HjN7ctx1zr.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>百度要做最懂用户的全球顶级高科技公司，是按下“重启键”了吗？</span>
+				</a>
+								<a href="/post/608071?from=feed" class="fn-clear item">
+					<img src="http://static.managershare.com/uploads/2019/01/34d41_D1KpZjUkAAcHUTAh.jpg!thumbnail?imageView2/1/w/190/h/124">
+					<span>董明珠再次当选格力董事长：预计2018年营收超2000亿元！</span>
+				</a>
+												<div class="gag-feed-bottom">
+					<script type="text/javascript" src="http://yx1.managershare.com/yy3a1ece90ffcbf53cdb0768d9eff336e154e5d81628ea30f01a7f27d8a5.js"></script>
+				</div>
+								<div class="feed-post-list-hide">
+										<a href="/post/608070?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/dd499_2I457rZWfng3gqsj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米解禁后股东纷纷套现逃离，市值蒸发近3千个亿？</span>
+					</a>
+										<a href="/post/608069?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/f0a57_9ImfoaXlJZkaRYc3.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>三大运营商去年少赚1200亿元，你的话费真的降了？</span>
+					</a>
+										<a href="/post/608034?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ce31e_4I34aNEwj14hdcZb.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾实名diss马桶MT？旗帜鲜明反对匿名社交</span>
+					</a>
+										<a href="/post/608033?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/6dbc1_CBlXHKs1PeMjG0DR.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>小米股价腰斩，市值蒸发近3000亿！</span>
+					</a>
+										<a href="/post/608001?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/43ac1_U5d2rHZFtMIrpBWa.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>生鲜零售又迎来新玩家！美团上线“美团买菜”</span>
+					</a>
+										<a href="/post/607963?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/4847c_64dluogqCcEaugD2.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>今日头条这么厉害？ 原央视主持人张羽辞职加盟任副总裁</span>
+					</a>
+										<a href="/post/607962?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e57b6_PMQlOLkUYMw4tgmg.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>这个月下旬可以打顺风车啦！哈啰出行入局顺风车！</span>
+					</a>
+										<a href="/post/607949?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/ad2cf_6FG1WcLwrNMFek53.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>“狂奔”的瑞幸咖啡要上市了？</span>
+					</a>
+										<a href="/post/607932?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3e609_ZCqmZTdYtZcxRmmB.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>天猫宣布18日首发苹果智能音箱，看到售价我就呆了！</span>
+					</a>
+										<a href="/post/607931?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/a4545_CkOKvqM0Ct8Y5B1L.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>Space X裁员577人！马斯克遇到啥重大挫折了？</span>
+					</a>
+									</div>
+				<div class="feed-post-list-hide">
+										<a href="/post/607907?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c6608_nB4na88VXAkJyAjr.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>还能这样？传亚马逊正构建云游戏服务，无需下载就能玩！</span>
+					</a>
+										<a href="/post/607906?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/70ee7_jNw2oN12iCo4JW2q.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>星巴克外卖已覆盖2000家门店，覆盖6亿会员！</span>
+					</a>
+										<a href="/post/607885?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/e320e_03K3o40IFl8b13Fj.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>S10手机将于2月21日发布：售价或超1万2！三星靠它翻身？</span>
+					</a>
+										<a href="/post/607884?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/3ed75_5SgnrMI8xmwwEVnp.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马化腾坐不住了，今日头条上线社交产品——抖信！</span>
+					</a>
+										<a href="/post/607844?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/1fda7_pJfn4sa8bDUygitj.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>145名儿童接种过期疫苗！江苏金湖县3人被免职5人被立案调查</span>
+					</a>
+										<a href="/post/607843?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/c1ab4_02Ze3pDb7LQPTnSV.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>亚马逊老板离婚，世界首富面临“分家”？</span>
+					</a>
+										<a href="/post/607842?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/03517_mUyhvMuytNQau8D8.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>苹果手机在中国降450 元？华强北店铺否认：不可能便宜这么多</span>
+					</a>
+										<a href="/post/607841?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/76bb1_574RFR2GzywruCF9.jpg!thumbnail?imageView2/1/w/190/h/124">
+						<span>社区团购大战又将迎来新玩家！苏宁小店“苏小团”App开启测试</span>
+					</a>
+										<a href="/post/607840?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/53ef7_h0wrXVVrzEU7fhmb.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>马斯克：新款特斯拉跑车将装置火箭推进器，真的还能上天？</span>
+					</a>
+										<a href="/post/607839?from=feed" class="fn-clear item">
+						<img src="http://static.managershare.com/uploads/2019/01/49cf0_VPagzz2YyqsEyQ9a.png!thumbnail?imageView2/1/w/190/h/124">
+						<span>微信“九宫格”下架摩拜单车！背后有什么大动作？</span>
+					</a>
+									</div>
+				<a class="show-feed" href="javascript:;" style="display:none;">点击加载更多…</a>
+			</section>
+		</article>
+		<aside>
+			<section class="aside">
+				<div class="node-title"><i class="block"></i>关于作者</div>
+				<div class="author-introduce">
+					<div class="post-author fn-clear">
+						<a href="/author/sonic/" class="user-avatar">
+															<img src="/uploads/avatar/000/16/20/small_98.jpg">
+													</a>
+						<a class="user-name" href="/author/sonic/">唐老诗</a>
+						<a class="follow-btn " href="javascript:;" data-uid="162098">+&nbsp;关注</a>
+					</div>
+					<p>教育技术培训，企业内训，PPT设计制作</p>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="fav-share">
+					<a href="javascript:;" class="favorite-btn ">收藏此文章</a>
+					<a  href="javascript:;" class="post-comment-num"><i class="iconfont icon-comment"></i><span class="comment-num">0</span>评论</a>
+					<script type="text/javascript">document.write(['<a href="http://service.weibo.com/share/share.php?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到微博" class="share-icon"><i class="iconfont icon-weibo"></i>微博<\/a>'].join(''));</script>
+					<script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="分享到QQ空间" class="share-icon"><i class="iconfont icon-qzone"></i>Qzone<\/a>'].join(''));</script>
+					<a class="share-icon share-weixin" href="javascript:;"><i class="iconfont icon-weixin"></i>微信<div class="share-qrcode"><p></p><span>微信扫一扫</span></div></a>
+				</div>
+			</section>
+						<section class="aside">
+				<div class="gag-post-aside">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300-250矩形广告-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5098848493515405"
+     data-ad-slot="9111117589"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+			</section>
+								</aside>
+	</div>
+<!-- container End -->
+<input type="hidden" value="0" id="is_login">
+<div id="reply-form" style="display:none;">
+	<div class="reply-form">
+		<textarea class="reply-textarea"></textarea>
+		<input type="hidden" value="" class="comment-id">
+		<a href="javascript:;" class="comment-btn reply-submit">评论</a>
+	</div>
+</div>
+<script type="text/javascript">
+	    $(function(){
+	    	$('.comment-list').on('click','.reply-count',function(){
+	    		$(this).parent().siblings('.reply-list').slideToggle();
+	    	});
+	    	$('.comment-list').on('click','.reply-comment',function(){
+	    		if($(this).parent().siblings('.reply-form').length>0){
+	    			$('.comment-list').find('.reply-form').remove();
+	    		}else{
+		    		$('.comment-list').find('.reply-form').remove();
+	    			var	comment_id = $(this).data('comment-id');
+	    			$('#reply-form').find('.comment-id').val(comment_id);
+	    			var reply_form = $('#reply-form').html();
+		    		$(this).parent().after(reply_form);
+	    		}
+	    	});
+	    	// 回复
+	    	$('.comment-list').on('click','.reply-submit',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".reply-textarea").val()),
+					comment_count = parseInt($(".comment-num").html()),
+					comment_id = $(_this).siblings('.comment-id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=comment&type=reply", {comment_id: comment_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$('.comment-num').html(comment_count+1);
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id: result.comment_id},function(html_data){
+							if(result.reply_id>0){
+								var reply_count = parseInt($(_this).parents('.reply-list').parent().find('.reply-num').html());
+								$(_this).parents('.reply-list').parent().find('.reply-num').html(reply_count+1);
+								$(_this).parents('.reply-list').append(html_data);
+							}else{
+								if($(_this).parent().parent().find('.reply-list').length>0){
+									var reply_count = parseInt($(_this).parent().parent().find('.reply-num').html());
+									$(_this).parent().parent().find('.reply-num').html(reply_count+1);
+									$(_this).parent().parent().find('.reply-list').prepend(html_data);
+									$(_this).parent().parent().find('.reply-list').show();
+								}else{
+									var reply_list_html = '<div class="reply-list" style="display:block"><i class="triangle-top"></i><i class="triangle-top inner"></i>'+html_data+'</div>';
+									$(_this).parent().parent().find('.reply-comment').after('<a href="javascript:;"><i class="iconfont icon-comment"></i><span class="reply-num">1</span></a>');
+									$(_this).parent().after(reply_list_html);
+								}
+							}
+	    					$(_this).parent().remove();
+						});
+					}
+				},'json');
+	    	});
+	    	// 点赞
+	    	$('.comment-list').on('click','.comment-dig',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('digged')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var comment_id = $(_this).data('comment-id');
+				$.get("/ajax/ajax_action.php",{action:'comment',comment_id:comment_id,type:"dig"},function(){
+			    	var dig_count = parseInt($(_this).children(".dig-count").html());
+			    	$(_this).children(".dig-count").html(dig_count+1);
+		    		$(_this).children('.icon-like').removeClass('icon-like').addClass('icon-like-o');
+		    		$(_this).addClass('digged');
+				});
+	    	});
+		});
+
+</script>
+<!-- script Start -->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".share-qrcode p").qrcode({ 
+			    width: 240, //宽度 
+			    height:240, //高度 
+			    text: location.href
+			}); 
+	    	$('.comment-textarea').on('click',function(){
+    			$('.comment-form').addClass('open');
+	    	});
+	    	$('.post-comment-num').on('click',function(){
+				$('html, body').animate({
+				    scrollTop: $('.comment-count').offset().top-70
+				}, 0);
+	    	});
+	    	// 收藏
+	    	$('.favorite-btn').on('click',function(){
+	    		if($(this).hasClass('favorited')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+	    		var post_id = $('#post_id').val();
+				$('.favorite-btn').html('收藏中…');
+				$.get("/ajax/ajax_action.php", {action:'post', post_id: post_id,type:'favorite'},function(result){
+					if(result.isError!=1){
+						$('.favorite-btn').addClass('favorited');
+						$('.favorite-btn').html('已收藏');
+					}else{
+						$('.favorite-btn').html('收藏此文章');
+						alert(result.errorMsg);
+						return false;
+					}
+				},'json');
+	    	});
+	    	// 评论
+	    	$('.comment-submit').on('click',function(){
+	    		var _this = $(this);
+	    		if($(_this).hasClass('submitting')){
+	    			return false;
+	    		}
+	    		if($('#is_login').val()<1){
+					alert('请先登录');
+					return false;
+	    		}
+				var content = trim($(".comment-textarea").val()),
+					comment_count = parseInt($(".comment-count").html()),
+					post_id = $('#post_id').val();
+				if(content==''){
+					alert('请填写评论内容');
+					return false;
+				}
+
+	    		$(_this).addClass('submitting');
+				$(_this).html('提交中…');
+				$.post("/ajax/ajax_action.php?action=post&type=comment", {post_id: post_id,content:content},function(result){
+					if(result.isError==1){
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$('.comment-num').html(comment_count+1);
+						$(_this).html('评论');
+						alert(result.errorMsg);
+						return false;
+					}else{
+						$(".comment-textarea").val('');
+	    				$(_this).removeClass('submitting');
+						$(_this).html('评论');
+						$.get("/ajax/ajax_data.php", {action:'comment_single',comment_id:result.comment_id},function(html_data){
+							$('.comment-list').prepend(html_data);
+						});
+					}
+				},'json');
+	    	});
+	    	// 关注
+	    	$('.follow-btn').on('click',follow_user);
+
+			/* 菜单 */
+			$('.show-feed').on('click',function(){
+				if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+					$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+				}else{
+					var column = $('#column').val();
+					window.location.href = 'http://www.managershare.com/'+column;
+				}
+			})
+
+			var scroll=function(){
+				var scrollH = $(window).scrollTop(),
+					wh = $(window).height(),
+					dh = $(document).height();
+				if(scrollH+wh==dh){
+					if($('.feed-post-list').children().hasClass('feed-post-list-hide')){
+						$('.feed-post-list-hide').eq(0).removeClass('feed-post-list-hide').addClass('feed-post-list-show');
+						$('.show-feed').html('加载中…');
+						$('.show-feed').show();
+					}else{
+						$('.show-feed').html('加载更多…');
+						var column = $('#column').val();
+						$('.show-feed').attr('href','http://www.managershare.com/'+column);
+						$('.show-feed').show();
+					}
+				}
+			}  
+			//绑定滚动事件
+			$(window).bind('scroll',scroll);  
+		});
+	</script>
+<!-- script End -->
+<!-- footer Start -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?1b0297d1076d519eaf7e835b143ed3f3";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<footer>
+		<section class="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2014-2017 ·  京ICP备14009312号 · 京公安备案号11010502034979 · <script src="http://s15.cnzz.com/stat.php?id=2308234&web_id=2308234" language="JavaScript"></script> <a href="/about" target="_blank">用户协议</a>
+				<br>联系我们：QQ 1523582323；managershares@qq.com；  用户交流QQ群：173272242
+			</div>
+		</section>
+	</footer>
+<!-- footer End -->
+</body>
+</html>

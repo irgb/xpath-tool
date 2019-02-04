@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>“外滩最后一块门牌”告诉你，为什么超九成人假期做这件事_齐鲁壹点网</title>
+        <meta name="description" content='“外滩最后一块门牌”告诉你，为什么超九成人假期做这件事。
+  
+   
+   
+   
+    
+   
+   
+    
+     
+     
+    
+   
+   
+    
+     
+      我国旅游业进入大众旅游时代，旅游越来越成为人们的一种生活方式。
+     
+    
+ ' />
+        <meta name="keywords" content="" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9662116";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">“外滩最后一块门牌”告诉你，为什么超九成人假期做这件事</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9662116.html' class='sh_9662116'>“外滩最后一块门牌”告诉你，为什么超九成人假期做这件事</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">13:12</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">正和岛</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9662116' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9662116' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9662116'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        
+  <div class="rich_media_content " id="js_content">
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="315" data-width="560" src="https://wscdn.ql1d.com/20181230ZbtFvPToude5khgHY0QU.gif"/>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+      我国旅游业进入大众旅游时代，旅游越来越成为人们的一种生活方式。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+      旅游大到城市、小镇，小到一个景区、一个街道的选择，究竟去哪旅游成为一个难题。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+      在很多人心中，如果选择一个城市，北京、上海、杭州、丽江等是很好的选择；如果选择一个景点，北京有故宫、颐和园，杭州有西湖、西溪湿地，西安有兵马俑、明城墙，而上海有外滩、东方明珠。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="color: rgb(165, 165, 165);font-size: 15px;">
+      都市人们越来越渴望有文化内涵的心灵诗意栖居，那么深处一线城市的北上广深会有吗？答案是肯定的。但很多人不知道的是上海成为新的文创目的地，而且就在著名的外滩！
+     </span>
+    </em>
+   </p>
+   <section style="padding-right: 16px;padding-left: 16px;max-width: 100%;box-sizing: border-box;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);word-wrap: break-word !important;">
+    <section>
+     <section>
+      <section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="margin-right: 16px;margin-left: 16px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;color: rgb(165, 165, 165);font-size: 15px;box-sizing: border-box !important;word-wrap: break-word !important;">
+     作 者：朱明琪
+    </span>
+   </p>
+   <p style="margin-right: 16px;margin-left: 16px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;color: rgb(165, 165, 165);font-size: 15px;box-sizing: border-box !important;word-wrap: break-word !important;">
+     <span style='max-width: 100%;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;letter-spacing: 0.544px;text-align: center;widows: 1;'>
+      来 源：正和岛
+     </span>
+     <span style='max-width: 100%;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;letter-spacing: 0.544px;widows: 1;'>
+      （ID：zhenghedao）
+     </span>
+    </span>
+   </p>
+   <p style="margin-right: 16px;margin-left: 16px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     身体和灵魂总要有一个在路上。人们渴望诗和远方，陌生的远方有景色，而这通过旅游的方式可以实现。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     2018年即将结束，又要迎来2019年的元旦假期。每年的长假都是朋友圈进行摄影比赛的时刻，不知道你接下来准备去哪打卡？
+    </span>
+   </p>
+   <p>
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230cYl6Zz4V7LIOsPMESxtg.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       旅游两大变化：网红+重文化
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     近年来，中国正在经历消费升级的浪潮，旅游产业作为典型的成长型朝阳产业，是其显著表现之一。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      文化和旅游部发布的数据显示，2017年旅游业综合贡献8.77万亿元，对国民经济的综合贡献达11.04%。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     今年上半年，国内旅游人数达28．26亿人次，国内旅游收入2．45万亿元，增幅都超过10%。北京、三亚、厦门、杭州、桂林、上海、西安、重庆、丽江等热门城市继续荣登国庆旅游最受欢迎城市榜单。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      1.短视频催火旅游城市
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     与几年前不同的是，短视频为城市形象的传播起到了至关重要的作用，其热门城市逐渐成为游客出行的风向标。
+     <strong>
+      甚至有人总结“抖音红了西安重庆，快手火了东北三省”。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     尤其是重庆、西安、厦门、成都、三亚等短视频之城，成为线上用户关注度、搜索量增幅最快的目的地，很多城市景区也得以走红。众多粉丝以去网红城市、网红景区打卡为旅游乐趣，西安鼓楼、重庆的洪崖洞、张家界的玻璃栈道等更是吸引大批外地游客来打卡，而对应的打卡游记跳跃式增多。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      2.超过90%的游客参加了文化活动
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     文化创意旅游也成为新领域、新热点，文化“深度游”成为中国旅游产业发展的新亮点。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     同时，从过去的观光游、跟团游、周边游到如今的深度题游、休闲游、文化游，中国人的旅游消费正在向买体验、享受体验转变，更加重视消费的品质。旅游消费带动的不仅仅是统计数字的变化，更是文化内涵的融合和提升。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     仅以国庆黄金周为例，据文化和旅游部数据中心测算，
+     <strong>
+      国庆期间超过90%的游客参加了文化活动
+     </strong>
+     ，前往博物馆、美术馆、图书馆和科技馆的游客达到40%以上。圆明园、故宫博物院、秦始皇陵兵马俑等文化类景区更是吸引了大量游客，而北京、宁波、无锡、西安、杭州、南京等成文化类热门目的地。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     按照马斯洛的需求理论分析，人们满足了生存需求、底层的需求后，会有更高的需求。如今，我国的人均GDP已经达到6100美元以上，文化消费需求快速释放，旅游消费高涨，文旅融合产品备受追捧。
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/201812308Vn2eCcOfL0TMv6xSDwG.jpeg"/>
+   </p>
+   <p>
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       文创旅行新去处
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="background:white;">
+    <span style="font-size:16px;font-family:仿宋;">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      说到文化，自然离不开文创之旅。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     海外的代表目的地如日本，从2010年至今日本第一超人气卡通形象熊本熊,就是当地的熊本县为宣传本地旅游景点及特色产物而推出的。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      而在国内，台湾这座宝岛无疑是文创之旅的首选地，“走心”的文创品牌常常让顾客惊喜、满意，而诚品书店之于台湾，更成为了一种生活方式的代表。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     以书店为核心的全新一代文创商业购物中心已经成为内地频繁效仿的经典模式。还有乌镇历来是是小桥流水的创意圣地，近些年戏剧节的加入给乌镇注入了新的文化元素，在商业旅游和文化中找到平衡；云南大理丽江的民宿文化亦非常盛行，民宿多大隐隐于市，或是清新禅院，或是海景客栈，与阳光、书香相伴，让人倍感安心。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     独特的文化底蕴会让城市更加富有活力，而城市中的文化地标则集中体现着这座城市的气质。都市人们越来越渴望有文化内涵的心灵诗意栖居，那么深处一线城市的北上广深会有吗？答案是肯定的。但很多人不知道的是上海成为新的文创目的地，而且就在外滩！
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="407" data-width="600" src="https://wscdn.ql1d.com/2018123074GRStHOa0Qh8ZnxWpjw.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     BFC夜景
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      在大多数人的认知里，大部分人来上海旅游必玩的景点有外滩、上海城隍庙、豫园、上海迪士尼乐园和东方明珠等等。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     数据也证明了这一点，国庆长假上海市共接待游客1038万人次，同比增长12%，创近年来最高涨幅。据三大电信
+    </span>
+    <span style="color: rgb(89, 89, 89);">
+     运营商
+    </span>
+    <span style="color: rgb(89, 89, 89);">
+     统计，外滩和小陆家嘴等区域再次人气爆棚，七天分别累计接待游客308.04万人次和283.21万人次，同比分别增长73.06%和105.22%。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     外滩百余年来一直作为上海的象征出现在世人面前。坐落于这里的52幢风格各异的大楼，被称为“万国建筑博览群”。
+     <strong>
+      而作为“外滩最后一块门牌”的BFC外滩金融中心，身处外滩的C位，不仅与百年外滩一脉相承，延续老外滩高贵、典雅的城市形象，更作为上海新地标，正在讲述新的故事。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     BFC经过六年的设计与建造，总建筑面积达42.6万平方米，是外滩唯一的体验式复合型综合体，涵盖办公楼、购物中心、复星艺术中心、酒店四大业态，成为一个包罗万象的生态系统，商务社交与休闲娱乐融为一体。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      这里的复星艺术中心是上海唯一的三层可旋转幕帘建筑，被誉为“会跳舞的房子”，
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     数字空中花园由著名艺术家宫岛达男打造，汇聚300位上海市民的故事。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      BFC还有更惊艳的设计，打破常规，辟出地下两层8000平方米（含影院面积1.2万平方米）的文创里(ArtisanHub)，打造外滩时尚IP新地标。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     它充分发挥了外滩的地理位置，坐拥无敌江景的稀缺资源，又联动豫园及正在开发的豫园二期，形成大豫园板块，实现商业及旅游上的联动。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="354" data-width="600" src="https://wscdn.ql1d.com/20181230g4RvzoTa9wmFxkItnAsi.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     文创里内景及公共艺术装置
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     而复星把物理空间嫁接、整合，引入体系内外的优质IP，其中尖叫设计、稀奇艺术等
+    </span>
+    <strong style="color: rgb(89, 89, 89);">
+     为国内或上海首店
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     ，不可谓不用心。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      台湾诚品书店知名专柜赛先生科学工厂的大陆首家直营店来这里安家;永辉首次在这里将超级物种和精标店结合;博纳特别开设全球首个高端影院博悦汇。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      BFC坚持整体设计，同时互相融合，不破坏个体品牌的调性，又能满足小众文化的“小而美”需求。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     文创里对入驻品牌提出了更为严格的准入门槛和淘汰机制，入驻品牌必须具备独创性，能为顾客提供全新的生活场景体验，在与顾客的交互中形成新意义的输出；对入驻商户实行末位淘汰制，保持商业街的高品质和新鲜感。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     在商业模式上，文创里又大胆做了创新。抛弃传统的“房东”思维，采用联营模式，用共同收益模式，取代传统的固定租金支付，商户无需承担高额的底租。同时，运营系统由BFC接手，商户只管做好产品和品牌的经营工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230si0cfZUMK2JCoAON7RDW.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       旅游产业未来的4大发展趋势
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align:left;">
+    <span style="font-size:16px;font-family:仿宋;">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     毫无置疑，旅游产业在未来有非常大的增长空间。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      中国的旅游从无到有、从有到旺，经历了不同阶段。从观光旅游、休闲旅游，到正在形成中的以体验旅游和产业链经济为特征的未来阶段。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     旅游市场也呈现出个性游与大众游共存、理性消费与感性消费共存、旅游体验与服务考量共存等多种旅游形态。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     其中，文化在旅游业中开始扮演越来越重要的角色。以文化为抓手，未来的旅游业将呈现哪些发展趋势？”
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      1.文化旅游的趋势增强
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      文化旅游的核心是文化，文化元素的组合至关重要。
+     </span>
+    </strong>
+    <span style="color: rgb(89, 89, 89);">
+     在文化旅游资源开发中，将自然环境、历史背景、文化载体等不同文化元素整合，已成为文化旅游走向精品化和特色化发展的重要举措。这也是越来越多的人们选择去日本、台湾、上海BFC文创街的原因。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="400" data-width="600" src="https://wscdn.ql1d.com/20181230NMmUQixIEGptzaZlusDW.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     文创里原创设计商户
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     而文化旅游的兴起，容易引发模式抄袭、同质开发等不良现象。城市和景区打造独具特色的文化旅游产品，显得更为重要。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      2.从景区到城市
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     人们旅游选择的不止是一个景区，更是一个城市的整体体验感。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     旅游作为整体，依托于区域经济、地理位置的区域发展优势将越来越显著。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     旅游消费空间将由团队游客的封闭世界转变为游客和市民共享的生活空间。这也意味着人们对基础设施、公共服务、生态环境的要求越来越高，对个性化、特色化旅游产品和服务的要求越来越高，旅游需求的品质化趋势日益显著。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      上海独一无二的地理位置、复星艺术中心外观的独特性及艺术性、外滩文创里艺术商业相融合的氛围，共同打造了一个不可复制的BFC。而BFC将与豫园、外滩共享旅游资源，成为上海旅游新地标。
+     </span>
+    </strong>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="400" data-width="600" src="https://wscdn.ql1d.com/20181230XPw4AzSgh6oTM9BrRkcQ.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <strong style="color: rgb(171, 25, 66);">
+    </strong>
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     文创里入口
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong style="color: rgb(171, 25, 66);">
+     3.品牌游成为核心竞争力
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     三流的企业叫卖资源，二流的企业叫卖产品，一流的企业叫卖品牌。放在旅游业，同样适用。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     品牌的优势才是旅游业发展最大的优势，品牌力才是现代旅游业的核心竞争力。没有品牌文化的旅游产品，不但项目生命周期很短，项目的增值空间很小，而且最后只能沦落成建筑垃圾。中国旅游市场也正在步入品牌消费的理性市场。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     这也就要求旅游相关的企业更需要在注重品牌文化内涵打造上下功夫，形成优质的旅游品牌，以品牌感染游客，扩大市场份额。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      4.跨界做旅游
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     如今，跨界经营成为企业的重要战略选择。如美团做出行，阿里巴巴做社交，腾讯做支付，复星做文创里。企业的业务边界将越来越模糊。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     而对很多企业而言，旅游行业是块香饽饽。近年来，地产、煤炭等传统行业巨头纷纷投资建设文化旅游城、主题公园、酒店、旅游度假区等项目，互联网企业也纷纷以多种方式介入在线旅游、旅行社领域，加快布局旅游业。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     伴随着产业的快速发展，旅游业正在成为传统行业转型发展和互联网等新兴行业创新发展的重要领域。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     除此之外，共享旅游、技术带给旅游业的诸多变化趋势，也值得关注。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230pUhEFg9Sx6XN4mHb2aOr.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       结语
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align:center;">
+    <strong>
+     <span style="font-size:16px;font-family:仿宋;color:#C00000;">
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     在消费升级的大背景下，游客越来越挑剔。娱乐不再是旅游的唯一表达方式，通过运用文化、艺术、科技与商业跨界融合，景点将成为包罗万象、承载精神生活的场所，带给我们更多的新奇。BFC的出现则代表了旅游的新趋势方向。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     没去过上海的游客不能说见过大世面，而来上海外滩旅游不去BFC，你可能真的OUT了！
+    </span>
+   </p>
+   <section class="" style="margin-right: 0em;margin-left: 0em;font-size: 16px;white-space: normal;color: rgb(62, 62, 62);background-color: rgb(255, 255, 255);max-width: 100% !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <strong>
+             <span>
+              参考文章：
+             </span>
+            </strong>
+           </p>
+           <p>
+            <span>
+             未来文化旅游产业的五大发展趋势（中经文化产业）
+            </span>
+           </p>
+           <p>
+            <span>
+             2018年中国旅游行业发展现状及发展趋势分析（中国产业信息网）
+            </span>
+           </p>
+           <p>
+            <span>
+             2018年来了，中国旅游将发生八大变革（新浪看点）
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="margin-right: 16px;margin-left: 16px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;background-color: rgb(255, 255, 255);text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;color: rgb(89, 89, 89);box-sizing: border-box !important;word-wrap: break-word !important;">
+     <img data-height="10" data-width="22" src="https://wscdn.ql1d.com/201812300XigS2Dz81eIMhJwxjGR.jpeg"/>
+    </span>
+   </p>
+   <p style="margin-right: 16px;margin-left: 16px;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;white-space: normal;widows: 1;background-color: rgb(255, 255, 255);text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;font-size: 13px;color: rgb(165, 165, 165);box-sizing: border-box !important;word-wrap: break-word !important;">
+     编辑：姍姍  编审：夏昆
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="245" data-width="600" src="https://wscdn.ql1d.com/20181230t8DblzqvncOL4Zd2w5PX.jpeg"/>
+   </p>
+   <p style="margin-left: 8px;margin-right: 8px;">
+   </p>
+   <p style="margin: 0em 8px;white-space: normal;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);font-size: 14px;line-height: 25.6px;">
+     <img data-height="400" data-width="400" src="https://wscdn.ql1d.com/20181230VocpaB7ZKyjCdPRUgftx.gif"/>
+     <span style="line-height: 25.6px;">
+     </span>
+    </span>
+    <strong>
+     <span style="color: rgb(89, 89, 89);font-size: 14px;line-height: 25.6px;">
+      点击“
+     </span>
+     <span style="font-size: 14px;line-height: 25.6px;color: rgb(151, 30, 55);">
+      阅读原文
+     </span>
+     <span style="color: rgb(89, 89, 89);font-size: 14px;line-height: 25.6px;">
+      ”，看更多“BFC年末巨献！”
+     </span>
+    </strong>
+   </p>
+  </div>
+                     </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                                        -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">0</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9647159.html">
+                            <div data-background="https://wscdn.ql1d.com/73822357166334897102QN1D154NDQ4.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/73822357166334897102QN1D154NDQ4.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>中梁地产第108城落子济宁，打造“御系”住宅</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9658689.html">
+                            <div data-background="https://wscdn.ql1d.com/20181229IFXgP3ex4vBy7MTDnU5R.jpeg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/20181229IFXgP3ex4vBy7MTDnU5R.jpeg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>链接东盟 中国首条“南菜北运”铁路绿色通道明年扩容</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9644832.html">
+                            <div data-background="https://wscdn.ql1d.com/69274684651112703744QN1D384NDQ4.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/69274684651112703744QN1D384NDQ4.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>新突破！淄博激光切割机站上全国制高点</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">0</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9662116";
+    var all_page_comment = "0";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

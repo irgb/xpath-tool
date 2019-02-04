@@ -1,0 +1,1493 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>
+        深桑达Ａ(000032)_股票行情_证券之星</title>
+    <meta name="keywords" content="深桑达Ａ(000032)股票行情,深桑达Ａ公司资料,深桑达Ａ资金流向,深桑达Ａ技术分析,深桑达Ａ财务,深桑达Ａ分红,深桑达Ａ股本,深桑达Ａ(000032)" />
+    <meta name="description" content="证券之星提供深桑达Ａ(000032)股票行情,实时分析,深桑达Ａ(000032)公司资料,新闻动态,资金流向,技术分析,财务分析,分红,股本等,深桑达Ａ(000032)个股资料全面解读尽在证券之星!" />
+    <link href='//j.ssajax.cn/css/quote2011/stockinfo/20150716/index.css' rel='stylesheet' type='text/css' />
+
+    <link href='//j.ssajax.cn/css/quote2011/stockinfo/20150716/stock_live.css' rel='stylesheet' type='text/css' />
+
+    <style type="text/css">
+  #zixungai li{float:left;width:64px;height: 23px;margin-left: 14px;border-radius: 2px;border: 1px solid #ccc;text-align: center;display: inline;  background-position: 0px -1105px;
+    border-right: 1px #cdcdcd solid;background-image: url(//i.ssimg.cn/images/quote2011/stockinfofull/20160318/icon.png);
+    background-repeat: repeat-y;}
+  #zixungai li a{line-height: 23px;text-align: center;color: #082686;}
+  #zixungai li a:hover{color: #c00;}
+  .main .title #guanggao:hover{color:#c00 !important;text-decoration:underline !important;}
+    /*清除浮动*/
+  .clearfix:before, .clearfix:after { content: ""; display: table; }
+  .clearfix:after { clear: both; }
+  /* IE 6/7 */
+  .clearfix { zoom: 1; }
+/* *+ html #ViewBigImage1{margin-bottom: 4px!important;line-height: 12px;}*/
+</style>
+    <script type="text/javascript">
+        var quotestock = {stockname : '深桑达Ａ',stockcode : '000032',markettype : 2,stocktype : 1,stocksmalltype : 101,haltstate : 0,state : 1,industrycode : 'F'};
+        var pageinfo = {pagename : 'stock'};
+var hotstock_daily_a =[];
+        function AddParametersForViewBigImage(bigImageType) {
+            var newUrl = "/realtime_000032.shtml?t=" + bigImageType;
+            $(".ViewBigImage").attr("href", newUrl);
+        }
+
+    </script>
+    <script src='//j.ssajax.cn/js/quote2011/jquery/20110711/jquery.js' type='text/javascript'></script>
+
+      <script type="text/javascript">if(typeof(pageinfo)=="undefined")pageinfo={};  </script><script src='//j.ssajax.cn/js/quote2011/stockinfofull/20161027/stockinfo.full-min.js' type='text/javascript'></script>
+
+    <script src="//cq.ssajax.cn/quote/Script/DynamicQuote-1.5.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">       	 	
+function getSize() {
+    return { width: 630, height: 262, msgWidth: 500, msgHeight: 220, leftRightBlank:105 };
+}
+function getStockInfo()
+{
+	var res = {};
+	res.code = quotestock.stockcode  ;
+
+	//1:股票 2:指数 3:股指期货 4:债券 6:权证
+	//获取类型,S表示个股，I表示指数, W表示权证,F表示股指期货
+	if(quotestock.stocktype==1){
+		res.type = "S";
+	}else if(quotestock.stocktype==2){
+		res.type = "I";	
+	}else if(quotestock.stocktype==3){
+		res.type = "F";	
+	}else if(quotestock.stocktype==4){
+		res.type = "O";	
+	}else if(quotestock.stocktype==6){
+		res.type = "W";	
+	}else{
+		res.type = "O";	
+	}
+
+	//获取市场类型 SZ-深圳 SH-上海
+	if(quotestock.markettype==1 ){
+	    res.marketType = "SH";
+	}else if(quotestock.markettype==2){
+	    res.marketType = "SZ";
+	}else{
+		res.marketType = "";
+	}
+
+	//获取名称
+	res.name = quotestock.stockname ;
+	res.fracNum = base.tool.decimal(quotestock);
+
+	//是否显示信息地雷
+	res.hasMsg = true;
+	//是否停牌
+	res.isStopped = (quotestock.haltstate == 0 ? false : true);
+	//上市状态
+	res.listStatus = quotestock.state;
+	//是否查看大图
+	res.showBig = true;
+	
+	return res;
+}
+
+//tab跳转逻辑，分别是
+//CurrentL-分时,DayK-日K, WeekK-周K, MonthK-月K
+function changeFlashTab(tabName) {
+    if (navigator.appName.indexOf("Microsoft") > -1) {
+        this.swfObj = window["FlashHQSmall"];
+    } else {
+        this.swfObj = document["FlashHQSmall"];
+    }
+	if(typeof(this.swfObj)!='undefined' && this.swfObj!=null){
+        try
+        {
+		    this.swfObj.ChangeTab(tabName);
+		}
+		catch(ex)
+		{
+		
+		}
+	}
+}
+</script>
+<script type="text/javascript">
+	// For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+	var swfVersionStr = "10.0.0";
+	// To use express install, set to playerProductInstall.swf, otherwise the empty string.
+	var xiSwfUrlStr = location.protocol + "//img.stockstar.com/flash/quote2011/playerProductInstall.swf";
+	//var flashvars = {first:"601857|S|0",siteid:"STOCKSTAR"};
+	var args = getStockInfo();          
+	var flashvars = {first:args.code+ "|"+args.type + "|0",siteid:"STOCKSTAR"};
+	var params = {};
+	params.quality = "high";
+	params.bgcolor = "#ffffff";
+	params.allowscriptaccess = "always";
+	params.allowfullscreen = "true";
+	params.wmode = "transparent";
+	var attributes = {};
+	attributes.id = "FlashHQSmall";
+	attributes.name = "FlashHQSmall";
+	attributes.align = "middle";
+	//attributes.wmode = "transparent";
+	var size = getSize();
+	var w = "" + size.width;
+	var h = "" + size.height;
+	swfobject.embedSWF(
+		location.protocol + "//img.stockstar.com/flash/quote2011/FlashHQSmall.swf", "flashContent", 
+		w, h, 
+		swfVersionStr, xiSwfUrlStr, 
+		flashvars, params, attributes);
+	// JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+	swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+</script>
+    <base target="_blank" />
+</head>
+<body>
+    <h1 class="h1_hidden">
+        深桑达Ａ(000032)</h1>
+    <div id="top">
+  <div class="w">
+    <div class="lf"><a href="//www.stockstar.com">首页</a><a href="//stock.stockstar.com/">股票</a><a href="//quote.stockstar.com/">行情</a><a href="//resource.stockstar.com/">数据</a><a href="//report.stockstar.com/">研报</a><a href="//fund.stockstar.com/">基金</a><a href="//bond.stockstar.com/">债券</a><a href="//bank.stockstar.com/">银行</a><a href="//forex.stockstar.com/">外汇</a><a href="//gold.stockstar.com/">黄金</a><a href="//video.stockstar.com/">视频</a><a href="//b.stockstar.com/">博客</a><a href="//bar.stockstar.com/">股吧</a></div>
+    <div class="login">
+      <div class="icon home"></div>
+      <div class="lf"><a href="//my.stockstar.com/">我的证券之星</a><span>[<a href="//member.stockstar.com/login/log_in.aspx">登录</a>]</span><span>[<a href="//member.stockstar.com/login/registe.aspx">注册</a>]</span>|<a href="javascript:void(0);return false;" target="_self" onclick="base.command.setHomepage(this,'//quote.stockstar.com');">设为首页</a>|<a href="javascript:void(0);return false;" target="_self" onclick="base.command.setFavorite('证券之星-行情频道','//quote.stockstar.com');">收藏本页</a></div>
+    </div>
+  </div>
+</div><div class="h_7"></div>
+<div id="head">
+  <div class="logo fl"><a href="//www.stockstar.com" title="证券之星">证券之星</a></div>
+  <div id="ad_1" class="ad fr">     
+  </div>
+</div>
+<div class="h_7"></div>
+<div id="sta_menu" class="menu">
+    <ul>
+        <li class="menu1"><a href="/000032.shtml" title="个股资料" target="_self"
+            class="cur"><span>个股资料</span></a></li>
+        <li class="menu2">
+            <a href="/info_000032.shtml" title="新闻动态" target="_self" >
+                <span>新闻动态</span></a>
+            <div class="childMenu" style="display: ;">
+                <a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=10">
+                    公司新闻</a> | <a href="//stock.quote.stockstar.com/info/notice_000032.shtml">
+                        交易提示</a> | <a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=76">
+                            最新公告</a> | <a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=2835">
+                                定期报告</a> | <a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=3491">
+                                    研究报告</a> | <a href="//stock.stockstar.com/stock/checkIndustry.aspx?Industry=I">
+                                        行业新闻</a> | <a href="//stock.quote.stockstar.com/info/billboard_000032.shtml">
+                                            龙虎榜单</a> | <a href="//stock.quote.stockstar.com/info/financing_000032.shtml">
+                                                融资融券</a> | <a href="//stock.quote.stockstar.com/info/blocktrade_000032.shtml">
+                                                    大宗交易</a>
+            </div>
+        </li>
+        <li class="menu3">
+            <a href="/corp_000032.shtml" title="公司资料" target="_self" >
+                <span>公司资料</span></a>
+            <div class="childMenu" style="display: ;">
+                <a href="//stock.quote.stockstar.com/corp/brief_000032.shtml">
+                    公司简介</a> | <a href="//stock.quote.stockstar.com/corp/rating_000032.shtml">
+                        公司评级</a> | <a href="//stock.quote.stockstar.com/corp/rating_000032.shtml">
+                            行业评级</a> | <a href="//stock.quote.stockstar.com/corp/business_000032.shtml">
+                                主营业务</a> | <a href="//stock.quote.stockstar.com/corp/executives_000032.shtml">
+                                    公司高管</a> | <a href="//stock.quote.stockstar.com/corp/restructure_000032.shtml">
+                                        资产重组</a> | <a href="//stock.quote.stockstar.com/corp/litigation_000032.shtml">
+                                            诉讼仲裁</a> | <a href="//stock.quote.stockstar.com/corp/sharetrade_000032.shtml">
+                                                股权转让</a>
+            </div>
+        </li>
+        <li class="menu4">
+            <a href="/dividend_000032.shtml" title="融资分红" target="_self"
+                ><span>融资分红</span></a>
+            <div class="childMenu" style="display: ;">
+                <div class="nspace">
+                    <a href="//stock.quote.stockstar.com/dividend/plan_000032.shtml">
+                        分配预案</a> | <a href="//stock.quote.stockstar.com/dividend/financing_000032.shtml">
+                            新股发行</a> | <a href="//stock.quote.stockstar.com/dividend/bonus_000032.shtml">
+                                分红送配</a> | <a href="//stock.quote.stockstar.com/dividend/financing_000032.shtml">
+                                    增发</a> | <a href="//stock.quote.stockstar.com/dividend/financing_000032.shtml">
+                                        转债</a>
+                </div>
+            </div>
+        </li>
+        <li class="menu5">
+            <a href="/share_000032.shtml" title="股本股东" target="_self" >
+                <span>股本股东</span></a>
+            <div class="childMenu" style="display: ;">
+                <div class="nspace">
+                    <a href="//stock.quote.stockstar.com/share/structure_000032.shtml">
+                        股本结构</a> | <a href="//stock.quote.stockstar.com/share/holdertop10_000032.shtml">
+                            十大股东</a> | <a href="//stock.quote.stockstar.com/share/circulate_000032.shtml">
+                                流通股东</a> | <a href="//stock.quote.stockstar.com/share/restricted_000032.shtml">
+                                    限售解禁</a> | <a href="//stock.quote.stockstar.com/share/fund_000032.shtml">
+                                        基金持仓</a> | <a href="//stock.quote.stockstar.com/share/ownership_000032.shtml">
+                                            高管持股</a>
+                </div>
+            </div>
+        </li>
+        <li class="menu6">
+            <a href="/finance_000032.shtml" title="财务分析" target="_self" >
+                <span>财务分析</span></a>
+            <div class="childMenu" style="display: ;">
+                <div class="nspace">
+                    <a href="//stock.quote.stockstar.com/finance/summary_000032.shtml">
+                        主要指标</a> | <a href="//stock.quote.stockstar.com/finance/profit_000032.shtml">
+                            利润表</a> | <a href="//stock.quote.stockstar.com/finance/balance_000032.shtml">
+                                资产负债表</a> | <a href="//stock.quote.stockstar.com/finance/cashflow_000032.shtml">
+                                    现金流量表</a> | <a href="//stock.quote.stockstar.com/finance/performance_000032.shtml">
+                                        业绩预告</a> | <a href="//stock.quote.stockstar.com/finance/predict_000032.shtml">
+                                            机构预测</a>
+                </div>
+            </div>
+        </li>
+        
+        <li class="menu7">
+            <a href="/capital_000032.shtml" title="资金流向" target="_self" >
+                <span>资金流向</span></a>
+            <div class="childMenu" style="display: ;">
+                <div class="nspace">
+                    <a href="//quote.stockstar.com/cashflow/industry/">行业资金流向排名</a> | <a href="//quote.stockstar.com/cashflow/stock/">
+                        个股资金流向排名</a> | <a href="//quote.stockstar.com/cashflow/main/">主力资金流向排名</a>
+                    | <a href="//quote.stockstar.com/cashflow/continue/">资金连续流入流出排名</a> | <a href="//stock.quote.stockstar.com/capital/flow_600000.shtml">
+                        个股资金流向明细</a>
+                </div>
+            </div>
+        </li>
+        <li class="menu8">
+            <a href="/tech_000032.shtml" title="技术分析" target="_self" >
+                <span>技术分析</span></a>
+            <div class="childMenu" style="display: ;">
+                <div class="nspace">
+                    <a href="//stock.quote.stockstar.com/tech_000032.shtml">价格分析</a>
+                    | <a href="//quote.stockstar.com/Radar/external_special_1_5.htm">五日金叉</a> |
+                    <a href="//quote.stockstar.com/Radar/external_special_8.htm">连续上涨</a> | <a href="//quote.stockstar.com/Radar/external_special_23.htm">
+                        向上跳空</a>
+                </div>
+            </div>
+        </li>
+        
+        <li class="menu9"><a href="/realtime_000032.shtml" title="实时行情"
+            target="_self" ><span>实时行情</span></a></li>
+    </ul>
+</div>
+
+<!--子菜单延时 显示显示 start-->
+  <script language="javascript">
+      (function($) {
+          $.fn.hoverDelay = function(options) {
+              var defaults = {
+                  hoverDuring: 200,
+                  outDuring: 200,
+                  hoverEvent: function() {
+                      $.noop();
+                  },
+                  outEvent: function() {
+                      $.noop();
+                  }
+              };
+              var sets = $.extend(defaults, options || {});
+              var hoverTimer, outTimer;
+              return $(this).each(function() {
+                  $(this).hover(function() {
+                      clearTimeout(outTimer);
+                      hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+                  },
+          function() {
+              clearTimeout(hoverTimer);
+              outTimer = setTimeout(sets.outEvent, sets.outDuring);
+          });
+              });
+          }
+      })(jQuery);
+      var $li = $("#sta_menu li");
+      var $this_cur_a;
+      $li.each(function() {
+          var $this = $(this);
+          if ($this.children("a").attr("class") == "cur") {
+              $this_cur_a = $this.children("a");
+          }
+          $this.hoverDelay({
+              outDuring: 200,
+              hoverDuring: 200,
+              hoverEvent: function() {
+                  $this.children("a").addClass("cur");
+                  $this.addClass("ShowChildMenu");
+              },
+              outEvent: function() {
+                  $this.removeClass("ShowChildMenu");
+                  if ($this_cur_a.html() != $this.children("a").html()) {
+                      $this.children("a").removeClass("cur");
+                  }
+              }
+          });
+      });
+  </script> 
+<!--子菜单延时 显示显示 start-->
+
+    <div id="sta_1" class="positionWrap">
+        <div class="position">
+            当前位置：<a href="//www.stockstar.com">首页</a> - <a href="//quote.stockstar.com">行情中心</a> - <a href="/000032.shtml">
+                深桑达Ａ(000032)</a> - <strong><a href="/000032.shtml">个股资料</a></strong>
+        </div>
+        <div class="link" id="newsIndex" style="display: none;">
+            <ul>
+                <li><a href='//stock.stockstar.com/JC2018101200006917.shtml'>深桑达A：与连云港市政府签署战略合作..</a><span>09-19</span></li><li><a href='//stock.stockstar.com/SS2018071900001111.shtml'>深桑达Ａ：拟向格鲁吉亚销售100万美元L..</a><span>07-19</span></li><li><a href='//stock.stockstar.com/JC2018100900001924.shtml'>深桑达A：全资子公司桑达商用机器拟引..</a><span>07-18</span></li>
+            </ul>
+        </div>
+        <div class="search" id="divSearchBox">
+            <!-- 股票搜索框-->
+            <!--<div class="ac_results" style="z-index: 100; top: 23px; left: 0px;"></div>
+<div class="searchText">
+<input class="text" autocomplete="off" type="text"
+     value="代码/名称/拼音" onclick="AutoComplete.Clear('divSearchBox');" onkeyup="AutoComplete.Show(event,'divSearchBox',0,'quotesearch');" onblur="AutoComplete.OnBlur('divSearchBox');" /></div>
+<input type="submit" class="newbtn redshbtn" value="查询" onclick="AutoComplete.Submit('divSearchBox');" />
+<div class="infomesage" style="display:none;"></div> 
+<form action="http://quote.stockstar.com/stock/exdir.aspx" method="post">
+<input type="hidden" name="code" />
+<input type="hidden" name="mk" />
+<input type="hidden" name="securtytype" />
+<input type="hidden" name="target" value="quotesearch" />
+</form>-->
+
+<!-- 2013-01-21 new modify add by xb.zhu-->
+<div class="searchText"><input id="ajaxinput_q" class="text" type="text" /></div>
+<input id="ajaxinputquery_q" type="submit" class="newbtn redshbtn" value="查询"/>
+<script src="//j.ssajax.cn/js/lib/StockSuggest.min.1.8.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new StockSuggest("ajaxinput_q", {
+        width: "193px",           //下拉层宽度
+        autoSubmit: true,         //是否允许自动提交
+        className: 'searchText', //自定义样式
+        types: [101, 102, 103, 104, 201,105, 300, 401, 403, 405, 501, 502, 503, 504,801,802], //展示的证券类型
+        status: [1, 2, 3,4],
+        opacity: 1,                   //透明度
+        shortcutKey: true,                  //行情软件中的快捷键 
+        text: '代码/简称/拼音',       //默认文字
+        header: { show: true, columns: ["简称", "类型"] }, //显示字段
+        orderBy: 2,                     //指数代码优先
+        evt: 'ajaxinputquery_q'       //触发事件
+    });
+</script>
+
+        </div>
+    </div>
+    <!--行情信息-->
+    
+<!--行情报价_2018-12-31 23:55:20-->
+<div id="sta_2" class="bom_bor w">
+ <div class="stockInfo">
+    <div class="name">
+      <h2>深桑达Ａ</h2>
+      <h2 class="h1">(000032)</h2>
+    </div>
+    <div class="num">
+      <p id="stockclose" class="stock"><span id="stock_quoteinfo_xj" class="red">7.02</span><span class="img"></span></p>
+      <p class="stock_num"><span id="stock_quoteinfo_zde" class="red" >0.03</span>&nbsp;&nbsp;<span id="stock_quoteinfo_zdf" class="red">(0.43%)</span></p>
+    </div>
+    <table id="stock_quoteinfo"  border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	  <tr><td>今开：<span id='stock_quoteinfo_jk'>6.89</span></td><td>最高：<span id='stock_quoteinfo_zg'>7.14</span></td><td>成交：<span id='stock_quoteinfo_cj'>1.76万手</span> </td><td>市盈：<span id='stock_quoteinfo_sy'>0.00</span> </td><td><a href='http://index.quote.stockstar.com/000001.shtml'>上证指数：</a><a href='http://index.quote.stockstar.com/000001.shtml'><span id='stock_quoteinfo_000001_xj'>2493.90</span></a> </td><td class='upInfo'><span id='stock_quoteinfo_000001_zdf'>&nbsp;&nbsp;0.44%</span></td><td class='time'><span id='stock_quoteinfo_date'>2018-12-28</span></td></tr><tr><td>昨收：<span id='stock_quoteinfo_zs'>6.99</span> </td><td>最低：<span id='stock_quoteinfo_zd'>6.89</span> </td><td>换手：<span id='stock_quoteinfo_hs'>0.00%</span></td><td>振幅：<span id='stock_quoteinfo_zf'>0.00</span> </td><td><strong><a href='http://index.quote.stockstar.com/399001.shtml'>深证指数：</a></strong><a href='http://index.quote.stockstar.com/399001.shtml'><span id='stock_quoteinfo_399001_xj'>7239.79</span></a></td><td class='upInfo'><span id='stock_quoteinfo_399001_zdf'>&nbsp;&nbsp;0.34%</span></td><td class='time'><span id='stock_quoteinfo_time'>15:02:03</span></td></tr>
+      </tbody>
+    </table>
+    <div class='bid'><p>集合</p><p>竞价</p></div>
+  </div>
+</div>
+<div class="h_7"></div>
+
+    <div id="sta_3" class="wrap warrantPage">
+        <div id="sta_3_L" class="main">
+            <div id="L_1" class="bom_bor quote">
+                <div class="title" style="position: relative;">
+                    <ul>
+                        <li class="first"><a href="javascript:void(0)" onclick="tabShow('quote_menu_',1,5);AddParametersForViewBigImage(0);return false;"
+                            id="quote_menu_1" class="cur">分时图</a></li>
+                        <li><a href="javascript:void(0)" onclick="tabShow('quote_menu_',5,5);AddParametersForViewBigImage(0);return false;"
+                            id="quote_menu_5">5日</a></li>
+                        <li><a href="javascript:void(0)" onclick="tabShow('quote_menu_',2,5);AddParametersForViewBigImage(4);return false;"
+                            id="quote_menu_2">日K</a></li>
+                        <li><a href="javascript:void(0)" onclick="tabShow('quote_menu_',3,5);AddParametersForViewBigImage(5);return false;"
+                            id="quote_menu_3">周K</a></li>
+                        <li><a href="javascript:void(0)" onclick="tabShow('quote_menu_',4,5);AddParametersForViewBigImage(6);return false;"
+                            id="quote_menu_4">月K</a></li>
+                    </ul>
+                    <div class="lr" style="padding-right: 0px">
+                        <style type="text/css">
+                            .wrap .main .quote .title .lr
+                            {
+                                _width: 348px;
+                                _height: 26px;
+                                overflow: hidden;
+                            }
+
+                                .wrap .main .quote .title .lr a.add
+                                {
+                                    margin-left: 3px;
+                                    width: 50px;
+                                }
+
+                                .wrap .main .quote .title .lr a.red
+                                {
+                                    color: #CC0000;
+                                }
+
+                                .wrap .main .quote .title .lr span
+                                {
+                                    width: 141px;
+                                }
+                        </style>
+                       
+                        <a href="http://www.szzy888.com/product/alpha/profile?pub=true" id="guanggao" class="guanggao" style="display:inline-block; width:144px;height:26px;line-height:26px;*margin-left:50px;color:#10468e;overflow:hidden;text-decoration: none;text-align:right;padding:0 6px 0 0"><font color=red>炒股神器:1分钟看股票买点</font></a>                         
+                            <span style="margin-left:0px;">五档盘口</span>
+                            <div style="clear: both;"></div>
+
+                    </div>
+                </div>
+                <div class="con conSpecial">
+                    <div class="conPic" style="display: inline;">
+                        <div id="flashBox">
+                            <div id="loading" class="loading"></div>
+                            <div style="display:inline" class="imgContainer">
+                                <img id="img_1" src="//charts.stockstar.com/hs/qmpic_000032_2_1" style="display: none" onload="ImgPicOnloadFirst(this)" class="dynamic" />
+                            </div>
+                        </div>
+                        <!--分时图 显示集合竞价时间段 start-->
+                        <div id="TimeSharingBidding" class="cons" style="width: 500px; padding:0;">
+                            <span>
+                                <input onclick="TimeSharingBidding_Onclick()" type="checkbox" name="checkbox" id="checkbox"
+                                    style="vertical-align: middle;margin-right: 4px;" />
+                                <label for="checkbox" style="vertical-align: middle;  font-family:\5FAE\8F6F\96C5\9ED1">
+                                    显示集合竞价时间段</label>
+                                <label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<a class="ViewBigImage"
+                                        href="/realtime_000032.shtml" class="add" style="text-decoration: underline;font-family:\5FAE\8F6F\96C5\9ED1">查看大图</a></label>
+                            </span>
+                            <!--退市说明 start-->
+                            <em class="red">
+                                </em>
+                            <!--退市说明 end-->
+                        </div>
+                        <!--分时图 显示集合竞价时间段 end-->
+                        <!--日K、周K、月K 拉长缩短K线 start-->
+                        <div id="KLineLongShort" class="cons" style="display: none; padding: 0px">
+                            <label style="float: right">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a class="ViewBigImage"
+                                    href="/realtime_000032.shtml" style="text-decoration: underline">查看大图</a></label>
+                            <span>
+                                <a href="javascript:void(0)" onclick="GetLongOrShortKLine('longer');return false;">[拉长K线]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="GetLongOrShortKLine('shorter');return false;">[缩短K线]</a></span>
+
+                            <!--退市说明 start-->
+                            <em class="red">
+                                </em>
+                            <!--退市说明 end-->
+                        </div>
+                        <!--日K、周K、月K 拉长缩短K线 end-->
+                        <div id="dianping" class="dianping conComment" style="padding:13px 10px;margin-top:6px;">
+                            <ul class="clearfix" style="margin-left: -10px;clear: both;overflow: hidden;" id="zixungai">
+              <li><a style="color: #c00;" href="http://live.gushidaoshi.com">咨询高手</a></li>
+              <li><a href="//pub.szzy888.com/alpha/DiaStock.aspx?tgcode=hqggyan1">个股诊断</a></li>
+              <li><a href="//stock.quote.stockstar.com/info/comment_000032.shtml">千股千评</a></li>
+              <li><a href="//www.bida24.com/original/">热点必达</a></li>
+              <li> <a href="http://news.stockstar.com/info/dstock.aspx?id=4957&code=000032">利好消息</a></li>
+              <li><a href="javascript:void(0);" onclick="AddToFavStock2('000032_2_1');return false;">加入自选股</a></li>
+              <div style="clear: both;"></div>
+            </ul>
+                            <div style="clear: both;"></div>
+                           
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="conList" style="float:left;">
+                        <div class="conListTitle">
+                            委比<span id="wdpk_wb">--</span>&nbsp;委差<span id="wdpk_wc">--</span>
+                        </div>
+                        <div class="conListTable">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="50" align="center">卖⑤
+                                    </td>
+                                    <td width="50">
+                                        <span id="wdpk_sell_val_5" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_num_5">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">卖④
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_val_4" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_num_4">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">卖③
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_val_3" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_num_3">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">卖②
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_val_2" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_num_2">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">卖①
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_val_1" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_sell_num_1">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <strong>当前价</strong>
+                                    </td>
+                                    <td colspan="2">
+                                        <strong class="red"><span id="wdpk_np"><span></strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">买①
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_val_1" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_num_1">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">买②
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_val_2" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_num_2">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">买③
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_val_3" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_num_3">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">买④
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_val_4" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_num_4">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">买⑤
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_val_5" class="red">--</span>
+                                    </td>
+                                    <td>
+                                        <span id="wdpk_buy_num_5">--</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mytable2">
+                                <tr>
+                                    <td>外:
+                                    </td>
+                                    <td>
+                                        <span id="realtime_quote_wp" class="red">--</span>
+                                    </td>
+                                    <td>内:
+                                    </td>
+                                    <td>
+                                        <span id="realtime_quote_np" class="green">--</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="right">
+                                        <a href="//stock.quote.stockstar.com/realtime_000032.shtml">查看成交明细&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h_7">
+            </div>
+                <div id="L_2" class="link">
+      <div class="list">
+        <div class="top"></div>
+        <dl class="con">
+          <dt><span class="bg">交易</span>必读</dt>
+          <dd> <a href="//stock.stockstar.com/daily_list/1251.shtml">交易提示</a></dd>
+          <dd class="last"> <a href="//stock.stockstar.com/daily/">每日必读</a></dd>
+          <dd> <a href="//stock.stockstar.com/daily_list/1253.shtml">龙虎榜</a></dd>
+          <dd class="last"> <a href="//stock.stockstar.com/stock/studio.htm">盘中直播</a></dd>
+        </dl>
+        <div class="bot"></div>
+      </div>
+      <div class="list">
+        <div class="top"></div>
+        <dl class="con">
+          <dt class="name2"><span class="bg">产品</span>推荐</dt>
+          <dd> <a href="//live.gushidaoshi.com/">股市导师</a></dd>
+          <dd class="last"> <a href="//quote.stockstar.com/cashflow/">资金流向</a></dd>
+          <dd> <a href="//smart.stockstar.com/smart/sm.aspx">智能选股</a></dd>
+          <dd class="last"> <a href="//quote.stockstar.com/stock/datajournal.htm">数据日刊</a></dd>
+        </dl>
+        <div class="bot"></div>
+      </div>
+      <div class="list last">
+        <div class="top"></div>
+        <dl class="con">
+          <dt class="name3"><span class="bg">相关</span>服务</dt>
+          <dd> <a href="//stock.stockstar.com/list/4015.shtml">独家视点</a></dd>
+          <dd class="last"> <a href="//stock.stockstar.com/list/share.htm">个股掘金</a></dd>
+          <dd> <a href="//stock.stockstar.com/list/live.htm">股市直击</a></dd>
+          <dd class="last"> <a href="//stock.stockstar.com/list/main.htm">主力研究</a></dd>
+        </dl>
+        <div class="bot"></div>
+      </div>
+    </div>
+            <div class="h_7">
+            </div>
+
+             <!-- 650*90 begin -->
+            <div id="adv_650_90" class="bom_bor skinBox">             
+                <iframe width="650" height="90" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="//same1.stockstar.com/s?z=stockstar&c=579&op=1" ></iframe>
+            </div>
+            <div class="h_7">
+            </div>
+             <!-- 650*90 begin -->
+
+            <!-- 新闻资讯 begin -->
+            <div id="L_3" class="bom_bor skinBox">
+                <div class="title">
+                    <div class="inner">
+                        <h3 class="gszl">
+                            <a href="//stock.quote.stockstar.com/info_000032.shtml">新闻资讯</a></h3>
+                        <div class="lr">
+                            <div class="lr_wrap">
+                                <a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=10">公司新闻</a><a href="//stock.stockstar.com/stock/checkIndustry.aspx?Industry=F">行业新闻</a>
+                                <a href="//news.stockstar.com/info/dstock.aspx?id=76&code=000032">最新公告</a><a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=3491">研究报告</a>
+                                <a href="//news.stockstar.com/info/dstock.aspx?id=2835&code=000032">定期报告</a><a href="//stock.quote.stockstar.com/info_000032.shtml"
+                                    class="more">更多>></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="con">
+                    <div class="con_left">
+                        
+<!--个股公司新闻_Stock_Company_News_2018-12-31 22:38:48-->
+
+<h2 class="spe"><a href="//news.stockstar.com/info/dstock.aspx?code=000032">更多&gt;&gt;</a>公司新闻</h2><ul><li><span>12-21</span><a href="//stock.stockstar.com/FB2018122100000692.shtml">周一沪深上市公司重大公告速递 更新中</a></li><li><span>12-13</span><a href="//stock.stockstar.com/SS2018121300000334.shtml">早评：沪指收复2600点是积极变化</a></li><li><span>12-12</span><a href="//stock.stockstar.com/SS2018121200000807.shtml">收评：?新能源车涌现涨停潮</a></li><li><span>12-11</span><a href="//stock.stockstar.com/SS2018121200000771.shtml">五大券商周四看好6板块43股</a></li><li><span>12-10</span><a href="//stock.stockstar.com/SS2018121000000701.shtml">空头肆虐两市普跌 潜力股受追捧(名单)</a></li></ul>  
+
+                        
+<!--个股-新闻资讯--行业新闻-_Stock_Insdurstry_News_2018/12/31 22:32:56-->
+
+<h2><a href="//stock.stockstar.com/stock/checkIndustry.aspx?Industry=F">更多&gt;&gt;</a>行业新闻</h2><ul><li><span>12-18</span><a href="//stock.stockstar.com/JC2018121800000249.shtml">高库存压制煤价上涨 煤炭贸易商或恐慌性...</a></li><li><span>12-14</span><a href="//stock.stockstar.com/JC2018121400000225.shtml">小米调整组织架构成立中国区新零售等成...</a></li><li><span>12-13</span><a href="//stock.stockstar.com/JC2018121300000240.shtml">成品油价明日下调概率大</a></li><li><span>12-10</span><a href="//stock.stockstar.com/JC2018121000000291.shtml">11月份贸易顺差扩大21.5%</a></li><li><span>12-06</span><a href="//stock.stockstar.com/JC2018120600000234.shtml">阿里给零售“挖坑”?永辉超市剥离云创张氏...</a></li></ul>  
+
+                    </div>
+                    <div class="con_right">
+                        
+<!--个股--新闻资讯--最新公告_Stock_Announcement_News_2018-12-31 11:25:04-->
+
+<h2 class="spe"><a href="//news.stockstar.com/info/dstock.aspx?id=76&code=000032">更多&gt;&gt;</a>最新公告</h2><ul><li><span>12-29</span><a href="//stock.stockstar.com/notice/JC2017122900000737.shtml">深桑达Ａ自2017年12月29日开市...</a></li><li><span>10-28</span><a href="//stock.stockstar.com/notice/JC2017102800000615.shtml">深桑达Ａ：2017年第三季度报告正文...</a></li><li><span>10-11</span><a href="//stock.stockstar.com/notice/JC2017101000001745.shtml">深桑达Ａ：关于公司使用自有闲置资金购...</a></li><li><span>09-30</span><a href="//stock.stockstar.com/notice/JC2017092900001837.shtml">深桑达Ａ：第七届监事会第十次临时会议...</a></li><li><span>09-30</span><a href="//stock.stockstar.com/notice/JC2017092900001839.shtml">深桑达Ａ：第七届董事会第二十四次临时...</a></li></ul>  
+
+                        
+
+<!--个股--新闻资讯--研究报告_Stock_ResearchReport_News_2018-12-31 14:34:45-->
+
+<h2><a href="//news.stockstar.com/info/dstock.aspx?code=000032&id=3491">更多&gt;&gt;</a>研究报告</h2><ul><li>暂无新闻</li></ul>  
+
+                    </div>
+                </div>
+            </div>
+            <div class="h_7">
+            </div>
+            <!-- 新闻资讯 end --->
+            <!-- 公司资料 begin -->
+            
+<div id="L_3" class="bom_bor skinBox">
+<!--公司资料_Stock_CompanyInfo_2018-12-31 17:54:21-->
+     <div class="title">
+        <div class="inner">
+          <h3 class="gszl"><a href="/corp_000032.shtml">公司资料</a></h3>
+          <div class="lr">
+            <div class="lr_wrap">
+            <a href="/corp/brief_000032.shtml">简介</a><a href="/corp/business_000032.shtml">主营</a><a href="/corp/executives_000032.shtml">高管</a><a href="/corp/restructure_000032.shtml">重组</a><a href="/corp/litigation_000032.shtml">诉讼</a><a href="/corp/sharetrade_000032.shtml">股权</a><a href="/corp/invest_000032.shtml" class="last">投资</a><a href="/corp_000032.shtml" class="more">更多>></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="con gszl_wrap">
+        <div class="info">
+          <div class="lf">           
+            <p><b>公司名称：</b>深圳市桑达实业股份有限公司 <!--200002045--></p><p><b>主营业务：</b><a href='/corp/brief_000032.shtml'>电子信息产业、电子物流服务业、电子商贸服务业及房地产业 </a></p><p><b>最新总股本：</b><a href='/share/structure_000032.shtml'>41321.97万股</a></p><p><b>最新流通A股：</b><a href='/share/structure_000032.shtml'>41128.37万股</a></p><p><b>公司网址：</b>http://www.sedind.com</p><p><b>所属板块：</b><a href="http://quote.stockstar.com/stock/blockperformance_5_400121934_3_1_1.html" >绿色照明</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400122020_3_1_1.html" >预盈预增</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400122748_3_1_1.html" >深圳本地</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400123963_3_1_1.html" >保险重仓股</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400124673_3_1_1.html" >深圳前海新区</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400124692_3_1_1.html" >高铁</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400125123_3_1_1.html" >智慧城市</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400125263_3_1_1.html" >安防监控</a>-<a href="http://quote.stockstar.com/stock/blockperformance_5_400129677_3_1_1.html" >央企控...</a></a></a></a></a></a></a></a></a> </p><p><span><b>董事长：</b><a target="_self" gaoguanname="周剑" onclick="common_page.gaoguan(event,this);return false;" href="javascript:void(0);">周剑</a></span><span>&nbsp;&nbsp;&nbsp;&nbsp;<b>董秘：</b><a target="_self" gaoguanname="钟彦" onclick="common_page.gaoguan(event,this);return false;" href="javascript:void(0);">钟彦</a></span></p><p><b>交易提示：</b><a href='/info/notice_000032.shtml'>深桑达A 2019年01月02日 发布本次解除限售股份的数量为13299.6871万股,...</a></p><p><b>最新预约披露：</b>2018年一季报于2018年04月26日披露。</p>           
+          </div>
+          <div class="lr bg">
+            <p><span class="fl">主营业务分布</span><span class="fr">报告期2018中期</span></p><div class="table"><div class="img">  <div id="_FusionChart_Div_173479" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_173479 = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/Pie3D.swf?22262", "FusionChart_Swf_173479", "219", "128","0","0");
+_FusionChart_173479.setDataXML("<chart  showAboutMenuItem='0'  showLegend='0' legendNumColumns='2' interactiveLegend='0' animation='0' defaultAnimation='1' showPercentValues='1' showPercentInToolTip='0' showLabels='0' showValues='0' slicingDistance='0' pieRadius='90' use3DLighting='1' baseFontSize='12' numberSuffix='%' decimals='2'><set label='电子信息制造业'  value='0' color='8ADEF0' /><set label='电子商贸业'  value='0' color='026ECE' /><set label='房地产业'  value='0' color='FF9451' /><set label='电子物流业'  value='0' color='0F9494' /><set label='电子工程'  value='0' color='D74A4A' /><set label='其他'  value='0' color='934D93' /></chart>");
+_FusionChart_173479.render("_FusionChart_Div_173479");</script>
+ </div><ul class="img_about"><li><em style='background-color:#8ADEF0'></em>电子信息0.00%</li><li><em style='background-color:#026ECE'></em>电子商贸0.00%</li><li><em style='background-color:#FF9451'></em>房地产业0.00%</li><li><em style='background-color:#0F9494'></em>电子物流0.00%</li><li><em style='background-color:#D74A4A'></em>电子工程0.00%</li><li><em style='background-color:#934D93'></em>其他0.00%</li></ul></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="info2">
+         
+          <table width="285" border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB" class="trHover">
+            <thead>
+              <tr>
+                <td>报告时间</td>
+                <td>机构</td>
+                <td>观点</td>
+              </tr>
+            </thead>
+            <tr><td>2015-10-09 </td><td> 中信建投证券</td><td>增持</td></tr><tr><td>2011-10-24 </td><td> 天相投资</td><td>中性</td></tr><tr><td>2010-04-28 </td><td> 天相投资</td><td>中性</td></tr><tr><td>2010-04-10 </td><td> 天相投资</td><td>中性</td></tr>
+          </table>
+          
+          <div class="fr pj">
+            <p>最新评级</p>
+            
+            近三个月该公司无评级
+			
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+          </div>
+        </div>
+      </div>      
+</div>
+<div class="h_7"></div>
+      
+            
+            <!-- 公司资料 end --->
+            <!-- 资金流向 begin  -->
+            
+<div id="L_4" class="bom_bor skinBox">
+    <!--资金流向_Stock_CapitalFlows_2018-12-31 8:59:29-->
+    <div class="title">
+        <div class="inner">
+            <h3 class="zjlx">
+                <a href="/capital_000032.shtml">资金流向</a></h3>
+            <div class="lr">
+                <div class="lr_wrap">
+                    <a href="/capital_000032.shtml">资金流向分析</a><a href="//quote.stockstar.com/stock/flow/industry.htm">行业资金流向排名</a><a
+                        href="//quote.stockstar.com/stock/flow/stockout.htm" class="last">个股资金流向排名</a><a
+                            href="/capital_000032.shtml" class="more">更多>></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="con zjlx_wrap">
+        <div class="info">
+            <div class="left">
+                <p class="black">
+                    <span>2018-12-28</span></p>
+                
+                <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB"
+                    class="trHover">
+                    <thead class="tbody_right">
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <p>
+                                    买入</p>
+                                <p>
+                                    (万元)</p>
+                            </td>
+                            <td>
+                                <p>
+                                    卖出</p>
+                                <p>
+                                    (万元)</p>
+                            </td>
+                            <td>
+                                <p>
+                                    净流入</p>
+                                <p>
+                                    (万元)</p>
+                            </td>
+                            <td>
+                                <p>
+                                    占盘比</p>
+                                <p>
+                                    (%)</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr><td class="name">散户</td><td>0.00</td><td>2.76</td><td><span class="green">-2.76</span></td><td>100.00</td></tr><tr><td class="name">主力</td><td>0.00</td><td>0.00</td><td><span class="black">0.00</span></td><td>0.00</td></tr><tr><td class="name">汇总</td><td>0.00</td><td>2.76</td><td><span class="green">-2.76</span></td><td>100.00</td></tr>
+                </table>
+                
+            </div>
+            <div class="right">
+                <div class="black">
+                    今日资金流向
+                </div>
+                
+                <div class="new-table">
+                    <div class="img">
+                         <div id="_FusionChart_Div_zjlx_jinri" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_zjlx_jinri = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/MSColumn2D.swf?29655", "FusionChart_Swf_zjlx_jinri", "235", "114","0","0");
+_FusionChart_zjlx_jinri.setDataXML("<chart  showAboutMenuItem='0' yAxisMaxValue='0.00033' plotGradientColor='' showLegend='0' bgColor='ffffff' canvasBorderThickness='1'  showBorder='0' canvasBgColor='ffffff' canvasBaseColor='ffffff' chartLeftMargin='0' formatNumberScale='0' formatNumber='0' decimals='2' numberSuffix='亿' showValues='0' baseFontSize='12'><categories><category label='主力' /><category label='散户' /></categories><dataset color='B03635' seriesName='买入(亿元)'><set value='0' /><set value='0' /></dataset><dataset color='008000' seriesName='卖出(亿元)'><set value='0' /><set value='0.0003' /></dataset></chart>");
+_FusionChart_zjlx_jinri.render("_FusionChart_Div_zjlx_jinri");</script>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="info2">
+            <div class="black">
+                近期资金流向</div>
+            
+            <div class="flow-table">
+                <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>
+                            日期
+                        </th>
+                        <th>
+                            主力买入(万元)
+                        </th>
+                        <th>
+                            主力卖出(万元)
+                        </th>
+                        <th>
+                            散户买入(万元)
+                        </th>
+                        <th>
+                            散户卖出(万元)
+                        </th>
+                        <th>
+                            净流入(万元)
+                        </th>
+                    </tr>
+                    <tr><td>2018-12-28</td><td>0.00 </td><td>0.00 </td><td>0.00 </td><td>2.76 </td><td>-2.76 </td></tr><tr><td>2018-12-27</td><td>0.00 </td><td>0.00 </td><td>30.96 </td><td>7.43 </td><td>23.53 </td></tr><tr><td>2018-12-26</td><td>0.00 </td><td>0.00 </td><td>2.78 </td><td>5.64 </td><td>-2.85 </td></tr><tr><td>2018-12-25</td><td>32.09 </td><td>0.00 </td><td>0.00 </td><td>5.69 </td><td>26.40 </td></tr><tr><td>2018-12-24</td><td>0.00 </td><td>0.00 </td><td>3.14 </td><td>0.21 </td><td>2.93 </td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="h_7">
+    </div>
+</div>
+
+            
+            <!-- 资金流向 end--->
+            <!-- 技术分析 begin  -->
+            
+<div id="L_5" class="bom_bor skinBox">
+<!--技术分析_Stock_Analysis_2018-12-31 9:54:10-->
+     <div class="title">
+        <div class="inner">
+          <h3 class="jsfx"><a href="/tech_000032.shtml">技术分析</a></h3>
+            <div class="lr">
+            <div class="lr_wrap"><a href="/tech_000032.shtml">价格分析</a><a href="//quote.stockstar.com/stock/external_special_1.htm">5日金叉</a><a href="//quote.stockstar.com/stock/external_special_8.htm">连续上涨 </a><a href="//quote.stockstar.com/stock/external_special_23.htm" class="last">向上跳空</a><a href="/tech_000032.shtml" class="more">更多>></a></div>
+            </div>
+        </div>
+      </div>
+      <div class="con jsfx_wrap">
+        <div class="info">
+          <div class="left">
+            <p class="black">价格分析</p>
+            <table width="100%"  border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB" class="trHover">
+              <thead>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>5日涨幅</td>
+                  <td>10日涨幅</td>
+                  <td>20日涨幅</td>
+                </tr>
+              </thead>
+              <tr><td class="name">深桑达Ａ</td><td>-1.54% </td><td>-5.14% </td><td>-3.70% </td></tr>
+              <tr><td class="name">批发和零售业</td><td>-1.65% </td><td>-3.68% </td><td>-5.96% </td></tr>
+            </table>
+            <div class="h_5"></div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;近5日均价为7.12元， 最高价为7.31元，最低价为6.89元，平均涨跌幅为-1.54%，平均成交量为18409手。</p><div class="h_5"></div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;近5日行业平均涨跌幅为-1.65%，最高涨幅为11.75%，最低涨幅为-14.99%。</p>
+          </div>
+          <div class="right">
+            <div class="black"><span class="fl">指标分析</span><span class="fr">2018-12-28</span></div>
+            <div class="table">
+              <div class="img"> <div id="_FusionChart_Div_553195" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_553195 = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/Pie3D.swf?10013", "FusionChart_Swf_553195", "130", "130","0","0");
+_FusionChart_553195.setDataXML("<chart  showAboutMenuItem='0'  showLegend='0' legendNumColumns='2' interactiveLegend='0' animation='0' slicingDistance='0' bgColor='ffffff' pieRadius='60' showBorder='0' showPercentValues='1' showPercentInToolTip='0' showLabels='0' showValues='0' decimals='2' numberSuffix='个' use3DLighting='1' showShadow='0' showZeroPies='0' baseFontSize='12' ><set label='不确定'  value='15' color='8ADEF0' /><set label='多头排列'  value='3' color='026ECE' /><set label='空头排列'  value='3' color='FF9451' /></chart>");
+_FusionChart_553195.render("_FusionChart_Div_553195");</script>
+</div>
+              <ul><li><em style='background:#8ADEF0;'></em><span>不确定</span></li><li><em style='background:#026ECE;'></em><span>多头排列</span></li><li><em style='background:#FF9451;'></em><span>空头排列</span></li></ul>
+            </div>
+            <div class="img_about">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;目前17个指标中，有3个指标为多头排列，3个指标为空头排列，15个指标为不确定。</p><p><!--深桑达Ａ-->&nbsp;&nbsp;&nbsp;&nbsp;昨日主要技术指标：MACD为空头排列，RSI为不确定，KDJ为多头排列。</p></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="info2">
+          <div class="lf">
+            <div class="black"><span class="fl">成本统计</span><span class="fr"></span></div>
+            <table width="100%"  border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB" class="trHover">
+              <thead>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><p>主力平均</p>
+                    <p>成本</p></td>
+                  <td>盈亏(%)</td>
+                  <td><p>散户平均</p>
+                    <p>成本</p></td>
+                  <td> 盈亏(%)</td>
+                </tr>
+              </thead>
+              
+            </table>
+          </div>
+          <div class="lr">
+            <div class="black"> <span  class="fl">5日内筹码统计</span> <span class="fr"></span> </div>
+            <div class="table">
+              <div class="img"></div>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>      
+</div>
+<div class="h_7"></div>
+
+            
+            <!-- 技术分析 end--->
+            <!-- 融资分红 begin  -->
+            
+
+<div id="L_6" class="bom_bor skinBox">
+<!--融资分红_Stock_DivStat_2018-12-31 18:12:20-->
+      <div class="title">
+        <div class="inner">
+          <h3 class="rzfh"><a href="/dividend_000032.shtml">融资分红</a></h3>
+          <div class="lr">
+            <div class="lr_wrap"><a href="/dividend/plan_000032.shtml">预案</a><a href="/dividend/financing_000032.shtml">新股</a><a href="/dividend/bonus_000032.shtml">分红</a><a href="/dividend/bonus_000032.shtml">送股</a><a href="/dividend/financing_000032.shtml">增发</a><a class="last" href="/dividend/financing_000032.shtml">转债</a><a href="/dividend_000032.shtml" class="more">更多>></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="con rzfh_wrap">
+        <div class="info">
+        
+         
+          <div class="lf">
+            <div class="black"> <span class="fl">历史发行分配记录</span></div>
+            <table width="100%"  border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB" class="trHover">
+              <thead class="thead_2">
+                <tr>
+                  <td>除权日</td>
+                  <td><p>分红</p>
+                <p>(每10股)</p></td>
+                  <td><p>送股</p>
+                <p>(每10股)</p></td>
+                <td><p>转增股</p><p>(每10股)</p></td>
+                </tr>
+              </thead>
+              <tbody class="tbody_right">
+              <tr><td class="align_center">2018-07-13</td><td>0.20</td><td>--</td><td>--</td></tr><tr><td class="align_center">2017-05-23</td><td>0.20</td><td>--</td><td>--</td></tr><tr><td class="align_center">2016-06-16</td><td>0.20</td><td>--</td><td>2.00</td></tr><tr><td class="align_center">2015-05-28</td><td>0.50</td><td>--</td><td>--</td></tr><tr><td class="align_center">2014-07-28</td><td>0.30</td><td>--</td><td>--</td></tr><tr><td class="align_center">2013-08-09</td><td>1.80</td><td>--</td><td>--</td></tr>
+              </tbody>
+            </table>
+            <div class="h_5"></div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;深桑达A上市以来，共分红23次，共分红3.79亿元。</p>            
+          </div>  
+                  
+          
+
+          <div class="lr">
+            <div class="img">  <div id="_FusionChart_Div_rongzifenhong" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_rongzifenhong = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/Bar2D.swf?20285", "FusionChart_Swf_rongzifenhong", "290", "65","0","0");
+_FusionChart_rongzifenhong.setDataXML("<chart  showAboutMenuItem='0'  plotGradientColor='' alternateVGridColor='ffffff' chartTopMargin='0' chartBottomMargin='0' showBorder='0' bgColor='ffffff' canvasBorderThickness='1'  decimals='2'  showValues='0' yAxisValuesPadding='10' baseFontSize='12'><set color='BBCCEE' label='深桑达A' value='108.063086' /><set color='F0F2AC'  label='市场平均' value='54.053213954697986577181208054' /></chart>");
+_FusionChart_rongzifenhong.render("_FusionChart_Div_rongzifenhong");</script>
+ </div>
+            <ul class="img_about">
+              <li class="color_1"><em></em>深桑达Ａ</li>
+              <li class="color_2"><em></em>市场平均</li>
+            </ul>
+            <div class="h_5"></div>
+            <div class="img_info">
+              <p>&nbsp;&nbsp;&nbsp;&nbsp; 深桑达A上市以来总计向公司股东派现3.79亿元；募资共3.50亿元。</p><p>&nbsp;&nbsp;&nbsp;&nbsp; 派现金额占募资金额的108.06%，在全部A股中名列第336位，高于市场平均水平。</p>
+              <p><a href='/dividend/plan_000032.shtml'>2017年期末分配预案</a>:以公司总股本42225.4134万股为基数,每10股派发现金红利0.2元(含税,扣税...</p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+</div>
+<div class="h_7"></div>
+
+            
+            <!-- 融资分红 end--->
+            <!-- 股本股东 begin -->
+            
+<div id="L_7" class="bom_bor skinBox">
+<!--股本股东_Stock_CapitalStockStruct_2018-12-31 23:25:10-->
+    <div class="title">
+        <div class="inner">
+          <h3 class="gbgd"><a href="/share_000032.shtml">股本股东</a></h3>
+          <div class="lr">
+            <div class="lr_wrap"><a href="/share/structure_000032.shtml">股本</a><a href="/share/holdertop10_000032.shtml">股东</a><a href="/share/restricted_000032.shtml">限售</a><a href="/share/fund_000032.shtml">基金持仓</a><a href="/share/ownership_000032.shtml" class="last">高管持股</a><a href="/share_000032.shtml" class="more">更多>></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="con gbgd_wrap">
+        <div class="info">
+          <div class="lf">
+            <div class="black"> 截至2019-01-02，股本构成为： </div>
+            <table width="100%"  border="1" cellspacing="0" cellpadding="0" bordercolor="#D7D6DB" class="trHover">
+              <thead>
+                <tr>
+                  <td width="50%"></td>
+                  <td class="align_right"><p>股本数量</p><p>(万股)</p>               </td>
+                </tr>
+              </thead>
+                <tr><td width="100" class="name">流通股</td><td>41128.37</td></tr><tr><td class="name">&nbsp;&nbsp;流通A股</td><td>41128.37</td></tr><tr><td class="name">&nbsp;&nbsp;流通B股 </td><td>0.00</td></tr><tr><td class="name">&nbsp;&nbsp;流通H股</td><td>0.00</td></tr><tr><td class="name">&nbsp;&nbsp;其他</td><td> 0.00</td></tr><tr><td class="name">非流通股</td><td>193.60</td></tr><tr><td class="name">合计</td><td>41321.97</td></tr>              
+            </table>
+          </div>
+          <div class="lr">
+            <div class="black">股本构成</div>
+            <div class="table">
+            	<div class="img">  <div id="_FusionChart_Div_gubengoucheng_1" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_gubengoucheng_1 = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/Pie3D.swf?10462", "FusionChart_Swf_gubengoucheng_1", "172", "171","0","0");
+_FusionChart_gubengoucheng_1.setDataXML("<chart  showAboutMenuItem='0'  showLegend='0' legendNumColumns='2' interactiveLegend='0' animation='0' slicingDistance='0' bgColor='ffffff' pieRadius='70' showBorder='0' showPercentValues='1' showPercentInToolTip='0' showLabels='0' showValues='0' decimals='2' numberSuffix='亿' use3DLighting='1' showShadow='0' showZeroPies='0' baseFontSize='12' ><set label='流通A股' color='8ADEF0' value='4.11'  /><set label='流通B股' color='026ECE' value='0'  /><set label='流通H股' color='FF9451' value='0'  /><set label='非流通股' color='0F9494' value='0.02'  /></chart>");
+_FusionChart_gubengoucheng_1.render("_FusionChart_Div_gubengoucheng_1");</script>
+ </div>
+                <ul class="img_about">
+                  <li class="color_1"><em style='background:#8ADEF0;'></em>流通A股</li>
+                  <li class="color_2"><em style='background:#026ECE;'></em>流通B股</li>
+                  <li class="color_3"><em style='background:#FF9451;'></em>流通H股</li>
+                  <li class="color_4"><em style='background:#0F9494;'></em>非流通股</li>
+                </ul>
+         	 </div>
+          </div>
+        </div>
+        
+        <div class="info2">
+          <div class="black"><span class="fl">十大流通股东</span><span class="fr">报告期：第三季度</span> </div>
+          <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#d7d6db" class="trHover">
+            <thead>
+              <tr class="tbody_right">
+                <td width="240" class="align_left">股东名称</td>
+                <td width="100">持股数量(万股)</td>
+                <td width="100">占总股本比例(%)</td>
+                <td width="120">上期持股变化(万股)</td>
+              </tr>
+            </thead>
+            <tbody class="tbody_right">
+            <tr><td class="name">中国中电国际信息服务有限公司</td><td>11741.98</td><td>28.42</td><td>0.00</td></tr><tr><td class="name">深圳市龙岗区城市建设投资集团有限公司</td><td>1129.82</td><td>2.73</td><td>0.00</td></tr><tr><td class="name">吴安</td><td>679.34</td><td>1.64</td><td>1.84</td></tr><tr><td class="name">中国人民人寿保险股份有限公司-万能-个险万能</td><td>487.02</td><td>1.18</td><td>0.00</td></tr><tr><td class="name">中国人民人寿保险股份有限公司-分红-个险分红</td><td>467.41</td><td>1.13</td><td>0.00</td></tr><tr><td class="name">中国人民人寿保险股份有限公司-分红-团险分红</td><td>363.60</td><td>0.88</td><td>0.00</td></tr><tr><td class="name">民生证券股份有限公司</td><td>321.87</td><td>0.78</td><td>0.00</td></tr><tr><td class="name">吴绮绯</td><td>268.42</td><td>0.65</td><td>5.22</td></tr><tr><td class="name">中国人民人寿保险股份有限公司-自有资金</td><td>199.99</td><td>0.48</td><td>0.00</td></tr><tr><td class="name">邢润明</td><td>161.12</td><td>0.39</td><td>0.10</td></tr>
+            </tbody>
+          </table>
+          <span >&nbsp;&nbsp;&nbsp;&nbsp;截至2018年09月30日，有3个股东增持，共增持7.16万股，占总股本的0.02%。</span> 
+        </div>
+        
+      </div>
+</div>
+<div class="h_7"></div>
+
+            
+            <!-- 股本股东 end--->
+            <!-- 财务分析 begin -->
+            
+<div id="L_8" class="bom_bor skinBox">
+<!--财务分析_Stock_SimpleGuide_2018-12-31 14:09:25-->
+     <div class="title">
+        <div class="inner">
+          <h3 class="cwfx"><a href="/finance_000032.shtml">财务分析</a></h3>
+          <div class="lr">
+            <div class="lr_wrap"><a href="/finance/performance_000032.shtml">业绩预告</a><a href="/finance/summary_000032.shtml">主要指标</a><a href="/finance/balance_000032.shtml">负债表</a><a href="/finance/cashflow_000032.shtml">现金流量表</a><a href="/finance/profit_000032.shtml" class="last">利润表</a><a href="/finance_000032.shtml" class="more">更多>></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="con cwfx_wrap">
+        <div class="info">
+          <div class="list lf">
+            <div class="img"> <div id="_FusionChart_Div_caiwubaobiao_1" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_caiwubaobiao_1 = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/MSCombiDY2D.swf?25707", "FusionChart_Swf_caiwubaobiao_1", "290", "112","0","0");
+_FusionChart_caiwubaobiao_1.setDataXML("<chart  showAboutMenuItem='0'  plotGradientColor='' chartTopMargin='5' chartRightMargin='0' chartBottomMargin='5' chartLeftMargin='0' showLegend='0' canvasBorderThickness='1' bgColor='ffffff' showBorder='0'  showValues='0' labelDisplay='NONE'   formatNumberScale='0' decimals='2' baseFontSize='12' ><categories><category label='09-30' /><category label='06-30' /><category label='03-31' /><category label='12-31' /><category label='09-30' /></categories><dataset color='FAD25A' seriesName='净利润(亿元)'><set value='0.83' /><set value='0.60' /><set value='0.26' /><set value='0.26' /><set value='0.45' /></dataset><dataset color='76A0EB' seriesname='每股收益(元)' parentYAxis='S'><set value='0.20' /><set value='0.14' /><set value='0.06' /><set value='0.06' /><set value='0.11' /></dataset></chart>");
+_FusionChart_caiwubaobiao_1.render("_FusionChart_Div_caiwubaobiao_1");</script>
+</div>
+            <ul class="img_about">
+              <li class="color_1"><em style="background-color:#FAD25A"></em>净利润(亿元)</li>
+              <li class="color_2"><em style="background-color:#76A0EB"></em>每股收益(元)</li>
+            </ul>
+          </div>
+          <div class="list lr">
+            <div class="img"> <div id="_FusionChart_Div_caiwubaobiao_2" align="center">----</div>
+<script type="text/javascript">
+var _FusionChart_caiwubaobiao_2 = new FusionCharts(location.protocol+"//i.ssimg.cn/images/quote2011/stockinfo/Charts_full_3_2/MSCombiDY2D.swf?25707", "FusionChart_Swf_caiwubaobiao_2", "280", "112","0","0");
+_FusionChart_caiwubaobiao_2.setDataXML("<chart  showAboutMenuItem='0'  plotGradientColor='' chartTopMargin='5' chartRightMargin='5' chartBottomMargin='5' chartLeftMargin='5' showLegend='0' canvasBorderThickness='1' bgColor='ffffff' showBorder='0'  showValues='0' labelDisplay='NONE'  formatNumber='0' formatNumberScale='0' decimals='2' baseFontSize='12' ><categories><category label='09-30' /><category label='06-30' /><category label='03-31' /><category label='12-31' /><category label='09-30' /></categories><dataset color='FAD25A' seriesName='股东权益(亿元)'><set value='14.84' /><set value='14.68' /><set value='14.31' /><set value='15.69' /><set value='15.74' /></dataset><dataset color='76A0EB' seriesname='未分配利润(亿元)' ><set value='6.22' /><set value='6.07' /><set value='5.72' /><set value='5.13' /><set value='5.31' /></dataset></chart>");
+_FusionChart_caiwubaobiao_2.render("_FusionChart_Div_caiwubaobiao_2");</script>
+</div>
+            <ul class="img_about img_about2">
+              <li class="color_1"><em style="background-color:#FAD25A"></em>股东权益(亿元)</li>
+              <li class="color_2"><em style="background-color:#76A0EB"></em>未分配利润(亿元)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="info2">
+          <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#d7d6db" class="trHover">
+            <thead><tr><td class="name">报告期</td><td> 2018-09-30 </td><td> 2018-06-30 </td><td> 2018-03-31 </td><td> 2017-12-31 </td></tr></thead><tr><td class="name">每股收益(元)</td><td> 0.20</td><td> 0.14</td><td> 0.06</td><td> 0.06</td></tr><tr><td class="name">每股净资产(元)</td><td> 3.22</td><td> 3.12</td><td> 3.04</td><td> 3.61</td></tr><tr><td class="name">每股经营性现金流(元)</td><td> 0.15</td><td> -0.02</td><td> -0.01</td><td> 0.32</td></tr><tr><td class="name">每股未分配利润(元)</td><td> 1.51</td><td> 1.44</td><td> 1.36</td><td> 1.30</td></tr><tr><td class="name">每股资本公积金(元)</td><td> 0.11</td><td> 0.08</td><td> 0.08</td><td> 0.72</td></tr><tr><td class="name">净资产收益率(%)</td><td> --</td><td> --</td><td> --</td><td> --</td></tr><tr><td class="name">主营业务收入(万元)</td><td> 116694.03</td><td> 81352.54</td><td> 37576.85</td><td> 172106.38</td></tr><tr><td class="name">净利润(万元)</td><td> 8349.87</td><td> 6044.08</td><td> 2550.04</td><td> 2637.12</td></tr>
+          </table>
+        </div>
+        <div class="h_5"></div>
+        <div class="yjyg">
+          <p> <p><span>财务水平：</span>深桑达A市盈率为65.98， 在行业内排名58，在整个市场排名1328。</p></p>
+        </div>
+      </div>
+</div>
+
+
+            
+            <!-- 财务分析 end--->
+            <!-- 权证 begin -->
+            
+            <!-- 权证 end--->
+        </div>
+        <div id="sta_3_R" class="slide">
+            <!-- 贵金属投资 -->
+            
+            <!-- end 贵金属投资 -->
+            <!--股市直播 begin -->
+            
+            <!-- 股市直播 end -->
+            <!--投顾视点 begin -->
+            
+            <!-- 投顾视点 end -->
+            <!-- 关联个股 beign -->
+            
+<!--股票对价_Right_DuiJia_2018-12-31 14:39:19-->
+<!--ComUnic:200002045-->
+ 
+            <!-- 关联个股 end -->
+            <!-- 所属行业-商业零售 begin -->
+            
+   <style type="text/css">
+    .file .text{ width:60px}
+   </style>
+<div id="R_2" class="bom_bor skinBox skinBox2">
+    <!--所属行业_Right_HangYe_2018-12-31 14:39:19-->
+    <div class="title">
+        <div class="icon inner">
+            <h3>
+                <a href="//quote.stockstar.com/stock/industry_f.shtml">
+                    所属行业</a></h3>
+            <a href="//quote.stockstar.com/stock/industry.shtml" class="more">更多&gt;&gt;</a>
+        </div>
+    </div>
+    <div class="con">
+        <div class="file">
+            <h2>
+                <div class="name"><a href="//quote.stockstar.com/stock/industry_f.shtml"><span id="stock_hangye_level1_name">批发和零售业</span></a></div><div class="text">(共<a href="#"><span id="stock_hangye_level1_js">--</span></a>家)</div></h2>
+            <ul class="h2">
+                <li>行业指数：<span id="stock_hangye_level1_xj" class="green">--</span> <span id="stock_hangye_level1_zdf"
+                    class="green">--</span><span id="stock_hangye_level1_zdf_img">▼</span></li>
+                <li>总成交：<span id="stock_hangye_level1_zcj">--</span> 总市值：<span id="stock_hangye_level1_zsz">--</span>亿元</li>
+                <h3>
+                    <div class="name"><a href="//quote.stockstar.com/stock/industry_f51.html"><span id="stock_hangye_level2_name">批发业</span></a></div><div class="text">(共<a href="#"><span
+                        id="stock_hangye_level2_js">--</span></a>家)</div></h3>
+                <ul class="h3">
+                    <li>行业指数：<span id="stock_hangye_level2_xj" class="red">--</span> <span id="stock_hangye_level2_zdf"
+                        class="red">--</span><span id="stock_hangye_level2_zdf_img">▲</span></li>
+                    <li>总成交：<span id="stock_hangye_level2_zcj">--</span> 总市值：<span id="stock_hangye_level2_zsz">--</span>亿元</li>
+                </ul>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<div class="h_7">
+</div>
+
+            <!-- 所属行业-商业零售 end -->
+            <!-- 最近访问股和自选股 begin -->
+            <div id="R_3" class="bom_bor newsBox">
+                <div class="title">
+                    <ul>
+                        <li class="first" style="width: 80px;"><a style="text-decoration: none" href="javascript:void(0);"
+                            onmouseover="tabShowCon('news_menu_','news_con_',1,2);" onclick="return false;"
+                            id="news_menu_1" class="cur">最近访问股</a> </li>
+                        <li><a href="//quote.stockstar.com/stock/fav/favorite.htm" onmouseover="tabShowCon('news_menu_','news_con_',2,2);"
+                            id="news_menu_2">自选股</a> </li>
+                    </ul>
+                </div>
+                <div class="con" style="padding: 0;">
+                    <div class="stock-list" id="news_con_1">
+                        <table id="stock_book_zjfwcon" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            
+                        </table>
+                        <div id="stock_list_manage" class="stock-list-manage">
+                        </div>
+                        <div id="hotStockTitle" class="stock-list-tips">
+                            以下为热门股票
+                        </div>
+                        <table id="hotStockTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        </table>
+                    </div>
+                    <div class="stock-list" id="news_con_2" style="display: none;">
+                        <table id="stock_book_zxgcon" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            
+                        </table>
+                        <div class="stock-list-manage">
+                            <a href="//quote.stockstar.com/stock/fav/favorite.htm">管理我的自选股&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h_7">
+            </div>
+            <!-- 最近访问股和自选股 end -->
+            
+            <div id="ad_2" class="ad">
+            </div>
+            <div class="h_10">
+            </div>
+            
+            <div id="ad_3" class="ad" style="display:none;">
+            </div>
+            <div class="h_10" style="display:none;">
+            </div>
+            
+    <!-- 商业零售交易数据排行 begin -->
+    
+    <div id="R_5" class="bom_bor skinBox skinBox2 topBox">
+      <div class="icon title">
+        <div class="icon inner">
+          <h3>批发和零售业交易数据排行<!--F--></h3>
+         </div>
+      </div>
+      <div class="con">
+        <div class="select">
+          <select id="right_rank_hangye_select">
+            <option value="0">股票涨幅排行</option><option value="1">股票跌幅排行</option><option value="2">股票成交额排行</option><option value="3">股票成交量排行</option>
+          </select>
+        </div>
+        <table id="right_rank_hangye_0" width="100%" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td>最新价(元)</td>
+              <td width="80">涨幅</td>
+              <td width="60" class="add">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+		  <tr>  <td class="name"><a href="/600738.shtml">兰州民百</a></td>  <td><span class='red'>5.70</span></td>  <td><span class='red'>6.54%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600738_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600677.shtml">航天通信</a></td>  <td><span class='red'>9.47</span></td>  <td><span class='red'>5.22%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600677_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002018.shtml">*ST华信</a></td>  <td><span class='red'>1.22</span></td>  <td><span class='red'>5.17%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002018_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000829.shtml">天音控股</a></td>  <td><span class='red'>5.61</span></td>  <td><span class='red'>4.28%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000829_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000632.shtml">三木集团</a></td>  <td><span class='red'>3.86</span></td>  <td><span class='red'>3.76%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000632_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002589.shtml">瑞康医药</a></td>  <td><span class='red'>6.97</span></td>  <td><span class='red'>3.57%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002589_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600833.shtml">第一医药</a></td>  <td><span class='red'>9.13</span></td>  <td><span class='red'>3.28%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600833_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600655.shtml">豫园股份</a></td>  <td><span class='red'>7.40</span></td>  <td><span class='red'>3.06%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600655_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/603123.shtml">翠微股份</a></td>  <td><span class='red'>5.90</span></td>  <td><span class='red'>2.79%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603123_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600729.shtml">重庆百货</a></td>  <td><span class='red'>28.30</span></td>  <td><span class='red'>2.72%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600729_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_hangye_1" width="100%" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td>最新价(元)</td>
+              <td width="80">涨跌幅</td>
+              <td width="60" class="add">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+		  <tr>  <td class="name"><a href="/300538.shtml">同益股份</a></td>  <td><span class='green'>21.10</span></td>  <td><span class='green'>-7.05%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300538_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000851.shtml">高鸿股份</a></td>  <td><span class='green'>4.76</span></td>  <td><span class='green'>-4.61%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000851_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002356.shtml">赫美集团</a></td>  <td><span class='green'>7.36</span></td>  <td><span class='green'>-4.54%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002356_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/603101.shtml">汇嘉时代</a></td>  <td><span class='green'>15.92</span></td>  <td><span class='green'>-4.33%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603101_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000062.shtml">深圳华强</a></td>  <td><span class='green'>16.66</span></td>  <td><span class='green'>-4.09%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000062_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600203.shtml">福日电子</a></td>  <td><span class='green'>4.35</span></td>  <td><span class='green'>-3.55%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600203_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600774.shtml">汉商集团</a></td>  <td><span class='green'>14.17</span></td>  <td><span class='green'>-2.95%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600774_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/300131.shtml">英唐智控</a></td>  <td><span class='green'>4.29</span></td>  <td><span class='green'>-2.72%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300131_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000554.shtml">泰山石油</a></td>  <td><span class='green'>5.12</span></td>  <td><span class='green'>-2.48%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000554_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600128.shtml">弘业股份</a></td>  <td><span class='green'>7.92</span></td>  <td><span class='green'>-2.46%</span></td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600128_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_hangye_2" width="100%" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td>最新价(元)</td>
+              <td width="80">成交金额</td>
+              <td width="60" class="add">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+		  <tr>  <td class="name"><a href="/600677.shtml">航天通信</a></td>  <td><span class='red'>9.47</span></td>  <td>29261.34</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600677_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/601933.shtml">永辉超市</a></td>  <td><span class='red'>7.87</span></td>  <td>27730.72</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('601933_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002024.shtml">苏宁易购</a></td>  <td><span class='black'>9.85</span></td>  <td>24843.26</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002024_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600128.shtml">弘业股份</a></td>  <td><span class='green'>7.92</span></td>  <td>21989.91</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600128_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000851.shtml">高鸿股份</a></td>  <td><span class='green'>4.76</span></td>  <td>21251.21</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000851_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600738.shtml">兰州民百</a></td>  <td><span class='red'>5.70</span></td>  <td>19281.75</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600738_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/000963.shtml">华东医药</a></td>  <td><span class='green'>26.46</span></td>  <td>18327.99</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000963_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600755.shtml">厦门国贸</a></td>  <td><span class='red'>6.98</span></td>  <td>16485.30</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600755_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002607.shtml">亚夏汽车</a></td>  <td><span class='red'>7.20</span></td>  <td>13178.88</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002607_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/300413.shtml">芒果超媒</a></td>  <td><span class='red'>37.01</span></td>  <td>13097.65</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300413_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_hangye_3" width="100%" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td>最新价(元)</td>
+              <td width="80">成交量</td>
+              <td width="60" class="add">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+		  <tr>  <td class="name"><a href="/000851.shtml">高鸿股份</a></td>  <td><span class='green'>4.76</span></td>  <td>437145.35</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000851_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/601933.shtml">永辉超市</a></td>  <td><span class='red'>7.87</span></td>  <td>351316.55</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('601933_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600738.shtml">兰州民百</a></td>  <td><span class='red'>5.70</span></td>  <td>339335.34</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600738_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600677.shtml">航天通信</a></td>  <td><span class='red'>9.47</span></td>  <td>307466.32</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600677_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/601258.shtml">庞大集团</a></td>  <td><span class='green'>1.40</span></td>  <td>292947.03</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('601258_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600128.shtml">弘业股份</a></td>  <td><span class='green'>7.92</span></td>  <td>272945.30</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600128_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600122.shtml">宏图高科</a></td>  <td><span class='red'>3.63</span></td>  <td>253533.79</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600122_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002024.shtml">苏宁易购</a></td>  <td><span class='black'>9.85</span></td>  <td>251488.16</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002024_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/600755.shtml">厦门国贸</a></td>  <td><span class='red'>6.98</span></td>  <td>236788.95</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600755_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr>  <td class="name"><a href="/002018.shtml">*ST华信</a></td>  <td><span class='red'>1.22</span></td>  <td>201031.06</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002018_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="h_7"></div>
+    
+    <!-- 商业零售交易数据排行 end -->
+
+            
+    <!-- 商业零售财务指标排行 begin -->
+    
+    <div id="R_7"  class="bom_bor skinBox skinBox2 topBox">
+      <div class="icon title">
+        <div class="icon inner">
+          <h3>批发和零售业财务指标排行<!--F--></h3>
+        </div>
+      </div>
+      <div class="con">
+        <div class="select">
+          <select  id="right_rank_cwzb_select">
+            <option value="0">每股收益</option><option value="1">每股净资产</option><option value="3">主营业务收益增长率</option><option value="4">毛利率</option><option value="5">净利润同比增长率</option>
+          </select>
+        </div>
+        <table id="right_rank_cwzb_0" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">每股收益(元)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name"><a href="/600694.shtml">大商股份</a></td><td>2.67</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600694_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/200028.shtml">一致B</a></td><td>2.17</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('200028_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000028.shtml">国药一致</a></td><td>2.17</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000028_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600729.shtml">重庆百货</a></td><td>1.89</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600729_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600738.shtml">兰州民百</a></td><td>1.60</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600738_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/603368.shtml">柳药股份</a></td><td>1.51</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603368_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600859.shtml">王府井</a></td><td>1.27</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600859_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600697.shtml">欧亚集团</a></td><td>1.25</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600697_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000963.shtml">华东医药</a></td><td>1.24</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000963_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600511.shtml">国药股份</a></td><td>1.24</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600511_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_cwzb_1" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">每股净资产(元)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name"><a href="/600694.shtml">大商股份</a></td><td>26.82</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600694_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/200028.shtml">一致B</a></td><td>25.73</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('200028_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000028.shtml">国药一致</a></td><td>25.73</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000028_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600697.shtml">欧亚集团</a></td><td>15.39</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600697_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/603368.shtml">柳药股份</a></td><td>14.51</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603368_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600859.shtml">王府井</a></td><td>13.73</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600859_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600729.shtml">重庆百货</a></td><td>13.57</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600729_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/601607.shtml">上海医药</a></td><td>13.56</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('601607_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600739.shtml">辽宁成大</a></td><td>13.35</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600739_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600382.shtml">广东明珠</a></td><td>11.50</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600382_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_cwzb_2" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">净资产收益率(%)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+        <table id="right_rank_cwzb_3" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">主营业务增长率(%)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name"><a href="/600753.shtml">东方银星</a></td><td>610.42</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600753_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600387.shtml">海越能源</a></td><td>121.52</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600387_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000159.shtml">国际实业</a></td><td>90.03</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000159_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600626.shtml">申达股份</a></td><td>84.84</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600626_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/002640.shtml">跨境通</a></td><td>80.66</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002640_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000078.shtml">海王生物</a></td><td>72.23</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000078_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600250.shtml">南纺股份</a></td><td>67.76</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600250_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600747.shtml">ST大控</a></td><td>53.34</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600747_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/300131.shtml">英唐智控</a></td><td>51.95</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300131_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600811.shtml">东方集团</a></td><td>51.11</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600811_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_cwzb_4" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">毛利率(%)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name"><a href="/600382.shtml">广东明珠</a></td><td>88.50</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600382_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/300622.shtml">博士眼镜</a></td><td>71.42</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300622_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600647.shtml">同达创业</a></td><td>61.09</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600647_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600838.shtml">上海九百</a></td><td>60.77</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600838_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600337.shtml">美克家居</a></td><td>57.04</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600337_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/603900.shtml">莱绅通灵</a></td><td>55.41</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603900_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/002356.shtml">赫美集团</a></td><td>53.89</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002356_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000638.shtml">万方发展</a></td><td>48.50</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000638_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/002780.shtml">三夫户外</a></td><td>45.93</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002780_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/603777.shtml">来伊份</a></td><td>44.44</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('603777_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+        <table id="right_rank_cwzb_5" width="100%" border="0" cellspacing="0" cellpadding="0" class="setOddTr3" style="display:none;">
+          <thead>
+            <tr>
+              <td class="name">股票名称</td>
+              <td width="120">净利润增长率(%)</td>
+              <td class="add" width="90">加自选</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name"><a href="/000516.shtml">国际医学</a></td><td>1121.50</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000516_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/002264.shtml">新华都</a></td><td>1121.09</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002264_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600738.shtml">兰州民百</a></td><td>1042.98</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600738_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/002024.shtml">苏宁易购</a></td><td>812.11</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('002024_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000632.shtml">三木集团</a></td><td>657.87</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000632_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000759.shtml">中百集团</a></td><td>260.94</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000759_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000753.shtml">漳州发展</a></td><td>217.81</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000753_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/600981.shtml">汇鸿集团</a></td><td>176.47</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('600981_1_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/000785.shtml">武汉中商</a></td><td>172.84</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('000785_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr><tr><td class="name"><a href="/300538.shtml">同益股份</a></td><td>139.44</td>  <td class="add"><a href="javascript:void(0);" onclick="AddToFavStock2('300538_2_1');return false;"><img src="//i.ssimg.cn/images/quote2011/stockinfo/20110101/icon_add.png" alt="加自选" /></a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="h_10"></div>
+    
+    <!-- 商业零售财务指标排行 end -->
+          
+<iframe width="300" height="250" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="//same1.stockstar.com/s?z=stockstar&c=580&op=1" ></iframe>
+            
+            <div class="bom_bor skinBox contactBox">
+                <div class="con">
+                    <p class="phoneNum">
+                        <strong>数据合作电话：</strong>021-50819999-6740
+                    </p>
+                    <p class="email">
+                        <strong>意见反馈：</strong><a href="mailto:datainfo@stockstar.com">datainfo@stockstar.com</a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="h_10">
+        </div>
+    </div>
+    <!-- 底部 begin  -->
+<div id="bottom">
+  <a href="javascript:void(0);" onclick="window.scroll(0,0);" title="返回顶部" class="top" target="_self">TOP↑</a>
+  <div class="clear"></div>
+  <div id="foot">
+    <div><a target="_blank" href="//www.stockstar.com/nav/map.html">网站导航</a> | <a target="_blank" href="//info.stockstar.com/aboutus">公司简介</a> | <a target="_blank" href="//info.stockstar.com/aboutus/Partners.htm">合作伙伴</a> | <a target="_blank" href="//www.stockstar.com/intro/disclaimer.asp">法律声明</a> | <a target="_blank" href="//info.stockstar.com/aboutus/us.htm">诚聘英才</a> | <a target="_blank" href="//info.stockstar.com/aboutus/in.htm">征稿启事</a> | <a target="_blank" href="//info.stockstar.com/aboutus/lx.htm">联系我们</a> | <a target="_blank" href="//info.stockstar.com/aboutus/lx.htm#ad">广告服务</a> | <a target="_blank" href="//member.stockstar.com/message/message.html">用户反馈</a></div>
+    <div>欢迎访问证券之星！请<a target="_blank" href="//info.stockstar.com/aboutus/lx.htm">点此</a>与我们联系 版权所有：Copyright &copy; 1996-<script type="text/javascript">document.write(new Date().getFullYear());</script> </div>
+  </div>
+</div>
+<!-- 底部 end  -->
+
+<!--WebTCode Start-->
+<script type="text/javascript" src="//www.stockstar.com/wt/SS_dcs_tag.js"></script>
+<!--WebTCode End-->
+
+<!-- AdSame ShowCode: 证券之星 / 行情频道 / 行情通发浮标 Begin -->
+<script type="text/javascript" src="//same1.stockstar.com/s?z=stockstar&c=460" ></script> 
+<script type="text/javascript" src="//same1.stockstar.com/s?z=stockstar&c=461" ></script> 
+<!-- AdSame ShowCode: 证券之星 / 行情频道 / 行情通发浮标 End -->
+
+
+    <!--点击热点图代码-->
+    <script type="text/javascript">
+        var countimg_config = { PageName: 'stock.quote' };
+    </script>
+    <script type="text/javascript" src="//j.ssajax.cn/js/ai/countimg.1.0.js"></script>
+    <!--end 点击热点图代码-->
+    
+    <!--2018-12-31 14:39:19-->
+    <script language="javascript" charset="utf-8" type="text/javascript" src="//stat.stockstar.com/QuoteStat/Index.aspx?code=000032&markettype=2&securitiestype=2"></script>
+</body>
+</html>

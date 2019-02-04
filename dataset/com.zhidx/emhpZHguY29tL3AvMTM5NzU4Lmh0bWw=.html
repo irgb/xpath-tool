@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刚刚，百度Apollo开启商业化，福特、现代、一汽抢购 - 智东西</title>
+    <meta name="keywords" content="百度,一汽,福特">
+    <meta name="description" content="百度自动驾驶最强升级！解锁城市路况，8家车企等着装。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://0.gravatar.com/avatar/6449afc226cce888c35b7535f0309947?s=96&#038;d=retro&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/xiongyuxiang" title="由origin发布" rel="author">origin</a></div>
+                <div class="author-posts">共发表554篇文章</div>
+                <div class="author-desc"></div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag2">华为</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag1">腾讯</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag2">无人机</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/ar" class="tag2">AR</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag1">高通</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                刚刚，百度Apollo开启商业化，福特、现代、一汽抢购            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/chedongxi/2018beijingchezhan/%e8%87%aa%e5%8a%a8%e9%a9%be%e9%a9%b6-2018%e5%8c%97%e4%ba%ac%e8%bd%a6%e5%b1%95" rel="category tag">自动驾驶</a>  <a href="http://zhidx.com/p/category/chedongxi" rel="category tag">车东西</a></span><span class="time">2019/01/09 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2019/01/baidu-1.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/baidu-1.jpg 850w, http://oss.zhidx.com/uploads/2019/01/baidu-1.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/baidu-1.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong>车东西（公众号：chedongxi）</strong></p>
+<p><strong>文 | Origin</strong></p>
+<p>北京时间1月9日凌晨，美国拉斯维加斯时间上午10点半到12点，中国的互联网巨头百度，时隔一年再次在CES上通过一场发布会向全球展示了自身的自动驾驶实力。</p>
+<p>在自动驾驶公司扎堆的美国，百度发布Apollo最强版本，百度无人车化身老司机穿梭美国城市中。</p>
+<p>Apollo自动驾驶技术框架迎来史上最大升级，软件硬件全面更新。</p>
+<p>最后，百度还放出自动驾驶商业化杀招——Apollo企业版，隔空回应谷歌无人出租车商业化进展。</p>
+<p>车东西从前方发回第一手报道。</p>
+<h2>一、Apollo 3.5：史上最强“阿波罗”！百度无人车解锁复杂城区</h2>
+<p>百度今年的CES Apollo发布会，由百度的总裁张亚勤主持。张亚勤目前已经分管自动驾驶业务，对其投入大量的精力。显然，自动驾驶是百度最重要的业务之一。</p>
+<p><img class="alignnone size-full wp-image-139765" src="http://oss.zhidx.com/uploads/2019/01/雅琴.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="532" srcset="http://oss.zhidx.com/uploads/2019/01/雅琴.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/雅琴.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_451,h_300 451w, http://oss.zhidx.com/uploads/2019/01/雅琴.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_511 768w, http://oss.zhidx.com/uploads/2019/01/雅琴.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>百度总裁张亚勤</p>
+<p>作为一个开源项目，Apollo发布会开场已经有了一项不成文的规矩——先秀开发者社区新进展。</p>
+<p>百度Apollo平台研发负责人王京傲介绍到，Apollo目前已经是全世界最活跃的自动驾驶开发平台。</p>
+<p>有多活跃呢？平台上目前已经有了39万条代码、1.2万名开发者进行了推荐，生态合作伙伴超过了130位，全球97个国家超过1.5万名开发者加入了Apollo自动驾驶开源项目。</p>
+<p>在众多开发者的见证下，百度Apollo今天来到了3.5版本。</p>
+<p>王京傲甩出一张PPT，上面写着——Apollo 3.5是有史以来最强的Apollo版本。用一个可以衡量的数据来表示，其自动驾驶测试车的MPD值（每次人工干预行驶里程数）已经较之前增长了9倍，达到了1400英里。</p>
+<p><img class="alignnone size-full wp-image-139769" src="http://oss.zhidx.com/uploads/2019/01/MPD.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="532" srcset="http://oss.zhidx.com/uploads/2019/01/MPD.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/MPD.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_451,h_300 451w, http://oss.zhidx.com/uploads/2019/01/MPD.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_511 768w, http://oss.zhidx.com/uploads/2019/01/MPD.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>这一数据，超过了绝大多数自动驾驶公司。也超过了许多人认为的自动驾驶行业第二——通用Cruise此前的成绩。在加州车管局2017年的报告中，通用Cruise的MPD值为1254。</p>
+<p>显然，百度在自动驾驶上取得了跨越式的进展，Apollo 3.5的能力也迎来了一次爆发——在Apollo 3.5的支持下，百度开源的自动驾驶功能，将首次解锁在复杂城区行驶的能力。</p>
+<p>城市中的窄路、变化多端的交通标志、减速带、右转路口、停在路边的车·····种种复杂场景，搭载了Apollo 3.5的自动驾驶车都可以应对，而且可以自行变道，俨然是一个“老司机”了。</p>
+<p>向上整合了Apollo以前版本支持的高速自动驾驶能力、园区低速自动驾驶能力过后，百度用Apollo 3.5打造了“全球首个自动驾驶物流闭环解决方案”，意思就是物流这个场景，百度Apollo的方案<b>理论上已经可以支持从运输到交付的全程自动驾驶了。</b></p>
+<p>百度还通过一个无人车接力跨洋送快递的演示，来说明其实力的强大。</p>
+<p>说是这么说，效果好不好，合作伙伴用过了才知道。</p>
+<p>百度Apollo的最新合作伙伴，自动驾驶初创公司udelv的CEO Daniel与CTO来到了现场，讲述了与Apollo的合作故事。</p>
+<p><img class="size-full wp-image-139771" src="http://oss.zhidx.com/uploads/2019/01/udelv.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/udelv.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/udelv.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/udelv.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/udelv.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>Udelv是一家活跃在物流末端交付场景的自动驾驶初创公司，其自动驾驶车已经在旧金山湾区送了1000多次货物，运行的场景多是复杂的城区道路，这正是Apollo 3.5的用武之地。</p>
+<p>Daniel说，应用百度Apollo 3.5的成果，可以让Udelv将研发的重心放在处理送货途中会遇到的各种场景上， 这削减了一部分技术工作，实质上加速了Udelv的自动驾驶商业化。</p>
+<p>与百度达成合作后，搭载了Apollo 3.5版本的udelv自动驾驶厢式送货车，将于2019年在硅谷的城区中投入运营。</p>
+<p>毫无疑问，Apollo 3.5的发布，也是百度精心准备的一次“军备展示”，Apollo亮出的能力成果，相较去年CES上的百度的无人车阅兵，实质上还要高出一截。</p>
+<p>那么，百度对Apollo 3.5做了什么，让它猛地迈出了一大步？接下来，到了Apollo发布会例行的技术解析时间。</p>
+<h2>二、百度自动驾驶框架最大升级 14个模块更新</h2>
+<p>Apollo 3.5自动驾驶能力显著升级、解锁复杂城区场景的背后，是Apollo整个技术框架的一次大升级。事实上，百度官方也把Apollo 3.5的更新定义为Apollo历史上最大的一次升级。</p>
+<p>车东西粗略数了一下，在Apollo 3.5的技术框架中，有14个模块进行了升级，它们主要分布在硬件、软件平台上。</p>
+<p><img class="size-full wp-image-139763" src="http://oss.zhidx.com/uploads/2019/01/架构图.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/架构图.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/架构图.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/架构图.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/架构图.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>图中蓝色部分即Apollo 3.5升级的模块</p>
+<p><strong>1、硬件：传感器全面升级 新加入两大单元</strong></p>
+<p>百度自动驾驶硬件负责人Helen，讲解了Apollo 3.5在自动驾驶硬件上的进化。</p>
+<p>从上图可以看到，Apollo 3.5的自动驾驶传感器——摄像头、激光雷达、毫米波雷达、GPS/IMU单元都迎来了升级，其中激光雷达升级为1枚128线+3枚16线的豪华配置，车载摄像头的数目增加到10个，毫米波雷达则加入了对后向雷达的扩展支持，GNSS天线则增加为两根。</p>
+<p>这一套升级后的传感器，可以保证Apollo 3.5版本自动驾驶车的探测距离覆盖300米的范围，同时在车辆静止时有辨别方向的能力（GNSS双天线作用）。</p>
+<p><img class="size-full wp-image-139766" src="http://oss.zhidx.com/uploads/2019/01/硬件.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/硬件.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/硬件.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/硬件.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/硬件.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>Apollo 3.5的计算平台，也升级为了可扩展架构，以满足自动驾驶研发对计算加速的需求。对此，百度特别推出了全新的Apollo扩展单元——AXU，能够对自动驾驶提供计算加速、数据分析等功能，值得一提的是，它是可插拔的。</p>
+<p>Apollo 3.5框架中另外一个全新的硬件单元是车联网车载单元V2X OBU，这一设备支持LTE-V2X和DSRC两种V2X通信标准，是实现车路协同的关键基础硬件。百度自去年起加大了对车路协同的投入，而车路协同技术本身也能减轻自动驾驶车辆的感知、运算负担。</p>
+<p><strong>2、软件：自动驾驶算法全升级<span class="Apple-converted-space"> </span></strong></p>
+<p>除了硬件，Apollo 3.5的软件也来了次大更新。可以看到，自动驾驶至关重要的定位、规划预测、 感知算法都得到了升级。</p>
+<p>其中，规划预测模块中加入了场景管理器与场景分类器——场景管理器使得开发者导入场景训练具有更强的扩展性和灵活性，场景分类器则会根据不同的交通场景调用不同的深度学习模型，增强自动驾驶车辆应对不同场景的能力。</p>
+<p>在感知模块上，Apollo 3.5加强了对多传感器融合和算法的支持，</p>
+<p>一句话形容就是，Apollo 3.5的软件更新，又给自动驾驶开发者们节省了一部分造轮子的时间。</p>
+<p>不过这还不够，百度自动驾驶软件造福开发者的终极利器，也在Apollo 3.5版本上释放出来，这就是Cyber RT。</p>
+<p><strong>3、Cyber RT——自动驾驶开发加速器</strong></p>
+<p>百度对Cyber RT是如此看重，以至于它作为一个单独的部分由Apollo开放平台首席架构师曲宁亲自讲解。</p>
+<p>曲宁讲到，自动驾驶对计算的高性能和鲁棒性有强烈需求，为了满足这样的需求，百度在自身多年研发自动驾驶的经验基础上，将一个打包好的计算框架——Apollo Cyber RT放置在了Apollo的软件平台中。</p>
+<div id="attachment_139770" style="max-width: 810px" class="wp-caption alignnone"><img class="size-full wp-image-139770" src="http://oss.zhidx.com/uploads/2019/01/RT.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="600" srcset="http://oss.zhidx.com/uploads/2019/01/RT.jpg 800w, http://oss.zhidx.com/uploads/2019/01/RT.jpg?x-oss-process=image/resize,m_fill,w_400,h_300 400w, http://oss.zhidx.com/uploads/2019/01/RT.jpg?x-oss-process=image/resize,m_fill,w_768,h_576 768w, http://oss.zhidx.com/uploads/2019/01/RT.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /><p class="wp-caption-text">Cyber RT</p></div>
+<p>有了它过后，开发者不需要再自行设计计算的任务接口去做数据的融合，因为平台已经内置。这样，Apollo平台上的自动驾驶开发者，可以把更多精力放在核心算法的开发上。</p>
+<p>Cyber RT的性质，其实与英伟达的Tensor RT有一些相似。Tensor RT是英伟达专门打造的深度学习支持引擎，能够帮助深度学习算法在训练完毕后进行快速部署，推出后受到了深度学习算法开发者们的好评。</p>
+<p>而百度的Cyber RT，则可以帮助自动驾驶开发者更快更容易地集成、部署、测试自动驾驶算法，相当于自动驾驶界的Tensor RT，为加速自动驾驶开发而生。</p>
+<p>可以说，百度Apollo 3.5中Cyber RT的推出，再次把自动驾驶开发的门槛降低了一大截。百度在其中扮演提供开发工具链的重要角色。</p>
+<p>如果Cyber RT是免费使用的话，那么Apollo 的1万多名社区开发者应该很高兴Cyber RT的“横空出世”。</p>
+<p>另外，Apollo 3.5在云端服务平台上，还更新了自动驾驶仿真器。王京傲提到，Apollo新的自动驾驶仿真器中，对驾驶环境的模拟数量增加了10倍，新增了20项功能。而强大的仿真测试，可以作为自动驾驶路测的有效补充，Apollo 3.5的开发，有90%都是仿真器驱动的。</p>
+<p>同时，百度重视的车路协同功能上，Apollo对V2X路侧设备的支持也被放置到了云端平台上。</p>
+<p>可以说，在经历了14个模块的全面升级后，Apollo 3.5的面貌焕然一新，整个框架对开发者更加友好，技术转化为生产力的难度再次缩小。</p>
+<p>而将技术真正转化为生产力、转变为产品，也是百度这一届CES Apollo发布会新的重点。</p>
+<h2>三、Apollo企业版：百度自动驾驶商业化杀招降临</h2>
+<p>在Apollo 3.5的技术讲解完毕后，百度智能驾驶事业群综合管理部和合作发展部总经理<em>尚国斌</em>上台宣布，百度在Apollo 3.5的基础上，正式推出“全球首个最全面的自动驾驶和车联网领域商业解决方案”——Apollo enterprise/Apollo 企业版。<span class="Apple-converted-space"> </span></p>
+<p>与Apollo开放平台基于社区开发者共同开发自动驾驶技术的开源性质不同，Apollo 企业版在三大领域有五个直接面向商业化的主要业务。</p>
+<p><strong>车联网领域</strong>，百度提供交互方式与内容生态齐全的小度车载系统，主要供应给有车载系统智能化转型需求的主机厂。</p>
+<p><strong>自动驾驶领域</strong>，Apollo 企业版提供高速场景自动驾驶、自动泊车、小巴自动驾驶三个解决方案。与开发版不同，这三个解决方案都是面向量产，软硬件都会符合车规要求。</p>
+<p><strong>地图领域</strong>，Apollo企业版提供高精数据服务，包含车机地图、ADAS地图以及高精地图。</p>
+<p>Apollo的开放平台是免费的，而Apollo企业版要收费。凭何一个脱胎于开源项目的自动驾驶方案要收钱？百度给出了Apollo企业版本的四大亮点：</p>
+<p><strong>1、快速落地</strong></p>
+<p>Apollo企业版的软硬件全部符合车规标准，可以帮助客户更快落地。比如车联网的项目从启动到落地，最快只用三个月时间。</p>
+<p><strong>2、成本可控</strong></p>
+<p>Apollo企业版会根据客户的不同需求，对自动驾驶功能、硬件、软件进行定制开发，保证同级别成本可控、价值最优。</p>
+<p><strong>3、全面安全</strong></p>
+<p>Apollo 企业版的软硬件都有安全冗余设计，满足功能安全要求，使自动驾驶车可以安全上路；同时在信息安全上，百度有专门的团队提供保障以及安全监控。</p>
+<p><strong>4、AI领先</strong></p>
+<p>百度提供140余项场景化AI能力和解决方案，让Apollo 企业版的客户在自动驾驶和车联网上能够有领先的竞争力。</p>
+<p>需要提到的是，这是百度Apollo首次从开源平台的性质上跳出来，专门阐述了自身的商业化业务 。</p>
+<p>在百度内部看来，Apollo 企业版现在推出，是时机成熟了。一方面，众多车企在“2020、2021年实现自动驾驶”的承诺下，希望有一个符合车规、可以量产的自动驾驶方案；另一方面，百度在过去两年与车企打交道的过程中，已经摸清了诸多车端的技术与经验，Apollo 3.5在实现的自动驾驶功能上相较此前版本确实也有长足进展，提供了量产的技术基础。</p>
+<p>一方有需求，一方能供应，Apollo企业版应运而生。</p>
+<p>Apollo企业版面向的客户包括车企、供应商、出行服务商。不过从Apollo企业版目前的五大业务和四大亮点不难看出，其目前瞄准的主力客户，是各类车厂。百度方面提供的数据也证明了这一点——未来2-3年内，Apollo 企业版将实现量产上车的客户包括福特、奇瑞、比亚迪、现代、长城、威马、起亚、一汽。</p>
+<p>Apollo企业版拿下8家车企客户，百度在自动驾驶商业化上的杀器终于出鞘了。</p>
+<p>其中，威马据悉和百度在L3、L4级自动驾驶上达成长期合作伙伴关系，L3级高速自动驾驶方案会在2021年量产。威马搭载了百度部分自动驾驶功能的EX 5展车，也出现在此次CES上。</p>
+<p><img class="alignnone size-full wp-image-139768" src="http://oss.zhidx.com/uploads/2019/01/enter.jpeg-拷贝.jpg" alt="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" width="800" height="509" srcset="http://oss.zhidx.com/uploads/2019/01/enter.jpeg-拷贝.jpg 800w, http://oss.zhidx.com/uploads/2019/01/enter.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_472,h_300 472w, http://oss.zhidx.com/uploads/2019/01/enter.jpeg-拷贝.jpg?x-oss-process=image/resize,m_fill,w_768,h_489 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>百度Apollo 企业版发布</p>
+<p>Apollo企业版一出，百度的自动驾驶，是真的要挣钱了。</p>
+<h2>结语：技术与商业路上 百度自动驾驶在飞奔</h2>
+<p>回忆起来感觉遥远，但此时距离百度Apollo的成立，还不足两年，距离上一次Apollo 3.0的发布会，刚刚过去半年不到。</p>
+<p>就在一年之前，质疑百度自动驾驶能否量产的声音还不绝于耳，一年之后，百度Apollo 企业版用至少8家车企的订单回应了质疑。</p>
+<p>一年之前，质疑百度自动驾驶真实能力的也大有人在，一年之后百度用Apollo 3.5的历史最大升级，应对自动驾驶的技术挑战。</p>
+<p>一方面是推出有史以来最强的Apollo 3.5，另一方面是推出Apollo 企业版。技术与商业，百度的自动驾驶正在双轮驱动，前进的速度明显比以往要更快了。</p>
+<p>在自动驾驶呼唤落地的当下，CES上 Apollo 3.5的一系列发布，可以说是百度自动驾驶团队交出了一份高分成绩单。</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139758'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139758">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>16</span>
+                </div>
+                <div class="social-share" data-title="刚刚，百度Apollo开启商业化，福特、现代、一汽抢购" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+            <a href="/p/tag/百度">百度</a><a href="/p/tag/一汽">一汽</a><a href="/p/tag/福特">福特</a>            </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139758">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139758">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

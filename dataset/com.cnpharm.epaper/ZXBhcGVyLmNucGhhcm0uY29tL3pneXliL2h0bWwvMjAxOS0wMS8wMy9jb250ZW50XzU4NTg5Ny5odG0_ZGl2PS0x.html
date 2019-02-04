@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0009002'>
+<link href="../../../tplimg/mulu_4.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<title>中国医药报</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototype.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mp.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendar2.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/new.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/range.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/jspoints111.js"></SCRIPT>
+<style>
+a.ared:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.ared:hover {
+	font-size: 12px;
+	color: #006699;
+	text-decoration: none;
+}
+</style>
+<style>
+.head_c2{display:block;float:left;margin:0 15px 0 0;width:91px;color:#004873;height:21px;padding:0 2px 0 2px;background:#fff;border:1px solid #66B1EB;text-align:left;}
+.head_c3{float:right; margin:2px 0 0 0;}
+
+#pic {width:400px;}
+</style>
+<script type="text/javascript">
+function nTabs(tabObj,obj){
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (tabList[i].id == obj.id)
+		{
+			document.getElementById(tabObj+"_Title"+i).className = "active";
+    		document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+			document.getElementById(tabObj+"_Title"+i).className = "normal";
+			document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+function CopyAll()
+
+{
+
+         var obj = document.getElementById("articleContent");
+
+         if(obj!=null){
+
+                   var content = obj.innerText;
+
+                   window.clipboardData.setData("Text",content);           
+
+                   alert("复制成功");
+
+         }                 
+
+}
+
+function zoomIn() {
+ newZoom= parseInt(ozoom.style.zoom)+10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function zoomOut() {
+ newZoom= parseInt(ozoom.style.zoom)-10+'%'
+ ozoom.style.zoom =newZoom;
+ } 
+function submitCheck()
+ {
+ if(document.all("content1").value.length>1000){
+	 alert("评论内容超过1000字！");
+	 return false;
+	 }
+	 if(document.all("content1").value.indexOf("<script")!=-1 ||document.all("content1").value.indexOf("<\/")!=-1){
+	 alert("评论内容含有特殊字符!");
+	 return false;
+	 }
+	 if(document.all("content1").value == "")
+	 {
+	 alert("必须填写评论内容！");
+	 return false;
+	 }
+	 var isnodecomment = document.commentform.isnodecomm.value; 
+	 document.commentform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));
+	 document.commentform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 
+	 document.commentform.content.value=escape(document.commentform.content1.value);
+	 document.commentform.author.value=escape(document.commentform.author1.value);	
+	 document.commentform.submit();
+ }
+
+function viewComment(){ 		
+         document.viewform.nispagename.value = escape(document.getElementById("pageNameForJiaoHu").innerText.replace(/(^\s*)|(\s*$)/g, ""));		 
+         document.viewform.paperdate.value = document.getElementById("paperdatediv").innerText.replace(/(^\s*)|(\s*$)/g, ""); 	
+		
+ 		 document.viewform.submit();		
+ 	}
+ function dohit(){
+  if (document.readyState == 'complete' )
+     {
+  document.frames("hitClickIframe").document.hitform.url.value = location.href;
+  if(document.commentform.isnodecomm.value == '1'){
+  document.frames("hitClickIframe").document.hitform.nodeid.value = document.commentform.nodeid.value;
+  }else{
+  document.frames("hitClickIframe").document.hitform.articleid.value = document.commentform.articleid.value;
+  }
+  document.frames("hitClickIframe").document.hitform.submit();
+  document.hitClickIframe.style.display="none";
+  }else
+  window.setTimeout("dohit()","300");
+}
+	
+	function getDate()
+	{
+		  var url = window.location.pathname.split('/');		  	
+		  var length = url.length;  		  
+		  document.getElementById("newsIframe").src = "http://paperpost.people.com.cn/"+url[1]+"-"+url[length-3]+"-"+url[length-2]+".html";
+	}
+</script>
+<script type="text/javascript">
+ var focus_width=260;
+ var focus_height=180;
+ var text_height=20;
+ var swf_height = focus_height+text_height;
+ var pics ="";
+ var links ="";
+ var texts ="";
+ var resCount=0;
+ function showArtPics()
+ {
+ if(resCount>0)
+ {
+ pics = pics.substring(0, pics.length-1);
+ links = links.substring(0, links.length-1);
+ texts = texts.substring(0, texts.length-1);
+ var content = "";
+ content += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+ content += '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="../../../tplimg/picflash.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">';
+ content += '<param name="menu" value="false"/><param name="wmode" value="opaque"/>';
+ content += '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+ content += '<embed src="../../../tplimg/picflash.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';
+ content += '<\/object>';
+ document.getElementById("showArtPicsDiv").innerHTML = content;
+ }
+}
+</script>
+</head>
+<SPAN id=leveldiv title=点击查看内容
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 100; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<body onLoad="initialize();initMPPage();">
+<div class="div_bg"><div class="div_center">
+  <!--左侧版面图部分-->
+  <div class="left_c">
+    <div class="ban">
+      <div>
+        <map name=PagePicMap><Area coords="539,696,666,696,666,854,539,854" shape="polygon" href="./content_585897.htm?div=0"><Area coords="539,888,666,888,666,1051,539,1051" shape="polygon" href="./content_585897.htm?div=1"><Area coords="539,1081,666,1081,666,1244,539,1244" shape="polygon" href="./content_585897.htm?div=2"><Area coords="539,1274,666,1274,666,1437,539,1437" shape="polygon" href="./content_585897.htm?div=3"><Area coords="539,1471,666,1471,666,1629,539,1629" shape="polygon" href="./content_585897.htm?div=4"><Area coords="672,621,799,621,799,781,672,781" shape="polygon" href="./content_585897.htm?div=5"><Area coords="672,814,799,814,799,974,672,974" shape="polygon" href="./content_585897.htm?div=6"><Area coords="672,1002,799,1002,799,1165,672,1165" shape="polygon" href="./content_585897.htm?div=7"><Area coords="672,1195,799,1195,799,1357,672,1357" shape="polygon" href="./content_585897.htm?div=8"><Area coords="672,1387,799,1387,799,1550,672,1550" shape="polygon" href="./content_585897.htm?div=9"><Area coords="672,1576,799,1576,799,1738,672,1738" shape="polygon" href="./content_585897.htm?div=10"><Area coords="4,188,1334,188,1334,261,1066,261,1066,488,799,488,799,627,1334,627,1334,799,816,799,816,781,666,781,666,814,799,814,799,824,1334,824,1334,998,816,998,816,974,666,974,666,1002,799,1002,799,1023,1334,1023,1334,1428,799,1428,799,1456,1334,1456,1334,1826,672,1826,672,1629,522,1629,522,1826,4,1826,4,1293,539,1293,539,1274,672,1274,672,1244,522,1244,522,1265,4,1265,4,627,522,627,522,696,672,696,672,488,276,488,276,261,4,261" shape="polygon" href="./content_585897.htm?div=-1"></map><img  width=400 height=575 src=../../../images/2019-01/03/03/zgyyb2019010303_b.jpg border=0 USEMAP=#PagePicMap>
+      </div>
+    </div>
+    <div class="ban_t">
+      <div>
+        <ul>
+          <li style="width:400px">
+            03版:法治天地
+&nbsp;&nbsp;
+            <a href=../../../images/2019-01/03/03/zgyyb2019010303.pdf><IMG src="../../../tplimg/ico4.gif" border=0></a>
+            PDF版下载 
+            <span>
+            <a class=preart href="node_83.htm"> 上一版</a>&nbsp;&nbsp;<a class=preart href="node_35.htm">下一版 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- -->
+
+  
+   
+  </div>
+  <!--右侧目录部分-->
+  <div class="right_c">
+    <div style="margin:0 auto;width:530px;height:70px;text-align:right;padding:8px 0 0 20px;">
+      <div style="height:70px;">
+        <div style="float:left;"><img src="../../../tplimg/logo.png" border="0" alt="中国医药报" height="70px"/></div>
+      </div>
+    </div>
+    <div style="margin:0 auto; color:#004773; height:20px; width:500px; padding:8px 10px 10px 20px; text-align: left;float:left;">
+      <div style="float:left; width:50px;">往期回顾</div>
+      <div style="float:left; width:60px; padding-top:2px;"><a onClick="autoShowDate();" style="cursor:hand;" title="鼠标点击，显示日历牌"><img src="../../../tplimg/ico1.gif" border="0" alt="" /></a></div>
+
+      <div style="float:right; text-align:right;"><a href=node_81.htm>返回目录</a></div>
+    </div>
+    <div class="mobilepaper" id="mobilepaper"></div>
+  <!--目录与标题-->
+    <div style="margin:15px auto 0 auto; width:550px; overflow-wrap: break-word; overflow-x: hidden;">
+      <div class="text_c"><br/>
+        
+<h3></h3>
+<h1>2019，我们携手推进药品监管法治进程</h1>
+<h2></h2>
+<h4></h4>
+        
+        <div class="c_c">
+          <TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c2_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;宋华琳</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c1_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;刘鹏</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c4_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;杨悦</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c3_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;霍增辉</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c5_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;胡颖廉</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c6_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;唐民皓</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c8_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;董作军</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c7_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;丁冬</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c9_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;汤伯兴</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c11_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;何清杭</p></TD></TR></TBODY></TABLE><TABLE align='center'><TBODY><TR><TD><IMG id=pic src="../../../images/2019-01/03/03/0103c10_b.jpg"></TD></TR>
+    <TR><TD><p>&nbsp;&nbsp;&nbsp;&nbsp;李明扬</p></TD></TR></TBODY></TABLE>
+          <DIV id=ozoom style="zoom:100%;">
+            <div id="showArtPicsDiv" align="center"></div>
+            <script language=javascript>
+							/*	if(picResCount>0){
+									document.getElementById("picres").style.display="block";
+									document.write("<br />");
+								}*/
+ 			  				</script>
+            <!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《疫苗管理法》《药品管理法》制修订工作有序推进。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我们期待药品法治体系建设更加成熟完善……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为大家的老朋友，《法治天地》将一如既往地为我国的药品监管法治建设添砖加瓦：为大家展示药品监管领域相关法律法规文件的制修订过程；为大家提供相关法律法规最权威的解读；与大家交流探讨监管执法过程中的热点、难点问题……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;辞旧迎新之际，《法治天地》特别邀请了常年为我国药品监管法治建设鼓与呼的专家学者、常年奔走在监管一线的基层工作者，对我国2019年的药品监管法治建设进行了展望。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;南开大学法学院副院长&nbsp;&nbsp;宋华琳</p><p>&nbsp;&nbsp;&nbsp;&nbsp;药品监管立法需恪守依法行政原理，应尽可能明确、具体，具有针对性和可执行性。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，在药品监管法治建设过程中，应推进药品审评审批制度改革成果的法治化，推动药品上市许可持有人制度实施；针对药品标准、标签和说明书、检查、行政处罚、召回、信用治理、行业禁入等，出台相关的规章或规范性文件；注重药品监管法规政策与市场监管法规政策、医药产业法规政策、卫生法规政策的联动；注重体现从监管向治理的转型，着力夯实企业主体责任；注重公众参与，更好地听取业界声音，更好地听取相对人的见解，发挥媒体的监督作用，实现药品监管的社会共治。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;同时，还要借鉴美国、日本、欧盟等发达国家和地区的先进监管经验，考虑WHO、ICH的要求和国际公约、协定、备忘录、规则、标准等对中国的影响。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国人民大学公共管理学院教授&nbsp;&nbsp;刘鹏</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，是中国药品监管发展历史上值得期待的一年，尤其对于药品监管法治建设来说，更具有里程碑式的意义。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;《疫苗管理法》和新修订的《药品管理法》有望相继出台。在此基础上，相关部门也将会制定更加细化的实施办法。此外，地方药品监管体制改革、药品审评审批制度改革、仿制药一致性评价等基础性工作还将继续深入推进。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;我们期待，无论是立法修法，还是执法监管，都应该结合中国特色社会主义事业进入新时代的大背景，紧紧围绕“以人民为中心”的理念，有效化解人民日益增长的美好生活需要与不平衡不充分的发展之间的矛盾，在药品监管法治建设过程中依靠人民力量、推动人民参与、健全人民监督、接受人民评价，从而推进我国新时代药品监管法制建设真正做到以人民为中心，为人民谋福祉。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;沈阳药科大学国际食品药品政策与法律研究中心主任&nbsp;&nbsp;杨悦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《药品管理法（修正草案）》提请全国人大常委会审议，进入立法关键阶段；国家药监局作为唯一一个ICH的发展中国家成员，正式成为ICH管理委员会成员，我国的药品监管制度、标准，全面与国际接轨……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;从政策研究者角度，我希望在2019年，药品审评审批制度改革继续平稳推进；对我国的药品监管理念、法律法规框架、监管科学层面的标准和指南制定等,进行整体规划和设计，使政策更具有科学性、可行性和可预见性。也希望未来的药品监管法制建设与卫生、专利等法律政策之间更加协调和顺畅，制度目标更加清晰，共同营造一个制药大国向制药强国战略转变的良好法治生态环境。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京中医药大学教授&nbsp;&nbsp;霍增辉</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年是医药行业的不平凡之年。每当出现有重大影响的事件时，往往蕴含着推动法治进步的力量，并成为制度设计重新调整的拐点。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;十三届全国人大常委会第六次会议审议的《药品管理法（修正草案）》，完善了药品全过程监管制度、强化了企业主体责任、强化了对疫苗等特殊药品的监管、明晰了药品监管职责、加大了对违法行为处罚力度、实施药品上市许可持有人制度、改革药品审批制度等制度设计，这些制度的建立、完善和实施，有助于确保人民群众用药安全、有效。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;期待我国的药品监管法治建设能更适合国情、更加完善、更能促进医药事业的发展！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;建设法治，记录法治，守望法治！祝愿《中国医药报》在新的一年里，百尺竿头更进一步！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中央党校（国家行政学院）副教授&nbsp;&nbsp;胡颖廉</p><p>&nbsp;&nbsp;&nbsp;&nbsp;今年是新中国成立70周年，也是第一部《药品管理法》颁布35周年，对于药品监管法治建设的意义尤为重大。新时代的药品监管法治正朝着现代化治理的方向迈进，在这个满怀希望和充满挑战的时代，我们必须坚定目标，研判形势，找准问题，持续施策。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;各级药品监管、市场监管部门从事法制工作的干部，应当充分认识自身工作的重要意义；作为研究者，要秉持中立、科学、务实的态度，围绕上市许可持有人制度、职业化检查员专业化、医药产业新业态、非传统药品安全等重大命题，进行深入研究；产业界要以创新和高质量发展为目标，不断健全质量管理制度并提升管理水平。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;未来的中国医药产业和药品监管必将更美好！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海市食品药品安全研究会会长&nbsp;&nbsp;唐民皓</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如今，法治已经成为强化监管的热门话题，依法监管成为重要的治理之策。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;古人云，“徒善不足以为政，徒法不足以自行”。国家的治理，除了道德的教化，还需要立法规范，更需要法律的有效践行。“良法”与“善治”，是当代法治的追求目标，也是药品监管的重要依托。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;法治是监管的后盾，也是对监管者施之于约束的规矩。推进药品监管的改革与创新，法治是不可或缺的前提；坚持依法改革，是未来提升药品监管的保障。作为药品监管的法律人，我们期待，新时代药品监管的法治，与科学相伴、与改革同步、与市场同行，成为中国医药产业高质量发展的助推器！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;浙江工业大学药品食品政策法规和产业发展研究所副所长&nbsp;&nbsp;董作军</p><p>&nbsp;&nbsp;&nbsp;&nbsp;回顾2018年国家在药品监管上的各项重大举措，贯穿始终的是“科学监管”，按照药品的规律性进行监管。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着我国药品监管水平的不断进步，科学监管已体现在相关的政策措施上，如药品上市许可人制度，让药品的上市许可持有者和生产者可以分离，这是医药产业发展的自然需求，是社会化分工发展的必然结果；仿制药一致性评价，是正本清源之举，将制药行业拉回质量和安全优先的正轨；疫苗单独立法监管，符合基于风险管理的基本原理。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;科学无国界，希望科学监管成为我们药品监管的基本理念。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美团点评法律政策研究院高级研究员&nbsp;&nbsp;丁冬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《疫苗管理法》《药品管理法》的制修订工作有序推进。无论是药品管理法拟推行的药品上市许可持有人制度和职业化检查员制度，还是疫苗管理法设置更严格的企业准入条件、民事赔偿优先的立法原则，都体现出立法机关、监管部门善用法治思维和法治方式,加强药品安全法制保障的积极探索。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，从药品安全法制保障机制来看，依法强化药品生产经营者的主体责任；继续强化基于大数据的立法和公共政策决策机制；不断完善自由裁量基准，优化行政执法机制；加强法律的统一解释和适法指导，建立法律实施的校准机制等仍值得期待。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;江苏省泰州市食品药品监管局法规处处长&nbsp;&nbsp;汤伯兴</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为一名基层药品监管人员，希望2019年药品监管法治建设步伐加快，法治意识深入人心。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;一是期待相关法规尽快实施。《药品管理法》修订工作已启动多时并征求意见，《疫苗管理法》已提交全国人大常委会会议审议，希望尽快颁布实施；也希望尽快出台相关配套实施办法，进一步完善药品监管法律体系。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;二是期待企业落实主体责任。药品生产者应守住药品安全责任底线，始终守法生产，诚信经营；监管部门应加强相关法规和标准的宣贯，让责任意识、安全意识、合规意识入心入脑，让企业真正成为药品安全第一责任主体。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;三是期待监管部门执法必严。希望各级监管部门在新的药品监管体制、体系下，按照“四个最严”要求，严格执法，执法必严。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;厦门市市场监管局医疗器械监管处副调研员&nbsp;&nbsp;何清杭</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为做好新时代医疗器械监管工作，就要在医疗器械监管立法上做好顶层设计，构建好新时代医疗器械全生命周期监管法规体系，确保监管工作落到实处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;归纳起来，就是“一中心、二体系、三安全、四环节、五要素、六过程”。即医疗器械监管要围绕“保障医疗器械安全有效”这个中心，督促生产经营使用单位建立“质量管理、安全生产”两个体系，确保“产品质量、从业人员、环境保护”三个安全，按照“计划、实施、分析、改进”四个环节开展监管，涵盖生产经营使用单位的“机构人员、设备设施、购进物料、生产工艺、生产环境”五个生产要素，贯穿从“研制、生产、储存、运输、使用、报废”六个全生命周期的过程。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京市药品监管局主任科员&nbsp;&nbsp;李明扬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在新的一年里，《疫苗管理法》《药品管理法》等一系列药品监管法律法规的制修订将逐步完成，药品监管法治体系建设将更加完善缜密。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新的一年里，我们要认真落实“四个最严”要求，以药品监管体制改革为契机，以完善药品立法为依据，以完善药品监管政策为抓手，努力构建药品安全治理体系，确保药品的安全性、有效性，提升药品的可及性，切实保障社会公众健康。真诚祝愿药品监管工作取得更显著成效，社会公众获得更高水平的健康保障！</p></P><!--/enpcontent-->
+<INPUT type=checkbox value=0 name=titlecheckbox sourceid="<Source>SourcePh</Source>" style="display:none">
+          </DIV>
+        </div>
+      </div>
+    </div>
+    <!--工具条-->
+    <div class="tool_t">
+      <a href=node_81.htm>返回目录</a>
+&nbsp;&nbsp;&nbsp;<a href="#" onclick="zoomIn();">放大</a><a href="#" onclick="zoomOut();"><img src="../../../tplimg/ico6.gif" border="0" alt="" />缩小</a><a href="#" onclick="CopyAll();"><img src="../../../tplimg/ico7.gif" border="0" alt="" />全文复制</a>&nbsp;&nbsp;&nbsp;
+</div>
+    <!-- 以下是供复制全文用 -->
+    <div style="display:none" id="articleContent">
+      
+			<!--enpcontent--><P><p>&nbsp;&nbsp;&nbsp;&nbsp;编者按</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《疫苗管理法》《药品管理法》制修订工作有序推进。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，我们期待药品法治体系建设更加成熟完善……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为大家的老朋友，《法治天地》将一如既往地为我国的药品监管法治建设添砖加瓦：为大家展示药品监管领域相关法律法规文件的制修订过程；为大家提供相关法律法规最权威的解读；与大家交流探讨监管执法过程中的热点、难点问题……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;辞旧迎新之际，《法治天地》特别邀请了常年为我国药品监管法治建设鼓与呼的专家学者、常年奔走在监管一线的基层工作者，对我国2019年的药品监管法治建设进行了展望。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;南开大学法学院副院长&nbsp;&nbsp;宋华琳</p><p>&nbsp;&nbsp;&nbsp;&nbsp;药品监管立法需恪守依法行政原理，应尽可能明确、具体，具有针对性和可执行性。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，在药品监管法治建设过程中，应推进药品审评审批制度改革成果的法治化，推动药品上市许可持有人制度实施；针对药品标准、标签和说明书、检查、行政处罚、召回、信用治理、行业禁入等，出台相关的规章或规范性文件；注重药品监管法规政策与市场监管法规政策、医药产业法规政策、卫生法规政策的联动；注重体现从监管向治理的转型，着力夯实企业主体责任；注重公众参与，更好地听取业界声音，更好地听取相对人的见解，发挥媒体的监督作用，实现药品监管的社会共治。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;同时，还要借鉴美国、日本、欧盟等发达国家和地区的先进监管经验，考虑WHO、ICH的要求和国际公约、协定、备忘录、规则、标准等对中国的影响。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中国人民大学公共管理学院教授&nbsp;&nbsp;刘鹏</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，是中国药品监管发展历史上值得期待的一年，尤其对于药品监管法治建设来说，更具有里程碑式的意义。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;《疫苗管理法》和新修订的《药品管理法》有望相继出台。在此基础上，相关部门也将会制定更加细化的实施办法。此外，地方药品监管体制改革、药品审评审批制度改革、仿制药一致性评价等基础性工作还将继续深入推进。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;我们期待，无论是立法修法，还是执法监管，都应该结合中国特色社会主义事业进入新时代的大背景，紧紧围绕“以人民为中心”的理念，有效化解人民日益增长的美好生活需要与不平衡不充分的发展之间的矛盾，在药品监管法治建设过程中依靠人民力量、推动人民参与、健全人民监督、接受人民评价，从而推进我国新时代药品监管法制建设真正做到以人民为中心，为人民谋福祉。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;沈阳药科大学国际食品药品政策与法律研究中心主任&nbsp;&nbsp;杨悦</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《药品管理法（修正草案）》提请全国人大常委会审议，进入立法关键阶段；国家药监局作为唯一一个ICH的发展中国家成员，正式成为ICH管理委员会成员，我国的药品监管制度、标准，全面与国际接轨……</p><p>&nbsp;&nbsp;&nbsp;&nbsp;从政策研究者角度，我希望在2019年，药品审评审批制度改革继续平稳推进；对我国的药品监管理念、法律法规框架、监管科学层面的标准和指南制定等,进行整体规划和设计，使政策更具有科学性、可行性和可预见性。也希望未来的药品监管法制建设与卫生、专利等法律政策之间更加协调和顺畅，制度目标更加清晰，共同营造一个制药大国向制药强国战略转变的良好法治生态环境。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京中医药大学教授&nbsp;&nbsp;霍增辉</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年是医药行业的不平凡之年。每当出现有重大影响的事件时，往往蕴含着推动法治进步的力量，并成为制度设计重新调整的拐点。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;十三届全国人大常委会第六次会议审议的《药品管理法（修正草案）》，完善了药品全过程监管制度、强化了企业主体责任、强化了对疫苗等特殊药品的监管、明晰了药品监管职责、加大了对违法行为处罚力度、实施药品上市许可持有人制度、改革药品审批制度等制度设计，这些制度的建立、完善和实施，有助于确保人民群众用药安全、有效。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;期待我国的药品监管法治建设能更适合国情、更加完善、更能促进医药事业的发展！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;建设法治，记录法治，守望法治！祝愿《中国医药报》在新的一年里，百尺竿头更进一步！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;中央党校（国家行政学院）副教授&nbsp;&nbsp;胡颖廉</p><p>&nbsp;&nbsp;&nbsp;&nbsp;今年是新中国成立70周年，也是第一部《药品管理法》颁布35周年，对于药品监管法治建设的意义尤为重大。新时代的药品监管法治正朝着现代化治理的方向迈进，在这个满怀希望和充满挑战的时代，我们必须坚定目标，研判形势，找准问题，持续施策。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;各级药品监管、市场监管部门从事法制工作的干部，应当充分认识自身工作的重要意义；作为研究者，要秉持中立、科学、务实的态度，围绕上市许可持有人制度、职业化检查员专业化、医药产业新业态、非传统药品安全等重大命题，进行深入研究；产业界要以创新和高质量发展为目标，不断健全质量管理制度并提升管理水平。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;未来的中国医药产业和药品监管必将更美好！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;上海市食品药品安全研究会会长&nbsp;&nbsp;唐民皓</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如今，法治已经成为强化监管的热门话题，依法监管成为重要的治理之策。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;古人云，“徒善不足以为政，徒法不足以自行”。国家的治理，除了道德的教化，还需要立法规范，更需要法律的有效践行。“良法”与“善治”，是当代法治的追求目标，也是药品监管的重要依托。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;法治是监管的后盾，也是对监管者施之于约束的规矩。推进药品监管的改革与创新，法治是不可或缺的前提；坚持依法改革，是未来提升药品监管的保障。作为药品监管的法律人，我们期待，新时代药品监管的法治，与科学相伴、与改革同步、与市场同行，成为中国医药产业高质量发展的助推器！</p><p>&nbsp;&nbsp;&nbsp;&nbsp;浙江工业大学药品食品政策法规和产业发展研究所副所长&nbsp;&nbsp;董作军</p><p>&nbsp;&nbsp;&nbsp;&nbsp;回顾2018年国家在药品监管上的各项重大举措，贯穿始终的是“科学监管”，按照药品的规律性进行监管。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;随着我国药品监管水平的不断进步，科学监管已体现在相关的政策措施上，如药品上市许可人制度，让药品的上市许可持有者和生产者可以分离，这是医药产业发展的自然需求，是社会化分工发展的必然结果；仿制药一致性评价，是正本清源之举，将制药行业拉回质量和安全优先的正轨；疫苗单独立法监管，符合基于风险管理的基本原理。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;科学无国界，希望科学监管成为我们药品监管的基本理念。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;美团点评法律政策研究院高级研究员&nbsp;&nbsp;丁冬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2018年，《疫苗管理法》《药品管理法》的制修订工作有序推进。无论是药品管理法拟推行的药品上市许可持有人制度和职业化检查员制度，还是疫苗管理法设置更严格的企业准入条件、民事赔偿优先的立法原则，都体现出立法机关、监管部门善用法治思维和法治方式,加强药品安全法制保障的积极探索。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;2019年，从药品安全法制保障机制来看，依法强化药品生产经营者的主体责任；继续强化基于大数据的立法和公共政策决策机制；不断完善自由裁量基准，优化行政执法机制；加强法律的统一解释和适法指导，建立法律实施的校准机制等仍值得期待。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;江苏省泰州市食品药品监管局法规处处长&nbsp;&nbsp;汤伯兴</p><p>&nbsp;&nbsp;&nbsp;&nbsp;作为一名基层药品监管人员，希望2019年药品监管法治建设步伐加快，法治意识深入人心。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;一是期待相关法规尽快实施。《药品管理法》修订工作已启动多时并征求意见，《疫苗管理法》已提交全国人大常委会会议审议，希望尽快颁布实施；也希望尽快出台相关配套实施办法，进一步完善药品监管法律体系。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;二是期待企业落实主体责任。药品生产者应守住药品安全责任底线，始终守法生产，诚信经营；监管部门应加强相关法规和标准的宣贯，让责任意识、安全意识、合规意识入心入脑，让企业真正成为药品安全第一责任主体。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;三是期待监管部门执法必严。希望各级监管部门在新的药品监管体制、体系下，按照“四个最严”要求，严格执法，执法必严。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;厦门市市场监管局医疗器械监管处副调研员&nbsp;&nbsp;何清杭</p><p>&nbsp;&nbsp;&nbsp;&nbsp;为做好新时代医疗器械监管工作，就要在医疗器械监管立法上做好顶层设计，构建好新时代医疗器械全生命周期监管法规体系，确保监管工作落到实处。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;归纳起来，就是“一中心、二体系、三安全、四环节、五要素、六过程”。即医疗器械监管要围绕“保障医疗器械安全有效”这个中心，督促生产经营使用单位建立“质量管理、安全生产”两个体系，确保“产品质量、从业人员、环境保护”三个安全，按照“计划、实施、分析、改进”四个环节开展监管，涵盖生产经营使用单位的“机构人员、设备设施、购进物料、生产工艺、生产环境”五个生产要素，贯穿从“研制、生产、储存、运输、使用、报废”六个全生命周期的过程。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;北京市药品监管局主任科员&nbsp;&nbsp;李明扬</p><p>&nbsp;&nbsp;&nbsp;&nbsp;在新的一年里，《疫苗管理法》《药品管理法》等一系列药品监管法律法规的制修订将逐步完成，药品监管法治体系建设将更加完善缜密。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;新的一年里，我们要认真落实“四个最严”要求，以药品监管体制改革为契机，以完善药品立法为依据，以完善药品监管政策为抓手，努力构建药品安全治理体系，确保药品的安全性、有效性，提升药品的可及性，切实保障社会公众健康。真诚祝愿药品监管工作取得更显著成效，社会公众获得更高水平的健康保障！</p></P><!--/enpcontent-->
+			
+    </div>
+    <!--结束工具条-->
+    
+  </div>
+<!--结束内容部分-->
+<!--版权部分-->
+<div class="copyright"><p class="p1"><span class="red">中 国 医 药 报版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+    <script language=JavaScript>
+<!--
+document.write("<div id=detail style=position:absolute;width:300px;></div>");
+//-->
+</script>
+    <!-------rqdh版面导航------>
+    <div id=daydh style="display:none; position:absolute; left:50%;margin-left:-100px; top:110px; filter:alpha(opacity=90);"  onmouseover="document.getElementById('daydh').style.display='block';" >
+      <form name=CLD style="padding:0px;margin:0px;">
+        <table width="210" border="0" cellpadding="0" cellspacing="1" bordercolor="#007CD2" bgcolor="#007CD2">
+          <tr>
+            <td bgcolor="#D8EFFF" style="padding: 3px;"><table cellspacing=0 cellpadding=0 width="100%" align=center border=0 bgcolor="#D8EFFF">
+              <tr>
+                <td><table width="100%" align=center border="0" cellpadding="1" cellspacing="1">
+                  <tr class="default" align=center>
+                    <td height=15 colspan=7 bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                      <tr align="center">
+                        <td align="left" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SY>
+                          <script language=JavaScript>
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SY,1)" /></td>
+                        <td align="center" nowrap><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d1.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,0)" /></td>
+                        <td><select class=jumpmenu onChange=changeMPCld() name=SM>
+                          <script language=JavaScript>
+				<!--
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+        			</script>
+                        </select>
+                        </td>
+                        <td><img src="../../../../../../tiaoshidomain/applications/mp/file_upload/enp/1/121.files/d.gif" width="7" height="11" style="cursor:hand;" onClick="turnpage(SM,1)" /></td>
+                        <td align="right" nowrap><strong><font id=GZ fface="Arial, Helvetica, sans-serif"></font></strong></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr align=middle bgcolor="#FFFFFF" class="default">
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">日</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">一</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">二</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">三</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">四</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">五</font></b></td>
+                    <td bgcolor="#027CD1" align="center" class="fontstyle01"><b><font face="Arial, Helvetica, sans-serif">六</font></b> </td>
+                  </tr>
+                  <script language=JavaScript>
+		<!--
+			var gNum;
+			for(i=0;i<6;i++)
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++)
+				{
+					gNum = i*7+j;
+					document.write('<td  bgcolor="#FFFFFF" class="default" align=center id="GD' + gNum +'" style="cursor: default;" width="14%"><a href="" id="CD' + gNum + '"><span class="date" style="font-family:Verdana, Arial;font-size:11px;"><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 class=pt9 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+        	</script>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr><td align="center" height="22"><a href="#" onClick="autoShowDate();">关闭</a></td></tr>
+        </table>
+      </form>
+    </div>
+    <!-------rqdh版面导航END------>
+<!-------文章显示标题开始------>
+<div style="display:none">
+  <table width="265" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+
+  <tr>
+	<td width="16" align="left"><img src="3.files/icon07.jpg" /></td>
+	<td width="271" align="left" class="fontstyle" height="22">
+<a href=./content_585897.htm?div=-1><div style="display:inline" id=mp_nw.D110000zgyyb_20190103_1-03>2019，我们携手推进药品监管法治进程</div></a>
+	</td>
+  </tr>
+  <tr><td background="3.files/dian01.jpg" colspan="2" height="1"></td></tr>
+
+</table>
+</div>
+<!-------文章显示标题结束------>
+<img src="../../../tplimg/left_ico.gif" style="display:none;" /> <img src="../../../tplimg/right_ico.gif" style="display:none;" /> <img src="../../../tplimg/ico10.gif" style="display:none;" /> <img src="../../../tplimg/ico8.gif" style="display:none;" /> <img src="../../../tplimg/ico9.gif" style="display:none;" /> <img src="../../../tplimg/ti.gif" style="display:none;" /> <img src="../../../tplimg/fb.gif" style="display:none;" />
+</div></div>
+</body>
+</html>
+<script language="javascript">
+if(document.getElementById('ozoom')!=null&&document.getElementById('ozoom').offsetHeight<=357)
+	document.getElementById('ozoom').style.height = '357px';
+</script>
+<SCRIPT language=Javascript src="../../../tplimg/webdig_test.js"></SCRIPT>
+
+<!--mpproperty <founder-date>
+2019-01-03
+</founder-date>
+<founder-author>
+
+</founder-author>
+<founder-title>2019，我们携手推进药品监管法治进程
+</founder-title>
+<founder-nodename></founder-nodename>
+<founder-keyword>
+
+</founder-keyword><founder-ChannelID>
+1
+</founder-ChannelID><founder-imp>0</founder-imp>
+<founder-subtitle></founder-subtitle>
+<founder-type>1</founder-type>
+<founder-introtitle></founder-introtitle>
+<founder-pagepicurl>http://site1/zgyyb/images/2019-01/03/03/zgyyb2019010303_b.jpg</founder-pagepicurl>
+<founder-pagenum>03</founder-pagenum>
+<founder-papername>中国医药报</founder-papername>
+<founder-nodeid>81</founder-nodeid> /mpproperty-->
+
+

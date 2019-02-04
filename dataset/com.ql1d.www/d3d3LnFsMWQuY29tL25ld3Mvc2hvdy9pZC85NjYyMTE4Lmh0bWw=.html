@@ -1,0 +1,3114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="壹点网_1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="/Public/yidian/img/favicon.ico">
+    <!--<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.ql1d.com/" >-->
+    <!-- 系统定义 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js'></script>
+    <script src="//cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="/Public/yidian/js/global.js"></script>
+    <link rel="stylesheet" href="/Public/yidian/css/yidian.css?t=14"/>
+    <link rel="stylesheet" href="/Public/yidian/css/iconfont/iconfont.css"/>
+   
+	        <title>刚刚，中央公布了一份很不寻常的文件，对民企有何影响？_齐鲁壹点网</title>
+        <meta name="description" content='刚刚，中央公布了一份很不寻常的文件，对民企有何影响？。
+  
+   
+    
+     
+     
+    
+   
+   
+    
+    
+   
+   
+    
+     
+      前几天，马化腾和董明珠走上中央党校讲坛，成为热门话题。
+     
+    
+   
+   
+' />
+        <meta name="keywords" content="" />
+    
+    <!-- 频道页 -->
+    
+    <style>
+        .reveal-modal {
+            /* position: fixed;*/
+        }
+        body {
+            background-color: #EEEEEE;
+            overflow: visible !important;
+        }
+    </style>
+
+    <!-- 百度联盟 -->
+    <meta name="baidu-site-verification" content="j7STQqa9i5"/>
+
+    <!-- 搜狗搜索平台验证码 -->
+    <meta name="sogou_site_verification" content="oTTwTafJoI"/>     
+
+    <meta name="360-site-verification" content="2c8b790b5b6fbacc09a1d0f5447f473c" />
+
+    <script>
+    	/*
+        var _hmt = _hmt || [];
+        (function () {
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+        */
+    </script>
+
+
+
+    <script>/*
+     * Lazy Load - jQuery plugin for lazy loading images
+     *
+     * Copyright (c) 2007-2012 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *   http://www.appelsiini.net/projects/lazyload
+     *
+     * Version:  1.8.0
+     *
+     */
+    (function ($, window) {
+        var $window = $(window);
+
+        $.fn.lazyload = function (options) {
+            var elements = this;
+            var $container;
+            var settings = {
+                threshold: 0,
+                failure_limit: 0,
+                event: "scroll",
+                effect: "show",
+                container: window,
+                data_attribute: "original",
+                skip_invisible: true,
+                appear: null,
+                load: null
+            };
+
+            function update() {
+                var counter = 0;
+
+                elements.each(function () {
+                    var $this = $(this);
+                    if (settings.skip_invisible && !$this.is(":visible")) {
+                        return;
+                    }
+                    if ($.abovethetop(this, settings) ||
+                            $.leftofbegin(this, settings)) {
+                        /* Nothing. */
+                    } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+                        $this.trigger("appear");
+                    } else {
+                        if (++counter > settings.failure_limit) {
+                            return false;
+                        }
+                    }
+                });
+
+            }
+
+            if (options) {
+                /* Maintain BC for a couple of versions. */
+                if (undefined !== options.failurelimit) {
+                    options.failure_limit = options.failurelimit;
+                    delete options.failurelimit;
+                }
+                if (undefined !== options.effectspeed) {
+                    options.effect_speed = options.effectspeed;
+                    delete options.effectspeed;
+                }
+
+                $.extend(settings, options);
+            }
+
+            /* Cache container as jQuery as object. */
+            $container = (settings.container === undefined ||
+            settings.container === window) ? $window : $(settings.container);
+
+            /* Fire one scroll event per scroll. Not one scroll event per image. */
+            if (0 === settings.event.indexOf("scroll")) {
+                $container.bind(settings.event, function (event) {
+                    return update();
+                });
+            }
+
+            this.each(function () {
+                var self = this;
+                var $self = $(self);
+
+                self.loaded = false;
+
+                /* When appear is triggered load original image. */
+                $self.one("appear", function () {
+                    if (!this.loaded) {
+                        if (settings.appear) {
+                            var elements_left = elements.length;
+                            settings.appear.call(self, elements_left, settings);
+                        }
+                        var loadImgUri;
+                        if ($self.data("background"))
+                            loadImgUri = $self.data("background");
+                        else
+                            loadImgUri = $self.data(settings.data_attribute);
+
+                        $("<img />")
+                                .bind("load", function () {
+                                    $self
+                                            .hide();
+                                    if ($self.data("background")) {
+                                        $self.css('backgroundImage', 'url(' + $self.data("background") + ')');
+                                    } else
+                                        $self.attr("src", $self.data(settings.data_attribute))
+
+                                    $self[settings.effect](settings.effect_speed);
+
+                                    self.loaded = true;
+
+                                    /* Remove image from array so it is not looped next time. */
+                                    var temp = $.grep(elements, function (element) {
+                                        return !element.loaded;
+                                    });
+                                    elements = $(temp);
+
+                                    if (settings.load) {
+                                        var elements_left = elements.length;
+                                        settings.load.call(self, elements_left, settings);
+                                    }
+                                })
+                                .attr("src", loadImgUri);
+                    }
+
+                });
+
+                /* When wanted event is triggered load original image */
+                /* by triggering appear.                              */
+                if (0 !== settings.event.indexOf("scroll")) {
+                    $self.bind(settings.event, function (event) {
+                        if (!self.loaded) {
+                            $self.trigger("appear");
+                        }
+                    });
+                }
+            });
+
+            /* Check if something appears when window is resized. */
+            $window.bind("resize", function (event) {
+                update();
+            });
+
+            /* Force initial check if images should appear. */
+            update();
+
+            return this;
+        };
+
+        /* Convenience methods in jQuery namespace.           */
+        /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
+
+        $.belowthefold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.height() + $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top + $(settings.container).height();
+            }
+
+            return fold <= $(element).offset().top - settings.threshold;
+        };
+
+        $.rightoffold = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.width() + $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left + $(settings.container).width();
+            }
+
+            return fold <= $(element).offset().left - settings.threshold;
+        };
+
+        $.abovethetop = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollTop();
+            } else {
+                fold = $(settings.container).offset().top;
+            }
+
+            return fold >= $(element).offset().top + settings.threshold + $(element).height();
+        };
+
+        $.leftofbegin = function (element, settings) {
+            var fold;
+
+            if (settings.container === undefined || settings.container === window) {
+                fold = $window.scrollLeft();
+            } else {
+                fold = $(settings.container).offset().left;
+            }
+
+            return fold >= $(element).offset().left + settings.threshold + $(element).width();
+        };
+
+        $.inviewport = function (element, settings) {
+            return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+        };
+
+        /* Custom selectors for your convenience.   */
+        /* Use as $("img:below-the-fold").something() */
+
+        $.extend($.expr[':'], {
+            "below-the-fold": function (a) {
+                return $.belowthefold(a, {threshold: 0});
+            },
+            "above-the-top": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-screen": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-screen": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            },
+            "in-viewport": function (a) {
+                return !$.inviewport(a, {threshold: 0});
+            },
+            /* Maintain BC for couple of versions. */
+            "above-the-fold": function (a) {
+                return !$.belowthefold(a, {threshold: 0});
+            },
+            "right-of-fold": function (a) {
+                return $.rightoffold(a, {threshold: 0});
+            },
+            "left-of-fold": function (a) {
+                return !$.rightoffold(a, {threshold: 0});
+            }
+        });
+    })(jQuery, window);</script>
+    <script>//共享到效果
+    $(function () {
+        $L.Event.toggleShare();
+        $(".lazy_load_background").lazyload();
+    });
+    window.alert = function (txt) {
+
+        $L.Widget.showFondationModal(txt);
+    }
+    </script>
+</head>
+<body>
+
+    <!-- <script type="text/javascript">
+        /*自适应 创建于 2017/9/25*/
+        var cpro_id = "u3103436";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/i.js"></script> -->
+    <!-- header头部信息 -->
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/foundation/5.5.3/js/foundation/foundation.dropdown.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+    .bdsharebuttonbox .bg_tsina { background: url("//image.qiluyidian.mobi/web/ql1d/img/sina.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_weixin { background: url("//image.qiluyidian.mobi/web/ql1d/img/weixin.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+    .bdsharebuttonbox .bg_qzone { background: url("//image.qiluyidian.mobi/web/ql1d/img/zone.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0); width: 22px; height: 28px; }
+</style>
+
+<script>
+    $(function () {
+
+
+/*
+    //    alert(navigator.userAgent);
+	    var bp = document.createElement('script');
+	    bp.src = '//push.zhanzhang.baidu.com/push.js';
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	   	*/
+
+        $(document).foundation();
+        /*  忘记密码验证提示*/
+        $("#forget_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 注册验证提示*/
+        $("#login_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                },
+                'code': {
+                    required: true
+                },
+                'tel_code': {
+                    required: true
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                },
+                'code': {
+                    required: '请输入验证码'
+                },
+                'tel_code': {
+                    required: '请输入手机验证码'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        /* 登录的验证提示*/
+        $("#register_form").validate({
+            debug: true,
+            ignore: "",
+            rules: {
+                'tel': {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                    telValue: true
+                },
+                'password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                'tel': {
+                    required: '请输入手机号',
+                    digits: '手机号必须为数字',
+                    minlength: '手机号码格式不正确，请重新输入',
+                    maxlength: '手机号码格式不正确，请重新输入',
+                    telValue: '手机号不符合规范'
+                },
+                'password': {
+                    required: '请输入密码',
+                    minlength: '密码长度应在6-20个字符之间',
+                    maxlength: '密码长度应在6-20个字符之间'
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.closest(".field").find('div[class$="_error"]').html(error);
+            }
+        });
+        $('div[class$="_error"]').css('color', 'red');
+        /* 验证手机号是否符合*/
+        jQuery.validator.addMethod("telValue", function (value, element) {
+            var telname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+            return this.optional(element) || (telname.test($.trim(value)));
+        }, "");
+
+         /*  登录功能*/
+         $("#_register").on('click', function () {
+             if ($("#register_form").valid()) {
+                 var _post_data = $("#register_form").serialize();
+                 $.ajax({
+                     url: "/user/login.html",
+                     type: "post",
+                     dataType: 'json',
+                     data: _post_data,
+                     success: function (data) {
+                         //    alert(data);
+                         if (data.status == 0) {
+                            alert("登录成功");
+                            setTimeout(function () {
+                                location.reload();
+                            }, 500)
+                         	/* $.ajax({
+			                     'url': "http://bbs.ql1d.com/index.php/user/login",
+			                     'type':'POST',
+			                     'dataType':'JSONP',
+			                     'jsonp':'jsonpcallback',
+			                     'data':_post_data,
+			                     'error':function(e){
+			                    	 location.href = location.href;
+			                     },
+			                     'success':function(data){
+			                    	 location.href = location.href;
+			                     }
+			                 }); */
+
+
+                             return false;
+                         } else {
+                        	 $('.password_error').html('用户名或密码错误');
+                             return false;
+                         }
+                     }
+                 });
+
+
+             }
+         });
+
+        /* 注册功能*/
+        $("#_login").on("click", function () {
+
+            if ($("#login_form").valid()) {
+
+                var _post_data = $("#login_form").serialize();
+
+                $.ajax({
+                    url: "/user/reg.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("注册成功");
+                            location.href = location.href;
+                        } else {
+                            alert("注册失败,请重试!");
+                        }
+                    }
+                });
+            }
+        });
+
+        /*忘记密码功能*/
+        $("#_forget").on("click", function () {
+            if ($("#forget_form").valid()) {
+                /*  重置密码成功后跳转的弹窗*/
+               	var _post_data = $("#forget_form").serialize();
+
+                $.ajax({
+                    url: "/user/findpass.html",
+                    type: "post",
+                    dataType: 'json',
+                    data: _post_data,
+                    success: function (data) {
+                        if (data.status == 0) {
+                            alert("密码找回成功");
+                            location.href = location.href;
+                        } else {
+                            alert("密码找回失败,请重试!");
+                        }
+                    }
+                });
+
+/*                $('#reset_modal').foundation('reveal', 'open');
+                var reset_numdown = 3;
+                setInterval(function () {
+                    reset_numdown -= 1;
+                    $('#reset_num').html(reset_numdown);
+                    if (reset_numdown == 0) {
+                        $('#reset_modal').foundation('reveal', 'close');
+                    }
+                }, 1000);
+*/
+
+            }
+        });
+
+        /*  鼠标放上时出现提示事件*/
+        $("#dropdowna").mouseenter(function () {
+
+            $('#dropdowna').click();
+        });
+       /* $("#dropdowna").on("click",function(){
+          /!*  alert("dd");*!/
+        });*/
+        /* 打开登录注册弹窗*/
+        $("#entrance").on('click', function () {
+
+            $('#login_modal').foundation('reveal', 'open');
+
+
+        });
+        /* 打开忘记密码弹窗*/
+        $("#forget_password").on("click", function () {
+            $("#forget_modal").foundation("reveal", "open")
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest("#for_morecity,#for_moreitem").length) {
+                $("#for_morecity,#for_moreitem").hide();
+            }
+        });
+
+
+        $("#morecity,#moreitem").on("click", function (e) {
+            $("#for_morecity,#for_moreitem").hide();
+            var id = $(this).attr("id");
+            $("#for_" + id).css({"left": $(this).offset().left}).show();
+            e.stopPropagation();
+        });
+        $(window).scroll(function (e) {
+            var topPosition = parseInt($(window).scrollTop());
+            if (topPosition >= 400) {
+                $(".totop").addClass("display_totop");
+            } else {
+                $(".totop").removeClass("display_totop");
+            }
+
+            var pageHeight=$("body").height();
+         /*   var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                  if(topPosition>104){
+                      $("#for_morecity").addClass("fixedadd");
+                  }else{
+                      $("#for_morecity").removeClass("fixedadd");
+                  }
+                } else {
+                    if(topPosition>104){
+                        $("#for_morecity").removeClass("fixedadd");
+                    }else{
+                        $("#for_morecity").addClass("fixedadd");
+                    };
+                }
+                lastScrollTop = st;
+            });*/
+//            $("body").animate({scrollTop: $(document).scrollTop()+300}, 300, 'swing');
+            if (topPosition >= 104) {
+                $(".header_items").addClass("daohangbox");
+                $("#pageheader").addClass("fixedOnTop");
+             $("#pageContext").addClass("fixedMiddle");
+                $(".new").addClass("fixedMiddle");
+                $("#for_moreitem").addClass("fixedadd");
+                $("#for_morecity").addClass("fixedadd");
+            } else if (topPosition < 104 ) {
+                $(".header_items").removeClass("daohangbox");
+                $("#pageheader").removeClass("fixedOnTop");
+             $("#pageContext").removeClass("fixedMiddle");
+                $(".new").removeClass("fixedMiddle");
+                $("#for_moreitem").removeClass("fixedadd");
+                $("#for_morecity").removeClass("fixedadd");
+            }
+        });
+        $(".totop").on("click", function () {
+            var body = $("html, body");
+            body.stop().animate({scrollTop: 0}, '500', 'swing', function () {
+                console.log("Finished animating");
+            });
+        });
+        $(".qrcode").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("qrcode_big");
+            e.stopPropagation();
+        });
+        $(".top-tab> li").on("mouseover mouseout", function (e) {
+            $(this).toggleClass("hover-item");
+            e.stopPropagation();
+        });
+    });
+
+    /*
+     ================
+     获取手机验证码
+     */
+    var second = 60;
+    var flage = true;
+    var speed = 1000;
+    var int_fun;
+
+    function sendMsg(type) {
+    	//type为1表示注册
+    	//type为2找回密码
+    	if (flage == true) {
+            flage = false;
+            s_temp = second;
+
+            if(type == 1){
+            	var tel = $("#login_tel").val();
+            	var m_code = $("#login_verification").val();
+            }else{
+            	var tel = $("#forget_tel").val();
+            	var m_code = $("#forget_verification").val();
+            }
+            $.ajax({
+                url: '/user/msg_code.html',
+                type: "post",
+                dataType: "json",
+                data: {tel:tel,type:type,code:m_code},
+                success: function (data) {
+                	if(type == 1){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         //    alert(data.msg);
+                         }
+                	}else if(type == 2){
+                		 if (data.status == 0) {
+                         	$(".sendBtn").html("60秒后重发");
+                         	int_fun = setInterval("lock()", speed);
+                         	$('.code_error').html('<span style="color:green">验证码发送成功</span>');
+                         //    alert("验证码已发送到您的手机中");
+                         } else {
+                        	flage = true;
+                         	$('.code_error').html(data.msg);
+                         	var captcha_img = $('.captcha-container').find('img');
+                         	captcha_img.trigger("click");
+                         }
+                	}
+
+                }
+            });
+
+        }
+
+
+    }
+
+    function lock() {
+        s_temp = s_temp - 1;
+        $(".sendBtn").html(s_temp + "秒后重发");
+        if (s_temp <= 0) {
+            $(".sendBtn").html("点击重发");
+            clearInterval(int_fun);
+            flage = true;
+        }
+    }
+
+
+    /*
+     ================
+     获取手机验证码
+     */
+
+
+
+
+</script>
+
+<div id="pageheader" style="background: white;">
+<div class="header_top row">
+
+
+        <div class="columns small-6 medium-6 large-6 text-left logo" style="white-space:nowrap;overflow: hidden">
+
+            <a href='http://www.ql1d.com'>
+
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png" alt=""/>  </a>
+            <!-- a href='/index/index.html'>  <img src="/Public/yidian/img/newsdetail/yidian_logo.png" alt=""/>  </a -->
+            齐鲁壹点　最懂山东
+        </div>
+
+
+    <div class="columns small-6 medium-6 large-6 text-right right-top" style="padding: 0px">
+            <div class="">
+                <span class="text-right entrance" id="entrance" style="white-space:nowrap;overflow: hidden">
+
+                    <img src="//image.qiluyidian.mobi/web/ql1d/img/avatar.png" alt=""/>登录
+                </span>
+
+            </div>
+            <div class="">
+	            
+	                <span class="text-right forum" style="white-space:nowrap;overflow: hidden;color: #646464;">
+                        <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe60a;</i>
+                        <a href="/index/index/channel_id/563.html">山东</a>
+	                </span>
+
+            </div>
+            <div class="" style="white-space:nowrap;">
+            	<a href="/news/show/id/6312170.html">
+                <span class="text-right account" style="color:#666;">
+                    <i class="icon iconfont" style="font-size:24px;margin-right:5px;">&#xe61f;</i>壹点号
+                </span>
+                </a>
+            </div>
+
+        </div>
+        
+</div>
+<div class="header_items">
+    <div class="row">
+		
+			<ul class="column small-9 medium-9 large-9 top-tab">
+				<!-- 判断选中推荐 -->
+				<li class="
+										">
+					<a href='http://www.ql1d.com'>推荐</a>
+				</li>
+				
+				 <!-- 判断选中城市 -->
+				<li class="
+					"
+					><a href="http://www.ql1d.com/index/index/city_id/34.html">济南市</a> 
+					<div class="listimage" id="morecity"></div>
+				</li>
+				
+				<li class="
+					 					"><a href="http://www.ql1d.com/channel/account">壹点号</a>
+				</li>
+				
+				<li class="
+													"><a href="/index/index/channel_id/98.html">爱动</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/101.html">视频</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/493.html">尚美</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/104.html">科技</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/92.html">娱乐</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/90.html">财经</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2560.html">消费</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/1.html">看点</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2.html">本地新闻</a>
+					</li><li class="
+													"><a href="/index/index/channel_id/2562.html">乐活</a>
+					</li>				<li style='height:50px' class="arrow"><a id="moreitem"><i class="icon iconfont">&#xe62f;</i></a></li>
+			</ul>
+		
+		
+        <div class="column small-3 medium-3 large-3" style="width:250px;padding:0;">
+            <div class="search_input">
+            	<i class="icon iconfont" style="display:inline-block;margin-left:30px;margin-top:3px;">&#xe626;</i>
+            	<form action="http://www.ql1d.com/index/search.html" method="post">
+            		<input type="text" id="search_text" name="search_text" placeholder=" 壹 搜 全 知 道" value='' value='9'  />
+            		<button style='display:none'>搜索</button>
+            	</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="for_morecity" style="display:none">
+    <div>
+    <a href="/index/index/city_id/34.html">济南</a>
+    <a href="/index/index/city_id/35.html">青岛</a>
+    <a href="/index/index/city_id/56.html">淄博</a>
+            </div>
+    <div>
+    <a href="/index/index/city_id/58.html">枣庄</a>
+    <a href="/index/index/city_id/59.html">东营</a>
+    <a href="/index/index/city_id/60.html">烟台</a>
+    </div>
+    <div>
+    <a href="/index/index/city_id/61.html">潍坊</a>
+    <a href="/index/index/city_id/62.html">济宁</a>
+    <a href="/index/index/city_id/63.html">泰安</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/64.html">威海</a>
+	    <a href="/index/index/city_id/65.html">日照</a>
+	    <a href="/index/index/city_id/66.html">莱芜</a>
+    </div>
+    <div>
+    	<a href="/index/index/city_id/67.html">临沂</a>
+	    <a href="/index/index/city_id/68.html">德州</a>
+	    <a href="/index/index/city_id/69.html">聊城</a>
+    </div>
+    <div>
+	    <a href="/index/index/city_id/71.html">滨州</a>
+	    <a href="/index/index/city_id/57.html">菏泽</a>
+    </div>
+</div>
+<div id="for_moreitem" style="display:none">
+	<div><a href="/index/index/channel_id/5.html">推荐</a><a href="/index/index/channel_id/36.html">味道</a><a href="/index/index/channel_id/548.html">体彩</a></div><div><a href="/index/index/channel_id/37.html">房产</a><a href="/index/index/channel_id/40.html">旅游</a><a href="/index/index/channel_id/89.html">汽车</a></div><div><a href="/index/index/channel_id/94.html">职场</a><a href="/index/index/channel_id/2398.html">产经</a><a href="/index/index/channel_id/95.html">教育</a></div><div><a href="/index/index/channel_id/97.html">育儿</a><a href="/index/index/channel_id/99.html">摄影</a><a href="/index/index/channel_id/102.html">健康</a></div><div><a href="/index/index/channel_id/2920.html">养老</a><a href="/index/index/channel_id/3456.html">政务</a><a href="/index/index/channel_id/3459.html">眼界</a></div><div><a href="/index/index/channel_id/1432.html">直播</a><a href="/index/index/channel_id/670.html">国际</a><a href="/index/index/channel_id/2523.html">拍藏</a></div><div><a href="/index/index/channel_id/1504.html">评论</a><a href="/index/index/channel_id/490.html">福彩</a><a href="/index/index/channel_id/3565.html">公益</a></div><div><a href="/index/index/channel_id/2799.html">创新</a></div></div>
+<div id="widget" class="fixed_widget">
+    <div class="qrcode"></div>
+    <a class="totop hide_totop"></a>
+</div>
+<div class="row">
+    <!-- 重置密码弹窗-->
+    <div id="reset_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style=" width: 470px;height: 250px;" aria-hidden="true" role="dialog">
+        <div class="small-12 medium-12 large-12 text-center">
+            <div class="reset_img">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_logo.gif" alt="壹点图片"/>
+            </div>
+            <div class="reset_t1">
+                <span style=" padding-right: 14px;">齐鲁壹点</span><span>最懂山东</span>
+            </div>
+            <div class="reset_t2"><span>密码重置成功！</span></div>
+            <div class="reset_t3">
+                <a href="#"><span><span id="reset_num">3</span>秒后跳转回首页！</span></a>
+            </div>
+        </div>
+    </div>
+    <!--忘记密码弹窗-->
+    <div id="forget_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+        <section role="tabpanel">
+            <div class="small-12 medium-12 large-12 columns text-center zhaohui" style="padding: 22px 0px;">
+                <img src="//image.qiluyidian.mobi/web/ql1d/img/resetpass.png" alt="找回密码图片"/>
+                <span>找回密码</span>
+            </div>
+            <form action="" id="forget_form">
+                <div class="row">
+                    <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                        <div class="field">
+                            <input type="tel" class="radius" id="forget_tel" pattern="tel_only" required
+                                   placeholder="手机号" name="tel"/>
+
+                            <div class="tel_error"></div>
+                        </div>
+
+                    <div class="small-4  columns" style="padding: 0px">
+                        <div class="field">
+                            <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="forget_verification"
+                                   name="code"/>
+
+                            <div class="code_error"></div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns captcha-container"  style="padding: 0px" ><img src="/user/verify_c.html" alt="图片"/></div>
+                    <div class="small-4  columns"  style="padding: 0px">
+                        <a class="sendBtn expand botton secondary" id="pass" onclick='sendMsg(2)'>获取手机验证码</a>
+                    </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="请输入短信验证码" class="radius" pattern="" id="forget_note"
+                                   required
+                                   name="tel_code"/>
+
+                            <div class="telcode_error"></div>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="请输入新密码" class="radius" id="f_password" name="password"/>
+
+                            <div class="loginpassword_error"></div>
+                        </div>
+
+
+                        <button type="submit" href="" class="expand button radius" id="_forget">重置密码</button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- 登录注册弹窗模块-->
+    <div id="login_modal" class="reveal-modal" data-reveal aria-invalid="modalTitle"
+         style="padding: 0px; width: 470px;height: 440px;" aria-hidden="true" role="dialog">
+
+        <ul class="tabs" data-tab role="tablist">
+            <li class="tab-title active paging" role="presentation"><a href="#panel2-1" role="tab" class="pagingtitle"
+                                                                       tabindex="0" aria-selected="true"
+                                                                       aria-controls="panel2-1"><img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/logon.png" alt="登录图片"/> 登录</a></li>
+            <li class="tab-title paging" role="presentation"><a href="#panel2-2" role="tab" class="pagingtitle"
+                                                                tabindex="0" aria-selected="false"
+                                                                aria-controls="panel2-2"> <img
+                    src="//image.qiluyidian.mobi/web/ql1d/img/register.png" style="padding-right: 5px;" alt="注册图片"/>手机注册</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content ">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                <form data-abide id="register_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+
+
+                            <div class="field" style="margin-top: 30px;">
+
+                                <input type="text" class="radius" required pattern="tel_only"
+                                       id="register_tel" name="tel" placeholder="手机号" style="  height: 50px;">
+
+                                <div class="tel_error"></div>
+                            </div>
+                            <div class="field" >
+
+                                <input type="password" class="radius" required class="secondary radius" pattern=""
+                                       placeholder="密码" name="password" id="register_password" style="  height: 50px;">
+
+                                <div class="password_error"></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="forgetimg_all"><img
+                                        src="//image.qiluyidian.mobi/web/ql1d/img/loginreset.png" alt="忘记密码图片"/><a
+                                        href="#" id="forget_password"><span>忘记密码</span></a></div>
+                            </div>
+
+                            <button href="" class="expand radius" style="margin-top: 50px;" type="submit"
+                                    id="_register">登录
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+            <!-- 注册-->
+            <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <form action="" id="login_form">
+                    <div class="row">
+                        <div class="small-11 medium-11 large-11 columns large-centered small-centered">
+                            <div class="field">
+                                <input type="tel" class="radius" id="login_tel" pattern="tel_only" required
+                                       placeholder="手机号" name="tel"/>
+
+                                <div class="tel_error"></div>
+                            </div>
+
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <div class="field">
+                                <input type="text" placeholder="右侧验证码" class="radius" pattern="" id="login_verification"
+                                       name="code"/>
+
+                                <div class="code_error"></div>
+                            </div>
+                        </div>
+                        <div class="small-4 columns captcha-container" style="padding: 0px;"><img src="/user/verify_c.html" alt="图片"/></div>
+                        <div class="small-4  columns" style="    padding: 0px;">
+                            <a class="sendBtn expand botton secondary" id="reg" onclick='sendMsg(1)'>获取手机验证码</a>
+                        </div>
+
+                            <div class="field">
+                                <input type="text" class="radius" placeholder="请输入短信验证码" pattern="" id="login_note"
+                                       required
+                                       name="tel_code"/>
+
+                                <div class="telcode_error"></div>
+                            </div>
+                            <div class="field">
+                                <input type="password" class="radius" placeholder="请输入密码" id="login_password"
+                                       name="password"/>
+
+                                <div class="loginpassword_error"></div>
+                            </div>
+
+
+                            <button type="submit" href="" class="expand button radius" id="_login">注册</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+//刷新验证码
+var captcha_img = $('.captcha-container').find('img');
+var verifyimg = captcha_img.attr("src");
+
+captcha_img.attr('title', '点击刷新');
+
+captcha_img.click(function(){
+		//	alert(100);
+    if( verifyimg.indexOf('?')>0){
+        $(this).attr("src", verifyimg+'&random='+Math.random());
+    }else{
+        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+    }
+
+});
+</script>
+<!-- 顶部信息 -->
+<link rel="stylesheet" type="text/css" href="/Public/yidian/css/newsdetail.css?t=1">
+<script type="text/javascript">
+var news_id="9662118";
+var news_type = 1;
+</script>
+<div class="row new" style="padding: 20px 0;min-width: 1200px;" >
+    <!-- 右侧信息 -->
+    <div id="right_side" style="float: right" class="columns small-12 medium-3 large-3">
+        <!-- <aside style="margin-bottom: 8px;">
+    <script type="text/javascript">
+        /*246*73 创建于 2017/9/26*/
+        var cpro_id = "u3104461";
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js "></script>
+</aside> -->
+
+<aside class="aside-ad"><a href="/download/index.html" target="_blank">&nbsp;</a></aside>
+
+<!-- 360guanggao -->
+<!-- <aside>
+    <script>
+        var mediav_ad_pub = 'ZFfbQ5_2116901';
+        var mediav_ad_width = '246';
+        var mediav_ad_height = '137';
+    </script>
+    <script type="text/javascript" language="javascript" charset="utf-8"  src="//static.mediav.com/js/mvf_g2.js"></script>    
+</aside>-->
+
+<aside style="padding:10px;margin-bottom:28px;margin-top: 28px;">
+    <iframe width="245" scrolling="auto" height="72" frameborder="0" marginheight="0" marginwidth="0" src="http://news.chinaso.com/chinasosearch/link3.html"></iframe>	
+</aside>
+
+
+
+<div style="border:solid 0px red;display:none">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自定右侧 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:245px;height:600px"
+     data-ad-client="ca-pub-3045357630138630"
+     data-ad-slot="9065523705"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<!-- 淘宝 guanggao  下面的类名有误-->
+<!---->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--/*250*250 创建于 2017/9/25*/-->
+            <!--var cpro_id = "u3103490";-->
+        <!--</script>-->
+        <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</aside>-->
+    <!--<aside>-->
+        <!--<script type="text/javascript">-->
+            <!--var  jd_union_unid="1000393308",jd_ad_ids="520:6",jd_union_pid="CIqBgO2ELBDclIPdAxoAIJyhi5IEKgA=";-->
+            <!--var jd_width=250;-->
+            <!--var jd_height=250;-->
+            <!--var jd_union_euid="";-->
+            <!--var p="AhIHVRxdEQMQA2VEH0hfIlgRRgYlXVZaCCsfSlpMWGVEH0hfIgNVYyVNRFBhNkwfF0pvQzBJOm12dHdZF2sVAhMOURl YFgcQN1UaWhQAGgVXGlIlMk1DCEZrXmwTNwpfBkgyEgNVGVsXAxsHXR1ZFDITN2Ur";-->
+        <!--</script>-->
+        <!--<script  type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>-->
+    <!--</aside>-->
+<!---->
+
+<aside>
+
+</aside>
+    </div>
+    <!-- 百度广告 -->
+     <!--<div class="top-banner-show columns small-12 medium-9 large-9">-->
+         <!--<script type="text/javascript">-->
+             <!--/*壹点网PC端最上方创建于 2017/12/13*/-->
+             <!--var cpro_id = "u3158997";-->
+         <!--</script>-->
+         <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <!--</div>-->
+
+    <!-- 内容信息 -->
+    <div class="columns small-12 medium-9 large-9 newcenter" style="float: left">
+        <!-- -->
+        <!--新闻详情-->
+        <div class="yddetail_box">
+            <!--分页-->
+            <div class="normal-a">
+                <a href="http://www.ql1d.com">首页</a>
+
+                                    <a href="/index/index/channel_id/90.html">&gt;&nbsp;财经</a>                <!--                 	<a href="http://caijing.ql1d.com">&gt;&nbsp;财经</a>
+                 -->
+                
+                
+            </div>
+            <!--新闻标题-->
+            <h3 class="yddetail_title">刚刚，中央公布了一份很不寻常的文件，对民企有何影响？</h3>
+
+            <!-- 拼凑分享内容 -->
+            <div style='display:none'><a href='/news/show/id/9662118.html' class='sh_9662118'>刚刚，中央公布了一份很不寻常的文件，对民企有何影响？</a></div>
+
+            <!--分享到-->
+            <div class="share row-share">
+                <span style=" float: left; padding-top: 15px;">13:12</span>
+                <span style=" float: left; padding-top: 15px;padding-left: 10px;color: #999;">
+                        来源：<em style="color: #555;font-style: normal;">正和岛</em>
+                    </span>                <!-- 分享功能 -->
+                <div class="bdsharebuttonbox" data-tag="share_1"><span>分享到</span>
+                    <a class="bg_tsina sina" data-cmd="tsina" data-id='sh_9662118' onmouseover='mOver(this)'></a>
+                    <a class="bg_weixin" data-cmd="weixin" data-id='sh_9662118' onmouseover='mOver(this)'></a>
+                    <a class="bg_qzone" data-cmd="qzone" href="#" data-id='sh_9662118'
+                       onmouseover='mOver(this)'></a>
+                    <!-- a class="bg_qzone" data-cmd="sqq" data-id='sh_'></a -->
+                </div>
+            </div>
+
+
+            <!--<div class="detail-top-baidu-show" style="margin: 20px 0 0;">-->
+                <!--<script type="text/javascript">-->
+                    <!--/*658*60 创建于 2017/9/26*/-->
+                    <!--var cpro_id = "u3104472";-->
+                <!--</script>-->
+                <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+            <!--</div>-->
+
+            <!--轮播图-->
+            <div style="position:relative; overflow:hidden;">
+                <!--轮播内容盒子-->
+                <!--循环开始-->
+                <div>
+                    <!--作者名称-->
+                    <div class="yddetail_zzbox">
+
+                    </div>
+                    <!--新闻图片-->
+                    
+                                        
+                    <!--新闻描述-->
+                    <div class="yddetail_ms">
+                        
+  <div class="rich_media_content " id="js_content">
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <a>
+     <span class="js_jump_icon h5_image_link" data-positionback="static" style="max-width: 100%;line-height: 0;top: auto;left: auto;right: auto;bottom: auto;box-sizing: border-box !important;word-wrap: break-word !important;">
+     </span>
+    </a>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      前几天，马化腾和董明珠走上中央党校讲坛，成为热门话题。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      昨天，另一学院因为中央专门发文一跃成为网红院校，它就是八个民主党派和无党派人士的“中央党校”——中央社会主义学院。它也与民企密切相关。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      12月25日，中共中央正式颁布了《社会主义学院工作条例》。这是第一部中共中央印发的关于社会主义学院工作的党内法规。其中对“社院”的定位、作用、课程方向、工作方法等都做了具体详细的规定，并明确了社院的学员主要来自以下几类：八个民主党派和无党派的代表人士，港、澳、台、侨青年，非公经济领域的代表人士，新的社会阶层人士，五大宗教的代表人士，少数民族代表人士。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      “
+     </span>
+    </em>
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      希望广大民营经济人士加强自我学习、自我教育、自我提升”，前不久的民营经济座谈会上，习近平总书记对企业家的学习与成长，再次提出殷切期望。事实上，近年已有不少企业家来社院培训学习，在企业家学习成长、教育提升方面，“社院”未来有望成为最重要的官方平台。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      而中央社院还有一块招牌：中华文化学院。两者属“一个实体、两块牌子”。据介绍，学院拥有一套名为“十个讲清楚”的中华文化金牌课程，致力于向企业家、新阶层人士等十大群体讲清楚中华文化的精髓。这也意味着，在高层的顶层设计中，中央社院也将成为企业家等阶层学习“中华文化”的主要阵地。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      事实上，作为非公领域极具影响力的学习社交平台之一，正和岛与中央社院也颇有渊源。2018年，正和岛创始人刘东华曾先后两次拜访中央社会主义学院党组书记、第一副院长潘岳，商谈民营企业家教育成长议题与“中华商道”研究课题。
+     </span>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+    </em>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <em>
+     <span style="font-size: 15px;color: rgb(165, 165, 165);">
+      11月，由中央社会主义学院主办、正和岛等机构联合承办的“张謇精神的时代意义 ”2018年度论坛上，双方也一起约定，让凝聚企业家精神与中华文化精髓的“张謇精神”发扬光大，指引商界，光耀华夏。
+     </span>
+    </em>
+   </p>
+   <section style="padding-right: 16px;padding-left: 16px;white-space: normal;max-width: 100%;box-sizing: border-box;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);word-wrap: break-word !important;">
+    <section>
+     <section>
+     </section>
+    </section>
+   </section>
+   <p style="margin-right: 16px;margin-left: 16px;white-space: normal;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;color: rgb(165, 165, 165);font-size: 15px;box-sizing: border-box !important;word-wrap: break-word !important;">
+     <span style='max-width: 100%;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;letter-spacing: 0.544px;text-align: center;widows: 1;'>
+      来 源：正和岛
+     </span>
+     <span style='max-width: 100%;font-family: -apple-system-font, system-ui, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;letter-spacing: 0.544px;widows: 1;'>
+      （ID：zhenghedao）
+     </span>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     12月25日，中共中央正式颁布了《社会主义学院工作条例》。这是第一部中共中央印发的关于社会主义学院工作的党内法规。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: center;margin-top: 15px;">
+    <iframe allowfullscreen="" class="video_iframe" data-cover="http%3A%2F%2Fshp.qpic.cn%2Fqqvideo_ori%2F0%2Fa08189zlsgj_496_280%2F0" data-ratio="2.170854271356784" data-src="https://v.qq.com/iframe/preview.html?width=500&amp;height=375&amp;auto=0&amp;vid=a08189zlsgj" data-vidtype="1" data-w="864" frameborder="0" height="280px" src="http://v.qq.com/iframe/player.html?auto=0&amp;vid=a08189zlsgj&amp;auto=0" width="100%">
+    </iframe>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     （25日晚，《新闻联播》对外发布《社会主义学院工作条例》）
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     年关将至，在当前国际国内各种形势下，中央发布这样一个条例，可以说，有着特殊的意义。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="font-size: 17px;color: rgb(89, 89, 89);">
+      最大的不寻常，这次是由中共中央发布，区别于2003年由中央统战部发布。显然，级别提升了！
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     中央发的这个条例意味什么？多数小伙伴好像没听说过，其实，这个学院和我们商界人士，特别是民营经济人士关系非常密切。注意，敲黑板了。
+    </span>
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230eoSsd6OrCabu5vc2tRfH.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       中央关怀的另一所“党校”
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     中央社院是普通的“大学”吗？
+    </span>
+   </p>
+   <p>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     NO!《条例》洋洋洒洒6000多字，其中有这么一句，给这所特殊的“大学”作出了明确的定位：
+    </span>
+   </p>
+   <section class="" style="margin-right: 0em;margin-left: 0em;font-size: 16px;white-space: normal;color: rgb(62, 62, 62);background-color: rgb(255, 255, 255);max-width: 100% !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+            </span>
+            <span>
+             中央社会主义学院（以下简称中央社院）“是中国共产党领导的统一战线性质的政治学院，是民主党派和无党派人士的联合党校，是统一战线人才教育培养的主阵地，是开展党的统一战线工作的重要部门，是党和国家干部教育培训体系的重要组成部分”。
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      注意，这是一所政治学院。说白了，跟中央党校、国家行政学院一样，都是一个妈的女儿。
+     </span>
+    </strong>
+   </p>
+   <p style="text-align: center;margin: 15px 16px;">
+    <img data-height="257" data-width="486" src="https://wscdn.ql1d.com/201812301RDSZMKerxfBAzqsJE0C.png"/>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     我们知道，今年合为一体的中央党校与国家行政学院，主要是负责中共党员的教育培训。但是，民主党派、工商联、非党员的经济文化界人士、各类爱国人士也需要学习提升，有没有专门机构负责呢？这就是中央社院。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     同时，《条例》还明明白白地写着，中央社院是民主党派和无党派人士的联合党校。联合党校啥意思？简单点讲，中国共产党有自己的党校，五环边上的中共中央党校。
+     <strong>
+      那西三环的这个中央社院，就是八个民主党派和无党派人士的“中央党校”。
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/201812301ktJ6XHBURDci5sxTmCw.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       政治与历史交融的重要阵地
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     中央社院归谁管？
+    </span>
+   </p>
+   <p>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     《条例》明确“中央社会主义学院是中央统战部管理的党中央直属事业单位”。注意，是
+     <strong>
+      党中央的直属事业单位！
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     同时，《条例》也明确了管理的主体：中央统战部领导中央社会主义学院党组，指导中央社会主义学院工作。中央社院院长由民主党派负责人担任，党组书记和主持工作的第一副院长由中共人士担任；地方社院领导由省级党委任命。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="font-size: 17px;color: rgb(89, 89, 89);">
+      1956年，中央社院由毛泽东主席亲自命名，成立62年来一直比较低调，很少进入公众视野。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     第一期学员共219人，个个是当时鼎鼎有名的人物，包括黄炎培、章伯钧、罗隆基、李德全、胡子昂、朱学范、吴作人、费孝通、潘光旦、陶大镛、吴文藻、王绍鏊……用当时的话来说，他们是社会贤达、知名人士，用今天的话说，就是：民主党派与无党派人士。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     今天，作为与中央党校（行政学院）并列的“两驾马车”之一，中央社会主义学院不光培养党外人士和社会贤达，还培养民族、宗教界人士，培养港澳台胞和海外华侨等统一战线代表人士，培养非公经济人士与新阶层人士。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     十八大以来，随着党和政府对新兴社会阶层、非公经济人士的日益重视，统战系统在党的组织工作中地位更加重要，中央社院在新时代统战工作的角色、凝聚社会共识的作用空前凸显。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="720" data-width="600" src="https://wscdn.ql1d.com/20181230RYDFE37NmpWsbnM5IVrz.jpeg"/>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;">
+    <img data-height="90" data-width="600" src="https://wscdn.ql1d.com/20181230u7ThkWDJAOpidM6BVoxN.jpeg"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+      <span style="font-size: 18px;">
+       权威的国家级“中华文化学院”
+      </span>
+     </strong>
+    </span>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;">
+    <span style="color: rgb(171, 25, 66);">
+     <strong>
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     中央社院是干啥的？
+    </span>
+   </p>
+   <p style="text-align: justify;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     党中央确定的社院三项基本职能，分别是：统一战线的人才培养基地、理论研究基地、方针政策宣传基地。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     但是不止于此。很多人不知道，中央社会主义学院还有一个名字：中华文化学院。
+     <strong>
+      在这个文化学院到处挂牌的时代，真正权威的国家级“中华文化学院”其实在这里。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     由于社院与中华文华学院是“一个实体、两块牌子”，也就担负着中华文化的教育、研究和对外交流的职责，以中华优秀传统文化教育、引领、团结广大非公经济人士和党外人士，以文化认同推动国家认同。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="326" data-width="493" src="https://wscdn.ql1d.com/20181230v28LRU5MWGlmJdBbQoYF.png"/>
+   </p>
+   <p style="text-align: center;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     （2017年7月，非公经济人士在中央社院参加培训）
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     5年前的11月26日，习近平总书记在山东曲阜发出“大力弘扬中华传统文化”的号召，提出“四个讲清楚”的重大课题；在纪念孔子诞辰2565周年国际学术研讨会上，更深刻阐明了推动优秀传统文化“创造性转化创新性发展”的重大文化方针。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     一句话，“没有高度的文化自信，没有文化的繁荣兴盛，就没有中华民族伟大复兴。”
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     中央社院相关负责人介绍，学院拥有一套名为“十个讲清楚”的中华文化金牌课程。就是向民主党派和无党派代表人士、港澳台侨青年代表人士、少数民族代表人士、宗教界人士、非公经济代表人士、新的社会阶层代表人士等十大群体讲清楚中华文化的精髓。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="font-size: 17px;color: rgb(89, 89, 89);">
+     “文化不只是吹拉弹唱，其精髓在于文明本质和历史精神。”这位负责人介绍，这套核心课程以历史为基础，从中西比较、古今比较、宗教比较入手，专门回答不同文化背景、思想背景的研修者们提出的各种尖锐问题，可以说是国内讨论中西文明比较的最前沿、最开放的平台之一。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     今年以来，中央统战部、全国工商联组织了好几批非公经济人士，到中央社院学习中华文化和统一战线方针政策。正和岛多次拜会中央社院的潘岳书记，详细了解了社院研发的课程体系，感觉非常切合企业家的实际需求。
+    </span>
+   </p>
+   <p style="text-align: center;margin-left: 16px;margin-right: 16px;margin-top: 15px;">
+    <img data-height="327" data-width="490" src="https://wscdn.ql1d.com/20181230BhmljIqS3ZdFR5bgUNXp.png"/>
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;line-height: 1.75em;margin-bottom: 15px;">
+    <span style="font-size: 12px;color: rgb(165, 165, 165);">
+     （2017年9月，中央社院党组书记潘岳在中华文化学院成立20周年之际“中华文化与世界文明”论坛上致辞）
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     “希望广大民营经济人士加强自我学习、自我教育、自我提升”，前不久的民营经济座谈会上，习近平总书记对企业家的学习与成长，再次提出殷切期望。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     找准新时代的历史方位，从中华文化汲取养分，与伟大祖国同频共振，是民营经济健康发展的康庄大道。小伙伴们，一起走进社会主义学院，走近中华文化，您将不虚此行。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="text-align: justify;margin-left: 16px;margin-right: 16px;">
+    <img data-height="79" data-width="600" src="https://wscdn.ql1d.com/20181230qowY73mMJPhxtgu2A051.jpeg"/>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     《社会主义学院工作条例》全文如下。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第一章　总则
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第一条：为了巩固和发展新时代爱国统一战线，加强党对社会主义学院的领导，推进社会主义学院工作科学化制度化规范化，根据《中国共产党章程》、《中国共产党统一战线工作条例（试行）》、《干部教育培训工作条例》等党内法规和《中华人民共和国公务员法》等国家法律，制定本条例。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二条：
+     <strong>
+      社会主义学院是中国共产党领导的统一战线性质的政治学院，是民主党派和无党派人士的联合党校，是统一战线人才教育培养的主阵地，是开展党的统一战线工作的重要部门，是党和国家干部教育培训体系的重要组成部分。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三条：社会主义学院工作必须高举中国特色社会主义伟大旗帜，以马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想为指导，坚持社会主义办学方向，充分发挥统一战线人才培养基地、理论研究基地、方针政策宣传基地作用，为巩固和发展新时代爱国统一战线作出贡献。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四条：社会主义学院应当坚持以下工作方针：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）坚持党的领导，全面贯彻党的基本理论、基本路线、基本方略，牢牢把握正确办学方向；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）坚持围绕中心、服务大局，突出政治培训，强化政治共识，巩固团结奋斗的共同思想政治基础；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）坚持理论联系实际，解放思想，改革创新；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）坚持联合办学、开放办学，汇聚优质资源，提高办学质量；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （五）坚持严以治院、严以治教、严以治学。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五条：社会主义学院基本任务包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      （一）培训民主党派和无党派人士、统一战线其他领域代表人士，培训统战干部，培养统一战线理论研究人才，承办党委和政府举办的有关专题研讨班；
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      （二）组织开展马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，以及党的统一战线理论和方针政策的研究和宣传，推进理论创新；
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      （三）组织开展决策咨询工作，为党委和政府决策服务；
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      （四）组织开展中华文化的教育、研究和对外交流；
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      （五）开展联谊交友。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六条：社会主义学院培训目标是：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）确保统一战线各领域代表人士深刻理解习近平新时代中国特色社会主义思想，自觉接受中国共产党的领导，牢固树立“四个意识”，坚定“四个自信”；增强爱国主义精神，自觉维护祖国统一、民族团结、社会稳定；了解和熟悉党的统一战线理论和方针政策，增强政治把握能力、参政议政能力、组织领导能力、合作共事能力和解决自身问题能力。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）确保各级统战干部深刻理解习近平新时代中国特色社会主义思想，牢固树立“四个意识”，坚定“四个自信”；熟悉党的统一战线理论和方针政策以及法律法规，掌握统战工作方式方法；继承和发扬统战工作优良传统，善于广交深交党外朋友。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第七条：社会主义学院院训是：爱国、团结、民主、求实。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二章　设置和领导体制
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第八条：
+     <strong>
+      党中央和省（自治区、直辖市）、副省级城市、新疆生产建设兵团党委设立社会主义学院
+     </strong>
+     <strong>
+      。
+     </strong>
+     市（地、州、盟）、县（市、区、旗）党委根据需要设立社会主义学院（学校）（以下简称社会主义学院）。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第九条：
+     <strong>
+      中央社会主义学院是中央统战部管理的党中央直属事业单位。中央统战部领导中央社会主义学院党组，指导中央社会主义学院工作，
+     </strong>
+     主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）指导中央社会主义学院贯彻党的理论和路线方针政策，坚持正确办学方向和教育方针；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）加强中央社会主义学院领导班子和干部队伍建设，按照干部管理权限任免中央社会主义学院干部；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）研究解决中央社会主义学院建设和发展中的重大问题；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）协调有关部门支持中央社会主义学院工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十条：地方社会主义学院是本级党委直属事业单位，由本级党委统战部门指导和管理。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     地方党委应当加强对社会主义学院的领导，主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）把社会主义学院工作纳入党委整体工作部署和统一战线工作总体安排；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）配备、考核社会主义学院领导班子；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）制定党外代表人士参加社会主义学院教育培训政策，把教育培训和安排使用结合起来；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）研究解决社会主义学院工作中的重大问题，并进行督促检查。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     地方党委统战部门应当加强对社会主义学院的指导和管理，主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）了解检查社会主义学院学习和贯彻执行党的理论和路线方针政策情况；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）协助党委做好社会主义学院领导班子建设工作，按照干部管理权限任免社会主义学院干部；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）制定和落实党外代表人士及统战干部参加社会主义学院培训的规划和计划；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）协调有关部门支持社会主义学院工作，帮助改善办学条件。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十一条：社会主义学院经批准可以设立党组，在本单位发挥领导作用。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      中央社会主义学院党组由党中央批准设立。地方社会主义学院党组由本级党委批准设立，党组书记由本级党委统战部门负责人担任。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十二条：
+     <strong>
+      社会主义学院院长一般由民主党派组织主要负责人或者无党派代表人士担任，副院长中应当配备党外人士，根据需要可以设第一副院长或者分管日常工作的副院长。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <strong>
+     <span style="color: rgb(89, 89, 89);">
+      社会主义学院的党外院长、党外副院长人选，由党委统战部门与民主党派和无党派人士协商提名，按照干部管理权限任免。
+     </span>
+    </strong>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十三条：社会主义学院可以成立由党委统战部门、各民主党派、工商联及有关部门负责人和无党派代表人士组成的院务咨询委员会，对办学中的重大问题进行咨询和协商。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十四条：上级社会主义学院对下级社会主义学院进行业务指导，主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）对学习和贯彻落实党的理论和路线方针政策情况进行调研检查，提出意见建议；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）对教学、科研、管理工作进行调研，提出意见建议；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）会同党委统战部门开展办学质量评估；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）定期召开社会主义学院院长会议和业务会议，研究交流工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三章　班次和学制
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十五条：社会主义学院的班次分为主体班次和委托班次。主体班次为纳入本级党委统一战线教育培训规划的进修班、培训班、专题研讨班和国情研修班；委托班次为党委和政府以及民主党派、工商联组织、相关单位委托举办的班次。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十六条：社会主义学院举办党外人士进修班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     中央社会主义学院进修班学员主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）全国人大代表、全国政协委员中的党外人士；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）各民主党派中央常委、委员，全国工商联常委、执委；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）地方人大常委会、政府、政协、法院、检察院以及事业单位、人民团体等中担任厅局级以上职务的党外领导干部；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （四）各民主党派中央机关中的党外局级干部、省市两级组织负责人。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     省（自治区、直辖市）、新疆生产建设兵团社会主义学院进修班学员主要包括：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）省级人大代表、政协委员中的党外人士；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）各民主党派省级组织常委、委员，工商联省级组织常委、执委；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）市地级人大常委会、政府、政协、法院、检察院以及事业单位、人民团体等中担任县处级以上职务的党外领导干部。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     副省级城市和市（地、州、盟）、县（市、区、旗）社会主义学院，可以根据本地区实际情况确定进修班学员。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十七条：社会主义学院举办党外人士培训班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     中央社会主义学院主要培训民主党派中央及省级组织机关，各级人大常委会、政府、政协、法院、检察院以及事业单位、人民团体等中担任县处级以上职务或者具有副高级以上职称的中青年党外代表人士。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     省（自治区、直辖市）、新疆生产建设兵团社会主义学院主要培训本地区有发展潜力的担任县处级职务或者具有副高级以上职称的中青年党外代表人士。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     副省级城市和市（地、州、盟）、县（市、区、旗）社会主义学院，可以根据本地区实际情况确定培训对象。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十八条：社会主义学院可以根据工作需要，举办基层宗教界人士培训班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十九条：社会主义学院可以面向民主党派代表人士、无党派代表人士、党外知识分子代表人士、少数民族人士、宗教界代表人士、非公有制经济代表人士、新的社会阶层代表人士，举办专题研讨班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     中央社会主义学院根据中央统战部安排举办专题研讨班，主要培训各民主党派中央、全国工商联负责人和无党派代表人士，以及担任省部级领导职务的党外干部。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十条：社会主义学院可以面向港澳台海外代表人士和归国留学人员，举办国情研修班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十一条：社会主义学院可以根据工作需要举办统战干部培训班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十二条：中央社会主义学院和省（自治区、直辖市）社会主义学院可以根据工作需要，举办社会主义学院师资培训班。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十三条：社会主义学院可以根据新时代统一战线形势任务发展需要，开设新的班次。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十四条：社会主义学院可以根据实际需要，确定各类班次的学制。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四章　教学工作
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十五条：社会主义学院应当把教学工作作为中心工作，其他各项工作应当围绕教学工作进行，为完成教学任务、提高教学质量服务。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十六条：社会主义学院教学的主要内容是马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想，党的路线方针政策，统一战线理论与实践等。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十七条：社会主义学院应当根据形势和任务发展要求，不断充实和更新教学内容，优化以政治共识教育为核心、以文化认同教育为基础、以能力素质培养为重点的教学布局。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十八条：社会主义学院应当加强培训需求调研，针对不同培训对象制定分类教学大纲，开发体现统一战线理论与实践发展新成果的课程和教材。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第二十九条：社会主义学院应当加强教学方式方法研究，综合运用讲授式、研讨式、案例式、模拟式、体验式等方法，积极开展实践教学和网络培训。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十条：社会主义学院应当充分利用党委统战部门、统一战线各领域以及社会资源开展教学。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十一条：社会主义学院应当加强教学管理，建立健全规章制度，完善教学评估体系，形成职责明确、分工协作、程序规范的教学运行机制。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十二条：社会主义学院应当加强学科建设，打造统一战线、多党合作、中华文化等特色学科。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十三条：中央社会主义学院可以依法申请取得相关学科的硕士、博士学位授予权，纳入国家学位管理体系。具备条件的地方社会主义学院，可以与国内有关高校联合开展研究生培养工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五章　科研工作
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十四条：社会主义学院应当发挥科研工作的基础性作用，加强对习近平新时代中国特色社会主义思想的研究，深化对统一战线新情况新问题的研究，不断推进理论创新，为提高教学质量服务，为党委和政府决策服务。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十五条：社会主义学院科研工作应当坚持马克思主义立场观点方法，贯彻百花齐放、百家争鸣方针，坚持实事求是的科学精神和严谨的学术规范。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十六条：社会主义学院应当加强科研管理，建立科研课题全过程管理制度，加强同相关部门、各民主党派和工商联组织、高等学校、科研院所以及国内外学术机构的合作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十七条：中央社会主义学院和具备条件的地方社会主义学院可以建立统一战线智库，开展统一战线重大理论和实践问题研究。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十八条：中央社会主义学院和具备条件的地方社会主义学院应当办好学报等理论刊物，宣传马克思主义中国化最新成果、党的统一战线理论和方针政策、中华文化，展示交流理论研究成果，为教学科研服务。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第三十九条：社会主义学院应当建立能够满足教学科研需要的图书馆（室），建设具有统一战线特色的文献资料信息中心。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六章　中华文化教育、研究和对外交流工作
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十条：
+     <strong>
+      中央社会主义学院和地方社会主义学院，经批准可以加挂中华文化学院和地方中华文化学院牌子，开展以爱国主义为宗旨，以中华文化为主要内容的教育、研究和对外交流活动。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十一条：
+     <strong>
+      社会主义学院应当面向港澳台同胞和海外侨胞开展国情教育和中华文化研修，增强港澳同胞的国家意识和爱国精神，争取台湾民心认同，促进海外侨心凝聚；面向民族、宗教界等人士开展中华文化教育培训，进行文化引领，以文化认同增进国家认同、民族认同。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十二条：社会主义学院应当深入研究中华文化的历史渊源、发展脉络、基本走向，深刻阐释中华文化的独特创造、价值理念、鲜明特色，为增强中华优秀传统文化的凝聚力、影响力、创造力，铸牢中华民族共同体意识提供支持。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十三条：社会主义学院应当打造海内外学术交流平台，开展对外文化交流合作，讲好中国故事，传播好中国声音，阐释好中国特色，展示好中国形象，助推中华文化的国际传播，在凝聚全人类共同价值、构建人类命运共同体中发挥应有作用。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第七章　学员管理
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十四条：社会主义学院应当加强组织领导，完善规章制度，改进方式方法，提高学员管理水平。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十五条：社会主义学院应当建立思想政治教育、学习管理、组织管理、生活管理等学员管理制度。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十六条：社会主义学院各班次应当设班主任，负责学员的思想政治教育和管理工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十七条：社会主义学院各班次应当成立班委会，协助班主任做好学员思想政治教育和管理工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十八条：社会主义学院应当开展学员调研工作，了解学员思想动态，开展政策宣传，征求意见建议，做好联谊交友。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第四十九条：社会主义学院应当加强与本级党委统战部门、学员派出单位的沟通联系，及时反馈学员学习情况，共同做好学员教育管理工作。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第八章　机关党建工作和队伍建设
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十条：社会主义学院应当按照规定建立机关党的组织，在上级党组织和学院党组的领导下，贯彻落实党的理论和路线方针政策，充分发挥基层党组织战斗堡垒作用和党员先锋模范作用，保障教学、科研、管理等各项工作任务的完成。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     社会主义学院机关党的组织应当按照有关规定设立纪律检查委员会或者纪律检查委员。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十一条：社会主义学院应当按照专兼结合的原则，加强教师队伍建设，建设一支政治坚定、师德高尚、业务精湛、作风过硬、充满活力的专职教师队伍，选聘领导干部、专家学者、先进模范人物和优秀党外代表人士等担任兼职教师。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     社会主义学院专职教师一般不少于工作人员总数的三分之一。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十二条：社会主义学院教师必须符合下列要求：
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （一）具有中国特色社会主义坚定信念，热爱社会主义学院工作，在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （二）马克思主义理论基础扎实，熟练掌握党的统一战线理论和方针政策，专业知识丰富，能够胜任社会主义学院教学科研工作；
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     （三）严守纪律，严谨治学，品德高尚，为人师表。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十三条：社会主义学院应当按照政治素质高、业务能力强、工作作风好的要求，建设一支精干高效、结构合理的行政、后勤管理队伍。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十四条：各级社会主义学院中，列入参照《中华人民共和国公务员法》管理范围的部门，其工作人员的人事和工资等按照公务员的相关法律法规和政策执行；未列入《中华人民共和国公务员法》管理范围的部门，其工作人员按照事业单位的人事管理制度执行。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     社会主义学院教师按照国家规定，享受有关待遇。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十五条：社会主义学院应当建立工作人员考试录（聘）用、学习进修、实践锻炼、职级晋升、绩效评估、考核评价等制度。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第九章　办学保障
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十六条：
+     <strong>
+      各级党委和政府应当重视本地区社会主义学院建设，保证必要的机构和人员编制，将学院所需经费列入年度财政预算。
+     </strong>
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十七条：社会主义学院应当建立健全行政和后勤工作规章制度，不断提高管理水平、服务质量和后勤保障能力。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十八条　社会主义学院应当加强智慧校园建设，建立统一战线网络教育培训平台，提高办学信息化水平。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第五十九条：与其他干部教育培训机构合办的社会主义学院，应当设立专门机构，保证人员和经费，确保社会主义学院职能发挥。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十章　执行与监督
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六十条：各级党委和政府及其有关部门、社会主义学院、学员及其所在单位，必须严格执行本条例，自觉接受监督。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六十一条：各级党委及其有关部门应当依据职责对本条例的执行情况进行监督检查。违反本条例的，根据情节轻重，给予批评教育、责令作出检查、诫勉谈话、通报批评或者调离岗位、责令辞职、免职、降职等处理，或者依纪依法给予党纪政务处分。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第十一章　附则
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六十二条：本条例由中央统战部负责解释。
+    </span>
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+   </p>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+     第六十三条：本条例自2018年12月22日起施行。2003年11月27日中央统战部印发的《社会主义学院工作暂行条例》同时废止。
+    </span>
+   </p>
+   <section class="" style="margin-right: 0em;margin-left: 0em;font-size: 16px;white-space: normal;color: rgb(62, 62, 62);background-color: rgb(255, 255, 255);max-width: 100% !important;box-sizing: border-box !important;overflow-wrap: break-word !important;">
+    <section>
+     <section>
+      <section>
+       <section>
+        <section>
+         <section>
+          <section>
+           <p>
+            <span>
+            </span>
+            <span>
+             本文内容整理自大小新闻、澎湃新闻、新京报等
+            </span>
+           </p>
+          </section>
+         </section>
+        </section>
+       </section>
+      </section>
+     </section>
+    </section>
+   </section>
+   <p style="margin-left: 16px;margin-right: 16px;text-align: justify;line-height: 1.75em;">
+    <span style="color: rgb(89, 89, 89);">
+    </span>
+   </p>
+   <p style="margin-right: 16px;margin-left: 16px;white-space: normal;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;color: rgb(89, 89, 89);box-sizing: border-box !important;word-wrap: break-word !important;">
+     <img data-height="10" data-width="22" src="https://wscdn.ql1d.com/20181230hdiyWJMq4QNIxS1KgeEn.jpeg"/>
+    </span>
+   </p>
+   <p style="margin-right: 16px;margin-left: 16px;white-space: normal;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;widows: 1;background-color: rgb(255, 255, 255);text-align: center;line-height: 1.75em;box-sizing: border-box !important;word-wrap: break-word !important;">
+    <span style="max-width: 100%;font-size: 13px;color: rgb(165, 165, 165);box-sizing: border-box !important;word-wrap: break-word !important;">
+     编辑：姍
+     <span style="color: rgb(165, 165, 165);font-size: 13px;letter-spacing: 0.544px;text-align: center;widows: 1;background-color: rgb(255, 255, 255);">
+      姍
+     </span>
+     编审：夏昆
+    </span>
+   </p>
+   <p style="white-space: normal;max-width: 100%;min-height: 1em;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;">
+    <img data-height="245" data-width="600" src="https://wscdn.ql1d.com/201812308ABKScml0Mpia5usv7CL.jpeg"/>
+   </p>
+  </div>
+                     </div>
+                    <!-- 原创增加 -->
+                    <!--//2018-11-21不再进行版权合作
+                                        -->
+                    <!--<div class="bottom-click-show clearfix">-->
+                        <!--<div class="bottom-show-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点PC端正文底部200*250 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104494";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104497";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-left">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*壹点网PC端正文底部220*185 于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104507";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                        <!--<div class="bottom-show-top-right">-->
+                            <!--<script type="text/javascript">-->
+                                <!--/*225*185 创建于 2017/9/26*/-->
+                                <!--var cpro_id = "u3104537";-->
+                            <!--</script>-->
+                            <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- 百度广告 -->
+                    <!-- <div>
+                    	<script type="text/javascript">
+						    /*壹点网PC端 656*250 创建于 2016-03-10*/
+						    var cpro_id = "u2551231";
+						</script>
+						<script src="//cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                    </div> -->
+
+                    
+                    <!--赞 收藏-->
+                    <div class="yddetail_zanbox">
+                        <div class="yddetail_zanb">
+
+                                <span class="yddetail_zand praise_li" onclick="do_praise();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_yjzan.png">
+                                    <span id="praise_id">0</span>
+                                </span>
+
+                                <span class="yddetail_zand save_news collect_li" onclick="do_save_news();" style="cursor:pointer">
+                                    <img src="//image.qiluyidian.mobi/web/ql1d/img/yidian_tjsc.png">&nbsp;<span class='collectdes'>收藏</span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <!--轮播结束-->
+            </div>
+            <!--继续阅读-->
+            <div class="yddetail_jxyd">继续阅读</div>
+            <!--继续阅读内容-->
+            <div class="yddetaile_jxydbox">
+
+                <div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9648979.html">
+                            <div data-background="https://wscdn.ql1d.com/c6c121f20607aac6605521c0adc160fa.png?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/c6c121f20607aac6605521c0adc160fa.png?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>福建扩开放：七大工程推进“海丝”核心区建设</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9648998.html">
+                            <div data-background="https://wscdn.ql1d.com/3fbe0587834bafc3dc8eb50eb5ae34d7.jpg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/3fbe0587834bafc3dc8eb50eb5ae34d7.jpg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>忧患意识不丢 改革锐气不减</div>
+                        </a>
+                    </div><div class="small-4 medium-4 large-4 columns">
+                        <div style="display: none">
+                            show                                                    </div>
+                                                <a href="/news/show/id/9649486.html">
+                            <div data-background="https://wscdn.ql1d.com/20181228pSR3I0urzKXnsQHV4wcY.jpeg?imageView2/1/w/202/h/150" class="readmoreimg lazy_load_background "></div>
+                            <!--  <img src="https://wscdn.ql1d.com/20181228pSR3I0urzKXnsQHV4wcY.jpeg?imageView2/1/w/202/h/150" onerror="javascript:this.src='/Public/yidian/img/newsdetail/yidian_tjimg2.png'">-->
+                            <div>2018我最爱的十本书 by 兰台万卷</div>
+                        </a>
+                    </div>
+            </div>
+            <!--评论-->
+            <div class="yddetaile_pl">
+                <span>评论（<span class="commitCount">0</span>）</span>
+            </div>
+            <div class="yddetail_plbox">
+                    <a onclick="do_login();">登录</a>
+                    <span>后参与评论</span>
+                </div>
+                            <!--循环展示-->
+            <div id="comments">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script>
+
+
+
+
+    //拼凑分享地址
+    $('.sh_').attr('href', location.href);
+    var news_id = "9662118";
+    var all_page_comment = "0";
+    var page = 1;
+    var is_praise = 0;
+    var is_save = "2";
+    var is_finish=true;
+    $().ready(function () {
+    	//判断刚进来是否收藏了
+    	if(is_save==1){
+    	   	  $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+    	   	  $('.collectdes').html('已收藏');
+    	}
+    	get_comment();
+    });
+	
+    //获取评论
+    $("#do_send").click(function () {
+        var comment = $.trim($("#send_comment").val());
+        if(comment.length != 0){
+        	 $.ajax({
+                 url: "/comment/news.html",
+                 data: {news_id: news_id, content: comment},
+                 dataType: "text",
+                 type: 'post',
+                 success: function (data) {
+                	 $("#send_comment").val('');
+                	 $("#comments").html("");
+                     page=1;
+                     get_comment();
+                     
+                     $('.commitCount').html(parseInt($('.commitCount').html())+1);
+                     
+                 }
+             });
+        }else{
+        	alert('评论内容不能为空哦，亲！');
+        }
+    });
+
+    function do_login() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }
+    }
+
+    /*
+     *
+     if(!is_login){
+     $("#entrance").click();
+     return false;
+     }
+     */
+
+    // 点赞
+    function do_praise() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+
+            $(".praise_li").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");
+
+        }
+
+        if (is_praise == 1) {
+        //    alert("已经点赞过啦");
+            return false;
+        }
+        var praise_count = parseInt($(".yddetail_zand span").html());
+        $.ajax({
+            url: "/news/praise.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+            	 is_praise=1;
+            	 page=1;
+            	 $("#comments").html("");
+                 get_comment();
+                if (data.rc == 0) {
+                	$('#praise_id').html(parseInt($('#praise_id').html())+1);
+                }
+            }
+        });
+    }
+
+    //收藏新闻
+
+    function do_save_news() {
+        var is_login = user_is_login();
+
+        if (!is_login) {
+            $("#entrance").click();
+            return false;
+        }else{
+           /* alert(i);
+            var collectimg=["http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png",""];
+            $(".save_news").find('img').arrt("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+            i=++i%collectimg.length;*/
+        }
+
+        $.ajax({
+            url: "/news/save_news.html",
+            data: {news_id: news_id, operateid: is_save},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+
+                if (data.rc == 0) {
+                    if (is_save == 2) {
+                        is_save = 1;
+                        $('.collectdes').html('已收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectopen.png");
+                    } else {
+                        is_save = 2;
+			
+                        $('.collectdes').html('收藏');
+                        $(".save_news").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/collectclose.png");
+                    }
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+
+    //给评论点赞
+
+    function do_comment_praise(obj,comment_id) {
+    	if($(obj).attr('data-praise')==2){
+    		return false;
+    	}
+        $(obj).attr('src','http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png');
+        $.ajax({
+            url: "/news/comment_praise.html",
+            data: {comment_id: comment_id},
+            dataType: "json",
+            type: 'post',
+            success: function (data) {
+                if (data.rc == 0) {
+                	$(obj).attr('data-praise',2);
+                 /*   $(".yddetail_plzan").find('img').attr("src","http://7xo5s3.com1.z0.glb.clouddn.com/praiseopen.png");*/
+                	 var comment= parseInt($(obj).next().html());
+                    $(obj).next().html(comment+1);
+                } else {
+                    alert("请稍后再试");
+                }
+
+            }
+        });
+    }
+    
+   
+    
+    //加载更多
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();           //当前页面的总高度
+        var windowHeight = $(this).height();               //当前可视的页面高度
+        if (!is_finish) {
+            return false;
+        }
+        if ((scrollHeight - scrollTop - windowHeight) < (windowHeight)) {
+        	$('.ad3,.ad4').show();
+        	get_comment();
+        }
+    });
+    
+    //获取评论
+	function get_comment(){
+		is_finish = false;
+		$.ajax({
+			url:"/news/comments.html",
+			data:{news_id:news_id,page:page},
+			dataType:"text",
+			type:'post',
+			success:function (data){
+				is_finish=true;
+				$("#comments").append(data);
+				page++;
+			}
+		});
+		
+	}
+
+</script>
+<script>
+    (function () {
+        var paragraphs = $("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs.get(i).childNodes.length === 1 && paragraphs.eq(i).children().eq(0).is("img")) {
+                paragraphs.eq(i).css({"text-indent": "0", "text-align": "center"})
+            }
+        }
+    })();
+</script>
+<!--<script type="text/javascript" color="230,0,18" opacity='0.7' zIndex="-2"  src="/Public/yidian/js/canvas-nest.js"></script>-->
+<script>
+	/*
+		分享功能
+
+	*/
+
+	//全局变量，动态的文章ID
+	var ShareId = "";
+	var ShareUrl = "";
+	var ShareTitle = "";
+
+	//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+	function mOver(obj){
+		ShareId = $(obj).attr("data-id");
+       	ShareUrl = 'http://www.ql1d.com'+$("."+ShareId+"").attr('href');
+
+       	var clas = $(obj).attr('class');
+		if(clas.indexOf('sina') != -1){
+			ShareTitle = '#齐鲁壹点#'+$("."+ShareId+"").html();
+		}else{
+			ShareTitle = $("."+ShareId+"").html();
+		}
+	}
+
+	function SetShareUrl(cmd,config) {
+		var sh_url = '';
+		var sh_title = '';
+
+		if (ShareId) {
+		  	config.bdText = ShareTitle;
+	    	config.bdPic='https://image.qiluyidian.mobi/web/ql1d/img/yidian_logo.png';
+	        config.bdUrl = ShareUrl;
+
+	    }
+	    return config;
+	 }
+
+	window._bd_share_config = {
+		common : {
+			//此处放置通用设置
+			onBeforeClick:SetShareUrl,
+		},
+		share : [
+			//此处放置分享按钮设置
+		],
+
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	function user_is_login(){
+		var is_login=false;
+		
+		return is_login;
+	}
+</script>
+
+<footer class="footer" >
+<div class="row" style="padding-top: 32px;">
+
+    <div class="small-8 medium-8 large-8 columns">
+
+            <ul class="no-bullet small-4 medium-4 large-4 columns" style="    margin-top: 14px;    padding-left: 0;">
+                <li><span class="span1">齐鲁壹点&nbsp;&nbsp;&nbsp;&nbsp;最懂山东</span></li>
+			</ul>
+				<ul class="no-bullet small-8 medium-8 large-8 columns">
+                <!-- li><span class="span2">关于壹点&nbsp;&nbsp;&nbsp;&nbsp;在壹点工作&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;壹点广告</span></li -->
+                <li><span class="span3">客服电话：&nbsp;&nbsp;0531-82625474</span></li>
+
+                <li> <span class="span4">反馈建议：&nbsp;&nbsp;<a href="mailto://qlwbjsb@163.com" style="color:#b9b9b9">qlwbjsb@163.com</a></span></li>
+
+            </ul>
+    </div>
+    <div class="small-4 medium-4 large-4 columns" style="text-align: center;">
+        <p>
+
+            <a href="javascript:void(0);">
+            <img src="//image.qiluyidian.mobi/web/ql1d/img/logo_rxcm.png" alt="齐鲁壹点图片"/></a>
+        </p>
+    </div>
+
+</div>
+
+    <div style="background-color: #2c2c2c">
+    <div class="row friend-link" style="height:100px;font-size:13px;background-color:#2c2c2c;">
+        <div class="small-3 medium-2 large-1 columns"><span style="color:#b1b1b1;">友情链接：</span></div>
+        <div class="small-3 medium-2 large-1 columns"> <a href="http://www.qlwb.com.cn/" target="_blank" rel="nofollow">齐鲁晚报</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://sd.chinaso.com/"  target="_blank" rel="nofollow">中国搜索</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.chuangtoo.com/"  target="_blank" rel="nofollow">创图网</a></div>
+        <div class="small-3 medium-2 large-1 columns"><a href="http://www.ifeng.com/"  target="_blank" rel="nofollow">凤凰网</a></div>
+    </div>
+    </div>
+    <div style="background-color: #262626">
+        <div class="row" >
+            <div class="small-12 medium-12 large-12 columns" style="text-align: center">
+                <p style="font-size: 12px;color:#B9B9B9; ">&nbsp;&copy;&nbsp;2011-2018&nbsp;&nbsp;齐鲁晚报版权所有&nbsp;&nbsp;|&nbsp;&nbsp;鲁ICP备15022957号-2&nbsp;&nbsp;|&nbsp;&nbsp;鲁新网备案号201000101</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+	<!-- 51统计 -->
+	<script language="javascript" type="text/javascript" src="//js.users.51.la/18804418.js"></script>
+	<noscript><a href="http://www.51.la/?18804418" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18804418.asp" style="border:none;display:none;" /></a></noscript>
+	<script>
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a2ec6c86ae0dae7137c8c45d7e5dd516";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</body>
+</html>

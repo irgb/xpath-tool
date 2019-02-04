@@ -1,0 +1,419 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> LOGEV-ASIA 2019 亚洲新能源物流车及卫星导航系统服务展览会 第一商用车网 cvworld.cn</title>
+<meta name="Keywords" content="商用车,卡车,客车,商用车网,第一商用车网,卡车新闻,客车新闻,卡车报价,客车报价,卡车图片,客车图片,卡车经销商,客车经销商" />
+<meta name="Description" content="第一商用车网为您提供卡车新闻、客车新闻、卡车报价、客车报价、卡车图片、客车图片等全面的商用车信息，新闻领导舆论，车型数据库实时更新，是面向卡车/客车终端用户、商用车整车企业、改装车企业、零部件企业、经销商及服务商的大型实用新闻资讯类专业网站。" />
+<link rel="Shortcut Icon" href="/images/favicon.ico" />
+<link href="http://www.cvworld.cn/csss/global.css" rel="stylesheet" type="text/css">
+<link href="http://www.cvworld.cn/csss/news.css" rel="stylesheet" type="text/css">
+<script src="http://www.cvworld.cn/jss/jquery-3.1.1.min.js"></script>
+<script src="http://www.cvworld.cn/jss/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="http://www.cvworld.cn/jss/public.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://www.cvworld.cn/csss/focusStyle.css">
+<script language="javascript">
+        $(document).ready(function () {
+            $(function () {
+                var id = $("#HidId").val();
+                $.ajax({
+                    url: "/Admin/ashx/NewsNavLog_Liu.ashx",
+                    data: { Nid: id },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $(".nav").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgReg_Liu.ashx",
+                    data: { t: 1 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#ysj").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgReg_Liu.ashx",
+                    data: { t: 2 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#zt").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgReg_Liu.ashx",
+                    data: { t: 3 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#cxpc").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgReg_Liu.ashx",
+                    data: { t: 4 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#gypc").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgRegYSJ_L.ashx",
+                    data: { t: 1 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#tjpp").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgRegYSJ_L.ashx",
+                    data: { t: 2 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#tjjxs").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgRegYSJ_L.ashx",
+                    data: { t: 3 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#cxph").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgRegYSJ_L.ashx",
+                    data: { t: 4 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#zxbj").html(data);
+                    }
+                });
+                $.ajax({
+                    url: "/Admin/ashx/NewsMsgRegYSJ_L.ashx",
+                    data: { t: 5 },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#newsRZY").html(data);
+                    }
+                });
+                
+               $.ajax({
+                    url: "/Admin/ashx/NewsPoint.ashx",
+                    data: { id: id },
+                    type: "post",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#scpoint").html(data);
+                    }
+                });
+            });
+            
+        });
+    </script>
+</head>
+<body>
+<div class="top">
+<div class="top-main">
+<ul class="fl top-left">
+<li><a href="http://www.cvworld.cn/Agency/Login.aspx" title="" target="_blank"><img src="http://www.cvworld.cn/imagess/jingxiaoshang.png" title="经销商入驻" alt="经销商入驻" class="top-img"> &nbsp;经销商入驻</a></li>
+<li class="spe"><a href="http://www.cvworld.cn/aboutus.html#lianxiwomen" title="" target="_blank"><img src="http://www.cvworld.cn/imagess/zhuanti.png" title="专题合作" alt="专题合作" class="top-img"> &nbsp;专题合作</a></li>
+<li><a href="http://bbs.cvworld.cn/" title="" target="_blank"><img src="http://www.cvworld.cn/imagess/luntan.png" title="进入论坛" alt="进入论坛" class="top-img"> &nbsp;进入论坛</a></li>
+</ul>
+<ul class="fr top-right">
+<li class="top-bor"><a href="http://www.cvworld.cn/Login.aspx" title="" target="_blank">登录</a></li>
+<li class="text-r"><a href="http://bbs.cvworld.cn/member.php?mod=register" title="" target="_blank">注册</a></li>
+</ul>
+</div>
+</div>
+<div class="header">
+<div class="header-left fl"><a href="http://www.cvworld.cn/"><img src="http://www.cvworld.cn/imagess/logo.png" title="logo" alt="第一商用车网" /></a></div>
+<div class="header-right fr">
+<form name="search" action="#" method="get">
+<p class="search-bor">
+<input type="text" id="str" placeholder=" &nbsp;&nbsp;&nbsp;请输入您要搜索的内容" class="search-text fl" />
+<input type="submit" id="sousuo" onclick="Sousuo()" value="" title="搜索" class="search-btn fr" />
+</p>
+</form>
+</div>
+</div>
+<div class="nav">
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+        //$(function () {
+        //    var focusBanner = function () {
+        //        var $focusBanner = $("#focus-banner"),
+		//			$bannerList = $("#focus-banner-list li"),
+		//			$focusHandle = $(".focus-handle"),
+		//			$bannerImg = $(".focus-banner-img"),
+		//			$nextBnt = $("#next-img"),
+		//			$prevBnt = $("#prev-img"),
+		//			$focusBubble = $("#focus-bubble"),
+		//			bannerLength = $bannerList.length,
+		//			_index = 0,
+		//			_timer = "";
+
+        //        var _height = $(".focus-banner-img").find("img").height();
+        //        $focusBanner.height(_height);
+        //        $bannerImg.height(_height);
+
+        //        $(window).resize(function () {
+        //            window.location.reload()
+        //        });
+
+        //        for (var i = 0; i < bannerLength; i++) {
+        //            $bannerList.eq(i).css("zIndex", bannerLength - i);
+        //            $focusBubble.append("<li></li>");
+        //        }
+        //        $focusBubble.find("li").eq(0).addClass("current");
+        //        var bubbleLength = $focusBubble.find("li").length;
+        //        $focusBubble.css({
+        //            "width": bubbleLength * 22,
+        //            "marginLeft": -bubbleLength * 11,
+        //        });//初始化
+
+        //        $focusBubble.on("click", "li", function () {
+        //            $(this).addClass("current").siblings().removeClass("current");
+        //            _index = $(this).index();
+        //            changeImg(_index);
+        //        });//点击轮换
+
+        //        $nextBnt.on("click", function () {
+        //            _index++
+        //            if (_index > bannerLength - 1) {
+        //                _index = 0;
+        //            }
+        //            changeImg(_index);
+        //        });//下一张
+
+        //        $prevBnt.on("click", function () {
+        //            _index--
+        //            if (_index < 0) {
+        //                _index = bannerLength - 1;
+        //            }
+        //            changeImg(_index);
+        //        });//上一张
+
+        //        function changeImg(_index) {
+        //            $bannerList.eq(_index).fadeIn(250);
+        //            $bannerList.eq(_index).siblings().fadeOut(200);
+        //            $focusBubble.find("li").removeClass("current");
+        //            $focusBubble.find("li").eq(_index).addClass("current");
+        //            clearInterval(_timer);
+        //            _timer = setInterval(function () { $nextBnt.click() }, 5000)
+        //        }//切换主函数
+        //        _timer = setInterval(function () { $nextBnt.click() }, 5000)
+        //    }();
+        //})
+    </script>
+<div id="main">
+<div class="ad" style="border:1px solid #eeeeee;">
+<a href="http://www.cvworld.cn/news/sycnews/etpse/170609/128498.html" target="_blank"><img src="http://www.cvworld.cn/images/ad/dayunguanggao1.gif"/></a>
+</div>
+<input type="hidden" id="HidId" value="155778" />
+<div class="zhizhen">
+<a href="/">第一商用车网</a>&gt;&gt;<a href='/news/sycnews/'>商用车</a>&gt;&gt;<a href='/news/sycnews/show/'>展会资讯</a>>> LOGEV-ASIA 2019 亚洲新能源物流车及卫星导航系统服务展览会
+</div>
+<div id="main-4">
+<div class="news-top">
+热门关键词： <a href="http://www.cvworld.cn/Search.html?c=1&amp;key=%u5546%u7528%u8F66" target="_blank">商用车</a>&nbsp;<a href="http://www.cvworld.cn/Search.html?c=1&amp;key=%u5361%u8F66" target="_blank">卡车</a>&nbsp;<a href="http://www.cvworld.cn/Search.html?c=1&amp;key=%u5BA2%u8F66" target="_blank">客车</a>&nbsp;
+</div>
+<div class="news-left">
+<div class="news-main">
+<div id="goTop" class="bdsharebuttonbox bdshare-button-style1-16" style="width:16px;position:absolute;top:70%;z-index:999999;"><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到打印" href="#" class="bds_print" data-cmd="print"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {}, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["weixin", "tsina", "tqq", "renren", "qzone", "print"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<div class="news-main-top">
+<h1 class="news-headline"> LOGEV-ASIA 2019 亚洲新能源物流车及卫星导航系统服务展览会</h1><span class="other">时间：2018/12/29 14:08:16</span><span class="other">来源：本站</span><span class="other">作者：</span><span class="other">责编：李秀芝</span><span class="other">共：2441 字</span><span id="scpoint" class="other">点击量</span></p>
+</div>
+<div class="news-main-body">
+<p><br/></p><p><strong>时间：2019年4月20日-22日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地点：天津梅江会展中心</strong></p><p><br/></p><p>伴随迈入工业4.0时代及中国制造2025，全球新一轮科技革命正在兴起。我国物流、快递、电商等行业的快速发展，势必会带动物流车的需求增加。在新能源汽车大发展的背景下，物流行业也开始将目光转向了新能源。国家方面相继出台了系列鼓励政策，较高的补贴、用电成本的下降，都将强烈刺激新能源物流车产销量。在市场的强劲需求下，新能源物流车将得到爆发式增长，吸引了众多整车企业和动力电池企业加快在该领域的市场布局。</p><p><br/></p><p>天津，环渤海地区经济中心，中国首批沿海开放城市，中国最主要的物流城市之一。这一切使得其在物流行业有着特殊的市场地位。此届盛会将由中国道路运输协会与中国土木工程学会城市公共交通分会共同主办，中国交通报社及中国汽车研究中心共同作为协办单位鼎力支持。作为引领新能源物流车和卫星导航系统行业的国际行业盛会， 2019亚洲新能源物流车及卫星导航系统服务展览会为业界人士提供最新行业资讯以及优质的贸易一体化解决方案。有力推动中国新能源物流车和卫星导航系统全面进入全球采购体系，与世界各国物流产业协调合作、互利共赢、共同发展进步。</p><p><br/></p><p><strong>◎值得您参展、参观的理由</strong></p><p><br/></p><p>规模空前人气鼎盛</p><p><br/></p><p>作为国内两大专业展之一，本届亚洲新能源物流车及卫星导航系统服务展览会展出面积30000M2，有来自全球20余个国家和地区的200余家企业参展，预计观众人数超过12，000人次。主办方将以高效务实的态度，精心耕耘，全力打造我国新能源物流车及卫星导航系统行业的专业经贸平台，为广大展商发掘无限商机。</p><p><br/></p><p>高屋建瓴把握商机</p><p><br/></p><p>亚洲新能源物流车及卫星导航系统服务展览会行业展吸引大批业界翘楚参展，他们携代表当今新能源物流车、卫星导航系统最高水平的众多主机及功能性部件，与来自世界各地的专业观众展开合作交流。世界新能源物流车、卫星导航行业发展、市场新动向，都可在“亚洲新能源物流车及卫星导航系统服务展览会”展上一览无余，是展商和观众乘兴而来、满意而归的行业盛会。</p><p><br/></p><p>商业机遇价值凸显</p><p><br/></p><p>来自行业的领导及专业采购、设计人员，携高额订单与展商展开交流洽谈。主办方全力&nbsp;</p><p><br/></p><p>打造的高效全球新能源物流车及卫星导航系统行业贸易平台，其商业价值无与伦比。</p><p><br/></p><p>强势宣传推广有力</p><p><br/></p><p>多年积累近百万之巨的专业观众数据库，与三百余家海内外媒体通力合作，通过各类报纸、杂志、广播、电视、网站、户外媒体、电子商务等全方位多渠道同步宣传，以极强的时效性和针对性、专业而广阔的覆盖面，为展商营造良好舆论氛围带来无数合作良机。</p><p><br/></p><p>专业服务提升品牌</p><p><br/></p><p>打造新能源物流车及卫星导航系统行业制造服务业专业化平台，整合产业链资源，为客户提供专业、人性化、细致周全的高品质服务。提供展品运输、展位整体规划、设计、搭建、信息收集调研、分析汇总、客户跟踪服务等全方位系列化服务，以利展商自身企业形象塑造及产品品牌的提升、推广。</p><p><br/></p><p>增值活动创新共赢</p><p><br/></p><p>展会组织者将用心组织高效快捷的现场活动，为展商和观众打造融洽和谐的商务环境：高峰论坛、研讨推广、主题酒会、商务派对等展会期间活动，为展商和观众营造高效的展示、贸易平台。</p><p><br/></p><p><strong>◎参展范围（以下企业请报名参展）</strong></p><p><br/></p><p>新能源物流车：纯电动物流运输车、混合动力车、燃料电池车、快递专用电动车、厢式运输车、邮政车、客厢运输车、卡车 牵引车 挂车、面包车、电动叉车、电动物流车融资租赁等；</p><p><br/></p><p>卫星导航与车联网：北斗终端与芯片、GPS终端与芯片、LBS位置信息服务导航设备、电子地图、汽车音响／多媒体／导航设备•汽车行驶记录仪、数据分析与管理、调度管理平台、车辆监控管理平台、交通信息发布、交通APP、交通大数据挖掘与管理、车联网智能终端、车联网通讯技术、车辆与驾驶安全节能支持系统、通信运营商等；</p><p><br/></p><p>新能源物流车零配件：汽车空调系统、远程监控系统、三元电池、动力电池与管理系统、整车总线与控制系统、电机与电控系统、冷却系统、连接系统、电线电缆、充电装置、能源管理系统、电力电容器、飞轮、逆变器、电热泵、电动助力转向、功率模块、相关材料、制造设备和工具等：</p><p><br/></p><p>充电设施：充电桩、充电站、充电机、充电柜、配电设备、变压器、变频器、换电设备、高低压保护设备、低压开关、继电器、滤波设备、变流器、整流器、逆变器、电能监控系统、有源滤波装置、配电柜、直接充电设备、管理辅助设备、充换电池及电池管理系统、停车场充电设施、智能监控、充电站供电解决方案等；</p><p><br/></p><p><strong>◎参展费用：收费标准---温馨提示：越早报名确认，便能获得相对优越的位置！</strong></p><p><br/></p><p>标准展位18m2（3m*6m)：国内企业：￥30000.00/18m2&nbsp; &nbsp;&nbsp;</p><p><br/></p><p>外资企业：40000.00/18m2&nbsp; &nbsp; &nbsp; &nbsp;境外企业：60000.00/18m2</p><p><br/></p><p>净空地（面积不低于36㎡）&nbsp; 国内企业：￥1500.00/m2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><br/></p><p>外资企业：2000.00/m2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 境外企业：3000.00/m2</p><p><br/></p><p>注：1.双开标准展位加收20%费用；</p><p><br/></p><p>2.标准展位配置包含“洽谈桌1个、折椅2把、射灯2盏、垃圾娄1个”；</p><p><br/></p><p>3.光地不包括任何设施，仅光地。</p><p><br/></p><p><strong>◎会刊广告</strong></p><p><br/></p><p>会刊—将帮助您在展会后找到客户！除在展会期间广为发送外，还通过各种有关渠道发送给未能前来参观展会的各地专业人士手中，他们可利用会刊迅速查找联络方法与服务内容。</p><p><br/></p><p style="text-align: center"><a target=_blank href='http://www.cvworld.cn/news/pre/155778_01.html'><img src="/ueditor/net/upload/image/20181229/6368168926852261055287258.jpg" title="广告费用.jpg" alt="广告费用.jpg"/></a><br/><br/></p><p><strong>◎参展程序&nbsp;</strong></p><p><br/></p><p>1：展位按“先报名、先付款，先安排”的原则，组织单位最终保留少量展位调动权。</p><p><br/></p><p>2：企业报名后5日内须交付参展费50%或全款，余款在2019年4月1日前付清，主办单位收到《参展申请表》和展台费用后，将发票寄给参展商。</p><p><br/></p><p>充分利用LOGEV-ASIA2019巩固您的市场地位！</p><p><br/></p><p>参展程序——欲报名参展的单位，请填妥《参展申请表》，加盖公章后传真或邮件至</p><p><br/></p><p>组委会：上海传益展览有限公司</p><p><br/></p><p>地址：上海市金山区万达广场3栋2201室</p><p><br/></p><p>电话：021-31570515</p><p><br/></p><p>联系人：许新东 18911263138&nbsp;</p><p><br/></p>
+</div>
+<div class=""></div>
+<div class="news-bottom">
+<div id="SOHUCS" sid="155778"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+                               
+                                window.changyan.api.config({
+                                    appid: 'cysKcsBUK',
+                                    conf: 'e17e1b59aaf8a0f7b2c8b565193bbf31'
+                                });
+                            </script>
+</div>
+</div>
+</div>
+<div class="main-4-right">
+<div class="tab-hezi-right">
+<div class="btnnav-right">
+<ul class="btn-right">
+<li class="on"><a href="http://www.cvworld.cn/news/OneDatas/" title="" target="_blank">壹数据</a></li>
+<li><a href="http://www.cvworld.cn/topics/" title="" target="_blank">专题报道</a></li>
+</ul>
+<span></span>
+</div>
+<div class="btnbox-right">
+<ul class="con-right">
+<li class="current" id="ysj">
+</li>
+<li id="zt">
+</li>
+</ul>
+</div>
+</div>
+<div class="fl" style="width:300px;height:auto;margin:auto;">
+<a href="http://www.dfcv.com.cn/Index.aspx" target="_blank"><img src="http://www.cvworld.cn/upload/2015-11-10/a869ccb8-6e74-4819-a3ec-d0c040e783ea.gif"/></a>
+</div>
+<div class="tab-hezi-right">
+<div class="btnnav-right">
+<ul class="btn-right">
+<li class="on"><a href="http://www.cvworld.cn/news/sycnews/pingce/" title="" target="_blank">车型测评</a></li>
+<li><a href="http://www.cvworld.cn/news/sycnews/guangyao/" title="" target="_blank">光耀评车</a></li>
+</ul>
+<span></span>
+</div>
+<div class="btnbox-right">
+<ul class="con-right">
+<li class="current" id="cxpc">
+</li>
+<li id="gypc">
+</li>
+</ul>
+</div>
+</div>
+<div class="fl" style="width:300px;height:auto;margin:auto;">
+<a href="http://www.jac.com.cn/jacpvhy/2017sunray/" target="_blank"><img src="http://www.cvworld.cn/images/ad/xingrui.jpg"/></a>
+</div>
+<div class="tab-hezi-right">
+<div class="btnnav-right">
+<ul class="btn-right">
+<li class="on"><a href="http://www.cvworld.cn/index_truck.html" title="" target="_blank">推荐品牌</a></li>
+<li><a href="http://www.cvworld.cn/DealerList.html?t=true" title="" target="_blank">推荐商家</a></li>
+</ul>
+<span></span>
+</div>
+<div class="btnbox-right">
+<ul class="con-right">
+<li class="current" id="tjpp">
+</li>
+<li id="tjjxs">
+</li>
+</ul>
+</div>
+</div>
+<div class="tab-hezi-right">
+<div class="btnnav-right">
+<ul class="btn-right">
+<li class="on">车型排行</li>
+<li><a href="http://www.cvworld.cn/OfferList.html?types=t" title="" target="_blank">最新报价</a></li>
+</ul>
+<span></span>
+</div>
+<div class="btnbox-right">
+<ul class="con-right">
+<li class="current" id="cxph">
+</li>
+<li id="zxbj">
+</li>
+</ul>
+</div>
+</div>
+<div class="fl" style="width:300px;height:auto;margin:auto;">
+<a href="http://mp.weixin.qq.com/s/lSvvOWVJxZ-qUCrlcTC-FA" target="_blank"><img src="http://www.cvworld.cn/images/ad/chenglongh9.gif"/></a>
+</div>
+<div class="biaoti">新闻排行</div>
+<div class="tab-hezi-right">
+<div class="btnnav-right">
+<ul class="btn-right">
+<li class="on">日</li>
+<li>周</li>
+<li>月</li>
+</ul>
+<span></span>
+</div>
+<div class="btnbox-right">
+<ul class="con-right" id="newsRZY">
+</ul>
+</div>
+</div>
+<div class="biaoti">微信扫一扫</div>
+<div class="tab-hezi-right" style="border-top:1px solid #cccccc;">
+<div style="width:137px;height:150px;float:left;text-align:center;font-size:12px;font-weight:bold;color:#777777;">
+<img src="http://www.cvworld.cn/imagess/guanwei.png" width="132px" height="132px" />
+<p>官 微</p>
+</div>
+<div style="width:137px;height:150px;float:left;text-align:center;font-size:12px;font-weight:bold;color:#777777;">
+<img src="http://www.cvworld.cn/imagess/kache.jpg" width="132px" height="132px" />
+<p>卡友会</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        $(function () {
+            zyTab(".btn-right", ".con-right", ".tab-hezi-right");
+            zyTab(".btn-left", ".con-left", ".tab-hezi-left");
+            zyTab(".btn-middle", ".con-middle", ".tab-hezi-middle");
+
+        });
+    </script>
+<script>
+        $(function () {
+            $(".btnnav-right .btn-right li").mouseover(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+            $(".btnnav-left .btn-left li").mouseover(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+            $(".btnnav-middle .btn-middle li").mouseover(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+        });
+    </script>
+</div>
+<div class="dibu">
+<div class="dibu-main">
+<div class="footer">
+<p>
+<a class="" target="_blank" href="/">首页</a>|<a target="_blank" href="aboutus.html">公司简介</a>|<a target="_blank" href="aboutus.html#lianxiwomen">联系我们</a>|<a target="_blank" href="aboutus.html#zhaopin">诚聘精英</a>|<a>新闻热线：010-68485990|</a><a>广告合作热线：010-65821873</a>
+</p>
+<p>
+<a>蓝色阳光文化传播有限公司 版权所有 转载务请注明来源《第一商用车网》</a>|备案号:<a target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action">京ICP备13007178号-1</a>公安局备案编号：<a>京公安网备11010802011581号</a>
+</p>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3de9e5c482bf13f3a42d1c63cc0cb856";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</div>
+</body>
+<script language="javascript">
+    $(document).ready(function () {
+        var menuYloc = $("#goTop").offset().top;
+        var docWidth = $(window).width();
+        var ml = (docWidth - 330) / 2 - 115;
+        $("#goTop").css({ "right": ml });
+        $(window).scroll(function () {
+            var offsetTop = menuYloc + $(window).scrollTop() + "px";
+            $("#goTop").animate({ top: offsetTop }, { duration: 100, queue: false });
+        });
+    });
+</script>
+</html>

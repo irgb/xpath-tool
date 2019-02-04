@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="" />
+<meta name="description" content="2016年9月，平安医疗健康管理股份有限公司（以下简称“平安医保科技”）宣布成立，积极应用生物识别、大数据、区块链、人工智能、云计算等现代科技技术，2017年3月，平安医保科技成功上线“城市一账通”App，为医保、商保及医疗服务供给方提供一揽子智能化解决方案及技术服务。" />
+<title>科技赋能样本：平安的医疗健康新生态_新闻金融市场_北京商报</title>
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/xinmem/base.css">
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/xinmem/article.css">
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/cmstop.dialog.css" />
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/css/cmstop.singup.css" />
+<link rel="stylesheet" href="http://img.bbtnews.com.cn/templates/bbtnews/2018/css/public.css">
+<style>
+        .singup-box {
+            background-color: #eaf2f7;
+        }
+        .singup-panel {
+            background-color: #fff;
+        }
+        .singup-panel .inner {
+            padding: 40px 80px 20px 80px;
+        }
+        .singup-form-left {
+            border-right: 1px solid #eee;
+        }
+        .singup-line {
+            border-bottom: 1px solid #ddd;
+        }
+        .hidden {
+            display: none;
+        }
+        .m-title-a {
+            border-bottom: 1px solid #eee;
+        }
+        .m-title-a .m-title-h2 {
+            color: #444;
+            border-bottom: 1px solid #0091e4;
+        }
+        .m-title-a .m-title-h2 a {
+            color: #444!important;
+        }
+        .m-title-b {
+            background-color: #f6f7f8;
+            border-bottom: 1px solid #ddd;
+        }
+        .m-title-b .name {
+            border-left: 2px solid #777;
+            color: #333;
+        }
+        .m-title-b .summary {
+            color: #444;
+        }
+        .m-title-a .m-title-h2 {
+            color: #444;
+            border-bottom: 1px solid #0091e4;
+        }
+        /*标题*/
+        .m-title-a {
+            height: 28px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+        .m-title-a .m-title-h2 {
+            font-weight: normal;
+            font-size: 18px;
+            height: 33px;
+            position: absolute;
+            left: 0px;
+        }
+        .m-title-b {
+            height: 39px;
+        }
+        .m-title-b .name {
+            font-size: 18px;
+            margin: 10px 15px auto 10px;
+            padding-left: 8px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .m-title-b .summary {
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+.hr20 {
+    height: 20px;
+}
+.hr30 {
+    height: 30px;
+}
+.hr40 {
+    height: 40px;
+}
+.ov {
+    overflow: hidden;
+    zoom:1;
+}
+.singup-box .fl-r {
+    float: right;
+}
+
+.singup-box .fl-l {
+    float: left;
+}
+.input-text {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 220px;
+}
+a{
+    text-decoration: none;
+}
+.memberseccode .m-input-text {
+    min-width: 50px;
+    width: 30px;
+    margin-right: 15px;
+}
+.memberseccode .loginform-img_mar {
+    margin-top: 4px;
+}
+.memberseccode .reload {
+    background-position: -10px -776px;
+    height: 20px;
+    margin-top: 9px;
+    margin-left:3px;
+    width: 20px;
+    overflow: hidden;
+}
+.margin-r-20 {
+    margin-right: 20px;
+}
+.i-gray {
+    color: #ddd;
+}
+
+</style>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/jquery/jq172.js"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn//js/config.js"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/jquery.cookie.js"></script>
+<script src="http://img.bbtnews.com.cn/templates/bbtnews/js/cmstop.dialog.js" type="f9e566b03c6026aa44a6c426-text/javascript"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/js/lib/cmstop.seccode.js"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript">
+        var contentid = '280616';// 文章ID
+        var title = "\u79d1\u6280\u8d4b\u80fd\u6837\u672c\uff1a\u5e73\u5b89\u7684\u533b\u7597\u5065\u5eb7\u65b0\u751f\u6001";//文章标题
+        var topicid = '';// 评论主题
+        var context = '';//全文内容缓存
+        var content = '';//第一页内容缓存
+        var _IMG_URL = 'http://img.bbtnews.com.cn/templates/bbtnews';
+        $(function(){
+            // 弹窗登录, 依赖dialog插件
+            var _dialog;
+            function doDialog() {
+                _dialog = dialog({
+                    title:'用户登录',
+                    content: $('.login-dialog-test'),
+                    fixed: true,
+                    skin: 'ui-dialog-login'
+                });
+                _dialog.showModal();
+            }
+
+            if($('.js-ajax-login')[0]) {
+                $(document).on('click', '.js-ajax-login', function(e) {
+                    doDialog();
+                    e.preventDefault();
+                    }).on('focus blur', '.js-focus', function(e) {
+                        $(this).parents('.singup-line').toggleClass('active-border-blue');
+                    }).on('focus', '.js-focus', function() {
+                        $(this).siblings('.tip').addClass('hidden');
+                });
+            }
+
+            // 文本框聚焦和失去焦点提示文本显示与隐藏
+            if($('.singup-box')[0]) {
+                $('.singup-box').on('click', '.tip', function() {
+                    var $this = $(this)
+                    ,oInput = $this.siblings('input[type=text],input[type=password]');
+                    $this.addClass('hidden');
+                    oInput.focus();
+                }).on('blur', 'input[type=text],input[type=password]', function() {
+                    if(!$(this).val().length) {
+                        $(this).siblings('.tip').toggleClass('hidden');
+                    }
+                });
+            }
+
+            if($('.m-input-text')) {
+                $(document).on('focus','.m-input-text',function() {
+                    if($(this).val().length && $(this).val() == this.defaultValue) {
+                        $(this).removeClass('i-gray');
+                        $(this).val('');
+                    }
+                }).on('blur','.m-input-text',function(){
+                    if(!$(this).val().length) {
+                        $(this).addClass('i-gray');
+                        $(this).val(this.defaultValue);
+                    }
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div class="global_cont_nav">
+<div class="nav_cont">
+<div class="nav_login">
+<a href="http://www.bbtnews.com.cn/">
+<img src="http://img.bbtnews.com.cn/templates/bbtnews/2018/img/loginNew.png" alt="">
+</a>
+</div>
+<ul class="nav_list">
+<li><a class="on" href="http://www.bbtnews.com.cn/news/Politicaleconom/"> 政经</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/industry/"> 产经</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Tourism/"> 旅游</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Culture/"> 文化</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Business/"> 商经</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20listed%20company/"> 上市公司</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20financial%20market/"> 金融市场</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/The%20international/"> 国际财经</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Observe/"> 观点</a></li>
+<li><a href="http://www.bjbusiness.com.cn/"> 商网</a></li>
+<li><a href="http://www.bbtnews.com.cn/shujuzazhi/"> 数据杂志</a></li>
+<li><a href="http://www.bbtnews.com.cn/other/lanshipin/"> 蓝视频</a></li>
+<li class="nav-zk J-zk" id="weeklyNav"><a href="javascript:void(0)">周刊<i class="iconfont icon-xiala"></i> </a></li>
+</ul>
+<div class="nav_search">
+<a href="http://app.bbtnews.com.cn/?app=search&controller=index&action=index">
+<img src="http://img.bbtnews.com.cn/templates/bbtnews/2018/img/search.png" alt="">
+</a>
+</div>
+</div>
+</div>
+<div class="wrap clearfix">
+<div class="bread">
+您的位置：
+<a href="http://www.bbtnews.com.cn/">首页</a>
+<i>></i>
+<a href="http://www.bbtnews.com.cn/news/">新闻</a>
+<i>></i>
+<a href="http://www.bbtnews.com.cn/news/The financial market/">金融市场</a>
+</div>
+<div class="list-con clearfix">
+<div class="con-left fL" id="J_offsetFlag">
+<div class="con-box con-box-top article-box">
+<div class="article-hd">
+<h3>科技赋能样本：平安的医疗健康新生态</h3>
+<div class="assist clearfix">
+<div class="info">
+<span>出处：</span>
+<span>作者：崔启斌 李皓洁</span>
+<span>网编：崔启斌</span>
+<span>2018-12-29</span>
+</div>
+<ul class="tools clearfix">
+<li class="fL" id="J_adjustFontsize">
+<a href="javascript:void(0);"><i class="icon-article icon-font">A</i></a>
+<a href="javascript:void(0);" class="item" data-index="0">大</a>
+<a href="javascript:void(0);" class="on item" data-index="1">中</a>
+<a href="javascript:void(0);" class="item" data-index="2">小</a>
+</li>
+<li class="fL">
+<a href="http://www.bbtnews.com.cn/2018/1229/280616.shtml" onclick="addfavorite();return false;" rel="sidebar" class="J-save"><i class="icon-article icon-save"></i>
+收藏</a>
+</li>
+<li class="fL">
+<a href="javascript:void(0);" class="shareArticleButton"><i class="icon-article icon-share"></i>
+分享</a>
+</li>
+<li class="fL">
+<a target="_blank" href="http://app.bbtnews.com.cn/print.php?contentid=280616"><i class="icon-article icon-print"></i>
+打印</a>
+</li>
+<li class="fL J-wap-box">
+<a href="javascript:void(0)" class="J-wap-btn"><i class="icon-article icon-phone"></i>手机网页版</a>
+<div class="wap-code J-wap-code-pop hide">
+<div class="hd">
+<a href="javascript:void(0)" class="close fR">X</a>
+分享到微信朋友圈
+</div>
+<div class="img qrcode2"></div>
+<p>打开微信，点击底部的“发现”，</p>
+<p>使用“扫一扫”即可将网页分享至朋友圈。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-bd" id="pageContent">
+<p style="text-align: center;"><img src="http://upload.bbtnews.com.cn/2018/1229/1546091479492.jpg" border="0" alt="1546091066(1)" /></p>
+<p>近年来，中国正面临着工业化、城镇化、人口老龄化以及疾病谱、生态环境、生活方式不断变化等带来的新挑战，亟须统筹解决关系百姓医疗健康的重大和长远问题。然而，看病难、看病贵，始终是困扰医疗市场的一大难症。</p>
+<p>2016年，关于大健康的顶层设计&ldquo;健康中国2030&rdquo;规划纲要出炉，要求提供优质高效的医疗服务，从广泛的健康影响因素入手，以普及健康生活、优化健康服务、完善健康保障、建设健康环境、发展健康产业为重点，把健康融入所有政策，全方位、全周期保障人民健康。同年，国务院医改办、原国家卫计委等部门联合发布了《关于印发推进家庭医生签约服务指导意见的通知》，要求到2020年，家庭医生签约服务扩大到全人群，形成长期稳定的契约服务关系，基本实现家庭医生签约服务制度的全覆盖。</p>
+<p>与此同时，大健康领域广阔的市场前景吸引各大第三方商保公司加速进军。中国平安作为国内领先的综合金融集团之一，近年来积极布局医疗健康生态圈。2016年9月，平安医疗健康管理股份有限公司（以下简称&ldquo;平安医保科技&rdquo;）宣布成立，积极应用生物识别、大数据、区块链、人工智能、云计算等现代科技技术，2017年3月，平安医保科技成功上线&ldquo;城市一账通&rdquo;App，为医保、商保及医疗服务供给方提供一揽子智能化解决方案及技术服务。</p>
+<p><strong>&ldquo;科技驱动+趋势洞察&rdquo;</strong></p>
+<p>在医改大背景下，转变基层医疗卫生服务模式，实行家庭医生签约服务，强化基层医疗卫生服务网络功能，是深化医药卫生体制改革的重要任务，也是新形势下更好维护人民群众健康的重要途径。</p>
+<p>《关于印发推进家庭医生签约服务指导意见的通知》在化解就医难方面发挥着积极作用，一方面鼓励家庭医生签约，另一方面也要求通过现代化手段，为医疗提供更便捷的服务。例如，构建完善的区域医疗卫生信息平台，实现签约居民健康档案、电子病历、检验报告等信息共享和业务协同。通过远程医疗、即时通讯等方式，加强二级以上医院医师与家庭医生的技术交流。通过移动客户端等多种方式搭建家庭医生与签约居民的交流平台，为信息咨询、互动交流、患者反馈、健康管理等提供便利。积极利用移动互联网、可穿戴设备等为签约居民提供在线预约诊疗、候诊提醒、划价缴费、诊疗报告查询、药品配送和健康信息收集等服务。 2018年3月，国家卫健委正式成立，明确发文要求各地要做实服务，并鼓励企业加入家医建设，开展互联网服务。 在此背景下，中国平安发挥金融与科技优势，不断加大对医疗服务的投入。据上市公司2018年三季报信息显示，中国平安在&ldquo;金融+科技&rdquo;、&ldquo;金融+生态&rdquo;的战略指引下，积极布局生态圈，加大科技研发投入，打造优质的产品和极致的服务体验，推动&ldquo;科技赋能金融、科技赋能生态、生态赋能金融&rdquo;，实现各项业务稳健增长。其中，金融科技与医疗科技战略持续深化，各项业务保持快速发展。</p>
+<p>平安集团的金融+科技赋能，无疑是平安医保科技于2016年9月从养老险医保事业部孵化，到独立成为国内大医疗健康领域独角兽企业的原动力。</p>
+<p>中国平安在&ldquo;医疗生态圈&rdquo;内，围绕患者、提供方和支付方形成了一个闭环。在用户端，平安有主打线上门户的移动互联网问诊平台&ldquo;平安好医生&rdquo;。在商保方面，平安人寿、平安健康险、平安养老险均参与联动。</p>
+<p>而平安医保科技则从支付端切入，以医保云服务平台为核心，围绕卫健、医院和社区三个生态端口，依托行业领先的健康风险画像等技术和五大库核心应用能力，为医保、商保、医疗服务提供方、个人用户提供一揽子智能化解决方案及技术服务，助力提升医疗及城市生活服务体验。</p>
+<p>中国平安董事会秘书兼品牌总监盛瑞生曾经解释，（平安）一切商业模式均面临&ldquo;互联网+&rdquo;的挑战，大批基于&ldquo;互联网+&rdquo;的新型业态相继诞生。2013年，马明哲提出&ldquo;科技引领金融&rdquo;。五年间，具有尖端科技能力的平安，孵化了平安医保科技、陆金所控股、平安好医生等多个互联网子公司。</p>
+<p>中国平安副董事长孙建一评价，由危机感驱动的创新意识是平安孵化独角兽的文化土壤。平安的创新，来自于面对市场瞬息万变、优胜劣汰的深刻危机感。30年来，强烈的危机感已成为平安幸福文化的DNA，迫使平安不断挑战自我；不断应对来自市场、技术、客户和行业的急速变化。</p>
+<p>平安集团全球领先的&ldquo;脸谱&rdquo;技术也被应用于家庭医生签约实践，实现了家庭医生签约时最重要的在线身份认证功能，避免了群众跑医院、医生刷签约率等现象，且认证成功率超过99%，签约效率较线下纸质签约方式提升数十倍。科技驱动下的家医服务，正在通过无缝衔接的高效体验，塑造出一个有温度的健康未来。</p>
+<p><strong>打造&ldquo;三医联动&rdquo;新生态体系</strong></p>
+<p>近年来以O2O为代表的&ldquo;互联网+医疗&rdquo;以及基于大数据的&ldquo;精准服务&rdquo;已深刻改变了社会方方面面传统的服务模式，包括&ldquo;医食住行玩&rdquo;等高频生活场景。在&ldquo;消费升级&rdquo;的大背景下，定制服务、预约服务、个性化服务也彻底改变了传统的生活方式。因此，在医疗管理和健康服务领域，大数据、云计算带来的技术革命势必将驱动医疗服务更加便捷、省心、安全、可靠。</p>
+<p>在&ldquo;健康中国&rdquo;国家战略和&ldquo;互联网+医疗健康&rdquo;新政策不断出台的背景下，平安医保科技持续聚焦医改重点领域，通过与医疗健康服务各参与方的高效连接和有效协同，持续打造精准、合理、便捷的&ldquo;三医联动&rdquo;新生态体系。</p>
+<p>值得一提的是，平安医保科技有别于传统医疗管理企业，通过平安多重先进科技技术驱动（生物识别技术、人工智能、区块链、AI、云计算/大数据），一方面服务政府、医院、商业保险公司、药企等各机构端，帮助医保控费，实现科学决策，精细化管理。另一方面，为广大用户带来更优质便捷、个性化、定制化的医疗服务体验与保障。</p>
+<p>据悉，平安医保科技推出针对医保管理的一体化科技解决方案，也有别于传统IT公司系统建设，更多强调通过借鉴商保运营经验、科技赋能、管理赋能，助力医保做好精细化管理，做实落地效果，包括为医保提供IT解决方案（有别于IT厂商的规划，更多地参考商业健康险的系统规划，更多地关注医保管理领域的信息化建设）、一体化经办服务、参保人服务以及科学决策的支持等服务。</p>
+<p>据悉，截至11月底，平安医保科技已为全国200多个城市提供全方位的医保、商保管理服务，接入医院超4000家，针对个人用户的&ldquo;城市一账通&rdquo;App上线68城。</p>
+<p><strong>智慧医保商保下的&ldquo;一降两提&rdquo;</strong></p>
+<p>&ldquo;近期医保欺诈热点涉及的问题，恰恰是公司在200多个城市开展的核心业务；我们最早开始的业务就是厦门模式智能医保控费。&rdquo;一位医保科技相关负责人表示。具体来看，平安医保科技提供的&ldquo;智慧医保&rdquo;解决方案，不仅可提供海量医保数据存储、医保数据备份等高效基础云服务，更实现了全链条、全体系的云赋能，打通了数据治理、智慧经办、智慧风控、科学决策、精准服务等应用场景。&ldquo;智慧医保&rdquo;解决方案主要涵盖以下五大核心产品：智慧风控、智慧精算决策、智慧支付、智慧慢病管理、智慧经办服务。</p>
+<p>其中，作为云平台核心之一的&ldquo;医疗服务智能监管平台&rdquo;，由平安医保科技联手厦门市医保管理机构于2014年开始研发打造，可实现监管触角对医疗、就诊服务过程的全覆盖。目前这个监管平台已在全国范围内复制推广，截至2018年10月，已与数千家医疗机构无缝对接。</p>
+<p>而&ldquo;云享e通&rdquo;智慧商保服务解决方案，则以商保医院联网平台为基础，以远程调阅平台为核心，以线下共享平台为补充，打造&ldquo;线上+线下+AI&rdquo;三位一体的服务网络，具有业务系统、管理体系、线上能力、线下用户四大核心模块功能，可高效率、高质量地&ldquo;赋能&rdquo;商保服务。据悉，截至2018年12月，该平台已接入超过5000家医院，影像调阅平台覆盖1000家医院，地级市网点分布近300个；已签约保险机构37家，包括央企，民企等各类背景保险公司。该平台目前的每日服务量逾2万次，服务于保险公司核保、理赔、客户增值服务业务，服务于社保异地核查业务。此外，平安医保科技拥有超200人的专业开发团队，新技术及智能模型建设与应用能力国内领先；在线下共享方面，该方案实行标准化五个&ldquo;一&rdquo;管理（一套系统、一部手机、一小时响应、一案一日志、一套考核评价标准），确保事前、事中、事后管理形成闭环。北京商报记者 崔启斌 实习记者 李皓洁</p>
+<p><strong>&middot;金融科技新布局&middot;　　足不出户的&ldquo;家医服务&rdquo;</strong></p>
+<p>2017年3月，平安医保科技成功上线&ldquo;城市一账通&rdquo;App，通过创新技术增强医疗、社保服务效能，提供家庭医生签约、电子处方外配、电子社保卡申领、社保账户管理、健康档案管理、城市综合服务等六大类便民利民服务，大幅提升群众满意度，同时为政府和医疗机构提升服务效率。</p>
+<p>其中值得一提的是，该平台可通过连接基层家庭医生和居民，提高医生的工作效率及居民的就医体验，真正实现&ldquo;足不出户&rdquo;享受慢病管理等医疗健康服务，缓解&ldquo;签而不约、签而难约、未签未约&rdquo;等问题；同时也有效避免了签约信息存档混乱、&ldquo;注水&rdquo;签约、签约服务质量不高等现象发生。</p>
+<p>据悉，目前全国范围内尚存在基层医疗信息化建设滞后、基层医生保障制度不健全、分级诊疗宣传力度不够、基层医疗条件落后等痛点。对此，平安医保科技深挖家医服务与互联网融合的发展潜力，以&ldquo;城市一账通&rdquo;App为核心，打造医生端和居民端两大应用服务场景，为医患双方减负增效。</p>
+<p>针对医生端，平安医保科技家庭医生平台采用基于Spring Cloud技术框架的微服务分布式架构体系。通过部署云平台为医生手机客户端提供高效服务，并与国家卫健委内已有系统进行无缝对接，为云平台提供数据服务，能有效提高家庭医生平台服务的效率和质量。例如，社区医生上门时，可直接在&ldquo;城市一账通&rdquo;App录入病患信息和随访记录，并同步给公卫平台，避免了以往二次录入的麻烦。 在居民端，平安医保科技抓住居民长久以来的就医痛点，致力于提升居民购药的便捷性。以内蒙古为例，复诊及长处方患者可直接在&ldquo;城市一账通&rdquo;App上通过在线咨询医生，实现处方开具、处方流转、药师审核、药店配送的一站式就诊服务，大大提升了患者就医便捷性。</p>
+<p>据悉， &ldquo;城市一账通&rdquo;App家庭医生服务板块已陆续在内蒙古全区、甘肃全省、黑龙江全省以及重庆九龙坡区上线，目前已成为全国最大的线上基层家庭医生服务平台之一 。</p>
+<p>在&ldquo;互联网+服务&rdquo;方面，除了&ldquo;家医服务&rdquo;外，平安医保科技旗下的&ldquo;城市一账通&rdquo;App还能提供便捷就医、社保账户管理、健康档案管理、人社及城市综合服务，为百姓看病就医、健康管理等提供多重便利。截至目前，平台注册用户量已突破2000万，覆盖包括深圳、武汉、厦门、青岛、内蒙古等全国65个主要城市和地区，惠及2亿人口。</p>
+<p>平安医保科技董事长兼CEO高菁介绍，近年来平安医保科技分两步有序开展家医服务：一期已完成家庭医生基础功能建设，覆盖家医日常工作全流程，实现如签约、咨询、健康档案、慢病随访、健康资讯、疫苗提醒、门诊预约等核心业务功能；二期拓展了服务场景，针对重点人群实现如孕产妇体检、疫苗预约等功能，并在内蒙古地区实现了政府家庭医生处方外配的创新模式，通过打通社区医院与零售药房，实现了患者足不出户即可在线问诊、送药上门的服务，极大地提升了患者的就医体验。</p>
+<p>业内人士表示，新政策、新格局给包括平安医保科技在内的新兴科创企业提供了一个更广泛参与深化医疗改革、提供管理式医疗服务、助力&ldquo;健康中国&rdquo;的新未来。</p>
+<p style="text-align: center;"><img src="http://upload.bbtnews.com.cn/2018/1229/1546091502148.jpg" border="0" alt="1546091150(1)" /></p> <script type="f9e566b03c6026aa44a6c426-text/javascript" src="https://api.yuanben.io/badge"></script>
+</div>
+<div class="J-share-btm share-box" data-id="news_1395471" data-title="科技赋能样本：平安的医疗健康新生态" data-summary="科技赋能样本：平安的医疗健康新生态" data-pic="" data-url="http://www.bbtnews.com.cn/2018/1229/280616.shtml">
+<p class="name"><span>快乐分享</span></p>
+<ul class="clearfix">
+<li class="weibo-share" data-name="sinaminiblog"><a href="javascript:void(0);"></a>
+</li>
+<li class="weixin-share" data-name="weixin"><a href="javascript:void(0);"></a></li>
+<li class="friend-share" data-name="qqim"><a href="javascript:void(0);"></a></li>
+<li class="qzone-share" data-name="qzone"><a href="javascript:void(0);"></a></li>
+<li class="add-share"><a href="javascript:void(0);" class="shareArticleButton"></a></li>
+</ul>
+<div class="weixin-layer hide" style="left: 147px; display: none;">
+<img src="" alt="">
+<i class="ico-arr"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="fR c-r-wrap">
+<a href="http://www.bbtonline.com.cn" target="_blank"><img width="318px" height="213px" src="http://upload.bbtnews.com.cn/2018/0626/1529982556609.jpg" alt="右侧广告"></a>
+<div class="c-r-box source-box">
+<div class="c-r-con clearfix">
+<a class="pink fL clearfix pink" href="http://fcdc.net.cn/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0905/1504580637145.jpg" alt="" /></i><span>酒业价值榜</span></a>
+<a class="pink fL clearfix green" href="http://biztop10.bjbusiness.com.cn/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0124/1485247040318.png" alt="" /></i><span>十大商业品牌</span></a>
+<a class="pink fL clearfix blue" href="http://biztop10.bjbusiness.com.cn/summit.shtml"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985997161.png" alt="" /></i><span>商业高峰论坛</span></a>
+<a class="pink fL clearfix purple" href="http://special.bbtnews.com.cn/161213/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996358.png" alt="" /></i><span>跨年促销节</span></a>
+<a class="pink fL clearfix orange" href="http://special.bbtnews.com.cn/151210-3/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996675.png" alt="" /></i><span>金融业十大品牌</span></a>
+<a class="pink fL clearfix yellow" href="http://special.bbtnews.com.cn/161208/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996737.png" alt="" /></i><span>互联网用车榜</span></a>
+<a class="pink fL clearfix red" href="http://special.bbtnews.com.cn/160322-1/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985996879.png" alt="" /></i><span>餐饮十大品牌</span></a>
+<a class="pink fL clearfix sky" href="http://special.bbtnews.com.cn/160722/"><i class="icon fL"><img src="http://upload.bbtnews.com.cn/2017/0121/1484985987523.png" alt="" /></i><span>北京拍卖季</span></a>
+</div>
+</div>
+<div class="c-r-box weibo-goto">
+<div class="c-r-con">
+<a class="link clearfix" href="http://weibo.com/bjshangbao?is_all=1"><i class="icon fL"></i>@北京商报</a>
+</div>
+</div>
+<div class="c-r-box news-rank-list">
+<div class="c-r-title">
+<span>新闻排行</span>
+</div>
+<div class="c-r-con">
+<ul>
+<li class=" on hot">
+<span class="num">01</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280655.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546331461245.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="三天30亿元 元旦假期北京重点消费企业零售额增6.3%" href="http://www.bbtnews.com.cn/2019/0101/280655.shtml">三天30亿元 元旦假期</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280655.shtml">假日三天北京重点60家商业企业零售额30.1亿...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280655.shtml">三天30亿元 元旦假期北京重点</a>
+</div>
+</li>
+<li class=" hot">
+<span class="num">02</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280679.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546338532415.png" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="收购Versace落袋为安  MK母公司更名Capri谋建多品牌集团" href="http://www.bbtnews.com.cn/2019/0101/280679.shtml">收购Versace落袋为安 </a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280679.shtml">Versace落袋为安后，Michael Kors母公司立...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280679.shtml">收购Versace落袋为安 MK母公司</a>
+</div>
+</li>
+<li class=" hot">
+<span class="num">03</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280688.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546339627673.png" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="电商法正式实施 代购微商“地下接头”试探执行尺度" href="http://www.bbtnews.com.cn/2019/0101/280688.shtml">电商法正式实施 代购</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280688.shtml">《电子商务法》靴子已经落地，反应正在发酵...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280688.shtml">电商法正式实施 代购微商“地</a>
+</div>
+</li>
+<li class="">
+<span class="num">04</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280701.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546343868949.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="商场靠互动 影院提品质 旅游降密度  北京元旦消费现品质趋势" href="http://www.bbtnews.com.cn/2019/0101/280701.shtml">商场靠互动 影院提品</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280701.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280701.shtml">商场靠互动 影院提品质 旅游降</a>
+</div>
+</li>
+<li class="">
+<span class="num">05</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0102/280871.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0102/thumb_93_62_1546431995319.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="首超千亿营收 百度的未来机会在哪" href="http://www.bbtnews.com.cn/2019/0102/280871.shtml">首超千亿营收 百度的</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0102/280871.shtml">2019年才过了两天，百度创始人兼CEO李彦宏...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0102/280871.shtml">首超千亿营收 百度的未来机会</a>
+</div>
+</li>
+<li class="">
+<span class="num">06</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280676.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546337681886.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="与恒大和解 贾跃亭的造车路还能走多远" href="http://www.bbtnews.com.cn/2019/0101/280676.shtml">与恒大和解 贾跃亭的</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280676.shtml">在经历了近三个月的仲裁纠纷后，2018年12月...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280676.shtml">与恒大和解 贾跃亭的造车路还</a>
+</div>
+</li>
+<li class="">
+<span class="num">07</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0102/280875.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0102/thumb_93_62_1546431691551.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="以价换量 清扬悄然“反攻”市场" href="http://www.bbtnews.com.cn/2019/0102/280875.shtml">以价换量 清扬悄然“</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0102/280875.shtml">清扬正以价换量抢占市场份额。1月2日，清扬...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0102/280875.shtml">以价换量 清扬悄然“反攻”市</a>
+</div>
+</li>
+<li class="">
+<span class="num">08</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280689.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546339914728.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="Flyme事业部总裁卸任 魅族调整架构应对颓势" href="http://www.bbtnews.com.cn/2019/0101/280689.shtml">Flyme事业部总裁卸任 </a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280689.shtml">分分合合的魅族最近再次进行人事调整。2018...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280689.shtml">Flyme事业部总裁卸任 魅族调整</a>
+</div>
+</li>
+<li class="">
+<span class="num">09</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0101/280760.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0101/thumb_93_62_1546356342562.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="各国领导人新年致辞里的潜台词" href="http://www.bbtnews.com.cn/2019/0101/280760.shtml">各国领导人新年致辞里</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0101/280760.shtml"></a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0101/280760.shtml">各国领导人新年致辞里的潜台词</a>
+</div>
+</li>
+<li class="">
+<span class="num">10</span>
+<div class="hd clearfix">
+<a href="http://www.bbtnews.com.cn/2019/0102/280772.shtml" class="img fL"><img src="http://upload.bbtnews.com.cn/2019/0102/thumb_93_62_1546362888874.jpg" alt="" width="93" height="62"></a>
+<div class="info">
+<p class="tit"><a title="各国领导人新年致辞里的潜台词 " href="http://www.bbtnews.com.cn/2019/0102/280772.shtml">各国领导人新年致辞里</a></p>
+<p><a href="http://www.bbtnews.com.cn/2019/0102/280772.shtml">2019的巨轮已经使出港口，各国的掌舵手们已...</a></p>
+</div>
+</div>
+<div class="bd">
+<a href="http://www.bbtnews.com.cn/2019/0102/280772.shtml">各国领导人新年致辞里的潜台词</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="relatedConnection">
+<div class="related_cont">
+<div class="related_title">
+<div class="related_title_cont">
+<div class="FriendshipBtn">
+<p class="titleTar">友情链接</p>
+<p class="transverseLine "></p>
+</div>
+<div class="related_line">|</div>
+<div class="CooperativeBtn">
+<p class="titleTar">合作伙伴</p>
+<p class="transverseLine nowHide"></p>
+</div>
+</div>
+</div>
+<div class="Friendship">
+<ul class="related_one">
+<li><a href="http://www.eastmoney.com/">东方财富网</a></li>
+<li><a href="http://www.fang.com/">房天下</a></li>
+<li><a href="http://www.jctrans.com/">锦程物流网</a></li>
+<li><a href="http://beijing.auto.ifeng.com/">凤凰汽车北京站</a></li>
+<li><a href="http://pe.job1001.com/">投资英才网</a></li>
+<li><a href="http://www.ce.cn/">中国经济网</a></li>
+<li><a href="http://www.591hx.com/">华讯财经</a></li>
+<li><a href="http://www.cnfol.com/">中金在线</a></li>
+<li><a href="http://www.mysteel.com/">我的钢铁网</a></li>
+<li><a href="http://glinfo.com/">大宗商品网</a></li>
+</ul>
+<ul class="related_two">
+<li><a href="http://travel.sina.com.cn/">新浪旅游</a></li>
+<li><a href="http://www.cs.com.cn/">中证网</a></li>
+<li><a href="http://www.hexun.com/">和讯</a></li>
+<li><a href="http://www.nbd.com.cn/">每日新闻网</a></li>
+<li><a href="http://news.tom.com/">TOM.COM </a></li>
+<li><a href="http://money.163.com/">网易财经</a></li>
+<li><a href="http://www.artron.net/">雅昌艺术网</a></li>
+<li><a href="http://www.cebnet.com.cn/">中国电子银行网</a></li>
+<li><a href="http://www.eeo.com.cn/">经济观察网</a></li>
+<li><a href="https://hao.360.cn/">360导航</a></li>
+<li><a href="https://browser.360.cn/se/">360安全浏览器</a></li>
+</ul>
+</div>
+<div class="Cooperative">
+<ul class="Cooperative_cont">
+<li><a href="http://www.bjd.com.cn/" target="_blank">京报网</a></li>
+<li><a href="http://bjrb.bjd.com.cn/" target="_blank">北京日报 </a></li>
+<li><a href="http://bjwb.bjd.com.cn" target="_blank">北京晚报</a></li>
+<li><a href="http://www.morningpost.com.cn/" target="_blank">北京晨报</a></li>
+<li><a href="http://www.beijingtongxin.com/" target="_blank">同心出版社</a></li>
+<li><a href="http://news.bjd.com.cn/index.htm" target="_blank">新闻与写作</a></li>
+<li><a href="http://sdjsb.bjd.com.cn" target="_blank">首都建设报</a></li>
+<li><a href="http://toutiao.com/" target="_blank">今日头条</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="item_bottom_nav">
+<div class="item_bottom_cont">
+<div class="item_bottom_img">
+<img src="http://img.bbtnews.com.cn/templates/bbtnews/2018/img/bottom_login.png" alt="">
+</div>
+<div class="item_bottom_detail">
+<div class="link">
+<a href="http://others.bjbusiness.com.cn/jianjie/index.html" target="_blank">商报简介</a><span>|</span>
+<a href="http://culture.bbtonline.com.cn/ReaderClub/" target="_blank">读者俱乐部</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/Recruitment/" target="_blank">招聘信息</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/about/copyright.shtml" target="_blank">版权声明</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/" target="_blank">在线反馈</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/about/contact.shtml" target="_blank">联系我们</a><span>|</span>
+<a href="http://www.bbtnews.com.cn/guanggao/" target="_blank">广告</a> <span>|</span>
+<a href="http://app.bbtnews.com.cn//?app=rss" target="_blank">RSS</a>
+</div>
+<p>本网站所有内容属《北京商报》社所有，未经许可不得转载。 商报总机：010-64101978 网站热线：010-64101986</p>
+<p>商报地址：北京市朝阳区和平里西街21号 邮编：100013 法律顾问：北京市汇佳律师事务所（010-64097966） </p>
+<p>ICP备案编号：京ICP备08003726号 京公网安备110105010335号</p>
+</div>
+<script type="f9e566b03c6026aa44a6c426-text/javascript">
+$(function(){
+    $('a').attr('target', '_blank');
+})
+</script>
+</div>
+</div>
+
+<div class="side-bar J-side-bar">
+<ul>
+<li><a href="http://special.bbtnews.com.cn/170813-2"><i class="icon-s1"></i>商报社庆</a></li>
+<li><a href="http://www.bbtnews.com.cn/review/"><i class="icon-s2"></i>今日评</a></li>
+<li><a href="http://www.bbtnews.com.cn/news/Observe/Lao%20zhou%20kan%20stock/"><i class="icon-s3"></i>老周侃股</a></li>
+<li><a href="http://www.bbtnews.com.cn/New%20media%20products/News%20picture%20books/"><i class="icon-s4"></i>新闻绘本</a></li>
+<li><a href="http://bbri.bjbusiness.com.cn/"><i class="icon-s5"></i>研究院</a></li>
+<li><a href="http://epaper.bjbusiness.com.cn/site1/bjsb/html/2017-12/20/node_141.htm"><i class="icon-s6"></i>蓝皮书</a></li>
+<li><a href="http://www.bbtnews.com.cn/Brandactivities/"><i class="icon-s7"></i>品牌廊</a></li>
+<li><a href="http://baike.baidu.com/link?url=twSw1Dt-Q3_eVHGYFmuKx5dQ6zcQrSx7iiFKypl-_uINHXNDKAgZ6IRhtOT_RcOjPyHtXpxyRRsJOddyWY18PyD6509dm2aWeUDGyjEStRQXppjWvT4TSttUdOArOPdqowo0BSgiIGhKfxeR_kOuwbrLXjfw7v0CZKvyEpZ9F6q93mEgzoM3anj1v1o2dFhJT9LfbtfM8GAgqG_77GyYL7jUHRu4rjb9vEacqLP_tri"><i class="icon-s8"></i>新艺馆</a></li>
+<li><a href="http://biztop10.bjbusiness.com.cn/"><i class="icon-s9"></i>十大品牌</a></li>
+<li><a href="http://special.bbtnews.com.cn/170424-1/"><i class="icon-s10"></i>产品超市</a></li>
+<li><a href="http://www.cece.org.cn"><i class="icon-s12"></i>电商大会</a></li>
+<li><a href="http://special.bbtnews.com.cn/171219-1/"><i class="icon-s13"></i>SCPR</a></li>
+<li><a href="http://www.bbtnews.com.cn/other/jinshequ/"><i class="icon-s14"></i>品牌进社区</a></li>
+<li><a href="http://www.bbtnews.com.cn/2016/0821/158551.shtml"><i class="icon-s15"></i>书画名人堂</a></li>
+<li><a href="http://others.bjbusiness.com.cn/juzhen/index.html"><i class="icon-s16"></i>微信矩阵</a></li>
+<li><a href="http://www.bbtnews.com.cn/magazine/"><i class="icon-s17"></i>精彩特刊</a></li>
+</ul>
+</div>
+
+
+<div class="share-bar share-wrap J-share-bar">
+<a href="http://weibo.com/bjshangbao?is_all=1" target="_blank" class="icon-sinaminiblog"><i class="ico-sp ico-wb"></i><em></em></a>
+<a href="http://others.bjbusiness.com.cn/juzhen/index.html" target="_blank" class="icon-wechat">
+<i class="ico-sp ico-wx"></i><em></em>
+</a>
+<a href="/cdn-cgi/l/email-protection#1a2b2d232e2a2923232d285a6b6b34797577" class="icon-fankui"><i class="ico-sp ico-fankui"></i><em></em></a>
+<a href="javascript:void(0)" class="icon-top J-gotop"><i class="ico-sp ico-top"></i><em></em></a>
+</div>
+
+
+<div class="global-pop hide">
+<div class="wrap">
+<ul class="paper-list">
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/IT%20on%20the%20Internet/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158856118.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/IT%20on%20the%20Internet/" class="txt">IT互联网周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Contemporary%20art/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158839729.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Contemporary%20art/" class="txt">中国艺术周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Yanjing%20calligraphy%20/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158824109.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Yanjing%20calligraphy%20/" class="txt">燕京书画周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20housing%20market/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158806707.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20housing%20market/" class="txt">新北京楼市周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Consumption/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158789370.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Consumption/" class="txt">消费周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Cultural%20creativity/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158723464.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Cultural%20creativity/" class="txt">文化创意产业周刊</a>
+</li>
+ <li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/The%20capital%20acting/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158758500.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/The%20capital%20acting/" class="txt">首都演艺周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Chinese%20painting%20and/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158736960.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Chinese%20painting%20and/" class="txt">首都文化消费周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Fashion/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158646405.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Fashion/" class="txt">时尚周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20car/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158623557.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/The%20car/" class="txt">时代汽车周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Securities/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158604514.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Securities/" class="txt">上市公司周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Business/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158587840.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Business/" class="txt">商业周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Panjiayuan/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158570974.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Panjiayuan/" class="txt">潘家园周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Financial/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158556370.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Financial/" class="txt">理财周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20alcohol/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158539464.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20alcohol/" class="txt">酒业周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Beijing-tianjin-hebe/beijing-tianjin-hebe/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158521601.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Beijing-tianjin-hebe/beijing-tianjin-hebe/" class="txt">京津冀周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Education/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0315/thumb_90_120_1489575220154.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Education/" class="txt">教育周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Insurance/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158178986.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Insurance/" class="txt">保险周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/food/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158215695.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/food/" class="txt">餐饮周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Sankei%20shimbun/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158251921.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Sankei%20shimbun/" class="txt">产经周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Collection/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158295930.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/Collection/" class="txt">典藏周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Electricity/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158316721.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Electricity/" class="txt">电商周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20high-end%20tourism/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0210/thumb_90_120_1486693443340.jpeg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Tourism/The%20high-end%20tourism/" class="txt">高端旅游</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Internet%20financial/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158377461.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Internet%20financial/" class="txt">互联网金融周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Fund/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158400479.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Finance%20and%20economic/Fund/" class="txt">基金周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Home%20appliance%20digit/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158418792.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Home%20appliance%20digit/" class="txt">家电数码周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Household/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158439844.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Business/Household/" class="txt">家居产业周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Health/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0123/thumb_90_120_1485158467141.jpg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Sankei%20shimbun/Health/" class="txt">健康周刊</a>
+</li>
+<li>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/zhongguoyishuyuekan/" class="img"><img src="http://upload.bbtnews.com.cn/2017/0219/thumb_90_120_1487495824502.jpeg" class="scale" height="120"></a>
+<a href="http://www.bbtnews.com.cn/Weekly/Culture/zhongguoyishuyuekan/" class="txt">中国艺术</a>
+</li>
+</ul>
+</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="http://static.bshare.cn/b/buttonLite.js" type="f9e566b03c6026aa44a6c426-text/javascript" charset="utf-8"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/xinmem/common.js"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/xinmem/detail.js"></script>
+<script type="f9e566b03c6026aa44a6c426-text/javascript" src="http://img.bbtnews.com.cn/templates/bbtnews/js/xinmem/jquery.qrcode.min.js"></script>
+<script src="https://edge.yunjiasu.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="f9e566b03c6026aa44a6c426-" defer=""></script></body>
+</html>
+<script type="f9e566b03c6026aa44a6c426-text/javascript">
+$(".qrcode2").qrcode({
+                render: "canvas", //table方式
+                width: 185, //宽度
+                height:185, //高度
+                text: 'http://app.bbtnews.com.cn/?app=article&controller=article&action=show&contentid=' + contentid //任意内容
+            });
+ $('#pageContent>p').each(function(k,v){
+	if($(this).find('img').length!=0){
+		$(this).css('text-indent','0px');
+	}
+})
+</script>

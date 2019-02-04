@@ -1,0 +1,222 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="中国氯碱网">
+<META NAME="Keywords" CONTENT="中国氯碱网">
+<META NAME="Description" CONTENT="中国氯碱网">
+<title>中国氯碱网</title>
+<link type="text/css" rel="stylesheet" href="common/style/report_con.css" />
+<link type="text/css" rel="stylesheet" href="common/style/passport.css" />
+<style type="text/css">
+*{margin:0;margin:0;}
+.later_con{border:1px solid #c0d2e3;background:#f8fbff;width:811px;overflow:hidden;}
+.later_inner{padding:25px 15px;}
+.later_inner h1{text-align:center;font-family:"黑体";font-size:26px;color:#0b318f;font-weight:normal;}
+.conleft_time{width:783px;height:40px;line-height:40px;font-size:12px;text-align:center;color:#0b318f;border-bottom:1px solid #c0d2e3;margin:0 0 16px 0;padding:5px 0 5px 0;}
+.conleft_con{width:783px;color:#232323;font-size:14px;line-height:26px;}
+#lposition{width:968px;height:28px;border:1px solid #c0d2e3;float:left;margin:0 0 0px 0;font-size:14px;}
+.lpositionl{width:753px;height:28px;line-height:28px;float:left;padding:0 0 0 15px;color:#0b318f;}
+.lpositionl a{color:#0b318f;}
+.lpositionr{width:200px;height:28px;line-height:28px;float:left;font-size:12px;}
+</style>
+<script type="text/javascript" src="/member/js/jquery-1.3.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	if(document.all){
+		$("#index_search").css({width:"970px","margin-bottom":"0px"});
+		$("#m1 img").css({top:"23px"});
+		$("#m2 img").css({top:"23px"});
+		$("#m3 img").css({top:"23px"});
+		$("#m4 img").css({top:"23px"});
+		$("#m5 img").css({top:"23px"});
+	}
+	else
+		$("#index_search").css({width:"970px"});	
+	$("#lposition").css({width:"970px"});
+	$("#footer").css({width:"970px"});
+
+});
+
+function setHomepage()
+{
+ if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://www.ccaon.com');
+ 
+    }
+    else if (window.sidebar)
+    {
+    if(window.netscape)
+    {
+         try
+   {  
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+         }  
+         catch (e)  
+         {  
+    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true" );  
+         }
+    } 
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage','http://www.ccaon.com');
+ }
+}
+
+function addBookmark(title,url) {
+if (window.sidebar) {
+window.sidebar.addPanel(title, url,"");
+} else if( document.all ) {
+window.external.AddFavorite( url, title);
+} else if( window.opera && window.print ) {
+return true;
+}
+}
+function checkdata(){
+	if(document.getElementById("username").value==""){
+		alert("用户名不能为空");
+		document.getElementById("username").focus();
+		return false;
+	}
+	if(document.getElementById("password").value==""){
+		alert("密码不能为空");
+		document.getElementById("password").focus();
+		return false;
+	}
+	document.getElementById("loginform").submit();
+	return true;
+	//document.form1.submit();
+}
+
+
+</script>
+
+ <script type="text/javascript">
+
+ <!--
+
+  
+
+ if(document.addEventListener){//如果是Firefox
+
+ document.addEventListener("keypress",fireFoxHandler, true);
+
+ }else{
+
+ document.attachEvent("onkeypress",ieHandler);
+
+ }
+
+  
+
+ function fireFoxHandler(evt){
+
+ //alert("firefox");
+
+ if(evt.keyCode==13){
+
+    checkdata();//你的代码
+ }
+
+ }
+
+  
+
+ function ieHandler(){
+
+ //alert("IE");
+
+ if(window.event.keyCode==13){
+
+    checkdata();//你的代码
+ }
+
+ }
+
+  
+
+ //-->
+
+</script>
+</head>
+
+<body>
+
+
+<br><br><br>
+<table width="750" style="margin:0 auto;" cellpadding="0" cellspacing="0" align="center">
+<tr><td>
+			<div class="passport">
+				<div class="passport_l">
+					<div class="ppl_logo">
+						<a href="/index.asp"><img src="common/img/logo1.jpg" border="0" /></a> </div>
+					
+					<div class="ppl_be" >
+						中国氯碱网·氯碱行业权威门户网站<br />
+申请中国氯碱网通行证，三十多种产品与服务，任您选择，随需组合。
+					</div>
+					
+<div class="ppl_bt">
+如需了解信息订阅、广告投放等相关业务，请咨询客服人员：<br />
+<!--景绘军  010-64335599-629   13810949099<br />
+高&nbsp;&nbsp;飞   010-64335599-616   13717810108<br />
+-->印&nbsp;&nbsp;迪  010-64386538    18910597149<br />
+</div>
+				</div>
+				
+				<div class="passport_r">
+					<div class="ppr_s">
+						<a href="javascript:setHomepage();">设为主页</a>   <a href="javascript:addBookmark('中国氯碱网','http://www.ccaon.com');">收藏本站</a>   <a href="http://www.ccaia.org.cn" target="_blank" title="氯碱协会">氯碱协会</a>   <a href="http://world.ccaon.com" target="_blank" title="英文网站">英文网站</a></div>
+			
+					
+					<div class="ppr_login">
+						<div class="ppr_img">
+							<img src="common/img/passport/word.jpg" />
+						</div>
+						
+						<div class="ppr_help">
+									
+            <font color=#A0070F><b>请首先登录或申购<font color=red> PVC </font>服务，才能阅览！</b></font><br>
+		
+						</div>
+						
+<FORM action="login.asp" method="post" name="loginform" id="loginform">
+						<div class="con_text">
+							<dl>
+								<dt>用户名：</dt><dd><input type="text" name="username" id="username" /></dd>
+							</dl>
+							<dl>
+								<dt>密&nbsp;&nbsp;码：</dt><dd><input type="password" name="password" id="password" />
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt><dd style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/copyright/forgetpwd.asp" title="忘记密码">忘记密码?</a></dd>
+							</dl>
+						</div>
+					  </FORM>
+						<div class="con_about00">
+						</div>
+
+						<div class="con_input">
+							<a href="#" onClick="checkdata()" title="登录"><img src="/common/img/passport/login.jpg" style="margin:0 10px 0 0;" /></a>
+							<a href="/copyright/freebooking.asp" target="_blank"><img src="/common/img/passport/trial.jpg" /></a>
+						</div>
+											
+						
+					</div>
+				</div>
+				
+				<div class="passport_link">
+					<a href="/index.asp">返回首页</a> <font color="00468D">|</font> <a href="/copyright/aboutus.asp">关于我们</a> <font color="00468D">|</font> 
+      <a href="/copyright/lianxiwm.asp">联系我们</a> <font color="00468D">| </font>
+      <a href="/copyright/benwangfw.asp"> 本网服务</a> <font color="00468D">|</font> 
+      <a href="/copyright/friend.asp">友情链接</a> <font color="00468D">|</font> 
+      <a href="/copyright/cpyc.asp">诚聘英才</a>
+				</div>
+			</div>
+</td></tr></table>
+
+  

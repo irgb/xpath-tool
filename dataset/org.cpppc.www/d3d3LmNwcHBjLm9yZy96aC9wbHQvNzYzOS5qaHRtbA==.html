@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>政府和社会资本合作中心</title>
+<link href="/r/cms/ppp/ppp/newPPP/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/r/cms/ppp/ppp/newPPP/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/ppp/ppp/newPPP/js/tab.js"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<style>
+   .cont table{margin:auto;border-collapse: collapse;}
+   .cont img {margin:auto;max-width:850px;}
+</style>
+<script type="text/javascript">
+$(function() {
+Cms.attachment("","7639","0","attach");
+Cms.viewCount("","7639");
+Cms.siteFlow("", location.href, document.referrer);
+});
+</script>
+</head>
+
+<body>
+
+<div class="header" style="height:80px;">
+  <div class="margin">
+    <div class="logo" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/logo1.png"/></div>
+    <!--<div class="CPPPC"><img src="/r/cms/ppp/ppp/newPPP/images/CPPPC.png"/></div>-->
+  </div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/r/cms/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+<!-- <script src="/r/cms/ppp_/js/jquery.min.js" type="text/javascript"></script> -->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+</head>
+<script>
+//delay延迟时间（毫秒）
+$(function() {
+	$("input[name=q]").autocomplete({
+		 source: "/search/v_ajax_list.jspx",
+		 minLength: 2,
+		 max:5,
+		 delay:400,
+		 autoFocus: false,
+		 select: function(e, ui) {
+			 $("input[name='q']").val(ui.item.value);
+			 if(check()){
+				 $("#searchForm").submit();
+			 }
+		 }
+	});
+        var ua=navigator.userAgent.toLowerCase();
+        var browserVersion='';
+	if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+		//浏览器类型
+		browserType = "IE";
+		//浏览器版本
+		browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1]; 
+	}
+	
+	if(browserVersion=='11.0'||browserVersion=='10.0'){
+		$("input[name=q]").autocomplete("disable");
+	}
+});
+function qkeypress(event){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+	if(event.keyCode==13) {
+			if(check()){
+				$("#searchForm").submit();
+			}
+	}	 
+}
+
+function qkeypress2(){
+	if(check()){
+		$("#searchForm").submit();
+	}
+}
+function check(){
+	var m=$("input[name=q]").val();
+	if(m!=null && m.trim()!=""){
+		if(m.indexOf("%")>-1 || m.indexOf("$")>-1 || m.indexOf("@")>-1 || m.indexOf("&")>-1 || m.indexOf("<")>-1 || m.indexOf(">")>-1 || m.indexOf("(")>-1 || m.indexOf(")")>-1 || m.indexOf("+")>-1 || m.indexOf("/")>-1 || m.indexOf("￥")>-1 || m.indexOf("#")>-1 || m.indexOf("^")>-1 || m.indexOf("*")>-1 || m.indexOf("（")>-1 || m.indexOf("）")>-1){
+			alert("搜索内容不能包含特殊字符");
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
+
+</script>
+<div class="border">
+  <div class="margin bg-white">
+    <ul class="nav">
+      <li>
+        <a href="http://www.cpppc.org/zh/index.jhtml" target="_self" >首 页</a>
+      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppxwdt/index.jhtml"  target="_self" >新闻动态</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzczd/index.jhtml"  target="_self" >政策法规</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppsftg/index.jhtml"  target="_self" >示范推广</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzsfb/index.jhtml"  target="_self" >招商信息</a>
+	      </li>
+		      <li>
+		        <a href="http://www.cpppc.org/zh/dbhz/index.jhtml"  target="_self" >国际合作</a>
+		      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppdjgz/index.jhtml"  target="_self" >党建工作</a>
+	      </li>
+	      <li>
+	        <a href="http://www.cpppc.org/zh/pppzxjj/index.jhtml"  target="_self" >中心简介</a>
+	      </li>
+    </ul>
+    <div class="sear">
+    <form action="/search.jspx" target="_self" id="searchForm">
+      <div class="sear-input">
+        <input name="q" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''"  onkeypress="qkeypress(event)" onblur="if(this.value=='')this.value='请输入关键词'"  maxlength="50" autocomplete="off" / style="border:0;width:98%;">
+        <input type="text" style="display:none;">
+      </div>
+      <div class="sear-btn"><a href="javascript:void(0);" onclick="qkeypress2();"><img src="/r/cms/ppp/ppp/newPPP/images/sear-btn.png"/></a></div>
+     </form>
+    </div>
+    <div style="float:right;line-height:48px">
+		<span><a href="http://www.cpppc.org/zh/index.jhtml">中文</a></span>
+		<span>|</span>
+		<span><a href="http://www.cpppc.org/en/index.jhtml">EN</a></span>
+	</div>
+  </div>
+</div>
+<div class="line"></div>
+<div class="wrap">
+	  <div class="news">
+		<div class="current"><a href="/">首页</a> > <a href="http://www.cpppc.org/zh/pppzsk/index.jhtml" target="_blank">知识库分享</a> > <a href="http://www.cpppc.org/zh/plt/index.jhtml" target="_blank">PPP论坛</a></div>
+		
+		<div class="dis">
+		  <div class="tit">
+			<h2>认清经济基本面 实现“稳”“进”新进展</h2>
+			<span class="msg"><b>2018-12-28</b></span>
+			<hr />
+		  </div>
+		  <div class="cont">
+			<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">今年以来我国经济稳中有变、变中有忧，下行压力加大。中央经济工作会议直面当前的经济问题和严峻复杂的国内外形势，全面分析，科学研判，做出了周密安排和部署。以稳中求进应对稳中有变，提出宏观、结构、社会3方面政策，坚持以供给侧结构性改革为主线，做出了7个方面的重点工作安排，推动我国经济进一步稳中向好，这为2019年经济工作指明了方向。</p><p style="margin-top: 15px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); white-space: normal; list-style: none; font-family: 宋体; font-size: 12pt; background-color: rgb(255, 255, 255); text-indent: 2em; line-height: 1.75em;"><span style="margin: 0px; padding: 0px; list-style: none; font-weight: bold;">一、当前经济稳中有变、变中有忧，下行压力加大</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">今年以来我国经济增速呈持续下降态势，1至3季度GDP增长率依次为6.8%、6.7%和6.5%。三季度GDP增长率已低于保持了12个季度的运行区间（6.7%至6.9%）。9月份工业增长率为5.8%，较8月份降低0.3个百分点，自2016年3月份以来首次落到6%以下。10至11月份工业增长率分别为5.9%和5.4%，增速进一步下降。据此分析，四季度GDP增长率将低于三季度。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">更值得注意的是，消费需求增速持续下降。11月份社会消费品零售总额同比增长8.1%，为2003年6月以来的最低增速；受居民收入增速持续下降，居民部门杠杆率较快提高，财富效应减弱等因素影响，居民消费能力和消费意愿下降倾向有所显现，消费趋弱苗头需要特别关注。投资方面，房地产投资经过近3年回暖后，增速下行压力明显加大。受房地产销售形势持续下滑影响，房地产企业对未来市场信心明显不足，开发建设活动明显收缩。基础设施投资增长虽然低位企稳，受地方政府融资能力不足等问题影响，进一步回升的能力偏弱。民营企业、中小企业面临的困难较多，对未来市场信心不足，投资意愿和能力也不足。综上，投资增长近期虽然企稳，但基础不牢。在内需增长能力不足的同时，出口增速也开始下降。11月份出口同比增长5.4%（美元口径），增速环比降低10.2个百分点。受中美经贸摩擦影响，明年一部分出口已通过“抢单”形式转移到今年释放，推动今年基数扩大，据此展望，明年出口增速会有较明显下降。如果内需、外需增速下降叠加，则总需求下行压力会很大；企业订单减少、开工率下降会使经济下行压力进一步加大。这会给就业、民生带来不容忽视的影响，也会给供给侧结构性改革和打好三大攻坚战带来较大困难和阻力。</p><p style="margin-top: 15px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); white-space: normal; list-style: none; font-family: 宋体; font-size: 12pt; background-color: rgb(255, 255, 255); text-indent: 2em; line-height: 1.75em;"><span style="margin: 0px; padding: 0px; list-style: none; font-weight: bold;">二、中国经济基本面向好，有利条件较多</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">中国经济增速连续6年回落之后，于2017年企稳。尽管今年GDP增长率呈现下行态势，但经济基本面转好，对经济恢复平稳较快增长仍然提供着基础性支持。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">第一，世界经济复苏态势趋于明朗，出口形势明显好转。2017年世界进出口贸易额（美元）较上年增长10.6%，较当年世界经济增长率（3.8%）高出近7个百分点，改变了2012年以来连续低于世界经济增长率的情况。这反映了经过近10年的持续努力，世界经济基本摆脱了国际金融危机的困扰，生产、就业、收入、市场等全面恢复的事实。受其支持，2017年我国出口（美元）较上年增长7.9%，增速较上年提高15.6个百分点，结束了连续6年的大幅下滑。对国内外向型企业增加销售和生产形成有力支持。今年1至11月份出口（美元）同比增长11.8%，增速较上年同期又有提高。虽然中美经贸摩擦对未来外贸出口具有潜在影响，但也要看到，世界各国经过近10年努力所形成的世界经济复苏态势不会被改变，经济恢复对国际贸易和经济全球化的支持不会改变。综合分析，预计未来我国出口增速不会持续大幅度下滑，也不会陷入负增长。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">第二，城镇化取得积极进展，投资内生动力增强。近年来，我国城镇化正在发生一系列积极变化。其一是城镇化进程的领军城市，已从一线城市日益扩展到多个二线城市。据发布的《2018全国城市年轻指数》，南昌、苏州、武汉、郑州、杭州、南宁等一批二线城市年轻指数超过了北上广等一线城市，反映了随着一批二线城市基础设施、公共服务水平持续提高，市场环境改善，其产城融合度明显提高，进而带动了城市人气度加快提高的事实。其二是新型城镇化积极推进。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">城市群的规划建设，带动了大中小城市一体化发展，加快了中小城市基础设施和公共服务补短板的工作，促进了一批中小城市环境改善、产城融合水平提高和人气度提高。这些都有效地扩大了城市发展空间，带动了房地产和基础设施投资的活跃，提高了投资的内生动力。当前我国城镇化正在迈上科学规划，系统建设、整体推进的新阶段；我国城镇化率和城镇化水平还有巨大提升空间。新型城镇化与产业升级推动的新型工业化的良性互动，将为我国经济发展开拓广阔市场空间。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">第三，多项因素支撑国内消费市场持续活跃。2010年后，出口、投资增速持续大幅下滑，但消费增速相对平稳。今年4月份以来出现的消费增速下降值得高度重视，但应看到，中国消费市场具有长期的高成长性。其一，源自于中国经济发展以改善民生为重要目标的特征。十几亿人民群众对美好生活的不懈追求以及为此在社会生产、建设方面持之以恒的艰巨努力，推动了中国消费市场持续快速扩大，也支持了工业、服务业和城乡建设的蓬勃发展，形成了相互促进的良性循环。其二，由于国内各类消费品、与生活消费相关的服务供给日益充裕，水平和质量不断提高，种类和技术创新日益丰富，对消费需求形成了不断加强的推动。其三，这些年来政府在保就业、精准脱贫、帮扶困难群体、稳定居民收入等方面做了大量工作，取得显著成效，既支持了就业稳定、居民收入增长稳定，也保障了消费市场持续活跃。其四，随着居民收入增加和文化领域供给侧结构性改革的深入，群众消费需求结构正在发生重大变化，文化消费和服务消费比重不断增长，将有效带动国内消费市场的增长。综上，国内消费市场持续活跃具有深厚的国情和发展模式特点支持，其持续保持的前景明朗。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">第四，我国生产要素供给充裕。2013年开始，我国劳动年龄（16-59岁）人口开始减少。一些专家据此提出中国人口红利消失，劳动力资源供给出现不足。事实上，到2017年我国劳动年龄人口仍有9.02亿人，当年我国城镇就业人口4.24亿人，农民工2.87亿人。数据表明，我国劳动年龄人口存量巨大，虽然总量开始减少，但对经济发展仍然可以提供充裕的人力、人才资源支持。客观分析，实现充分就业，需要更高的经济增长率。从资金方面看，1982年至2008年，我国国民总储蓄率平均为39.81%；2009年至2017年，平均为48.4%。这表明当前我国国民总储蓄水平进一步提高，支持经济发展的资金条件改善。从技术方面看，近年来随着市场竞争趋于激烈，企业技术进步步伐明显加快。2017年我国研发支出达到1.75万亿元，居世界第二，较上年增长11.6%；占名义GDP比重达到2.12%。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">第五，供给侧结构性改革综合成效不断显现，供给对需求的动态适应能力明显提高。当前，我国市场供给的数量保障能力大幅度提高。市场竞争对企业转型的“倒逼”作用加强，对企业和产能的优胜劣汰力度加大。市场调节程度较高的大量中小微企业、民营企业优胜劣汰、转型升级活动启动早，效果也比较明显。与此同时，政府通过去产能、去杠杆等多项供给侧结构性改革工作，积极推动大型企业、国有企业兼并重组、转型升级；特别是以“破、立、降”为重点，着力深化基础性关键领域改革，围绕产权制度和要素市场化配置机制，着力补齐制约市场竞争作用的制度短板，目前已取得积极效果。新动能明显增强，航空航天、人工智能、深海探测、生物医药等领域涌现出一批重大科技成果，新产业新产品蓬勃发展。低水平产能加快退出，行业发展环境持续好转；企业加快从数量扩张型效益转向质量和创新型效益，行业内产量扩张的自律能力增强，提质增效、创新发展活动增加。这些都促进了企业市场竞争力增强，使企业效益明显改善。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">综上，支持我国经济实现平稳较快增长的条件，无论在需求端还是供给端，都比较多。据此可以认为，中国经济具备克服当前困难，实现平稳较快增长的基础。</p><p style="margin-top: 15px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); white-space: normal; list-style: none; font-family: 宋体; font-size: 12pt; background-color: rgb(255, 255, 255); text-indent: 2em; line-height: 1.75em;"><span style="margin: 0px; padding: 0px; list-style: none; font-weight: bold;">三、坚持稳中求进，推动经济稳中向好</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">中央经济工作会议指出，我国发展仍处于并将长期处于重要战略机遇期。要善于化危为机、转危为安，紧扣重要战略机遇新内涵，加快经济结构优化升级，提升科技创新能力，深化改革开放，加快绿色发展，参与全球经济治理体系变革，变压力为加快推动经济高质量发展的动力。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">当前和今后一个时期，我们要坚持稳中求进工作总基调，针对形势和任务的变化，在“稳”和“进”两个方面明确新举措，取得新进展。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">一方面，要创新和完善宏观调控，确保经济运行在合理区间，进一步完善和落实好稳就业、稳金融、稳外贸、稳外资、稳投资、稳预期诸方面工作。宏观政策要强化逆周期调节，针对经济下行压力要加大宏观调控力度，积极扩大内需，稳定总需求。积极的财政政策要加力提效，实施更大规模的减税降费，进一步减轻企业税费负担、改善营商环境；减轻个人税费负担，稳定消费能力。在规范地方政府隐性债务和PPP融资，稳妥处理地方政府债务风险的同时，要积极开“正门”，较大幅度增加地方政府专项债券规模，保障基础设施补短板等方面的资金需求。稳健的货币政策要松紧适度，统筹好结构性去杠杆和更好支持实体经济等目标，保持流动性合理充裕。与要素市场化配置机制相关改革紧密结合，进一步改善货币政策传导机制，提高直接融资比重，解决好民营企业和小微企业融资难融资贵问题。结构性政策要强化体制机制建设，坚持向改革要动力，强化竞争政策的基础性地位，创造公平竞争的制度环境，鼓励中小企业加快成长。社会政策要强化兜底保障功能，实施就业优先政策，确保群众基本生活底线，寓管理于服务之中。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">另一方面，在着力稳增长、保民生、稳大局的同时，要以更大的努力在必须坚持以供给侧结构性改革为主线不动摇，更多采取改革的办法，更多运用市场化、法治化手段，在“巩固、增强、提升、畅通”8个字上下功夫。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">要巩固“三去一降一补”成果，在几年来去产能、去杠杆、去库存、降成本、补短板的工作基础上，明年要推动更多产能过剩行业加快出清，淘汰低水平落后产能；要通过相关改革进一步降低全社会各类营商成本；要结合扩大内需、增加有效投资等目标，加大基础设施等领域补短板力度。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">要增强微观主体活力，发挥企业和企业家主观能动性，通过着力深化改革，建立公平开放透明的市场规则和法治化营商环境，促进正向激励和优胜劣汰，发展更多优质企业。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">要提升产业链水平，注重利用技术创新和规模效应形成新的竞争优势，培育和发展新的产业集群。加快传统产业改造升级，加快新兴产业健康可持续发展。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">要畅通国民经济循环，着力改革和完善要素市场化配置的相关体制机制，加快建设统一开放、竞争有序的现代市场体系，提高市场在人力、资金、技术等生产要素配置方面的决定性作用，进而提高金融体系服务实体经济能力，形成国内市场和生产主体、经济增长和就业扩大、金融和实体经济良性循环。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">推进供给侧结构性改革，重点要在经济体制改革上着力，重点在产权制度和要素市场化配置机制的完善上着力。从基本经济制度和市场体系完善方面，为经济发展方式转变和经济高质量发展奠定制度基础，在市场竞争对企业的良性引导下使我国经济质量效益、绿色清洁的发展特点日益明显。</p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; clear: both; color: rgb(51, 51, 51); font-family: -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; text-align: justify; white-space: normal; text-indent: 2em; line-height: 1.75em;">总之，按照稳中求进的总体部署，2019年要具体在推动制造业高质量发展、促进形成强大国内市场、扎实推进乡村振兴战略、促进区域协调发展、加快经济体制改革、推动全方位对外开放、加强保障和改善民生等7个方面把各项工作做实做细，使我国发展拥有的足够韧性、巨大潜力充分发挥出来，把我国经济长期向好的势头充分展现出来！在以习近平同志为核心的党中央的坚强领导下，全国上下一心一意谋发展，千帆竞发争上游，坚定信心，埋头苦干，我国经济稳中向好势头就一定能够不断增强，持续健康、平稳较快、提质增效、绿色清洁发展的特点就一定会日益鲜明。（张立群&nbsp;作者系国务院发展研究中心研究员）</p><p><br/></p>
+			
+		  </div>
+		  <div class="source">来源： 经济日报</div>
+		  <div class="msg1"><b>作者：本站编辑 </b><b>浏览次数：<span id="views"></b></span>
+		  <!--访问量  -->
+			<script type="text/javascript">
+				$(function() {
+					Cms.viewCount("","7639");
+				});
+			</script>
+		</div>
+	  </div>
+	  
+	  
+	</div>
+</div>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<div class="footer">
+  <div class="mar">
+    <div class="img"><img src="/r/cms/ppp/ppp/newPPP/images/footer-img.png" width="50" height="62" /></div>
+    <div class="dis">
+	<script src="/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$.cookie("_site_id_cookie","82",{path: '' });
+		Cms.siteFlowShow("");
+       	/* Cms.siteFlow("", location.href, document.referrer, "true"); */
+	</script>
+      <div class="guild" style="color:#fff;">网站访问总量：<span id="pv1"></span></div>
+    
+	  
+      <div class="guild">
+       <a href="http://www.cpppc.org/zh/ppplxwm/index.jhtml">联系我们</a>
+<!--
+       <i>|</i>
+
+            <a href="http://www.cpppc.org/zh/jrwm/index.jhtml">加入我们</a>
+-->
+<i>|</i><a href="#">友情链接</a><i>|</i><a href="#">网站地图.</a></div>
+      <div class="copyr">政府和社会资本合作中心 © · All Rights Reserved <br />
+        京ICP备07504037号-2 京公网安备110102005872号-2 </div>
+    </div>
+  </div>
+</div>
+<!--<div id="code">
+<div class="con"><img src="/r/cms/ppp/ppp/newPPP/images/code.png" width="105" height="135" /></div>
+<div class="con" style="margin-top:10px;"><img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png" width="105" height="135" /></div>
+</div>-->
+<!--<div id="tz" style="z-index: 999999; right: 10px;width: 242px;height: 110px;background: #4F7AAF;position: fixed;bottom: 10px;border-radius: 5px 0 0 5px;font-family: '微软雅黑';">
+	<a href="javascript:" onclick="toClose();" style="width: 30px;height: 22px;line-height: 22px;display: block;float: right;color:#fff;font-size:12px;">关闭</a>
+	<div style="width:234px;height:120px; margin:15px 0 0 10px;">
+		<p style="text-align:center;font-size: 16px;color: #fff;line-height: 22px;">通知</p>
+		<p style="text-align:center;font-size: 14px;color: #fff;line-height: 22px;margin-top:10px;">网站维护中！</p>
+                <p style="text-align:right;font-size: 14px;color: #fff;line-height: 22px;margin-right:8px;">2017-08-22</p>
+	</div>
+</div>
+<script type="text/javascript"> 
+	function toClose(){
+		$("#tz").css("display","none");
+	}
+</script>-->
+<!--<div style="position: fixed;top: 35%;left: 4%;z-index: 1;width: 105px;height: 260px;z-index: 1;">
+      <a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+      <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" width="105"  />
+      </a>
+</div>
+<script type="text/javascript"> 
+	Cms.siteFlow("", location.href, document.referrer); 
+	$.cookie("_site_id_cookie","82",{path: '' });
+</script>-->
+<div class="right-bar">
+	<div class="rightBar-con">
+		<div class="domnLoad">
+			<div class="downLoadCon">
+				<a href="http://www.cdmfund.org/pppweb/ppp/download/downloadAPK.do?fileName=China PPP Map.apk">
+				  <img src="/r/cms/ppp/ppp/newPPP/images/cn.png" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div class="rwm">
+			<div class="rwmCon">
+				<img src="/r/cms/ppp/ppp/newPPP/images/code.png" />
+				<img src="/r/cms/ppp/ppp/newPPP/images/ppp_ma.png"/>
+			</div>
+		</div>
+		<div class="btnTop"></div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $(".rightBar-con>div").hover(function(){
+            $(this).children().addClass("show").parent().siblings().children().removeClass("show");
+        },function(){
+            $(this).children().removeClass("show");
+        });
+
+        $(".btnTop").click(function(){
+            $(document).scrollTop(0);
+        });
+         Cms.channelViewCount("","538");
+		Cms.siteFlow("", location.href, document.referrer, "true");
+    })
+</script></body>
+</html>

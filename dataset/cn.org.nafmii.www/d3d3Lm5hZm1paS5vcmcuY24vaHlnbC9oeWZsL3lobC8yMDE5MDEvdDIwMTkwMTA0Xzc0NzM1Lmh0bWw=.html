@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <title> 外资银行（47家）</title>
+    <STYLE type=text/css>
+        *{margin:0px}
+        BODY { FONT-SIZE: 12px }
+        #slidingBlock { BORDER-BOTTOM: #c2d3e5 1px solid; BORDER-LEFT: #c2d3e5 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 446px; PADDING-RIGHT: 1px; BORDER-TOP: #c2d3e5 1px solid; BORDER-RIGHT: #c2d3e5 1px solid; PADDING-TOP: 1px; over-flow: hidden; margin:0px;}
+        #slidingBlock div { TEXT-ALIGN: center; LINE-HEIGHT: 25px; WIDTH: 94px; FLOAT: left; HEIGHT: 27px; FONT-SIZE: 12px; over-flow: hidden; }
+        #slidingBlock div.menuNo { BACKGROUND-IMAGE: url(../../../../images/Home_CN/images/slidingMenuLine.gif); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 1px 2px; COLOR: #00569f; FONT-WEIGHT: bold }
+        #slidingBlock div.menuOn { BACKGROUND-IMAGE: url(../../../../images/Home_CN/images/slidingMenu.gif); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 2px 2px; COLOR: #ffffff; FONT-WEIGHT: bold }
+        #slidingBlock DIV.slidingList_none { DISPLAY: none }
+        #slidingBlock DIV.slidingList { MARGIN: 0px; HEIGHT: 125px }
+        #slidingBlock DIV.slidingList UL { PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px }
+        #slidingBlock DIV.slidingList LI { LINE-HEIGHT: 20px; HEIGHT: 20px }
+        #slidingBlock DIV.slidingList LI SPAN { COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: normal }
+    </STYLE>
+    <SCRIPT src="../../../../images/Home_CN/js/jquery-1.4.2.js"></SCRIPT>
+    <LINK rel=stylesheet type=text/css href="../../../../images/Home_CN/css/home_css.css">
+    <SCRIPT language=JavaScript src="../../../../images/Home_CN/js/template.js"></SCRIPT>
+    <SCRIPT src="../../../../images/Home_CN/js/menu.js"></SCRIPT>
+    <SCRIPT src="../../../../images/Home_CN/js/mt_dropdown_initialize.js"></SCRIPT>
+    <SCRIPT src="../../../../images/Home_CN/js/mt_dropdownC.js"></SCRIPT>
+    <SCRIPT type=text/javascript src="../../../../images/Home_CN/js/MSClass.js"></SCRIPT>
+    <SCRIPT language=javascript src="../../../../images/Home_CN/js/fly.js"></SCRIPT>
+    <LINK href="../../../../images/Home_CN/css/mt_style.css" type=text/css rel=stylesheet>
+    <META name=GENERATOR content="MSHTML 8.00.6001.18702">
+</head>
+<body>
+<script type="text/javascript">
+    var hostname=location.host;
+   // var app_web_site="http://www.nafmii.org.cn/cmsauth";
+    var app_web_site="http://"+hostname+"/cmsauth";
+    var threadTime = 1000*30;
+    var start;
+
+    function getCommDate() {
+        var today = new Date();
+        var year_ = today.getFullYear();
+        var month_ = today.getMonth() + 1;
+        var date_ = today.getDate();
+        var day = today.getDay();
+        var day_;
+        switch (day) {
+            case 0:day_ = "日";break;
+            case 1:day_ = "一";break;
+            case 2:day_ = "二";break;
+            case 3:day_ = "三";break;
+            case 4:day_ = "四";break;
+            case 5:day_ = "五";break;
+            case 6:day_ = "六";break;
+        }
+        var str = "<font color=\"#FF0000\">"+ year_ + "</font>年<font color=\"#FF0000\">" + month_ + "</font>月<font color=\"#FF0000\">" + date_ + "</font>日";
+//        var str = "<font color=\"#FF0000\">"+ year_ + "</font>年<font color=\"#FF0000\">" + month_ + "</font>月<font color=\"#FF0000\">" + date_ + "</font>日&nbsp;&nbsp;星期" + day_ + "";
+        return str;
+    }
+
+
+    function rep_passowrd() {
+        $('#password_rep').skygqbox({title:'修改密码'});
+    }
+    function hiddenRep_passowrd() {
+        $.skygqbox.hide();
+    }
+
+
+    function doPasswordRep() {
+        var pass_old = $("#pass_old").attr("value");
+        var pass_new = $("#pass_new").attr("value");
+        var pass_new_rep = $("#pass_new_rep").attr("value");
+        if(pass_old==''){
+            alert("请输入原密码！");return;
+        }
+        if(pass_new==''){
+            alert("请输入新密码！");return;
+        }
+        if(pass_new_rep==''){
+            alert("请输入确认密码！");return;
+        }
+        if(pass_new!=pass_new_rep){
+            alert("两次输入新密码不一样！");return;
+        }
+        if(pass_new.length<6){
+            alert("密码至少需要6位！");return;
+        }
+
+        $.ajax({
+            type:'post',
+            data:{'pass_old':pass_old,'password':pass_new},
+            dataType:'json',
+            url:app_web_site+'/cmsAuth/xhhy/webUser/doPasswordRep.action?date='+(new Date()).getTime(),
+
+            success:function (responseText, textStatus) {
+                $("#pass_old").val("");
+                $("#pass_new").val("");
+                $("#pass_new_rep").val("");
+                if (responseText.success == 'true') {
+                    hiddenRep_passowrd();
+                    alert("密码修改成功");
+                } else {
+                    alert(responseText.loginError);
+
+                }
+            },
+            error:function () {
+                alert("服务器出错，请联系管理员！");
+            }
+        });
+    }
+
+    function loginQtSystem() {
+        var account = $("#account").attr("value");
+        var password = $("#password").attr("value");
+        if(account==''){
+            alert("请输入账号！");return;
+        }
+        if(password==''){
+            alert("请输入密码！");return;
+        }
+        $.ajax({
+            type:'post',
+            data:{'account':account, 'password':password},
+            dataType:'json',
+            url:app_web_site+'/cmsAuth/xhhy/webUser/loginAjax.action?date='+(new Date()).getTime(),
+
+            success:function (responseText, textStatus) {
+                if (responseText.success == 'true') {
+                    document.getElementById("loginFromA").style.display="none";
+                    document.getElementById("loginFromB").style.display="";
+                    var str="的会员代表";
+                    var sname=responseText.name;
+                    if(responseText.xhyh) {
+                        str="";
+                        sname=responseText.account;
+                    }
+                    $("#loginUserMessage").html("<strong>"+sname+"</strong>"+str+"，您好！<br>欢迎使用协会网站会员之家！<br>今天是"+getCommDate()+"，祝您工作顺利！");
+                    document.getElementById("hidden_YanjiuFenxi").style.display="block" ;
+                    $("#account").val("");
+                    $("#password").val("");
+                    window.location.href="../../../../hyzj/";
+                } else {
+
+                    document.getElementById("loginFromA").style.display="";
+                    document.getElementById("loginFromB").style.display="none";
+                    $("#loginUserMessage").html("");
+                    document.getElementById("hidden_YanjiuFenxi").style.display="none" ;
+                    alert(responseText.loginError);
+
+                }
+            },
+            error:function () {
+                alert("服务器出错，请联系管理员！");
+                checkLogin();
+            }
+        });
+    }
+
+
+    function checkLogin() {
+        $.ajax({
+            type:'get',
+            dataType:'json',
+            url:app_web_site+'/cmsAuth/xhhy/webUser/checkLogin.action?date='+(new Date()).getTime(),
+            success:function (responseText, textStatus) {
+
+                if (responseText.success == 'true') {
+                    if (document.getElementById("loginFromA") != null) {
+                        document.getElementById("loginFromA").style.display = "none";
+                    }
+                    if (document.getElementById("loginFromB") != null) {
+                        document.getElementById("loginFromB").style.display = "";
+                    }
+                    var str="的会员代表";
+                    var sname=responseText.name;
+                    if(responseText.xhyh) {
+                        str="";
+                        sname=responseText.account;
+                    }
+
+                    $("#loginUserMessage").html("<strong>"+sname+"</strong>"+str+"，您好！<br>欢迎使用协会网站会员之家！<br>今天是"+getCommDate()+"，祝您工作顺利！");                    document.getElementById("hidden_YanjiuFenxi").style.display="block"
+                } else {//无登陆
+                    if (document.getElementById("loginFromA") != null) {
+                        document.getElementById("loginFromA").style.display = "";
+                    }
+                    if (document.getElementById("loginFromB") != null) {
+                        document.getElementById("loginFromB").style.display = "none";
+                    }
+                    $("#loginUserMessage").html("");
+                    document.getElementById("hidden_YanjiuFenxi").style.display = "none";
+                }
+            },
+            error:function () {
+
+
+            }
+        });
+
+    }
+
+    function logout() {
+        $.ajax({
+            type:'get',
+            dataType:'json',
+            url:app_web_site+'/cmsAuth/xhhy/webUser/loginOut.action',
+            beforeSend:function (XMLHttpRequest) {
+            },
+            success:function (responseText, textStatus) {
+                if (responseText.success) {
+                    document.getElementById("loginFromA").style.display="";
+                    document.getElementById("loginFromB").style.display="none";
+                    $("#loginUserMessage").html("");
+                    document.getElementById("hidden_YanjiuFenxi").style.display = "none";
+                 } else {
+                    alert('退出失败:' + responseText.msg);
+                }
+            },
+            complete:function (XMLHttpRequest, textStatus) {
+                //HideLoading();
+            },
+            error:function () {
+                //请求出错处理
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        checkLogin();
+//                    start = setInterval("checkLogin()", threadTime);
+    });
+</script>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=1001 align=center>
+    <TBODY>
+    <TR>
+        <TD height=118 vAlign=top background=../../../../images/Home_CN/images/top_logo.gif align=right>
+            <TABLE border=0 cellSpacing=0 cellPadding=0>
+                <TBODY>
+                <TR>
+                    <TD align=right>
+                        <table><tr>
+                            <td width="60"><a href="../../../../fzlm/rczp/" class='white'>人才招聘</a></td>
+                            <td width="60"> <a href="../../../../fzlm/GYWM/201202/t20120227_4278.html" target="_blank" class="white">关于我们</a></td>
+                            <td width="60"> <a href="../../../../fzlm/LXWM/201202/t20120227_4286.html" target="_blank" class="white">联系我们</a></td>
+                            <td width="60"><a href="../../../../fzlm/WZDH/" class='white'>网站导航</a></td>
+                            <td width="60"><A class=white href="../../../..//english"><SPAN
+                                    style="FONT-FAMILY: Arial; COLOR: #fdff3b; FONT-SIZE: 14px; FONT-WEIGHT: bold">English</SPAN>
+                            </A></td>
+                            <td width="10"></td>
+                        </tr>
+                        </table>
+                    </TD>
+                </TR>
+                </TBODY>
+            </TABLE>
+        </TD>
+    </TR>
+    <TR>
+        <TD height=28 vAlign=center background=../../../../images/Home_CN/images/top_dh.gif>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+                <TBODY>
+                <TR>
+                    <TD vAlign=center width=3 align=middle></TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <A id=menu0 class=white onmouseover="popmenu(this)" onmouseout="hhide(this)" href="../../../../">首 页</A>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../ggtz/" id='menu1' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>公告与通知</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../zywyh/" id='menu2' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>专业委员会</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../flfg/" id='menu3' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>法律法规</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../zlgz/" id='menu4' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>自律规则</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../dcmfx/" id='menu5' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>DCM注册发行</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../zlgl/" id='menu6' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>自律管理</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../" id='menu7' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>会员管理与服务</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../ywpx/" id='menu8' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>业务培训</a>
+                    </TD>
+                    <TD class=nav_bg vAlign=center align=middle>
+                        <a href="../../../../scyjfx/" id='menu9' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>市场研究与分析</a>
+                    </TD>
+                    <TD vAlign=center class=nav_bg align=middle>
+                        <a href="../../../../jrscyj/" id='menu10' class='white' onmouseover='popmenu(this)' onmouseout='hhide(this)'>金融市场研究</a>
+                    </TD>
+                    <TD vAlign=center align=middle id="hidden_YanjiuFenxi" style="display:none">
+                        <a href="../../../../hyzj/" id='menu11' class='link_yellow' onmouseover='popmenu(this)' onmouseout='hhide(this)'>会员之家</a>
+
+                    </TD>
+
+                    <TD vAlign=center width=5 align=middle></TD>
+                    <TD width=182 align=middle>
+                        <form id="queryForm" name="queryForm" method="post" action="/solr/nafmii/search_list2.jsp" accept-charset="UTF-8" style="margin:0px;" target="_blank">
+                            <table width="168" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr><td width="113">
+                                    <input name="actionName" type="hidden" value="submit" />
+                                    <input name="searchText" disabled="disabled" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''" onblur="if(this.value=='')this.value='请输入关键词'" autocomplete="off" style="width:110px;color:#335481" /></td><td width="55" align="center"><button  disabled = "disabled" style="width:40px;height:20px; background:url(../../../../images/Home_CN/images/search.jpg);border:0px;"   alt="搜索" onclick="return validateForm();"  />
+
+
+                                </td>
+                                </tr></table>
+                        </form>
+                        <script>
+                            //去左右空格
+                            function Trim() {
+                                return this.replace(/\s+$|^\s+/g,"");
+                            }
+                            String.prototype.Trim=Trim;
+                            function validateForm(){
+                                if (queryForm.searchText.value.Trim().length==0 || queryForm.searchText.value =='请输入关键词'){
+                                    alert('请输入查询的内容!');
+                                    return false;
+                                } else {
+                                    queryForm.submit();
+                                    return true;
+                                }
+                            }
+                        </script>
+                    </TD>
+                </TR>
+                </TBODY>
+            </TABLE>
+        </TD>
+    </TR>
+    <TR>
+        <TD height=5 bgcolor="#FFFFFF"></TD>
+    </TR>
+    </TBODY>
+</TABLE>
+<SCRIPT language=javascript>
+if (mtDropDown.isSupported()) {
+    var ms = new mtDropDownSet(mtDropDown.direction.down, 0, 0, mtDropDown.reference.bottomLeft);
+    var menu1 = ms.addMenu(document.getElementById("menu1"));
+    var count = 11;
+    var menuArray = new Array();
+    var name;
+    for (var i = 0; i <= count; i++) {
+        name = "menu" + i;
+        menuArray[i] = ms.addMenu(document.getElementById(name));
+    }
+
+    menuArray[1].addItem("- 公告", "../../../../ggtz/gg/");
+    var subMenu0 = menuArray[1].addMenu(menuArray[1].items[0]);
+
+    menuArray[1].addItem("- 通知", "../../../../ggtz/tz/");
+    var subMenu0 = menuArray[1].addMenu(menuArray[1].items[1]);
+
+    menuArray[2].addItem("- 专业委员会委员名单", "../../../../zywyh/wymd/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[0]);
+
+    menuArray[2].addItem("- 专业委员会工作动态", "../../../../zywyh/gzdt/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[1]);
+
+    menuArray[2].addItem("- 债券市场专业委员会", "../../../../zywyh/zqsc/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[2]);
+
+    menuArray[2].addItem("- 金融衍生品专业委员会", "../../../../zywyh/jrysp/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[3]);
+
+    menuArray[2].addItem("- 金币市场专业委员会", "../../../../zywyh/jbsc/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[4]);
+
+    menuArray[2].addItem("- 信用评级专业委员会", "../../../../zywyh/xypj/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[5]);
+
+    menuArray[2].addItem("- 交易专业委员会", "../../../../zywyh/jjyw/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[6]);
+
+    menuArray[2].addItem("- 法律专业委员会", "../../../../zywyh/flzywyh/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[7]);
+ menuArray[2].addItem("- 会计专业委员会", "../../../../zywyh/kjzywyh/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[8]);
+
+ menuArray[2].addItem("- 资产证券化暨结构化融资专业委员会", "../../../../zywyh/jghwyh/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[9]);
+ menuArray[2].addItem("- 从业人员培训专家委员会", "../../../../zywyh/crryzj/");
+    var subMenu0 = menuArray[2].addMenu(menuArray[2].items[10]);
+
+    menuArray[3].addItem("- 相关法律", "../../../../flfg/xgfl/");
+    var subMenu0 = menuArray[3].addMenu(menuArray[3].items[0]);
+
+    menuArray[3].addItem("- 人行规章", "../../../../flfg/rhgz/");
+    var subMenu0 = menuArray[3].addMenu(menuArray[3].items[1]);
+
+    menuArray[3].addItem("- 其他规章", "../../../../flfg/qtgz/");
+    var subMenu0 = menuArray[3].addMenu(menuArray[3].items[2]);
+
+    menuArray[5].addItem("- 注册通知书", "../../../../dcmfx/tzs/");
+    var subMenu0 = menuArray[5].addMenu(menuArray[5].items[0]);
+
+    subMenu0.addItem("- 超短期融资券（SCP）", "../../../../dcmfx/tzs/scp/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 中小企业集合票据（SMECN）", "../../../../dcmfx/tzs/smecn/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 短期融资券（CP）", "../../../../dcmfx/tzs/cp/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu0.addItem("- 中期票据（MTN）", "../../../../dcmfx/tzs/mtn/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[3]);
+
+    subMenu0.addItem("- 定向工具（PPN）", "../../../../dcmfx/tzs/ppn/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[4]);
+
+   subMenu0.addItem("- 资产支持票据（ABN）", "../../../../dcmfx/tzs/zczcpj/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[5]);
+ 
+  subMenu0.addItem("- 项目收益票据（PRN）", "../../../../dcmfx/tzs/PRN1/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[6]);
+
+ subMenu0.addItem("- 债务融资工具（DFI）", "../../../../dcmfx/tzs/dfi/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[7]);
+
+ subMenu0.addItem("- 绿色债务融资工具（GN）", "../../../../dcmfx/tzs/gn/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[8]);
+
+    subMenu0.addItem("- 注册额度变更", "../../../../dcmfx/tzs/zced/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[9]);
+
+    menuArray[5].addItem("- 市场监测", "../../../../dcmfx/scjc/");
+    var subMenu0 = menuArray[5].addMenu(menuArray[5].items[1]);
+
+    menuArray[5].addItem("- 注册工作信息", "../../../../dcmfx/zcgzxx/");
+    var subMenu0 = menuArray[5].addMenu(menuArray[5].items[2]);
+
+    menuArray[6].addItem("- 债务融资市场自律管理", "../../../../zlgl/zwrz/");
+    var subMenu0 = menuArray[6].addMenu(menuArray[6].items[0]);
+
+    subMenu0.addItem("- 信息披露", "../../../../zlgl/zwrz/xxpl/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+     subMenu1.addItem("- 定向工具发行情况公告", "../../../../zlgl/zwrz/xxpl/dxgjfx/");
+    subMenu1.addItem("- 评级报告", "../../../../zlgl/zwrz/xxpl/pjbg/");
+    subMenu1.addItem("- 持有人会议", "../../../../zlgl/zwrz/xxpl/cyrhy/");
+    subMenu1.addItem("- 其他文章", "../../../../zlgl/zwrz/xxpl/qtwz/");
+
+
+    subMenu0.addItem("- 后续管理", "../../../../zlgl/zwrz/hxgl/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 自律处分", "../../../../zlgl/zwrz/zlcf/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu0.addItem("- 评级机构资质名单", "../../../../zlgl/zwrz/pjjgzzmd/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+
+    menuArray[6].addItem("- 市场交易自律管理", "../../../../zlgl/scjy/");
+    var subMenu0 = menuArray[6].addMenu(menuArray[6].items[1]);
+
+    subMenu0.addItem("- 协议备案名单", "../../../../zlgl/scjy/xymd/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 交易商资质名单", "../../../../zlgl/scjy/jyszz/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 做市商评价", "../../../../zlgl/scjy/zsspj/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu1.addItem("- 情况通报", "../../../../zlgl/scjy/zsspj/qktb/");
+    subMenu1.addItem("- 评价情况", "../../../../zlgl/scjy/zsspj/pjqk/");
+    subMenu1.addItem("- 价差情况", "../../../../zlgl/scjy/zsspj/jcqk/");
+    subMenu1.addItem("- 质量情况", "../../../../zlgl/scjy/zsspj/zlqk/");
+    subMenu1.addItem("- 合规情况", "../../../../zlgl/scjy/zsspj/hgqk/");
+
+
+    menuArray[6].addItem("- 标准协议文本", "../../../../zlgl/bzxy/");
+    var subMenu0 = menuArray[6].addMenu(menuArray[6].items[2]);
+
+    subMenu0.addItem("- 金融衍生产品交易主协议", "../../../../zlgl/bzxy/jrys/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 贷款转让交易主协议", "../../../../zlgl/bzxy/dkzr/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 凭证特别版主协议", "../../../../zlgl/bzxy/tbpz/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+	
+    subMenu0.addItem("- 债券回购交易主协议", "../../../../zlgl/bzxy/zqhgjyzxy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[3]);
+
+    subMenu0.addItem("- 票据交易主协议", "../../../../zlgl/bzxy/pjjy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[4]);
+
+
+    menuArray[6].addItem("- 信用风险缓释工具自律管理", "../../../../zlgl/xyfx/");
+    var subMenu0 = menuArray[6].addMenu(menuArray[6].items[3]);
+
+    subMenu0.addItem("- CRM信息披露", "../../../../zlgl/xyfx/xxpl/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu1.addItem("- CRMA信息披露", "../../../../zlgl/xyfx/xxpl/xxpl/");
+    subMenu1.addItem("- CRMW创设登记通知书", "../../../../zlgl/xyfx/xxpl/crmwcsdj/");
+    subMenu1.addItem("- CRMW信息披露", "../../../../zlgl/xyfx/xxpl/crmwxxpl/");
+    subMenu0.addItem("- CRM新闻", "../../../../zlgl/xyfx/xw/");
+
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- CRM业务规则", "../../../../zlgl/xyfx/ywgz/");
+
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu0.addItem("- CRM机构资质", "../../../../zlgl/xyfx/jgzz/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[3]);
+
+
+    menuArray[7].addItem("- 入会申请", "../../../rhsq/");
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[0]);
+
+    menuArray[7].addItem("- 会员分类", "../../");
+
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[1]);
+
+    subMenu0.addItem("- 银行类金融机构", "../");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 非银行类金融机构", "../../fyhl/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 信用增进机构", "../../xyzj/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu0.addItem("- 企业", "../../qy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[3]);
+
+    subMenu0.addItem("- 中介机构", "../../zjjg/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[4]);
+
+    //--Kuangwenqing 20170705 修改 添加特别会员--
+    subMenu0.addItem("- 特别会员", "../../tbhy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[5]);
+
+    subMenu0.addItem("- 其他", "../../qt/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[6]);
+
+    //--Kuangwenqing 20170705 修改 添加特别会员 结束--
+
+    menuArray[7].addItem("- 会员动态", "../../../hydt/");
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[2]);
+
+    subMenu0.addItem("- 欢迎新会员", "../../../hydt/hyxhy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 会员信息变更", "../../../hydt/xxbg/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    subMenu0.addItem("- 会员资格变更", "../../../hydt/zgbg/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[2]);
+
+    subMenu1.addItem("- 已退会机构名单", "../../../hydt/zgbg/yth/");
+    subMenu0.addItem("- 会员成就", "../../../hydt/hycj/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[3]);
+
+    subMenu0.addItem("- 会员之声", "../../../hydt/hyzs/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[4]);
+
+    menuArray[7].addItem("- 会员管理", "../../../hygl/");
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[3]);
+
+    subMenu0.addItem("- 会员评价", "../../../hygl/hypj/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu1.addItem("- 通知与通报", "../../../hygl/hypj/tztb/");
+
+    subMenu0.addItem("- 承销业务相关会员名单", "../../../hygl/cxhy/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+    menuArray[7].addItem("- 会员服务", "../../../hyfw/");
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[4]);
+
+    subMenu0.addItem("- 投资人服务", "../../../hyfw/tzrfw/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[0]);
+
+    subMenu0.addItem("- 发行人服务", "../../../hyfw/fxrfw/");
+    var subMenu1 = subMenu0.addMenu(subMenu0.items[1]);
+
+
+
+    menuArray[7].addItem("- 会员信息管理系统", "../../../glxt/");
+    var subMenu0 = menuArray[7].addMenu(menuArray[7].items[5]);
+
+    menuArray[8].addItem("- NAFMII论坛", "../../../../ywpx/lunt/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[0]);
+
+    menuArray[8].addItem("- 培训通知", "../../../../ywpx/pxtz/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[1]);
+
+    menuArray[8].addItem("- 在线报名", "http://peixun.nafmii.org.cn/txnT21AAA.do");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[2]);
+
+    menuArray[8].addItem("- 培训教材", "../../../../ywpx/pxjc/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[3]);
+
+    menuArray[8].addItem("- 成绩查询", "../../../../ywpx/cjcx/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[4]);
+
+    menuArray[8].addItem("- 交流园地", "../../../../ywpx/jlyd/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[5]);
+
+    menuArray[8].addItem("- 学员风采", "../../../../ywpx/xyfc/");
+    var subMenu0 = menuArray[8].addMenu(menuArray[8].items[6]);
+ 
+
+    menuArray[9].addItem("- 定价估值", "../../../../scyjfx/djgz_web/");
+    var subMenu0 = menuArray[9].addMenu(menuArray[9].items[0]);
+
+    menuArray[11].addItem("- 信息与通知", "../../../../hyzj/xxytz/");
+    var subMenu0 = menuArray[11].addMenu(menuArray[11].items[0]);
+
+
+    menuArray[11].addItem("- 《金融市场研究》期刊", "../../../../hyzj/jrscyj/");
+    var subMenu0 = menuArray[11].addMenu(menuArray[11].items[1]);
+	
+	
+    menuArray[11].addItem("- 在线交流", "../../../../hyzj/zxjl/");
+    var subMenu0 = menuArray[11].addMenu(menuArray[11].items[2]);
+
+    mtDropDown.renderAll();
+}
+init();
+</SCRIPT>
+<!--table 1 start-->
+<table width="980" align="center" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="98%" height="231" align="center" valign="top"><!--table 2 start-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:8px; line-height:30px;">
+                <tr>
+                    <td align="left"><font style="font-size:12px;">您目前所在位置：</font>
+                        <a href="../../../../" class='word CurrChnlCls'>首页</a>&gt;<a href="../../../" class='word CurrChnlCls'>会员管理与服务</a>&gt;<a href="../../" class='word CurrChnlCls'>会员分类</a>&gt;<a href="../" class='word CurrChnlCls'>银行类金融机构</a>&gt;<font color="#FF0000" style="font-size:12px">正文</font> </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#335481" height="2"></td>
+                </tr>
+            </table>
+            <!--table 2 end-->
+            <!--table 3 start-->
+            <table width="93%" height border="1" align="center" cellpadding="15" cellspacing="0" class="blue_border">
+                <tr>
+                    <td><table width=100%><tr><td align="left">
+                        <div class=TRS_Editor><DIV class='TRS_Editor'><style id=_Custom_V6_Style_>
+/*.TRS_Editor TABLE{font-family:汉仪大宋简;font-size:14px;}
+.TRS_Editor{font-family:汉仪大宋简;font-size:14px;}
+.TRS_Editor P{font-family:汉仪大宋简;font-size:14px;margin-top:1em;margin-bottom:1em;line-height:2;text-indent:28px;}
+.TRS_Editor H1,.TRS_Editor H2,.TRS_Editor H3,.TRS_Editor H4,.TRS_Editor H5,.TRS_Editor H6,.TRS_Editor HR,.TRS_Editor BLOCKQUOTE,.TRS_Editor DL,.TRS_Editor DD,.TRS_Editor DT,.TRS_Editor OL,.TRS_Editor UL,.TRS_Editor LI,.TRS_Editor PRE,.TRS_Editor CODE,.TRS_Editor TEXTAREA,.TRS_Editor SELECT,.TRS_Editor CITE,.TRS_Editor PRE,.TRS_Editor CENTER,.TRS_Editor TABLE,.TRS_Editor DIV{margin-top:1em;margin-bottom:1em;line-height:2;text-indent:28px;}
+.TRS_Editor FORM,.TRS_Editor FIELDSET,.TRS_Editor LEGEND,.TRS_Editor SELECT,.TRS_Editor TR,.TRS_Editor TD,.TRS_Editor TH{margin-top:1em;margin-bottom:1em;line-height:2;}
+.TRS_Editor BUTTON,.TRS_Editor OPTION,.TRS_Editor ADDRESS,.TRS_Editor DFN,.TRS_Editor EM,.TRS_Editor VAR,.TRS_Editor KBD,.TRS_Editor INPUT,.TRS_Editor SMALL,.TRS_Editor SAMP,.TRS_Editor SUB,.TRS_Editor SUP,.TRS_Editor SPAN,.TRS_Editor A,.TRS_Editor B,.TRS_Editor I,.TRS_Editor U,.TRS_Editor S,.TRS_Editor STRONG,.TRS_Editor LABEL,.TRS_Editor IMG,.TRS_Editor BR,.TRS_Editor FONT{margin-top:0;margin-bottom:0;}*/
+</style>
+外资银行（47家）
+</DIV></div>
+                        <script>
+                            (function(){
+                                var pEls = document.body.getElementsByTagName("P");
+                                for(var i=0,len=pEls.length;i<len;i++){
+                                    var p = pEls[i];
+                                    if(!!p.align){
+                                        p.style.textAlign = p.align;
+                                    }
+                                    if("justify"==p.align){
+                                        p.style.textJustify="distribute-all-lines";
+                                        p.style.textAlign="justify";
+
+
+                                    }
+                                }
+                            })()
+                        </script>
+                    </td></tr>
+                        <tr><td height="25" valign="top" align="left">
+                            <div class='model_file'><img src='../../../../images/Home_CN/images/ico_Attachments.gif' width='20' height='20' />&nbsp;<a href="./P020190104418003035540.pdf" class='blue_pdf'>外资银行（47家）.pdf</a></div>
+                        </td></tr>
+                        <script type="text/javascript">
+                            var focus_width = 1024;
+                            var focus_height = 600;
+                            var length=0;
+                            var firstUrl="";
+                            var as = document.getElementsByTagName("A");
+                            var i = 0;
+                            for (i = 0; i < as.length; i++) {
+                                var a = as[i];
+                                if (a.className != "blue_pdf")
+                                    continue;
+                                var reaFile = a.href;
+                                reaFile = reaFile.substring(reaFile.lastIndexOf("/") + 1);
+//                                var realFile_Temp = "P" + reaFile.substring(1);
+                                if (reaFile.indexOf(".pdf") > 0){
+                                    length++;
+
+                                    var realUrl = "http://www.nafmii.org.cn/protect/" + reaFile.substring(0, 8) + "/" + reaFile.substring(0, 10) + "/" + reaFile.replace("pdf","swf");
+                                    var tempSpan = document.createElement("span");
+                                    tempSpan.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;<a href=javascript:showPdf('"+realUrl+"')>在线阅读</a>";
+                                    a.parentNode.appendChild(tempSpan);
+                                    if(length==1){
+                                        firstUrl=realUrl;
+
+                                    }
+                                }
+                            }
+                            function initFlash(){
+                                if(length==1){
+                                    document.getElementById("pdfShow").style.display="";
+                                    var str=flashObject(firstUrl);
+                                    document.getElementById("flashObjId").innerHTML=str;
+
+                                }
+                            }
+                            function showPdf(url){
+                                document.getElementById("pdfShow").style.display="none";
+                                var str=flashObject(url);
+                                document.getElementById("flashObjId").innerHTML=str;
+                                document.getElementById("pdfShow").style.display="";
+                                checkSwfExit(url);
+                            }
+
+                            function checkSwfExit(swf_url){
+                                $.ajax({
+                                    url: swf_url,
+                                    type: 'GET',
+                                    complete: function(response) {
+                                        if(response.status == 200) {
+//                                            alert('有效');
+                                        } else {
+                                            alert('此文件暂时无法提供预览功能，请您直接下载！');
+                                        }
+                                    }
+                                });
+
+                            }
+
+                            function flashObject(url){
+                                var str="";
+                                str=str+'<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="'+ focus_width +'" height="'+ focus_height +'">';
+                                str=str+'<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="'+url+'"><param name="quality" value="high"><param name="WMODE" value="transparent">';
+                                str=str+'<param name="menu" value="false"><param name=wmode value="opaque">';
+                                str=str+'<embed src="'+url+'" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" width="'+focus_width+'" height="'+focus_height+'" quality="High" bgcolor="#ffffff">';
+                                str=str+'</object>';
+                                return str;
+
+                            }
+                        </script>
+                        <tr style="display:none;" id="pdfShow" align="center">
+                            <td height="600">
+                                <div id="flashObjId"></div>
+                            </td></tr>
+
+                    </table>
+
+
+                    </td>
+                </tr>
+            </table>
+            <!--table 3 end-->
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    initFlash();
+</script>
+<!--table 1 end-->
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <tr>
+    <td height="3" bgcolor="#203E98"></td>
+  </tr>
+  <tr>
+    <td height="35" align="center" valign="bottom"><a href="../../../../fzlm/rczp/" target="_blank" class=gray>人才招聘</a>
+      <SPAN class=font_wh>　|　</SPAN>
+       <a href="../../../../fzlm/GYWM/201202/t20120227_4278.html" arget="_blank" class="gray">关于我们</a> 
+      <SPAN class=font_wh>　|　</SPAN>
+       <a href="../../../../fzlm/LXWM/201202/t20120227_4286.html" arget="_blank" class="gray">联系我们</a> 
+      <SPAN class=font_wh>　|　</SPAN>
+      <a href="../../../../fzlm/WZDH/" target="_blank" class=gray>网站导航</a>
+      <SPAN class=font_wh>　|　</SPAN>
+      
+    </td>
+  </tr>
+  <tr>
+    <td height="20" align="center">
+        <span style="font-size:12px">京ICP备08009794号</span>
+        &nbsp&nbsp
+        <IMG border=0 src="../../../../images/Home_CN/images/icon_yuewangga1.png" />
+        <span style="font-size:12px"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202007637">京公网安备11010202007637号</a></span>
+</td>
+  </tr>
+  <tr>
+    <td height="20" align="center"><span style="font-size:12px">中国银行间市场交易商协会所有未经允许请勿转载</span></td>
+  </tr>
+</table>
+<div style="display:none">
+<!--百度统计-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F508be7db52fd6da009f33b1d6a262bd3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+<div style="display:none">
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://neilshang.cn/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://neilshang.cn/piwik/piwik.php?idsite=1&rec=1" style="border:0" alt /></p></noscript>
+<!-- End Piwik Code -->
+</div>
+
+</body>
+</html>

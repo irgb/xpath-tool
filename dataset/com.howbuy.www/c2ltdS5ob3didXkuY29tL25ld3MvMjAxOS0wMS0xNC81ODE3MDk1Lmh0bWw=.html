@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="好买财富,好买基金研究中心,私募,私募基金,阳光私募,创新私募,私募净值,私募排名,固定收益,信托产品,私募股权,一对多,基金净值,每日净值,开放式基金,封闭式基金,基金排名,基金,基金网" />
+    <meta name="description" content="好买基金网（好买财富、好买基金研究中心），是中国领先的第三方投资顾问公司。好买财富拥有独立基金销售牌照，将为您提供公募基金、私募基金、私募股权基金、固定收益信托产品、FOF/TOT、一对多等上千种基金的投资建议和专业资产配置服务。每日提供即时的开放式基金净值，基金排名，基金评级，私募基金净值，私募基金排名。" />
+    <title>好买基金网 - 好买财富 | 基金 | 私募 | 信托 | 专业的投资顾问</title>
+<link rel="stylesheet" type="text/css" href="https://static.howbuy.com/??/css/www/index_201801/reset.css,/css/www/index_201801/yb_detail.css?v=a87ff67"/>
+<script type="text/javascript" src="https://static.howbuy.com/??/js/jquery/jquery.min.1.7.js,/js/vue/vue.2.5.17.js?v=cfcd208"></script>
+
+
+    <style type="text/css">
+        .content-report {
+            min-height: 0px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+			var app = new Vue({
+				el: '#app',
+				data:{
+					dlft:[],
+					rmzx:[],
+					xgyd:[],
+					keyword:'',
+					type:false
+				},
+				beforeCreate() {
+					var self = this;
+					//大佬访谈
+					$.ajax({
+						url: 'https://simu.howbuy.com/research/querydlft.htm?key=simu',
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+    									var oDate = new Date(d.publishTime);
+										t.push({
+											name: d.name,
+											corp: d.corp,
+											title: d.title,
+											img: d.img,
+    	    								url: d.url
+										});
+									}
+								}
+								self.dlft = t;
+							}
+						}
+					});
+					//最新资讯
+					$.ajax({
+						url:'https://simu.howbuy.com/research/queryNewNews.htm',
+						data:{
+							newsType:3,
+							newsId: "5817095"
+						},
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+										var oDate = new Date(d.publishTime);
+										var time = oDate.getFullYear() + "-" +
+												(oDate.getMonth() < 9 ? ("0" + (oDate.getMonth() + 1)) : (oDate.getMonth() + 1)) + "-" +
+												(oDate.getDate() < 10 ? ("0" + oDate.getDate()) : oDate.getDate()) + " " +
+												(oDate.getHours() < 10 ? ("0" + oDate.getHours()) : oDate.getHours()) + ":" +
+												(oDate.getMinutes() < 10 ? ("0" + oDate.getMinutes()) : oDate.getMinutes()) + ":" +
+												(oDate.getSeconds() < 10 ? ("0" + oDate.getSeconds()) : oDate.getSeconds());
+										t.push({
+											title: d.title,
+		    								url: "https://simu.howbuy.com/"+d.url,
+		    								publishTime:time
+										});
+									}
+								}
+								self.rmzx = t;
+							}
+						}
+					});
+
+					//相关阅读
+					$.ajax({
+						url:'https://simu.howbuy.com/research/queryXgNews.htm',
+						data:{
+							newsType:"3",
+							newsId: "5817095"
+						},
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+    									var oDate = new Date(d.createTime);
+    									t.push({
+											title: d.title,
+    	    								summary: d.summary,
+    	    								keyword: d.keyword ? d.keyword : "",
+    	    								url: "https://simu.howbuy.com/"+d.url,
+    	    								y: oDate.getFullYear(),
+    	    								m: oDate.getMonth() + 1,
+    	    								d: oDate.getDate()
+										});
+									}
+								}
+								self.xgyd = t
+							}
+						}
+					});
+
+                },
+				mounted:function(){
+					var _num, _h, _h1, _h2;
+					setTimeout(function () {
+						var _num, _h, _h1, _h2;
+						_h = $('.zx-list li:nth-child(1) span').offset().top;
+						_h1 = $('.zx-list li:nth-child(5) span').offset().top;
+						_h2 = _h1 - _h;
+						$('.column-right .Lline').css({
+							'height': _h2 + 'px'
+						});
+					},1000);
+				}
+			});
+
+		});
+
+        var shareQQWeiXin = function(id) {
+        	var $img_weixin = $("#div_weixin");
+    		if ($img_weixin.length === 0) {
+    			$img_weixin = $("<div id=\"div_weixin\" style=\"background: #fff;position: absolute;top: -35px;left: 50px;border: solid 1px #d8d8d8;padding: 20px;\">" +
+    				"	<div style=\"*width: 150px;_width: 150px;\">" +
+    				"		<span>分享到微信朋友圈</span>" +
+    				"		<a href=\"#\" onclick=\"window.document.getElementById(\'div_weixin\').style.display=\'none\';return false;\">×</a>" +
+    				"	</div>" +
+    				"	<img src=\"http://www.howbuy.com/news/twodimensioncode.htm?id=" + encodeURIComponent(id) + "\" style=\"margin: 15px 0;\"/>" +
+    				"	<div style=\"*width: 150px;_width: 150px;\">" +
+    				"		<p>打开微信</p>" +
+    				"		<p>使用“扫一扫”即可分享</p>" +
+    				"	</div>" +
+    				"</div>");
+    			$($(".share_box").find("a")[0]).after($img_weixin);
+    		} else {
+    			$("#div_weixin").show();
+    		}
+		};
+
+		var shareTSina = function(title,rLink,summary,site,pic) {
+		    window.open("http://service.weibo.com/share/share.php?title=" +
+		    encodeURIComponent(title.replace(/&nbsp;/g, " ").replace(/<br \/>/g, " "))+ "&url=" + encodeURIComponent(rLink)+'&summary='+
+		                       encodeURIComponent(summary)+ '&site='+encodeURIComponent(site),
+		    "height=500,width=600,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no");
+		}
+    </script>
+	<!--生成时间：2019-01-14 09:30:19648 -->
+</head>
+
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://static.howbuy.com/??/css/global/footer/1.0/footer.css,/css/www/index_2014/autosearch.css,/css/www/index_201801/headNew1000_1.0.css,/css/www/index_201801/reset.css?v=45c48cc"/>
+<script type="text/javascript" src="https://static.howbuy.com/??/js/jquery/jquery.min.1.7.js,/js/www/index_2018/header201712_1.0.js,/js/initHost.js?v=9bf31c7"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	    	selectHeaderMenu(3,7);
+	    });
+    </script>
+
+</head>
+<body>
+	<div class="topToolBox">
+        <div class="topToolsWrap">
+            <div class="topTools">
+                <div class="topTools_con w1000 clearfix">
+                    <ul class="itemLt fl menu">
+                        <li class="bdStyle"></li>
+                        <li class="first">
+                            <a href="https://www.howbuy.com" class="bdlNone">首页</a>
+                        </li>
+                        <li>
+                            <a href="https://www.howbuy.com/fund">公募基金</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com">私募基金</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/vcpe.htm">私募股权</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/trust/list.htm">固定收益</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/xinfangcheng.htm">新方程FOF</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/dzpd/3.htm">直投海外
+                                <i class="recommend"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="itemRt fr">
+                        <div class="moreBox fr hide">
+                            <a href="javascript:void(0)" target="_self" class="more"></a>
+                            <div class="moreCon">
+                                <div class="conBox">
+                                    <a href="https://simu.howbuy.com/vedio.htm">私募视频</a>
+                                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=4007009665">免费咨询</a>
+                                    <a href="https://www.ehowbuy.com/help/sub/index.html">开户演示</a>
+                                    <a href="https://www.ehowbuy.com/help/sub/operation_guide.html">常见问题</a>
+                                    <a href="https://www.howbuy.com/about/map.html">网站地图</a>
+                                    <a href="https://www.howbuy.com/about/contactus.html">联系我们</a>
+                                    <a href="https://www.howbuy.com/about/media/index.htm">媒体报道</a>
+                                    <a href="https://www.howbuy.com/about/index.htm">关于好买</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="fr">
+                            <li class="">
+                                <a href="https://i.howbuy.com/login/login.htm" class="loggedcls login pl10 mlink myhowbuy">登录</a>
+                                <!--登录状态下 class（login）改成（logined），登录替换成我的好买 -->
+                                <!--<a href="javascript:void(0)" class="logined pl10 mlink">我的好买</a>-->
+                                <div class="loggedcls_m itemBox">
+                                    <div class="memberBox">
+                                        <div class="member clear">
+                                            <div class="fl memberLt">
+                                                <p class="user_prompt"></p>
+                                            </div>
+                                            <div class="memberRt">
+                                                <a href="https://i.howbuy.com/member/myhowbuy/index.htm">会员中心&nbsp;&nbsp;</a> |
+                                            	<a href="https://i.howbuy.com/user/simpleLogin.htm?action=logout" target="_self" rel="nofollow">&nbsp;&nbsp;退出</a>
+                                            </div>
+                                        </div>
+                                        <div class="centerMemberBox hide">
+                                            <p>当前收益（元）<b class="red fundInc">0</b></p>
+	                                        <p>总资产（元）<span class="currentCost">0</span></p>
+	                                        <p>我的持仓 <span class="positionNum">0</span></p>
+                                        </div>
+                                        <div class="btMemberBox clearfix hide">
+                                            <a href="#" class="fl bdright">买公募</a>
+                                            <a href="#" class="fr">买私募</a>
+                                        </div>
+                                        <!--未进行实名认证-->
+                                        <div class="unCertifyBox">
+                                            <p class="tac">您当前还未进行实名认证</p>
+                                            <a href="#">传送门</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="register">
+                                <a href="https://reg.howbuy.com/register/register.htm" class="mlink register">注册</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>交易</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="tradeBox clearfix">
+                                        <dl class="fl">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">公募交易</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/user/index.htm">我的资产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/chuxuguan/intro.htm">储蓄罐</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/buyFund.html">基金交易</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/contractAdd.html">基金定投</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/queryTradeTradeRecord.html">交易查询</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/account/acctmgt.htm">账户管理</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="fl bdrNone">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">私募交易</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/index.html">我的私募</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/order.html">我的预约</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/order.html">在线交易</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/recordlist.html">交易记录</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/account/acctmgt.htm">账户管理</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dl_zx">
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>自选</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="zxBox">
+                                        <div class="clearfix">
+                                            <div class="fl zdhq">
+                                                <span>今日</span>
+                                                <span class="cRed">上涨（<span class="dl_zx_sz"></span>）</span>
+                                            	<span class="cGreen">下跌（<span class="dl_zx_xd"></span>）</span>
+                                            </div>
+                                            <div class="fr chose">
+                                                <p>
+                                                    <span class="bdrNone act">基金</span>
+                                                    <span class="bdlNone">私募</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="selAllBox">
+                                            <table class="fundItem">
+                                                <tr>
+                                                    <th class="tal" width="140">简称</th>
+                                                    <th width="60">净值/万份</th>
+                                                    <th width="80">涨跌/七日</th>
+                                                    <th width="60">操作</th>
+                                                </tr>
+                                            </table>
+                                            <table class="simuItem hide">
+                                                <tr>
+                                                    <th class="tal" width="140">简称</th>
+                                                    <th width="60">最新净值</th>
+                                                    <th width="80">近一年收益</th>
+                                                    <th width="60">操作</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <a href="javascript:void(0)" target="_self" class="showAllBtn tal">查看全部自选（<span class="dl_zx_qb"></span>）</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dl_ll">
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>浏览</span>
+                                </a>
+                                <div class="itemBox">
+                                    <!--noviewRecord-->
+                                    <div class="noviewRecord">
+                                        <div class="norecord">您还没有浏览记录</div>
+                                        <div class="btMemberBox clearfix">
+                                            <a href="https://www.howbuy.com/fund" class="fl bdright">逛逛公募</a>
+                                            <a href="https://simu.howbuy.com" class="fr">逛逛私募</a>
+                                        </div>
+                                    </div>
+                                    <!--viewRecord-->
+                                    <div class="seeBox hide">
+                                        <div class="con">
+                                            <div class="lfIntro"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" target="_self" class="aw mlink ">
+                                    <span>工具</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="toolBox clearfix">
+                                        <dl class="fl">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">公募工具</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/filter.htm">基金筛选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/compare.htm">基金对比</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/webRiskResearch/fundinvestdetail.htm">基金诊断</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/myfund/index.htm">基金账本</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/zixuan.htm">基金自选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/calreturn.htm">收益计算</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/calsubsfee.htm">计算器</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="fl bdrNone">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">私募工具</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/fundadvancedlist.htm">私募筛选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/comparefund.htm">私募对比</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/zixuan.htm">私募自选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.howbuy.com/yhzcg.htm">私募重仓股</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="http://simudata.howbuy.com/">数据中心</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://edu.howbuy.com/">投教基地</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/subjects/list.htm">私募专题</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--header Begin-->
+        <div class="header clearfix w1000">
+            <div class="logo fl">
+                <a href="https://www.howbuy.com" target="_self">
+                    <img src="https://static.howbuy.com/images/www/201801/howbuyLogo.png" alt="" />
+                </a>
+            </div>
+            <div class="hd_mini_ad fl">
+                <a href="">
+                    <img src="https://static.howbuy.com/images/www/201801/simufund.png" alt="" />
+                </a>
+            </div>
+            <!--
+                搜索框||广告位，可能存在其中一个
+            -->
+            <!--搜索框-->
+            <div class="searchBox fl w380" id="searchDiv">
+                <input id="sea_text" type="text" placeholder="请输入关键词（基金、经理、简称和资讯）">
+                <a href="javascript:void(0)" id="searchBtn" class="searchBtn">搜索</a>
+                <div id="searchData" class="autoSearchBox"></div>
+            </div>
+            <ul class="appList fr">
+                <li class="fundApp">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>掌上基金</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注掌上基金</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmzj.png" alt="">
+                    </div>
+                </li>
+                <li class="cxgApp">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>储蓄罐</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注储蓄罐</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmcxg.png" alt="">
+                    </div>
+                </li>
+                <li class="zcVip">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>臻财VIP</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注好买臻财</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmzc.png" alt="">
+                    </div>
+                </li>
+                <li class="ltProgram">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>小程序</span>
+                    </a>
+                    <div class="ewmBox">
+                        <img src="https://static.howbuy.com/images/www/201801/ewmxcx.png" alt="" class="xcx">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="navTopBox w1000 headForSimu">
+            <dl class="clearfix">
+                <dd>
+                    <a href="https://simu.howbuy.com">私募首页</a>
+                    <a href="https://simu.howbuy.com/topsale.htm">私募优选</a>
+                    <a href="https://simu.howbuy.com/company/">私募公司</a>
+                    <a href="https://simu.howbuy.com/manager/">私募经理</a>
+                    <a href="https://simu.howbuy.com/board.htm">最新净值</a>
+                    <a href="https://simu.howbuy.com/mlboard.htm">私募排名</a>
+                    <a href="https://simu.howbuy.com/yhzcg.htm">私募重仓股</a>
+                    <a href="https://simu.howbuy.com/xinwen/smjd/list.htm">私募资讯</a>
+                    <a href="https://www.howbuy.com/research/smreportnew.htm">私募研报</a>
+                    <a href="http://simudata.howbuy.com/">数据中心</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
+    <div class="w1000 mt0a white main" id="app">
+        <div class="content-report mt25 pt10 clearfix">
+            <div class="w630 pl20 pr10 fl">
+                <ul class="nav-list clearfix">
+                    <li>
+                        <a href="https://www.howbuy.com">首页 ></a>
+                    </li>
+                    <li>
+                        <a href="https://simu.howbuy.com"> 私募基金 > </a>
+                    </li>
+                    <li>
+							<a href="https://www.howbuy.com/news/c/3/303.htm" class="linkBlue">私募焦点 ></a>
+                    </li>
+                    <li>正文</li>
+                </ul>
+                <!-- share -->
+                <div class="share_box">
+                    <p>分享</p>
+                    <ul>
+                       <li><a href="javascript:void(0);" onclick="shareQQWeiXin('5817095'); return false;" class="icon_1"></a></li>
+                       <li><a href="javascript:void(0);" onclick="shareTSina('苹果“慌了”？在中国降价大甩卖 最高“降”1200！','https://simu.howbuy.com/news/2019-01-14/5817095.html','好买说：据报道，苹果面临了其它来自中国的手机厂商的挑战，包括紧随其后的小米和OPPO等。苹果也开始玩降价促销，大概是因为被寄予厚望的新产品销量实在不尽如人意。','https://simu.howbuy.com/news/2019-01-14/5817095.html','好买说：据报道，苹果面临了其它来自中国的手机厂商的挑战，包括紧随其后的小米和OPPO等。苹果也开始玩降价促销，大概是因为被寄予厚望的新产品销量实在不尽如人意。'); return false;" class="icon_4"></a></li>
+                    </ul>
+                </div>
+                <!--左边分享end-->
+                <div class="yb-article">
+                    <h2>苹果“慌了”？在中国降价大甩卖 最高“降”1200！</h2>
+                    <div class="share-tools bort clearfix">
+                        <ul class="fr">
+                            <li class="scan-mobile">
+                                <em>扫描到手机</em>
+                                <div class="scan-dialog">
+                                    <div class="code fl">
+                                        <img src="https://static.howbuy.com/images/www/201801/weixin-big.png" hight='104px'
+                                            width='102px' alt="微信二维码" />
+                                    </div>
+                                    <div class="code-operation fl">
+                                        <h3>扫描到手机，随时
+                                            <span>[继续看！]</span>
+                                        </h3>
+                                        <p>用手机或平板电脑的二维码应用,扫描左侧二维码，就能在手机继续浏览本文,还能分享到微信或微博。</p>
+                                        <img src="https://static.howbuy.com/images/www/201801/close.png" alt="关闭按钮"
+                                            class="code-close" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="artFrom fl">
+                            <p class="art-tag">
+                                <template v-for="k in keyword.split('|')">
+                                    <span v-if="k != ''">{{k}}</span>
+                                </template>
+                            </p>
+                            <p class="fl">
+                                <span>2019-01-14 09:13:28</span>
+                                <span>来源：中国基金报</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="yb-brief">
+                    	好买说：据报道，苹果面临了其它来自中国的手机厂商的挑战，包括紧随其后的小米和OPPO等。苹果也开始玩降价促销，大概是因为被寄予厚望的新产品销量实在不尽如人意。
+                    </div>
+                    <div class="content">
+                    	<p align="justify">苹果iPhone手机在中国的销售神话正在破灭。</p>
+<p align="justify">一向&ldquo;高贵冷艳&rdquo;的苹果也开始玩降价促销，大概是因为被寄予厚望的新产品销量实在不尽如人意。</p>
+<p align="justify">根据信通院发布的数据，2018年手机市场总体出货量同比下降15.6%，但国产品牌下滑幅度略低于此项数据，说明以苹果和三星为代表的海外巨头在中国市场的失利。</p>
+<p align="justify">据报道，华为将成为全球第二大智能手机制造商，2018年度出货量超过2亿台，首次整年击败苹果公司。根据IDC数据显示，2018年第三季度华为市场份额14.6%，超过苹果的13.2%，排名全球第二。更重要的是，苹果还面临了其它来自中国的手机厂商的挑战，包括紧随其后的小米和OPPO等。</p>
+<p align="justify">前阵子，苹果CEO蒂姆&middot;库克(Tim Cook)出于&ldquo;中国地区iPhone销量不振&rdquo;再次下调公司2019年第一财季的营收预期，引发其本身股价下跌。</p>
+<p align="justify">这两天，媒体传来华强北、京东等渠道iPhone降价的消息，将苹果推上了舆论关注的风口浪尖。</p>
+<p align="center"><strong>首先是华强北下调iPhone批发价</strong></p>
+<p align="justify">深圳华强北被称为中国电子行业的&ldquo;晴雨表&rdquo;和&ldquo;风向标&rdquo;，同时也被誉为&ldquo;中国电子第一街&rdquo;。近日，一份华强北电子市场方面的报价显示：</p>
+<p align="justify"><strong>iPhone XR 64GB批发价下跌450元，目前价格5250元;</strong></p>
+<p align="justify"><strong>iPhone X 64GB批发价下跌100元，目前价格5630元;</strong></p>
+<p align="justify"><strong>iPhone 8 64GB批发价下跌420元，其中3款目前价格3880元;</strong></p>
+<p align="justify"><strong>iPhone 8 Plus 64GB批发价下跌450元，其中两款目前价格4800元。</strong></p>
+<p align="justify">值得注意的是，iPhone XR为苹果去年新推出的机型之一，但如今却和老机型一样沦为降价幅度450元的单品。<strong>&nbsp;</strong></p>
+<p align="justify">据每日经济新闻报道，日前，华强北渠道商收到了美国方面的调价信息，iPhone XR、iPhone8、iPhone 8 Plus、iPhone X以及iPhone XS和iPhone XS Max等产品均开始降价。其中，华强北的远望数码城批发市场的iPhone新机出现不同程度的全线下跌。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/1e7b29e9c980f44c7a37596125eb0e8b.jpg"  width="500" height="414" align="" /></strong></p>
+<p align="justify">不过，也有媒体采访华强北的某店铺时得到回应称，&ldquo;这是造谣，苹果官网没这说法&rdquo;。对此，每日经济新闻再次核实，对方回应称：&ldquo;很多上游代理商的拿货价确实是更优惠了，不过很多下游商家并不知情，降价是肯定降了。&rdquo;</p>
+<p align="center"><strong>接着是京东大降价</strong></p>
+<p align="center"><strong>8P比官网售价低了1200!</strong></p>
+<p align="justify">华强北之后，1月10日晚间，京东也降价了，说明这并不是空穴来风。</p>
+<p align="justify">1月11日零点开始，京东平台的iPhone8的价格将下调至3999元，与苹果官网报价5099元相差1100元。</p>
+<p align="justify"><strong>&nbsp;</strong></p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/7cdada902ff4a74a3846cfbda775b1a5.jpg"  width="500" height="500" /></p>
+<p align="justify">京东平台的iPhone8plus的价格下调至4799元，与苹果官网报价5999元相差1200元。</p>
+<p align="justify"><strong>&nbsp;</strong></p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/4ee65ec3b8e6d22f52ac91fee17f069c.jpg"  width="500" height="500" /></p>
+<p align="justify">不过，最贵的那一款iPhone XS Max就没有降价。</p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/1fdb4d368715d866bc03153d8ef81b75.jpg"  width="500" height="500" /></p>
+<p align="justify">对于更多机型的价格，大家可以去苹果官网跟第三方销售平台上自行比较，基金君就不一一对比了。</p>
+<p align="justify">据澎湃新闻报道，京东方面表示，这一次的降价行为是苹果公司降价，目前来看应该不是限时促销。这也意味着，iPhone在中国市场遭遇销售下滑后，苹果公司采用越来越灵活的价格政策来刺激消费者购买。</p>
+<p align="justify">分析认为，苹果虽然不会降低新品价格，但可以进一步降低老款手机的价格，以刺激销售。</p>
+<p align="justify">除此之外，此前苹果官方还有过一次变相降价。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/4d8ef6e2861a43f10a1b204f0679c023.jpg"  width="500" height="175" /></strong></p>
+<p align="justify"><font color="#999999">(图片说明：2019年1月3日苹果中国官网首页截图，内容为iPhone折抵换购信息，图片来源：苹果中国官网)</font></p>
+<p align="justify">这是进入中国市场以来，苹果官方推出的最大优惠活动。旧机折抵后，iPhone XR最低仅需4399元，而iPhone XS最低需人民币6599元&mdash;&mdash;我们理解，这就是变相在降价。</p>
+<p align="justify">一度是集中国消费者万千宠爱于一身的iPhone，为什么此时频频出现降价的信息?原因很简单，卖不动了呗。</p>
+<p align="center"><strong>苹果17年来首次下调营收预期</strong></p>
+<p align="center"><strong>CEO：都怪中国</strong></p>
+<p align="justify">一周前，苹果CEO库克发布了致股东公开信，自2002年以来首次在财报即将公布前，下调了季度营收预期。而理由简单来说就俩字：中国。</p>
+<p align="justify">据美国《华尔街日报》一月2日报道，库克当天致信投资者称，该公司将第一季度收入预期从此前的890亿美元下调至840亿美元。</p>
+<p align="justify">路透社称，这是自苹果2007年推出iPhone以来，首次在即将公布季报之前，发布营收预警。</p>
+<p align="justify">《华尔街日报》称，苹果将下调预期归咎于多种因素，包括运营商补贴减少、美元走强导致价格上涨、部分新兴市场经济疲软、在部分发达市场的表现不如预期强劲等。</p>
+<p align="justify">其中，中国智能手机市场萎缩被认为是主要原因。路透社援引库克的话称，实际上，该公司营收不及预期的主要原因、以及全球营收同比下滑，就是由于大中华区的销售欠佳。</p>
+<p align="justify">虽然库克和媒体将苹果在华销售不佳与贸易战联系起来，但也有不少评论看到这只是给苹果自身失策找的借口而已。《华尔街日报》认为，苹果通过提高价格增收的策略，在欧美等发达国家市场还能管用，但在广大新兴市场却不是个好办法。</p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/e7c748087a45fca6255023d9430fa0de.jpg"  width="500" height="215" /></p>
+<p align="justify">对于这次下调，库克列出两个原因：一是大中华区市场的宏观经济下滑超过了他们的预期，尤其是中美之间贸易谈判的不确定性加剧了这种下滑。</p>
+<p align="justify">&ldquo;这种影响也开始体现在消费者身上，越来越少的人前往我们在中国的零售店和经销商。&rdquo; 库克在信中抱怨道。</p>
+<p align="justify">另一个，就是大中华区的 iPhone 销量不佳，也就是苹果口中消费者的&ldquo;iPhone 升级&rdquo;欲望的疲软。要知道，iPhone XS系列还专门为讨好中国用户而推出了双卡双待的功能，但看起来也没起什么用。</p>
+<p align="center"><strong>苹果不再公布硬件销售数量</strong></p>
+<p align="justify">从 2000 年 10 月开始，苹果每隔 3 个月会公布一份不到半页长的表格，列出三类数据：</p>
+<p align="justify"><strong>不同产品各卖了多少台;</strong></p>
+<p align="justify"><strong>不同产品各卖了多少钱;</strong></p>
+<p align="justify"><strong>全球各主要市场收入多少</strong></p>
+<p align="justify">但去年年 11 月 1 日的财报会议上，苹果宣布将停止 18 年来的传统，不再公布各类产品具体卖了多少台。理由是&ldquo;90 天里面卖掉多少件产品已经不一定能反映我们业务所蕴含的力量。&rdquo;</p>
+<p align="justify">苹果创始人史蒂夫&middot;乔布斯早年曾经这样嘲笑过竞争对手的话是这么说的，&ldquo;一般来说，如果卖得好，你会说的。&rdquo;</p>
+<p align="center"><strong>苹果拟将3款新iPhone机型的产量削减10%</strong></p>
+<p align="justify">据日经新闻最新独家报道，苹果公司已经通知供应商，未来三个月内将新iPhone的生产计划削减约10%。</p>
+<p align="justify">知情人士说，未来产量的调整计划适用于所有新款iPhone&mdash;&mdash;XS Max、XS和XR。</p>
+<p align="justify">另一位知情人士说，根据修订后的生产计划，新旧iPhone的总体计划产量将从早先预测的一季度4700万台至4800万台，缩减到4000万至4300万台。</p>
+<p align="justify">与2018年一季度售出的5221万台苹果手机相比，这一降幅将超过20%。但是，如果考虑到库存和市场需求的偏差，实际下降的幅度可能会有所不同。</p>
+<p align="justify">对冲基金经理：在中国卖1000美元太贵</p>
+<p align="justify">美国财经媒体CNBC报道，对冲基金经理丹-奈尔斯认为，苹果公司所面临的麻烦远不止中国销售量下降那么简单，而华尔街则在很大程度上忽视了该公司面临的其他问题。</p>
+<p align="justify">奈尔斯因其在科技领域中的投资表现而声名鹊起，他发出警告称，iPhone价格过高将导致苹果股价在今年的交易中进一步下跌。</p>
+<p align="justify">&ldquo;现在，iPhone销售量正在崩溃式下降。&rdquo;奈尔斯说道。&ldquo;中国的人均GDP为1万美元，因此不该在中国市场上出售售价1000美元的iPhone;印度也是如此，其人均GDP仅为2000美元。&rdquo;</p>
+<p align="justify">奈尔斯称，这个问题将会带来&ldquo;滚雪球&rdquo;一般的影响，并称其正在做空苹果股票。他认为，iPhone销售量下降将导致苹果的服务业务受损，而且受损的程度将会超出华尔街&mdash;&mdash;甚至可能包括苹果本身&mdash;&mdash;承认的水平。</p>
+<p align="justify">&ldquo;iPhone销售量是服务业务的驱动力，但其驱动作用是滞后的。那么，如果iPhone销售量下降，那么要怎么推销AppleCare或Apple Musis服务呢?这就是苹果的问题所在。&rdquo;他说道。&ldquo;苹果将继续丧失市场份额，这最终将会导致其服务业务受损。&rdquo;</p>
+<p align="center"><strong>苹果市值蒸发了近4000亿美元</strong></p>
+<p align="justify">与乔布斯时代苹果产品的快速创新相比，近年来依靠&ldquo;快速涨价&rdquo;所支撑起来的业绩，还能维持多久呢?资本市场已经给出了答案。</p>
+<p align="justify">去年10月，苹果以233.47美元每股的成绩，创下市值达到1.12万亿美元的奇迹，苹果也成为全球首家市值破万亿的科技公司，这一刻应该算是苹果历史上的高光时刻。</p>
+<p align="justify">但随后几个月到现在，苹果的市值就一路下跌，截至北京时间1月10日，苹果股价仅为153美元，跌幅超过34%，市值蒸发了近4000亿美元</p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/ec5468e7d3926a480643f13580a456ee.jpg"  width="500" height="278" /></p>
+<p align="center"><strong>新款iPhone信号也不好</strong></p>
+<p align="justify">&ldquo;有信号吗?&rdquo;两位苹果用户见面之后相互问候。&nbsp;</p>
+<p align="justify">iPhone XS 和 iPhone XS Max 的信号让用户们头疼不已，微博有不少网友吐槽了。</p>
+<p align="center"><img src="http://static.howbuy.com/images/howbuycms/UserFiles/f0c22510a2725ba23e71cd20d17279e4.jpg"  width="500" height="441" /></p>
+<p align="justify"><font color="#FF0000"><strong>免责声明</strong></font>：本文转载自中国基金报，文章版权归原作者所有，内容仅供参考并不构成任何投资及应用建议。</p>
+                    </div>
+                </div>
+                <div class="yb-related">
+                    <div class="xgrelated-title">
+                        <span></span>
+                    </div>
+                    <template v-for="(item,index) in xgyd">
+                        <div class="tab-list mt20">
+                            <div class="report-list clearfix">
+                                <div class="report-left fl">
+                                    <p class="time">
+                                        <span class="date">{{item.d}}</span>
+                                        <span class="month">{{item.y}}.{{item.m}}</span>
+                                    </p>
+                                </div>
+                                <div class="report-right fr">
+                                    <p class="yb-title">
+                                        <template v-for="k in item.keyword.split('|')">
+                                            <span class="fr" v-if="k != ''">{{k}}</span>
+                                        </template>
+                                        <a :href="item.url">{{item.title}}</a>
+                                    </p>
+                                    <p class="article-brief">
+                                        {{item.summary}}
+                                        <span class="fr">{{item.y}}-{{item.m}}-{{item.d}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <!-- 右侧begin -->
+            <div class="column-right w320 fr">
+                <div class="r-title">
+                    <span><a href="https://simu.howbuy.com/xinwen/jlyl/list.htm">私募人物</a></span>
+                    <label style="font-size: 10px;float: right;"><a href="https://simu.howbuy.com/xinwen/jlyl/list.htm">查看更多私募人物></a></label>
+                </div>
+                <template v-for="(item,index) in dlft">
+                    <div class="mt20 pb20 pr20 borb clearfix">
+                        <div class="mg-left fl">
+                            <p class="name">{{item.name}}
+                                <span>{{item.corp}}</span>
+                            </p>
+                            <p class="mg-intro">
+                                <a :href="item.url">{{item.title}}</a>
+                            </p>
+                        </div>
+                        <div class="mg-right fr">
+                            <img :src="item.img" alt="" style="width: 90px;height:  90px;">
+                            <img src="https://static.howbuy.com/images/www/201801/mg-mask.png" alt="" class="mg-mask">
+                        </div>
+                    </div>
+                </template>
+
+                <div class="zx-title">
+                    <span class="zx-icon"></span>
+                    <span class="hot-zx">热门资讯</span>
+                </div>
+                <div class="rmzx">
+                    <p class="Lline"></p>
+                    <ul class="zx-list mt20">
+                        <template v-for="(item,index) in rmzx">
+                            <li>
+                                <span style="margin-top:0;">{{item.publishTime}}</span>
+                                <a :href="item.url">{{item.title}}</a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <div class="ad-img">
+                    <img src="https://static.howbuy.com/images/news/ad-temp1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <sitemesh:write property='body' />
+<!--     私募底部start   -->
+<div class="simu_messgray"></div>
+<!--     私募底部end   -->
+<script type="text/javascript" src="https://static.howbuy.com/??/js/global/simu_webstat.js?v=c4ca423"></script>
+<div id="smfooter">
+    <p>风险提示：投资有风险。相关数据仅供参考，不构成投资建议。投资人请详阅基金合同和基金招募说明书，确认您自觉履行投资人的各项义务，并自行承担投资风险。</p>
+    <p>版权所有 好买<span class="fontArial">Copyright &copy; howbuy.com, inc 2014. All rights reserved.</span> [沪ICP备08003295号]</p>
+    <a href="http://simu.howbuy.com/about.htm" target="_blank">关于好买私募</a> | <a href="http://www.howbuy.com/about/contactus.html" target="_blank">联系我们</a> | <a href="http://www.howbuy.com/about/joinhowbuy.html" target="_blank">诚聘英才</a> | <a href="http://www.howbuy.com/about/map.html" target="_blank">网站地图</a> |  <a href="http:\\www.howbuy.com/about/useitem.html" target="_blank">使用条款</a> |  <a href="http://www.howbuy.com/about/privacyitem.html" target="_blank">隐私条款</a> |  <a href="http://www.howbuy.com/about/venturehint.html" target="_blank">风险提示</a>
+</div>
+
+<div id="popupContainer"></div>
+<div id="loaderScriptContainer"></div>
+    <script type='text/javascript' src='https://static.howbuy.com/js/www/o_code.js'></script>
+</body>
+
+</html>

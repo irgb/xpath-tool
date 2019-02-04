@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="author" content="新文化报数字报 新文化网 长春 吉林 新闻" />
+
+<meta name="keywords" content="长春新闻,吉林新闻,社会新闻,新文化报数字报,新文化报电子报,新文化报" />
+
+
+<meta name="Copyright" content="新文化网版权所有" />
+
+
+
+<meta name="description" content="新文化报数字报是新文化报的电子版,除每天提供与纸质新文化报版面相同的新闻信息内容外,读者还可以通过电脑、手机及其他移动终端方便地阅读新闻,第一时间了解本地生活信息。新文化报创刊于1988年8月8日,正式改版于1999年3月12日,是吉林出版集团主管主办的综合性都市报纸。新文化报将"奉献最有价值的新闻和信息"作为办报宗旨,为广大读者和客户提供最及时、最准确、最权威的信息和服务。日均发行量逾40万份,已成为吉林省内发行量、阅读率、品牌影响力最大的都市报。" />
+
+
+<meta name="robots" content="index, follow" />
+
+
+
+<title>《新文化报》多媒体数字报 - 吉林省最具权威的新闻媒体</title>
+
+<script src="/static/javascripts/jquery-1.2.6.pack.js" type="text/javascript"></script>
+
+<link href="/static/styles/xwh/2015enews.css" rel="stylesheet" type="text/css" />
+
+<link href="/static/styles/xwh/global.css" type="text/css" />
+
+<!--<link href="/static/images/xwh/calendar.css" rel="stylesheet" type="text/css"/>-->
+
+<!--<script src="/static/images/xwh/prototype.js" type="text/javascript"></script>-->
+
+<!--<script src="/static/images/xwh/mp.js" type="text/javascript"></script>-->
+
+<!--<script src="/static/images/xwh/calendar2.js" type="text/javascript"></script>-->
+
+<!--<script src="/static/images/xwh/range.js" type="text/javascript"></script>-->
+
+ <script type="text/javascript">
+
+ function showdate()
+
+{
+
+	var today, theday;
+
+	today = new Date();
+
+	var d=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+
+	var today_year = (today.getYear() < 1900) ? (1900 + today.getYear()) : today.getYear(); 
+
+	theday = today_year+"年" + [today.getMonth()+1]+"月" +today.getDate()+"日 ";
+
+	document.write(theday+" ");
+
+}
+
+function searchSubmit(){
+
+			if($('#keywords').val()==''){
+
+				alert('搜索关键字不能为空！');
+
+				return false;
+
+			}else{
+
+				return true;
+
+			}
+
+		
+
+		}
+
+ </script>
+
+ <style type="text/css">
+
+ .selectBox{display:block; background-color:#333399;position:absolute;  filter:alpha(opacity=1);-moz-opacity:0.01;}
+
+#divfocus{border:#69F solid 4px; position:absolute; padding:10px 15px;width:300px;font-size:20px; background-color:#EEE; text-align:center;display:none;text-align:left;vertical-align:middle; font-family:黑体,仿宋,Verdana, Geneva, sans-serif;}
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; }
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0; font-size:12px; font-weight:normal;}
+#Yheader { height: 25px; width: 960px; margin-right: auto; margin-bottom: 10px; margin-left: auto; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #dddddd; padding-top: 6px; }
+#Dhlist { background-image: url(/static/images/xwh/cs.gif); height: 24px; width: 950px; margin-right: auto; margin-left: auto; padding-left: 10px; padding-top: 9px; margin-bottom: 10px; background-repeat: repeat-x; }
+Ul.dh{ overflow: visible; list-style: none; margin: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+li.dha { float:left; list-style:none; display:block; overflow:hidden; text-align: center; background-image: url(/static/images/xwh/lid.gif); background-repeat: no-repeat; background-position: right center; padding-right: 10px; padding-left: 10px; font-size: 14px; color: #FAFAFA; height: 16px; font-weight: bold; }
+li.dha a:link { color: #FFFFFF; text-decoration: none; }
+li.dha a:visited { color: #FFFFFF; text-decoration: none; }
+li.dha a:hover { color: #990000; text-decoration: blink; }
+#Yheader H2 { FONT-SIZE: 12px; padding: 0px; color: #999999; line-height: 22px; }
+#Yheader H2 SPAN { FONT-SIZE: 12px; FLOAT: right; color: #999999; }
+
+#Yheader a:link { color: #666666; text-decoration: none; }
+#Yheader a:visited { color: #666666; text-decoration: none; }
+#Yheader a:hover { color: #990000; text-decoration: blink; }
+#Enewsdy { height: 83px; width: 960px; margin-right: auto; margin-left: auto; }
+#Enewsdy2 { width: 960px; margin-right: auto; margin-left: auto; margin-bottom: 10px; }
+#Enewsdyr { float: right; height: 73px; width: 700px; }
+#Enewsdyl { float: left; height: 73px; width: 244px; }
+</style>
+<link href="/static/styles/xwh/style02.css" rel="stylesheet" type="text/css" />
+<script src="http://cbjs.baidu.com/js/m.js" type="text/javascript"></script>
+<script type="text/javascript">
+BAIDU_CLB_preloadSlots("327904","327906","327907");
+</script>
+</head>
+
+
+
+<body>
+
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tr>
+
+    <td><div id="YGtopbar">
+  <h2 class="bar01" align="center"><span><iframe width="136" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src=" http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=136&height=24&uid=1722628512&style=2&btn=red&dpc=1"></iframe></span><span><a href="http://weibo.com/xwhbs">新文化网官方微博：&nbsp;</a></span><img src="/static/images/xwh/icon01.gif" align="absmiddle" />&nbsp;<a href="http://www.xwh.cn" target="_blank">新文化报官方网站</a> 新闻热线：0431-96618 合作热线：0431-85898000</h2>
+</div>
+<!--  ******* 头部文件 ******** -->
+<div id="Enewsdy">
+<div id="Enewsdyl"><img src="/static/images/xwh/enewslogo.jpg" /></div>
+<div id="Enewsdyr">
+
+<!-- 广告位：【数字报】EN头部广告 -->
+<script type="text/javascript">BAIDU_CLB_fillSlot("327904");</script>
+</div>
+</div>
+<!--  ******* 导航 ******** -->
+<div id="Dhlist">
+<ul class="dh">
+<li class="dha"><a href="http://www.xwh.cn" target="_blank">首 页</a></li>
+<li class="dha"><a href="http://enews.xwh.cn" target="_blank">数字报</a></li>
+<li class="dha"><a href="http://news.xwh.cn/jl/" target="_blank">吉林</a></li>
+<li class="dha"><a href="http://news.xwh.cn/cc/" target="_blank">长春</a></li>
+<li class="dha"><a href="http://news.xwh.cn/sports/" target="_blank">体育</a></li>
+<li class="dha"><a href="http://news.xwh.cn/ent/" target="_blank">娱乐</a></li>
+<li class="dha"><a href="http://news.xwh.cn/world/" target="_blank">国际</a></li>
+<li class="dha"><a href="http://news.xwh.cn/china/" target="_blank">国内</a></li>
+<li class="dha">房产</li>
+<li class="dha"><a href="http://car.xwh.cn/" target="_blank">汽车</a></li>
+<li class="dha"><a href="http://tu.xwh.cn/" target="_blank">图片</a></li>
+<li class="dha"><a href="http://dv.xwh.cn/" target="_blank">视频</a></li>
+<li class="dha"><a href="http://zt.xwh.cn" target="_blank">专题</a></li>
+<li class="dha"><a href="http://blog.xwh.cn" target="_blank">专栏</a></li>
+<li class="dha"><a href="http://xjk.xwh.cn" target="_blank">新健康</a></li>
+<li class="dha"><a href="http://travel.xwh.cn" target="_blank">旅游频道</a></li>
+</ul>
+</div>
+<div id="Enewsdy2">
+<!-- 广告位：2013-【数字报】A1 -->
+<script type="text/javascript" >BAIDU_CLB_SLOT_ID = "917044";</script>
+<script src="http://cbjs.baidu.com/js/o.js" type="text/javascript"></script>
+</div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="960" border="0" cellspacing="0" cellpadding="0" align="center" style="background-image: url(/static/images/xwh/yhdd.JPG); background-repeat: repeat-x; ">
+
+  <tr>
+
+         <td height="33"><table width="620" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-left:15px">
+
+    <tr>
+
+      <td><form name="form_search_news"   accept-charset="gb2312" action="http://search.xwh.cn:80/m_fullsearch/full_search.jsp" method="post" target="_blank">
+
+        <table border="0" cellspacing="0" cellpadding="0">
+
+          <tr>
+
+            <td width="44"><label for="label" class="gray">搜新闻:</label></td>
+
+            <td width="110"><input maxlength=15 size=15 id="key_news" name="keywords" value="" autocomplete="off" style="font-family:宋体,Times"></td>
+
+            <td width="20"><input  name="submit_news" type="image" src="/static/images/xwh/search1.jpg" width="20" height="20"/></td>
+
+            <td><input type="hidden" name="news_type_id" value=1 size=0>
+
+            </td>									<script language="javascript">
+
+										document.form_search_news.channel_id.value = 0;
+
+									</script>
+
+          </tr>
+
+        </table>
+
+      </form></td>
+
+      <td><form name="form_search_bbs" accept-charset="gb2312" action="http://bbs.xwh.cn/search.php?searchsubmit=yes"  method="post" target="_blank">
+
+							<table border="0" cellspacing="0" cellpadding="0">
+
+								<tr>
+
+								  <td width="44"><label for="key_bbs" class="gray">搜社区:</label></td>
+
+									<td width="110">
+
+								  <input maxlength=15 size=15 id="key_bbs" name="srchtxt" value="" autocomplete="off" style="font-family:宋体,Times"></td>
+
+									<td width="20">
+
+								  <input name="submit_bbs" type="image" src="/static/images/xwh/search1.jpg" width="20" height="20"/></td>
+
+									<td>
+
+									<input type="hidden" name="mod" value="forum" size="0">									</td>
+
+								</tr>
+
+		  </table>
+
+						</form></td>
+
+      <td><form method="post" target="_blank" id="form0" name="form1" action="http://search.enews.xwh.cn/www/index.php?mod=index&con=search&act=search">
+
+        <table border="0" cellspacing="0" cellpadding="0">
+
+          <tr>
+
+            <td width="44"><label for="label2" class="gray">数字报:</label></td>
+
+            <td width="110"><input maxlength=15 size=15 name="keywords" id="keywords" value="" autocomplete="off" style="font-family:宋体,Times"></td>
+
+            <td width="20"><input value=" 搜索 " name="searchBtn" type="image" src="/static/images/xwh/search1.jpg" width="20" height="20" border="0" onclick="return searchSubmit();"/></td>
+
+            <td>
+
+            </td>
+
+          </tr>
+
+        </table>
+
+      </form></td>
+
+    </tr>
+
+  </table></td>
+
+  </tr>
+
+</table>
+
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tr>
+
+    <td height="5" background="/static/images/xwh/wabbg.gif"></td>
+
+  </tr>
+
+  <tr>
+
+    <td background="/static/images/xwh/wabbg.gif"><table width="949" border="0" align="center" cellpadding="0" cellspacing="0">
+
+      <tr>
+
+        <td height="600" valign="top" background="/static/images/xwh/e01_s.gif" bgcolor="#FFFFFF"><table width="940" border="0" align="center" cellpadding="0" cellspacing="0">
+
+          <tr>
+
+            <td width="241" height="512" valign="top"><table width="221" border="0" align="center" cellpadding="0" cellspacing="0">
+
+              <tr>
+
+                <td height="45">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+
+                <td>
+
+                    <div id="enewsfcd">
+
+                        <ul id="list">
+
+                                                       	<li class="list"><a title='头版新闻' href="vA01.shtml">第A01版：头版新闻</a></li>
+
+                                                      	<li class="list"><a title='划重点/读城事' href="vA02.shtml">第A02版：划重点/读城事</a></li>
+
+                                                      	<li class="list"><a title='读城事·广告' href="vA03.shtml">第A03版：读城事·广告</a></li>
+
+                                                      	<li class="list"><a title='读城事/文体汇' href="vA04.shtml">第A04版：读城事/文体汇</a></li>
+
+                                                      	<li class="list"><a title='挺短挺可读' href="vA05.shtml">第A05版：挺短挺可读</a></li>
+
+                                                      	<li class="list"><a title='新文化周刊' href="vA06.shtml">第A06版：新文化周刊</a></li>
+
+                                                      	<li class="list"><a title='新文化周刊' href="vA07.shtml">第A07版：新文化周刊</a></li>
+
+                                                      	<li class="list"><a title='新文化周刊/速读·广告' href="vA08.shtml">第A08版：新文化周刊/速读·广告</a></li>
+
+                                                      </ul>
+
+                        <script type="text/javascript">
+
+                        	var list=document.getElementById("list");
+
+							var li=list.getElementsByTagName("li");
+
+							for(i=1;i<li.length;i=i+2){
+
+								li[i].style.backgroundColor="#fcf2f2";}
+
+                        </script>
+
+
+
+                    </div>
+
+                </td>
+
+              </tr>
+
+            </table></td>
+
+            <td width="397" height="600" valign="top">
+
+            	<div class="middle">
+
+                	<div class="tit">
+
+                    	<p class="titL">第A08版：<strong>新文化周刊/速读·广告</strong></p>
+
+                       
+
+                         <p class="titM">PDF下载<a href="/pdf/xwhb/20181230/A08.pdf"><img src="/static/images/xwh/pdf.gif" width="16" height="16" /></a></p>
+
+
+                        <p class="titR"><a href="vA07.shtml" class="up">上一版</a></p>
+
+                    </div>
+
+                    <div class="mainPic" >
+
+					<div style="position:relative;">
+
+                    <img src="/xwhb/20181230/b_page_08.jpg"  border="0" />
+
+					           <a href="332888.shtml" target="_blank" class="selectBox" style="top:29px; left:0px; width:279px; height:196px; " title="《大黄蜂》：通过一部电影重启你的童年" alt="332888"></a>
+
+  		          <a href="332889.shtml" target="_blank" class="selectBox" style="top:269px; left:217px; width:64px; height:71px; " title="吉林公安户政部门上门服务民营企业" alt="332889"></a>
+
+  		          <a href="332890.shtml" target="_blank" class="selectBox" style="top:348px; left:217px; width:63px; height:84px; " title="酒驾无牌三轮车被查逃跑撞警车被判刑8个月" alt="332890"></a>
+
+  		          <a href="332891.shtml" target="_blank" class="selectBox" style="top:270px; left:0px; width:203px; height:108px; " title="倒计时6天，为感动吉林候选人投票" alt="332891"></a>
+
+  		          <a href="332892.shtml" target="_blank" class="selectBox" style="top:390px; left:2px; width:204px; height:45px; " title="元旦假期天气晴好 只是气温依旧低迷" alt="332892"></a>
+
+  		          <a href="332893.shtml" target="_blank" class="selectBox" style="top:440px; left:0px; width:281px; height:61px; " title="广告" alt="332893"></a>
+
+  		</div>
+
+		<div style="margin-top: 8px; margin-left: 59px;"><a href="/xwhb/20181230/index.htm" target="_blank" >FLASH阅读</a><a href="/pdf/xwhb/20181230/A08.pdf" target="_blank" style="margin-left: 63px;">PDF阅读</a></div></div>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            
+
+            </td>
+
+            <td width="302" valign="top"><table width="290" border="0" align="right" cellpadding="0" cellspacing="0">
+
+            <tr>
+
+                <td height="30" align="center" valign="middle"><a href="http://zt.xwh.cn/luy/201302/szb/" target="_blank" ><img  src="/static/images/xwh/alex.jpg" width="290" height="30"  border="0"  /></a></td>
+
+              </tr>
+
+              <tr>
+
+                <td height="47">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+
+                <td height="168" valign="top">
+
+                	<ul class="news">
+
+                                           	<li><a title="《大黄蜂》：通过一部电影重启你的童年" href="332888.shtml" alt="332888" target="_blank" >《大黄蜂》：通过一部电影重启你的童年</a></li>
+
+                                            	<li><a title="吉林公安户政部门上门服务民营企业" href="332889.shtml" alt="332889" target="_blank" >吉林公安户政部门上门服务民营企业</a></li>
+
+                                            	<li><a title="酒驾无牌三轮车被查逃跑撞警车被判刑8个月" href="332890.shtml" alt="332890" target="_blank" >酒驾无牌三轮车被查逃跑撞警车被判刑8个月</a></li>
+
+                                            	<li><a title="倒计时6天，为感动吉林候选人投票" href="332891.shtml" alt="332891" target="_blank" >倒计时6天，为感动吉林候选人投票</a></li>
+
+                                            	<li><a title="元旦假期天气晴好 只是气温依旧低迷" href="332892.shtml" alt="332892" target="_blank" >元旦假期天气晴好 只是气温依旧低迷</a></li>
+
+                                            	<li><a title="广告" href="332893.shtml" alt="332893" target="_blank" >广告</a></li>
+
+                                            </ul>
+
+                
+
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td height="52" background="/static/images/xwh/e02.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                  <tr>
+
+                    <td width="39%">&nbsp;</td>
+
+                    <td width="61%" height="23" valign="top"><span style="color:#000000"><strong> 
+
+					<font face="Arial, Helvetica, sans-serif"><script type="text/javascript">showdate();</script>
+
+          </font></strong></span></td>
+
+                  </tr>
+
+                    
+
+                </table></td>
+
+              </tr>
+
+              <tr>
+
+                    <td height="23" align="center" ><a href="http://enews.xwh.cn/paperindex.htm" target="_blank" style="font-weight:bold; font-size:14px; color:#F00;text-decoration:none;">查阅2013-2-25前数字报请点击此链接</a></td>
+
+                    </tr>
+              <tr>
+
+                <td>
+
+                	<div class="date">
+
+					<iframe src="/shtml/calendar.htm" width="270" height="250" scrolling="no" frameborder="0"></iframe>
+
+					</div>
+
+                </td>
+
+              </tr>
+
+            </table></td>
+
+          </tr>
+
+        </table></td>
+
+      </tr>
+
+    </table></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="5" background="/static/images/xwh/wabbg.gif"></td>
+
+  </tr>
+
+</table>
+
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tr>
+
+    <td height="5" bgcolor="#cf1b1c"></td>
+
+  </tr>
+
+</table>
+
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tr>
+
+    <td><div id="Ybottom">
+
+<li class="bottom"><a href="http://corp.xwh.cn/index.html" target="_blank">公司简介</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://corp.xwh.cn/news.html" target="_blank">报社简介</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://corp.xwh.cn/sites.html" target="_blank">发行站点</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://corp.xwh.cn/links.html" target="_blank">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://zt.xwh.cn/w/20120206/index.html" target="_blank">付费推广</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://app.xwh.cn/map.php" target="_blank">网站地图</a></li>
+
+      <li class="bottom">客服电话：0431-85898000  新闻热线：0431-96618  版权所有：吉林盈通网络传媒有限公司</li>
+
+      <li class="bottom">信息产业部备案/许可证编号：吉ICP备05000336号 吉B-2-4-20080044</li>
+
+      <li class="bottom">
+
+
+
+
+
+
+
+      </li>
+
+    </div></td>
+
+  </tr>
+
+</table>
+
+
+
+
+
+<div id="divfocus"></div>
+
+<!-- YG-->
+
+		<script type="text/javascript">
+
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F845cce8548f02488dff3b6cd107f4675' type='text/javascript'%3E%3C/script%3E"));
+
+		</script>
+
+                
+
+
+
+		<!-- 对联广告-->
+
+
+
+
+
+		<!-- Start Alexa Certify Javascript -->
+
+		<script src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+
+			_atrk_opts = {
+
+				atrk_acct : "zokvf1agkf00Wh",
+
+				domain : "xwh.cn"
+
+			};
+
+			atrk();
+
+		</script>
+
+		<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=zokvf1agkf00Wh" style="display:none" height="1" width="1" alt="" />
+
+		</noscript>
+
+		<!-- End Alexa Certify Javascript --></body>
+
+</html>
+
+<script language="javascript" type="text/javascript">
+
+(function(){
+
+	$(".selectBox").mouseover(function(e){
+
+ 
+
+		  $(this).css({'border':'#339 solid 1px','backgroundColor':'#339','opacity':0.3});	
+
+		  offset = $(this).offset();
+
+		  $("#divfocus").css({'top':parseInt(offset.top)+'px','left':parseInt(offset.left+$(this).outerWidth())+'px'}).show().html($(this).attr("title"));	
+
+	});
+
+	$(".selectBox").mouseout(function(e){
+
+		  $(this).css({'border':'0','opacity':'0.01'});
+
+		  $("#divfocus").hide().html("");
+
+	});
+
+	$(".news li a").mouseover(function(e){
+
+		 $(".selectBox[alt="+$(this).attr("alt")+"]").trigger("mouseover");
+
+	});
+
+	$(".news li a").mouseout(function(e){
+
+		  $(".selectBox[alt="+$(this).attr("alt")+"]").trigger("mouseout");
+
+	});	
+
+	$(".selectBox").css({'opacity':'0.01'});
+
+	})()
+
+</script>

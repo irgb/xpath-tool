@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年 - 智东西</title>
+    <meta name="keywords" content="三星">
+    <meta name="description" content="5nm芯片究竟强在哪？又究竟难在哪？">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://oss.zhidx.com/uploads/2018/09/6691507300105_.pic_hd.jpg?x-oss-process=image/resize,m_fill,w_150,h_150" width="96" height="96" alt="Lina" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/liulina" title="由Lina发布" rel="author">Lina</a></div>
+                <div class="author-posts">共发表391篇文章</div>
+                <div class="author-desc">关注AI芯片、5G、虚拟现实等前沿技术，智东西副主编兼AI报道负责人。邮箱：lln@zhidx.com</div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag1">谷歌</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/vr" class="tag3">VR</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag1">腾讯</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag2">苹果</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag3">机器人</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag3">小米</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/360" class="tag2">360</a><a href="http://zhidx.com/p/tag/me" class="tag2">me</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag3">特斯拉</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd" rel="category tag">人工智能</a>  <a href="http://zhidx.com/p/category/series-article/aichip/aichip-top" rel="category tag">人工智能芯片重磅报道</a>  <a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a></span><span class="time">2019/01/03 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="850" height="400" src="http://oss.zhidx.com/uploads/2019/01/850-2.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/850-2.jpg 850w, http://oss.zhidx.com/uploads/2019/01/850-2.jpg?x-oss-process=image/resize,m_fill,w_600,h_282 600w, http://oss.zhidx.com/uploads/2019/01/850-2.jpg?x-oss-process=image/resize,m_fill,w_768,h_361 768w" sizes="(max-width: 850px) 100vw, 850px" />                </div>
+            <p><strong>智东西（公众号：zhidxcom）</strong><br />
+<strong> 文 | Lina</strong></p>
+<p>250亿美元是什么概念？</p>
+<p>250亿美元相当于1338万台512GB版本的iPhone XS MAX，相当于苹果公司市值的1/30，也相当于北京市2017年全年GDP总额的1/16。</p>
+<p>250亿美元，同时也是2018年6月台积电宣布投资5nm芯片工艺研发与生产的费用。</p>
+<p>在行业不断喊出“摩尔定律已死！”的当下，依旧有人在不断埋头推进芯片工艺，以超人的先进技术挑战那些难如登天的任务。在7nm芯片量产的当下，5nm的芯片制造工厂、光刻机、刻蚀机、EDA工具、市场与客户等都已一一就位，2019年，将会是一场5nm的冲刺赛。</p>
+<p><img class="alignnone size-full wp-image-139468" src="http://oss.zhidx.com/uploads/2019/01/photo.php_.jpeg" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="729" srcset="http://oss.zhidx.com/uploads/2019/01/photo.php_.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/photo.php_.jpeg?x-oss-process=image/resize,m_fill,w_329,h_300 329w, http://oss.zhidx.com/uploads/2019/01/photo.php_.jpeg?x-oss-process=image/resize,m_fill,w_768,h_700 768w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲2018年1月，台积电台湾南科5nm晶圆18厂第一期动工仪式</p>
+<h2>一、摩尔定律最后玩家！三巨头的爱恨情仇</h2>
+<p>摩尔定律的定义为：“当价格不变时，集成电路上可容纳的元器件的数量约每隔18-24个月便会增加一倍，性能也将提升一倍。”</p>
+<p>也就是说，在一年半到两年的时间里，你用同样价钱能够买到的电脑/手机/其他电子产品性能理论上可以增加一倍。</p>
+<p>这简直太爽了，试问哪个行业的创（赚）新（钱）速度能够跟它媲美？</p>
+<p>于是，就是这么两行简单的描述，在过去50年时间里推动着全美国——甚至全世界——的经济高速发展，直接催生了二战后结束后美国科技产业的全面爆发，至今仍旧引领全球。如今全球科技殿堂“美国硅谷”中的“硅”字，就是源自于集成电路的主要原材料——硅。</p>
+<p>一块面积不变的芯片上，如果需要容纳比以前多一倍的元器件数量，那么就需要这些元器件（一般是晶体管）体积更小，同时排布得更“紧”——我们常说的10nm、7nm芯片制程就是用来描述晶体管栅极宽度大小的。纳米进程数字越小，芯片能容纳的晶体管数量就越多、性能就越强大。</p>
+<p>跟牛顿第二定律这种基本物理学定律不同，摩尔定律并不是一个真正的科学定理，它只是描述了芯片技术高速发展的现状。芯片的性能不会自动增长，真正推动摩尔定律往前发展的是那些不断砸钱、招人、实验、研发的芯片企业们。</p>
+<p>不过，市场与经济同样有周期，摩尔定律也不例外。随着芯片工艺越来越逼近硅的物理极限，摩尔定律在最近这几年来发展速度不断变慢，每一代芯片工艺的研发成本也像滚雪球一样疯狂飙升——比如台积电宣布砸250亿美元研发5nm工艺——随着技术红利不断消失，往牌桌上砸钱的玩家也越来越少。</p>
+<p><img class="alignnone size-full wp-image-139466" src="http://oss.zhidx.com/uploads/2019/01/004.png" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="324" srcset="http://oss.zhidx.com/uploads/2019/01/004.png 800w, http://oss.zhidx.com/uploads/2019/01/004.png?x-oss-process=image/resize,m_fill,w_600,h_243 600w, http://oss.zhidx.com/uploads/2019/01/004.png?x-oss-process=image/resize,m_fill,w_768,h_311 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>2018年8月28日，全球第二大芯片代工厂格罗方德宣布，它将无限期地暂停7nm芯片工艺的开发，以便将资源转移到14nm和12nm工艺上。</p>
+<p>同样在2018年8月，全球第三大芯片代工厂联电宣布，不再投资12nm以下的先进芯片制程。</p>
+<p>于是，从智能手机到个人电脑、从云计算到比特币挖矿，全球无数个依靠摩尔定律红利进行不断研发创新的企业猛一抬头，忽然现在市面上还在哼哧哼哧埋头推动摩尔定律的人，就只剩台积电、英特尔、三星这三个“老冤家”了。</p>
+<p>他们一个是全球第一大芯片代工厂（台积电），另外两个则是全球芯片IDM厂商的老大和老二（英特尔和三星）。</p>
+<p>三星的半导体业务由来已久，早在1993年，三星就已经成功跻身全球第七大半导体厂商之位，在此后的二十多年里一路稳中有进，从未跌出过全球前十。去年10月，三星电子宣布通过了8nm LPP工艺验证，但一直到2018年11月才在自家年度旗舰手机芯片Exynos 9820手上用上8nm技术，预计2019年初量产。</p>
+<p><img class="alignnone size-full wp-image-136747" src="http://oss.zhidx.com/uploads/2018/11/屏幕快照-2018-11-16-19.53.17.png" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="337" srcset="http://oss.zhidx.com/uploads/2018/11/屏幕快照-2018-11-16-19.53.17.png 800w, http://oss.zhidx.com/uploads/2018/11/屏幕快照-2018-11-16-19.53.17.png?x-oss-process=image/resize,m_fill,w_600,h_253 600w, http://oss.zhidx.com/uploads/2018/11/屏幕快照-2018-11-16-19.53.17.png?x-oss-process=image/resize,m_fill,w_768,h_324 768w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲IC Insights机构发布的1993-2017F全球半导体十大厂商变迁图，20多年里英特尔始终稳坐第一</p>
+<p>至于老牌芯片巨头英特尔则更是在先进芯片工艺上投入重大，早年间英特尔在半导体领域几乎一骑绝尘，连台积电都要仰仗英特尔的给予代工认证（1988年）。而从1999年的180nm工艺开始，英特尔以每两年更新一代的节奏研发先进制造工艺，在过去20多年里坐稳了全球第一大半导体厂商的龙头宝座。直到2017年，三星凭借内存价格暴涨才超越英特尔，翻身跃居第一。</p>
+<p>英特尔的工艺研发进程在近年来受到了不小的挑战，在2015年7月，英特尔宣布本该在2016年面世的10nm工艺推迟量产，此后英特尔虽然也在不断优化14nm技术，部分10nm芯片也开始小批量出货，但其10nm至今尚未正式宣布量产。</p>
+<p>不过话说回来，早期的nm制程=栅极宽度大小，但是后期延伸出了更多让晶体管紧凑的方法，因此nm制程与栅极宽度大小并不一一对应，取决于各家定义：比如英特尔14nm的栅极宽度为42nm，同期三星14nm的栅极宽度为48nm，而台积电16nm的栅极宽度为45nm。在1um^2的面积上，英特尔14nm晶体管可以摆上101个，三星14nm晶体管只能摆75个，台积电的16nm晶体管能摆上81个。</p>
+<p>但无论怎么算，目前台积电在先进工艺上处于大幅领先的位置，其7nm芯片已经量产并陆续接下苹果A12、华为麒麟980、高通骁龙855、比特大陆、嘉楠耘智订单。台积电也常年称霸芯片代工领域老大地位，目前市占率超过56%（第二名为9%）。</p>
+<p>去年，台积电已经吹响了5nm工艺制程的冲锋号角。2018年1月，台积电在台湾开设了新的5nm晶圆18厂。同年6月的半导体技术论坛上，台积电宣布投资250亿美元研发、生产5nm工艺。</p>
+<p>而在年底的台积电年度“供应链管理论坛”上，台积电总裁魏哲家表示，该5nm晶圆厂目前已经在设备装机中，预计2019年Q1完工，2019年Q2将进行5nm芯片制程的风险试产，2020年投入量产。</p>
+<h2>二、EUV极紫外光刻机——5nm就靠你了</h2>
+<p>其实，除了台积电之外整个芯片制造行业在推进10nm以下技术的研发都多少遇到了些问题，但这个“锅”并不完全要他们自己背，上游设备商也要背一部分。</p>
+<p>芯片制造的环节非常复杂，首先要对硅进行冶炼提纯切割等，得到一块大的硅晶圆。</p>
+<p><img class="alignnone size-full wp-image-139467" src="http://oss.zhidx.com/uploads/2019/01/003-1.jpeg" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="531" srcset="http://oss.zhidx.com/uploads/2019/01/003-1.jpeg 800w, http://oss.zhidx.com/uploads/2019/01/003-1.jpeg?x-oss-process=image/resize,m_fill,w_452,h_300 452w, http://oss.zhidx.com/uploads/2019/01/003-1.jpeg?x-oss-process=image/resize,m_fill,w_768,h_510 768w, http://oss.zhidx.com/uploads/2019/01/003-1.jpeg?x-oss-process=image/resize,m_fill,w_300,h_200 300w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲硅晶圆</p>
+<p>紧接着，晶圆要经过湿洗（去除杂质）、光刻（雕刻出芯片图案）、离子注入（形成场效应管）、刻蚀（吹走/洗走多余的材料）、冲洗、退火、氧化、气相淀积等众多环节，最后通过测试才送去切割成无数小片片，经过封装后变成我们熟悉的芯片。</p>
+<p>如果再进一步简化，就可以看作是：用光刻机往硅片上雕刻出特定图案，用刻蚀机吹走/洗走多余的材料，最后经过一系列处理成为芯片。</p>
+<p>以上每一个环节都会涉及到专用的制造设备。由于芯片工艺制程的进一步发展，这些芯片图案的线条也越来越细，对于设备的要求也越来越高——首当其冲的，自然是负责“雕刻”的光刻机了。</p>
+<p><img class="alignnone size-full wp-image-139463" src="http://oss.zhidx.com/uploads/2019/01/001.jpg" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="400" height="446" srcset="http://oss.zhidx.com/uploads/2019/01/001.jpg 400w, http://oss.zhidx.com/uploads/2019/01/001.jpg?x-oss-process=image/resize,m_fill,w_269,h_300 269w" sizes="(max-width: 400px) 100vw, 400px" /><br />
+▲光刻原理简示</p>
+<p>光刻机的运作原理是：先把设计好的芯片图案印在掩膜上，接着用激光光束穿过印着图案的掩膜和光学镜片，将芯片图案曝光在带有光刻胶涂层的硅片上，此时涂层被光照到的地方发生反应溶解，没有被照到的地方保持不变，掩膜上的图案就被转移到芯片光刻胶涂层上。</p>
+<p><img class="alignnone size-full wp-image-139469" src="http://oss.zhidx.com/uploads/2019/01/d69d55c4dfd14ba6ae3dd7d29e98af52.gif" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="480" height="270" /><br />
+▲刻蚀原理简示</p>
+<p>刻蚀相对光刻要容易。刻蚀机通过干刻蚀（用等离子体进行薄膜刻蚀）及湿蚀刻（液体腐蚀）的方法，根据印上去的图案刻蚀掉有图案（或者没有图案）的部分，留下剩余的部分，芯片图案又从光刻胶涂层转移到了硅片上。</p>
+<p>目前市面上高端芯片使用的普遍是第四代DUV深紫外光刻机，它的激光波长是193nm（波长越小，“刻刀”越精密），它的理论“雕刻”极限大约是130nm。</p>
+<p><img class="alignnone size-full wp-image-139470" src="http://oss.zhidx.com/uploads/2019/01/005.png" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="466" srcset="http://oss.zhidx.com/uploads/2019/01/005.png 800w, http://oss.zhidx.com/uploads/2019/01/005.png?x-oss-process=image/resize,m_fill,w_515,h_300 515w, http://oss.zhidx.com/uploads/2019/01/005.png?x-oss-process=image/resize,m_fill,w_768,h_447 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>然而到了2005年，光刻机厂商还是没能成功量产下一代波长更短、“刻刀”更精密的第五代EUV超紫外光刻机，逼得近年来各大芯片制造厂不断发明创新，用上了多重曝光、步进式扫描、浸润式光刻等更多新技术，继续维持摩尔定律从90nm到如今的14nm、10nm发展。而浸润式光刻技术的开创者林本坚博士也获得了2018年未来科学大奖-数学与计算机科学奖。</p>
+<p>用193nm的DUV深紫外光刻机造7nm芯片，就像用一支直径是193nm的笔去写7nm的字一样，其难度不亚于拉着骆驼穿过针眼，半导体技术发展到最后竟然有点哲学的意思。</p>
+<p>而且，由于频繁用上了浸润式光刻、三重曝光等复杂技术，用193nmDUV光刻机打造7nm芯片的成本已然超过了EUV ，生产交期更长、技术更为复杂，因此7nm之后，行业对于第五代EUV超紫外光刻机的呼声越来越强烈。</p>
+<p>EUV超紫外光刻机的激光波长只有13.5nm，是一把非常精细的“雕刻刀”。这一技术源自于美国雷根时代的“星战计划”。EUV超紫外光刻机本应在2005年就量产上阵，然而由于这一技术的研发难度巨大，EUV设备不仅所需的光源功率迟迟无法达到250W工作功率需求，而且对于光学透镜、反射镜系统的精密度高到变态。</p>
+<p>比如EUV光刻机的关键部件反射镜，其瑕疵大小只能以pm（nm的千分之一）计。如果反射镜面积有整个德国大，最高的突起处不能高于一厘米。</p>
+<p><img class="alignnone size-full wp-image-139471" src="http://oss.zhidx.com/uploads/2019/01/xxl.jpg" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="450" srcset="http://oss.zhidx.com/uploads/2019/01/xxl.jpg 800w, http://oss.zhidx.com/uploads/2019/01/xxl.jpg?x-oss-process=image/resize,m_fill,w_533,h_300 533w, http://oss.zhidx.com/uploads/2019/01/xxl.jpg?x-oss-process=image/resize,m_fill,w_768,h_432 768w" sizes="(max-width: 800px) 100vw, 800px" /><br />
+▲荷兰光刻机巨头ASML总裁暨CEO温彼得（Peter Wennink）</p>
+<p>“如果我们交不出EUV超紫外光刻机的话，摩尔定律就会从此停止。”荷兰光刻机巨头ASML总裁暨CEO温彼得（Peter Wennink）曾经这样说。</p>
+<p>因此，虽然英特尔、台积电、三星这三大个老冤家彼此抢订单、抢人才的竞争不断，但是在2012年的时候，他们三个曾经联袂向荷兰ASML光刻机厂投资41亿、14亿、9.75 亿美元，督促ASML加快研发新一代EUV超紫外光刻机，可见光刻机的重要性。</p>
+<p>虽然荷兰ASML的EUV光刻机跳票了十多年（并且业内老二、老三尼康与佳能纷纷放弃研发，这个节奏是不是很眼熟？），到了2016年，ASML终于将EUV光刻机造了出来并成功量产。</p>
+<p>2017年，ASML出货了11台EUV光刻机，2018年出货了18台。虽然这些EUV光刻机基本上被台积电、三星这些厂商优先买去了，但中芯国际也出资1亿美金购买了一台7nm工艺EUV光刻机，预计2019年上半年到货。</p>
+<p>ASML表示，由于EUV超紫外光刻机的零组件多达5万多个部件，从客户下单到正式交货，交期约21个月。</p>
+<p>目前台积电已经量产的华为、苹果、比特大陆等7nm芯片的技术都还是基于193nm的DUV深紫外光刻机的，但是DUV技术已经逼近极限，再往下走的话成本飙升，5nm芯片的技术路径必须转到EUV。</p>
+<p>2018年10月，台积电宣布基于EUV技术的7nm芯片已经流片成功，和7nm DUV相比，7nm EUV可以提高芯片密度20%，功耗降低6%至12%。台积电的5nm有望大面积用上EUV。</p>
+<h2>三、金贵的5nm和不差钱的台积电</h2>
+<p>在先进工艺上的不断砸钱研发也给予了台积电丰厚的产业回报，常年称霸芯片代工领域老大地位的台积电，这两年靠着苹果、高通、华为等的订单赚得盆满钵满，其2018年前三季度合并营收达新台币7417.03亿元，较2017年同期增长6.0%，8月初的病毒事件都未曾大面积影响其财报。</p>
+<p>上文提到，台积电在2018年1月就开始兴建5nm晶圆厂了；除了钱、晶圆厂、光刻机之外，5nm的刻蚀机、EDA工具、客户等也已经陆续就位：</p>
+<p><strong>1）5nm刻蚀机已就位；</strong></p>
+<p>芯片的制造过程可以简化成用光刻机“雕刻”图案，用刻蚀机吹走/洗走多余的材料。相对于光刻机，刻蚀机的研发难度要小一些，但刻蚀机也是除光刻机以外最关键的设备。目前一台刻蚀机单价在200万美元左右，一个晶圆厂需要40-50台刻蚀机。</p>
+<p>国外刻蚀机设备厂商主要有应用材料（Applied Materials）、科林研发（LAM） 、东京威力科创（TEL）、日立先端（Hitach）、牛津仪器等；国内玩家则有中微半导体、北方微电子、金盛微纳科技，我们跟国外的差距没有光刻机那么大。</p>
+<p>2018年12月，中微半导体的5nm等离子体刻蚀机也宣布通过台积电验证，将用于全球首条5nm制程生产线。而在7nm时代，中微半导体的刻蚀机也进入了台积电的7nm产线。</p>
+<p><strong>2）5nm EDA工具已就位；</strong></p>
+<p>目前，全球几大EDA巨头都已经陆续推出了5nm芯片设计工具，比如在2018年10月，新思科技宣布其数字和定制设计平台通过了台积电的5nm EUV工艺技术认证。</p>
+<p>而另一EDA巨头华登国际创始人兼Cadence CEO陈立武曾经告诉智东西，目前Cadence已经和很多合作伙伴开始了7nm、5nm、甚至3nm芯片工艺制程的研究。比如今年年初，比利时公司Imec与Cadence就成功流片了首款3nm测试芯片。</p>
+<p>陈立武说，现在5nm市场是最活跃的，有很多非常积极的公司正在安排5nm相关EDA软件与设计、IP的协同。</p>
+<p><strong>3）5nm客户已就位；</strong></p>
+<p>有工艺，自然也需要有市场。台积电曾表示，目前很多客户已经开始基于新工艺开发芯片了。</p>
+<p>不过由于芯片设计的复杂度不同，像比特大陆这种专用芯片设计起来相对容易、手机芯片次之、电脑芯片与数据中心在再次之，所以最先用上先进的工艺的往往是专用芯片而非通用芯片，比如台积电7nm的头批客户只包含了比特币与手机芯片玩家。</p>
+<p><img class="alignnone size-full wp-image-128535" src="http://oss.zhidx.com/uploads/2018/08/WechatIMG772.jpeg" alt="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" width="800" height="500" srcset="http://oss.zhidx.com/uploads/2018/08/WechatIMG772.jpeg 800w, http://oss.zhidx.com/uploads/2018/08/WechatIMG772.jpeg?x-oss-process=image/resize,m_fill,w_480,h_300 480w, http://oss.zhidx.com/uploads/2018/08/WechatIMG772.jpeg?x-oss-process=image/resize,m_fill,w_768,h_480 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>而根据华为海思平台与关键技术开发部部长夏禹此前给出的芯片工艺路线路，华为的规划是推出7nm芯片之后将推进5nm芯片研发进程，预计5nm芯片问世的时间点在2020年。</p>
+<p>华为研发人员曾经告诉智东西，在7nm时代，华为和台积电合作研发了3年，耗资3亿美元，才终于在2018年拿出7nm芯片设计。</p>
+<p>工艺越先进，需要投入的也成本越高，这个道理在芯片代工厂跟芯片设计商同理，5nm的设计总成本（人工与许可费）是7nm的1.5倍左右。</p>
+<p>而根据台积电数据，基于5nm工艺生产的A72芯片，芯片面积缩小了1.8倍，速度提升了14.7% -17.1%。</p>
+<h2>结语：三大巨头的工艺竞争还将继续</h2>
+<p>随着研发成本越来越高，高精尖纳米制程成了越来越少部分玩家的战场，不仅芯片先进制造工艺的研发成本高、芯片设计的成本也跟着水涨船高。</p>
+<p>在PC和手机的出货量开始走下坡路的当下，不少机构对于今年全球半导体市场的走势持悲观态度。不过，AI、5G、数据中心这些高端芯片需求正处在持续上升之势，虽然目前台积电暂时领先，但是英特尔、三星、台积电三大巨头的竞争还将持续，市场对于先进工艺的热情依旧持续。</p>
+<p>与此同时，三星和台积电都已经公布了3nm的线路图。如果说5nm是一个难关的话，受到量子隧穿效应影响的3nm就更是一个逼近物理极限的重要挑战。摩尔定律尚未完结，只是门槛越来越高了。</p>
+<hr />
+
+<h2 style="text-align: center;"><strong>每日一头条</strong></h2>
+<p style="text-align: center;"><strong>趋势·深度·犀利·干货，最专业的行业解读</strong></p>
+<p style="text-align: center;">深喉爆料、投稿：guoren@zhidx.com</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139461'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139461">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="social-share" data-title="台积电强攻5nm！猛砸250亿美元，与三星Intel相爱相杀20年" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+            <a href="/p/tag/三星">三星</a>            </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139461">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139461">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

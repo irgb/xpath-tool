@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>正本提单不见了!？船东放货不被坑有妙招_国际海事信息网</title>
+<meta name="keywords" content="正本提单 船东放货" />
+<meta name="description" content="正本提单不见了!？船东放货不被坑有妙招" />
+<link href="templates/web/cn/css/main.css" rel="stylesheet" type="text/css" />
+<script src="templates/web/cn/js/hdm.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/transport.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/common1.js" type="text/javascript"></script>
+<script src="templates/web/cn/js/compare.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<script src='js/jquery.min.js' type='text/javascript'></script>
+<script language="javascript">
+	var fontZoomVal=1;
+	function fontZoom(size) {
+		if(fontZoomVal==1) {
+			var rel = /style\s*?=\s*?([‘"])[\s\S]*?\1/g;
+			$(".news_text").html($(".news_text").html().replace(rel, ''));
+		}
+		fontZoomVal=fontZoomVal*size;
+		if(fontZoomVal<1) fontZoomVal=1;
+		$(".news_text").children().css({"font-size":fontZoomVal+"em","line-height":(fontZoomVal+0.2)+"em"});
+	}
+</script>
+</head>
+<body>
+﻿<!--header:start-->
+<script type="text/javascript">
+	$(function(){
+		//移动设备下菜单隐藏及显示
+		$(".menuBtn").click(function () {
+			$(".menu").toggle();
+		});
+		//微信微博点击出现二维码
+		$(".qrcBtn").click(function () {
+			$('.qrcode').css({ 
+				position:'absolute', 
+				left: ($(window).width() - $('.qrcode').outerWidth())/2, 
+				top: ($(window).height() - $('.qrcode').outerHeight())/2 + $(document).scrollTop() 
+			}); 
+			$(".qrcode").toggle();
+		});
+		$(".qrcode-close").click(function () {
+			$(".qrcode").toggle();
+		});
+	});
+</script>
+<div class="qrcode">
+	<span class="qrcode-close">X</span>
+	<div class="qrcode-img"><a href="https://m.weibo.cn/u/2549975514" title="点我打开微博" target="_blank"><img src="templates/web/cn/images/qrcode.png"></a></div>
+	<div class="qrcode-txt">
+		<h1>国际海事信息网</h1>
+		<p>扫描二维码关注微信公众号、<a href="https://m.weibo.cn/u/2549975514" target="_blank" style="text-decoration:underline;">微博</a></p>
+		<p>随时随地获取更多资讯和服务</p>
+		<p>让我们成为您身边的海事信息专家</p>
+	</div>
+</div>
+<div class="header">
+	<span class="menuBtn"><img width="30" src="templates/web/cn/images/menuBtn.png" /></span>
+	<span class="searchBtn"><a href="/advanced_reach.php"><img width="30" src="templates/web/cn/images/searchBtn.png" /></a></span>
+	<div class="logo">
+		<object class="logoswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="90">
+			<param name="movie" value="templates/web/cn/images/logo.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent" />
+			<param name="menu" value="false">
+			<param name="wmode" value="opaque">
+			<embed src="templates/web/cn/images/logo.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="90"></embed>
+		</object>
+		<img class="logoimg80" width="300" height="80" src="templates/web/cn/images/logo80.png" />
+		<img class="logoimg60" width="300" height="60" src="templates/web/cn/images/logo60.png" />
+		<div class="toplinks">
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weixin.png' />
+			<img class="qrcBtn" src='templates/web/cn/images/icon-weibo.png' />
+			<a href="index_en.php"><img src='templates/web/cn/images/icon-english.png' /></a>
+		</div>
+	</div>
+	<div class="submenu">
+		<div class="search">
+			<span class="fleft"><img src="templates/web/cn/images/submenu_left.gif" width="4" height="28" alt="" /></span>
+			<form action="/reacher.php" name="form2" method="post" onSubmit="return check_search_from1();">
+			<input type="hidden" name="i_act" id="i_act" value="info">
+			<div class="search_bg">
+				<span class="login_box">
+											<a href="/login.php">登录</a> <a href="/register.php">注册</a> 
+									</span>
+				<select name="s_type" size="1" id="v_type" onChange="if(this.options[this.selectedIndex].value!=''){change_ctype1()}">
+					<option value="info">新闻</option>
+					<option value="hot">热点报道</option>
+					<option value="hy">行业展会</option>
+					<option value="bk">百科</option>
+					<option value="fox">海外传真</option>
+					<!--<option value="ts">图书</option>	
+					<option value="video">视频</option>
+					<option value="uinfo">会员发布</option>-->
+				</select>
+				<select name="c_type" size="1" id="c_type">
+					<option value="title">标题 </option>
+					<option value="note">内容</option>
+					<option value="author">作者</option>	
+					<option value="source">来源</option>
+				</select>
+				<input name="keyword" id="l_keyword" type="text" value="关键字" class="search_box" onfocus="if(this.value=='关键字'){this.value=''};" />
+				<input type="submit" value="检索" />
+				<input type="button" value="高级" onclick="location.href='/advanced_reach.php';" />
+			</div></form>
+		</div>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a target="_self" href="/index.php">首页</a></li>
+			<li class="haschild"><a target="_self" href="/news.php">新闻中心</a></li>
+			<li><a target="_self" href="/hot.php">热点报道</a></li>
+			<li><a target="_self" href="/overfax.php">海外传真</a></li>
+			<li><a target="_self" href="/information_products.php">信息产品</a></li>
+			<li><a target="_self" href="/trade.php">媒体合作</a></li>
+			<!--<li><a target="_self" href="/wiki.php">百科工具</a></li>-->
+		</ul>
+	</div>
+	<div class="menu childmenu">
+		<ul>
+			<li><a target="_self" href="/ship.php">航运版</a></li>
+			<li><a target="_self" href="/port.php">港口版</a></li>
+			<li><a target="_self" href="/logistics.php">物流版</a></li>
+			<li><a target="_self" href="/shipmarine.php">船舶海工版</a></li>
+			<li><a target="_self" href="/marine.php">海洋安全版</a></li>
+			<li><a target="_self" href="/techn.php">科技版</a></li>
+			<li><a target="_self" href="/fta.php">自贸（港）区</a></li>
+		</ul>
+	</div>
+</div>
+<!--header:end--><div class="main">
+	<div class="main-inner">
+	
+		<!--广告位1-->
+		<div class="advert">
+			                         <a href="http://www.simic.net.cn/" target="_blank"> <img src="imgs/adimg/20101223172309.jpg" /></a>
+                        	
+		</div>
+		
+		<div class="news_show_left">
+			<div class="news_detail">
+								<p class="news_path">
+					&nbsp;&nbsp;<a href="index.php">首页</a> 
+					&gt;&gt; <a href="news_list.php?id=111">航运市场</a>
+					&gt;&gt; 正文
+				</p>
+				<h2 class="news_title">正本提单不见了!？船东放货不被坑有妙招</h2>
+				<p class="news_info">
+					作者：&nbsp;&nbsp;
+					发布时间：2019-01-07 &nbsp;&nbsp;
+					浏览量：1547&nbsp;&nbsp;
+					字体大小：
+					<a href="javascript:void(0)" onclick="fontZoom(1.6);return false;" style="color:#FF4500;">&nbsp;A+&nbsp;</a>
+					<a href="javascript:void(0)" onclick="fontZoom(0.8);return flase" style="color:#228B22;">&nbsp;A-&nbsp;</a>
+				</p>
+				<div class="news_text">
+					        
+					<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><img src="http://www.xindemarinenews.com/uploads/allimg/190106/58-1Z1062152230-L.jpg" alt="" /></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">摘要</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　当正本提单被盗、遗失、灭失时，船东若同意在未收回正本提单时交付货物，将面临巨大的风险。船东往往出于商业因素，在接受承租人保函后交付货物。但除此之外，还有其它的处理方法以交付货物。我们近期接到了多起咨询，特在此说明此类问题的处理原则和方法。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　在船舶经营过程中，船东有时会遇到承租人（也可能是托运人或者收货人）要求在已签发的正本提单原件被盗、遗失、灭失等情形下交付货物的情况。此时，船东如果同意在未收回正本提单的情况下就交付货物，将面临着无单放货的巨大风险。实务中，船东往往会出于商业因素的考虑，接受承租人提供的保函后交付货物。需要指出的是，此种情况除了像无单放货那样接受保函外，还有其它的处理方法以交付货物。我们于近期接到了几起船东关于相关问题的咨询，特在此说明对于此类问题的处理原则和方法。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; color: rgb(178,34,34); padding-top: 0px"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　一 中国法律的规定</strong></span></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　对于此类问题，中国法律有比较明确的规定加以应对：<br data-filtered="filtered" style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px" />
+　　《中华人民共和国海事诉讼特别程序法》第一百条规定，&ldquo;提单等提货凭证持有人，因提货凭证失控或者灭失，可以向货物所在地海事法院申请公示催告&rdquo;。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　由于区别于普通的民事诉讼公示催告程序和船舶优先权公示催告程序，学理上，《海事诉讼特别程序法》第一百条中所规定的公示催告程序也被称为海事公示催告。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　记名提单</strong></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　关于公示催告程序得适用的单据类型，我们认为，在中国法下，即使船东签发的是记名提单，如果遇到正本提单丢失、被盗、灭失时，公示催告程序也对记名提单适用。原因在于：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　第一，《海商法》第七十一条中已经将记名提单作为提单的一种类型，并未对其做任何特殊化的处理；</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　第二，在2009年《最高人民法院关于审理无正本提单交付货物案件适用法律若干问题的规定》第一条中就明确规定：本规定所称正本提单包括记名提单、指示提单和不记名提单。第二条则进一步规定：承运人违反法律规定，无正本提单交付货物，损害正本提单持有人提单权利的，正本提单持有人可以要求承运人承担由此造成损失的民事责任。这一条也没有区分记名提单、指示提单或是不记名提单。因此即使是记名提单，承运人在没有收回正本记名提单的前提下放货，仍有可能面临无单放货的索赔。此时，对于船东/承运人而言，最好的保护自身利益的方法是就是要求收货人/提单持有人申请公示催告程序，通过法定程序，依据海事法院裁定的指令将货物交付给指定的人来完成交付货物的义务。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　电子提单</strong></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　另外，公示催告程序也应得适用于电子提单。当然，电子提单不会出现传统物理意义上的&ldquo;遗失&rdquo;、&ldquo;被盗&rdquo;、&ldquo;灭失&rdquo;等情形，但是仍会出现&ldquo;失控&rdquo;的情况，比如电子数据交换系统的故障、密码被篡改、破译等情形，进而也会产生与传统提单遗失一样的，无法提取货物的效果。从这个意义上讲，《海事诉讼特别程序法》中&ldquo;失控&rdquo;的措辞是颇具前瞻性和概括张力的。反倒是在其后颁布生效的《最高人民法院关于适用&lt;中华人民共和国海事诉讼特别程序法&gt;若干问题的解释》第七十条规定&ldquo;海事诉讼特别程序法第一百条规定的失控指提单或者其他提货凭证被盗、遗失&rdquo;，似乎是将眼光局限在了传统意义的纸介质提单上。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　海运单</strong></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　但对于海运单这种&ldquo;认人不认单&rdquo;类型的单据，则无适用公示催告程序的必要。收货人只需证明身份即可提货。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　关于公示催告的期间问题，海诉法司法解释规定：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　第七十二条：海事法院决定受理公示催告申请的，应当同时通知承运人、承运人的代理人或者货物保管人停止交付货物，并于三日内发出公告，敦促利害关系人申报权利。公示催告的期间由海事法院根据情况决定，但不得少于三十日。　<span style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-size: 12px; padding-top: 0px">　</span></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　这个期间长度少于2012年修订的《中华人民共和国民事诉讼法》第二百一十九条中所规定的公示催告程序六十日的公告期间，也少于《海事诉讼特别程序法》第一百二十四条中所规定的船舶优先权六十日的催告期间。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　而公示催告的期间也可能因为特殊原因而缩短。上述司法解释规定：</div>
+<p><span style="widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; display: inline !important; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; float: none; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　第七十五条：&ldquo;公示催告期间，国家重点建设项目待安装、施工、生产的货物，救灾物资，或者货物本身属性不宜长期保管以及季节性货物，在申请人提供充分可靠担保的情况下，海事法院可以依据申请人的申请作出由申请人提取货物的裁定。&rdquo;</span></p>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; color: rgb(178,34,34); padding-top: 0px"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　二 英国法律的态度</strong></span></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　英国法下并没有类似中国法公示催告程序的概念。在SA SUCRE EXPORT v. NORTHERN RIVERSHIPPING LTD（The Sormovskiy 3068）[1994]2 Lloyd&rsquo;s Rep. 266一案中，Clarke法官认为，当提单遗失或者被盗时，是得无单放货的一种例外（the simple rule to which I have referred does require some exceptions because the bill of lading might have been lost or stolen），但船长须在满足以下两点时，方可交付货物：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　1、请求交付货物的人有权占有有关货物（the person seeking delivery of the goods is entitled to possession）;</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　2、解释说明提单遗失或者被盗的原因（what has become of the bill of lading）。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　但是Clarke法官也同时指出，在提单遗失或者被盗的情形下，其准确的定性仍然有值得继续探讨的空间（the precise nature of the exceptions will no doubt require further consideration in the future）。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　同年，英国上诉法院在KUWAITPETROLEUM CORPORATION v. I &amp; D OIL CARRIERS LTD.（The Houda）[1994] 2 Lloyd&rsquo;s Rep. 541一案中，则做出了不同的认定：除非另有协议（如船东/承运人接受保函），那么向法院申请相应的裁定才是足以保护船东/承运人的做法（Where a bill of lading is lost, the remedy, in default of agreement, is to obtain an order of the court that on tending a sufficient indemnity the loss of the bill of lading is not to be set up as a defence）。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　上述&ldquo;The Houda&rdquo;案件，涉及了1990年8月，Houda轮在科威特Mina Al Almandi装港装运原油时，由于伊拉克入侵，导致整套提单丢失，不知去向，进而引发的一系列争议。考虑到案件审判的针对性，审理法院的效力层级等因素，应当说，&ldquo;The Houda&rdquo;案所确立的原则相对于&ldquo;The Sormovskiy 3068&rdquo;案更加具有指导意义。在提单失控或者灭失时，可以通过法院程序主导货物的交付，中英法律在这一点上的处理原则和精神是趋同和类似的。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　另外，类似中国法律的规定和实践，英国上议院2005年在&ldquo;The Rafaela S&rdquo;案件中也认定记名提单需要凭单放货。因此，在英国法下，即使是在记名提单遗失、被盗、灭失等情形下，如果在货方无法提供令船东满意的保函的情况下，设法获得法院关于交付货物方面的裁定或指示才是万全之策。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; color: rgb(178,34,34); padding-top: 0px"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px">　　三 我们的实践</strong></span></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　在这里，扼要介绍一下我们在2017年4月处理的一个相关案件：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　协会某入会船从中国连云港装运一批钢材货物至南非德班港。承运人在装港签发了不可流转的记名提单，但提单在快递寄送给买方的过程中遗失。承租人方面随后致电船东，希望船东在提单丢失的情况下，在南非德班将货物交付给提单中载明的收货人，并愿意提供信誉担保以担保船东方面可能遭受的索赔或损失。船东考虑到同承租人合作时间短，对接受其信誉担保心存疑虑，于是向协会方面咨询处理意见。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　根据上述情况，我们建议船东，在对方不能提供可靠担保（如现金担保或者一流银行的银行担保）的情况下，应要求货方（承租人和/或收货人）向南非高等法院（high court of SouthAfrica）申请法院的放货裁定（order of the court）。收货人于2017年4月13日向南非高等法院德班KWAZULU-NATAL地方法庭申请放货裁定。船东方面在4月19日收到法院的放货裁定，指示德班当地船代将有关货物交付给提单中载明的收货人。至此，案件在不到一周的时间内得到了比较圆满的解决。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　在此简单提及，南非没有专门的海事法院，而是由高等法院的地方法庭负责审理第一审的海事案件，并采用独审制。绝大多数的第一审海事案件都会依照地理上的分布，由位于德班或者开普敦的地方法庭审理。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px"><span style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; color: rgb(178,34,34); padding-top: 0px">　　四 结论</span></strong></div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　综合以上论述，我们认为：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　在正本提单被盗、遗失、灭失等情形下交付货物，船东/承运人除了考虑接受货物利益相关方出具的保函之外，还可以考虑同通过公示催告程序或者获取法院关于交付货物方面的裁定或指示等法律程序来保护自己的合法权益。而且后者对于船东/承运人的保护更为周全，相当程度上消除了不确定性和潜在的风险，原则上是处理此类问题应当首先考虑采取的方法。但必须承认的是，船东/承运人在考虑使用此种方法时，仍可能面临下述的困境：</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　（1）有关法律程序的所需时间可能会由于不同的法域而长短不一。有时可能时间过长；</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　（2）各国法律规定不尽相同。比如在美国1936年COGSA下，记名提单可以不凭单放货，如此，美国法下，在签发的记名提单被盗或者丢失时，承运人只需辨识提单载明的收货人，而不必要收回正本提单；</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　（3）商业上的考虑和压力；</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　（4）租约中可能存在特定的条款。等等</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　因此，公示催告程序或者获取法院的裁定或指示在具体的案件中是否具备可行性，仍需具体问题具体分析。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　最后必须指出的是，在正本提单被盗、遗失、灭失等情形下交付货物，极有可能产生无单放货的风险，进而可能影响船东保赔保险的承保。因此，船东在面临此类问题时，在做出决策前，应同协会密切联系，寻求意见。</div>
+<div style="padding-bottom: 0px; widows: 2; text-transform: none; background-color: rgb(255,255,255); font-style: normal; text-indent: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;, arial, sans-serif; white-space: normal; orphans: 2; letter-spacing: normal; color: rgb(51,51,51); font-size: 16px; font-weight: 400; word-spacing: 0px; padding-top: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">　　本文所涉信息、评论和分析，仅作参考和一般性探讨，不代表协会就某个具体案件或问题的意见。如需具体分析或建议，请与协会有关人员联系。</div>
+					<p align="center"></p>
+					<p align="right">来源：信德海事网</p>
+				</div>
+				  
+				<div class="news_lastnext">
+											<a href="news_show.php?id=219139">[下一篇] “新海亮”号交付 澳龙船艇为珠海高速客轮有限公司打造又一标杆力作</a>
+					   
+					 
+						<a href="news_show.php?id=219137">[上一篇] 宁波远洋运输船触礁事故第3天 24名船员全部获救</a>
+					 				</div>
+			</div>
+			<div class="news_related">
+				<span>相关新闻</span>
+				<ul>
+				 
+				</ul>
+			</div>
+		</div>
+		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="news_show_right">
+	<div class="title"><span>今日要闻</span></div>
+		<div class="newslist2">
+			<ul>
+							<li><a href="news_show.php?id=219794" title="2018年物流大盘点：绿色物流引关注 发生“大革命”">2018年物流大盘点：绿色物流引关注 发生“大革命”</a></li>
+							<li><a href="news_show.php?id=219795" title="全国多地出台利好政策 支持邮政与物流快递业发展">全国多地出台利好政策 支持邮政与物流快递业发展</a></li>
+							<li><a href="news_show.php?id=219799" title="德国超市集团麦德龙与getnow.de拓展杂货寄递合作">德国超市集团麦德龙与getnow.de拓展杂货寄递合作</a></li>
+							<li><a href="news_show.php?id=219796" title="智能物流成行业大势 末端配送短板今年有望解决">智能物流成行业大势 末端配送短板今年有望解决</a></li>
+							<li><a href="news_show.php?id=219797" title="京东公布2019春节送货通知：全年无休 保证时效">京东公布2019春节送货通知：全年无休 保证时效</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>图片新闻</span></div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">
+				<img src="../../imgs/nimg/smallimg/1548079262_thumb.jpg" />
+				<p>德鲁里：船公司推迟交付以缓和UL...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219655" title="最忙美国港口创货运记录">
+				<img src="../../imgs/nimg/smallimg/1547802697_thumb.jpg" />
+				<p>最忙美国港口创货运记录</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219640" title="上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理上海中远海运重工坚持系统协同完成“平安昌盛”系列姊妹船修理">
+				<img src="../../imgs/nimg/smallimg/1547689509_thumb.jpg" />
+				<p>上海中远海运重工坚持系统协同完成...</p>
+			</a>
+		</div>
+			<div class="news_photo2">
+			<a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">
+				<img src="../../imgs/nimg/smallimg/1547477739_thumb.jpg" />
+				<p>现代商船在孟买港开设中印快线</p>
+			</a>
+		</div>
+		<div class="title"><span>海外传真</span></div>
+	<div class="newslist2">
+		<ul>
+						<li><a href="news_show.php?id=219765" title="德鲁里：船公司推迟交付以缓和ULCV影响">德鲁里：船公司推迟交付以缓和ULCV影响</a></li>
+						<li><a href="news_show.php?id=219655" title="最忙美国港口创货运记录">最忙美国港口创货运记录</a></li>
+						<li><a href="news_show.php?id=219465" title="现代商船在孟买港开设中印快线">现代商船在孟买港开设中印快线</a></li>
+						<li><a href="news_show.php?id=219401" title="Cosco售后回租四艘1万TEU集装箱船">Cosco售后回租四艘1万TEU集装箱船</a></li>
+						<li><a href="news_show.php?id=219152" title="EMGS第四季度船舶利用率达32%">EMGS第四季度船舶利用率达32%</a></li>
+					</ul>
+	</div>
+	<div class="title"><span>热点报道</span></div>
+	<div class="newslist2">
+		<ul>
+				
+			<li><a href="hot_show.php?id=95" title="">回顾2018 展望2019</a></li>
+				
+			<li><a href="hot_show.php?id=94" title="">中美贸易摩擦下的航运业</a></li>
+				
+			<li><a href="hot_show.php?id=93" title="">2018全国两会  新时代 新征程</a></li>
+				
+			<li><a href="hot_show.php?id=92" title="">东海“桑吉”油轮撞船事故</a></li>
+				
+			<li><a href="hot_show.php?id=91" title="">全球最大智能码头 洋山港四期开港</a></li>
+					</ul>
+	</div>
+</div>
+	</div><!--/.main-inner-->
+</div><!--/.main-->
+﻿<!--footer:start-->
+<div class="footer">
+	<div class="directory">
+					<a href="/page.php?id=4">关于我们</a>
+					<a href="/page.php?id=5">服务条款</a>
+					<a href="/page.php?id=6">法律声明</a>
+					<a href="/page.php?id=7">支付方式</a>
+					<a href="/page.php?id=8">广告服务</a>
+					<a href="/page.php?id=9">网站地图</a>
+					<a href="/page.php?id=10">联系我们</a>
+					<a href="/page.php?id=12">知识产权声明</a>
+			
+	</div>
+	<div class="copyright">
+		<p>
+			主办：上海国际海事信息研究中心 上海社会科学院信息研究所
+			运行管理：<a href="http://www.library.shmtu.edu.cn/" target=_blank>上海海事大学图书馆</a> 版权所有
+			<a href="/click.php" target="_blank">访问统计</a>
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/1834136.js"></script>
+			<script language="javaScript" src="http://s9.cnzz.com/stat.php?id=4933794&web_id=4933794"></script>
+		</p>
+		<p>
+			地址：上海市浦东新区南汇新城镇海港大道1550号
+			邮编：201306 电话：021-38284947 传真：021-38284946
+		</p>
+	</div>
+</div>
+<!--footer:end--></body>
+</html>

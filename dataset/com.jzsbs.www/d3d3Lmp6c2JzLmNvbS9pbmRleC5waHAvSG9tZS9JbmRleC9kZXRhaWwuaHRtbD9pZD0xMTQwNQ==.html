@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>
+        建筑新网：我们的改革与发展 2018年中国建筑业年度热词盘点（下）                         
+   
+    </title>
+    
+    <script type="text/javascript">
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        window.location.href = "/index.php/Home/Mobile/detail.html?id=11405";
+    }
+</script>
+
+    <!-- <script type="text/javascript">
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            window.location.href = "/index.php/Home/Mobile/index.html";
+        }
+    </script> -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/Public/layui/css/layui.css">
+    <script src="/Public/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/jz.css">
+    <script type="text/javascript" src="/Public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+    $('#type1 option[value=]').attr('selected', 'selected');
+    </script>
+
+    <script type="text/javascript">
+    var CalendarData = new Array(100);   
+    var madd = new Array(12);   
+    var tgString = "甲乙丙丁戊己庚辛壬癸";   
+    var dzString = "子丑寅卯辰巳午未申酉戌亥";   
+    var numString = "一二三四五六七八九十";   
+    var monString = "正二三四五六七八九十冬腊";   
+    var weekString = "日一二三四五六";   
+    var sx = "鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+    var cYear, cMonth, cDay, TheDate;   
+    CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6, 0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD, 0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55, 0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA, 0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95, 0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26, 0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D, 0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497, 0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F, 0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D, 0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);   
+    madd[0] = 0;   
+    madd[1] = 31;   
+    madd[2] = 59;   
+    madd[3] = 90;   
+    madd[4] = 120;   
+    madd[5] = 151;   
+    madd[6] = 181;   
+    madd[7] = 212;   
+    madd[8] = 243;   
+    madd[9] = 273;   
+    madd[10] = 304;   
+    madd[11] = 334;   
+    function GetBit(m, n) {        return (m >> n) & 1;    }   
+    function e2c() {       
+        TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0], arguments[1], arguments[2]);       
+        var total, m, n, k;       
+        var isEnd = false;       
+        var tmp = TheDate.getYear();       
+        if (tmp < 1900) {            tmp += 1900;        }        total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4) + madd[TheDate.getMonth()] + TheDate.getDate() - 38;       
+        if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {            total++;        }       
+        for (m = 0;; m++) {            k = (CalendarData[m] < 0xfff) ? 11 : 12;            for (n = k; n >= 0; n--) {                if (total <= 29 + GetBit(CalendarData[m], n)) {                    isEnd = true; break;                }                total = total - 29 - GetBit(CalendarData[m], n);            }            if (isEnd) break;        }        cYear = 1921 + m;       
+        cMonth = k - n + 1;       
+        cDay = total;       
+        if (k == 12) {            if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth = 1 - cMonth;            }            if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth--;            }        }   
+    }   
+    function GetcDateString() {       
+        var tmp = "";       
+        tmp += tgString.charAt((cYear - 4) % 10);       
+        tmp += dzString.charAt((cYear - 4) % 12);       
+        tmp += "年 ";       
+        if (cMonth < 1) {           
+            tmp += "(闰)";           
+            tmp += monString.charAt(-cMonth - 1);       
+        } else {            tmp += monString.charAt(cMonth - 1);        }        tmp += "月";       
+        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿" : "三十"));       
+        if (cDay % 10 != 0 || cDay == 10) {            tmp += numString.charAt((cDay - 1) % 10);        }       
+        return tmp;   
+    }   
+    function GetLunarDay(solarYear, solarMonth, solarDay) {        //solarYear = solarYear<1900?(1900+solarYear):solarYear;
+               
+        if (solarYear < 1921 || solarYear > 2020) {            return "";        } else {           
+            solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;           
+            e2c(solarYear, solarMonth, solarDay);           
+            return GetcDateString();       
+        }   
+    }    //调用
+       
+    var D = new Date();   
+    var yy = D.getFullYear();   
+    var mm = D.getMonth() + 1;   
+    var dd = D.getDate();   
+    var ww = D.getDay();   
+    var ss = parseInt(D.getTime() / 1000);   
+    if (yy < 100) yy = "19" + yy;   
+    function GetCNDate() {        return GetLunarDay(yy, mm, dd);    }    $(document).ready(function() {       
+        var d = GetCNDate();       
+        var nongli = document.getElementById('nongli');
+        //         alert(d);
+        nongli.innerHTML = d;
+
+           
+    });
+    </script>
+    <style type="text/css">
+        
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px); 
+        }
+
+    </style>
+    <script type="text/javascript">
+    //设为首页 www.jb51.net
+    function SetHome(obj, url) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(url);
+        } catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch (e) {
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                }
+            } else {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+            }
+        }
+    }
+
+    //收藏本站 www.jb51.net
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+            }
+        }
+    }
+    </script>
+    <style type="text/css">
+        ::-webkit-input-placeholder {
+          color: #aaa;
+        }
+        :-moz-placeholder {
+          color: #aaa;
+        }
+        ::-moz-placeholder{
+        color: #aaa;
+        }
+        :-ms-input-placeholder {
+          color: #aaa;
+        }
+
+    </style>
+</head>
+<!--右侧浮窗开始-->
+<link rel="stylesheet" href="/Public/css/homepage.css" />
+<link rel="stylesheet" href="/Public/css/fireman109.css" />
+
+<body>
+    <header class="am-topbar header " style="width:100%;z-index: 101;height:;background: #fff;">
+        <div class="top_nav" style="width:100%;padding-left:50px;">
+            <span>中国建筑业门户网站</span>
+            <div style="height: 30px;float: right;margin-right:150px;">
+                <!-- <a  href="#" style="color: #F58400;">设为首页</a> |
+                <a  href=#">收藏</a> -->
+                <a href="javascript:void(0);" style="color: #F58400;" onclick=" SetHome(this,'http://www.jzsbs.com')">设为首页</a> |
+                <a href="javascript:void(0);" onclick="AddFavorite('建筑新网','http://www.jzsbs.com')">收藏</a>
+            </div>
+        </div>
+    </header>
+    <!--logo-->
+    <div class="bannerDiv content " style=" margin-bottom: 5px; margin-top: 50px; height: 100px; ">
+        <div class="logo " style="float: left;margin-left:-10px">
+            <a href="/">
+                    <img src="/Public/picture/logo.png" />
+                </a>
+        </div>
+        <div class="main-right" style="height: 100px;padding-top: 30px;margin-right:-45px">
+            <span style="font-size: 12px;">
+                2019年01月08日&nbsp;&nbsp;星期二 <span id="nongli"></span></审判
+          >
+          <style type="text/css">
+            .h_search select {  
+                      /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
+                          border: solid 1px #000;  
+                          
+                          /*很关键：将默认的select选择框样式清除*/  
+                          appearance:none;  
+                          -moz-appearance:none;  
+                          -webkit-appearance:none;  
+                          
+                          /*在选择框的最右侧中间显示小箭头图片*/  
+                  
+                  /*在选择框的最右侧中间显示小箭头图片*/  
+                  background: url("/Public/images/red.png") no-repeat  45px 5px;    
+                  
+                  
+                    /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
+                  padding-right: 14px;  
+                }   
+          </style>
+            <form action="/index.php/Home/Index/searchList.html">
+                <div class="h_search">
+                    <ul>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <select id="type1" name="type" style="width: ;height: 30px;border: none;display: block;width: 67px;padding: 5px; font-size: 15px;color: #333;appearance:none;padding-left:10px">
+                            <option value="1">标题</option>
+                            <option value="2">作者</option>
+                        </select>
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd;margin-left: 1px solid #ddd">
+                        <input style="display: block;" class="head_search" value="" id="num" name="search"  type="text" placeholder="请输入关键字" onKeyUp="showLen(this);" style="width: 151px" />
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <input class="head_search" style="float: left;display:block;margin-left: -5px;width:80px;background: #eee;line-height:30.3px;color: #000;font-size: 16px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;text-align: center;" type="submit" value="搜 索" />
+                    </li>
+                </ul>
+                    <script type="text/javascript">
+                    showLen(document.getElementById("num"));
+                    function showLen(obj){
+                        // document.getElementById('span').innerHTML = '&nbsp;&nbsp;还可输入'+ (200-obj.value.length) +'位';
+                        if(obj.value.length>10){
+                            var objValue = obj.value;
+                            objValue=objValue.substr(0,10);
+                            document.getElementById('num').value=objValue;
+                        }
+                    }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="clear "></div>
+    </div>
+    <!--导航-->
+    <div class="titleDiv ">
+        <div class="content " style="margin: 0 auto">
+            <ul style="margin: 0px;padding:0px">
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=1">新闻</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=6">市场</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=4">基建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=8">创优</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=10">聚焦</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=2">地方</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=19">海外</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=9">市政</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=11">安全</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=72">访谈</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=27">人物</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=39">规划</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=42">钢结构</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=21">咨询</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=30">绿建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=65">工地</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=20">设计</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=74">信息化</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=73">房产</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=31">园林</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=29">建材</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=32">机械</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=22">协会</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=5">法苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=75">数据</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=28">装饰</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=3">科技</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=23">企业</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=76">文苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/videoList.html">视频</a>
+                        </li>
+                    </ul>
+                </li>
+                <div class="clear "></div>
+            </ul>
+        </div>
+    </div>
+    
+
+    <style type="text/css">
+    img {
+        max-width: 740px;
+        max-height: 1500px;
+    }
+
+    p {
+        margin: 0 !important;
+        padding: 0!important;
+        font-family: '微软雅黑'!important;
+        padding: 15px!important;
+        text-indent: 2em!important;
+        line-height: 2em!important;
+        font-size: 16px!important;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+    <!--内容-->
+    <div class="content">
+        <!--left-->
+        <div class="content-left" style="padding: 0px 75px 0px 7px">
+            <div class="content-title fengeline">
+                <a href="/">建筑新网</a> >
+                <a href="/index.php/Home/Index/newsList.html?id=79">专题 >
+                <a href="javascript:void(0)">正文</a>
+            </div>
+                        <h1 style=" text-align: center; margin: 10px 0; ">我们的改革与发展 2018年中国建筑业年度热词盘点（下） </h1>
+                        <p class="content-left-wenzhang-time">时间：2019年01月08日&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：<span class="content-source">建筑时报</span> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 作者：建筑时报记者</p>
+	                <!-- <p>挥别2018年，跨入2019年。回望过去的一年，中国建筑业改革发展步伐不断加快，发展质量和效益不断提升，取得了骄人的业绩，留下了难忘的记忆。此刻，让我们用专属于建筑业的热词来回味这一年曾经发生的行业大事，以及国家对建筑业企业诉求的回应。</p> -->
+	                <p><p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;热词之六：改革开放</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2018年是改革开放40周年，这一年，建筑行业也在不断回首40年的改革开放之路以及创造出的诸多奇迹。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;40年来，随着我国经济建设的大规模进行，建筑业迅速发展，建筑业在国民经济中的比重不断提高，其支柱产业地位逐步确定，支柱产业支撑作用愈发明显，对整个国民经济发展的推动作用愈来愈突出。国家统计局于2018年9月7日发布的改革开放40年建筑业发展报告显示，1978年，全国建筑业完成增加值139亿元，占GDP的比重为3.8%。2017年，建筑业增加值达到55689亿元，比1978年增加55550亿元，年均增速16.6%；建筑业增加值占GDP的比重达到6.7%，比1978年提高2.9个百分点。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;改革开放还使我国建筑企业在国际舞台上愈发耀眼，美国《工程新闻纪录》（ENR）于2018年发布的国际承包商250强榜单中，中国以69家上榜企业数量蝉联全球榜首。在前十强中，中国企业占据3席，其中中国交通建设股份有限公司以231.02亿美元海外营业收入稳居第3名，中国建筑股份有限公司、中国电力建设股份有限公司分列第8位和第10位。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;改革开放40年间，建筑行业英才辈出。在庆祝改革开放40周年大会上表彰的100名改革开放杰出贡献奖获得者中，中国工程院院士吴良镛、全国劳动模范和先进工作者巨晓林两位建筑人作为行业杰出代表入选。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;40年来，我国建筑业技术水平也不断提升。11月28日，中国建筑业协会在京召开“激荡四十年·改革正当时——改革开放40周年建筑业在行动”纪念大会，会上发布了《改革开放40年建筑业经典工程集》。特别是党的十八大以来，我国建筑施工技术水平实现了新跨越，高速、高寒、高原、重载铁路施工和特大桥隧建造技术迈入世界先进行列，离岸深水港建设关键技术、长河段航道系统治理以及大型机场工程等建设技术已经达到了世界领先水平。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;中国建筑业协会会长王铁宏在会上强调，继续深化改革开放推进新时代建筑产业高质量发展应认清当前、把握未来，要重点关注装配式建筑发展、市场模式变革、“一带一路”倡议、雄安新区规划建设等四方面问题。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;40年改革开放，40年辉煌成就。面对新时代，建筑业有坚实的发展基础，更有艰巨的困难挑战。展望未来，进一步深化改革开放、决胜全面建成小康社会，必将在建筑业内奏出新的强音。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（张翼翔）</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;热词之七：雄安新区</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2018年，是雄安新区规划建设的关键一年。2月28日，雄安新区首个重大交通项目——北京至雄安城际铁路正式开工建设；4月14日，中共中央、国务院正式批复《河北雄安新区规划纲要》，雄安新区规划建设有了清晰的遵循；6月初，新区设立以来第一个基础设施项目——雄安市民服务中心全面投入使用；7月2日，雄安新区面向全球征集启动区城市设计方案；年末，国务院正式批复《河北雄安新区总体规划（2018—2035年）》，标志着雄安新区进入大规模发展建设的新阶段……这一年，千年大计的恢宏画卷，正在徐徐展开。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;这一年，雄安这座未来之城，也向着新时代推动高质量发展的全国样板不断迈进。新区建设坚持先谋后定、精心规划，在组织编制规划体系过程中坚持“多规合一”，确保一张蓝图绘到底。在雄安市民服务中心的设计建设中，植入了海绵城市、综合管廊、绿色装配式建造方式等30多项世界前沿新技术，探索形成了国内建筑创新的“试验田”以及未来城市的“样板示范区”。新区还全面实行负面清单管理，建立全新的投资项目审批制度，精简建设项目审批环节，探索推进建设项目告知承诺制，构建智能城市规划建设管理新模式。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;展望2019，雄安又将迎来全新的机遇和挑战。1月2日，国务院公布了《关于河北雄安新区总体规划（2018—2035年）的批复》，对紧扣雄安新区战略定位、有序承接北京非首都功能疏解、优化国土空间开发保护格局、打造优美自然生态环境、推进城乡融合发展、塑造新区风貌特色、打造宜居宜业环境、构建现代综合交通体系、建设绿色低碳之城、建设国际一流的创新型城市、创建数字智能之城、确保城市安全运行等提出指导性意见。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;伴随着《总体规划》的落地，千年大计宏图正启。新的一年，雄安新区将迎来更大规模的开发建设。期待雄安继续循着改革再出发的号角，稳步向前！</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;（徐敏）</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;热词之八：规范PPP</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2017年下半年开始的一系列规范政策紧密出台，拉开了2018年PPP“规范发展年”的序幕。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2018年，大规模“整顿”“清退”工作逐步开展。根据财政部数据，为防范PPP被泛化滥用，2017年下半年以来，财政部在全国范围内开展PPP项目库集中清理整顿，截至2018年10月底，各地累计清理退库2428个项目、涉及投资额2.9万亿元，整改完善2005个项目、涉及投资额3.1万亿元。目前在全国2461个已实施PPP项目的地区，仅有6个地区的财政支出责任占比超过10%红线。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;依法、合规的市场被各界寄予厚望。2018年9月，《中共中央&nbsp;国务院关于完善促进消费体制机制进一步激发居民消费潜力的若干意见》发布。随后，财政部也向各省财政部门发出《关于规范推进政府与社会资本合作(PPP)工作的实施意见(征求意见稿)》。10月底《国务院办公厅关于保持基础设施领域补短板力度的指导意见》提出，鼓励地方依法合规采用政府和社会资本合作(PPP)等方式，撬动社会资本特别是民间投资投入补短板重大项目。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2018年留下的最大悬念莫属“PPP条例”——《基础设施和公共服务领域政府和社会资本合作条例》何时出台？业内人士透露，PPP条例将在业界关注的适用范围、法律体系构建等问题上有所突破。（时永庆）</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;热词之九：蓝天保卫战</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;2018年是蓝天保卫战取得阶段性进展的一年。2018年7月，国务院发布《打赢蓝天保卫战三年行动计划》，提出了打赢蓝天保卫战的时间表和路线图，吹响了打赢蓝天保卫战的进军号角。随后，上海、宁夏、福建等省、市、自治区纷纷出台相应政策。蓝天保卫战成了2018年全国各行业工作的重中之重。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;建筑物是能耗和碳排放的大户。大力推广绿色建筑、环保节能建筑材料，是打赢蓝天保卫战，改善环境空气质量的重要举措，也是践行“绿色”发展理念的题中之意。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;目前，建筑工地大气污染防治工作形势严峻。我国部分地区的工地裸露土地未覆盖到位，房屋拆迁和渣土运输过程中未建立有效的抑尘措施，扬尘污染严重。因此,我国多个地方出台文件,要求各类建筑工地必须做到“六个百分之百”全覆盖,&nbsp;加快推进建筑工地扬尘在线监测系统平台建设，为打赢蓝天保卫战这场攻坚战作出应有的贡献。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;建材业亦是蓝天保卫战的一大重点,尤其是钢铁、水泥等产能严重过剩的领域。在此背景下，水泥等建材企业积极参与错峰生产，开展超低排放改造，有效减少大气污染物排放，减轻污染程度，促进企业节能减排，助力蓝天保卫战。</p><p style=box-sizing: border-box; list-style-type: none; color: rgb(0, 0, 0); white-space: normal; outline: none !important;>&nbsp;&nbsp;&nbsp;&nbsp;保卫蓝天，任重道远。要想彻底打赢蓝天保卫战，这一持久战，建筑工地必须落实好“控尘”措施，而正面临转型升级关键期的建材业则需做好节能减排相关工作。（胡婧琛）</p><p><br/></p></p></p>
+            <p class="wenzhang-fenxiang">
+                <div id="share">
+                    <div class="bdsharebuttonbox">
+                        <span>分享:</span>
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+                    </div>
+                </div>
+            </p>
+            <div class="wenzhangpian">
+                <div class="wenzhangshang" >
+                    <a class="wenzhangshang-pic" href="javascript:void(0)"><img src="/Public/picture/arrowl.png" /></a>
+                    <span style="margin-top: 15px;margin-left: 40px;">
+                        <span style="margin-bottom: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11404" >上一篇</a></span>
+                        <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11404" >
+                                雄安新区总体规划十大...</a>
+                            </span>
+                    </span>
+                                    </div>
+                <div class="wenzhangtitle">
+                </div>
+                <div class="wenzhangxia">
+                    <a class="wenzhangxia-pic" href="javascript:void(0)"><img src="/Public/picture/arrowr.png" /></a>
+                    <span style="margin-top: 15px;margin-right: 40px;">
+                            <span style="margin-bottom: 5px;"><a href="/index.php/Home/Index/detail.html?id=11406">下一篇</a></span>
+                            <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11406" >匠心打造民生样板工程...</a>
+                            </span>
+                        </span>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+            <script>
+            function sendSg() {
+                var saytext = document.getElementById('saytext1').value;
+                // alert(saytext);
+                if (saytext == "") {
+                    alert("您没什么话要说吗？");
+                } else {
+                    document.getElementById("saypl").submit();
+                }
+
+            }
+            </script>
+            <div class="wenzhang-pinglun">
+                <form action="/index.php/Home/Index/addComment.html" method="post" name="saytext" id="saypl">
+                    <input type="hidden" name="id" value="11405">
+                    <input type="hidden" name="classid" value="79">
+                    <textarea name="saytext" id="saytext1"></textarea>
+                    <!-- </td> -->
+                    <a class="send arrow" onclick="javascript:sendSg();">我要评论</a>
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="wenzhang-pinglun-detail">
+                <div class="pinglun-title" style="width: 762px">
+                    <span class="pinglun-title-1">最新评论</span>
+                    <span class="pinglun-title-2">0条评论</span>
+                </div>
+                <div class="clear"></div>
+                <ul class="pinglun-list">
+                                    </ul>
+                <div class="xianshi-more" style="display:none;">
+                    <a><img src="/Public/picture/sanji_05.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        <!-- <link rel="stylesheet" type="text/css" href="layui/css/layui.css"> -->
+        <div class="content-right ">
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />建筑新网</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                <ul>
+                                    <li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11033">1.习近平宣布：港珠澳大桥正式开通</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11004">2.海南自贸区允许设立外资建企承揽区内建筑工程项目</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10830">3.国务院常务会议要求聚焦补短板扩大有效投资</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10738">4.铁路建设补短板加速 中西部占近七成</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10368">5.习近平主席向萨勒总统移交中国援助塞内加尔规模最大项目“金钥匙”</a>
+                                        </li>                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />推荐视频</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                 <video style="width:360px;margin-left: -10px"  controls="controls " src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video.
+                        <!--    <source src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video. -->
+                    </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <!-- <div class="main-right-paiming-title ">行业排名</div> -->
+                <div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/b6c209df99caa8ab9db84d986244c561.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/483db82c084eb5f69dac4c4c4cc9e9d2.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/2a974835fdc21eecb7444a115094ba45.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div>            </div>
+        </div>
+    </div>
+    <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "我们的改革与发展 2018年中国建筑业年度热词盘点（下）",
+            "bdDesc": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "http://"+"www.jzsbs.com"+"//Public/picture/jzsb.jpg",
+            "bdStyle": "1",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <!-- <script src="——js/c2a583e6cfae410e9fb8cdab9062b261.js"></script> -->
+    <div class="clear"></div>
+
+    <!-- FOOTER -->
+    <div class="main-bottom ">
+        <div class="content ">
+            <div class="main-bottom-friend ">
+                <span>友情链接：</span>
+                <a target="blank" href="http://www.mohurd.gov.cn">中华人民共和国住房和城乡建设部</a><a target="blank" href="http://www.zgjzy.org">中国建筑业协会</a><a target="blank" href="http://www.bjjs.gov.cn/publish/portal0/tab3939/">北京市住房和城乡建设委员会</a><a target="blank" href="http://www.bjjl.org.cn/">北京市建筑业联合会</a><a target="blank" href="http://www.shjx.org.cn/">上海市建筑施工行业协会</a><a target="blank" href="http://www.scca.sh.cn/">上海市建设工程咨询行业协会　</a><a target="blank" href="http://www.jsconi.com/">江苏省建筑行业协会</a><a target="blank" href="http://www.ahjst.gov.cn/ahzjt_Front/">安徽省住房和城乡建设厅</a><a target="blank" href="http://www.ahjzy.com.cn/">安徽省建筑业协会</a><a target="blank" href="http://www.gdcia.org/">广东省建筑业协会</a>            </div>
+            <div style="text-align: center ;line-height: 2em!important;color:#666">
+                
+                <span style="margin-bottom:10px;">版权所有:建筑新网社Copyright@2014,Construction All rights reserved</span><br>
+                <span style="margin-bottom:10px;">地址:上海杨浦区营口路588号 18楼 邮编:200433 电话:021-63216799</span><br>
+                <span >沪ICP备14023239号</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+
+        //…
+    });
+    </script>
+
+</body>
+
+</html>

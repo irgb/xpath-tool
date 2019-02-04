@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参 - 智东西</title>
+    <meta name="keywords" content="ibm,量子计算">
+    <meta name="description" content="详细介绍量子计算潜在的革命性业务影响和通过量子计算获得业务优势的五步路线图 。">
+        <link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/base.css">
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://zhidx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script src="http://zhidx.com/wp-content/themes/zhidx/js/base.js"></script>
+    <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+    <script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+    <script>
+        var ajaxurl = 'http://zhidx.com/wp-admin/admin-ajax.php';
+        var ajaxurl = '/wp-admin/admin-ajax.php';
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6a105aad5d4cd3c47e5745e226ca9ccc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<div id="login-wrap" style="">
+    <div class="iframe-wrap">
+        <iframe name="zdx-login" id="user-iframe" src="" scrolling="no" class="i-reg" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<header id="header">
+    <div id="header-info">
+        <a href="/" class="logo" target="_self"><img src="http://pic.jiguo.com/200717/0/f32b4e70-38d5-47eb-83ad-c30c81fbd5fc/640"  alt=""></a>
+        <ul id="header-nav" >
+            <li data-type="index"><a href="/" title="智东西首页">首页</a></li>            <li class="zixun">
+                <a href="javascript:;" class="">资讯</a>
+                <ul class="zixun-show">
+                    <li><a href="/p/category/人工智能" title="人工智能">人工智能</a></li>
+                    <li><a href="/p/category/chedongxi" title="新出行">新出行</a></li>
+                    <li><a href="/p/category/机器人无人机" title="机器人/无人机">机器人/无人机</a></li>
+                    <li><a href="/p/category/intelligent-home" title="智能家具">智能家居</a></li>
+                    <li><a href="/p/category/virtualreality" title="VR/AR">VR/AR</a></li>
+                </ul>
+            </li>
+            <li data-type="news"><a href="/news" title="快讯">快讯</a></li>
+            <li data-type="cdx"><a href="/p/category/chedongxi" title="车东西">车东西</a></li>
+            <li data-type="gkk"><a href="/p/category/chuangke" title="智东西公开课">公开课</a></li>
+            <li data-type="gtic"><a href="/gtic" title="GTIC">GTIC</a></li>
+            <li data-type="activity"><a href="/p/category/行业活动" title="活动">活动</a></li>
+        </ul>
+        <form action="/" id="searchform">
+            <input id="search" name="s" value="" placeholder="请输入关键字">
+            <button id="searchform-btn"></button>
+        </form>
+        <div id="login">
+                        <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+                    </div>
+    </div>
+</header>
+<script>
+    jQuery('#login .login').on('click', function() {
+        loginDisplay();
+    })
+    jQuery('#searchform').on('click', function() {
+
+    });
+    window.onload = function() {
+        jQuery('.check-login').on('click', '.login', function() {
+            loginDisplay();
+        })
+    }
+
+
+    function loginDisplay() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-login';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/login');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe()
+        })
+    }
+    jQuery('#login .register').on('click', function() {
+        jQuery('#login-wrap').css('display', 'block');
+        jQuery('#login-wrap iframe').get(0).className = 'i-reg';
+        jQuery('#login-wrap iframe').attr('src', 'http://zhidx.com/reg');
+        jQuery('#login-wrap iframe').load(function() {
+            closeIframe();
+        })
+    });
+
+    jQuery('#login .logout').on('click', function() {
+        jQuery.post(ajaxurl, {action:'logout'}, function(response) {
+            var data = JSON.parse(response);
+            if (data.state === 0) {
+                location.reload();
+            }
+        });
+    });
+
+
+    function closeIframe() {
+        jQuery('#user-iframe').contents().find("#login-del").click(function() {
+            jQuery('#login-wrap').css('display', 'none');
+            jQuery('#login-wrap iframe').attr('src', '');
+        });
+        jQuery('#user-iframe').contents().find('.reg-new').click(function() {
+            jQuery('#user-iframe').contents().find("#login-del").trigger('click');
+            setTimeout(function() {
+                jQuery('#login .register').trigger('click');
+            }, 100);
+        })
+    }
+
+</script>
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/index.css">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/single.css?b">
+<link rel="stylesheet" href="http://zhidx.com/wp-content/themes/zhidx/css/share.min.css">
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/jquery.share.min.js"></script>
+<style>
+    .post-content video, .post-content iframe{
+        min-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+<section id="main">
+    <div id="new-info">
+        <div id="info-right">
+            <div class="info-right-item author-info">
+                <div class="author-pic">
+<!--                    <img src="images/author-header.png" alt="">-->
+                    <img src="http://1.gravatar.com/avatar/df1407f0ab5f30518055ad5bd5528f8f?s=96&#038;d=retro&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />                </div>
+                <div class="author-name"><a href="http://zhidx.com/p/author/chenzhen" title="由三点一四发布" rel="author">三点一四</a></div>
+                <div class="author-posts">共发表27篇文章</div>
+                <div class="author-desc"></div>
+            </div>
+            <script src="http://zhidx.com/wp-content/themes/zhidx/js/tagcloud.js"></script>
+<div class="info-right-item">
+    <div class="info-right-item-top">
+        <div class="irit-title">标签</div>
+    </div>
+    <div class="info-right-item-bb"></div>
+    <div class="info-right-tag">
+    <a href="http://zhidx.com/p/tag/%e6%9c%ba%e5%99%a8%e4%ba%ba" class="tag1">机器人</a><a href="http://zhidx.com/p/tag/%e8%85%be%e8%ae%af" class="tag3">腾讯</a><a href="http://zhidx.com/p/tag/%e5%b0%8f%e7%b1%b3" class="tag1">小米</a><a href="http://zhidx.com/p/tag/%e9%ab%98%e9%80%9a" class="tag3">高通</a><a href="http://zhidx.com/p/tag/%e5%be%ae%e8%bd%af" class="tag3">微软</a><a href="http://zhidx.com/p/tag/vr" class="tag2">VR</a><a href="http://zhidx.com/p/tag/%e8%8b%b9%e6%9e%9c" class="tag3">苹果</a><a href="http://zhidx.com/p/tag/%e5%8d%8e%e4%b8%ba" class="tag3">华为</a><a href="http://zhidx.com/p/tag/me" class="tag3">me</a><a href="http://zhidx.com/p/tag/360" class="tag3">360</a><a href="http://zhidx.com/p/tag/%e6%97%a0%e4%ba%ba%e6%9c%ba" class="tag3">无人机</a><a href="http://zhidx.com/p/tag/%e8%b0%b7%e6%ad%8c" class="tag3">谷歌</a><a href="http://zhidx.com/p/tag/%e4%b8%89%e6%98%9f" class="tag3">三星</a><a href="http://zhidx.com/p/tag/%e7%89%b9%e6%96%af%e6%8b%89" class="tag2">特斯拉</a><a href="http://zhidx.com/p/tag/ar" class="tag3">AR</a><a href="http://zhidx.com/p/tag/%e7%99%be%e5%ba%a6" class="tag3">百度</a><a href="http://zhidx.com/p/tag/%e9%80%9a%e7%94%a8" class="tag3">通用</a>    </div>
+</div>
+<script>
+    (function() {
+        function randsort(num) {
+            return Math.random() > 0.5 ? 1 : -1;
+        }
+
+        function rand(num) {
+            return Math.floor(Math.random() * (num + 1));
+        }
+
+        var indexList = [];
+        var objList = document.querySelectorAll('.info-right-tag a');
+        var length = document.querySelectorAll('.info-right-tag a').length;
+        for (var i = 0; i < length; i++) {
+            indexList.push(i)
+        }
+        indexList.sort(rand);
+        var w = document.querySelector('.info-right-tag').offsetWidth;
+        indexList.forEach(function (e) {
+            objList[e].style.cssText = [
+                'margin:' + [
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px',
+                    rand(10) + 'px'
+                ].join(' ') + ';'
+            ].join('')
+        });
+    })();
+</script>                    </div>
+        <div id="info-left">
+            <div class="post-title">
+                IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参            </div>
+            <div class="post-related">
+<!--                <span class="name">--><!--</span>-->
+                <span class="leibie"><a href="http://zhidx.com/p/category/topnews" rel="category tag">头条</a>  <a href="http://zhidx.com/p/category/report" rel="category tag">智能内参</a></span><span class="time">2019/01/05 </span>
+            </div>
+            <div class="post-content">
+                <div style="margin-top: 15px;">
+                    <img width="2880" height="1620" src="http://oss.zhidx.com/uploads/2019/01/SchrodingersKittens_2880x1620-2880x1620.jpg" class="attachment-wt-slider-img size-wt-slider-img wp-post-image" alt="" title="" srcset="http://oss.zhidx.com/uploads/2019/01/SchrodingersKittens_2880x1620-2880x1620.jpg 2880w, http://oss.zhidx.com/uploads/2019/01/SchrodingersKittens_2880x1620-2880x1620.jpg?x-oss-process=image/resize,m_fill,w_533,h_300 533w, http://oss.zhidx.com/uploads/2019/01/SchrodingersKittens_2880x1620-2880x1620.jpg?x-oss-process=image/resize,m_fill,w_768,h_432 768w, http://oss.zhidx.com/uploads/2019/01/SchrodingersKittens_2880x1620-2880x1620.jpg?x-oss-process=image/resize,m_fill,w_1024,h_576 1024w" sizes="(max-width: 2880px) 100vw, 2880px" />                </div>
+            <p><strong><br />
+智东西（公众号： zhidxcom）</strong><br />
+<strong>编 | 智东西内参</strong></p>
+<p>量子计算已接近商业化阶段，有很大的潜力改变我们的世界。利用量子计算的独特能力来解决特定类型问题的早期采用者，有可能在建立新型业务模式方面实现突破。富有远见卓识的企业已经开始调整战略方向，为新兴的量子计算生态系统做好准备，成为“量子就绪型企业”。这些具有前瞻性思维的企业正在探索用于解决复杂业务问题的用例和相关算法。</p>
+<p>本期的智能内参，我们推荐来自IBM的报告《量子计算，即将到来》， <span class="fontstyle0">详细介绍量子计算潜在的革命性业务影响和通过量子计算获得业务优势的五步路线图 。</span><strong>如果想收藏本文的报告全文（ 量子计算，即将到来），可以在智东西公众号：（zhidxcom）回复关键词“<span style="color: #0000ff;">nc314</span>”获取。</strong></p>
+<p><img class="alignnone size-full wp-image-139629" src="http://oss.zhidx.com/uploads/2019/01/捕获_副本.jpg" alt="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" width="800" height="598" srcset="http://oss.zhidx.com/uploads/2019/01/捕获_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/捕获_副本.jpg?x-oss-process=image/resize,m_fill,w_401,h_300 401w, http://oss.zhidx.com/uploads/2019/01/捕获_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_574 768w, http://oss.zhidx.com/uploads/2019/01/捕获_副本.jpg?x-oss-process=image/resize,m_fill,w_320,h_240 320w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<h1><span class="fontstyle0">一、何为量子计算？</span></h1>
+<p><span class="fontstyle0">量子计算利用了自然科学中发现的量子力学定律，有潜力从根本上改变传统的信息处理方式。量子行为的两个特性，也就是叠加和纠缠，使量子计算机有能力解决目前的常规或传统机器无能为力的问题：</span></p>
+<p><strong> <span class="fontstyle0">1、</span></strong><span class="fontstyle2"><strong>叠加</strong>。 传统计算机使用的是只包含</span><span class="fontstyle3">“1”</span><span class="fontstyle2">或</span><span class="fontstyle3">“0”</span><span class="fontstyle2">的二进制位。而量子计算机则使用量子位，可以描述</span><span class="fontstyle3">“1”</span><span class="fontstyle2">、 </span><span class="fontstyle3">“0”</span><span class="fontstyle2">或者量子位的可能状态的任意组合（称为</span><span class="fontstyle3">“</span><span class="fontstyle2">叠加</span><span class="fontstyle3">”</span><span class="fontstyle2">）。因此，具有 </span><span class="fontstyle3">n </span><span class="fontstyle2">个量子位的量子计算机通过这些量子位彼此叠加，形成了 </span><span class="fontstyle3">2n </span><span class="fontstyle2">种可能性。这使量子计算机具有指数级数量的状态，因此能够比传统计算机更有效地解决一些特定类型的问题。</span></p>
+<p><strong> <span class="fontstyle0">2、</span></strong><span class="fontstyle2"><strong>纠缠。</strong> 在量子世界，甚至相距光年的两个量子位仍能以强相关的方式发挥作用。量子计算正是借助这种纠缠特性，利用量子位之间的相互依赖性破解问题。</span></p>
+<p><span class="fontstyle0">量子的叠加和纠缠特性使量子计算机能够快速研究一系列可能性，以确定有助于推动业务价值的最佳答案。由于未来的量子计算机在计算某些问题时，速度要比传统计算机快上几个指数级（见下图</span><span class="fontstyle0">），因此有望解决极为复杂的业务难题。尽管传统计算机存在局限性，但在可以预见的未来，量子计算机并不会完全取代它们的作用。相反，结合了量子与传统架构的混合型计算机有望浮出水面，将一部分难题</span><span class="fontstyle2">“</span><span class="fontstyle0">外包</span><span class="fontstyle2">”</span><span class="fontstyle0">给量子计算机。</span></p>
+<p><span class="fontstyle0">比如说，要使传统计算机的理论计算能力翻一番， </span><span class="fontstyle0">需要将晶体管数量增加一倍。要使量子计算机的理论计算能力翻倍，只需为某些应用额外添加一个量子位即可。</span> <span class="fontstyle0">未来的量子处理器可模拟咖啡因分子 </span><span class="fontstyle2">— </span><span class="fontstyle0">传统计算机要想做到这一点，个头要比地球大上 </span><span class="fontstyle2">10% </span><span class="fontstyle0">才行。</span><span class="fontstyle0">近期内，量子计算机也许可以帮助设计一些新材料， </span><span class="fontstyle0">用于在将来创建更强大的量子计算机。</span></p>
+<p><img class="alignnone size-full wp-image-139624" src="http://oss.zhidx.com/uploads/2019/01/1_副本.jpg" alt="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" width="800" height="160" srcset="http://oss.zhidx.com/uploads/2019/01/1_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/1_副本.jpg?x-oss-process=image/resize,m_fill,w_600,h_120 600w, http://oss.zhidx.com/uploads/2019/01/1_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_154 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲ <span class="fontstyle0">量子计算为运算加速的潜力远远超过传统计算机</span></p>
+<p><span class="fontstyle0">量子计算有潜力彻底转变某些行业。例如，鉴于传统计算机无法精确求解方程，导致当前的计算化学方法严重依赖于近似值。而量子算法有望在更长的时间范围内进行准确的分子模拟，从而实现目前无法做到的精确建模。这有助于更快发现能够挽救生命的药物，并显著缩短药物开发周期。</span></p>
+<p><span class="fontstyle0">此外，量子计算还有望解决当前令人束手无策的复杂的物流优化问题，从而实现可观的成本节省，显著减少碳排放。我们以量子计算帮助价值数万亿美元的航运业改善全球航线为例。即使量子计算只能将集装箱利用率和运输量提高哪怕一点点，也能为运输企业节省数亿美元的成本。为了利用量子计算的优势获得更多利润，领先竞争对手，前瞻性的企业已开始培养专业能力，探索能给自己的行业带来好处的用例。</span></p>
+<h1>二、 <span class="fontstyle0">量子优势迎来曙光</span></h1>
+<p><span class="fontstyle0">量子计算机能够解决传统计算机无能为力的一些业务问题 </span><span class="fontstyle2">— </span><span class="fontstyle0">我们通常将这种能力称之为</span><span class="fontstyle2">“</span><span class="fontstyle0">量子优势</span><span class="fontstyle2">”</span><span class="fontstyle0">，而实现这一优势的时刻离我们越来越近了。例如， </span><span class="fontstyle2">“</span><span class="fontstyle0">恒定深度</span><span class="fontstyle2">”</span><span class="fontstyle0">的量子电路已展现出远超传统电路的优势。下图</span><span class="fontstyle0">说明了面向特定业务用例的量子优势。确切地说，由于面向特定用例的量子优势尚不明确，因此，有关未来五年内量子计算市场价值的预测也天差地别 </span><span class="fontstyle2">— </span><span class="fontstyle0">从大约 </span><span class="fontstyle2">5 </span><span class="fontstyle0">亿美元到 </span><span class="fontstyle2">290 </span><span class="fontstyle0">亿美元不等。</span></p>
+<p><img class="alignnone size-full wp-image-139625" src="http://oss.zhidx.com/uploads/2019/01/2_副本.jpg" alt="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" width="800" height="594" srcset="http://oss.zhidx.com/uploads/2019/01/2_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/2_副本.jpg?x-oss-process=image/resize,m_fill,w_404,h_300 404w, http://oss.zhidx.com/uploads/2019/01/2_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_570 768w, http://oss.zhidx.com/uploads/2019/01/2_副本.jpg?x-oss-process=image/resize,m_fill,w_220,h_162 220w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲ <span class="fontstyle0">量子用例的商业化</span></p>
+<p><span class="fontstyle0">由于人们对这项新技术所能创造的商机充满期待，导致量子计算生态系统呈现出加速发展态势。初创企业不断涌现，研究机构与技术提供商之间的合作层出不穷，大家都在希望将量子研究成果转化为商用能力。开发量子计算机的科技公司已经开始与企业合作，以确定潜在用例，开发量子算法，并在真正的量子计算机上测试解决方案。随着量子技术的商业合作如雨后春笋般不断涌现，第一批量子商业应用指日可待。</span></p>
+<h1>三、 <span class="fontstyle0">为企业选择合适的量子计算机</span></h1>
+<p><span class="fontstyle0">量子计算机各不相同，解决的问题也各有偏重。从限制最多的类型到最通用的类型，量子计算机主要分为三类：量子退火、嘈杂中型量子</span><span class="fontstyle1">(NISQ) </span><span class="fontstyle0">计算，</span><span class="fontstyle0">以及容错型通用量子计算。</span></p>
+<p><span class="fontstyle0">科学界普遍认为，相较于传统计算，量子退火法的提速效果并没有多么明显。</span><span class="fontstyle0">此外，量子退火计算机最终也无法发展成为容错型通用量子计算机。 因此，量子退火计算机不能算作真正的量子计算机。</span></p>
+<p><span class="fontstyle0">在短期内， </span><span class="fontstyle2">NISQ </span><span class="fontstyle0">计算机最有可能创造业务优势，并且业界已针对这种计算机调整了许多新的算法。此外，随着 </span><span class="fontstyle2">NISQ </span><span class="fontstyle0">计算机不断扩展，它们正朝着量子计算的终极目标迈进 </span><span class="fontstyle2">— </span><span class="fontstyle0">成为容错型通用量子计算机，能够处理重要的商业和科学问题，而且计算速度通常比传统计算机有指数级的提高。</span></p>
+<p><span class="fontstyle0"><strong>为何需要立即开始为量子计算做准备</strong>？在技术力量和竞争力量的双重作用下，量子时代的到来要比你想象中早得多。若能立即开始关注量子计算，企业就能占得先机，拉开与同行之间的距离。以下是企业应该立即开始备战量子计算的三个理由：</span></p>
+<p><span class="fontstyle0">1、量子计算机具有转变行业价值链的潜力，特别是在化学、生物、医疗保健、材料科学、金融和人工智能 </span><span class="fontstyle2">(AI) </span><span class="fontstyle0">等领域。</span></p>
+<p>2、 <span class="fontstyle0">由于量子计算的学习难度非常大，因此， </span><span class="fontstyle2">“</span><span class="fontstyle0">快速跟随</span><span class="fontstyle2">”</span><span class="fontstyle0">的方法不仅花费巨大，而且只会被先行者越拉越远。</span></p>
+<p>3、 <span class="fontstyle0">建立内部</span><span class="fontstyle1">“</span><span class="fontstyle0">量子能力中心</span><span class="fontstyle1">”</span><span class="fontstyle0">需要一定时间。</span></p>
+<p><strong> <span class="fontstyle0">量子计算机具有转变行业价值链的潜力</span> </strong>。 <span class="fontstyle0">量子计算机有潜力解决传统计算机无能为力的超级复杂的问题，因此有望转变整个行业的面貌。未来的量子计算机有能力在化学、生物、医疗保健、金融、人工智能和材料科学等领域实现产品突破，帮助富有战略眼光、采用量子计算的企业快速抢占市场份额，提高盈利能力。因此，量子计算的问题解决能力能够彻底重新定义竞争优势，转变企业运营模式和价值链，最终彻底颠覆整个行业。</span></p>
+<p><span class="fontstyle0">例如，物流系统的优化通常基于</span><span class="fontstyle1">“</span><span class="fontstyle0">中心辐射</span><span class="fontstyle1">”</span><span class="fontstyle0">型网络模型。要在大规模物流网络中，设计一条能够满足各种不同需求的点到点最优路线，是非常复杂的问题，完全超出传统超级计算机的能力范围。即使对于只有几百个集散地的物流网络，要逐一探索所有的可能性，传统计算机也要花上数十亿年的时间。而量子计算有能力显著缩短这种探索所需的时间。例如，为了优化航空公司的调度工作，量子计算可以创建专为在特定日期飞往数百个目的地的数千名乘客而量身定制的每日航班时刻表，从而帮助旅客缩短旅行时间、避免空中交通拥堵并降低航空燃油成本。如果企业能为物流网络设计优化工作开发量子解决方案，那么，在物流作为关键成功因素的所有行业，这样的企业都能够迅速成为市场领导者。</span></p>
+<p><strong> <span class="fontstyle0">“</span><span class="fontstyle1">快速跟随</span><span class="fontstyle0">”</span><span class="fontstyle1">的方法不仅花费巨大，而且只会被先行者越拉越远量子计算不同于线性或渐进式的技术进步， </span><span class="fontstyle3">“</span><span class="fontstyle1">快速跟随</span><span class="fontstyle3">”</span></strong><span class="fontstyle1"><strong>的方法不太可能奏效</strong>。 原因有以下几点：</span></p>
+<p><span class="fontstyle0">1、量子计算的学习难度非常大。</span></p>
+<p><span class="fontstyle1">2、</span><span class="fontstyle0">与</span><span class="fontstyle3">“</span><span class="fontstyle0">追赶</span><span class="fontstyle3">”</span><span class="fontstyle0">领先者相关的成本过高</span> 。</p>
+<p><span class="fontstyle0">可以考虑以下用例：通过量子计算机为电子或运输行业设计比现有物质更轻、更强韧的专用材料，而且与传统计算机相比，解决问题的速度呈指数级提升（见上图</span><span class="fontstyle0">）。这种革命性材料的加速发展可以帮助制造商在短时间把竞争对手远远甩在身后。</span></p>
+<p><span class="fontstyle0">借助量子技术成功上位的新晋市场领导者以既有知识为基础，学习难度相对较低，因此能够更上一层楼，进一步优化其突破性的材料，以及发现专为其他应用领域量身定制的新材料，不断扩大与竞争对手的差距。虽然只是假设，但这个示例却生动说明了由于存在巨大的学习难度，使得所谓的</span><span class="fontstyle1">“</span><span class="fontstyle0">快速追随者</span><span class="fontstyle1">”</span><span class="fontstyle0">极难赶上先行企业，从而可能导致某些行业出现</span><span class="fontstyle1">“</span><span class="fontstyle0">赢者通吃</span><span class="fontstyle1">”</span><span class="fontstyle0">的情景。即便对于特定用例，快速追随者有可能追上先行企业，也需为此付出高昂的代价，例如，培养内部专业知识，采购最合适的基础设施，投资与实力派企业建立合作关系和</span><span class="fontstyle1">/</span><span class="fontstyle0">或收购具有相关能力的企业等。</span></p>
+<p><strong> <span class="fontstyle0">建立内部</span><span class="fontstyle1">“</span><span class="fontstyle0">量子能力中心</span><span class="fontstyle1">”</span></strong><span class="fontstyle0"><strong>需要一定时间。</strong>尽管大多数企业现在都听说过量子计算，但他们中有许多都因缺乏相关人才和专业知识而无法充分利用即将到来的业务转型的优势，而且获得量子计算技术也并非易事。量子计算的人才供不应求，高技能资源更是炙手可热。</span></p>
+<p><span class="fontstyle0">即使招聘到了合适的人才，也可能需要数年时间才能深入了解量子计算对特定业务的潜在影响。 最近发生的技术转变，例如，为加速处理大数据工作负载而迁移到图形处理器 </span><span class="fontstyle3">(GPU) </span><span class="fontstyle0">的过程花了近十年时间，使得我们深深了解到，为采用新技术而培养专业能力是一个漫长的过程。鉴于量子计算有潜力彻底转变行业， 能够以指数级提升解决问题的速度，再加上量子领域的专业人才难以获得，因此，领先的企业应考虑立即采取行动。</span></p>
+<h1><span class="fontstyle0">四<strong>、把握量子优势，助推企业前进</strong></span><strong> </strong></h1>
+<p><span class="fontstyle0">量子计算的商业化对贵公司意味着什么？从中短期看，量子计算可在以下三个方面带来商业利益：量子模拟、量子优化和量子辅助机器学习。</span></p>
+<p><img class="alignnone size-full wp-image-139626" src="http://oss.zhidx.com/uploads/2019/01/3_副本.jpg" alt="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" width="800" height="465" srcset="http://oss.zhidx.com/uploads/2019/01/3_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/3_副本.jpg?x-oss-process=image/resize,m_fill,w_516,h_300 516w, http://oss.zhidx.com/uploads/2019/01/3_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_446 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲<span class="fontstyle0">NISQ </span><span class="fontstyle2">量子计算的预期用途</span></p>
+<p><strong> <span class="fontstyle0">量子优化。</span></strong><span class="fontstyle0">解决优化问题需要从可能存在的诸多答案中找到最佳或</span><span class="fontstyle1">“</span><span class="fontstyle0">最优</span><span class="fontstyle1">”</span><span class="fontstyle0">的解决方案。我们以制定包裹投递时间表为例。从数学上讲，在相邻时段安排</span><span class="fontstyle1">10 </span><span class="fontstyle0">次包裹投递可能有超过 </span><span class="fontstyle1">360 </span><span class="fontstyle0">万种选项。 </span><span class="fontstyle1">9</span><span class="fontstyle0">但是，根据收件人的时间要求、可能产生的延误以及所运货物的保质期等变量，哪个时间表才是最佳解决方案呢？即使应用近似值技术，可能的选项对传统计算机而言仍然太多而无法处理。</span></p>
+<p><span class="fontstyle0">因此，目前的传统计算机采用大量的快捷方式来解决大规模的优化问题。遗憾的是，这些解决方案往往并不理想。可受益于量子优化的企业包括：</span> 希望升级网络基础设施的电信公司；<span class="fontstyle0">希望优化患者治疗效果的医疗服务提供方；</span><span class="fontstyle0">希望改善空中交通管制的政府机构；</span><span class="fontstyle0">希望定制营销推荐的消费品和零售企业；</span><span class="fontstyle0">希望加强风险优化的金融服务公司；</span><span class="fontstyle0">希望制定员工工作时间表的企业；</span><span class="fontstyle0">希望安排课程的大学院校</span> 。</p>
+<p><span class="fontstyle0">虽然还没有数学方法可以证明量子计算能够以指数级提升优化问题的解决速度，但研究人员正努力通过启发式方式来证明这一点。富有远见的企业已开始探索如何利用量子计算来解决优化问题，以期超越竞争对手。一旦量子优势在解决优化问题方面的能力得到确认，这些企业的远见卓识便会给他们带来切实的回报</span> 。</p>
+<p><span class="fontstyle0"><strong>量子增强型人工智能。</strong>量子计算可以探索传统计算机无法处理的海量可能性，因此有助于提升人工智能的熟练度。事实上，人工智能与量子计算之间的共生关系已开始在这两个领域实现良性循环。例如，量子算法可增强机器学习在数据聚类领域的能力，</span><span class="fontstyle0">而机器学习则可用于更好地理解量子系统。</span></p>
+<p><span class="fontstyle0">基于量子的认知计算机最终能够渗透到几乎所有行业，主动为专业人士提供高级决策支持；为员工提供针对性的响应式培训；为客户提供专门定制的自适应式供应商关系。</span></p>
+<h1><span class="fontstyle0">五、通过五项战略迎接量子的未来</span></h1>
+<p><img class="alignnone size-full wp-image-139627" src="http://oss.zhidx.com/uploads/2019/01/4_副本.jpg" alt="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" width="800" height="322" srcset="http://oss.zhidx.com/uploads/2019/01/4_副本.jpg 800w, http://oss.zhidx.com/uploads/2019/01/4_副本.jpg?x-oss-process=image/resize,m_fill,w_600,h_242 600w, http://oss.zhidx.com/uploads/2019/01/4_副本.jpg?x-oss-process=image/resize,m_fill,w_768,h_309 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>▲ <span class="fontstyle0">通往量子未来之路</span></p>
+<h2><strong> <span class="fontstyle0">1. </span></strong><span class="fontstyle2"><strong>选择量子精英团队</strong></span></h2>
+<p><span class="fontstyle2">贵公司可能需要进一步了解量子计算的预期收益。以下是入门方法：1、</span><span class="fontstyle2">将企业内的一些领军专业人才指定为</span><span class="fontstyle4">“</span><span class="fontstyle2">量子精英</span><span class="fontstyle4">”</span><span class="fontstyle2">。</span><span class="fontstyle3">2、</span><span class="fontstyle2">为这些</span><span class="fontstyle4">“</span><span class="fontstyle2">量子精英</span><span class="fontstyle4">”</span><span class="fontstyle2">充电，帮助他们了解何为量子计算、对行业的潜在影响、竞争对手的应对方式以及贵公司的业务如何从中受益。3、</span><span class="fontstyle3"> </span><span class="fontstyle2">要求</span><span class="fontstyle4">“</span><span class="fontstyle2">量子精英</span><span class="fontstyle4">”</span><span class="fontstyle2">定期向高层领导汇报工作，以便在整个企业中开展量子计算教育，确保该计划始终与战略目标保持一致。</span></p>
+<h2><span class="fontstyle0">2. </span><span class="fontstyle2">开始确定量子计算用例和相关价值主张</span></h2>
+<p><span class="fontstyle2">待量子精英团队了解了量子计算的原理及其如何助您应对业务挑战和把握机遇之后，让他们开始确定贵公司可在哪些领域借助量子计算领先竞争对手。</span></p>
+<p><span class="fontstyle0">根据量子系统的独特能力及其加速解决问题的优势来评估机遇。要求量子精英团队监控量子应用的进展，确定哪些用例可以更快地实现商业化。为确保量子探索与业务成果紧密联系在一起，请选择前景最光明的量子计算应用，例如创建突破性产品和服务或者以全新方式优化供应链。</span></p>
+<h2><span class="fontstyle0">3.</span><span class="fontstyle1">试用真正的量子系统</span></h2>
+<p><span class="fontstyle1">通过试用真正的量子计算机，揭开量子计算的神秘面纱。要求量子精英团队了解量子计算如何解决业务问题，以及如何与现有工具互动。单一量子解决方案并不能</span><span class="fontstyle2">“</span><span class="fontstyle1">包治百病</span><span class="fontstyle2">”</span><span class="fontstyle1">。量子精英团队应专注于解决传统计算机无法有效解决的最高优先级用例。</span></p>
+<h2><span class="fontstyle0">4.</span><span class="fontstyle1">绘制量子路线图</span></h2>
+<p><span class="fontstyle0">绘制量子计算路线图，包括可行的后续步骤，目的是解决可能会对企业参与竞争以及获得可持续业务优势产生巨大阻碍的问题。为了加速备战量子计算，应考虑加入新出现的量子社区。这样能够帮助您更好地接触了解技术基础架构、不断发展的行业应用，以及有助于增强特定量子应用开发能力的研究人员。</span></p>
+<h2><span class="fontstyle0">5.</span><span class="fontstyle1">灵活敏捷地应对未来量子格局的变化</span></h2>
+<p><span class="fontstyle0">量子计算在迅速发展。应寻找有望成为行业标准并且推动生态系统整合的技术和开发工具包。应认识到，新的技术突破可能会促使企业调整量子开发方法，包括更换生态系统合作伙伴。应留意企业的量子计算需求如何与时俱进，特别是当您进一步深入地了解哪些业务问题可从量子计算解决方案中获得最大收益之后。</span></p>
+<p><strong>智东西</strong>认为，在信息时代，量子计算技术一旦突破，掌握这种能力的国家，会在经济、军事、科研、安全等领域迅速建立全方位优势。所以，世界各国都在启动巨资积极投入研发量子计算技术。随着技术的快速发展，现在我们已经处在了量子计算机即将商业化的时间节点，量子计算不仅是国家战略，相关企业若能提早布局规划量子计算技术，未来注定能在“量子霸权”时代赢得先机，脱颖而出。</p>
+<p><strong>下载提醒：如果想收藏本文的报告全文，</strong><strong>可以在智东西（公众号：zhidxcom）回复关键词“nc314”获取。</strong></p>
+<h2 style="text-align: center;"><strong>智能内参</strong></h2>
+<p style="text-align: center;"><strong>权威数据·专业解读 读懂智能行业必看的报告</strong></p>
+<p style="text-align: center;">在智东西回复“智能内参”查看全部报告</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('http://zhidx.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '139623'});
+});
+</script>            </div>
+            <div class="post-share">
+                <div class="praise" data-postid="139623">
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/praise.png" alt="">
+                    <span>6</span>
+                </div>
+                <div class="social-share" data-title="IBM：决胜量子计算五大战略！商用近在咫尺【附下载】| 智东西内参" id="share" data-sites="weibo,qq,qzone,wechat"></div>
+            </div>
+            <div class="post-tag">
+            <a href="/p/tag/量子计算">量子计算</a>            </div>
+            <div class="suffix">
+<!--                <img src="--><!--/images/single-suffix.png" alt="">-->
+                <img src="http://oss.zhidx.com/uploads/2018/11/WechatIMG308.jpeg" alt="">
+            </div>
+            <div class="post-comments" id="comments">
+                <link rel="stylesheet" href="http://zhidx.com/wp-includes/js/lib/layui/css/layui.css">
+<script src="http://zhidx.com/wp-includes/js/lib/layui/layui.js"></script>
+
+<div class="comment-box">
+    <div class="cb-title">
+        来, 说两句
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139623">
+        <input type="hidden" name="comment_parent" value="0">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+<div id="comments-list">
+
+<ul>
+    </ul>
+</div>
+<script type="text-html" id="reply-template">
+    <div class="comment-box" style="width:850px">
+    <div class="cb-title">
+        回复：{{author}}
+    </div>
+    <form action="" class="commentform">
+        <div>
+            <textarea class="comment-textarea" name="comment" disabled></textarea>
+        </div>
+        <div>
+            <input type="button" value="发布" class="comment_submit">
+        </div>
+        <input type="hidden" name="comment_post_ID" value="139623">
+        <input type="hidden" name="comment_parent" value="{{parent}}">
+    </form>
+            <div class="check-login">说之前，<a href="javascript:;" class="login">登录</a>一下</div>
+    </div>
+</script>
+    <script>
+        jQuery("img[src*='ZDX-Card-for-PC-e1']").css('display', 'none');
+    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    jQuery('.post-content').html(jQuery('.post-content').html().replace(/dev.(?:wp|zhidx).com/g, 'zhidx.com'));
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/single.js"></script>
+<script>
+//    jQuery('.post-content img').css('maxWidth', '850px');
+    console.log('hello world');
+    jQuery('.post-content img').each(function(i, e) {
+        e.onload = function() {
+            if (e.width > 850) {
+                e.style.width = '850px';
+            }
+        }
+    })
+</script>
+<footer id="footer">
+    <ul id="footer-info">
+        <li class="footer-realize">
+            <div class="footer-title">了解我们</div>
+            <ul class="footer-realize-info">
+                <li><a href="/about" target="_blank">关于我们</a></li>
+<!--                <li><a href="javascript:;">商业合作</a></li>-->
+                <li><a href="https://www.zhipin.com/gongsir/1c79dc111f1191cd1XF43N-7.html?ka=all-jobs-hot">加入我们</a></li>
+                <li><a href="/about#cooperation" target="_blank">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="footer-relation">
+            <div class="footer-title">联系我们</div>
+            <ul class="footer-relation-info">
+                <li><a href="javascript:;">媒体报道：news#zhidx.com</a></li>
+                <li><a href="javascript:;">商务合作：hillsmart(微信)</a></li>
+                <li><a href="javascript:;">工作机会：HR#zhidx.com</a></li>
+                <li><a href="javascript:;">公开课合作：habenhe</a></li>
+                <li><a href="javascript:;">市场合作：marketing#zhidx.com</a></li>
+            </ul>
+        </li>
+        <li class="footer-media">
+            <div class="footer-title">智东西&车东西入驻媒体平台</div>
+            <ul class="footer-media-info">
+                <li>
+                    <a target="_blank" href="javascript:;">今日头条</a>
+                    <a target="_blank" href="javascript:;">天天快报</a>
+                    <a target="_blank" href="javascript:;">腾讯新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">百度</a>
+                    <a target="_blank" href="javascript:;">凤凰</a>
+                    <a target="_blank" href="javascript:;">搜狐</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">网易</a>
+                    <a target="_blank" href="javascript:;">界面</a>
+                    <a target="_blank" href="javascript:;">新浪</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">微博</a>
+                    <a target="_blank" href="javascript:;">东方新闻</a>
+                    <a target="_blank" href="javascript:;">UC新闻</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">趣头条</a>
+                    <a target="_blank" href="javascript:;">雪球</a>
+                    <a target="_blank" href="javascript:;">知乎</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">一点资讯</a>
+                    <a target="_blank" href="javascript:;">360快资讯</a>
+                    <a target="_blank" href="javascript:;">zaker</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">易车网</a>
+                    <a target="_blank" href="javascript:;">汽车之家</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-wechat">
+            <div class="footer-title">公众号</div>
+            <ul>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdx-wechat.png" class="footer-wechat-img" alt="智东西公众号">
+                    <div class="footer-wechat-title">智东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/cdx-wechat.png" class="footer-wechat-img" alt="车东西公众号">
+                    <div class="footer-wechat-title">车东西公众号</div>
+                </li>
+                <li>
+                    <img src="http://zhidx.com/wp-content/themes/zhidx/images/zdxgkk-wechat.png" class="footer-wechat-img" alt="智东西公开课">
+                    <div class="footer-wechat-title">智东西公开课</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="colophon">
+        <div>智东西 版权所有 京ICP备16059766号 Copyright ©2014-2019 zhidx.com. All Rights Reserved</div>
+        <div>北京市海淀区学清路10号院1号楼学清嘉创大厦A座12层</div>
+    </div>
+</footer>
+</body>
+<script>
+    var navTimer;
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseover = function() {
+            if (this.navTimer) {
+                clearTimeout(this.navTimer);
+            }
+            document.querySelectorAll('.zixun').forEach(function(item) {
+                item.querySelector('.zixun-show').style.display = 'none';
+                item.querySelector('a').className = '';
+                item.style.cssText = '';
+            });
+            this.style.cssText = " height: 80px;border: none;background: rgba(235, 235, 235, .85) !important;";
+            this.querySelector('.zixun-show').style.display = 'inline-block';
+            this.querySelector('.zixun>a').className = 'zixun-select';
+        }
+    })
+    jQuery(".zixun").each(function(i, e) {
+        e.onmouseout = function() {
+            var that = this;
+            this.navTimer = setTimeout(function() {
+                that.querySelector('.zixun-show').style.display = 'none';
+                that.querySelector('a').className = '';
+                that.style.cssText = '';
+            }, 300);
+        }
+    });
+</script>
+<script>
+    // (function(){
+    //     var bp = document.createElement('script');
+    //     var curProtocol = window.location.protocol.split(':')[0];
+    //     if (curProtocol === 'https'){
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    //     }
+    //     else{
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    //     }
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(bp, s);
+    // })();
+</script>
+<script src="http://zhidx.com/wp-content/themes/zhidx/js/notify.js"></script>
+</html>

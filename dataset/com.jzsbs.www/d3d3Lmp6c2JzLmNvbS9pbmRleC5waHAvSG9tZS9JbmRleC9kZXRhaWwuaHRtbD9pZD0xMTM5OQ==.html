@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>
+        建筑新网：李刚：“沪佳现象”是一场“亲人文化”的胜利                         
+   
+    </title>
+    
+    <script type="text/javascript">
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        window.location.href = "/index.php/Home/Mobile/detail.html?id=11399";
+    }
+</script>
+
+    <!-- <script type="text/javascript">
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            window.location.href = "/index.php/Home/Mobile/index.html";
+        }
+    </script> -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/Public/layui/css/layui.css">
+    <script src="/Public/layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/jz.css">
+    <script type="text/javascript" src="/Public/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+    $('#type1 option[value=]').attr('selected', 'selected');
+    </script>
+
+    <script type="text/javascript">
+    var CalendarData = new Array(100);   
+    var madd = new Array(12);   
+    var tgString = "甲乙丙丁戊己庚辛壬癸";   
+    var dzString = "子丑寅卯辰巳午未申酉戌亥";   
+    var numString = "一二三四五六七八九十";   
+    var monString = "正二三四五六七八九十冬腊";   
+    var weekString = "日一二三四五六";   
+    var sx = "鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+    var cYear, cMonth, cDay, TheDate;   
+    CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6, 0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD, 0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55, 0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA, 0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95, 0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26, 0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D, 0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497, 0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F, 0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D, 0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);   
+    madd[0] = 0;   
+    madd[1] = 31;   
+    madd[2] = 59;   
+    madd[3] = 90;   
+    madd[4] = 120;   
+    madd[5] = 151;   
+    madd[6] = 181;   
+    madd[7] = 212;   
+    madd[8] = 243;   
+    madd[9] = 273;   
+    madd[10] = 304;   
+    madd[11] = 334;   
+    function GetBit(m, n) {        return (m >> n) & 1;    }   
+    function e2c() {       
+        TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0], arguments[1], arguments[2]);       
+        var total, m, n, k;       
+        var isEnd = false;       
+        var tmp = TheDate.getYear();       
+        if (tmp < 1900) {            tmp += 1900;        }        total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4) + madd[TheDate.getMonth()] + TheDate.getDate() - 38;       
+        if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {            total++;        }       
+        for (m = 0;; m++) {            k = (CalendarData[m] < 0xfff) ? 11 : 12;            for (n = k; n >= 0; n--) {                if (total <= 29 + GetBit(CalendarData[m], n)) {                    isEnd = true; break;                }                total = total - 29 - GetBit(CalendarData[m], n);            }            if (isEnd) break;        }        cYear = 1921 + m;       
+        cMonth = k - n + 1;       
+        cDay = total;       
+        if (k == 12) {            if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth = 1 - cMonth;            }            if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {                cMonth--;            }        }   
+    }   
+    function GetcDateString() {       
+        var tmp = "";       
+        tmp += tgString.charAt((cYear - 4) % 10);       
+        tmp += dzString.charAt((cYear - 4) % 12);       
+        tmp += "年 ";       
+        if (cMonth < 1) {           
+            tmp += "(闰)";           
+            tmp += monString.charAt(-cMonth - 1);       
+        } else {            tmp += monString.charAt(cMonth - 1);        }        tmp += "月";       
+        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿" : "三十"));       
+        if (cDay % 10 != 0 || cDay == 10) {            tmp += numString.charAt((cDay - 1) % 10);        }       
+        return tmp;   
+    }   
+    function GetLunarDay(solarYear, solarMonth, solarDay) {        //solarYear = solarYear<1900?(1900+solarYear):solarYear;
+               
+        if (solarYear < 1921 || solarYear > 2020) {            return "";        } else {           
+            solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;           
+            e2c(solarYear, solarMonth, solarDay);           
+            return GetcDateString();       
+        }   
+    }    //调用
+       
+    var D = new Date();   
+    var yy = D.getFullYear();   
+    var mm = D.getMonth() + 1;   
+    var dd = D.getDate();   
+    var ww = D.getDay();   
+    var ss = parseInt(D.getTime() / 1000);   
+    if (yy < 100) yy = "19" + yy;   
+    function GetCNDate() {        return GetLunarDay(yy, mm, dd);    }    $(document).ready(function() {       
+        var d = GetCNDate();       
+        var nongli = document.getElementById('nongli');
+        //         alert(d);
+        nongli.innerHTML = d;
+
+           
+    });
+    </script>
+    <style type="text/css">
+        
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px); 
+        }
+
+    </style>
+    <script type="text/javascript">
+    //设为首页 www.jb51.net
+    function SetHome(obj, url) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(url);
+        } catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch (e) {
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                }
+            } else {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+            }
+        }
+    }
+
+    //收藏本站 www.jb51.net
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+            }
+        }
+    }
+    </script>
+    <style type="text/css">
+        ::-webkit-input-placeholder {
+          color: #aaa;
+        }
+        :-moz-placeholder {
+          color: #aaa;
+        }
+        ::-moz-placeholder{
+        color: #aaa;
+        }
+        :-ms-input-placeholder {
+          color: #aaa;
+        }
+
+    </style>
+</head>
+<!--右侧浮窗开始-->
+<link rel="stylesheet" href="/Public/css/homepage.css" />
+<link rel="stylesheet" href="/Public/css/fireman109.css" />
+
+<body>
+    <header class="am-topbar header " style="width:100%;z-index: 101;height:;background: #fff;">
+        <div class="top_nav" style="width:100%;padding-left:50px;">
+            <span>中国建筑业门户网站</span>
+            <div style="height: 30px;float: right;margin-right:150px;">
+                <!-- <a  href="#" style="color: #F58400;">设为首页</a> |
+                <a  href=#">收藏</a> -->
+                <a href="javascript:void(0);" style="color: #F58400;" onclick=" SetHome(this,'http://www.jzsbs.com')">设为首页</a> |
+                <a href="javascript:void(0);" onclick="AddFavorite('建筑新网','http://www.jzsbs.com')">收藏</a>
+            </div>
+        </div>
+    </header>
+    <!--logo-->
+    <div class="bannerDiv content " style=" margin-bottom: 5px; margin-top: 50px; height: 100px; ">
+        <div class="logo " style="float: left;margin-left:-10px">
+            <a href="/">
+                    <img src="/Public/picture/logo.png" />
+                </a>
+        </div>
+        <div class="main-right" style="height: 100px;padding-top: 30px;margin-right:-45px">
+            <span style="font-size: 12px;">
+                2019年01月04日&nbsp;&nbsp;星期五 <span id="nongli"></span></审判
+          >
+          <style type="text/css">
+            .h_search select {  
+                      /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
+                          border: solid 1px #000;  
+                          
+                          /*很关键：将默认的select选择框样式清除*/  
+                          appearance:none;  
+                          -moz-appearance:none;  
+                          -webkit-appearance:none;  
+                          
+                          /*在选择框的最右侧中间显示小箭头图片*/  
+                  
+                  /*在选择框的最右侧中间显示小箭头图片*/  
+                  background: url("/Public/images/red.png") no-repeat  45px 5px;    
+                  
+                  
+                    /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
+                  padding-right: 14px;  
+                }   
+          </style>
+            <form action="/index.php/Home/Index/searchList.html">
+                <div class="h_search">
+                    <ul>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <select id="type1" name="type" style="width: ;height: 30px;border: none;display: block;width: 67px;padding: 5px; font-size: 15px;color: #333;appearance:none;padding-left:10px">
+                            <option value="1">标题</option>
+                            <option value="2">作者</option>
+                        </select>
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd;margin-left: 1px solid #ddd">
+                        <input style="display: block;" class="head_search" value="" id="num" name="search"  type="text" placeholder="请输入关键字" onKeyUp="showLen(this);" style="width: 151px" />
+                    </li>
+                    <li style="float: left;height: 30px;border: 1px solid #ddd">
+                        <input class="head_search" style="float: left;display:block;margin-left: -5px;width:80px;background: #eee;line-height:30.3px;color: #000;font-size: 16px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;text-align: center;" type="submit" value="搜 索" />
+                    </li>
+                </ul>
+                    <script type="text/javascript">
+                    showLen(document.getElementById("num"));
+                    function showLen(obj){
+                        // document.getElementById('span').innerHTML = '&nbsp;&nbsp;还可输入'+ (200-obj.value.length) +'位';
+                        if(obj.value.length>10){
+                            var objValue = obj.value;
+                            objValue=objValue.substr(0,10);
+                            document.getElementById('num').value=objValue;
+                        }
+                    }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="clear "></div>
+    </div>
+    <!--导航-->
+    <div class="titleDiv ">
+        <div class="content " style="margin: 0 auto">
+            <ul style="margin: 0px;padding:0px">
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=1">新闻</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=6">市场</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=4">基建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=8">创优</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=10">聚焦</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=2">地方</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=19">海外</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=9">市政</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=11">安全</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=72">访谈</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;border-right: dashed 1px #ccc;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=27">人物</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=39">规划</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=42">钢结构</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=21">咨询</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=30">绿建</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=65">工地</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=20">设计</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=74">信息化</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=73">房产</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=31">园林</a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="width:418px;margin: 0px;text-align: center;">
+                    <ul style="margin: 0px;">
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=29">建材</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=32">机械</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=22">协会</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=5">法苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=75">数据</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=28">装饰</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=3">科技</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=23">企业</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/newsList.html?id=76">文苑</a>
+                        </li>
+                        <li style="width:82px">
+                            <a target="blank" href="/index.php/Home/Index/videoList.html">视频</a>
+                        </li>
+                    </ul>
+                </li>
+                <div class="clear "></div>
+            </ul>
+        </div>
+    </div>
+    
+
+    <style type="text/css">
+    img {
+        max-width: 740px;
+        max-height: 1500px;
+    }
+
+    p {
+        margin: 0 !important;
+        padding: 0!important;
+        font-family: '微软雅黑'!important;
+        padding: 15px!important;
+        text-indent: 2em!important;
+        line-height: 2em!important;
+        font-size: 16px!important;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/Public/css/erji.css">
+    <script language="Javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+    <!--内容-->
+    <div class="content">
+        <!--left-->
+        <div class="content-left" style="padding: 0px 75px 0px 7px">
+            <div class="content-title fengeline">
+                <a href="/">建筑新网</a> >
+                <a href="/index.php/Home/Index/newsList.html?id=29">建材 >
+                <a href="javascript:void(0)">正文</a>
+            </div>
+                        <h1 style=" text-align: center; margin: 10px 0; ">李刚：“沪佳现象”是一场“亲人文化”的胜利 </h1>
+                        <p class="content-left-wenzhang-time">时间：2019年01月04日&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：<span class="content-source">原创</span> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 作者：张高青</p>
+	                <!-- <p>沪佳装饰集团的发展堪称“现象级”。仿佛是在一夜间，在上海滩的街头巷尾，老百姓都在议论着沪佳，口口相传着沪佳的种种故事。</p> -->
+	                <p><p><p style=text-align: center; font-size: 14px;><br/></p><p class=p4 style=font-size: 14px;><span style=font-size: 16px; line-height: 28px; text-indent: 28px;></span></p><p style=text-align: center; font-size: 14px;><img   id=/attach/liwuying2019141221263867.jpg src=/attach/liwuying2019141221263867.jpg type=image  style=max-width: 100%;; title=李刚.jpg/></p><p class=p4 style=font-size: 14px;>&nbsp; &nbsp; &nbsp; &nbsp;<span style=font-size: 16px; line-height: 1.75; text-indent: 2em;>在如今的上海家装界，沪佳装饰集团(以下简称沪佳)无疑是一颗耀眼的明星。仿佛是在一夜间，在上海滩的街头巷尾，老百姓都在议论着沪佳，口口相传着沪佳的种种故事。</span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>沪佳的发展堪称“现象级”：公司成立短短四年，由零起步，现在已经发展成为年服务业主超过1万户、年营业额达15亿元的大型装修企业，一举跻身上海家装界三甲之列；“沪佳”品牌已成为中央电视台CCTV发现之旅推荐家装品牌、中国《消费日报》推荐家装品牌、上海《新闻晨报》唯一指定家装品牌…… </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“如果说沪佳的发展是成功的，那么我以为这应该是一场‘亲人文化’的胜利。”沪佳创始人、董事长李刚在接受记者采访时表示。 </span></p><p class=p4 style=font-size: 14px;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><strong><span style=font-size: 20px;>业主烦心、闹心、担心的“痛点”，就是沪佳的着力点</span></strong></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;><br/></span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>李刚是从一个文创行业的“老炮儿”跨界做家装的。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>为何要跨界做家装？李刚介绍，他20年前来到上海，一直经营文化传媒产业，事业上一帆风顺，但却在自己的几套房子装修上烦心事不断。“我在上海装修过几套房子，当时上海排名靠前的家装公司我几乎找了个遍，结果不是拖延工期，就是后期增项，再者就是为维修的事情扯皮不断。”李刚回忆，他的一套别墅装修最初签订合同的工期是一年，最后却装修了五年半，最终结算时装修费用还翻了一倍。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>通过自己痛苦的装修经历，李刚总结出家装过程中普遍存在的三大问题：一是装修单位不诚信，让业主闹心。一些装修企业缺乏对装修流程的通盘考虑，或者说陷阱多，造成增项多，到最后结账时费用往往比最初签约时多出一大块。二是设计师在引导方面失控，让业主烦心。业主大多是对建材、装修等不专业的，因材料多、品牌多，选材料、买材料占去了大量时间。“我自己估算了一下，那套装修五年半的别墅，单单与设计师无数次约时间买材料、选材料，由此拖延的工期差不多就有3年。”李刚说。三是管理主线不清晰，让业主担心。装修单位责任人不明确，一旦装修过程中发生质量问题，往往出现无休止的扯皮现象。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“我们的业主太不容易了，装修房子明明是一件开心事，却因为家装过程中的种种问题，让开心事变成了烦心、闹心、担心的痛苦事。这种状况必须要改变。”在经历并看清楚了家装过程里种种“痛点”后，李刚觉得他可以改变这个行业。他认为，这些问题虽然是行业普遍存在的现象，但是完全可以通过装修模块和流程来予以改变。于是李刚毅然跨界进入家装领域，在2014年12月5日成立了沪佳公司。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;></span></p><p style=text-align: center; font-size: 14px;><img   id=/attach/liwuying2019141221263868.jpg src=/attach/liwuying2019141221263868.jpg type=image  style=max-width: 100%;; title=2015年11月29日沪佳装饰闵行店开业.jpg/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><span style=font-size: 16px;>2015年11月29日沪佳装饰闵行店开业</span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“业主烦心、闹心、担心的‘痛点’，就是沪佳的着力点。我的思路是，复杂的问题简单化，简单的问题傻瓜化。所以公司一成立，我就主张推行‘一站式全包装修’，因为我觉得这是解决业主烦心、闹心、担心的‘痛点’问题的可行办法。”李刚告诉记者。 </span></p><p class=p7 style=font-size: 14px;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><strong><span style=font-size: 20px;>力推“一站式全包装修”，只为让业主省心、省钱、省力</span></strong></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;><br/></span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>但是没有想到，在推行“一站式全包装修”的过程中，李刚遇到了很大的阻力。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>在上海滩，以前家庭装修大多是半包，即包工不包料。在上海家装界，沪佳是最早推行“一站式全包装修”的企业之一，称得上是“第一个吃螃蟹者”。“一站式全包装修”是集高端设计、家庭装修、家具家电软装配套、家居建材销售于一体的装修，因为对装修全过程通盘考虑，所以能有效避免增项产生；业主也不必花更多的精力在选材料、买材料上；同时，因为从头至尾就一家公司在做装修，责任明确，杜绝了产生问题后的扯皮现象。但这样让业主省心、省钱、省力的新模式在当时被并不被家装界人士理解，连李刚手下的员工也不理解，大家几乎都不看好做全包。一位在家装界摸爬滚打多年的朋友甚至打赌说：“你做全包，如果两年内不关门破产，我就跳楼。” </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“在2015年9月之前，全包装修所占公司份额还不到2%，全包装修几乎要‘寿终正寝’了。”但李刚不信这个邪。2015年9月27日，对于沪佳来说，这是具有历史意义的一天。这一天，李刚组织召开了统一员工思想的签约大会，会上气氛凝重，认同全包装修模式的员工留下来，每个人写下承诺书，不认同全包装修模式的人立即走人。“当时共150多名员工，最终只有60 多人认同全包模式签约留下。”李刚回忆说。而这破釜沉舟的举措，被证明是正确而及时的。在2015年9月之前，沪佳的装修业务签约率为3%，到了10月份就达到了10%；9月份业务量是800万元，10月份一下子超过了2000万元，之后几个月的公司营业额都稳定在2000万元~3000万元之间。在“生死抉择”之后，沪佳的“一站式全包装修”终于迎来了“柳暗花明”。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>为了保证“一站式全包装修”不打折扣地执行到位，切实解决业主烦心、闹心、担心的‘痛点’问题，赢得业界更多的信任和支持，李刚要求从施工工人到设计师甚至公司高管都要接受每周一次的“充电”培训，并立下了严明“家规”，违规者“处罚1万元”。比如，为了保证施工质量，要求水泥∶黄沙的比例必须达到1∶3以上，公司专门给施工人员发放定制的带有刻度的铅桶，不按比例标准施工的罚1万元。比如，要求装修员工主动告知业主联系电话；不拿业主一针一线，不抽业主一支烟，不吃业主一碗饭；装修离开时必须向业主鞠躬致谢，要说“给您们添麻烦了”……只要违反其中的任意一条规定，一律处罚1万元。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;></span></p><p style=text-align: center; font-size: 14px;><img   id=/attach/liwuying2019141221263869.JPG src=/attach/liwuying2019141221263869.JPG type=image  style=max-width: 100%;; title=沪佳30位工程管家一起郑重宣誓：保证质量，确保工期.JPG/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><span style=font-size: 16px;>沪佳工程管家集体公开宣誓：保证质量，确保工期</span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>严明的纪律，严谨的工作作风，到位的施工质量，让沪佳赢得了百姓的好口碑，并实现了跨越式发展。公司2018年上半年总体装修交付率达到98.7%，业主对沪佳全包的满意度高达98.6%……各项指标在行业内均遥遥领先。李刚说：“事实证明，只要能帮助解决行业‘痛点’，真正做到让业主省心、省钱、省力的，这样的装饰企业就是受欢迎的。” </span></p><p class=p4 style=font-size: 14px;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><strong><span style=font-size: 20px;>培育“亲人文化”，让沪佳和业主成为和谐的一家人</span></strong></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><span style=font-size: 16px;><br/></span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;> 沪佳缘何能够成为“现象级”的家装企业？“我想，除了‘一站式全包装修’的创新改变了传统的家装模式之外，沪佳‘亲人文化’的培育是更深层次的原因，我们努力让传统家装中装修人与业主之间生硬的‘甲方’‘乙方’关系，转变为亲人关系，变成和谐的一家人。这也许是沪佳最成功的地方。”李刚说道。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>在沪佳成立伊始，李刚就提出了“把装修业主当亲人，不让沪佳的业主受到一点点委屈”的沪佳“亲人文化”。沪佳会对公司的每个客户每年赠送4次福利，每次或一箱苹果，或一箱葡萄。礼轻情意重，表达的是沪佳对亲人——业主的一份关心，一份真情。“这不是作秀。我们既然是亲人，就要常来常往，有‘密度’的交流。”李刚说。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>同时，每年5月和12月，公司会对沪佳的业主进行一次普查和一次抽查。普查是对所有近万家业主一家家打电话询问，了解装修后的使用情况，有问题反馈的一家家上门服务。抽查是采用摇号形式，每次抽取50~60家业主了解情况。沪佳在质量管控中做出了“有任何质量问题可以砸掉重装或该项目全额退款”的承诺，而这样的承诺，在上海家装界沪佳是第一家。“我们对业主是‘一朝装修，终身负责’。”李刚表示。 </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px; line-height: 1.75; text-indent: 2em;>2016年3月12日，对沪佳来说，又是一个重要的日子。沪佳召集了1600多户业主，在上海松江召开业主大会，让业主来给沪佳揭短、提意见，事实上，这是一个“自我批评会”。根据会上业主的反馈，那一年，沪佳砸掉了50多套房子进行了重装。很多业主深感震撼，又很受感动：“这样的‘自我批评会’我们之前根本没听说过，是第一次参加。而没想到的是，沪佳是动真格的，十几万元装修的房子说砸就砸了……”沪佳的诚意，沪佳的“亲人文化”，让业主的心里热热乎乎的。2015年时，沪佳装修项目的投诉率为25%左右， 到了2018年已锐减至0.12%，对于投诉率一直居高不下的家装行业来说，这是一份非常了不起的成绩单。</span><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px; line-height: 1.75; text-indent: 2em;></span></p><p style=text-align: center; font-size: 14px;><img   id=/attach/liwuying2019141221263870.jpg src=/attach/liwuying2019141221263870.jpg type=image  style=max-width: 100%;; title=业主为沪佳的优质服务赠送锦旗.jpg/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75; text-align: center;><span style=font-size: 16px; line-height: 1.75; text-indent: 2em;></span><span style=font-size: 16px;>业主赠送锦旗感谢<span style=line-height: 24.5px; text-align: center; text-indent: 28px;>沪佳的优质服务<span style=line-height: 24.5px; text-align: center; text-indent: 28px;></span></span></span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><br/></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“2015年，沪佳的装修退款约800万元，到了2016年，退款只有20万元，而这两年已几乎没有要退款的业主了。其实我们知道，有些房子明明可以申请退款的，但我们的业主没有这样做，因为他们也体量到了我们的难处，更因为他们在内心已把我们当做了他们的亲人。”李刚的眼里隐隐有泪光闪动，“亲人文化，让装修人和业主的心紧紧连在了一起，我们相互理解，相互体量。我只能说，我们的业主真是太好了。” </span></p><p style=font-size: 14px; text-indent: 2em; line-height: 1.75;><span style=font-size: 16px;>“让我怎样感谢你？当我走向你的时候，我原想收获一缕春风，你却给了我整个的春天。”汪国真《感谢》中的诗句，也许正是李刚如今的心情。李刚说：“亲人们的体量和支持，鞭策着我们要做得更好。未来，沪佳在坚持‘一站式全包装修’定位的基础上，要向全屋定制方面努力，进一步提升家具、家电、橱柜、软装等配套能力，为我们的亲人提供更好的居住体验和更舒适的家居环境。”</span> </p><p class=p9 style=font-size: 14px;><br/></p></p></p>
+            <p class="wenzhang-fenxiang">
+                <div id="share">
+                    <div class="bdsharebuttonbox">
+                        <span>分享:</span>
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+                    </div>
+                </div>
+            </p>
+            <div class="wenzhangpian">
+                <div class="wenzhangshang" >
+                    <a class="wenzhangshang-pic" href="javascript:void(0)"><img src="/Public/picture/arrowl.png" /></a>
+                    <span style="margin-top: 15px;margin-left: 40px;">
+                        <span style="margin-bottom: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11398" >上一篇</a></span>
+                        <span style="margin-top: 5px;">
+                            <a href="/index.php/Home/Index/detail.html?id=11398" >
+                                北京：1月1日起施工...</a>
+                            </span>
+                    </span>
+                                    </div>
+                <div class="wenzhangtitle">
+                </div>
+                <div class="wenzhangxia">
+                    <a class="wenzhangxia-pic" href="javascript:void(0)"><img src="/Public/picture/arrowr.png" /></a>
+                                         <span style="margin-top: 15px;margin-right: 40px;">
+                        <span style="margin-bottom: 5px;">
+                            <a href="javascript:void(0)" >下一篇</a></span>
+                        <span style="margin-top: 5px;">
+                            <a href="javascript:void(0)" >
+                                很抱歉没有了<a>
+                            </span>
+                    </span>                </div>
+                <div class="clear"></div>
+            </div>
+            <script>
+            function sendSg() {
+                var saytext = document.getElementById('saytext1').value;
+                // alert(saytext);
+                if (saytext == "") {
+                    alert("您没什么话要说吗？");
+                } else {
+                    document.getElementById("saypl").submit();
+                }
+
+            }
+            </script>
+            <div class="wenzhang-pinglun">
+                <form action="/index.php/Home/Index/addComment.html" method="post" name="saytext" id="saypl">
+                    <input type="hidden" name="id" value="11399">
+                    <input type="hidden" name="classid" value="29">
+                    <textarea name="saytext" id="saytext1"></textarea>
+                    <!-- </td> -->
+                    <a class="send arrow" onclick="javascript:sendSg();">我要评论</a>
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="wenzhang-pinglun-detail">
+                <div class="pinglun-title" style="width: 762px">
+                    <span class="pinglun-title-1">最新评论</span>
+                    <span class="pinglun-title-2">0条评论</span>
+                </div>
+                <div class="clear"></div>
+                <ul class="pinglun-list">
+                                    </ul>
+                <div class="xianshi-more" style="display:none;">
+                    <a><img src="/Public/picture/sanji_05.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        <!-- <link rel="stylesheet" type="text/css" href="layui/css/layui.css"> -->
+        <div class="content-right ">
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />建筑新网</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                <ul>
+                                    <li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11033">1.习近平宣布：港珠澳大桥正式开通</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=11004">2.海南自贸区允许设立外资建企承揽区内建筑工程项目</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10830">3.国务院常务会议要求聚焦补短板扩大有效投资</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10738">4.铁路建设补短板加速 中西部占近七成</a>
+                                        </li><li style="width:330px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+                                            <a href="/index.php/Home/Index/detail.html?id=10368">5.习近平主席向萨勒总统移交中国援助塞内加尔规模最大项目“金钥匙”</a>
+                                        </li>                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li style="border-bottom: 3px solid #346caa ;"><img style="line-height: 40px;" src="/Public/images/icon_add.jpg" />推荐视频</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <div class="second-left-list">
+                                 <video style="width:360px;margin-left: -10px"  controls="controls " src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video.
+                        <!--    <source src="/d/file/2017-01-26/42a37ada7f8e22f74cfb1ed9d5892677.mp4" type="video/ogg"> Your browser does not support HTML5 video. -->
+                    </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-paiming ">
+                <!-- <div class="main-right-paiming-title ">行业排名</div> -->
+                <div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/b6c209df99caa8ab9db84d986244c561.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/483db82c084eb5f69dac4c4c4cc9e9d2.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div><div class="main-right-paming-image ">
+                            <a href="#"><img src="/d/file/2016-10-29/2a974835fdc21eecb7444a115094ba45.jpg" style="width: 356px; margin-top: 20px; "></a>
+                        </div>            </div>
+        </div>
+    </div>
+    <script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "李刚：“沪佳现象”是一场“亲人文化”的胜利",
+            "bdDesc": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "http://"+"www.jzsbs.com"+"//Public/picture/jzsb.jpg",
+            "bdStyle": "1",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <!-- <script src="——js/c2a583e6cfae410e9fb8cdab9062b261.js"></script> -->
+    <div class="clear"></div>
+
+    <!-- FOOTER -->
+    <div class="main-bottom ">
+        <div class="content ">
+            <div class="main-bottom-friend ">
+                <span>友情链接：</span>
+                <a target="blank" href="http://www.mohurd.gov.cn">中华人民共和国住房和城乡建设部</a><a target="blank" href="http://www.zgjzy.org">中国建筑业协会</a><a target="blank" href="http://www.bjjs.gov.cn/publish/portal0/tab3939/">北京市住房和城乡建设委员会</a><a target="blank" href="http://www.bjjl.org.cn/">北京市建筑业联合会</a><a target="blank" href="http://www.shjx.org.cn/">上海市建筑施工行业协会</a><a target="blank" href="http://www.scca.sh.cn/">上海市建设工程咨询行业协会　</a><a target="blank" href="http://www.jsconi.com/">江苏省建筑行业协会</a><a target="blank" href="http://www.ahjst.gov.cn/ahzjt_Front/">安徽省住房和城乡建设厅</a><a target="blank" href="http://www.ahjzy.com.cn/">安徽省建筑业协会</a><a target="blank" href="http://www.gdcia.org/">广东省建筑业协会</a>            </div>
+            <div style="text-align: center ;line-height: 2em!important;color:#666">
+                
+                <span style="margin-bottom:10px;">版权所有:建筑新网社Copyright@2014,Construction All rights reserved</span><br>
+                <span style="margin-bottom:10px;">地址:上海杨浦区营口路588号 18楼 邮编:200433 电话:021-63216799</span><br>
+                <span >沪ICP备14023239号</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+
+        //…
+    });
+    </script>
+
+</body>
+
+</html>

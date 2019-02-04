@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="好买财富,好买基金研究中心,私募,私募基金,阳光私募,创新私募,私募净值,私募排名,固定收益,信托产品,私募股权,一对多,基金净值,每日净值,开放式基金,封闭式基金,基金排名,基金,基金网" />
+    <meta name="description" content="好买基金网（好买财富、好买基金研究中心），是中国领先的第三方投资顾问公司。好买财富拥有独立基金销售牌照，将为您提供公募基金、私募基金、私募股权基金、固定收益信托产品、FOF/TOT、一对多等上千种基金的投资建议和专业资产配置服务。每日提供即时的开放式基金净值，基金排名，基金评级，私募基金净值，私募基金排名。" />
+    <title>好买基金网 - 好买财富 | 基金 | 私募 | 信托 | 专业的投资顾问</title>
+<link rel="stylesheet" type="text/css" href="https://static.howbuy.com/??/css/www/index_201801/reset.css,/css/www/index_201801/yb_detail.css?v=a87ff67"/>
+<script type="text/javascript" src="https://static.howbuy.com/??/js/jquery/jquery.min.1.7.js,/js/vue/vue.2.5.17.js?v=cfcd208"></script>
+
+
+    <style type="text/css">
+        .content-report {
+            min-height: 0px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+			var app = new Vue({
+				el: '#app',
+				data:{
+					dlft:[],
+					rmzx:[],
+					xgyd:[],
+					keyword:'',
+					type:false
+				},
+				beforeCreate() {
+					var self = this;
+					//大佬访谈
+					$.ajax({
+						url: 'https://simu.howbuy.com/research/querydlft.htm?key=simu',
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+    									var oDate = new Date(d.publishTime);
+										t.push({
+											name: d.name,
+											corp: d.corp,
+											title: d.title,
+											img: d.img,
+    	    								url: d.url
+										});
+									}
+								}
+								self.dlft = t;
+							}
+						}
+					});
+					//最新资讯
+					$.ajax({
+						url:'https://simu.howbuy.com/research/queryNewNews.htm',
+						data:{
+							newsType:3,
+							newsId: "5817033"
+						},
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+										var oDate = new Date(d.publishTime);
+										var time = oDate.getFullYear() + "-" +
+												(oDate.getMonth() < 9 ? ("0" + (oDate.getMonth() + 1)) : (oDate.getMonth() + 1)) + "-" +
+												(oDate.getDate() < 10 ? ("0" + oDate.getDate()) : oDate.getDate()) + " " +
+												(oDate.getHours() < 10 ? ("0" + oDate.getHours()) : oDate.getHours()) + ":" +
+												(oDate.getMinutes() < 10 ? ("0" + oDate.getMinutes()) : oDate.getMinutes()) + ":" +
+												(oDate.getSeconds() < 10 ? ("0" + oDate.getSeconds()) : oDate.getSeconds());
+										t.push({
+											title: d.title,
+		    								url: "https://simu.howbuy.com/"+d.url,
+		    								publishTime:time
+										});
+									}
+								}
+								self.rmzx = t;
+							}
+						}
+					});
+
+					//相关阅读
+					$.ajax({
+						url:'https://simu.howbuy.com/research/queryXgNews.htm',
+						data:{
+							newsType:"3",
+							newsId: "5817033"
+						},
+						success:function(request){
+							var rd = JSON.parse(request);
+							if(rd.success){
+								var t = [];
+								if(rd.list.length > 0){
+									for(var i =0; i < rd.list.length; i++){
+										var d = rd.list[i];
+    									var oDate = new Date(d.createTime);
+    									t.push({
+											title: d.title,
+    	    								summary: d.summary,
+    	    								keyword: d.keyword ? d.keyword : "",
+    	    								url: "https://simu.howbuy.com/"+d.url,
+    	    								y: oDate.getFullYear(),
+    	    								m: oDate.getMonth() + 1,
+    	    								d: oDate.getDate()
+										});
+									}
+								}
+								self.xgyd = t
+							}
+						}
+					});
+
+                },
+				mounted:function(){
+					var _num, _h, _h1, _h2;
+					setTimeout(function () {
+						var _num, _h, _h1, _h2;
+						_h = $('.zx-list li:nth-child(1) span').offset().top;
+						_h1 = $('.zx-list li:nth-child(5) span').offset().top;
+						_h2 = _h1 - _h;
+						$('.column-right .Lline').css({
+							'height': _h2 + 'px'
+						});
+					},1000);
+				}
+			});
+
+		});
+
+        var shareQQWeiXin = function(id) {
+        	var $img_weixin = $("#div_weixin");
+    		if ($img_weixin.length === 0) {
+    			$img_weixin = $("<div id=\"div_weixin\" style=\"background: #fff;position: absolute;top: -35px;left: 50px;border: solid 1px #d8d8d8;padding: 20px;\">" +
+    				"	<div style=\"*width: 150px;_width: 150px;\">" +
+    				"		<span>分享到微信朋友圈</span>" +
+    				"		<a href=\"#\" onclick=\"window.document.getElementById(\'div_weixin\').style.display=\'none\';return false;\">×</a>" +
+    				"	</div>" +
+    				"	<img src=\"http://www.howbuy.com/news/twodimensioncode.htm?id=" + encodeURIComponent(id) + "\" style=\"margin: 15px 0;\"/>" +
+    				"	<div style=\"*width: 150px;_width: 150px;\">" +
+    				"		<p>打开微信</p>" +
+    				"		<p>使用“扫一扫”即可分享</p>" +
+    				"	</div>" +
+    				"</div>");
+    			$($(".share_box").find("a")[0]).after($img_weixin);
+    		} else {
+    			$("#div_weixin").show();
+    		}
+		};
+
+		var shareTSina = function(title,rLink,summary,site,pic) {
+		    window.open("http://service.weibo.com/share/share.php?title=" +
+		    encodeURIComponent(title.replace(/&nbsp;/g, " ").replace(/<br \/>/g, " "))+ "&url=" + encodeURIComponent(rLink)+'&summary='+
+		                       encodeURIComponent(summary)+ '&site='+encodeURIComponent(site),
+		    "height=500,width=600,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no");
+		}
+    </script>
+	<!--生成时间：2019-01-07 08:57:5368 -->
+</head>
+
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://static.howbuy.com/??/css/global/footer/1.0/footer.css,/css/www/index_2014/autosearch.css,/css/www/index_201801/headNew1000_1.0.css,/css/www/index_201801/reset.css?v=45c48cc"/>
+<script type="text/javascript" src="https://static.howbuy.com/??/js/jquery/jquery.min.1.7.js,/js/www/index_2018/header201712_1.0.js,/js/initHost.js?v=9bf31c7"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	    	selectHeaderMenu(3,7);
+	    });
+    </script>
+
+</head>
+<body>
+	<div class="topToolBox">
+        <div class="topToolsWrap">
+            <div class="topTools">
+                <div class="topTools_con w1000 clearfix">
+                    <ul class="itemLt fl menu">
+                        <li class="bdStyle"></li>
+                        <li class="first">
+                            <a href="https://www.howbuy.com" class="bdlNone">首页</a>
+                        </li>
+                        <li>
+                            <a href="https://www.howbuy.com/fund">公募基金</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com">私募基金</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/vcpe.htm">私募股权</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/trust/list.htm">固定收益</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/xinfangcheng.htm">新方程FOF</a>
+                        </li>
+                        <li>
+                            <a href="https://simu.howbuy.com/dzpd/3.htm">直投海外
+                                <i class="recommend"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="itemRt fr">
+                        <div class="moreBox fr hide">
+                            <a href="javascript:void(0)" target="_self" class="more"></a>
+                            <div class="moreCon">
+                                <div class="conBox">
+                                    <a href="https://simu.howbuy.com/vedio.htm">私募视频</a>
+                                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=4007009665">免费咨询</a>
+                                    <a href="https://www.ehowbuy.com/help/sub/index.html">开户演示</a>
+                                    <a href="https://www.ehowbuy.com/help/sub/operation_guide.html">常见问题</a>
+                                    <a href="https://www.howbuy.com/about/map.html">网站地图</a>
+                                    <a href="https://www.howbuy.com/about/contactus.html">联系我们</a>
+                                    <a href="https://www.howbuy.com/about/media/index.htm">媒体报道</a>
+                                    <a href="https://www.howbuy.com/about/index.htm">关于好买</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="fr">
+                            <li class="">
+                                <a href="https://i.howbuy.com/login/login.htm" class="loggedcls login pl10 mlink myhowbuy">登录</a>
+                                <!--登录状态下 class（login）改成（logined），登录替换成我的好买 -->
+                                <!--<a href="javascript:void(0)" class="logined pl10 mlink">我的好买</a>-->
+                                <div class="loggedcls_m itemBox">
+                                    <div class="memberBox">
+                                        <div class="member clear">
+                                            <div class="fl memberLt">
+                                                <p class="user_prompt"></p>
+                                            </div>
+                                            <div class="memberRt">
+                                                <a href="https://i.howbuy.com/member/myhowbuy/index.htm">会员中心&nbsp;&nbsp;</a> |
+                                            	<a href="https://i.howbuy.com/user/simpleLogin.htm?action=logout" target="_self" rel="nofollow">&nbsp;&nbsp;退出</a>
+                                            </div>
+                                        </div>
+                                        <div class="centerMemberBox hide">
+                                            <p>当前收益（元）<b class="red fundInc">0</b></p>
+	                                        <p>总资产（元）<span class="currentCost">0</span></p>
+	                                        <p>我的持仓 <span class="positionNum">0</span></p>
+                                        </div>
+                                        <div class="btMemberBox clearfix hide">
+                                            <a href="#" class="fl bdright">买公募</a>
+                                            <a href="#" class="fr">买私募</a>
+                                        </div>
+                                        <!--未进行实名认证-->
+                                        <div class="unCertifyBox">
+                                            <p class="tac">您当前还未进行实名认证</p>
+                                            <a href="#">传送门</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="register">
+                                <a href="https://reg.howbuy.com/register/register.htm" class="mlink register">注册</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>交易</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="tradeBox clearfix">
+                                        <dl class="fl">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">公募交易</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/user/index.htm">我的资产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/chuxuguan/intro.htm">储蓄罐</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/buyFund.html">基金交易</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/contractAdd.html">基金定投</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/newpc/pcfund/module/pcfund/view/queryTradeTradeRecord.html">交易查询</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/account/acctmgt.htm">账户管理</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="fl bdrNone">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">私募交易</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/index.html">我的私募</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/order.html">我的预约</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/order.html">在线交易</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.ehowbuy.com/recordlist.html">交易记录</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://trade.ehowbuy.com/account/acctmgt.htm">账户管理</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dl_zx">
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>自选</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="zxBox">
+                                        <div class="clearfix">
+                                            <div class="fl zdhq">
+                                                <span>今日</span>
+                                                <span class="cRed">上涨（<span class="dl_zx_sz"></span>）</span>
+                                            	<span class="cGreen">下跌（<span class="dl_zx_xd"></span>）</span>
+                                            </div>
+                                            <div class="fr chose">
+                                                <p>
+                                                    <span class="bdrNone act">基金</span>
+                                                    <span class="bdlNone">私募</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="selAllBox">
+                                            <table class="fundItem">
+                                                <tr>
+                                                    <th class="tal" width="140">简称</th>
+                                                    <th width="60">净值/万份</th>
+                                                    <th width="80">涨跌/七日</th>
+                                                    <th width="60">操作</th>
+                                                </tr>
+                                            </table>
+                                            <table class="simuItem hide">
+                                                <tr>
+                                                    <th class="tal" width="140">简称</th>
+                                                    <th width="60">最新净值</th>
+                                                    <th width="80">近一年收益</th>
+                                                    <th width="60">操作</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <a href="javascript:void(0)" target="_self" class="showAllBtn tal">查看全部自选（<span class="dl_zx_qb"></span>）</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dl_ll">
+                                <a href="javascript:void(0)" target="_self" class="aw mlink">
+                                    <span>浏览</span>
+                                </a>
+                                <div class="itemBox">
+                                    <!--noviewRecord-->
+                                    <div class="noviewRecord">
+                                        <div class="norecord">您还没有浏览记录</div>
+                                        <div class="btMemberBox clearfix">
+                                            <a href="https://www.howbuy.com/fund" class="fl bdright">逛逛公募</a>
+                                            <a href="https://simu.howbuy.com" class="fr">逛逛私募</a>
+                                        </div>
+                                    </div>
+                                    <!--viewRecord-->
+                                    <div class="seeBox hide">
+                                        <div class="con">
+                                            <div class="lfIntro"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" target="_self" class="aw mlink ">
+                                    <span>工具</span>
+                                </a>
+                                <div class="itemBox">
+                                    <div class="toolBox clearfix">
+                                        <dl class="fl">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">公募工具</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/filter.htm">基金筛选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/compare.htm">基金对比</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/webRiskResearch/fundinvestdetail.htm">基金诊断</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/myfund/index.htm">基金账本</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/zixuan.htm">基金自选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/calreturn.htm">收益计算</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/calsubsfee.htm">计算器</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="fl bdrNone">
+                                            <dt>
+                                                <a href="javascript:void(0)" target="_self">私募工具</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/fundadvancedlist.htm">私募筛选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/comparefund.htm">私募对比</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/fundtool/zixuan.htm">私募自选</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://simu.howbuy.com/yhzcg.htm">私募重仓股</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="http://simudata.howbuy.com/">数据中心</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://edu.howbuy.com/">投教基地</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="https://www.howbuy.com/subjects/list.htm">私募专题</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--header Begin-->
+        <div class="header clearfix w1000">
+            <div class="logo fl">
+                <a href="https://www.howbuy.com" target="_self">
+                    <img src="https://static.howbuy.com/images/www/201801/howbuyLogo.png" alt="" />
+                </a>
+            </div>
+            <div class="hd_mini_ad fl">
+                <a href="">
+                    <img src="https://static.howbuy.com/images/www/201801/simufund.png" alt="" />
+                </a>
+            </div>
+            <!--
+                搜索框||广告位，可能存在其中一个
+            -->
+            <!--搜索框-->
+            <div class="searchBox fl w380" id="searchDiv">
+                <input id="sea_text" type="text" placeholder="请输入关键词（基金、经理、简称和资讯）">
+                <a href="javascript:void(0)" id="searchBtn" class="searchBtn">搜索</a>
+                <div id="searchData" class="autoSearchBox"></div>
+            </div>
+            <ul class="appList fr">
+                <li class="fundApp">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>掌上基金</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注掌上基金</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmzj.png" alt="">
+                    </div>
+                </li>
+                <li class="cxgApp">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>储蓄罐</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注储蓄罐</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmcxg.png" alt="">
+                    </div>
+                </li>
+                <li class="zcVip">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>臻财VIP</span>
+                    </a>
+                    <div class="ewmBox">
+                        <p>扫描二维码关注好买臻财</p>
+                        <img src="https://static.howbuy.com/images/www/201801/ewmzc.png" alt="">
+                    </div>
+                </li>
+                <li class="ltProgram">
+                    <a href="javascript:void(0)" target="_self">
+                        <i></i>
+                        <span>小程序</span>
+                    </a>
+                    <div class="ewmBox">
+                        <img src="https://static.howbuy.com/images/www/201801/ewmxcx.png" alt="" class="xcx">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="navTopBox w1000 headForSimu">
+            <dl class="clearfix">
+                <dd>
+                    <a href="https://simu.howbuy.com">私募首页</a>
+                    <a href="https://simu.howbuy.com/topsale.htm">私募优选</a>
+                    <a href="https://simu.howbuy.com/company/">私募公司</a>
+                    <a href="https://simu.howbuy.com/manager/">私募经理</a>
+                    <a href="https://simu.howbuy.com/board.htm">最新净值</a>
+                    <a href="https://simu.howbuy.com/mlboard.htm">私募排名</a>
+                    <a href="https://simu.howbuy.com/yhzcg.htm">私募重仓股</a>
+                    <a href="https://simu.howbuy.com/xinwen/smjd/list.htm">私募资讯</a>
+                    <a href="https://www.howbuy.com/research/smreportnew.htm">私募研报</a>
+                    <a href="http://simudata.howbuy.com/">数据中心</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
+    <div class="w1000 mt0a white main" id="app">
+        <div class="content-report mt25 pt10 clearfix">
+            <div class="w630 pl20 pr10 fl">
+                <ul class="nav-list clearfix">
+                    <li>
+                        <a href="https://www.howbuy.com">首页 ></a>
+                    </li>
+                    <li>
+                        <a href="https://simu.howbuy.com"> 私募基金 > </a>
+                    </li>
+                    <li>
+							<a href="https://www.howbuy.com/news/c/3/303.htm" class="linkBlue">私募焦点 ></a>
+                    </li>
+                    <li>正文</li>
+                </ul>
+                <!-- share -->
+                <div class="share_box">
+                    <p>分享</p>
+                    <ul>
+                       <li><a href="javascript:void(0);" onclick="shareQQWeiXin('5817033'); return false;" class="icon_1"></a></li>
+                       <li><a href="javascript:void(0);" onclick="shareTSina('直接投A股！银保监会重磅：农行120亿交行80亿理财子公司获批！','https://simu.howbuy.com/news/2019-01-07/5817033.html','好买说：1月4日晚间，银保监会正式批准中国农业银行、交通银行设立理财子公司。此前已获批的中国建设银行、中国银行理财子公司正在抓紧推进正式开业的各项准备工作。这将进一步丰富机构投资者队伍，拓宽金融市场资金渠道，满足金融消费者多样化金融需求。','https://simu.howbuy.com/news/2019-01-07/5817033.html','好买说：1月4日晚间，银保监会正式批准中国农业银行、交通银行设立理财子公司。此前已获批的中国建设银行、中国银行理财子公司正在抓紧推进正式开业的各项准备工作。这将进一步丰富机构投资者队伍，拓宽金融市场资金渠道，满足金融消费者多样化金融需求。'); return false;" class="icon_4"></a></li>
+                    </ul>
+                </div>
+                <!--左边分享end-->
+                <div class="yb-article">
+                    <h2>直接投A股！银保监会重磅：农行120亿交行80亿理财子公司获批！</h2>
+                    <div class="share-tools bort clearfix">
+                        <ul class="fr">
+                            <li class="scan-mobile">
+                                <em>扫描到手机</em>
+                                <div class="scan-dialog">
+                                    <div class="code fl">
+                                        <img src="https://static.howbuy.com/images/www/201801/weixin-big.png" hight='104px'
+                                            width='102px' alt="微信二维码" />
+                                    </div>
+                                    <div class="code-operation fl">
+                                        <h3>扫描到手机，随时
+                                            <span>[继续看！]</span>
+                                        </h3>
+                                        <p>用手机或平板电脑的二维码应用,扫描左侧二维码，就能在手机继续浏览本文,还能分享到微信或微博。</p>
+                                        <img src="https://static.howbuy.com/images/www/201801/close.png" alt="关闭按钮"
+                                            class="code-close" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="artFrom fl">
+                            <p class="art-tag">
+                                <template v-for="k in keyword.split('|')">
+                                    <span v-if="k != ''">{{k}}</span>
+                                </template>
+                            </p>
+                            <p class="fl">
+                                <span>2019-01-07 08:55:43</span>
+                                <span>来源：中国基金报</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="yb-brief">
+                    	好买说：1月4日晚间，银保监会正式批准中国农业银行、交通银行设立理财子公司。此前已获批的中国建设银行、中国银行理财子公司正在抓紧推进正式开业的各项准备工作。这将进一步丰富机构投资者队伍，拓宽金融市场资金渠道，满足金融消费者多样化金融需求。
+                    </div>
+                    <div class="content">
+                    	<p align="justify">1月4日晚间，银保监会官网显示，银行理财子公司再批两家，分别是中国农业银行、交通银行设立理财子公司。国有五大行就差工行了。</p>
+<p align="justify">2018年12月2日，银保监会发布《商业银行理财子公司管理办法》，商业银行可以结合战略规划和自身条件，按照商业自愿原则，通过设立理财子公司开展资管业务，也可以选择不新设理财子公司，而是将理财业务整合到已开展资管业务的其他附属机构。商业银行通过子公司展业后，银行自身不再开展理财业务(继续处置存量理财产品除外)。</p>
+<p align="justify"><strong>新增两家银行获准</strong><strong>设立理财子公司</strong></p>
+<p align="justify">1月4日晚间，银保监会官网显示，第二批理财子公司获准设立。</p>
+<p align="justify">银保监会正式批准中国农业银行、交通银行设立理财子公司。此前已获批的中国建设银行、中国银行理财子公司正在抓紧推进正式开业的各项准备工作。这将进一步丰富机构投资者队伍，拓宽金融市场资金渠道，满足金融消费者多样化金融需求。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/16f91bbdc051fd1be016af3e098ff54c.jpg"  width="500" height="288" /></strong></p>
+<p align="justify">去年11月，农业银行发布公告，拟出资不超120亿元投资设立农银理财有限责任公司(简称农银理财，名称以监管核准为准)。公告显示，注册资本为不超过人民币 120 亿元，为农业银行全资子公司。注册地拟为广东省深圳市。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/dbdd128571b9ed59189e6858b03828ad.jpg"  width="500" height="624" /></strong></p>
+<p align="justify">而交通银行则是去年5月底宣布，出资不超过人民币 80 亿元发起设立交银资管。注册地在上海，交银资管的经营范围计划为&ldquo;接受投资者委托，对受托的投资者财产进行投资和管理的金融服务&rdquo;。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/905a56a451a89a2316bd3c1f76c89699.jpg"  width="500" height="492" /></strong></p>
+<p align="justify">第一批获批的理财子公司是中国建设银行和中国银行，银保监会在2018年12月27日批准的，截至今日，国有五大行中，就差宇宙行了。</p>
+<p align="justify">其中，工行注册资本金最高，为160亿元，建行以150亿元紧随其后，农行位列第三，为120亿元，中行为100亿元排第四，交行最少，为80亿。</p>
+<p align="justify">在理财子公司注册地的选择上，农业银行与中国建设银行一样选择了深圳市。中国银行则将注册地选择了北京，而交行选择在上海。</p>
+<p align="justify"><strong>多家银行拟设立理财子公司</strong></p>
+<p align="justify">据华宝证券分析，虽然目前有设立意向的银行很多，但是从当前监管审批情况来看，规模较大实力较强的大型银行将率先得到核准进入正式筹备流程的可能性会更高。</p>
+<p align="justify">根据监管办法，理财子的设立阶段和时间要求为：</p>
+<p align="justify">筹建批准(4个月内)&mdash;筹建期(6个月内)&mdash;开业批准(2个月内)&mdash;正式开业(领取营业执照后6个月内)。</p>
+<p align="justify">两个批准阶段均取决于监管层的受理时间。此前中行和建行从发布拟成立子公司的公告到监管层正式批准历时不到一个半月，较4个月的筹建批准期大大缩短，后续的开业批准期也有望缩短。叠加目前很多银行尤其是大型银行在包括组织框架、运营系统、人员配备等方面的筹备工作已基本完成，筹建期可能不会太长。预计第一批理财子公司有望在今年年中前后正式成立。</p>
+<p align="justify">据统计，目前已经有26家商业银行官宣要设立理财子公司，去年12月已经有8家银行密集发布公告，包括邮储银行、长沙银行、重庆银行、吉林银行、广州农商行等。目前拟设立理财子公司的包括工农建中交、邮储银行、9家股份制银行、9家城商行、2家农商行。</p>
+<p align="justify">按照已披露拟注册资本金算，已超1000亿元。工农中建四大行最豪气，分别是不超过160亿、120亿、100亿、150亿;交行、邮储是不超过80亿;浦发、招行、中信等股份制银行则在50亿到100亿;而城商行、农商行也有10亿、20亿。</p>
+<p align="center"><strong><img src="http://static.howbuy.com/images/howbuycms/UserFiles/e2246d6013ab121a709248bcfc15b270.jpg"  width="485" height="1312" /></strong></p>
+<p align="justify"><strong>未来理财子公司可以做哪些事情?</strong></p>
+<p align="justify">以下是理财新规的十大核心要点，供大家参考。</p>
+<p align="justify"><strong>1、可以直接投资股票</strong></p>
+<p align="justify">在前期已允许银行私募理财产品直接投资股票和公募理财产品通过公募基金间接投资股票的基础上，进一步允许理财子公司发行的公募理财产品直接投资股票。</p>
+<p align="justify"><strong>点评：</strong>这是市场最为关注的焦点！对股市是一个大利好，市场将迎来更多入市资金。据了解，2018年以来，银行理财业务总体运行平稳，6月末银行非保本理财产品余额为21万亿元，7月末为21.97万亿元，8月末为22.32万亿元。</p>
+<p align="justify"><strong>2、无销售起点门槛</strong></p>
+<p align="justify">参照其他资管产品的监管规定，不在《理财子公司管理办法》中设置理财产品销售起点金额。</p>
+<p align="justify"><strong>点评：</strong>之前理财新规规定，商业银行发行公募理财产品的，单一投资者销售起点金额不得低于1万元人民币。理财子公司办法进一步将门槛降至零，不再设置销售起点金额。这对公募基金行业是一个竞争冲击。</p>
+<p align="justify"><strong>3、销售渠道扩充</strong></p>
+<p align="justify">子公司理财产品可以通过银行业金融机构代销，也可以通过银保监会认可的其他机构代销，并遵守关于营业场所专区销售和录音录像、客户风险承受能力评估、风险匹配原则、信息披露等规定。</p>
+<p align="justify">银行理财子公司可以通过商业银行、农村合作银行、村镇银行、农村信用合作社等吸收公众存款的银行业金融机构，或者国务院银行业监督管理机构认可的其他机构代理销售理财产品。代理销售银行理财子公司理财产品的机构应当遵守国务院银行业监督管理机构关于代理销售业务的相关规定。</p>
+<p align="justify"><strong>点评：</strong>销售渠道除银行业金融机构外，可通过银保监会认可的其他机构代销，销售渠道扩充利于提升规模。</p>
+<p align="justify"><strong>4、个人首次购买理财无需强制面签</strong></p>
+<p align="justify">参照其他资管产品监管规定，不强制要求个人投资者首次购买理财产品进行面签，允许投资者在首次购买理财产品前，通过理财子公司或其代销机构渠道(含营业场所和电子渠道)进行风险承受能力评估。</p>
+<p align="justify"><strong>5、允许发行分级理财产品，为结构性产品设计创造条件</strong></p>
+<p align="justify">此前银行理财新规规定，商业银行不得发行分级理财产品。但允许理财子公司发行分级理财产品，但应当遵守&ldquo;资管新规&rdquo;和《理财子公司管理办法》关于分级资管产品的相关规定。</p>
+<p align="justify">分级理财产品的同级份额享有同等权益、承担同等风险，产品名称中应包含&ldquo;分级&rdquo;或&ldquo;结构化&rdquo;字样。</p>
+<p align="justify">银行理财子公司不得违背风险收益相匹配原则，利用分级理财产品向特定一个或多个劣后级投资者输送利益。分级理财产品不得投资其他分级资产管理产品，不得直接或间接对优先级份额投资者提供保本保收益安排。</p>
+<p align="justify">银行理财子公司应当向投资者充分披露理财产品的分级设计及相应风险、收益分配、风险控制等信息。</p>
+<p align="justify"><strong>6、合规私募机构纳入理财合作范围</strong></p>
+<p align="justify">与&ldquo;资管新规&rdquo;一致，规定理财子公司发行的公募理财产品所投资资管产品的发行机构、受托投资机构只能为持牌金融机构，但私募理财产品的合作机构、公募理财产品的投资顾问可以为持牌金融机构，也可以为依法合规、符合条件的私募投资基金管理人。同时，对可作为理财合作机构的私募投资基金管理人提出了相关要求。要求如下：</p>
+<p align="justify">(一)在中国证券投资基金业协会登记满1年、无重大违法违规记录的会员;</p>
+<p align="justify">(二)担任银行理财子公司投资顾问的，应当为私募证券投资基金管理人，其具备3年以上连续可追溯证券、期货投资管理业绩且无不良从业记录的投资管理人员应当不少于3人;</p>
+<p align="justify">(三)金融监督管理部门规定的其他条件。</p>
+<p align="justify">银行理财子公司所发行分级理财产品的投资顾问及其关联方不得以其自有资金或者募集资金投资于该分级理财产品的劣后级份额。</p>
+<p align="justify"><strong>7、非标投资政策放松超预期</strong></p>
+<p align="justify">在非标债权投资限额管理方面，理财子公司独立经营理财业务后，根据理财子公司特点，仅要求非标债权类资产投资余额不得超过理财产品净资产的35%。</p>
+<p align="justify">分析评论称，取消非标余额不超过总资产4%和单一客户非标余额不超过资本净额10%限制，仅保留不超过理财产品净资产的35%的要求，银行投资非标空间大幅提升。</p>
+<p align="justify"><strong>8、鼓励引进外资，细化风险管理</strong></p>
+<p align="justify">理财子公司应当由在我国境内注册的商业银行作为控股股东发起设立;股权结构上可以由商业银行全资设立，也可以与境内外金融机构、境内非金融企业共同出资设立。</p>
+<p align="justify">鼓励商业银行吸引境外成熟优秀的金融机构投资入股，引入国际先进的专业经验和管理机制。</p>
+<p align="justify">并且，还采纳市场机构反馈意见，在鼓励各类股东长期持有理财子公司股权、保持股权结构稳定的同时，为理财子公司下一步引入境内外专业机构、更好落实银行业对外开放举措预留空间。</p>
+<p align="justify"><strong>9、风险管理</strong></p>
+<p align="justify">第一，建立风险准备金制度，要求理财子公司按照理财产品管理费收入10%计提风险准备金;</p>
+<p align="justify">第二，要求理财子公司遵守净资本、流动性管理等相关要求，具体规则另行制定;</p>
+<p align="justify">第三，强化风险隔离，加强关联交易管理，要求理财子公司与其股东和其他关联方之间建立有效的风险隔离机制，严格按照商业化、市场化原则开展业务合作，防止风险传染、利益输送和监管套利;</p>
+<p align="justify">第四，遵守公司治理、业务管理、交易管控、内控审计、人员管理、投资者保护等具体要求。</p>
+<p align="justify">此外，根据&ldquo;资管新规&rdquo;和&ldquo;理财新规&rdquo;，理财子公司还需遵守杠杆水平、集中度管理等方面的定性和定量监管标准。</p>
+<p align="justify"><strong>10、注册资本和其他准入条件</strong></p>
+<p align="justify">理财子公司的最低注册资本为10亿元人民币。同时，还应遵循公司治理、风险管理、内部控制、从业人员和管理信息系统等其他准入条件。</p>
+<p align="justify"><font color="#FF0000"><strong>免责声明：</strong></font>本文转载自中国基金报，文章版权归原作者所有，内容仅供参考并不构成任何投资及应用建议。</p>
+                    </div>
+                </div>
+                <div class="yb-related">
+                    <div class="xgrelated-title">
+                        <span></span>
+                    </div>
+                    <template v-for="(item,index) in xgyd">
+                        <div class="tab-list mt20">
+                            <div class="report-list clearfix">
+                                <div class="report-left fl">
+                                    <p class="time">
+                                        <span class="date">{{item.d}}</span>
+                                        <span class="month">{{item.y}}.{{item.m}}</span>
+                                    </p>
+                                </div>
+                                <div class="report-right fr">
+                                    <p class="yb-title">
+                                        <template v-for="k in item.keyword.split('|')">
+                                            <span class="fr" v-if="k != ''">{{k}}</span>
+                                        </template>
+                                        <a :href="item.url">{{item.title}}</a>
+                                    </p>
+                                    <p class="article-brief">
+                                        {{item.summary}}
+                                        <span class="fr">{{item.y}}-{{item.m}}-{{item.d}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <!-- 右侧begin -->
+            <div class="column-right w320 fr">
+                <div class="r-title">
+                    <span><a href="https://simu.howbuy.com/xinwen/jlyl/list.htm">私募人物</a></span>
+                    <label style="font-size: 10px;float: right;"><a href="https://simu.howbuy.com/xinwen/jlyl/list.htm">查看更多私募人物></a></label>
+                </div>
+                <template v-for="(item,index) in dlft">
+                    <div class="mt20 pb20 pr20 borb clearfix">
+                        <div class="mg-left fl">
+                            <p class="name">{{item.name}}
+                                <span>{{item.corp}}</span>
+                            </p>
+                            <p class="mg-intro">
+                                <a :href="item.url">{{item.title}}</a>
+                            </p>
+                        </div>
+                        <div class="mg-right fr">
+                            <img :src="item.img" alt="" style="width: 90px;height:  90px;">
+                            <img src="https://static.howbuy.com/images/www/201801/mg-mask.png" alt="" class="mg-mask">
+                        </div>
+                    </div>
+                </template>
+
+                <div class="zx-title">
+                    <span class="zx-icon"></span>
+                    <span class="hot-zx">热门资讯</span>
+                </div>
+                <div class="rmzx">
+                    <p class="Lline"></p>
+                    <ul class="zx-list mt20">
+                        <template v-for="(item,index) in rmzx">
+                            <li>
+                                <span style="margin-top:0;">{{item.publishTime}}</span>
+                                <a :href="item.url">{{item.title}}</a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <div class="ad-img">
+                    <img src="https://static.howbuy.com/images/news/ad-temp1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <sitemesh:write property='body' />
+<!--     私募底部start   -->
+<div class="simu_messgray"></div>
+<!--     私募底部end   -->
+<script type="text/javascript" src="https://static.howbuy.com/??/js/global/simu_webstat.js?v=c4ca423"></script>
+<div id="smfooter">
+    <p>风险提示：投资有风险。相关数据仅供参考，不构成投资建议。投资人请详阅基金合同和基金招募说明书，确认您自觉履行投资人的各项义务，并自行承担投资风险。</p>
+    <p>版权所有 好买<span class="fontArial">Copyright &copy; howbuy.com, inc 2014. All rights reserved.</span> [沪ICP备08003295号]</p>
+    <a href="http://simu.howbuy.com/about.htm" target="_blank">关于好买私募</a> | <a href="http://www.howbuy.com/about/contactus.html" target="_blank">联系我们</a> | <a href="http://www.howbuy.com/about/joinhowbuy.html" target="_blank">诚聘英才</a> | <a href="http://www.howbuy.com/about/map.html" target="_blank">网站地图</a> |  <a href="http:\\www.howbuy.com/about/useitem.html" target="_blank">使用条款</a> |  <a href="http://www.howbuy.com/about/privacyitem.html" target="_blank">隐私条款</a> |  <a href="http://www.howbuy.com/about/venturehint.html" target="_blank">风险提示</a>
+</div>
+
+<div id="popupContainer"></div>
+<div id="loaderScriptContainer"></div>
+    <script type='text/javascript' src='https://static.howbuy.com/js/www/o_code.js'></script>
+</body>
+
+</html>

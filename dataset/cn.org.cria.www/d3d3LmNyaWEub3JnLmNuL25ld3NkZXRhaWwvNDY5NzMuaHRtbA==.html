@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1; IE=12; IE=10; IE=9; ">
+       <title>中国橡胶网 - 橡胶行业权威门户网站</title>
+        <link href="/static/css/common.css?version=2018" type="text/css" rel="stylesheet" />
+        <link href="/static/css/bundled.css?version=2018" type="text/css" rel="stylesheet" />
+        <link href="/static/css/jquery-confirm.css?version=2018" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/static/js/common/jquery.min.js"></script>        <script type="text/javascript" src="/static/js/common/jquery.browser.min.js"></script>        <script type="text/javascript" src="/static/js/common/jquery-confirm.js"></script>        <script type="text/javascript" src="/static/js/page/login.js"></script>
+        <script type="text/javascript">
+
+    var $CONFIG = {"bigpipe":"true","uid":"","onick":"","jsPath":"\/static\/js\/","cssPath":"\/static\/css\/","version":"2018","cssVersion":"2018","watermark":"","pageId":"","lang":"zh-cn"}        </script>
+    </head>
+<body class=" ch ">
+<script type="text/javascript" src="/static/js/common/base.js"></script><!--主体内容区-->
+<div class="top">
+	<div class="wrap">
+		<div class="fl login" id="frm_login">
+		    			<input class="ipt_user" type="text" placeholder="用户名 : " />
+			<input class="ipt_pwd" type="password" placeholder="密码 : " />
+			<input class="login_btn tc" type="button" value="登录" action-type="login"/>
+			<a href="/pass/get" class="blue">忘记密码？</a>丨<a href="/register" class="blue" style="font-weight: bold;color:#c00;">免费注册</a>
+					</div>
+		<div class="fr">
+            <a href="/login">会员中心</a>            | <a href="/detail/40739.html" target="_blank">网站服务</a>
+            | <a href="/detail/41437.html" target="_blank">网站地图</a>
+            
+            | <a href="http://tongji.cria.org.cn/web/#/signin" target="_blank">网报平台</a>
+            <!--| <a href="/news/otherpage/id/advertising">我要订阅</a>-->
+            <!--| <a href="/news/otherpage/id/countactus">联系我们</a>-->
+            | <a href="http://en.cria.org.cn" target="_blank">ENGLISH</a>
+		</div>
+	</div>
+	<div class="cl"></div>
+</div>
+
+<script>
+    function AddFavorite(sURL, sTitle)
+    {
+        try
+        {
+            window.external.addFavorite(sURL, sTitle);
+        }
+        catch (e)
+        {
+            try
+            {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }
+            catch (e)
+            {
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+    //设为首页 <a onclick="SetHome(this,window.location)">设为首页</a>
+    function SetHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+</script>
+<div class="head wrap">
+	 <div class="fl logo"><a href="/"><img src="/static/images/ch_logo.png" /></a></div>
+    <div class="fr">
+                                        <script type="text/javascript" src="/show?pid=156&fid=166"></script>                         </div>
+    <div class="cl"></div>
+</div>
+<div class="nav ch_nav">
+	<div class="wrap">
+    	<ul class="menu">
+    	<li ><a href="/"  style="padding:0px 14px;font-size:16px;">首页</a></li>     
+            <li >
+                <a style="padding:0px 14px;font-size:16px;">关于协会</a>
+                <ul>
+                    <li><a  href="/detail/32504.html" class="on2" target="_blank">协会介绍</a></li>
+                    <li><a  href="/list/14.html"  class="on2" >协会动态</a></li>
+                    <li><a  href="/list2/73,2.html" class="on2" style="font-size:12px;">主席团风采</a></li>
+                    <li><a  href="/detail/32503.html" class="on2"  target="_blank">协会章程</a></li>
+                    <li><a  href="/detail/32537.html" class="on2"  target="_blank">组织机构</a></li>
+                    <li><a  href="/detail/32502.html"class="on2"  target="_blank">申请入会</a></li>
+                    <li><a  href="/list/34.html" class="on2">历史回顾</a></li>
+                    <li><a  href="/list/35.html" class="on2">协会公告</a></li>
+                    <li><a  href="/detail/32046.html" class="on2" target="_blank">联系我们</a></li>
+                </ul>
+            </li>
+            <li ><a class="on" href="/news"  style="padding:0px 14px;font-size:16px;">新闻中心</a></li>
+            <li ><a href="/statistics" style="padding:0px 14px;font-size:16px;" >数据中心</a></li>
+            <li ><a  href="/topic" style=" padding:0px 14px;font-size:16px;">专题活动</a></li>
+            <li ><a href="/events" style="padding:0px 14px;font-size:16px;">会议展览</a></li>
+            <li ><a href="/Publications" style="padding:0px 14px;font-size:16px;">书刊杂志</a></li>
+            <li ><a href="/Directory" style=" padding:0px 14px;font-size:16px;">企业名录</a></li>
+            <li ><a href="/Trade/sell" style=" padding:0px 14px;font-size:16px;">供应信息</a></li>
+            <li ><a href="/Trade/buy" style=" padding:0px 14px;font-size:16px;">求购信息</a></li>
+            <li ><a href="/job" style="padding:0px 14px;font-size:16px;">企业招聘</a></li>
+            <!--<li><a href="#">专题报道</a></li> -->
+            <!--<li><a class="on" href="/Job">企业招聘</a></li>-->
+            <!--<li ><a href="http://ctsw.cria.org.cn/" target="_blank" style=" padding:0px 14px;font-size:16px;">安全周</a></li> -->
+            <li ><a href="http://biaoqian.cria.org.cn/user/login" target="_blank" style="padding:0px 14px;font-size:16px;">标签申报</a></li>
+        </ul>
+        <div class="cl"></div>
+    </div>
+</div>
+
+<div class="ch_association">
+	<div class="wrap">
+    	<ul>
+        	   <li><strong><label style="padding:0px 14px">  协会分会： </label></strong></li>
+        	   <li><a href="/detail/32047.html?t=2" title="轮胎" class="club">轮胎</a></li>
+<li><a href="/detail/32048.html?t=2" title="力车胎" class="club">力车胎</a></li>
+<li><a href="/detail/32538.html?t=2" title="管带" class="club">管带</a></li>
+<li><a href="/detail/32539.html?t=2" title="胶鞋" class="club">胶鞋</a></li>
+<li><a href="/detail/32540.html?t=2" title="乳胶" class="club">乳胶</a></li>
+<li><a href="/detail/32541.html?t=2" title="制品" class="club">制品</a></li>
+<li><a href="/detail/32542.html?t=2" title="炭黑" class="club">炭黑</a></li>
+<li><a href="/detail/32543.html?t=2" title="助剂" class="club">助剂</a></li>
+<li><a href="/detail/32544.html?t=2" title="机械" class="club">机械</a></li>
+<li><a href="/detail/32545.html?t=2" title="营销" class="club">营销</a></li>
+<li><a href="/detail/32546.html?t=2" title="骨架" class="club">骨架</a></li>
+<li><a href="/detail/32547.html?t=2" title="材料" class="club">材料</a></li>
+<li><a href="/detail/32548.html?t=2" title="废橡胶" class="club">废橡胶</a></li>
+<li><a href="/detail/32549.html?t=2" title="杜仲" class="club">杜仲</a></li>
+<li><a href="/detail/32550.html?t=2" title="测试" class="club">测试</a></li>
+
+
+            <!--<li><a href="#">轮胎</a></li>
+            <li><a href="#">力车胎</a></li>
+            <li><a href="#">管带</a></li>
+            <li><a href="#">制品</a></li>
+            <li><a href="#">胶鞋</a></li>
+            <li><a href="#">乳胶</a></li>
+            <li><a href="#">炭黑</a></li>
+            <li><a href="#">助剂</a></li>
+            <li><a href="#">机械</a></li>
+            <li><a href="#">营销</a></li>
+            <li><a href="#">骨架材料</a></li>
+            <li><a href="#">废橡胶</a></li>
+            <li><a href="#">杜仲</a></li>
+            <li><a href="#">测试</a></li>-->        </ul>
+        <div class="cl"></div>
+    </div>
+</div>
+
+
+<div class="gray">
+    <div class="news_list wrap p40">
+        <div class="fl news_left W765 white ch_box011">
+        		<h3><span style="margin: 10px; font-size:15px;">当前位置：中国橡胶网 > 新闻中心 > 热点聚焦</span></h3>
+            <div class="enterprise_news02 p30">
+                                	<div class="enterprise_news_t">
+		                    <h1>2019年新年献词：坚定信心 破难前行　                                 推动橡胶行业转向高质量发展</h1>
+			                    <span>发布时间：2018-12-28</span><span>来源: 中国橡胶网</span><span>作者: 中国橡胶工业协会会长  邓雅俐</span>
+			                    <div class="line"></div>
+			                </div>
+			            <div class="news_details_c p20">
+			                <p>爆竹传吉语，腊梅报新春。在新的一年来临之际，谨代表中国橡胶工业协会，向全体会员单位、业界同仁以及长期以来关心、支持协会工作和橡胶行业发展的各有关方面人士、各界朋友，致以最诚挚的问候和最美好的祝福！</p>
+
+<p>刚刚过去的2018年，是我国改革开放40周年。改革开放，为橡胶行业的发展注入了前所未有的动力和活力，促进了橡胶工业以前所未有的速度、广度、深度快速发展。40年来，橡胶工业规模快速增长，橡胶制品销售收入增长了321倍，利润总额增长了70倍。轮胎、力车胎、胶管胶带以及各种橡胶制品的总产量，均分别增长了几十倍到上百倍。我国橡胶工业的快速发展，打造出了包括橡胶材料、炭黑、助剂、骨架材料以及技术、装备、市场等密不可分的橡胶工业全球产业链、价值链，各国经济、各种经济融入其中，彼此相互依存、共生互利共赢。40年，我国橡胶工业经济结构实现重大变革，科技成果大量涌现，绿色发展理念深入人心，智能化、 国际化发展绽放精彩。</p>
+
+<p>刚刚过去的2018年，世界风起云涌，全球诸多大事频发突发。美国单方面挑起的贸易摩擦愈演愈烈，世界多极化，经济全球化遭遇波折，单边主义、保护主义急剧升温，40年打造出的全球产业链、价值链面临冲击挑战。国内市场需求不畅，成本压力大，效益提升难，行业经济下行压力大。但是，橡胶行业坚持稳中求进，在40年成就基础上，全行业深化供给侧结构性改革，变压力为动力，积极有效应对成本上升、消费不振等不利因素，苦练内功、降本增效，提高供给质量，努力扩大内需，努力拓展多元化国际市场，最终赢得了主要产品产销、出口、实现利润均保持增长，行业经济平稳回升，行业科技进步、智能制造、绿色环保、品牌建设、国际化经营等稳步推进的新成绩、新进展。</p>
+
+<p>2019年，是新中国成立70周年，是全面建成小康社会关键之年，是更加不同寻常的一年。世界面临百年未有之大变局，变局中危和机同生并存。在新年来临的最后一个月，中美两国领导人就经贸问题达成共识，停止升级关税等贸易限制措施，包括不再提高现有针对对方的关税税率，及不对其他商品出台新的加征关税措施。剑拔弩张的中美<strong>经贸摩擦摁下&ldquo;暂停键&rdquo;，</strong>有效阻止了经贸摩擦的进一步扩大，为新年新开端赢得机遇。但是，未来仍然存在着不确定性，<strong>可能会有积极进展，但也不会一帆风顺，不排除会出现新的波折</strong><strong>。</strong></p>
+
+<p>2019年，也是新一轮科技与产业革命蓬勃兴起，新能源、新材料、智能化、数字化等新技术与传统产业加快融合，引发全球制造业深刻变化，竞争格局正在重塑的时期。我国橡胶工业在多年快速发展的基础上，也进入了转型升级、转向高质量发展的进程之中。面对错综复杂的国内外形势，面对科技革命与产业变革，面对全球资源环境的严峻挑战，我们必须充分估计困难和矛盾，看清形势和问题，坚定信心，把握行业转型升级战略与路径，坚持创新驱动，绿色发展、智能制造、一带一路； 瞄准产业核心薄弱环节,努力提升科技创新能力,补短板、提品质,心无旁鹜做好自己的事，把自己的实力搞上去,把核心竞争力提起来，增强发展动力和后劲，从容应对各种风险挑战，化危为机、转危为安，保持经济平稳运行。</p>
+
+<p>登高望远天地宽，砥砺奋进写新篇。从改革开放40周年的新起点上再出发，保持战略定力，坚持稳中求进，坚定不移做好自己的事情，上下同心、迎难而上、苦干实干，就一定能推动橡胶行业转向高质量发展，行稳致远。</p>
+
+<p>祝大家新年快乐、幸福安康！</p>
+
+<p style="text-align:right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二零一九年一月一日</p>			            </div>
+			            <div class="cl"></div>
+						<!-- JiaThis Button BEGIN -->
+<!-- <div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script> -->
+<!-- JiaThis Button END -->			        						<div class="cl"></div>
+		        </div>
+        
+
+     </div>
+     <div class="news_r fr">
+	    <div class="news white p_b20" style="border-top-color: #b30705;">
+           
+   <ul class="news01">
+              <li style="border-bottom: #e2e2e2 1px solid;">
+           <span class="hot fl">HOT</span>
+           <h5>美ITC重裁认定我卡客车胎存在实质性损害</h5>
+           <p><a href="/newsdetail/47436.html">中国橡胶网讯    2019年1月31日，中国橡胶网从中国橡胶工业协会了解到，美国时间1月30日，美国国际贸易委...</a></p>
+       </li>
+              <li style="border-bottom: #e2e2e2 1px solid;">
+           <span class="hot fl">HOT</span>
+           <h5>2018年中国橡胶工业十大新闻</h5>
+           <p><a href="/newsdetail/46952.html">1.橡胶工业经济运行保持稳定
+
+2018年，中国橡胶工业经济运行总体保持平稳。由于国内汽车产销量下降，物流运...</a></p>
+       </li>
+          </ul>
+   <ul class="news02">
+              <li><span class="date red">[ 01-30 ]</span><a href="/newsdetail/47402.html">中橡协全力服务行业 积极组织应对贸...</a></li>
+              <li><span class="date red">[ 01-30 ]</span><a href="/newsdetail/47408.html">报告发布，指出轮胎行业重点发展领域...</a></li>
+              <li><span class="date red">[ 01-30 ]</span><a href="/newsdetail/47403.html">山东下达重点项目名单，2项目入围...</a></li>
+              <li><span class="date red">[ 01-30 ]</span><a href="/newsdetail/47406.html">新成就达成，Porous Pave用近6000吨再...</a></li>
+          </ul>
+       </div>
+        <div class="guide p20">
+            <div class="supplier"><a href="/Directory"><img src="/static/images/ch_search.jpg" /></a></div>         </div>
+        <div class="publications white p20">
+            <h3><span>杂志期刊</span></h3>
+<div class="publications_c" style="text-align: center">
+    <a href="/Publications" target="_blank"><img src="/static/images/publications.jpg" align="middle" style="margin:0 auto;" class="sjs" /></a>
+    <ul>
+        <li class="fl" style="background:none;pading-left:0px;border-bottom:1px dashed #ccc;border-right:1px dashed #ccc;width:140px;height:34px;line-height:34px;"><a href="/detail/40734.html" style="" ><img src="/static/images/abus.png" class="fl" style="margin-left:10px;" />&nbsp;关于我们</a></li>
+        <li class="fl" style="background:none;pading-left:0px;border-bottom:1px dashed #ccc;width:140px;height:34px;line-height:34px;"><a href="/detail/40735.html" style=""><img src="/static/images/sbscrib6.png" class="fl" style="margin-left:10px;" />&nbsp;广告刊登</a></li>
+        <li class="fl" style="background:none;pading-left:0px;border-right:1px dashed #ccc;width:140px;height:34px;line-height:34px;"><a href="/Publications/subscription" style=""><img src="/static/images/sbscrib5.png" class="fl" style="margin-left:10px;" />&nbsp;杂志订阅</a></li>
+        <li class="fl" style="background:none;pading-left:0px;width:140px;height:34px;line-height:34px;"><a href="/detail/40736.html" style=""><img src="/static/images/phone.png" class="fl" style="margin-left:10px;" />&nbsp;联系我们</a></li>
+    </ul>
+</div>        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+
+<!-- <div class="wrap">
+    <div class="ibox white margin10 p20_p10">
+    <div class="ibox_t">
+        <h4 class="fl"><lable style="color:#D90000">SPONSOR ADS</lable></h4>
+	    <div class="btnbox fr">
+	    	<span class="pre"><</span>
+	    	<span class="nex">></span>
+        </div>
+	</div>
+	
+	<div class="cl" style="height:0;overflow:hidden;">
+<script type="text/javascript">
+$(function(){
+    //@Mr.Think***变量
+    var $cur = 1;//初始化显示的版面
+    var $i = 5;//每版显示数
+    var $len = $('.showbox>ul>li').length;//计算列表总长度(个数)
+    var $pages = Math.ceil($len / $i);//计算展示版面数量
+    var $w = $('.ibox').width();//取得展示区外围宽度
+    var $showbox = $('.showbox');
+    var $num = $('span.num li')
+    var $pre = $('span.pre')
+    var $next = $('span.nex');
+    var $autoFun;
+    //@Mr.Think***调用自动滚动
+    autoSlide();
+    //@Mr.Think***向前滚动
+    $pre.click(function(){
+        if (!$showbox.is(':animated')) {  //判断展示区是否动画
+            if ($cur == 1) {   //在第一个版面时,再向前滚动到最后一个版面
+                $showbox.animate({
+                    left: '-=' + $w * ($pages - 1)
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = $pages; //初始化版面为最后一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '+=' + $w
+                }, 500); //改变left值,切换显示版面
+                $cur--; //版面累减
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***向后滚动
+    $next.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            if ($cur == $pages) {  //在最后一个版面时,再向后滚动到第一个版面
+                $showbox.animate({
+                    left: 0
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = 1; //初始化版面为第一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '-=' + $w
+                }, 500);//改变left值,切换显示版面
+                $cur++; //版面数累加
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***数字点击事件
+    $num.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            var $index = $num.index(this); //索引出当前点击在列表中的位置值
+            $showbox.animate({
+                left: '-' + ($w * $index)
+            }, 500); //改变left值,切换显示版面,500(ms)为滚动时间
+            $cur = $index + 1; //初始化版面值,这一句可避免当滚动到第三版时,点击向后按钮,出面空白版.index()取值是从0开始的,故加1
+            $(this).addClass('numcur').siblings().removeClass('numcur'); //为当前点击加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***停止滚动
+    clearFun($showbox);
+    clearFun($pre);
+    clearFun($next);
+    clearFun($num);
+    //@Mr.Think***事件划入时停止自动滚动
+    function clearFun(elem){
+        elem.hover(function(){
+            clearAuto();
+        }, function(){
+            autoSlide();
+        });
+    }
+    //@Mr.Think***自动滚动
+    function autoSlide(){
+        $next.trigger('click');
+        $autoFun = setTimeout(autoSlide, 5000);//此处不可使用setInterval,setInterval是重复执行传入函数,这会引起第二次划入时停止失效
+    }
+    //@Mr.Think***清除自动滚动
+    function clearAuto(){
+        clearTimeout($autoFun);
+    }
+});
+</script>
+    <div class="showbox">
+        <ul>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic01.jpg" /><p>To view the products</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic02.jpg" /><p>Rubber chemicals</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic03.jpg" /><p>Rubber raw materials</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic04.jpg" /><p>Rubber machineries and </p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic05.jpg" /><p>Equipments and services</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic03.jpg" /><p>Rubber raw materials</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic02.jpg" /><p>Rubber chemicals</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic01.jpg" /><p>Equipments and services</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic05.jpg" /><p>To view the products</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic04.jpg" /><p>Rubber machineries and </p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic05.jpg" /><p>Rubber chemicals</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic03.jpg" /><p>Rubber raw materials</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic02.jpg" /><p>To view the products</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic01.jpg" /><p>Equipments and services</p></a></li>
+            <li><a href="#" target="_blank"><img width="208" height="125" alt="jquery flow" src="/static/images/pic05.jpg" /><p>Rubber machineries and </p></a></li>
+        </ul>
+    </div>
+   </div>
+</div>
+</div>
+-->
+
+</div>
+<!--//主体内容区--> 
+
+<div class="foot ch_foot">
+	<div class="wrap">
+    	<div class="fl">
+            <ul class="fl">
+                <li><a href="/detail/40739.html" target="_blank">关于网站</a></li>
+                <li><a href="/register" target="_blank">免费注册</a></li>
+                <li><a href="/pass/get" target="_blank">密码找回</a></li>
+                <li><a href="/detail/32046.html" target="_blank">联系我们</a></li>
+            </ul>
+            <ul class="fl">
+                <li><a href="/newslist/2.html" target="_blank">热点聚焦</a></li>
+                <li><a href="/newslist/14.html" target="_blank">协会动态</a></li>
+                <li><a href="/newslist/3.html" target="_blank">行业新闻</a></li>
+                <li><a href="/newslist/5.html" target="_blank">国际动态</a></li>
+                <li><a href="/newslist/7.html" target="_blank">科技动态</a></li>
+                <li><a href="/newslist/11.html" target="_blank">标准法规</a></li>
+            </ul>
+            <ul class="fl">
+              <li><a href="/newslist/4.html" target="_blank">市场信息</a></li>
+              <li><a href="/newslist/9.html" target="_blank">贸易摩擦</a></li>
+              <li><a href="/newslist/23.html" target="_blank">企业排行</a></li>
+              <li><a href="/newslist/17.html" target="_blank">天然胶价</a></li>
+              <li><a href="/newslist/18.html" target="_blank">合成胶价</a></li>
+              <li><a href="/newslist/19.html" target="_blank">其他价格</a></li>
+            </ul>
+            <ul class="fl">
+                <li><a href="/newslist/56.html" target="_blank">协会统计</a></li>
+                <li><a href="/newslist/51.html" target="_blank">海关数据</a></li>
+                <li><a href="/newslist/26.html" target="_blank">行业报告</a></li>
+                <li><a href="/newslist/38.html" target="_blank">咨询报告</a></li></ul>
+            <ul class="fl">
+            　</ul>
+            <ul class="fl">
+                <li><a href="/topic" target="_blank">专题活动</a></li>
+                <li><a href="/events" target="_blank">会议展览</a></li>
+                <li><a href="/Publications" target="_blank">书刊杂志</a></li>
+                <li><a href="/job" target="_blank">企业招聘</a></li>
+            </ul>
+            <ul class="fl">
+                <li><a href="/directory" target="_blank">企业名录</a></li>
+                <li><a href="/Trade/BuyForm" target="_blank">发布求购</a></li>
+                <li><a href="/Trade/sell" target="_blank">供应信息</a></li>
+                <li><a href="/Trade/singlepage" target="_blank">委托采购</a></li>
+            </ul>
+            <ul class="fl">
+              <li><a href="/login" target="_blank">发布产品</a></li>
+                <li><a href="/detail/40738.html" target="_blank">推广服务</a></li>
+                <li><a href="/Trade/buy" target="_blank">求购信息</a></li>
+            </ul>
+        </div>
+      <div class="fr tc">
+        	<table width="300" border="0" cellspacing="0" cellpadding="0">
+        	  <tr>
+        	    <td><img src="/static/images/weibo.jpg" /></td>
+        	    <td><img src="/static/images/wechat.jpg" /></td>
+        	    
+      	      </tr>
+        	  <tr style="line-height:30px">
+        	    <td><b>官方微博 </b></td>
+        	    <td><b>官方微信 </b></td>
+        	  </tr>
+   	      </table>
+        	 </div></div>
+        <div class="cl"></div>
+       
+    </div>
+
+    <div class="wrap" style="width:100%;background-color:#FFF;position: absolute;bottom:100">
+
+         <div style="text-align:center;">
+        <p><br />
+ <b>© 中国橡胶工业协会 版权所有，京ICP备09044065号</b><br>
+地址：北京市朝阳区拂林路9号景龙国际B座5层（邮编：100107）<br>
+电话：010-84915391，84915661，84924066，84927809；传真：010-84928207 <br>
+Email: chinarubber@cria.org.cn, web@cria.org.cn <br>
+<script src="http://s19.cnzz.com/stat.php?id=3005573&web_id=3005573&show=pic" language="JavaScript"></script>
+
+    </p><br />
+    
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/jquery-1.8.0.min.js?version=2018"></script>
+<script type="text/javascript" src="/static/js/slides.js?version=2018"></script>
+<script type="text/javascript" src="/static/js/backtop.js?version=2018"></script>
+<script type="text/javascript" src="/static/js/page/login.js?version=2018"></script>
+<script>
+    (function() {
+    // target=_blank
+    var aTags = document.querySelectorAll('.enterprise_news02 a,.ch_news_box a')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+    // css hack
+    var l = $(".news_left").height() || 0;
+    var r = $(".news_r").height() || 0;
+    (r>l) ? $(".news_left").height(r):""
+    }());
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e9f2dd83994f50e235fc746bc694b1e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
+
+

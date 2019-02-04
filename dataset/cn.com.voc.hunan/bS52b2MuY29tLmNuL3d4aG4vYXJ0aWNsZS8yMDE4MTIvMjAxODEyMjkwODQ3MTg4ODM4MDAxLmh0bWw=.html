@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>滚动丨10处国省道、25条高速公路出现积雪或结冰___华声在线</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="无线湖南,新闻,滚动丨10处国省道、25条高速公路出现积雪或结冰">
+<meta name="description" content="无线湖南，无线精彩，湖南第一移动生活门户。">
+<script type="text/javascript" src="http://www.voc.com.cn/mobile/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" language="javascript">
+var _NewsID = 51183537;
+var _ClassID = 3161;
+var _EditID = 457;
+var _BbsTid = 0
+var imgWidth = 500;
+var _CtypeID = 0;
+</script>
+<style>
+body,* { margin: 0px; padding: 0px; }
+iframe {width:100%; height:100%; border: 0 }
+</style>
+</head>
+
+<body>
+<iframe src="http://m.voc.com.cn/wxhn/article/201812/201812300802169796.html" scrolling="auto" frameborder="0" allowfullscreen></iframe>
+<script type="text/javascript">
+var _paq = _paq || [];
+(function(){ var u=(("https:" == document.location.protocol) ? "https://click.voc.com.cn:8081/" : "http://click.voc.com.cn:8081/");
+_paq.push(['setSiteId',110]);
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+if(typeof(_ClassID) !== 'undefined')
+  _paq.push(['setCustomVariable','1','class_id',_ClassID,'page']);
+if(typeof(_NewsID) !== 'undefined')
+  _paq.push(['setCustomVariable','2','news_id',_NewsID,'page']);
+if(typeof(_EditID) !== 'undefined')
+_paq.push(['setCustomVariable','3','author_id',_EditID,'page']);
+
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
+s.parentNode.insertBefore(g,s); })();
+</script>
+<script type="text/javascript" language="javascript" src="http://m.voc.com.cn/script/Article_function.js"></script>
+
+<script>
+
+    var m = $("meta[name='liveappInfo']");
+    var shareTitle = document.title,
+    shareUrl = window.location.href,
+    shareDesc = "无线湖南，无线精彩，湖南第一移动生活门户。",
+    shareImg = "http://img1.voc.com.cn/UpLoadFile/2018/12/29/201812290929204374.jpg";
+    shareDesc = shareDesc || shareUrl;
+
+    $.ajax({
+        url: "http://liveapp.wxhn.voc.com.cn/ashx/WeixinConfig.ashx",
+        dataType: 'jsonp',
+        jsonp: 'jsonpcallback',
+        success: function (data) {
+            $.each(data, function (index, result) {
+                if (result['status'] == 1) {
+                    var appId = result['appId'],
+          timestamp = result['timestamp'],
+          nonceStr = result['nonceStr'],
+          signature = result['signature'];
+
+                    wx.config({
+                        debug: false,
+                        appId: appId,
+                        timestamp: timestamp,
+                        nonceStr: nonceStr,
+                        signature: signature,
+                        jsApiList: [
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage',
+              'onMenuShareQQ',
+              'onMenuShareWeibo'
+                        ]
+                    });
+                }
+            });
+        }
+    });
+
+    wx.ready(function () {
+        wx.onMenuShareAppMessage({
+            title: shareTitle,
+            desc: shareDesc,
+            imgUrl: shareImg,
+            link: shareUrl,
+            success: function (res) {
+
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: shareTitle,
+            imgUrl: shareImg,
+            link: shareUrl,
+            success: function (res) {
+
+            }
+        });
+
+        wx.onMenuShareQQ({
+            title: shareTitle,
+            desc: shareDesc,
+            imgUrl: shareImg,
+            link: shareUrl,
+            success: function (res) {
+
+            }
+        });
+
+        wx.onMenuShareWeibo({
+            title: shareTitle,
+            desc: shareDesc,
+            imgUrl: shareImg,
+            link: shareUrl,
+            success: function (res) {
+
+            }
+        });
+    });        
+</script>
+</body>
+</html>
